@@ -248,11 +248,25 @@ function wc_register_form_password_repeat() {
 
 // Display Price For Variable Product With Same Variations Prices
 add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
+  if (is_user_logged_in() ) {
   if ($value['price_html'] == '') {
     $value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
   }
   return $value;
+
+}
 }, 10, 3);
+
+
+
+//remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0
+function benz_custom_list_price( $label ) {
+    $label =  str_replace( "Tags", "List Price", $label );
+
+    return $label;
+}
+add_filter( 'woo_predictive_search_widget' , 'benz_custom_list_price' );
+
 
 
 //remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0

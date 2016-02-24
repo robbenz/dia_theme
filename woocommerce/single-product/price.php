@@ -27,9 +27,9 @@ global $product;
 
 ?>
 <div itemprop="offers" style="width:30%;" itemscope itemtype="http://schema.org/Offer">
-    
+
     <!-- BENZ FIX -->
-    <?php if( $product->is_type( 'simple' ) ){ ?><p class="price"><?php echo $product->get_price_html(); ?></p><?php } ?>
+    <?php if( $product->is_type( 'simple' ) && is_user_logged_in() ){ ?><p class="price"><?php echo $product->get_price_html(); ?></p><?php } ?>
 
 	<meta itemprop="price" content="<?php echo esc_attr( $product->get_price() ); ?>" />
 	<meta itemprop="priceCurrency" content="<?php echo esc_attr( get_woocommerce_currency() ); ?>" />
