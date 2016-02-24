@@ -20,6 +20,15 @@ function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
 
+
+// request a quote for empty price products BENZ
+add_filter('woocommerce_empty_price_html', 'custom_call_for_price');
+
+function custom_call_for_price() {
+     return '<a href="#" class="eModal-2 r-a-qbutton-price">Request A Quote</a>';
+}
+
+
 function register_my_menus() {
   register_nav_menus(
     array(
