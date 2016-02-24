@@ -15,10 +15,6 @@
  * @version     2.1.0
  */
 
-// Benz Mod File
-// line 62 changes to shopping cart -- add icon
-
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -58,7 +54,7 @@ if ( ! $product->is_purchasable() ) {
 
 	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
 
-	 	<button type="submit" class="single_add_to_cart_button button alt"><i class="fa fa-shopping-cart fa-lg" style=""></i>&nbsp;&nbsp;&nbsp;<?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>

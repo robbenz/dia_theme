@@ -27,7 +27,7 @@
 </div>
 	<div id="mm-right-contact">
 
-		<?php
+		<?php 
 
  $benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
 
