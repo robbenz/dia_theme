@@ -27,7 +27,7 @@
 </div>
 	<div id="mm-right-contact">
 
-		<?php 
+		<?php
 
  $benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
 
@@ -82,10 +82,10 @@ wp_nav_menu(array(
     'walker'          => new BENZ_Walker_Nav_Menu_PS
 ));
 wp_nav_menu(array(
-    'theme_location'  => 'repairs',
+    'theme_location'  => 'repirstmp',
     'items_wrap'      => $benzitems,
-    'container_class' => $benzmenu . ' ' . $benzmenu . '-repairs',
-      'walker'        => new BENZ_Walker_Nav_Menu_RP
+    'container_class' => $benzmenu . ' ' . $benzmenu . '-repairs'
+  //    'walker'        => new BENZ_Walker_Nav_Menu_RP
 ));
 wp_nav_menu(array(
     'theme_location'  => 'manufacturers',

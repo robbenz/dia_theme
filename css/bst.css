@@ -76,7 +76,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%;}
 li.product-category h3 { text-align:center; color:#f7a900; text-align:center; text-transform: uppercase; font-size:20px !important;}
 .var-price-wrap{ display:none;}
-[id*="product-"] {padding-top:2em; }
+.content > [id*="product-"] {padding-top:2em; }
 .woocommerce div.product { padding: 1em 5em !important; }
 .woocommerce-main-image{ max-width:400px; width:400px; }
 .woocommerce div.product div.images img {max-width:400px; width:400px; border: 3px solid #00426a; }
@@ -141,6 +141,38 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 #dmcssmenu4 ul ul li:first-child:after {content: '';display: block;width: 0;height: 0;position: absolute;left: -20px;top: 13px;border-right: 1px dashed #cfc8c8;}
 /*END MENU*/
 
+.woocommerce_widget_cart-5 h4 { background-color: #ffad00; border-radius: 0.2em; color: #00426a; font-size: 165%; padding: 0.2em; text-align: center; text-shadow: none; }
+
+.page-id-86 #sidebar { margin-top:89px; }
+
+
+.products .price-wrap-gal{display:none;}
+.logged-in .price-wrap-gal{display:block;}
+.products li h3{ color: #ffad00; font-size: 17px !important; font-weight: 600; text-align: center; text-transform: uppercase; }
+.products .r-a-qbutton-price { display:none;}
+.woocommerce ul.products li.product .price {display:none!important;}
+.logged-in .woocommerce ul.products li.product .price { display:block;}
+
+/* HOME PAGE */
+#homeorangewrap { width:100%; background: #ffd67f; margin-bottom: 2%; text-align:center; padding:1em; }
+#homeorangewrap h3 { font-weight:700; }
+/* END */
+
+
+/*Featured Categories*/
+#post_56972 .entry-wrap {border: 0 none !important; box-shadow: none !important; left: -16em; position: relative;width: 125%; top:-2em;}
+#post_56972 .products li{float: left; list-style: outside none none; margin: 0.8em; max-width: 14.2em !important; }
+#post_56972 .products li img{ max-width:250px;  height: 100%; max-height: 100%; }
+#post_56972 .entry-title{display:none; }
+#post_56972 .entry-content { margin-top: 0; }
+
+#see-all-equip-link{align-content: center; background-color: #00426a; border-radius: 10em; color: #ffffff; float: left; font-size: 24px; padding: 3em; text-align: center; }
+#see-all-equip-link li {  }
+#post_56972 .products li a:hover {background-color:#ffad00;}
+#see-all-equip-link a{background-color:#00426a; padding:2em; border-radius: 2em;}
+/* END */
+
+.cntctfrm_contact_submit { margin-top:10px;}
 /*HEADERS*/
 #dia-logo-left { float: left; height: 80px; margin: 0; width: 356px; }
 #dia-logo-left img { width: 100%; }
@@ -275,8 +307,10 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 .navbar-header{ padding:0;}
 .benz-menu{ float:left;}
 .navbar-static-top{ background: #00426a; }
+
 .sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
+#menu-repirstmp li a,
 .sf-menu > .page_item_has_children > a:first-child { color: #fff; font-size: 19px; text-transform: uppercase; }
 .benz-menu > ul > li > a:active{ background-color: #2774ae }
 .benz-menu > ul > li > a:hover {background-color: #2774ae }
@@ -318,6 +352,11 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 li.main-header-link:hover {background-color:#2774ae; }
 .benz-menu > ul li > .sub-menu {overflow: hidden; }
 /* END */
+
+
+
+
+
 
 /* Medical Equipment Menu */
 #menu-medical-equipment .benz-bottom-colors{top:375px;}
@@ -361,31 +400,31 @@ li.main-header-link:hover {background-color:#2774ae; }
 /* END */
 
 /* ABOUT MENU*/
-#menu-contact-us > li > .sub-menu { left: -969px;  height: 356px; }
-#menu-contact-us .arrow-down { left: 1015px; top: -27px; }
-#benz-menu-about{ width:615px; height:300px; text-align:left; padding-left:10px; float:left; color:#000;}
+#menu-contact-us > li > .sub-menu {  height: 356px;}
+#menu-contact-us .arrow-down { left: 91%;  top: -27px; }
+#benz-menu-about{ width: 50%; height:300px; text-align:left; padding-left:10px; float:left; color:#000;}
 #benz-menu-about .benz-menu-about-copy { font-size:14px; color:#000; }
 #benz-menu-about .benz-menu-about-header { margin-top:6px; color:#2668b5; font-weight:600;}
 #menu-item-6812:hover{ color:#000;}
 #menu-item-6812 a:hover{ color:#000;}
-#menu-item-6812{float:right; width:440px; position: relative; }
+#menu-item-6812{float: right; font-size: 17px; font-weight: 600; position: relative; width: 44%; }
 #menu-item-6812 a{color: #004ea8 !important}
 #menu-item-6812 a:hover{font-weight:600; !important; color: #004ea8 !important}
 /* about-phone */
-p.about-phone {position:relative; top:15px; left:-109px; }
-p.about-phone-number {position:relative; top:15px; left:-123px;  }
-.about-phone-number i {position:relative; top:5px; left:-8px;}
+p.about-phone {position:relative; top:16px; }
+p.about-phone-number {position:relative; top:17px; left:-11px;  }
+.about-phone-number i {position:relative; top:2px; left:-8px;}
 /* about-fax */
-p.about-fax {  position: relative; top: -43px; left: 274px;  }
-p.about-fax-number {position:relative; top:-42px; left:281px;  }
-.about-fax-number i {position:relative; top:5px; left:-8px;}
+p.about-fax {  position: relative; top: -24px; left: 174px;  }
+p.about-fax-number {position:relative; top:-23px; left:161px;  }
+.about-fax-number i {position:relative; top:2px; left:-8px;}
 /* about-email */
-p.about-email {position:relative; top:-26px; left:-113px; }
-p.about-email-number {position:relative; top:-24px; left:-83px;  }
-.about-email-number i {position:relative; top:5px; left:-8px;}
+p.about-email {position:relative; top:0; left:0; }
+p.about-email-number {position:relative; top:2px; left:-13px;  }
+.about-email-number i {position:relative; top:2px; left:-8px;}
 /* about-mail */
-p.about-mail {position:relative; top:-7px; left:153px;  }
-p.about-mail-number {position:relative; top:-10px; left:137px;  }
+p.about-mail {position:relative; top:8px; left:0;  }
+p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .about-mail-number i {position:relative; top:2px; left:-8px;}
 /* END */
 
@@ -402,7 +441,7 @@ p.about-mail-number {position:relative; top:-10px; left:137px;  }
 #post_11 .shop_table th {font-style: italic; color:#ffad00;font-weight:bold;font-size: 1.2em;}
 #post_11 .shop_table td a {font-style: italic; color:#00426a;font-weight:bold;font-size: 1.2em;}
 #post_11 .shop_table td  {font-style: italic; color:#00426a;font-weight:bold;font-size: 1.1em;}
-#post_11 .woocommerce .quantity input[type="number"], .woocommerce-page .quantity input[type="number"] {-moz-appearance: textfield;border: 2px solid #00426a !important;border-radius: 1px !important ;height: 3.65em; margin: 0 4px !important; position: relative;text-align: center;width: 3.65em;z-index: 1;}
+#post_11 .woocommerce .quantity input[type="number"], .woocommerce-page .quantity input[type="number"] {-moz-appearance: textfield;border: 2px solid #00426a !important;border-radius: 1px !important ;height: 2.95em; margin: 0 4px !important; position: relative;text-align: center;width: 2.65em;z-index: 1;}
 #post_11 .cart_totals table th, table td {border-top:none; }
 #post_11 .cart_totals .cart-subtotal{font-style:italic; color:#00426a;font-weight:bold;font-size: 1.2em; text-transform:uppercase;}
 #post_11 .cart_totals .order-total{text-align: right; font-style:italic; color:#00426a;font-weight:bold;font-size: 1.3em; text-transform:uppercase;margin-left:20%;}
@@ -423,6 +462,8 @@ p.about-mail-number {position:relative; top:-10px; left:137px;  }
 .woocommerce-cart table.cart img {width:55px !important;}
 .woocommerce .quantity .plus, .woocommerce-page .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .minus {height:50%;}
 /* END */
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {padding:1em !important;}
+
 
 /* MY ACCOUNT REGISTER PAGE */
 #customer_login .col-1{float:right; width:34%; height:469px;border: 3px dashed #00426a;padding:1.2em;}
@@ -484,10 +525,13 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 /*  ==============================  BEGIN RESPONSIVE STUFF ==========================  */
 /*  ==============================                         ==========================  */
 /*  =================================================================================  */
-
+@media (min-width: 320px) {
+#homeorangewrap img{ display:none;}
+}
 
 @media (min-width: 768px) {
 #mm-right-contact{display:none;}
+#homeorangewrap img{ display:none;}
 }
 
 @media (min-width: 992px) {
@@ -499,13 +543,16 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 #menu-repairs > li > .sub-menu { left: -496px; }
 #menu-manufacturers > li > .sub-menu { left: -606px; }
 #benz-menu-img-mft3 { left: 10%; }
+#homeorangewrap img{ display:inline;}
+#menu-contact-us > li > .sub-menu { left: -802px; }
 
 @media (min-width: 1200px) {
 #mm-right-contact{display:block;}
 .benz-menu > ul > li > a{padding: 11px 1.8298em; }
 .benz-menu .sub-menu{width: 1171px;}
-#menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 1.1px; }
+#menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }
 #menu-parts-search .sub-menu { left: -406px;}
 #menu-repairs > li > .sub-menu { left: -597px; }
 #menu-manufacturers > li > .sub-menu { left: -740px; }
 #benz-menu-img-mft3 { left: 5%; }
+#menu-contact-us > li > .sub-menu { left: -802px; left: -969px; }

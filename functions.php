@@ -21,6 +21,21 @@ function true_load_theme_textdomain(){
 }
 
 
+//  --  LOGIN | LOGOUT STUFF
+add_filter('woocommerce_login_redirect', 'login_redirect');
+
+function login_redirect($redirect_to) {
+    wp_redirect( home_url() );
+    exit();
+}
+
+add_action('wp_logout','logout_redirect');
+
+function logout_redirect(){
+    wp_redirect( home_url() );
+    exit();
+}
+
 //  --  request a quote for empty price products BENZ
 add_filter('woocommerce_empty_price_html', 'custom_call_for_price');
 
@@ -35,6 +50,7 @@ function register_my_menus() {
       'home'               => __( 'Home' ),
       'header-menu'        => __( 'Header Menu' ),
       'sign-in-menu'       => __( 'Sign In Menu' ),
+      'repirstmp'          => __( 'repirstmp' ),
       'medical-equipment'  => __( 'Medical Equipment' ),
       'parts-search'       => __( 'Parts Search' ),
       'repairs'            => __( 'Repairs' ),
@@ -143,7 +159,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#ffad00;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</div>';
         $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="fluidslogomenu" href="http://www.partsonline.diamedicalusa.com/medical-equipment/simulated-iv-bags/"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
+        $output .= '<a id="fluidslogomenu" href="http://www.partsonline.diamedicalusa.com/product-category/simulated-iv-bags/"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
@@ -154,21 +170,22 @@ class BENZ_Walker_Nav_Menu_ABOUT extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu">';
         $output .= '<div id="benz-menu-about"><p class="benz-menu-about-header">WHO ARE WE?</p>';
-        $output .= '<p class="benz-menu-about-copy">MedMattress provides mattresses, stretcher pads, mattress covers and accessories<br>';
-        $output .= 'at affordable prices. MedMattress began in 2008 as the mattress division<br>';
+        $output .= '<p class="benz-menu-about-copy">MedMattress provides mattresses, stretcher pads, mattress covers and accessories';
+        $output .= 'at affordable prices. MedMattress began in 2008 as the mattress division';
         $output .= 'of DiaMedical USA. DiaMedical USA opened in 2007 in Detroit, Michigan.</p>';
         $output .= '<p class="benz-menu-about-header">OUR MISSION</p>';
-        $output .= '<p class="benz-menu-about-copy">We understand how tough it is to for hospitals and universities to build a budget<br>';
-        $output .= 'without making sacrifices. That’s why we have no hidden fees nor built-in shipping<br>';
-        $output .= 'costs! Our customers always have the lowest prices for their products without any <br>';
-        $output .= 'sacrifice in quality. For every shipment we send we calculate the lowest price <br>';
-        $output .= 'through our many shipping company affiliates. So you can always rest assured that<br>';
+        $output .= '<p class="benz-menu-about-copy">We understand how tough it is to for hospitals and universities to build a budget';
+        $output .= 'without making sacrifices. That’s why we have no hidden fees nor built-in shipping';
+        $output .= 'costs! Our customers always have the lowest prices for their products without any ';
+        $output .= 'sacrifice in quality. For every shipment we send we calculate the lowest price ';
+        $output .= 'through our many shipping company affiliates. So you can always rest assured that ';
         $output .= 'we’re always getting you the lowest price - GUARANTEED. </p></div>';
         $output .= '<div class="arrow-down"></div>';
     }
 
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
+        $output .= '<div style="float:right; height:230px; width:44%;">';
         $output .= '<p class="about-phone" style="color:#000;">Phone Number:</p>';
         $output .= '<p class="about-phone-number" style="color:#004ea8;"><i class="fa icon-phone fa-lg"></i>(877) 593-6011</p>';
         $output .= '<p class="about-fax" style="color:#000;">Fax Number:</p>';
@@ -177,7 +194,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<p class="about-email-number" style="color:#004ea8;"><i class="fa icon-laptop fa-lg"></i>Info@MedMattress.com</p>';
         $output .= '<p class="about-mail" style="color:#000;">Mailing Address: </p>';
         $output .= '<p class="about-mail-number" style="color:#004ea8;"><i class="fa icon-envelope fa-lg"></i>5807 W. Maple, Suite #175<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;West Bloomfield, MI 48322</p>';
-        $output .= '<div class="benz-bottom-colors" style="background-color:#7fa6d3">Need help finding our policies? Visit our help page for our shipping and return policies.</div>';
+        $output .= '</div><div class="benz-bottom-colors" style="background-color:#7fa6d3">Need help finding our policies? Visit our help page for our shipping and return policies.</div>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";

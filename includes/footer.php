@@ -4,7 +4,7 @@
   <div id="footerlogos">
   <div id="diamedicallogo"><a href="<?php echo site_url(); ?>"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/diamedicallogosmall.png" /></a></div>
   <div id="medmatlogo"><a href="<?php echo site_url(); ?>"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/medmattlogo.png" /></a></div>
-  <div id="simlablogo"><a href="<?php echo site_url(); ?>/simlabsolutions.php"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/simlablogo.png" /></a></div>
+  <div id="simlablogo"><a href="http://www.diamedicalusa.com/simlabsolutions.php"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/simlablogo.png" /></a></div>
   </div><!--footerlogos-->
 
   <div id="footerconnect">
@@ -38,30 +38,30 @@
 
 <div id="footerlinks1">
   <a href="<?php echo site_url(); ?>">Home</a><br />
-  <a href="<?php echo site_url(); ?>/home-products.php">Products</a><br />
-  <a href="<?php echo site_url(); ?>/home-manufacturers.php">Manufacturers</a><br />
-  <a href="<?php echo site_url(); ?>/hospital-replacement-parts.php">Parts</a><br />
+  <a href="<?php echo site_url(); ?>/medical-equipment/">Products</a><br />
+  <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">Manufacturers</a><br />
+  <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">Parts</a><br />
   <a href="<?php echo site_url(); ?>/contact.html">Contact</a><br />
 </div><!--footerlinks1-->
 
 <div id="footerlinks2">
   <p class="popularproducts">Popular Products</p><br />
-  <a href="<?php echo site_url(); ?>/hospital-beds-home.php">Hospital Beds</a><br />
+  <a href="<?php echo site_url(); ?>/product-category/hospital-beds/">Hospital Beds</a><br />
   <a href="http://medmattress.com/stretcher-gurney-mattress.php">Stretcher Mattresses</a><br />
-  <a href="<?php echo site_url(); ?>/hospital-replacement-parts.php">Replacement Parts</a><br />
-  <a href="<?php echo site_url(); ?>/nursing-school-supplies-sim-screens.php">SimScreens</a><br />
-  <a href="<?php echo site_url(); ?>/nursing-school-supplies-headwall-units.php">Headwall Units</a><br />
-  <a href="<?php echo site_url(); ?>/simlabsolutions.php">IV Fluids</a><br />
+  <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">Replacement Parts</a><br />
+  <a href="<?php echo site_url(); ?>/product-category/screens-curtains/simscreens/">SimScreens</a><br />
+  <a href="<?php echo site_url(); ?>/product-category/headwalls/">Headwall Units</a><br />
+  <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">IV Fluids</a><br />
 </div><!--footerlinks2-->
 
 <div id="footerlinks3">
 <p class="popularproducts">&nbsp;&nbsp;</p><br />
-<a href="<?php echo site_url(); ?>/hospital-infusion-pumps.php">Infusion Pumps</a><br />
-<a href="<?php echo site_url(); ?>/hospital-casters.php">Casters &amp; Wheels</a><br />
+<a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">Infusion Pumps</a><br />
+<a href="<?php echo site_url(); ?>/results/keyword/caster/search-in/product/cat-in/all/search-other/product,p_sku,p_cat">Casters &amp; Wheels</a><br />
 <a href="http://medmattress.com/operating-room-table-pad.php">OR Table Pads</a><br />
 <a href="http://medmattress.com/mattresses.php">Mattresses</a><br />
-<a href="<?php echo site_url(); ?>/home-services.php">Repairs</a><br />
-<a href="<?php echo site_url(); ?>/nursing-school-supplies-furniture.php">Furniture</a><br />
+<a href="http://www.diamedicalusa.com/maintenance-preventative.php">Repairs</a><br />
+<a href="<?php echo site_url(); ?>/product-category/furniture/">Furnishings</a><br />
 </div><!--footerlinks3-->
 </div>
   </div><!--footer2014-->
