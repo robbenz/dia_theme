@@ -21,14 +21,14 @@ function true_load_theme_textdomain(){
 }
 
 
-// request a quote for empty price products BENZ
+//  --  request a quote for empty price products BENZ
 add_filter('woocommerce_empty_price_html', 'custom_call_for_price');
 
 function custom_call_for_price() {
      return '<a href="#" class="eModal-2 r-a-qbutton-price">Request A Quote</a>';
 }
 
-
+//  --  Register My Menus
 function register_my_menus() {
   register_nav_menus(
     array(
@@ -56,7 +56,7 @@ class BENZ_Walker_Nav_Menu extends Walker_Nav_Menu {
         $output .= '</ul>';
     }
 }
-
+// -- My Account
 class BENZ_Walker_Nav_Menu_MYACCOUNT extends Walker_Nav_Menu {
    function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu" style="color:#004ea8; font-weight:700;"><div class="arrow-up-mm"></div><div class="insert-img-here">MANAGE YOUR ACCOUNT<br></div>';
@@ -67,35 +67,37 @@ class BENZ_Walker_Nav_Menu_MYACCOUNT extends Walker_Nav_Menu {
         $output .= '</ul>';
     }
 }
-
+// -- Sign In
 class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
 
    function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu"><div class="arrow-up-mm"></div><div class="insert-img-here"><strong>SIGN IN</strong>' . do_shortcode('[wppb-login]') . '</div>';
     }
         function end_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<div class="insert-img-here" style="line-height: 22px; width:auto; height:110px; color:#004ea8; font-weight:700; text-align:center; border-top: 1px solid #cccccc; ">';
+        $output .= '<div class="insert-img-here" style="line-height: 22px; width:auto; color:#004ea8; font-weight:700; text-align:center; border-top: 1px solid #cccccc; ">';
         $output .= 'NEW CUSTOMER? <br><span style="color:#000; font-weight:normal;"><em>Registration is easy and<br>only takes a few seconds!</em></span>';
         $output .= '<a href="https://www.partsonline.diamedicalusa.com/my-account" id="benz-register-link">REGISTER</a></div></ul>';
     }
 
 }
-
+// -- PART SEARCH
 class BENZ_Walker_Nav_Menu_PS extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu">';
+
     }
 
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
-        $output .= '<div class="benz-bottom-colors" style="background-color:#6dc6b0">Our collection of accessories is the perfect way to complete any mattress purchase.</div>';
+        $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a part request and we’ll email you a quote!</div>';
+        $output .= woo_predictive_search_widget( $ps_echo );
         $output .= '<div class="arrow-down"></div>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
 }
 }
-
+// -- Manufacturers
     class BENZ_Walker_Nav_Menu_MFT extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu">';
@@ -103,28 +105,34 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
 
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
-        $output .= '<div class="benz-bottom-colors" style="background-color:#9c7da0">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
+        $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
+        $output .= '<img src="http://diamedical.staging.wpengine.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" />';
+        $output .= '<img src="http://diamedical.staging.wpengine.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/>';
+        $output .= '<img src="http://diamedical.staging.wpengine.com/wp-content/imgs/Span-America-MFT.png" id="benz-menu-img-mft3" class="benz-menu-img" />';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
-}
+  }
 }
 
+// -- REPAIRS
 class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu">';
-    }
-
-function end_lvl(&$output, $depth = 0, $args = Array()) {
+  function start_lvl(&$output, $depth = 0, $args = Array()) {
+    $output .= '<ul class="sub-menu">';
+  }
+  function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
-        $output .= '<div class="benz-bottom-colors" style="background-color:#c67798">Can’t find a cover to fit your mattress? We can customize a cover for any mattresses or stretcher!</div>';
+        $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
+        $output .= '<a id="biomedrepairs" href="#"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/biomedical-repairs-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
+  }
 }
-}
+
+// -- MEDICAL EQUIPMENT
 class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu">';
@@ -132,14 +140,16 @@ class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {
 
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
-    //    $output .= '<div class="benz-bottom-colors" style="background-color:#efea43">Search over 500 healthcare mattresses or browse by manufacturer or part number.</div>';
+        $output .= '<div class="benz-bottom-colors" style="background-color:#ffad00;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</div>';
+        $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
         $output .= '<div class="arrow-down"></div>';
+        $output .= '<a id="fluidslogomenu" href="http://www.partsonline.diamedicalusa.com/medical-equipment/simulated-iv-bags/"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
 }
 }
-
+// -- ABOUT US
 class BENZ_Walker_Nav_Menu_ABOUT extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu">';
@@ -171,19 +181,16 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
+  }
 }
-}
 
-
-
+// -- REQUIRE PREVIEW FILE FOR EMAIL PLUGIN
 $preview = get_stylesheet_directory() . '/woocommerce/emails/woo-preview-emails.php';
 if(file_exists($preview)) {
      require $preview;
  }
 
-
-
-// Change number or products per row, and number of products per page
+// -- Change number or products per row, and number of products per page
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
 	function loop_columns() {
@@ -196,16 +203,14 @@ if (is_woocommerce() && is_archive()) {
             add_thickbox();
 }
 
-
-//remove "Add to Cart" button on product listing page in WooCommerce
+//  --  remove "Add to Cart" button on product listing page in WooCommerce
 add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
 
 function remove_add_to_cart_buttons() {
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 }
 
-
-//Re-Order product page layouts
+//  --  Re-Order product page layouts
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
@@ -217,14 +222,14 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_e
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta',   10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );// Button
 
-// PREFIX ORDERNUMMER ADD MM- BENZ
+//  --  PREFIX ORDERNUMMER ADD MM- BENZ
 add_filter( 'woocommerce_order_number', 'prefix_woocommerce_order_number', 1, 2 );
 
 function prefix_woocommerce_order_number( $oldnumber, $order ) {
     return 'EC-' . $order->id;
 }
 
-// Confirm password field on the register form under My Accounts BENZ
+//  --  Confirm password field on the register form under My Accounts BENZ
 add_filter('woocommerce_registration_errors', 'registration_errors_validation', 10,3);
 function registration_errors_validation($reg_errors, $sanitized_user_login, $user_email) {
 	global $woocommerce;
@@ -246,7 +251,7 @@ function wc_register_form_password_repeat() {
 	<?php
 }
 
-// Display Price For Variable Product With Same Variations Prices
+//  --  Display Price For Variable Product With Same Variations Prices
 add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
   if (is_user_logged_in() ) {
   if ($value['price_html'] == '') {
@@ -257,19 +262,7 @@ add_filter('woocommerce_available_variation', function ($value, $object = null, 
 }
 }, 10, 3);
 
-
-
-//remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0
-function benz_custom_list_price( $label ) {
-    $label =  str_replace( "Tags", "List Price", $label );
-
-    return $label;
-}
-add_filter( 'woo_predictive_search_widget' , 'benz_custom_list_price' );
-
-
-
-//remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0
+//  --  remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0
 function benz_custom_shipping_free_label( $label ) {
     $label =  str_replace( "(Free)", " ", $label );
     $label =  str_replace( "(FREE!)", " ", $label );
@@ -278,7 +271,7 @@ function benz_custom_shipping_free_label( $label ) {
 }
 add_filter( 'woocommerce_cart_shipping_method_full_label' , 'benz_custom_shipping_free_label' );
 
-// get rid of users "POSTS" cloumn, -- never use it
+//  --   get rid of users "POSTS" cloumn, -- never use it
 add_action('manage_users_columns','remove_user_posts_column');
 function remove_user_posts_column($column_headers) {
     unset($column_headers['posts']);
@@ -288,26 +281,23 @@ function remove_user_posts_column($column_headers) {
 //  --  Price Things -- From :$20 for variable products
 add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
 add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
+
 function wc_wc20_variation_price_format( $price, $product ) {
-// Main Price
-$prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
-$price = $prices[0] !== $prices[1] ? sprintf( __( '<span class="var-price-wrap">From: %1$s</span>', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
-// Sale Price BENZ
-$prices = array( $product->get_variation_regular_price( 'min', true ), $product->get_variation_regular_price( 'max', true ) );
-sort( $prices );
-$saleprice = $prices[0] !== $prices[1] ? sprintf( __( 'From: %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
-if ( $price !== $saleprice ) {
-$price = '<span class="price-wrap-gal">' . $saleprice . '</span> <ins>' . $price . '</ins>';
-}
-return $price;
+  $prices = array( $product->get_variation_price( 'min', true ), $product->get_variation_price( 'max', true ) );
+  $price = $prices[0] !== $prices[1] ? sprintf( __( '<span class="var-price-wrap">From: %1$s</span>', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+  $prices = array( $product->get_variation_regular_price( 'min', true ), $product->get_variation_regular_price( 'max', true ) );
+  sort( $prices );
+  $saleprice = $prices[0] !== $prices[1] ? sprintf( __( 'From: %1$s', 'woocommerce' ), wc_price( $prices[0] ) ) : wc_price( $prices[0] );
+  if ( $price !== $saleprice ) {
+    $price = '<span class="price-wrap-gal">' . $saleprice . '</span> <ins>' . $price . '</ins>';
+  }
+  return $price;
 }
 
 //  --  woocommerce side bar
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 
-
 //  -- New Class to add Sortable Registered date in users wp dash -- HOT
-
 class RRHE {
 
 //  -- roll the ball

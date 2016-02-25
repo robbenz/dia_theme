@@ -11,6 +11,10 @@ body {font-family: 'Open Sans', sans-serif;}
 a { color: #00426a; }
 /* END */
 
+.variations_form .variations td.label { display:none !important;}
+
+
+
 /* Sidebar */
 .sidebar { margin-top: 20px }
 .sidebar section { margin-bottom: 40px }
@@ -36,16 +40,21 @@ a { color: #00426a; }
 .rs_rs_avatar {float: left; margin-left: 6px; margin-right: 8px; margin-top: 55px; overflow: hidden; text-align: center; width: 85px; }
 .rs_rs_name{margin-left:0px;}
 .rs_content{margin-left:20px;padding-top: 9px;}
-.rs_rs_addtocart{clear:both; float:right; margin: -30px 20px 0 0;}
+.widget_products_predictive_search{z-index: 0 !important;}
+.rs_rs_addtocart, #viewprice-detail-search {clear:both; float:right; margin: -30px 20px 0 0;}
+#viewprice-detail-search a { border-radius: 0.4em; background-color: #78be20;color: #ffffff; padding: 10px 20px 12px;}
+#viewprice-detail-search a:hover {background-color: #00426a; border: 1px solid #78b320; color: #ffffff; text-decoration:none;}
 .rs_rs_addtocart .added_to_cart {display:none !important;}
 .rs_rs_price { color: #7cba47; float: right; font-size: 20px;margin-right:20px; position: relative; top: 3em;}
 .rs_rs_price span.amount{color:#fff;}
 .widget_shopping_cart_content img{display:none;}
-.rs_rs_tag{color:#7cba47; float: right;font-size: 16.5px;left: 104px;; position: relative; top: -120px; }
+.rs_rs_tag{color:#7cba47; float: right;font-size: 16.5px;left: -24px; position: relative; top: -120px; }
+.logged-in .rs_rs_tag{ left: 104px; }
 .rs_rs_tag a {text-decoration: line-through;color: #ffffff;pointer-events: none !important;}
 .rs_rs_tag a:before{content:"$";}
  .ctr_search .txt_livesearch, #wrap .ctr_search .txt_livesearch {padding: 6px 7px !important;}
 .ctr_search { border-radius: 0.5em; height:2.4em; padding: 6px 7px !important;}
+.rs_result_others{display:none;}
 /* END */
 
 /* Hide form placeholders on focus */
@@ -60,7 +69,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 #responsive-menu .appendLink {font-size:20px; width:26px; text-align:center; }
 /*	[class*="col-"] { background-clip: padding-box; border: 7px solid transparent; }   */
 /* END */
-
+.sorry-you-cant-find{color:#cc1100;font-weight:900;font-size:1.18em;letter-spacing: 1px;}
 /* WOOCOMMERCE SPECIFIC */
 .woocommerce-result-count { display:none;}
 .archive #content .products {float:right; width:70%;}
@@ -166,6 +175,7 @@ div.festi-cart-content { color: #636363 !important; font-family: "Open Sans",san
 body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #mm-right-contact .sub-menu { background-color: #ffffff; border: 1px solid #d7d7d7; left: -71px; padding: 5px; width: 300px; top:40px; z-index:9999;}
 .sf-menu li a:hover{text-decoration: none !important;}
+.after-menu-links{color:#78be20;font-size: 17px; }
 /*END*/
 
 /* Product Slider */
@@ -272,42 +282,33 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 .benz-menu > ul > li > a:hover {background-color: #2774ae }
 .arrow-down { z-index: 999; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #2774ae; position:relative; }
 #menu-item-57575 .sub-menu,
+#menu-item-57556 .sub-menu,
+#menu-item-57620 .sub-menu,
+#menu-item-57624 .sub-menu,
 #menu-item-57591 .sub-menu,
-#menu-item-57609 .sub-menu{ left:0px; border: none !important; box-shadow: none !important; top: 23px; font-size:13px; display: block; height:116px; width:300px; padding: 0 !important;}
+#menu-item-57627 .sub-menu,
+#menu-item-57630 .sub-menu,
+#menu-item-57637 .sub-menu,
+#menu-item-57609 .sub-menu{ left:0px; border: none !important; box-shadow: none !important; top: 23px; font-size:13px; display: block; height: auto; width:300px; padding: 0 !important;}
 .benz-menu > ul > li .sub-menu  li.menu-item-has-children{width:30%;; color:#000;float:left; }
 .benz-menu > ul > li .sub-menu  li.menu-item-has-children a{color:#00426a;}
-
-/* Medical Equipment Menu */
-#menu-medical-equipment .arrow-down {  left: 219px; top: -25px; }
-#menu-item-32373 > .sub-menu {  height:390px; left:-140px;  }
-
-/* END */
-
-
-
-/* ABOUT MENU*/
-#benz-menu-about .benz-menu-about-copy { font-size:14px; color:#000; }
-#benz-menu-about .benz-menu-about-header { margin-top:6px; color:#2668b5; font-weight:600;}
-/* about-phone */
-p.about-phone {position:relative; top:15px; left:-109px;  }
-p.about-phone-number {position:relative; top:15px; left:-123px;  }
-.about-phone-number i {position:relative; top:5px; left:-8px;}
-/* about-fax */
-p.about-fax {  position: relative; top: -43px; left: 84px;}
-p.about-fax-number {position:relative; top:-42px; left:81px;  }
-.about-fax-number i {position:relative; top:5px; left:-8px;}
-/* about-email */
-p.about-email {position:relative; top:-26px; left:-113px;  }
-p.about-email-number {position:relative; top:-24px; left:-83px;  }
-.about-email-number i {position:relative; top:5px; left:-8px;}
-/* about-mail */
-p.about-mail {position:relative; top:-7px; left:-106px;  }
-p.about-mail-number {position:relative; top:-10px; left:-74px;  }
-.about-mail-number i {position:relative; top:2px; left:-8px;}
+.benz-bottom-colors { clear: both; color: #000; left: -25px; padding:5px 0 5px 24px; position: relative; text-align: left; width: 1171px; z-index: 999; }
+/* Sign in & Need help menus */
+#mm-right-contact .sub-menu li{list-style:disc; text-align:left; line-height:24px; margin-left:19px; }
+#mm-right-contact .sub-menu li a:hover{ background-color: #fff; color: #2774ae }
+#mm-right-contact .sub-menu li a{color:#00426a;}
+#menu-item-57565 .sub-menu #wppb-submit {  background-color: #78be20; border: medium none; border-radius: 0; font-family: "Open Sans",sans-serif; font-size: 21px; margin-top: 3px; padding: 7px 109px; text-transform: uppercase; }
+#menu-item-57565 .sub-menu #benz-register-link { color:#fff; text-transform:uppercase; font-family: 'Open Sans', sans-serif; padding: 12px 0px; background-color:#004ea8; margin-top:5px;margin-bottom:5px; font-size:19px; font-weight:500;}
+.menu-sign_in-container input[type="text"], .menu-sign_in-container input[type="email"], .menu-sign_in-container input[type="url"], .menu-sign_in-container input[type="password"], .menu-sign_in-container input[type="search"], .menu-sign_in-container textarea { width: 100%; border-radius: none;  }
+.wppb-form-field label, #wppb-login-wrap .login-username label, #wppb-login-wrap .login-password label { float: left !important; font-size: 14px !important; font-weight: 400 !important; min-height: 1px !important; text-align: left !important; width: 100%!important;  }
+#menu-sign-in .sub-menu .insert-img-here {text-align: left; }
+.wppb-form-field input, .wppb-form-field input[type="text"], .wppb-form-field input[type="email"], .wppb-form-field input[type="url"], .wppb-form-field input[type="password"], .wppb-form-field input[type="search"], .wppb-form-field select, .wppb-form-field textarea, .wppb-checkboxes, .wppb-radios, #wppb-login-wrap .login-username input, #wppb-login-wrap .login-password input { width: 100% !important; }
+#mm-right-contact .sub-menu > .insert-img-here{padding-top:30px; margin-top:-28px;}
+#benz-main-menu-box .sub-menu { overflow: hidden;}
 /* END */
 
 /* Menu Sub Menu items styles li */
-.benz-blueheader a{color:#004ea8 !important; padding:0; font-weight:600; font-size: 15px; margin-bottom: 0px;}
+.benz-blueheader a{color:#2774ae !important; padding:0; font-weight:600; font-size: 15px; margin-bottom: 0px;}
 .benz-blueheader a:hover{ font-weight:700; background-color:#fff !important; color:#004ea8;}
 .benz-viewall a{ text-decoration: underline; color:#000 !important; text-transform: capitalize; font-weight: 500; margin-bottom:8px;}
 .benz-viewall a:hover{font-weight:700; font-weight: 600; color:#000;}
@@ -315,7 +316,79 @@ p.about-mail-number {position:relative; top:-10px; left:-74px;  }
 .mmregular-item a:hover{font-weight:700; font-weight: 600; color:#000;}
 .benz-menu .sub-menu {background-color: #ffffff; border-right: 1px solid #636363; border-bottom: 1px solid #636363; border-left: 1px solid #636363; padding: 25px;  }
 li.main-header-link:hover {background-color:#2774ae; }
+.benz-menu > ul li > .sub-menu {overflow: hidden; }
 /* END */
+
+/* Medical Equipment Menu */
+#menu-medical-equipment .benz-bottom-colors{top:375px;}
+#menu-medical-equipment #mmlogomenu{ position: relative; top: 105px; width: 210px; z-index: 99; }
+#menu-medical-equipment #fluidslogomenu{ left: 59%;; position: relative; top: 12px;width: 383px; z-index: 99; }
+#menu-medical-equipment #mmlogomenu:before{ content:"from: "; z-index: 999;}
+#menu-item-57582 { margin-top:39px;}
+#menu-medical-equipment .arrow-down { top: -119px; left:18.45%; }
+#menu-item-32373 > .sub-menu { height:460px; left:-140px;  }
+/* END */
+
+/* Part Search Menu */
+#menu-parts-search .benz-bottom-colors { top: 78px;}
+#menu-parts-search  .arrow-down {  left: 40%;; top: -100px; }
+#menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
+#menu-parts-search .ctr_search{ position: relative !important; top:-23px; }
+#menu-item-57558 { width:200px;}
+/* END */
+
+/* Repiars Menu */
+#menu-repairs > li > .sub-menu, #menu-manufacturers > li > .sub-menu { height: 185px;  }
+#menu-repairs .benz-bottom-colors { top: 108px;}
+#menu-repairs .arrow-down { left: 55.6%; top: -78px; }
+#menu-item-57556 > ul li, #menu-item-57620 > ul li, #menu-item-57624 > ul li, #menu-item-57627 > ul li, #menu-item-57630 > ul li, #menu-item-57637 > ul li { margin-top:6px; }
+#menu-repairs #biomedrepairs{  float: right; margin-right: -49px; top: -101px; width: 430px; z-index: 100; }
+#menu-repairs > li .sub-menu li.menu-item-has-children, #menu-manufacturers > li .sub-menu li.menu-item-has-children  { width:23%; }
+/* END */
+
+/* Manufacturers Menu */
+#menu-manufacturers .benz-bottom-colors { top: 108px;}
+#menu-manufacturers .arrow-down { left: 71.6%; top: -78px; }
+#benz-menu-img-mft2 {  position: relative; top: -64px; }
+#benz-menu-img-mft3 { position: relative; }
+#menu-manufacturers .benz-menu-img{z-index: 100; float:right;}
+/* END */
+
+/* TOP ROW HEADERS */
+#menu-item-57575 .sub-menu { margin-top:10px;}
+#menu-item-57575 > a {font-size: 15px; color:#00426a !important; margin-bottom:8px; }
+#menu-item-57591 > a, #menu-item-57609 > a, #menu-item-57556 > a, #menu-item-57620 > a, #menu-item-57624 > a, #menu-item-57627 > a, #menu-item-57630 > a, #menu-item-57637 > a {font-size: 15px; }
+/* END */
+
+/* ABOUT MENU*/
+#menu-contact-us > li > .sub-menu { left: -969px;  height: 356px; }
+#menu-contact-us .arrow-down { left: 1015px; top: -27px; }
+#benz-menu-about{ width:615px; height:300px; text-align:left; padding-left:10px; float:left; color:#000;}
+#benz-menu-about .benz-menu-about-copy { font-size:14px; color:#000; }
+#benz-menu-about .benz-menu-about-header { margin-top:6px; color:#2668b5; font-weight:600;}
+#menu-item-6812:hover{ color:#000;}
+#menu-item-6812 a:hover{ color:#000;}
+#menu-item-6812{float:right; width:440px; position: relative; }
+#menu-item-6812 a{color: #004ea8 !important}
+#menu-item-6812 a:hover{font-weight:600; !important; color: #004ea8 !important}
+/* about-phone */
+p.about-phone {position:relative; top:15px; left:-109px; }
+p.about-phone-number {position:relative; top:15px; left:-123px;  }
+.about-phone-number i {position:relative; top:5px; left:-8px;}
+/* about-fax */
+p.about-fax {  position: relative; top: -43px; left: 274px;  }
+p.about-fax-number {position:relative; top:-42px; left:281px;  }
+.about-fax-number i {position:relative; top:5px; left:-8px;}
+/* about-email */
+p.about-email {position:relative; top:-26px; left:-113px; }
+p.about-email-number {position:relative; top:-24px; left:-83px;  }
+.about-email-number i {position:relative; top:5px; left:-8px;}
+/* about-mail */
+p.about-mail {position:relative; top:-7px; left:153px;  }
+p.about-mail-number {position:relative; top:-10px; left:137px;  }
+.about-mail-number i {position:relative; top:2px; left:-8px;}
+/* END */
+
 
 /* CART PAGE */
 #post_11 .entry-wrap {box-shadow: none !important; border: 3px dashed #00426a !important; padding:2em !important;}
@@ -420,11 +493,19 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 @media (min-width: 992px) {
 #mm-right-contact{display:none;}
 .benz-menu > ul > li > a{padding: 11px 0.961em; }
-.benz-menu .sub-menu{width: 888px;}
-}
+.benz-menu .sub-menu{width: 969px; }
+#menu-item-32373 > .sub-menu { left: -107px; letter-spacing: 0.8px;}
+#menu-parts-search .sub-menu { left: -339px; }
+#menu-repairs > li > .sub-menu { left: -496px; }
+#menu-manufacturers > li > .sub-menu { left: -606px; }
+#benz-menu-img-mft3 { left: 10%; }
 
 @media (min-width: 1200px) {
 #mm-right-contact{display:block;}
 .benz-menu > ul > li > a{padding: 11px 1.8298em; }
 .benz-menu .sub-menu{width: 1171px;}
-}
+#menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 1.1px; }
+#menu-parts-search .sub-menu { left: -406px;}
+#menu-repairs > li > .sub-menu { left: -597px; }
+#menu-manufacturers > li > .sub-menu { left: -740px; }
+#benz-menu-img-mft3 { left: 5%; }
