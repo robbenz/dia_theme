@@ -106,7 +106,7 @@ class BENZ_Walker_Nav_Menu_PS extends Walker_Nav_Menu {
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a part request and we’ll email you a quote!</div>';
-        $output .= woo_predictive_search_widget( $ps_echo );
+      //  $output .= woo_predictive_search_widget( $ps_echo );
         $output .= '<div class="arrow-down"></div>';
     }
     $indent = str_repeat( "\t", $depth );
