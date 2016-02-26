@@ -21,7 +21,7 @@ a { color: #00426a; }
 .sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }
 .sidebar li { margin: 10px 0 }
 /* END */
-#viewprice-detail{position:relative; top:10px; left:6px; }
+#viewprice-detail{position:relative; top:10px; left:6px;margin-bottom: 36px; }
 #viewprice-detail a { border-radius: 0.4em; background-color: #78be20;color: #ffffff; padding: 10px 20px 12px;}
 #viewprice-detail a:hover {background-color: #00426a; color: #ffffff; text-decoration:none;}
 /* predictive_results */
