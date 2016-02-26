@@ -52,18 +52,13 @@ if ( ! $product->is_purchasable() ) {
 	 		}
 	 	?>
 
-	 	<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
-
-
+		<input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
 		<?php if ( is_user_logged_in() ): ?>
-
-
-			 	<button type="submit" class="single_add_to_cart_button button alt"><i class="fa fa-shopping-cart fa-lg" style=""></i>&nbsp;&nbsp;&nbsp;<?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+			<button type="submit" class="single_add_to_cart_button button alt"><i class="fa fa-shopping-cart fa-lg" style=""></i>&nbsp;&nbsp;&nbsp;<?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+			<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 		<?php else: ?>
-    <div id="viewprice-detail"><a href="#" class="eModal-1">View Price</a></div>
+			<div id="viewprice-detail"><a href="#" class="eModal-1">View Price</a></div>
 		<?php endif; ?>
-
 	</form>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>

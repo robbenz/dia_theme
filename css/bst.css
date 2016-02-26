@@ -72,7 +72,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 .sorry-you-cant-find{color:#cc1100;font-weight:900;font-size:1.18em;letter-spacing: 1px;}
 /* WOOCOMMERCE SPECIFIC */
 .woocommerce-result-count { display:none;}
-.archive #content .products {float:right; width:70%;}
+
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%;}
 li.product-category h3 { text-align:center; color:#f7a900; text-align:center; text-transform: uppercase; font-size:20px !important;}
 .var-price-wrap{ display:none;}
@@ -177,7 +177,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 #dia-logo-left { float: left; height: 80px; margin: 0; width: 356px; }
 #dia-logo-left img { width: 100%; }
 #masthead { width: 100%; padding: 2em 0em 0em 0em; height:117px;}
-.header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://partsonline.diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; width: 844px; font-family: lora, serif; font-size: 16.9px; }
+.header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://partsonline.diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; font-family: lora, serif; font-size: 16.9px; }
 .header-wrap-text-medical-equipment-header{font-family: sans-serif; border-bottom: 2px solid #ffad00; color: #ffad00; font-size: 26px; font-weight: 500; line-height: 140%; text-align: center; margin-top:0.6em !important;}
 .woocommerce-ordering{ display:none;}
 #benz-register-link { color:#fff; text-transform:uppercase; font-family: 'Open Sans', sans-serif; padding: 12px 0px; background-color:#004ea8; margin-top:5px;margin-bottom:5px; font-size:19px; font-weight:500;}
@@ -555,11 +555,17 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 /*  =================================================================================  */
 @media (min-width: 320px) {
 #homeorangewrap img{ display:none;}
+.sidebar{display:none;}
+.archive #content .products { float: none; width: 100%; }
+.header-wrap-text-medical-equipment { width:100%; }
 }
 
 @media (min-width: 768px) {
 #mm-right-contact{display:none;}
 #homeorangewrap img{ display:none;}
+.sidebar{display:none;}
+.archive #content .products { float: none; width: 100%; }
+.header-wrap-text-medical-equipment { width:100%; }
 }
 
 @media (min-width: 992px) {
@@ -573,7 +579,10 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 #benz-menu-img-mft3 { left: 10%; }
 #homeorangewrap img{ display:inline;}
 #menu-contact-us > li > .sub-menu { left: -802px; }
-
+.sidebar{display:block;}
+.archive #content .products {float:right; width:70%;}
+.header-wrap-text-medical-equipment { width: 684px; }
+}
 @media (min-width: 1200px) {
 #mm-right-contact{display:block;}
 .benz-menu > ul > li > a{padding: 11px 1.8298em; }
@@ -584,3 +593,7 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 #menu-manufacturers > li > .sub-menu { left: -740px; }
 #benz-menu-img-mft3 { left: 5%; }
 #menu-contact-us > li > .sub-menu { left: -802px; left: -969px; }
+.sidebar{display:block;}
+.archive #content .products {float:right; width:70%;}
+.header-wrap-text-medical-equipment {  width: 844px; }
+}
