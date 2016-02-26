@@ -177,7 +177,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 #dia-logo-left { float: left; height: 80px; margin: 0; width: 356px; }
 #dia-logo-left img { width: 100%; }
 #masthead { width: 100%; padding: 2em 0em 0em 0em; height:117px;}
-.header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("http://www.partsonline.diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; width: 844px; font-family: lora, serif; font-size: 16.9px; }
+.header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://partsonline.diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; width: 844px; font-family: lora, serif; font-size: 16.9px; }
 .header-wrap-text-medical-equipment-header{font-family: sans-serif; border-bottom: 2px solid #ffad00; color: #ffad00; font-size: 26px; font-weight: 500; line-height: 140%; text-align: center; margin-top:0.6em !important;}
 .woocommerce-ordering{ display:none;}
 #benz-register-link { color:#fff; text-transform:uppercase; font-family: 'Open Sans', sans-serif; padding: 12px 0px; background-color:#004ea8; margin-top:5px;margin-bottom:5px; font-size:19px; font-weight:500;}
@@ -200,6 +200,12 @@ span.festi-cart-product-count { margin-left:80%; text-align:right;}
 #mm-right-contact .sf-menu .menu-item-has-children > a:first-child, .sf-menu .page_item_has_children > a:first-child {padding-right:3px;}
 #mm-right-contact a{color: #000000; font-size: 15px; font-weight: 500; }
 #mm-right-contact{color: #636363; float: right; font-family: "Open Sans",sans-serif; font-size: 15px; text-align: right; width: 427px;}
+@-moz-document url-prefix() {
+#mm-right-contact{ width:430px }
+
+}
+
+
 .logged-in #mm-right-contact{ width: 343px;}
 .insert-img-here {text-align:center; padding-top:6px; padding-left:0;}
 header h2{display:none;}
@@ -300,7 +306,29 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 #changepassword-wrap-myac #password_1, #changepassword-wrap-myac #password_2, #changepassword-wrap-myac #password_current, #name-stuff-wrap-myac #account_email, #name-stuff-wrap-myac #account_last_name, #name-stuff-wrap-myac #account_first_name {width: 62.5%;}
 #post_13 .woocommerce-error{margin-bottom: 6em !important; margin-top: -4em !important;}
 .woocommerce-password-strength {display:none !important; }
+#post_13 div.woocommerce {padding-top:1.5em;}
+@-moz-document url-prefix() { #post_13 div.woocommerce {padding-top:0.6em;} }
 /* END */
+
+
+.bt_search { background: rgba(0, 0, 0, 0) url("https://partsonline.diamedicalusa.com/wp-content/plugins/woocommerce-products-predictive-search-pro/assets/images/bg-search.png") no-repeat scroll 0 center !important; }
+
+
+/*ORDER RECIEVED*/
+#order-recieved-wrap{width:100%;text-align:center; margin-bottom:20px;}
+#order-recieved-wrap .order-recieved-copy{font-size:30px; font-style:italic;color:#ffad00;margin-bottom: 1px;}
+.shipping-costs-copy{font-size:20px; color:#00426a; text-align: center; margin-top:-36px;position: relative;top: -226px;}
+#order-details-wrap{margin-bottom: 1em;margin-top:4em;border: 3px dashed #00426a;padding:2em;}
+#order-details-wrap .order_details .order {padding:0.2em;background-color:#ffad00; border-radius:0.2em; color:#00426a;font-size:21px;text-align:center;text-transform: uppercase;margin-bottom:0.9em;}
+#order-details-shop-wrap{border: 3px dashed #00426a;padding:2em;margin-bottom:1em;}
+#order-details-shop-wrap h2{padding:0.2em;background-color:#ffad00; border-radius:0.2em; color:#00426a;font-size:21px;text-align:center;text-transform: uppercase;margin-bottom:0.9em;}
+#customer-details-shop-wrap{border: 3px dashed #00426a;padding:2em;height: 25em;}
+#customer-details-shop-wrap h2{margin-top: -10px;padding:0.2em;background-color:#ffad00; border-radius:0.2em; color:#00426a;font-size:21px;text-align:center;text-transform: uppercase;margin-bottom:0.9em;}
+.shipping-details-text{font-size:1.19em;font-style:italic;font-weight: 500; color:#00426a;}
+#order-details-shop-wrap .form-field-wide{display:none;}
+/*END*/
+
+
 
 /* Generic Drop Menus Stuff */
 .sf-menu .menu-item-has-children > a:first-child::after, .sf-menu .page_item_has_children > a:first-child::after { border: none !important; }

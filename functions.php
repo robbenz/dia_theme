@@ -20,7 +20,6 @@ function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
 
-
 //  --  LOGIN | LOGOUT STUFF
 add_filter('woocommerce_login_redirect', 'login_redirect');
 
@@ -123,9 +122,9 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<img src="http://diamedical.staging.wpengine.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" />';
-        $output .= '<img src="http://diamedical.staging.wpengine.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/>';
-        $output .= '<img src="http://diamedical.staging.wpengine.com/wp-content/imgs/Span-America-MFT.png" id="benz-menu-img-mft3" class="benz-menu-img" />';
+        $output .= '<img src="https://partsonline.diamedicalusa.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" />';
+        $output .= '<img src="https://partsonline.diamedicalusa.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/>';
+        $output .= '<img src="https://partsonline.diamedicalusa.com/wp-content/imgs/Span-America-MFT.png" id="benz-menu-img-mft3" class="benz-menu-img" />';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
@@ -141,7 +140,7 @@ class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="biomedrepairs" href="#"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/biomedical-repairs-menu.png" /></a>';
+        $output .= '<a id="biomedrepairs" href="#"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/biomedical-repairs-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
@@ -157,9 +156,9 @@ class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#ffad00;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</div>';
-        $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
+        $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="fluidslogomenu" href="http://www.partsonline.diamedicalusa.com/product-category/simulated-iv-bags/"><img src="http://diamedical.staging.wpengine.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
+        $output .= '<a id="fluidslogomenu" href="http://www.partsonline.diamedicalusa.com/product-category/simulated-iv-bags/"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
@@ -170,9 +169,9 @@ class BENZ_Walker_Nav_Menu_ABOUT extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu">';
         $output .= '<div id="benz-menu-about"><p class="benz-menu-about-header">WHO ARE WE?</p>';
-        $output .= '<p class="benz-menu-about-copy">MedMattress provides mattresses, stretcher pads, mattress covers and accessories';
-        $output .= 'at affordable prices. MedMattress began in 2008 as the mattress division';
-        $output .= 'of DiaMedical USA. DiaMedical USA opened in 2007 in Detroit, Michigan.</p>';
+        $output .= '<p class="benz-menu-about-copy">DiaMedical USA, along with its subsidiaries MedMattress.com and SimLabSolutions, is a manufacturer ';
+        $output .= 'and global distributor of healthcare products, supplies, mattresses and replacement parts. ';
+        $output .= 'We lead the industry in Healthcare education by offering full service solutions in outfitting your simulation labs with products such as hospitals beds, training headwalls, infusion pumps, simulated IV fluids, loaded crash carts, and more! </p>';
         $output .= '<p class="benz-menu-about-header">OUR MISSION</p>';
         $output .= '<p class="benz-menu-about-copy">We understand how tough it is to for hospitals and universities to build a budget';
         $output .= 'without making sacrifices. That’s why we have no hidden fees nor built-in shipping';
@@ -191,7 +190,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<p class="about-fax" style="color:#000;">Fax Number:</p>';
         $output .= '<p class="about-fax-number" style="color:#004ea8;"><i class="fa icon-print fa-lg"></i>(248) 671-1550</p>';
         $output .= '<p class="about-email" style="color:#000;">Email Address:</p>';
-        $output .= '<p class="about-email-number" style="color:#004ea8;"><i class="fa icon-laptop fa-lg"></i>Info@MedMattress.com</p>';
+        $output .= '<p class="about-email-number" style="color:#004ea8;"><i class="fa icon-laptop fa-lg"></i>Info@DiaMedicalUSA.com</p>';
         $output .= '<p class="about-mail" style="color:#000;">Mailing Address: </p>';
         $output .= '<p class="about-mail-number" style="color:#004ea8;"><i class="fa icon-envelope fa-lg"></i>5807 W. Maple, Suite #175<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;West Bloomfield, MI 48322</p>';
         $output .= '</div><div class="benz-bottom-colors" style="background-color:#7fa6d3">Need help finding our policies? Visit our help page for our shipping and return policies.</div>';
