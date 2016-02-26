@@ -91,7 +91,7 @@ class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
         function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<div class="insert-img-here" style="line-height: 22px; width:auto; color:#004ea8; font-weight:700; text-align:center; border-top: 1px solid #cccccc; ">';
         $output .= 'NEW CUSTOMER? <br><span style="color:#000; font-weight:normal;"><em>Registration is easy and<br>only takes a few seconds!</em></span>';
-        $output .= '<a href="https://www.partsonline.diamedicalusa.com/my-account" id="benz-register-link">REGISTER</a></div></ul>';
+        $output .= '<a href="https://partsonline.diamedicalusa.com/my-account" id="benz-register-link">REGISTER</a></div></ul>';
     }
 
 }

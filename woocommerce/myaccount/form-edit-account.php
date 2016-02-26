@@ -40,10 +40,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<label for="account_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="email" class="input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />
 	</p>
+    	<p>
+		<?php wp_nonce_field( 'save_account_details' ); ?>
+		<input type="submit" class="button" name="save_account_details" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>" />
+		<input type="hidden" name="action" value="save_account_details" />
+	</p>
 
+    <?php _e( '<h2 class="wooheader-green">Password Change</h2>', 'woocommerce' ); ?>
 	<fieldset>
-		<legend><?php _e( 'Password Change', 'woocommerce' ); ?></legend>
-
 		<p class="form-row form-row-wide">
 			<label for="password_current"><?php _e( 'Current Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
 			<input type="password" class="input-text" name="password_current" id="password_current" />

@@ -3,7 +3,7 @@
   <div id="footerwrap" class="container">
   <div id="footerlogos">
   <div id="diamedicallogo"><a href="<?php echo site_url(); ?>"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/footer-sample/diamedicallogosmall.png" /></a></div>
-  <div id="medmatlogo"><a href="<?php echo site_url(); ?>"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/footer-sample/medmattlogo.png" /></a></div>
+  <div id="medmatlogo"><a href="http://medmattress.com"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/footer-sample/medmattlogo.png" /></a></div>
   <div id="simlablogo"><a href="http://www.diamedicalusa.com/simlabsolutions.php"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/footer-sample/simlablogo.png" /></a></div>
   </div><!--footerlogos-->
 
