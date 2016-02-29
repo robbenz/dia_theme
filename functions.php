@@ -132,6 +132,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
 }
 
 // -- REPAIRS
+/*
 class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
   function start_lvl(&$output, $depth = 0, $args = Array()) {
     $output .= '<ul class="sub-menu">';
@@ -146,6 +147,7 @@ class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
     $output .= "{$indent}</ul>\n";
   }
 }
+*/
 
 // -- MEDICAL EQUIPMENT
 class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {

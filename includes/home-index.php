@@ -3,12 +3,12 @@
     <div id="content" role="main">
       <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '57643' ); } ?>
       <div style="margin-top:28px; width:100%;">
-        <div class="col-xs-12 col-md-8" style="padding:0 3% 0 0;margin-bottom: 4%;">
+        <div class="col-xs-12 col-md-8 rgt-img-home">
           <a href="/medical-equipment/">
           <img style="width:100%;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/Healthcare-Education.png" />
           </a>
         </div>
-        <div class="col-xs-6 col-md-4" style="padding: 0 0 0 0.75%;margin-bottom: 4%;">
+        <div class="col-xs-6 col-md-4 lft-img-home" style="padding: 0 0 0 0.75%;margin-bottom: 4%;">
           <a href="/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/product">
           <img style="width:100%;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/biomedical-repair.png" />
           </a>
@@ -36,13 +36,13 @@
 <div class="row">
   <div id="content" role="main">
     <div class="col-md-4" style="">
-      <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/"><img style="width:100%;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/Simulated-iv-fluids.png" /></a>
+      <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/"><img class="home-img-thirds" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/Simulated-iv-fluids.png" /></a>
     </div>
     <div class="col-md-4" style="">
-      <a href="http://www.diamedicalusa.com/Catalog.pdf" target="_blank"><img style="width:100%;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/download-catalog.png" /></a>
+      <a href="http://www.diamedicalusa.com/Catalog.pdf" target="_blank"><img class="home-img-thirds" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/download-catalog.png" /></a>
     </div>
     <div class="col-md-4" style="">
-      <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">  <img style="width:100%;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/loaded-crash-carts.png" /></a>
+      <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">  <img class="home-img-thirds" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/loaded-crash-carts.png" /></a>
     </div>
   </div>
   <!-- /#content -->

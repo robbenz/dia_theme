@@ -73,7 +73,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 /* WOOCOMMERCE SPECIFIC */
 .woocommerce-result-count { display:none;}
 
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%;}
+
 li.product-category h3 { text-align:center; color:#f7a900; text-align:center; text-transform: uppercase; font-size:20px !important;}
 .var-price-wrap{ display:none;}
 .content > [id*="product-"] {padding-top:2em; }
@@ -557,7 +557,12 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 #homeorangewrap img{ display:none;}
 .sidebar{display:none;}
 .archive #content .products { float: none; width: 100%; }
+#mm-right-contact{display:none;}
 .header-wrap-text-medical-equipment { width:100%; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product { /*margin: 0 3%; width: 80%; */}
+.rgt-img-home{padding:0;margin-bottom: 4%;}
+.lft-img-home {display:none;}
+.home-img-thirds{width:90%;margin: 0 5% 3% 5%;}
 }
 
 @media (min-width: 768px) {
@@ -566,6 +571,10 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .sidebar{display:none;}
 .archive #content .products { float: none; width: 100%; }
 .header-wrap-text-medical-equipment { width:100%; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product { margin: 0 3%; width: 40%; }
+.rgt-img-home{padding:0;margin-bottom: 4%;}
+.lft-img-home {display:none;}
+.home-img-thirds{width:30%;float:left;margin: 0 1% 2% 1%;}
 }
 
 @media (min-width: 992px) {
@@ -582,7 +591,12 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .sidebar{display:block;}
 .archive #content .products {float:right; width:70%;}
 .header-wrap-text-medical-equipment { width: 684px; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%;margin:0 2%;}
+.rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
+.lft-img-home {display:block;}
+.home-img-thirds{width:100%;}
 }
+
 @media (min-width: 1200px) {
 #mm-right-contact{display:block;}
 .benz-menu > ul > li > a{padding: 11px 1.8298em; }
@@ -596,4 +610,8 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .sidebar{display:block;}
 .archive #content .products {float:right; width:70%;}
 .header-wrap-text-medical-equipment {  width: 844px; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%; margin:0 2%;}
+.rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
+.lft-img-home {display:block;}
+.home-img-thirds{width:100%;}
 }
