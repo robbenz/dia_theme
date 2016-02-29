@@ -381,11 +381,6 @@ li.main-header-link:hover {background-color:#2774ae; }
 .benz-menu > ul li > .sub-menu {overflow: hidden; }
 /* END */
 
-
-
-
-
-
 /* Medical Equipment Menu */
 #menu-medical-equipment .benz-bottom-colors{top:375px;}
 #menu-medical-equipment #mmlogomenu{ position: relative; top: 105px; width: 210px; z-index: 99; }
@@ -547,7 +542,17 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .reply p { margin: 0 }
 /* END */
 
+.woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product {
 
+float: left;
+margin: 0 3.8% 2.992em 0 !important;
+padding: 0 !important;
+position: relative;
+width: 21.05% !important;
+}
+
+.accordion-title{ border:1px solid #464444; border-radius: 0.3em; padding: 0.5em; background-color:#ececec;}
+.accordion-title:hover{cursor: pointer; background-color:#d7d7d7}
 /*  =================================================================================  */
 /*  ==============================                         ==========================  */
 /*  ==============================  BEGIN RESPONSIVE STUFF ==========================  */
