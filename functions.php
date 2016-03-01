@@ -42,11 +42,9 @@ function custom_call_for_price() {
      return '<a href="#" class="eModal-2 r-a-qbutton-price">Request A Quote</a>';
 }
 
-//  -- Sidebars
-
+//  -- Sidebars Register
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
-    /* Register the 'blog' sidebar. */
     register_sidebar(
         array(
             'id'            => 'blog_sidebar',
@@ -409,8 +407,9 @@ class RRHE {
 	}
 }
 new RRHE();
+//  -- END
 
-// -- woocommerce support to theme
+// --  ADD woocommerce support to theme
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);

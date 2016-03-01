@@ -585,6 +585,7 @@ ul.icons-medium li { margin:0 7.5%; }
 .home-img-thirds{width:90%;margin: 0 5% 3% 5%;}
 #masthead { height:217px; }
 #click-menu {top: 224px !important;}
+
 }
 
 @media (min-width: 768px) {
@@ -599,7 +600,6 @@ ul.icons-medium li { margin:0 7.5%; }
 .home-img-thirds{width:30%;float:left;margin: 0 1% 2% 1%;}
 #masthead { height:117px; }
 #click-menu {top: 125px !important;}
-
 
 }
 
@@ -622,6 +622,7 @@ ul.icons-medium li { margin:0 7.5%; }
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
 #sidebar {min-height:800px;}
+
 }
 
 @media (min-width: 1200px) {
@@ -641,6 +642,5 @@ ul.icons-medium li { margin:0 7.5%; }
 .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
-
 
 }
