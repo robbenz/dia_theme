@@ -16,7 +16,7 @@
 	<div class="container">
 		<div id="dia-logo-left">
 			<a href="<?php echo site_url(); ?>">
-				<img src="https://partsonline.diamedicalusa.com/wp-content/imgs/DiaMedical-Logo-main.png" />
+				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical-Logo-main.png" />
 			</a>
 		</div>
 <div style="width:300px; float:left; margin-left: 43px;">

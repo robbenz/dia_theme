@@ -42,6 +42,24 @@ function custom_call_for_price() {
      return '<a href="#" class="eModal-2 r-a-qbutton-price">Request A Quote</a>';
 }
 
+//  -- Sidebars
+
+add_action( 'widgets_init', 'my_register_sidebars' );
+function my_register_sidebars() {
+    /* Register the 'blog' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'blog_sidebar',
+            'name'          => __( 'Blog Sidebar' ),
+            'description'   => __( 'A short description of the sidebar.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+}
+
 //  --  Register My Menus
 function register_my_menus() {
   register_nav_menus(

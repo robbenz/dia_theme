@@ -15,6 +15,8 @@ a { color: #00426a; }
 
 
 
+
+
 /* Sidebar */
 .sidebar { margin-top: 20px }
 .sidebar section { margin-bottom: 40px }
@@ -74,6 +76,11 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 .woocommerce-result-count { display:none;}
 
 
+
+.emodal a.emodal-close{color:#fff !important;}
+
+
+
 li.product-category h3 { text-align:center; color:#f7a900; text-align:center; text-transform: uppercase; font-size:20px !important;}
 .var-price-wrap{ display:none;}
 .content > [id*="product-"] {padding-top:2em; }
@@ -95,7 +102,8 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {background-color:#00426a; color:#fff; border:1px solid #78be20;}
 .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {background-color:#00426a;}
 .wc-tabs h2{text-transform: uppercase; color:#ffad00; }
-.wc-tabs-wrapper{height:400px; overflow-y: scroll;margin-bottom:1em; border-bottom: 5px solid #78be20; padding-bottom:20px;}
+.wc-tabs-wrapper{margin-bottom:1em; border-bottom: 5px solid #78be20; padding-bottom:20px;}
+.wc-tabs > div { }
 .panel { border: 0 !important; box-shadow: 0 !important; border: none !important; box-shadow: none !important; }
 .related h2, .upsells h2 { text-transform: uppercase; color:#78be20; font-size: 30px; font-weight:400;}
 .woocommerce .woocommerce-breadcrumb {font-size:18px;}
@@ -176,7 +184,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 /*HEADERS*/
 #dia-logo-left { float: left; height: 80px; margin: 0; width: 356px; }
 #dia-logo-left img { width: 100%; }
-#masthead { width: 100%; padding: 2em 0em 0em 0em; height:117px;}
+#masthead { width: 100%; padding: 2em 0em 0em 0em; }
 .header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://partsonline.diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; font-family: lora, serif; font-size: 16.9px; }
 .header-wrap-text-medical-equipment-header{font-family: sans-serif; border-bottom: 2px solid #ffad00; color: #ffad00; font-size: 26px; font-weight: 500; line-height: 140%; text-align: center; margin-top:0.6em !important;}
 .woocommerce-ordering{ display:none;}
@@ -204,7 +212,6 @@ span.festi-cart-product-count { margin-left:80%; text-align:right;}
 #mm-right-contact{ width:430px }
 
 }
-
 
 .logged-in #mm-right-contact{ width: 343px;}
 .insert-img-here {text-align:center; padding-top:6px; padding-left:0;}
@@ -484,13 +491,14 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .woocommerce-cart table.cart .product-thumbnail { max-width: 50px !important; }
 .woocommerce-cart table.cart img {width:55px !important;}
 .woocommerce .quantity .plus, .woocommerce-page .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .minus {height:50%;}
+
 /* END */
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {padding:1em !important;}
 
 
 /* MY ACCOUNT REGISTER PAGE */
-#customer_login .col-1{float:right; width:34%; height:469px;border: 3px dashed #00426a;padding:1.2em;}
-#customer_login .col-2{float:left; width: 64%; height:469px;border: 3px dashed #00426a;padding:1.2em;}
+#customer_login .col-1{float:right; width:34%; height:477px; border: 3px dashed #00426a;padding:1.2em;}
+#customer_login .col-2{float:left; width: 64%; border: 3px dashed #00426a;padding:1.2em;}
 #header-left-orange-rect{width:auto;height:auto;text-align:center;background-color:#ffad00;border-radius: 0.2em;color:#00426a;}
 #header-right-orange-rect{width:auto;height:auto;text-align:center;background-color:#ffad00;border-radius: 0.2em;color:#00426a;}
 #header-right-orange-rect h2{color:#00426a !important;font-size: 21px;padding: 0.13em;}
@@ -509,6 +517,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 #post_13 .entry-title{text-align:center; margin:-25px 0 40px;display:none;}
 #post_13 .entry-wrap {padding: 16px 0px 0px 0px !important;}
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: none !important; border-radius: 0px !important; margin:0 !important; padding: 0px !important; text-align: left; }
+#left-col-first-name{clear:both;}
 /* END */
 
 /*LOST PASSWORD*/
@@ -542,17 +551,45 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .reply p { margin: 0 }
 /* END */
 
-.woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product {
-
-float: left;
-margin: 0 3.8% 2.992em 0 !important;
-padding: 0 !important;
-position: relative;
-width: 21.05% !important;
-}
-
-.accordion-title{ border:1px solid #464444; border-radius: 0.3em; padding: 0.5em; background-color:#ececec;}
+.woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; width: 21.05% !important; }
+/*TABS*/
+.wc-tabs-wrapper ul {padding-left:0px !important; margin-bottom:0px !important; }
+.wc-tabs-wrapper .active { background-color:#5d8dc3 !important; color:#fff !important; border-bottom: 0 !important;}
+.wc-tabs-wrapper .wc-tab {max-height:400px; height:400px; overflow:scroll;border-radius: 0 !important; border:4px solid #cccccc !important; padding: 0 2em !important; }
+.wc-tabs-wrapper #tab-description{ padding:0 2em !important; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {border-bottom-color: #5d8dc3 !important; border-radius: 0; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before { border-bottom-right-radius: 0px !important;content: none !important;}
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before { border: 0px !important; content: none !important; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li {border-radius: 0; padding: 0 1.6em; }
+.wc-tabs-wrapper li:last-child{ border-top-right-radius: 18px !important; -moz-border-radius-topright: 18px !important; }
+.wc-tabs-wrapper .description_tab { border-top-left-radius: 18px !important; -moz-border-radius-topleft: 18px !important; border-left: 1px solid #d3ced2 !important; margin-left:0px !important;}
+.wc-tabs-wrapper li.description_tab:before { border-left: 1px solid #cccccc !important; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before { border: 1px solid #cccccc; }
+.accordion-title{ background-color: #ececec; border: 1px solid #464444; border-radius: 0.3em; font-size: 18px; padding: 0.2em; }
 .accordion-title:hover{cursor: pointer; background-color:#d7d7d7}
+/*END*/
+
+
+div.thumbnails{height:100px;}
+div.thumbnails img{width:100px !important; max-width:100px !important; }
+
+/*BLOG IMGS ETC*/
+#social-icons-widget-2 .icons-medium li {border:none;pointer-events: auto;}
+#social-icons-widget-2 .icons-medium li a:hover {opacity: 0.65; }
+#social-icons-widget-2 .icons-medium {align-content: center;margin:0 auto; border:none;}
+#recent-posts-2 ul {pointer-events: all !important;border:none !important;}
+#recent-posts-2 ul li a {color:#00426a; text-decoration: none; text-shadow: none; font-size:1.2em;}
+#recent-posts-2 ul li a:hover {color:#78be20; }
+.single-post .entry-wrap { border:none !important; box-shadow: none !important;}
+.single-product .entry-title{text-align:left;}
+#sidebar h3 { margin-top: 10%;background-color:#ffad00; padding:0.2em; color:#00426a; text-align:center; text-shadow: none; border-radius:0.2em; font-size:165%; }
+#categories-4 label{display:none;}
+ul.icons-medium { padding:0; }
+ul.icons-medium li { margin:0 7.5%; }
+/*END*/
+
+
+
 /*  =================================================================================  */
 /*  ==============================                         ==========================  */
 /*  ==============================  BEGIN RESPONSIVE STUFF ==========================  */
@@ -568,6 +605,8 @@ width: 21.05% !important;
 .rgt-img-home{padding:0;margin-bottom: 4%;}
 .lft-img-home {display:none;}
 .home-img-thirds{width:90%;margin: 0 5% 3% 5%;}
+#masthead { height:217px; }
+#click-menu {top: 224px !important;}
 }
 
 @media (min-width: 768px) {
@@ -580,6 +619,10 @@ width: 21.05% !important;
 .rgt-img-home{padding:0;margin-bottom: 4%;}
 .lft-img-home {display:none;}
 .home-img-thirds{width:30%;float:left;margin: 0 1% 2% 1%;}
+#masthead { height:117px; }
+#click-menu {top: 125px !important;}
+
+
 }
 
 @media (min-width: 992px) {
@@ -600,6 +643,7 @@ width: 21.05% !important;
 .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
+
 }
 
 @media (min-width: 1200px) {
@@ -619,4 +663,6 @@ width: 21.05% !important;
 .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
+
+
 }

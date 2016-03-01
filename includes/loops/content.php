@@ -14,16 +14,16 @@ Alternatively, notice that index.php, category.php and single.php have a post_cl
 <?php if(have_posts()): while(have_posts()): the_post();?>
     <article role="article" id="post_<?php the_ID()?>">
         <header>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
+            <h2 style="display:block !important;"><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
             <h4>
               <em>
-                <span class="text-muted author"><?php _e('By', 'bst'); echo " "; the_author() ?>,</span>
-                <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php the_time('jS F Y') ?></time>
+
+                <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php the_time('F jS Y') ?></time>
               </em>
             </h4>
         </header>
         <section>
-            <?php the_post_thumbnail(); ?>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' );  ?></a>
             <?php the_content( __( '&hellip; ' . __('Continue reading', 'bst' ) . ' <i class="glyphicon glyphicon-arrow-right"></i>', 'bst' ) ); ?>
         </section>
         <footer>
