@@ -569,7 +569,6 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .accordion-title:hover{cursor: pointer; background-color:#d7d7d7}
 /*END*/
 
-
 div.thumbnails{height:100px;}
 div.thumbnails img{width:100px !important; max-width:100px !important; }
 
@@ -586,8 +585,9 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #categories-4 label{display:none;}
 ul.icons-medium { padding:0; }
 ul.icons-medium li { margin:0 7.5%; }
+.blog p, .blog li { font-size: 1.2em; margin-top:1.5%;}
+#robly_embedded_subscribe_form #robly_embedded_subscribe{width:100%; margin-top:5%; }
 /*END*/
-
 
 
 /*  =================================================================================  */
@@ -643,7 +643,7 @@ ul.icons-medium li { margin:0 7.5%; }
 .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
-
+#sidebar {min-height:800px;}
 }
 
 @media (min-width: 1200px) {
