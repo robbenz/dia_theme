@@ -11,22 +11,15 @@ body {font-family: 'Open Sans', sans-serif;}
 a { color: #00426a; }
 /* END */
 
-.variations_form .variations td.label { display:none !important;}
-
-
-
-
-
 /* Sidebar */
 .sidebar { margin-top: 20px }
 .sidebar section { margin-bottom: 40px }
 .sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }
 .sidebar li { margin: 10px 0 }
 /* END */
-#viewprice-detail{position:relative; top:10px; left:6px;margin-bottom: 36px; }
-#viewprice-detail a { border-radius: 0.4em; background-color: #78be20;color: #ffffff; padding: 10px 20px 12px;}
-#viewprice-detail a:hover {background-color: #00426a; color: #ffffff; text-decoration:none;}
+
 /* predictive_results */
+.bt_search { background: rgba(0, 0, 0, 0) url("https://partsonline.diamedicalusa.com/wp-content/plugins/woocommerce-products-predictive-search-pro/assets/images/bg-search.png") no-repeat scroll 0 center !important; }
 .predictive_results{display:none !important;}
 .rs_result_row {background-color: #00426a; width:100%; float:left; margin:0px 0 16px; padding: 0px 0px 1px 6px; border:2px solid #fff; border-radius:6px; outline:4px solid #00426a; -moz-outline-radius: 5px; -webkit-outline-radius: 5px; outline-radius : 5px; max-width:100%;}
 .rs_rs_name{font-size:20px;font-weight:500; color:#fff;}
@@ -57,6 +50,7 @@ a { color: #00426a; }
  .ctr_search .txt_livesearch, #wrap .ctr_search .txt_livesearch {padding: 6px 7px !important;}
 .ctr_search { border-radius: 0.5em; height:2.4em; padding: 6px 7px !important;}
 .rs_result_others{display:none;}
+.sorry-you-cant-find{color:#cc1100;font-weight:900;font-size:1.18em;letter-spacing: 1px;}
 /* END */
 
 /* Hide form placeholders on focus */
@@ -71,16 +65,14 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 #responsive-menu .appendLink {font-size:20px; width:26px; text-align:center; }
 /*	[class*="col-"] { background-clip: padding-box; border: 7px solid transparent; }   */
 /* END */
-.sorry-you-cant-find{color:#cc1100;font-weight:900;font-size:1.18em;letter-spacing: 1px;}
+
 /* WOOCOMMERCE SPECIFIC */
+.variations_form .variations td.label { display:none !important;}
 .woocommerce-result-count { display:none;}
-
-
-
 .emodal a.emodal-close{color:#fff !important;}
-
-
-
+#viewprice-detail{position:relative; top:10px; left:6px;margin-bottom: 36px; }
+#viewprice-detail a { border-radius: 0.4em; background-color: #78be20;color: #ffffff; padding: 10px 20px 12px;}
+#viewprice-detail a:hover {background-color: #00426a; color: #ffffff; text-decoration:none;}
 li.product-category h3 { text-align:center; color:#f7a900; text-align:center; text-transform: uppercase; font-size:20px !important;}
 .var-price-wrap{ display:none;}
 .content > [id*="product-"] {padding-top:2em; }
@@ -109,6 +101,16 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce .woocommerce-breadcrumb {font-size:18px;}
 .reset_variations{display:none !important;}
 [id*="product-"] .onsale{display:none;}
+.woocommerce_widget_cart-5 h4 { background-color: #ffad00; border-radius: 0.2em; color: #00426a; font-size: 165%; padding: 0.2em; text-align: center; text-shadow: none; }
+.page-id-86 #sidebar { margin-top:89px; }
+.products .price-wrap-gal{display:none;}
+.logged-in .price-wrap-gal{display:block;}
+.products li h3{ color: #ffad00; font-size: 17px !important; font-weight: 600; text-align: center; text-transform: uppercase; }
+.products .r-a-qbutton-price { display:none;}
+.woocommerce ul.products li.product .price {display:none!important;}
+.logged-in .woocommerce ul.products li.product .price { display:block;}
+div.thumbnails{height:100px;}
+div.thumbnails img{width:100px !important; max-width:100px !important; }
 /* END */
 
 /*LEFT MENU*/
@@ -149,23 +151,10 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 #dmcssmenu4 ul ul li:first-child:after {content: '';display: block;width: 0;height: 0;position: absolute;left: -20px;top: 13px;border-right: 1px dashed #cfc8c8;}
 /*END MENU*/
 
-.woocommerce_widget_cart-5 h4 { background-color: #ffad00; border-radius: 0.2em; color: #00426a; font-size: 165%; padding: 0.2em; text-align: center; text-shadow: none; }
-
-.page-id-86 #sidebar { margin-top:89px; }
-
-
-.products .price-wrap-gal{display:none;}
-.logged-in .price-wrap-gal{display:block;}
-.products li h3{ color: #ffad00; font-size: 17px !important; font-weight: 600; text-align: center; text-transform: uppercase; }
-.products .r-a-qbutton-price { display:none;}
-.woocommerce ul.products li.product .price {display:none!important;}
-.logged-in .woocommerce ul.products li.product .price { display:block;}
-
 /* HOME PAGE */
 #homeorangewrap { width:100%; background: #ffd67f; margin-bottom: 2%; text-align:center; padding:1em; }
 #homeorangewrap h3 { font-weight:700; }
 /* END */
-
 
 /*Featured Categories*/
 #post_56972 .entry-wrap {border: 0 none !important; box-shadow: none !important; left: -16em; position: relative;width: 125%; top:-2em;}
@@ -173,14 +162,12 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 #post_56972 .products li img{ max-width:250px;  height: 100%; max-height: 100%; }
 #post_56972 .entry-title{display:none; }
 #post_56972 .entry-content { margin-top: 0; }
-
 #see-all-equip-link{align-content: center; background-color: #00426a; border-radius: 10em; color: #ffffff; float: left; font-size: 24px; padding: 3em; text-align: center; }
 #see-all-equip-link li {  }
 #post_56972 .products li a:hover {background-color:#ffad00;}
 #see-all-equip-link a{background-color:#00426a; padding:2em; border-radius: 2em;}
 /* END */
 
-.cntctfrm_contact_submit { margin-top:10px;}
 /*HEADERS*/
 #dia-logo-left { float: left; height: 80px; margin: 0; width: 356px; }
 #dia-logo-left img { width: 100%; }
@@ -208,11 +195,7 @@ span.festi-cart-product-count { margin-left:80%; text-align:right;}
 #mm-right-contact .sf-menu .menu-item-has-children > a:first-child, .sf-menu .page_item_has_children > a:first-child {padding-right:3px;}
 #mm-right-contact a{color: #000000; font-size: 15px; font-weight: 500; }
 #mm-right-contact{color: #636363; float: right; font-family: "Open Sans",sans-serif; font-size: 15px; text-align: right; width: 427px;}
-@-moz-document url-prefix() {
-#mm-right-contact{ width:430px }
-
-}
-
+@-moz-document url-prefix() { #mm-right-contact{ width:430px } }
 .logged-in #mm-right-contact{ width: 343px;}
 .insert-img-here {text-align:center; padding-top:6px; padding-left:0;}
 header h2{display:none;}
@@ -253,6 +236,10 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #footerlinks3 a { color: #fff; float: left; font-size: 13px; line-height: 20px; text-decoration: none; }
 #footerlinks3 a:visited { color: #fff; float: left; font-size: 13px; line-height: 20px; text-decoration: none; }
 #footerlinks3 a:hover { color: #a6d179; text-decoration: none; }
+/* END */
+
+/* POP UP CONTACT FORM */
+.cntctfrm_contact_submit { margin-top:10px;}
 /* END */
 
 /* CHECKOUT PAGE */
@@ -317,11 +304,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 @-moz-document url-prefix() { #post_13 div.woocommerce {padding-top:0.6em;} }
 /* END */
 
-
-.bt_search { background: rgba(0, 0, 0, 0) url("https://partsonline.diamedicalusa.com/wp-content/plugins/woocommerce-products-predictive-search-pro/assets/images/bg-search.png") no-repeat scroll 0 center !important; }
-
-
-/*ORDER RECIEVED*/
+/* ORDER RECIEVED */
 #order-recieved-wrap{width:100%;text-align:center; margin-bottom:20px;}
 #order-recieved-wrap .order-recieved-copy{font-size:30px; font-style:italic;color:#ffad00;margin-bottom: 1px;}
 .shipping-costs-copy{font-size:20px; color:#00426a; text-align: center; margin-top:-36px;position: relative;top: -226px;}
@@ -333,16 +316,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 #customer-details-shop-wrap h2{margin-top: -10px;padding:0.2em;background-color:#ffad00; border-radius:0.2em; color:#00426a;font-size:21px;text-align:center;text-transform: uppercase;margin-bottom:0.9em;}
 .shipping-details-text{font-size:1.19em;font-style:italic;font-weight: 500; color:#00426a;}
 #order-details-shop-wrap .form-field-wide{display:none;}
-/*END*/
-
-
+/* END */
 
 /* Generic Drop Menus Stuff */
 .sf-menu .menu-item-has-children > a:first-child::after, .sf-menu .page_item_has_children > a:first-child::after { border: none !important; }
 .navbar-header{ padding:0;}
 .benz-menu{ float:left;}
 .navbar-static-top{ background: #00426a; }
-
 .sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
 #menu-repirstmp li a,
@@ -362,6 +342,8 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 .benz-menu > ul > li .sub-menu  li.menu-item-has-children{width:30%;; color:#000;float:left; }
 .benz-menu > ul > li .sub-menu  li.menu-item-has-children a{color:#00426a;}
 .benz-bottom-colors { clear: both; color: #000; left: -25px; padding:5px 0 5px 24px; position: relative; text-align: left; width: 1171px; z-index: 999; }
+/* END */
+
 /* Sign in & Need help menus */
 #mm-right-contact .sub-menu li{list-style:disc; text-align:left; line-height:24px; margin-left:19px; }
 #mm-right-contact .sub-menu li a:hover{ background-color: #fff; color: #2774ae }
@@ -432,7 +414,7 @@ li.main-header-link:hover {background-color:#2774ae; }
 /* ABOUT MENU*/
 #menu-contact-us > li > .sub-menu {  height: 356px;}
 #menu-contact-us .arrow-down { left: 91%;  top: -27px; }
-#benz-menu-about{ width: 50%; height:300px; text-align:left; padding-left:10px; float:left; color:#000;}
+#benz-menu-about{ width: 55%; height:300px; text-align:left; padding-left:10px; float:left; color:#000;}
 #benz-menu-about .benz-menu-about-copy { font-size:14px; color:#000; }
 #benz-menu-about .benz-menu-about-header { margin-top:6px; color:#2668b5; font-weight:600;}
 #menu-item-6812:hover{ color:#000;}
@@ -440,24 +422,25 @@ li.main-header-link:hover {background-color:#2774ae; }
 #menu-item-6812{float: right; font-size: 17px; font-weight: 600; position: relative; width: 44%; }
 #menu-item-6812 a{color: #004ea8 !important}
 #menu-item-6812 a:hover{font-weight:600; !important; color: #004ea8 !important}
+#about_fltrght {float:right; height:230px; width:41%;}
+#about_fltrght p {font-size: 17px; }
 /* about-phone */
 p.about-phone {position:relative; top:16px; }
 p.about-phone-number {position:relative; top:17px; left:-11px;  }
 .about-phone-number i {position:relative; top:2px; left:-8px;}
 /* about-fax */
-p.about-fax {  position: relative; top: -24px; left: 174px;  }
-p.about-fax-number {position:relative; top:-23px; left:161px;  }
+p.about-fax {  position: relative; top: -32px; left: 174px;  }
+p.about-fax-number {position:relative; top:-30px; left:161px;  }
 .about-fax-number i {position:relative; top:2px; left:-8px;}
 /* about-email */
-p.about-email {position:relative; top:0; left:0; }
-p.about-email-number {position:relative; top:2px; left:-13px;  }
+p.about-email {position:relative; top:-5px; left:0; }
+p.about-email-number {position:relative; top:-3px; left:-13px;  }
 .about-email-number i {position:relative; top:2px; left:-8px;}
 /* about-mail */
 p.about-mail {position:relative; top:8px; left:0;  }
 p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .about-mail-number i {position:relative; top:2px; left:-8px;}
 /* END */
-
 
 /* CART PAGE */
 #post_11 .entry-wrap {box-shadow: none !important; border: 3px dashed #00426a !important; padding:2em !important;}
@@ -491,10 +474,8 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .woocommerce-cart table.cart .product-thumbnail { max-width: 50px !important; }
 .woocommerce-cart table.cart img {width:55px !important;}
 .woocommerce .quantity .plus, .woocommerce-page .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .minus {height:50%;}
-
-/* END */
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {padding:1em !important;}
-
+/* END */
 
 /* MY ACCOUNT REGISTER PAGE */
 #customer_login .col-1{float:right; width:34%; height:477px; border: 3px dashed #00426a;padding:1.2em;}
@@ -518,6 +499,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 #post_13 .entry-wrap {padding: 16px 0px 0px 0px !important;}
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: none !important; border-radius: 0px !important; margin:0 !important; padding: 0px !important; text-align: left; }
 #left-col-first-name{clear:both;}
+.woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; width: 21.05% !important; }
 /* END */
 
 /*LOST PASSWORD*/
@@ -551,7 +533,6 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .reply p { margin: 0 }
 /* END */
 
-.woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; width: 21.05% !important; }
 /*TABS*/
 .wc-tabs-wrapper ul {padding-left:0px !important; margin-bottom:0px !important; }
 .wc-tabs-wrapper .active { background-color:#5d8dc3 !important; color:#fff !important; border-bottom: 0 !important;}
@@ -568,9 +549,6 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .accordion-title{ background-color: #ececec; border: 1px solid #464444; border-radius: 0.3em; font-size: 18px; padding: 0.2em; }
 .accordion-title:hover{cursor: pointer; background-color:#d7d7d7}
 /*END*/
-
-div.thumbnails{height:100px;}
-div.thumbnails img{width:100px !important; max-width:100px !important; }
 
 /*BLOG IMGS ETC*/
 #social-icons-widget-2 .icons-medium li {border:none;pointer-events: auto;}

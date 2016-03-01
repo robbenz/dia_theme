@@ -204,7 +204,7 @@ class BENZ_Walker_Nav_Menu_ABOUT extends Walker_Nav_Menu {
 
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
-        $output .= '<div style="float:right; height:230px; width:44%;">';
+        $output .= '<div id="about_fltrght">';
         $output .= '<p class="about-phone" style="color:#000;">Phone Number:</p>';
         $output .= '<p class="about-phone-number" style="color:#004ea8;"><i class="fa icon-phone fa-lg"></i>(877) 593-6011</p>';
         $output .= '<p class="about-fax" style="color:#000;">Fax Number:</p>';
