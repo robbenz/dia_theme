@@ -33,6 +33,7 @@ Alternatively, notice that index.php, category.php and single.php have a post_cl
                 <i class="glyphicon glyphicon-comment"></i>&nbsp; <?php _e('Comments', 'bst'); ?>: <?php comments_popup_link(__('None', 'bst'), '1', '%'); ?>
             </p>
         </footer>
+        <hr>
     </article>
 <?php endwhile; ?>
 

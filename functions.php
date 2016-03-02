@@ -325,7 +325,11 @@ function wc_wc20_variation_price_format( $price, $product ) {
   if ( $price !== $saleprice ) {
     $price = '<span class="price-wrap-gal">' . $saleprice . '</span> <ins>' . $price . '</ins>';
   }
-  return $price;
+  if ( is_page('86') ) {
+
+  } else { return $price;
+  }
+
 }
 
 //  --  woocommerce side bar

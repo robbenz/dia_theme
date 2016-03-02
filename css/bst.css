@@ -18,6 +18,14 @@ a { color: #00426a; }
 .sidebar li { margin: 10px 0 }
 /* END */
 
+
+
+
+
+
+
+
+
 /* predictive_results */
 .bt_search { background: rgba(0, 0, 0, 0) url("https://partsonline.diamedicalusa.com/wp-content/plugins/woocommerce-products-predictive-search-pro/assets/images/bg-search.png") no-repeat scroll 0 center !important; }
 .predictive_results{display:none !important;}
@@ -299,7 +307,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {color: #202020 !important;}
 #post_13 #changepassword-wrap-myac .button{margin-top: 1.3em; width:100%;}
 #changepassword-wrap-myac #password_1, #changepassword-wrap-myac #password_2, #changepassword-wrap-myac #password_current, #name-stuff-wrap-myac #account_email, #name-stuff-wrap-myac #account_last_name, #name-stuff-wrap-myac #account_first_name {width: 62.5%;}
 #post_13 .woocommerce-error{margin-bottom: 6em !important; margin-top: -4em !important;}
-.woocommerce-password-strength {display:none !important; }
 #post_13 div.woocommerce {padding-top:1.5em;}
 @-moz-document url-prefix() { #post_13 div.woocommerce {padding-top:0.6em;} }
 /* END */
@@ -441,6 +448,14 @@ p.about-mail {position:relative; top:8px; left:0;  }
 p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .about-mail-number i {position:relative; top:2px; left:-8px;}
 /* END */
+
+
+
+
+
+
+#post_86 .price-wrap-gal:before{content:'' !important;}
+
 
 /* CART PAGE */
 #post_11 .entry-wrap {box-shadow: none !important; border: 3px dashed #00426a !important; padding:2em !important;}
@@ -606,7 +621,7 @@ ul.icons-medium li { margin:0 7.5%; }
 @media (min-width: 992px) {
 #mm-right-contact{display:none;}
 .benz-menu > ul > li > a{padding: 11px 0.961em; }
-.benz-menu .sub-menu{width: 969px; }
+.benz-menu .sub-menu{width: 400px; }
 #menu-item-32373 > .sub-menu { left: -107px; letter-spacing: 0.8px;}
 #menu-parts-search .sub-menu { left: -339px; }
 #menu-repairs > li > .sub-menu { left: -496px; }
