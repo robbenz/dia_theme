@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<tr class="cart-subtotal">
 			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td data-title="<?php _e( 'Subtotal Before Shipping:', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<td data-title="<?php _e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php elseif ( WC()->cart->needs_shipping() ) : ?>
 
 			<tr class="shipping">
-				<th><?php _e( 'Shipping', 'woocommerce' ); ?></th>
+				<th><?php _e( 'Shipping costs will be added to your invoice', 'woocommerce' ); ?></th>
 				<td data-title="<?php _e( 'Total Before Shipping:', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
 			</tr>
 
@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th><?php _e( 'Total Before Shipping Costs:', 'woocommerce' ); ?></th>
 			<td data-title="<?php _e( 'Total Before Shipping:', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
