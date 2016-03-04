@@ -196,7 +196,9 @@ class BENZ_Walker_Nav_Menu_ABOUT extends Walker_Nav_Menu {
         $output .= 'costs! Our customers always have the lowest prices for their products without any ';
         $output .= 'sacrifice in quality. For every shipment we send we calculate the lowest price ';
         $output .= 'through our many shipping company affiliates. So you can always rest assured that ';
-        $output .= 'we’re always getting you the lowest price - GUARANTEED. </p></div>';
+        $output .= 'we’re always getting you the lowest price - GUARANTEED. </p>';
+        $output .= '<p class="benz-menu-about-header">CAREERS</p>';
+        $output .= '<p class="benz-menu-about-copy">We want the brilliant ones, the tenacious ones, the ones who have the initiative and instincts to think outside the box. We want people who are resilient, team-oriented, and driven. We want all of this because we are intensely focused on customer service and helping our customers and carriers grow their businesses.</p></div>';
         $output .= '<div class="arrow-down"></div>';
     }
 

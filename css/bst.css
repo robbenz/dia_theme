@@ -409,7 +409,7 @@ li.main-header-link:hover {background-color:#2774ae; }
 /* END */
 
 /* Manufacturers Menu */
-#menu-manufacturers .benz-bottom-colors { top: 108px;}
+#menu-manufacturers .benz-bottom-colors { top: 110px;}
 #menu-manufacturers .arrow-down { left: 71.6%; top: -78px; }
 #benz-menu-img-mft2 {  position: relative; top: -64px; }
 #benz-menu-img-mft3 { position: relative; }
@@ -423,7 +423,8 @@ li.main-header-link:hover {background-color:#2774ae; }
 /* END */
 
 /* ABOUT MENU*/
-#menu-contact-us > li > .sub-menu {  height: 356px;}
+#menu-contact-us .benz-bottom-colors { top: 91px;}
+#menu-contact-us > li > .sub-menu {  height: 447px;}
 #menu-contact-us .arrow-down { left: 91%;  top: -27px; }
 #benz-menu-about{ width: 55%; height:300px; text-align:left; padding-left:10px; float:left; color:#000;}
 #benz-menu-about .benz-menu-about-copy { font-size:14px; color:#000; }
