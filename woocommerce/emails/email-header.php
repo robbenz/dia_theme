@@ -177,7 +177,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	                			}
 	                		?>
 						</div>
-                    	<table border="0" cellpadding="0" cellspacing="0" width="80%" id="template_container">
+                    	<table border="0" cellpadding="0" cellspacing="0" width="80%" style="max-width:640px;" id="template_container">
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- Header -->
