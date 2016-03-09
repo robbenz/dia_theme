@@ -41,7 +41,8 @@
   <a href="<?php echo site_url(); ?>/medical-equipment/">Products</a><br />
   <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">Manufacturers</a><br />
   <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">Parts</a><br />
-  <a href="<?php echo site_url(); ?>/contact.html">Contact</a><br />
+  <a href="#" class="eModal-2">Contact</a><br />
+<a href="<?php echo site_url(); ?>/blog">Blog</a><br />
 </div><!--footerlinks1-->
 
 <div id="footerlinks2">

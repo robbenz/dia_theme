@@ -29,6 +29,7 @@
           <li><a href="<?php echo site_url(); ?>/product-category/hospital-beds/invacare-beds/"><span>Invacare Beds</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/hospital-beds/medline-beds/"><span>Medline Beds</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/hospital-beds/stryker-beds/"><span>Stryker Beds</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/hospital-beds/span-america-beds/"><span>Span America Low Beds</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/hospital-beds/transfer-master-beds/"><span>Transfer Master Beds</span></a></li>
         </ul>
       </li>
