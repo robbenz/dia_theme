@@ -19,7 +19,7 @@
         </ul>
       </li>
       <li class="active has-sub">
-        <a href="<?php echo site_url(); ?>/product-category/hospital-beds/"><span>Beds</span></a>
+        <a href="<?php echo site_url(); ?>/product-category/hospital-beds/"><span>Hospital Beds</span></a>
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/hospital-beds/amico-beds/"><span>Amico Beds</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/hospital-beds/burke-bariatric-beds/"><span>Burke Bariatric</span></a></li>
@@ -38,7 +38,7 @@
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/carts-storage/anesthesia-carts/"><span>Anesthesia Carts &amp; Cabinets</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/carts-storage/linen-carts/"><span>Linen Carts</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/"><span>Loaded Crash Cart Kits</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/"><span>Loaded Crash Carts&#0153;</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/refill-kits/"><span>Loaded Crash Cart Refill Kits</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/carts-storage/hampers/"><span>Hampers</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/carts-storage/medical-carts/"><span>Medical Carts</span></a></li>
@@ -97,7 +97,16 @@
           <li><a href="<?php echo site_url(); ?>/product-category/furniture/phlebotomy-chairs/"><span>Phlebotomy Chairs</span></a></li>
         </ul>
       </li>
-      <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/headwalls/"><span>Headwalls</span></a></li>
+      <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/headwalls/"><span>Headwalls &amp; SOT</span></a>
+        <ul>
+          <li><a href="<?php echo site_url(); ?>/product-category/headwalls/non-functioning-headwalls/"><span>Non Functioning Headwalls</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/headwalls/functioning-wall-mounted-headwall-packages-w-compressor/"><span>Functioning Headwalls</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/headwalls/mobile-headwall-packages/"><span>Mobile Headwall Packages</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/headwalls/wall-mounted-headwalls-for-use-w-centralized-compressor/"><span>Centralized Air Headwalls</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/headwalls/air-compressors/"><span>Air Compressors</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/headwalls/sot-accessories/"><span>SOT Accessories</span></a></li>
+        </ul>
+      </li>
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><span>Hill-Rom Parts</span></a>
         <ul>

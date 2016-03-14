@@ -42,6 +42,17 @@ function custom_call_for_price() {
      return '<a href="#" class="eModal-2 r-a-qbutton-price">Request A Quote</a>';
 }
 
+//  --  Benz fix for multiple html input field in category edit smashboard becuase of tnymce plugin
+function benz_chromefix_inline_css() {
+  wp_add_inline_style( 'wp-admin', '.term-description-wrap { display: none ; }' );
+  wp_add_inline_style( 'wp-admin', '#product_cat-all { max-height:400px }' );
+  wp_add_inline_style( 'wp-admin', '#the-list .column-name a { display: inline ; }' );
+  wp_add_inline_style( 'wp-admin', '#adminmenu { transform: translateZ(0); }' );
+  wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
+}
+add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
+
+
 //  -- Sidebars Register
 add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
