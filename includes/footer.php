@@ -48,7 +48,7 @@
 <div id="footerlinks2">
   <p class="popularproducts">Popular Products</p><br />
   <a href="<?php echo site_url(); ?>/product-category/hospital-beds/">Hospital Beds</a><br />
-  <a href="http://medmattress.com/stretcher-gurney-mattress.php">Stretcher Mattresses</a><br />
+  <a href="http://medmattress.com/product-category/mattresses/stretcher-gurney/">Stretcher Mattresses</a><br />
   <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">Replacement Parts</a><br />
   <a href="<?php echo site_url(); ?>/product-category/screens-curtains/simscreens/">SimScreens</a><br />
   <a href="<?php echo site_url(); ?>/product-category/headwalls/">Headwall Units</a><br />
@@ -59,8 +59,8 @@
 <p class="popularproducts">&nbsp;&nbsp;</p><br />
 <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">Infusion Pumps</a><br />
 <a href="<?php echo site_url(); ?>/results/keyword/caster/search-in/product/cat-in/all/search-other/product,p_sku,p_cat">Casters &amp; Wheels</a><br />
-<a href="http://medmattress.com/operating-room-table-pad.php">OR Table Pads</a><br />
-<a href="http://medmattress.com/mattresses.php">Mattresses</a><br />
+<a href="http://medmattress.com/product-category/mattresses/operating-table/">OR Table Pads</a><br />
+<a href="http://medmattress.com/product-category/mattresses/">Mattresses</a><br />
 <a href="http://www.diamedicalusa.com/maintenance-preventative.php">Repairs</a><br />
 <a href="<?php echo site_url(); ?>/product-category/furniture/">Furnishings</a><br />
 </div><!--footerlinks3-->

@@ -42,7 +42,7 @@
       <a href="http://www.diamedicalusa.com/Catalog.pdf" target="_blank"><img class="home-img-thirds" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/download-catalog.png" /></a>
     </div>
     <div class="col-md-4" style="">
-      <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">  <img class="home-img-thirds" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/loaded-crash-carts.png" /></a>
+      <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">  <img class="home-img-thirds" src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/loaded-crash-carts.jpg" /></a>
     </div>
   </div>
   <!-- /#content -->
