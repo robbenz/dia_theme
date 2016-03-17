@@ -368,7 +368,7 @@ class RRHE {
 	}
 
 //  -- Registers column for display
-    public static function users_columns($columns) {()
+    public static function users_columns($columns) {
 		$columns['registerdate'] = _x('Registered', 'user', 'recently-registered');
 		return $columns;
 	}
