@@ -575,6 +575,16 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .woocommerce-tabs ul ul { margin-left: 20px; padding-bottom: 6px; }
 /*END*/
 
+/*TABLE PARTS*/
+#parts-table {border-collapse: collapse; table-layout: fixed; width:580px;}
+#parts-table td {width:200px;}
+#parts-table tr:nth-child(even) {background: #BACFD7}
+#parts-table tr:nth-child(even) a:hover {color:#fff}
+#parts-table tr:nth-child(odd) {background: #FFF}
+#parts-table tr:nth-child(odd) a:hover {color:#bacfd7}
+#parts-table a {color:#000; font-family:sans-serif; }
+/*END*/
+
 /*BLOG IMGS ETC*/
 #social-icons-widget-2 .icons-medium li {border:none;pointer-events: auto;}
 #social-icons-widget-2 .icons-medium li a:hover {opacity: 0.65; }
