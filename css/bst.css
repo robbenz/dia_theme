@@ -45,7 +45,7 @@ a { color: #00426a; }
 .rs_rs_description{text-transform: uppercase; color: #fff;max-height:100px; overflow:hidden; width: 296px;margin-top:14px;}
 .rs_rs_avatar{margin-bottom: 10px;width: 93px !important; margin-right:10px;overflow: hidden;float:left; text-align:center;}
 .rs_rs_avatar img {width:100%;height:auto; padding:0 !important; margin:0 !important; border: none !important;}
-.rs_rs_avatar {float: left; margin-left: 6px; margin-right: 8px; margin-top: 55px; overflow: hidden; text-align: center; width: 85px; }
+.rs_rs_avatar {float: left; margin-left: 6px; margin-right: 8px; margin-top: 55px; overflow: hidden; text-align: center; width: 85px; min-height:90px; }
 .rs_rs_name{margin-left:0px;}
 .rs_content{margin-left:20px;padding-top: 9px;}
 .widget_products_predictive_search{z-index: 0 !important;}
