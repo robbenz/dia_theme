@@ -26,10 +26,10 @@
   We offer a large variety of infusion pumps, hospital beds, headwalls, simulated IV fluids, furniture, manikins and<br />
   replacement parts for your Hill-Rom, Stryker, Hausted, MidMark, Span America beds, stretchers, wheelchairs &amp; more!<br />
   <div style="margin-top: 10px;" id="mattresshomeimgwrap">
-    <img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/hill-rom-logo.png" alt=" " />
-    <img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/strykerlogo.png" alt=" " />
-    <img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/haustedlogo.png" alt=" " />
-    <img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/midmarklogo.png" alt=" " />
+    <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a>
+    <a href="<?php echo site_url(); ?>/results/keyword/STRYKER/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/strykerlogo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/haustedlogo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/results/keyword/midmark/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/midmarklogo.png" alt=" " /></a>
   </div>
 </div>
 <div class="container" style="margin-bottom:2%;">

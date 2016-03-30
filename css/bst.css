@@ -579,10 +579,10 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 /*TABLE PARTS*/
 #parts-table {border-collapse: collapse; table-layout: fixed; width:580px;}
 #parts-table td {width:200px;}
-#parts-table tr:nth-child(even) {background: #BACFD7}
-#parts-table tr:nth-child(even) a:hover {color:#fff}
-#parts-table tr:nth-child(odd) {background: #FFF}
-#parts-table tr:nth-child(odd) a:hover {color:#bacfd7}
+#parts-table tr:nth-child(even) {background: #BACFD7 }
+#parts-table tr:nth-child(even) a:hover {color:#fff }
+#parts-table tr:nth-child(odd) {background: #FFF }
+#parts-table tr:nth-child(odd) a:hover {color:#bacfd7 }
 #parts-table a {color:#000; font-family:sans-serif; }
 /*END*/
 

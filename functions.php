@@ -149,9 +149,9 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<img src="https://partsonline.diamedicalusa.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" />';
-        $output .= '<img src="https://partsonline.diamedicalusa.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/>';
-        $output .= '<img src="https://partsonline.diamedicalusa.com/wp-content/imgs/Span-America-MFT.png" id="benz-menu-img-mft3" class="benz-menu-img" />';
+        $output .= '<a href="http://partsonline.diamedicalusa.com/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="https://partsonline.diamedicalusa.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" /></a>';
+        $output .= '<a href="http://www.partsonline.diamedicalusa.com/results/keyword/stryker/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/></a>';
+        $output .= '<a href="http://www.partsonline.diamedicalusa.com/results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/haustedlogo.png" id="benz-menu-img-mft3" class="benz-menu-img" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
