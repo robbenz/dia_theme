@@ -466,6 +466,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .about-mail-number i {position:relative; top:2px; left:-8px;}
 /* END */
 
+
 /* CART PAGE */
 #post_11 .entry-wrap {box-shadow: none !important; border: 3px dashed #00426a !important; padding:2em !important;}
 #post_11 .entry-wrap .entry-header {display: none; }
@@ -584,6 +585,17 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 #parts-table tr:nth-child(odd) a:hover {color:#bacfd7}
 #parts-table a {color:#000; font-family:sans-serif; }
 /*END*/
+
+
+/* HILL-ROM PARTS TABLE */
+#hill-rom-parts-table { display: table;  margin: 8px 7.5% 0; width: 85%; }
+.hill-rom-parts-row { display: table-row; }
+.hill-rom-parts-row:nth-child(even) { background: #BACFD7 }
+.hill-rom-parts-cell { display: table-cell; padding: 10px; color:#464444; text-decoration:none; max-width: 250px;}
+.hill-rom-parts-row:hover { background-color: #cccccc; text-decoration:none;}
+.hill-rom-parts-cell:hover { background-color: #e5e5e5; text-decoration:none;}
+/* END */
+
 
 /*BLOG IMGS ETC*/
 #social-icons-widget-2 .icons-medium li {border:none;pointer-events: auto;}

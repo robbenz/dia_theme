@@ -27,6 +27,14 @@
               </div><!-- /#content -->
 </div>
 
+<?php elseif ( is_page('57882') ): //  --  CHECK HILL-ROM PAGE ?>
+  <div class="container">
+    <div class="row">
+      <div id="content" role="main">
+        <?php get_template_part('includes/hill-rom', 'page'); ?>
+      </div><!-- /#content -->
+
+
 
     <?php else: //  -- EVERY OTHER PAGE ?>
       <div class="container">
