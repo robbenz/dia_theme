@@ -586,7 +586,6 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 #parts-table a {color:#000; font-family:sans-serif; }
 /*END*/
 
-
 /* HILL-ROM PARTS TABLE */
 #hill-rom-parts-table { display: table;  margin: 8px 7.5% 0; width: 85%; }
 .hill-rom-parts-row { display: table-row; }
@@ -595,7 +594,6 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .hill-rom-parts-row:hover { background-color: #cccccc; text-decoration:none;}
 .hill-rom-parts-cell:hover { background-color: #e5e5e5; text-decoration:none;}
 /* END */
-
 
 /*BLOG IMGS ETC*/
 #social-icons-widget-2 .icons-medium li {border:none;pointer-events: auto;}

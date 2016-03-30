@@ -1,5 +1,5 @@
 
-<img style="border:6px solid #00426a;margin: 0 7.5%; width: 85%;" alt="Hill-Rom Parts" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/reconditioned-hill-rom-parts.png" />
+<img style="border:6px solid #00426a; margin: 0 7.5%; width: 85%;" alt="Hill-Rom Parts" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/reconditioned-hill-rom-parts.png" />
 
 <div id="hill-rom-parts-table">
   <div class="hill-rom-parts-row">
