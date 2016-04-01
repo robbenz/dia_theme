@@ -22,6 +22,10 @@ a { color: #00426a; }
 .pdf-img{padding-left: 7px;}
 /* END */
 
+/* PAGES */
+.woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 100%; }
+/* END */
+
 /* youre part will apear here */
 .rs_rs_price [data-product_id="32570"] {display:none !important;}
 .rs_rs_addtocart [data-product_id="32570"] {pointer-events:none;}
@@ -634,24 +638,25 @@ ul.icons-medium li { margin:0 7.5%; }
 
 }
 
+
 @media (min-width: 768px) {
-#mm-right-contact{display:none;}
-#homeorangewrap img{ display:none;}
-.sidebar{display:none;}
+#mm-right-contact{ display:none;}
+#homeorangewrap img{  display:none;}
+.sidebar{ display:none;}
 .archive #content .products { float: none; width: 100%; }
 .header-wrap-text-medical-equipment { width:100%; }
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product { margin: 0 3%; width: 40%; }
-.rgt-img-home{padding:0;margin-bottom: 4%;}
-.lft-img-home {display:none;}
-.home-img-thirds{width:30%;float:left;margin: 0 1% 2% 1%;}
+.rgt-img-home{ padding:0;margin-bottom: 4%;}
+.lft-img-home { display:none;}
+.home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
 #masthead { height:117px; }
-#click-menu {top: 125px !important;}
+#click-menu { top: 125px !important;}
 
 }
 
 @media (min-width: 992px) {
-#mm-right-contact{display:none;}
-.benz-menu > ul > li > a{padding: 11px 0.961em; }
+#mm-right-contact{ display:none;}
+.benz-menu > ul > li > a{ padding: 11px 0.961em; }
 .benz-menu .sub-menu{ width: 971px; }
 #menu-item-32373 > .sub-menu { left: -108px; letter-spacing: 0.8px;}
 #menu-parts-search .sub-menu { left: -339px; }

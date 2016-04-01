@@ -424,7 +424,6 @@ class RRHE {
 	}
 }
 new RRHE();
-//  -- END
 
 // --  ADD woocommerce support to theme
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
