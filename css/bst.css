@@ -71,7 +71,7 @@ a { color: #00426a; }
 /* END */
 
 /* Request a Quote button for RAQ products */
-.r-a-qbutton-price { background-color: #78be20; padding:0.3em; border-radius: 0.25em; font-size:15px; text-decoration: none; border:1px solid #78be20;}
+.r-a-qbutton-price { background-color: #78be20; padding:0.3em 0.6em; border-radius: 0.25em; font-size:15.7px; text-decoration: none; border:1px solid #78be20;}
 .r-a-qbutton-price:hover { background-color: #fff; border:1px solid #78be20; text-decoration: none; }
 /* END */
 
