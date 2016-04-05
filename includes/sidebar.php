@@ -309,7 +309,9 @@
           <li><a href="<?php echo site_url(); ?>/product-category/screens-curtains/privacy-screens/"><span>Privacy Screens</span></a></li>
         </ul>
       </li>
+      <li class="active has-sub"><a href="<?php echo site_url(); ?>/wp-content/pdf/medaffinity.pdf"><span>Simulation EHR</span></a></li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/supply-kits/"><span>Supply Kits</span></a></li>
+
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/surgical/"><span>Surgical</span></a>
         <ul>
