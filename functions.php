@@ -109,6 +109,7 @@ class BENZ_Walker_Nav_Menu_MYACCOUNT extends Walker_Nav_Menu {
         $output .= '</ul>';
     }
 }
+
 // -- Sign In
 class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
 
