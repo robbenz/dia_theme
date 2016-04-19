@@ -31,7 +31,6 @@ Alternatively, notice that index.php, category.php and single.php have a post_cl
         <footer>
             <p class="text-muted" style="margin-bottom: 20px;">
                 <i class="glyphicon glyphicon-folder-open"></i>&nbsp; <?php _e('Category', 'bst'); ?>: <?php the_category(', ') ?><br/>
-                <i class="glyphicon glyphicon-comment"></i>&nbsp; <?php _e('Comments', 'bst'); ?>: <?php comments_popup_link(__('None', 'bst'), '1', '%'); ?>
             </p>
         </footer>
         <hr>

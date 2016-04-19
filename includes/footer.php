@@ -9,7 +9,7 @@
 
   <div id="footerconnect">
   <span class="connecttop">p. (877) 593-6011<br />f.&nbsp;&nbsp;(248) 671-1550<br /></span>
-  <span class="connectbottom">Info@MedMattress.com<br />5807 W. Maple, Suite #175, West Bloomfield, MI 48322<br /></span>
+  <span class="connectbottom">Info@DiaMedicalUSA.com<br />5807 W. Maple, Suite #175, West Bloomfield, MI 48322<br /></span>
   <br />
 
   <span class="socialicons2014">
