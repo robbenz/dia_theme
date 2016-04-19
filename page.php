@@ -46,7 +46,7 @@
             <div class="row">
               <img style="width:97%; margin:0 1.5%;" src="http://diamedicalusa.com/images/newhome/Nursing_School_Header.png" />
 
-              <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+              <div class="col-xs-6" id="sidebar" role="navigation">
                 <?php get_template_part('includes/sidebar'); ?>
               </div>
               <div id="content" role="main">

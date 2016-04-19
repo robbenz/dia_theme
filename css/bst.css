@@ -83,6 +83,16 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .img-flip-img-1{display:block;box-sizing: border-box; width:498px; height:385px;}
 /* END */
 
+/* NURSING SCHOOL HOMEPAGE */
+#soliloquy-container-58433{ margin-bottom: 1em; }
+#ns_rotate_wrap{  float: right; height: 880px; margin-right: 18px; margin-top: 19px; width: 850px; }
+.ns_home_flt-lft { float:left; }
+#infusionbuttonhome, #practibuttonhome { margin:0 14px; }
+#practibuttonhome { margin-top:-82px; margin-bottom:1em; }
+#medmatbuttonhome { margin-top:-57px; }
+#headwallbuttonhome{ clear:both; margin-top:-8px; }
+/* END */
+
 /* youre part will apear here */
 .rs_rs_price [data-product_id="32570"] {display:none !important;}
 .rs_rs_addtocart [data-product_id="32570"] {pointer-events:none;}
@@ -737,7 +747,7 @@ ul.icons-medium li { margin:0 7.5%; }
 .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
-#sidebar {min-height:400px;}
+#sidebar { float: left; max-width: 260px; min-height: 400px; }
 #benz-menu-about .benz-menu-about-copy { font-size: 12.88px; }
 #landing_nav-wrap a.landing_nav{font-size:0.89em;}
 #landing_nav-wrap{display:block }
