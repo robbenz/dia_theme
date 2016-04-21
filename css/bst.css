@@ -27,10 +27,12 @@ a { color: #00426a; }
 /* END */
 
 /* landing_nav */
+.landing_page .col-sm-8 {width:72.5% !important; }
+.landing_page ul.products li.product { margin: 0 2% !important;}
 .page-id-58427 .grid figcaption {text-align:left; }
 .page-id-58427 .grid figcaption a{background-color: none; }
 #landing_nav-wrap{width:100%; background-color:#fff;}
-#landing_nav-wrap a.landing_nav{color:#464444; padding:0.4em 0; text-align:center; width:16.66%; display:block; float:left; }
+#landing_nav-wrap a.landing_nav{color:#464444; padding:0.4em 0; text-align:center; width:14%; display:block; float:left; }
 #landing_nav-wrap a.landing_nav:hover{text-decoration:none; color:#fff;}
 .landing_nav-hospital{border-bottom:5px solid #00426a;}
 .landing_nav-mattresses{border-bottom:5px solid #78be20;}
@@ -38,6 +40,7 @@ a { color: #00426a; }
 .landing_nav-simlab{border-bottom:5px solid #ffad00;}
 .landing_nav-ems{border-bottom:5px solid #d6001c;}
 .landing_nav-ltc{border-bottom:5px solid #72d0f4;}
+.landing_nav-qq { border-bottom:5px solid #464444;}
 .cs-style-8 figure {overflow: hidden;}
 .cs-style-8 figure img {-webkit-transition: -webkit-transform 0.4s;-moz-transition: -moz-transform 0.4s;transition: transform 0.4s;}
 ul.cs-style-8{list-style:none;}
@@ -53,6 +56,7 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .landing_nav-simlab:before { background:#ffad00; }
 .landing_nav-ems:before { background:#d6001c;  }
 .landing_nav-ltc:before { background:#72d0f4; }
+.landing_nav-qq:before { background:#464444; color:#fff; }
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active { color: white;  }
 .hvr-shutter-out-horizontal:hover:before { -webkit-transform: scaleX(1); transform: scaleX(1); text-transform:none; }
 .hvr-shutter-out-horizontal:active, .hvr-shutter-out-horizontal:visited, .hvr-shutter-out-horizontal:focus{ text-transform: none !important;}
@@ -145,8 +149,21 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 #yith-ywraq-mail-form .form-row {clear:none;}
 #rqa_facility_row { width:65%; float:left; }
 #rqa_zip_row { width:30%; float: right;}
+#add_pro_PN {float:left; width:36%; }
+#add_pro_DS {float:left; width:47%; margin:0 2%; }
+#addRow { float:right; color:#fff; background-color:#78be20; padding: 0.2em 0.8em; border-radius: 0.4em;}
+#add_pro_QT {float:left; width:10%; }
+.removeRow{ left:10px; position: relative; top: 39px; border-radius: 100%; color: red; float: left; font-size: 18px; }
+.removeRow:hover{ font-size:20px; text-decoration:none; color:red;  font-weight:bold;}
+.removeRow:focus{ outline-offset: 0 !important;}
 #rqa_message_row, #rqa_email_row {clear:both;}
 #rqa-message { max-width:100%; min-height:80px; min-width:100%;  }
+.yith-ywraq-add-to-quote { margin-bottom:0.8em; }
+.add-request-quote-button { background-color:#00426a !important;  }
+.add-request-quote-button:hover { background-color:#78be20 !important; border:none !important; }
+.yith_ywraq_add_item_browse_message { margin:1em 0; }
+.yith_ywraq_add_item_browse_message a { background-color:#00426a; color:#fff; border-radius:0.4em; padding: 10px 20px 12px;}
+.yith_ywraq_add_item_browse_message a:hover { background-color:#78be20; color:#fff;  text-decoration: none;}
 
 /* Hide form placeholders on focus */
 input:focus::-webkit-input-placeholder { color: transparent; }
@@ -164,8 +181,8 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 .variations_form .variations td.label { display:none !important;}
 .woocommerce-result-count { display:none;}
 .emodal a.emodal-close{color:#fff !important;}
-#viewprice-detail{position:relative; top:10px; left:6px;margin-bottom: 36px; }
-#viewprice-detail a { border-radius: 0.4em; background-color: #78be20;color: #ffffff; padding: 10px 20px 12px;}
+#viewprice-detail{position:relative; top:10px; left:0px;margin-bottom: 36px; }
+#viewprice-detail a {background-color: #78be20; border-radius: 0.4em; color: #ffffff; font-size: 14.5px; font-weight: 700; padding: 10px 23px 12px; }
 #viewprice-detail a:hover {background-color: #00426a; color: #ffffff; text-decoration:none;}
 li.product-category h3 { text-align:center; color:#f7a900; text-align:center; text-transform: uppercase; font-size:20px !important;}
 .var-price-wrap{ display:none;}
@@ -747,7 +764,7 @@ ul.icons-medium li { margin:0 7.5%; }
 .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
-#sidebar { float: left; max-width: 260px; min-height: 400px; }
+#sidebar { float: left; max-width: 300px; min-height: 400px; }
 #benz-menu-about .benz-menu-about-copy { font-size: 12.88px; }
 #landing_nav-wrap a.landing_nav{font-size:0.89em;}
 #landing_nav-wrap{display:block }
@@ -771,5 +788,6 @@ ul.icons-medium li { margin:0 7.5%; }
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
 #benz-menu-about .benz-menu-about-copy { font-size:14px;}
-#landing_nav-wrap a.landing_nav{font-size:1.23em; font-weight: 600 !important; }
+#landing_nav-wrap a.landing_nav{font-size:1.1em; font-weight: 600 !important; }
+#landing_nav-wrap .container { padding:0;}
 }
