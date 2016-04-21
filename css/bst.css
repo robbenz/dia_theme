@@ -140,7 +140,19 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .rs_result_others{display:none;}
 .sorry-you-cant-find{color:#cc1100;font-weight:900;font-size:1.18em;letter-spacing: 1px;}
 /* END */
-
+.form-id-58449 .form-title { display:none; }
+.ccf-form-wrapper .field { clear: none; margin-bottom:15px;}
+.form-id-58449 .form-group { display:inline-block;}
+.form-id-58449 .curtain_name{ float:left; width:100%;}
+.form-id-58449 .fabric_pattern, .form-id-58449 .ceiling-height, .form-id-58449 .curtain_email, .form-id-58449 .curtain_phone{ width:32%; float:left;}
+.form-id-58449 .fabric-color, .form-id-58449 .curtain_company{ width:32%; margin: 0 2%; float:left;}
+.form-id-58449 .curtain_desc {text-align:center;  line-height:12.4px; }
+.form-id-58449 .curtain_track { width:36%; margin: 0 7%; float:left; margin-bottom:1em;}
+.form-id-58449 .curtain_mesh { width:20%; margin: 0 15%; float:left; margin-bottom:1em;}
+#ccf_field_paragraph-text-11{width:100%; min-width:100%; max-width:100%;}
+.curtain_notes{width:100%;}
+.form-id-58449 .form-submit {width:20%; margin: 0 40%; }
+.form-id-58449 .sub-label{display:none;}
 /* Request a Quote button for RAQ products */
 .r-a-qbutton-price { background-color: #78be20; padding:0.3em 0.6em; border-radius: 0.25em; font-size:15.7px; text-decoration: none; border:1px solid #78be20;}
 .r-a-qbutton-price:hover { background-color: #fff; border:1px solid #78be20; text-decoration: none; }
