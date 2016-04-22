@@ -41,7 +41,7 @@
           <?php elseif ( is_page('58430') ): //  --  CHECK HEALTHCARE EDUCATION PAGE ?>
             <div class="container">
               <div class="row">
-                <img style="width:97%; margin:0 1.5% 1em;" src="http://diamedicalusa.com/images/newhome/Nursing_School_Header.png" />
+                <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/Nursing_School_Header.png" />
                 <div class="col-xs-6" id="sidebar" role="navigation">
                   <?php get_template_part('includes/sidebar'); ?>
                 </div>
@@ -52,7 +52,7 @@
             <?php elseif ( is_page('58429') ): //  --  CHECK EMS PAGE ?>
               <div class="container woocommerce landing_page">
                 <div class="row">
-                  <img style="width:97%; margin:0 1.5% 1em;" src="http://diamedicalusa.com/images/newhome/ems-header-banner.png" />
+                  <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ems-header-banner.png" />
                   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                     <?php get_template_part('includes/sidebar'); ?>
                   </div>
@@ -65,7 +65,7 @@
               <?php elseif ( is_page('58431') ): //  --  CHECK HOSPITAL PAGE ?>
                 <div class="container woocommerce landing_page">
                   <div class="row">
-                    <img style="width:97%; margin:0 1.5% 1em;" src="http://diamedicalusa.com/images/header/hospitalbanner.png" />
+                    <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/hospitalbanner.png" />
                     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                       <?php get_template_part('includes/sidebar'); ?>
                     </div>
@@ -79,7 +79,7 @@
                 <?php elseif ( is_page('58428') ): //  --  CHECK LTC PAGE ?>
                   <div class="container woocommerce landing_page">
                     <div class="row">
-                      <img style="width:97%; margin:0 1.5% 1em;" src="http://diamedicalusa.com/longterm/header/longtermbanner.png" />
+                      <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/longtermbanner.png" />
                       <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                         <?php get_template_part('includes/sidebar'); ?>
                       </div>

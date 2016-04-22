@@ -4,7 +4,7 @@
   <div id="footerlogos">
   <div id="diamedicallogo"><a href="<?php echo site_url(); ?>"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/footer-sample/diamedicallogosmall.png" /></a></div>
   <div id="medmatlogo"><a href="http://medmattress.com"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/footer-sample/medmattlogo.png" /></a></div>
-  <div id="simlablogo"><a href="http://www.diamedicalusa.com/simlabsolutions.php"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/footer-sample/simlablogo.png" /></a></div>
+  <div id="simlablogo"><a href="<?php echo site_url(); ?>/simlabsolutions/"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/simlablogo.png" /></a></div>
   </div><!--footerlogos-->
 
   <div id="footerconnect">
@@ -61,7 +61,7 @@
 <a href="<?php echo site_url(); ?>/results/keyword/caster/search-in/product/cat-in/all/search-other/product,p_sku,p_cat">Casters &amp; Wheels</a><br />
 <a href="http://medmattress.com/product-category/mattresses/operating-table/">OR Table Pads</a><br />
 <a href="http://medmattress.com/product-category/mattresses/">Mattresses</a><br />
-<a href="http://www.diamedicalusa.com/maintenance-preventative.php">Repairs</a><br />
+<a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">Repairs</a><br />
 <a href="<?php echo site_url(); ?>/product-category/furniture/">Furnishings</a><br />
 </div><!--footerlinks3-->
 </div>
