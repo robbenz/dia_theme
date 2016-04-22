@@ -3,12 +3,12 @@
 
 <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
 
-<div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="/nursing-school-supplies-hospital-beds.php">
+<div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png" alt="hospital beds"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png';"/></a></div>
 
-<div class="ns_home_flt-lft" id="infusionbuttonhome"><a href="nursing-school-supplies-crash-carts.php">
+<div class="ns_home_flt-lft" id="infusionbuttonhome"><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5.png" alt="infusion pumps"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5.png';"/></a></div>
@@ -23,7 +23,7 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1.png';"/></a></div>
 
-<div class="ns_home_flt-lft" id="practibuttonhome"><a href="nursing-school-supplies-infusion-pumps.php">
+<div class="ns_home_flt-lft" id="practibuttonhome"><a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6.png" alt="practi-meds"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6.png';"/></a></div>
