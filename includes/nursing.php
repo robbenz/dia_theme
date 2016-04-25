@@ -1,6 +1,5 @@
 <div id="ns_rotate_wrap">
 
-
 <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
 
 <div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
@@ -32,8 +31,6 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4.png" alt="hospital mattresses"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4.png';"/></a></div>
-
-
 
 <a style="margin-top:1em;" href="#" class="eModal-2">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-modal-requst.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-modal-requst-hover.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-modal-requst.png';"/></a>

@@ -28,7 +28,8 @@
   <div style="margin-top: 10px;" id="mattresshomeimgwrap">
     <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a>
     <a href="<?php echo site_url(); ?>/results/keyword/STRYKER/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/strykerlogo.png" alt=" " /></a>
-    <a href="<?php echo site_url(); ?>/results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/haustedlogo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/results/keyword/amico/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin: 0 0.8em 0.3em; max-height: 50px; height:50px;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/amico_logo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img style="margin:1.2em 0.8em 0;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/haustedlogo.png" alt=" " /></a>
     <a href="<?php echo site_url(); ?>/results/keyword/midmark/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com/wp-content/imgs/midmarklogo.png" alt=" " /></a>
   </div>
 </div>
