@@ -511,7 +511,7 @@ li.main-header-link:hover {background-color:#2774ae; }
 /* END */
 
 /* Part Search Menu */
-#menu-parts-search .benz-bottom-colors { top: 78px;}
+#menu-parts-search .benz-bottom-colors { top: 145px; }
 #menu-parts-search  .arrow-down {  left: 40%;; top: -100px; }
 #menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
 #menu-parts-search .ctr_search{ position: relative !important; top:-23px; }
@@ -723,9 +723,21 @@ ul.icons-medium li { margin:0 7.5%; }
 .rs_rs_addtocart .product_type_variable { margin-top:22px !important; }
 
 
+
+/* MFT PAGE */
+#content-directory { margin-left:150px; margin-top:20px; }
+#content-directory-list1 { width: 225px; margin: 0px 0px 0px -10px; padding: 0px 10px; background: url(/wp-content/imgs/homepage/directory-bg-col_bottom.jpg) bottom left repeat-x; float: left; height: 1190px; }
+#content-directory-list2 { width: 225px; margin: 0px 0px 0px 0px; padding: 0px 10px; background: url(/wp-content/imgs/homepage/directory-bg-col2_bottom.jpg) bottom left repeat-x; float: left; height: 1190px; }
+#content-directory-list3 { width: 225px; margin: 0px 0px 0px 0px; padding: 0px 10px; background: url(/wp-content/imgs/homepage/directory-bg-col_bottom.jpg) bottom left repeat-x; float: left; height: 1190px; }
+#content-directory-list4 { width: 225px; margin: 0px 0px 0px 0px; padding: 0px 10px; background: url(/wp-content/imgs/homepage/directory-bg-col2_bottom.jpg) bottom left repeat-x; float: left; height: 1190px; }
+/* END */
+
 .viewprice-detail{display:block;}
 .logged-in .viewprice-detail{display:none;}
-
+.woocommerce div.product div.images, .woocommerce div.product div.summary {margin-top:1em; }
+#wpp-buttons{  left: 0; position: absolute;  top: -19px;}
+#wpp-buttons a{ padding:5px 10px; background-color:#78be20; color:#fff; border-radius:0.3em;   }
+#wpp-buttons a:hover {background-color:#00426a; }
 
 /*  =================================================================================  */
 /*  ==============================                         ==========================  */
@@ -790,7 +802,7 @@ ul.icons-medium li { margin:0 7.5%; }
 
 @media (min-width: 1200px) {
 #mm-right-contact{display:block;}
-.benz-menu > ul > li > a{padding: 11px 1.8298em; }
+.benz-menu > ul > li > a{ padding: 11px 1.8198em; }
 .benz-menu .sub-menu{width: 1171px;}
 #menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }
 #menu-parts-search .sub-menu { left: -406px;}

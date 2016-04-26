@@ -1,3 +1,11 @@
+<h3>Search From Over 100,000 New &amp; Reconditioned Hospital Bed Parts!</h3>
+<!-- <img style="border:3px solid #00426a;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png"/> -->
+
+<?php
+$ps_echo = true ;
+if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
+?>
+
 <ul class="products">
   <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/">

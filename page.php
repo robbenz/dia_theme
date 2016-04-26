@@ -37,6 +37,12 @@
                 <div id="content" role="main">
                   <?php get_template_part('includes/sim-lab', 'page'); ?>
                 </div><!-- /#content -->
+              <?php elseif ( is_page('58688') ): //  --  CHECK MFT SOLUTIONS PAGE ?>
+                <div class="container">
+                  <div class="row">
+                    <div id="content" role="main">
+                      <?php get_template_part('includes/mft', 'page'); ?>
+                    </div><!-- /#content -->
 
           <?php elseif ( is_page('58430') ): //  --  CHECK HEALTHCARE EDUCATION PAGE ?>
             <div class="container">
