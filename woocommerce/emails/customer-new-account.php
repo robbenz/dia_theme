@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <p><?php printf( __( 'You can access your account area to view your orders and change your password here: %s.', 'woocommerce' ), wc_get_page_permalink( 'myaccount' ) ); ?></p>
 
-<p style="color:#00426a; font-size:22px;text-align:center;font-weight:bold;"><a href="https://partsonline.diamedicalusa.com/">SHOP NOW</a></p>
+<p style="color:#00426a; font-size:22px;text-align:center;font-weight:bold;"><a href="https://diamedicalusa.com/">SHOP NOW</a></p>
 
-<p style="color:#00426a;text-align:center; font-size:18px;"><a href="https://partsonline.diamedicalusa.com/">DiaMedical USA offers discounts on over 1,000,000 parts!</a></p>
+<p style="color:#00426a;text-align:center; font-size:18px;"><a href="https://diamedicalusa.com/">DiaMedical USA offers discounts on over 1,000,000 parts!</a></p>
 
 <?php do_action( 'woocommerce_email_footer' ); ?>

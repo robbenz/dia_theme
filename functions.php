@@ -119,7 +119,7 @@ class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
         function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<div class="insert-img-here" style="line-height: 22px; width:auto; color:#004ea8; font-weight:700; text-align:center; border-top: 1px solid #cccccc; ">';
         $output .= 'NEW CUSTOMER? <br><span style="color:#000; font-weight:normal;"><em>Registration is easy and<br>only takes a few seconds!</em></span>';
-        $output .= '<a href="https://partsonline.diamedicalusa.com/my-account" id="benz-register-link">REGISTER</a></div></ul>';
+        $output .= '<a href="https://diamedicalusa.com/my-account" id="benz-register-link">REGISTER</a></div></ul>';
     }
 
 }
@@ -134,7 +134,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a part request and we’ll email you a quote!</div>';
         $output .= woo_predictive_search_widget( $ps_echo );
-        $output .= '<div id="mattresshomeimgwrap"><a style="float:left; width:18.5%;"" href="https://partsonline.diamedicalusa.com/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://partsonline.diamedicalusa.com//wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a><a style="float:left; width:18.5%;"" href="https://partsonline.diamedicalusa.com//results/keyword/STRYKER/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:7px 0.8em 0;" src="https://partsonline.diamedicalusa.com//wp-content/imgs/strykerlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://partsonline.diamedicalusa.com//results/keyword/amico/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin: -6px 0.8em 0.6em; max-height: 50px; height:50px;" src="https://partsonline.diamedicalusa.com//wp-content/imgs/amico_logo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://partsonline.diamedicalusa.com//results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img style="margin:1.0em 0.8em 0 -17px;" src="https://partsonline.diamedicalusa.com//wp-content/imgs/haustedlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://partsonline.diamedicalusa.com//results/keyword/midmark/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:7px 0.8em 0 -10px;" src="https://partsonline.diamedicalusa.com//wp-content/imgs/midmarklogo.png" alt=" " /></a></div><div class="arrow-down"></div>';
+        $output .= '<div id="mattresshomeimgwrap"><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://diamedicalusa.com//wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/STRYKER/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:7px 0.8em 0;" src="https://diamedicalusa.com//wp-content/imgs/strykerlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/amico/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin: -6px 0.8em 0.6em; max-height: 50px; height:50px;" src="https://diamedicalusa.com//wp-content/imgs/amico_logo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img style="margin:1.0em 0.8em 0 -17px;" src="https://diamedicalusa.com//wp-content/imgs/haustedlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/midmark/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:7px 0.8em 0 -10px;" src="https://diamedicalusa.com//wp-content/imgs/midmarklogo.png" alt=" " /></a></div><div class="arrow-down"></div>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
@@ -150,9 +150,9 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a href="http://partsonline.diamedicalusa.com/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="https://partsonline.diamedicalusa.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" /></a>';
-        $output .= '<a href="http://www.partsonline.diamedicalusa.com/results/keyword/stryker/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/></a>';
-        $output .= '<a href="http://www.partsonline.diamedicalusa.com/results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/haustedlogo.png" id="benz-menu-img-mft3" class="benz-menu-img" /></a>';
+        $output .= '<a href="http://diamedicalusa.com/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="https://diamedicalusa.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" /></a>';
+        $output .= '<a href="http://www.diamedicalusa.com/results/keyword/stryker/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://diamedicalusa.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/></a>';
+        $output .= '<a href="http://www.diamedicalusa.com/results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://diamedicalusa.com/wp-content/imgs/haustedlogo.png" id="benz-menu-img-mft3" class="benz-menu-img" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
@@ -169,7 +169,7 @@ class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="biomedrepairs" href="#"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/biomedical-repairs-menu.png" /></a>';
+        $output .= '<a id="biomedrepairs" href="#"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/biomedical-repairs-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
@@ -186,9 +186,9 @@ class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#ffad00;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</div>';
-        $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
+        $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="fluidslogomenu" href="http://www.partsonline.diamedicalusa.com/product-category/simulated-iv-bags/"><img src="https://partsonline.diamedicalusa.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
+        $output .= '<a id="fluidslogomenu" href="http://www.diamedicalusa.com/product-category/simulated-iv-bags/"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";

@@ -58,6 +58,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text ); ?>
 
 <!--BENZ-->
-<p style="color:#00426a; font-size:24px;font-weight:bold;"><a href="https://partsonline.diamedicalusa.com/">Click Here To Shop More Parts Online!</a></p>
+<p style="color:#00426a; font-size:24px;font-weight:bold;"><a href="https://diamedicalusa.com/">Click Here To Shop More Parts Online!</a></p>
 
 <?php do_action( 'woocommerce_email_footer' ); ?>

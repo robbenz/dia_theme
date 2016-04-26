@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php do_action( 'woocommerce_email_header', $email_heading ); ?>
 
-<p><?php _e( 'Someone requested that the password be reset for the following DiaMedical USA | Parts Online account:', 'woocommerce' ); ?></p>
+<p><?php _e( 'Someone requested that the password be reset for the following DiaMedical USA account:', 'woocommerce' ); ?></p>
 <p>
     <a href="<?php echo esc_url( add_query_arg( array( 'key' => $reset_key, 'login' => rawurlencode( $user_login ) ), wc_get_endpoint_url( 'lost-password', '', wc_get_page_permalink( 'myaccount' ) ) ) ); ?>">
 			<p style="color:#00426a; font-size:22px;text-align:center;font-weight:bold;"><?php _e( 'Click here to reset your password', 'woocommerce' ); ?></p></a>
