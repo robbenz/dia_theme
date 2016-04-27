@@ -108,12 +108,23 @@ wp_nav_menu(array(
     'container_class' => $benzmenu . ' ' . $benzmenu . '-equipt',
     'walker'          => new BENZ_Walker_Nav_Menu_EQP
 ));
-wp_nav_menu(array(
-    'theme_location'  => 'parts-search',
-    'items_wrap'      => $benzitems,
-    'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
-    'walker'          => new BENZ_Walker_Nav_Menu_PS
-));
+
+$ps_echo = true ;
+if ( function_exists( 'woo_predictive_search_widget' ) ) { 
+    wp_nav_menu(array(
+        'theme_location'  => 'parts-search',
+        'items_wrap'      => $benzitems,
+        'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
+        'walker'          => new BENZ_Walker_Nav_Menu_PS
+    ));
+} else {
+    wp_nav_menu(array(
+        'theme_location'  => 'parts-search',
+        'items_wrap'      => $benzitems,
+        'container_class' => $benzmenu . ' ' . $benzmenu . '-parts'
+    ));
+}
+
 wp_nav_menu(array(
     'theme_location'  => 'repirstmp',
     'items_wrap'      => $benzitems,

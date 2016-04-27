@@ -203,8 +203,8 @@ class BENZ_Walker_Nav_Menu_ABOUT extends Walker_Nav_Menu {
         $output .= 'and global distributor of healthcare products, supplies, mattresses and replacement parts. ';
         $output .= 'We lead the industry in Healthcare education by offering full service solutions in outfitting your simulation labs with products such as hospitals beds, training headwalls, infusion pumps, simulated IV fluids, loaded crash carts, and more! </p>';
         $output .= '<p class="benz-menu-about-header">OUR MISSION</p>';
-        $output .= '<p class="benz-menu-about-copy">We understand how tough it is to for hospitals and universities to build a budget';
-        $output .= 'without making sacrifices. That’s why we have no hidden fees nor built-in shipping';
+        $output .= '<p class="benz-menu-about-copy">We understand how tough it is to for hospitals and universities to build a budget ';
+        $output .= 'without making sacrifices. That’s why we have no hidden fees nor built-in shipping ';
         $output .= 'costs! Our customers always have the lowest prices for their products without any ';
         $output .= 'sacrifice in quality. For every shipment we send we calculate the lowest price ';
         $output .= 'through our many shipping company affiliates. So you can always rest assured that ';
@@ -443,3 +443,25 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+
+
+
+// Edit order items table template defaults
+function sww_add_wc_order_email_images( $table, $order ) {
+
+	ob_start();
+
+	$template = $plain_text ? 'emails/plain/email-order-items.php' : 'emails/email-order-items.php';
+	wc_get_template( $template, array(
+		'order'                 => $order,
+		'items'                 => $order->get_items(),
+		'show_download_links'   => $show_download_links,
+		'show_sku'              => true,
+		'show_purchase_note'    => $show_purchase_note,
+		'show_image'            => $show_image,
+		'image_size'            => $image_size
+	) );
+
+	return ob_get_clean();
+}
+add_filter( 'woocommerce_email_order_items_table', 'sww_add_wc_order_email_images', 10, 2 );

@@ -52,9 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <p class="email-ps"><strong>Please Note: Shipping Costs are still being calculated, and will be added to your total.</strong></p>
 
 <?php do_action( 'woocommerce_email_after_order_table', $order, true, false ); ?>
-
 <?php do_action( 'woocommerce_email_order_meta', $order, true, false ); ?>
-
 <?php do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text ); ?>
 
 <!--BENZ-->
