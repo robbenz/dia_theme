@@ -44,7 +44,13 @@ jQuery('#userRows').append('<?php echo($newFormRow); ?>'); rows++;
 </div>
 
 </div>
-
+<?php
+		if(isset($_GET['login']) && $_GET['login']=='failed') {
+			echo '<p style="margin-top:0.8em;" class="woo-ma-login-failed woo-ma-error error-home-class-red">';
+			_e('Login failed, please try again','woocommerce-my-account-widget');
+			echo '</p>';
+		}
+?>
 <header id="masthead" role="banner">
 	<div class="container">
 		<div id="dia-logo-left">
@@ -91,6 +97,8 @@ jQuery('#userRows').append('<?php echo($newFormRow); ?>'); rows++;
 </div> <!-- .container -->
 </header> <!-- #masthead -->
 
+
+
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
@@ -110,7 +118,7 @@ wp_nav_menu(array(
 ));
 
 $ps_echo = true ;
-if ( function_exists( 'woo_predictive_search_widget' ) ) { 
+if ( function_exists( 'woo_predictive_search_widget' ) ) {
     wp_nav_menu(array(
         'theme_location'  => 'parts-search',
         'items_wrap'      => $benzitems,
