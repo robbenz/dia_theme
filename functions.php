@@ -447,7 +447,7 @@ function woocommerce_support() {
 
 
 // Edit order items table template defaults
-function sww_add_wc_order_email_images( $table, $order ) {
+function BENZ_wc_order_email_skus( $table, $order ) {
 
 	ob_start();
 
@@ -464,4 +464,12 @@ function sww_add_wc_order_email_images( $table, $order ) {
 
 	return ob_get_clean();
 }
-add_filter( 'woocommerce_email_order_items_table', 'sww_add_wc_order_email_images', 10, 2 );
+add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
+
+//  --  Remove password strength
+function BENZ_remove_password_strength() {
+	if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
+		wp_dequeue_script( 'wc-password-strength-meter' );
+	}
+}
+add_action( 'wp_print_scripts', 'BENZ_remove_password_strength', 100 );

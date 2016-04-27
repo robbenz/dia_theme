@@ -26,6 +26,7 @@ a { color: #00426a; }
 .woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 100%; }
 /* END */
 
+.single-product .r-a-qbutton-price {display:none; }
 
 /* landing_nav */
 .landing_page .col-sm-8 {width:72.5% !important; }
