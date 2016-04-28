@@ -161,8 +161,8 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 /* END */
 #yith-ywraq-mail-form { width:100%;}
 #yith-ywraq-mail-form .form-row {clear:none;}
-#rqa_facility_row { width:65%; float:left; }
-#rqa_zip_row { width:30%; float: right;}
+#rqa_facility_row { width:45%; float:left; clear:both; }
+#rqa_zip_row { width:25%; float: left;}
 #add_pro_PN {float:left; width:36%; }
 #add_pro_DS {float:left; width:47%; margin:0 2%; }
 #addRow { float:right; color:#fff; background-color:#78be20; padding: 0.2em 0.8em; border-radius: 0.4em;}
@@ -178,6 +178,12 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .yith_ywraq_add_item_browse_message { margin:1em 0; }
 .yith_ywraq_add_item_browse_message a { background-color:#00426a; color:#fff; border-radius:0.4em; padding: 10px 20px 12px;}
 .yith_ywraq_add_item_browse_message a:hover { background-color:#78be20; color:#fff;  text-decoration: none;}
+#rqa_address{clear:both; float:left; width:58%; margin-right:2%;}
+#rqa_city{float:left; width:28%; margin-right:2%;}
+#rqa_state{ float:left; width:10%;}
+#rqa_name_row {float:left; width:49%; margin-right:2%; }
+#rqa_email_row {float:left; width:49%; }
+#rqa_phone_row {float:left; width:26%; margin: 0 2%; }
 
 /* Hide form placeholders on focus */
 input:focus::-webkit-input-placeholder { color: transparent; }

@@ -25,6 +25,15 @@ jQuery('#userRows').append('<?php echo($newFormRow); ?>'); rows++;
         jQuery(this).closest('.userRow').remove();
     });
 });
+
+jQuery(document).ready(function() {
+    jQuery('#cat_mail').hide();
+    jQuery("input[name=rqa_cat]").click(function () {
+        jQuery('#cat_mail').toggle();
+    });
+ });
+
+
 </script>
 
 </head>
