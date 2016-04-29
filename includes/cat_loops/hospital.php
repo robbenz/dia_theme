@@ -1,4 +1,4 @@
-<h3>Search From Over 100,000 New &amp; Reconditioned Hospital Bed Parts!</h3>
+<h3>Search From Over 1,000,000 New &amp; Reconditioned Replacement Parts!</h3>
 <!-- <img style="border:3px solid #00426a;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png"/> -->
 
 <?php

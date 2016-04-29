@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php //THIS IS CRUCIAL FOR DIVA PLUGIN
             $t_id = get_queried_object()->term_id;
             $term_meta = get_option( "taxonomy_$t_id" );?>
-            <p class="diva"><?php echo $term_meta['custom_term_meta']; ?></p>
+            <p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva"><?php echo $term_meta['custom_term_meta']; ?></p>
 
 		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 

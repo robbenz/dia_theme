@@ -80,5 +80,5 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 	<?php do_action( 'woocommerce_after_variations_form' ); ?>
 </form>
-
+<div id="viewprice-detail"><a href="#" class="eModal-1">View Price</a></div>	
 <?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>

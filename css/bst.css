@@ -26,6 +26,7 @@ a { color: #00426a; }
 .woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 100%; }
 /* END */
 
+
 .single-product .r-a-qbutton-price {display:none; }
 
 /* landing_nav */
@@ -243,6 +244,17 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 div.thumbnails{height:100px;}
 div.thumbnails img{width:100px !important; max-width:100px !important; }
 /* END */
+
+/* Product Add Ons */
+.product-addon h3 {font-size:18.5px; margin-bottom:2px !important;  }
+.burke-adds p{ padding: 0 !important; margin:0 !important;}
+.burke-adds label {font-weight: 500 !important; margin-bottom: 0;  }
+.logged-in #product-41480 .product_meta { margin-bottom:1px; }
+.product-addon, .product-addon-totals {display:none;}
+.logged-in .product-addon, .logged-in .product-addon-totals { display:block;}
+/* END */
+
+.tax-product_cat .cart { /*display:none !important;*/ }
 
 /*LEFT MENU*/
 #dmcssmenu4 {margin:1px 0 0 2px; height: 1397px; width: 250px; list-style: none; padding: 0px; border: 0; text-shadow:none;

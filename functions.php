@@ -35,6 +35,7 @@ function logout_redirect(){
     exit();
 }
 
+
 //  --  request a quote for empty price products BENZ
 add_filter('woocommerce_empty_price_html', 'custom_call_for_price');
 
