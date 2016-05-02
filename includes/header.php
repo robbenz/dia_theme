@@ -26,12 +26,15 @@ jQuery('#userRows').append('<?php echo($newFormRow); ?>'); rows++;
     });
 });
 
+/*
 jQuery(document).ready(function() {
     jQuery('#cat_mail').hide();
-    jQuery("input[name=rqa_cat]").click(function () {
+    jQuery("option[name=rqa_cat]").click(function () {
         jQuery('#cat_mail').toggle();
     });
  });
+*/
+
 
 
 </script>

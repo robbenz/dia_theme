@@ -445,8 +445,6 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
-
-
 // Edit order items table template defaults
 function BENZ_wc_order_email_skus( $table, $order ) {
 
@@ -474,3 +472,45 @@ function BENZ_remove_password_strength() {
 	}
 }
 add_action( 'wp_print_scripts', 'BENZ_remove_password_strength', 100 );
+
+add_filter('woocommerce_new_customer_data', 'risbl_custom_customer_data', 10 );
+
+//  --  Register errors
+
+function risbl_custom_customer_data() {
+
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $email    = $_POST['email'];
+
+  // Check the e-mail address
+	if ( empty( $email ) || ! is_email( $email ) ) {
+		return new WP_Error( 'registration-error', __( 'Please provide a valid email address.', 'woocommerce' ) );
+	}
+
+	if ( email_exists( $email ) ) {
+		return new WP_Error( 'registration-error', __( 'An account is already registered with your email address. Please login.', 'woocommerce' ) );
+	}
+
+  // Handle username creation
+  $username = sanitize_user( $username );
+
+  if ( empty( $username ) || ! validate_username( $username ) ) {
+    return new WP_Error( 'registration-error', __( 'Please enter a valid account username.', 'woocommerce' ) );
+  }
+
+  // Check username
+  // Display alert message if username has already existed
+  if ( username_exists( $username ) ) {
+    return new WP_Error( 'registration-error', __( 'An account is already registered with that username. Please choose another.', 'woocommerce' ) );
+  }
+
+  $customer_data = array(
+		'user_login' => $username,
+		'user_pass'  => $password,
+		'user_email' => $email,
+		'role'       => 'customer'
+	);
+
+  return $customer_data;
+}
