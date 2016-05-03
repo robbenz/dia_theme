@@ -466,16 +466,18 @@ function BENZ_wc_order_email_skus( $table, $order ) {
 add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
 
 //  --  Remove password strength
+/*
 function BENZ_remove_password_strength() {
 	if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
 		wp_dequeue_script( 'wc-password-strength-meter' );
 	}
 }
-add_action( 'wp_print_scripts', 'BENZ_remove_password_strength', 100 );
+add_action( 'wp_print_scripts', 'BENZ_remove_password_strength', 100 ); */
 
-add_filter('woocommerce_new_customer_data', 'risbl_custom_customer_data', 10 );
 
 //  --  Register errors
+
+add_filter('woocommerce_new_customer_data', 'risbl_custom_customer_data', 10 );
 
 function risbl_custom_customer_data() {
 

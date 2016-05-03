@@ -26,14 +26,23 @@ jQuery('#userRows').append('<?php echo($newFormRow); ?>'); rows++;
     });
 });
 
-/*
+
 jQuery(document).ready(function() {
     jQuery('#cat_mail').hide();
-    jQuery("option[name=rqa_cat]").click(function () {
-        jQuery('#cat_mail').toggle();
+    jQuery("option[name=rqa_cat_sendmail]").click(function () {
+        jQuery('#cat_mail').show();
     });
+		jQuery("option[name=rqa_cat_both]").click(function () {
+				jQuery('#cat_mail').show();
+		});
+		jQuery("option[name=rqa_cat_email]").click(function () {
+				jQuery('#cat_mail').hide();
+		});
+		jQuery("option[name=rqa_cat_select]").click(function () {
+				jQuery('#cat_mail').hide();
+		});
  });
-*/
+
 
 
 
