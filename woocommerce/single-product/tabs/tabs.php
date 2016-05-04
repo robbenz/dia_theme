@@ -34,13 +34,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
      if ( is_single($product_notfree_ship) ) {
          echo '<div id="free_ship-productpage">';
-         echo '<img width="110" alt="Free Shipping Mattresses" src="http://www.medmattress.com/wp-content/imgs/Free_shipping.png" style="float:left; margin-right:0.5em; ">';
+         echo '<img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" style="float:left; margin-right:0.5em; ">';
          echo '<div style="padding-top:10px;"><span class="red_free">FREE SHIPPING</span><br>on This Product</div>';
          echo '</div>';
      } else {
          echo '<div id="free_ship-productpage">';
          echo '<p class="add_shipp">*Additional Shipping Charges Apply</p>';
          echo '</div>';
+				 echo '';
      }
 
 

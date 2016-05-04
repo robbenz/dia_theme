@@ -97,7 +97,7 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 #headwallbuttonhome{ clear:both; margin-top:-8px; }
 /* END */
 
-#free_ship-productpage { float: left; font-family: "Open Sans",sans-serif; margin-bottom: 1em; width: 100%;  font-size: 19px; }
+#free_ship-productpage { float: left; clear:both; font-family: "Open Sans",sans-serif; margin-bottom: 1em; width: 40%;  font-size: 19px; }
 #free_ship-productpage span { margin-top: 1em; }
 .red_free { color: #d6001c; font-weight: bold; line-height: 10px; text-transform: uppercase; }
 
