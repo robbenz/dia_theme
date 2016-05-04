@@ -9,7 +9,8 @@
 	<?php wp_head(); ?>
 
 <?php
-$newFormRow = '<div class="userRow"><p style="clear:both;" class="form-row form-row-wide validate-required" id="add_pro_PN"><label for="rqa-part" class="">Part Number</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text " value="" name="addedonepart[]" id="rqa-part[]"></p><p class="form-row form-row-wide validate-required" id="add_pro_DS"><label for="rqa-desc" class="">Product Name / Description</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text " name="addedonedesc[]" id="rqa-desc[]" ></p><p class="form-row form-row-wide validate-required" id="add_pro_QT"><label for="rqa-qty" class="">Quantity</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text " name="addedoneqty[]" id="rqa-qty[]" ></p><a href="javascript:;" class="removeRow">X</a><div>';
+$newFormRow = '<div class="userRow"><p style="clear:both;" class="form-row form-row-wide validate-required" id="add_pro_PN"><label for="rqa-part" class="">Part Number</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text" value="" name="addedonepart[]" id="rqa-part[]"></p><p class="form-row form-row-wide validate-required" id="add_pro_DS"><label for="rqa-desc" class="">Product Name / Description</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text " name="addedonedesc[]" value="" id="rqa-desc[]" ></p><p class="form-row form-row-wide validate-required" id="add_pro_QT"><label for="rqa-qty" class="">Quantity</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text " name="addedoneqty[]" value="" id="rqa-qty[]" ></p><a href="javascript:;" class="removeRow">X</a><div>';
+
 ?>
 <script type="text/javascript">
 
