@@ -38,9 +38,9 @@ if ( ! defined( 'ABSPATH' ) ) {
          echo '<div style="padding-top:10px;"><span class="red_free">FREE SHIPPING</span><br>on This Product</div>';
          echo '</div>';
      } else {
-         echo '<div id="free_ship-productpage">';
-         echo '<p class="add_shipp">*Additional Shipping Charges Apply</p>';
-         echo '</div>';
+        // echo '<div id="free_ship-productpage">';
+        // echo '<p class="add_shipp">*Additional Shipping Charges Apply</p>';
+        // echo '</div>';
 				 echo '';
      }
 
