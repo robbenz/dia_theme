@@ -26,6 +26,13 @@ a { color: #00426a; }
 .woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 100%; }
 /* END */
 
+/*
+#post_13 #reg_password{ width:40%;}
+
+#post_13 label[for="reg_password"] {width:40%;}
+ woohoo! */
+
+
 /* landing_nav */
 .landing_page .col-sm-8 {width:72.5% !important; }
 .landing_page ul.products li.product { margin: 0 2% !important;}
