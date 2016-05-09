@@ -31,7 +31,7 @@ a { color: #00426a; }
 
 #post_13 label[for="reg_password"] {width:40%;}
  woohoo! */
-
+td.quotes-actions a{margin:0 1em; }
 
 /* landing_nav */
 .landing_page .col-sm-8 {width:72.5% !important; }
@@ -634,6 +634,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .woocommerce-cart table.cart img {width:55px !important;}
 .woocommerce .quantity .plus, .woocommerce-page .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .minus {height:50%;}
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {padding:1em !important;}
+.woocommerce a.button { margin: 0 0.5em 0 0; }
 /* END */
 
 /* MY ACCOUNT REGISTER PAGE */
