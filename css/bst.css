@@ -777,13 +777,17 @@ ul.products #viewprice-detail  { display:none !important;}
 
 p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 
-.single_add_to_cart_button {display:none !important;}
+
+/*.single_add_to_cart_button {display:none !important;}
 .logged-in .single_add_to_cart_button {display:block !important;}
+*/
+
 /*  =================================================================================  */
 /*  ==============================                         ==========================  */
 /*  ==============================  BEGIN RESPONSIVE STUFF ==========================  */
 /*  ==============================                         ==========================  */
 /*  =================================================================================  */
+
 @media (min-width: 320px) {
 #homeorangewrap img{ display:none;}
 .sidebar{display:none;}

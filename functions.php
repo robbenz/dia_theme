@@ -20,6 +20,7 @@ function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
 
+
 //  --  LOGIN | LOGOUT STUFF
 add_filter('woocommerce_login_redirect', 'login_redirect');
 
@@ -34,7 +35,6 @@ function logout_redirect(){
     wp_redirect( home_url() );
     exit();
 }
-
 
 //  --  request a quote for empty price products BENZ
 add_filter('woocommerce_empty_price_html', 'custom_call_for_price');
@@ -161,7 +161,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
 }
 
 // -- REPAIRS
-/*
+
 class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
   function start_lvl(&$output, $depth = 0, $args = Array()) {
     $output .= '<ul class="sub-menu">';
@@ -176,7 +176,6 @@ class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
     $output .= "{$indent}</ul>\n";
   }
 }
-*/
 
 // -- MEDICAL EQUIPMENT
 class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {
@@ -233,12 +232,6 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
   }
 }
 
-// -- REQUIRE PREVIEW FILE FOR EMAIL PLUGIN
-$preview = get_stylesheet_directory() . '/woocommerce/emails/woo-preview-emails.php';
-if(file_exists($preview)) {
-     require $preview;
- }
-
 // -- Change number or products per row, and number of products per page
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
@@ -271,12 +264,13 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_e
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta',   10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );// Button
 
+
 //  --  PREFIX ORDERNUMMER ADD MM- BENZ
 add_filter( 'woocommerce_order_number', 'prefix_woocommerce_order_number', 1, 2 );
 
 function prefix_woocommerce_order_number( $oldnumber, $order ) {
     return 'EC-' . $order->id;
-}
+  }
 
 //  --  Confirm password field on the register form under My Accounts BENZ
 add_filter('woocommerce_registration_errors', 'registration_errors_validation', 10,3);
@@ -300,16 +294,6 @@ function wc_register_form_password_repeat() {
 	<?php
 }
 
-//  --  Display Price For Variable Product With Same Variations Prices
-add_filter('woocommerce_available_variation', function ($value, $object = null, $variation = null) {
-  if (is_user_logged_in() ) {
-  if ($value['price_html'] == '') {
-    $value['price_html'] = '<span class="price">' . $variation->get_price_html() . '</span>';
-  }
-  return $value;
-
-}
-}, 10, 3);
 
 //  --  remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0
 function benz_custom_shipping_free_label( $label ) {
@@ -326,6 +310,7 @@ function remove_user_posts_column($column_headers) {
     unset($column_headers['posts']);
     return $column_headers;
 }
+
 
 //  --  Price Things -- From :$20 for variable products
 add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
@@ -346,6 +331,8 @@ function wc_wc20_variation_price_format( $price, $product ) {
   }
 
 }
+
+add_filter( 'woocommerce_show_variation_price', function() { return true; } );
 
 //  --  woocommerce side bar
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
@@ -478,25 +465,9 @@ add_action( 'wp_print_scripts', 'BENZ_remove_password_strength', 100 ); */
 /**
  * Plugin Name: WooCommerce Enable Free Shipping on a Per Product Basis
  * Plugin URI: https://gist.github.com/BFTrick/d4a21524a8f7b25ec296
- * Description: Enable free shipping for certain products
- * Author: Patrick Rauland
- * Author URI: http://speakinginbytes.com/
- * Version: 1.0.1
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
 if ( ! class_exists( 'WC_Enable_Free_Shipping' ) ) :
 class WC_Enable_Free_Shipping {
 	protected static $instance = null;
