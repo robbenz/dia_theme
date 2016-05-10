@@ -14,7 +14,6 @@ $newFormRow = '<div class="userRow"><p style="clear:both;" class="form-row form-
 ?>
 <script type="text/javascript">
 
-/* BENZ JAVA CHEAT CODE */
 jQuery(function(){
     var rows = 0;
 
@@ -27,6 +26,9 @@ jQuery('#userRows').append('<?php echo($newFormRow); ?>'); rows++;
     });
 });
 
+</script>
+
+<script type="text/javascript">
 /*
 jQuery(document).ready(function() {
     jQuery('#cat_mail').hide();

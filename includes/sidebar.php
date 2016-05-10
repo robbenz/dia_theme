@@ -12,6 +12,24 @@
         </ul>
       </li>
       <li class="active has-sub">
+      <a href="<?php echo site_url(); ?>/product-category/anatomical-models/"><span>Anatomical Models</span></a>
+      <ul>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/bones-and-joints/"><span>Bones and Joints</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/brain-and-nervous-system/"><span>Brain and Nervous System</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/cardiovascular-system/"><span>Cardiovascular System</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/digestive-system/"><span>Digestive System</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/head-and-neck/"><span>Head and Neck</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/muscular-system/"><span>Muscular System</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/reproductive-system/"><span>Reproductive System</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/respiratory-system/"><span>Respiratory System</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/skin-conditions/"><span>Skin Conditions</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/special-senses/"><span>Special Senses</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/torsos-and-full-bodies/"><span>Torsos and Full Bodies</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/urinary-system/"><span>Urinary System</span></a></li>
+        <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/vertebra-models/"><span>Vertebra Models</span></a></li>
+      </ul>
+    </li>
+      <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/"><span>Batteries, Cables &amp; Sensors</span></a>
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/batteries/"><span>Batteries</span></a></li>
