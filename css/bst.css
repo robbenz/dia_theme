@@ -162,6 +162,7 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .form-id-58449 .curtain_mesh { width:20%; margin: 0 15%; float:left; margin-bottom:1em;}
 #ccf_field_paragraph-text-11{width:100%; min-width:100%; max-width:100%;}
 .curtain_notes{width:100%;}
+.curtain-img { margin: 0 1.8em; }
 .form-id-58449 .form-submit {width:20%; margin: 0 40%; }
 .form-id-58449 .sub-label{display:none;}
 /* Request a Quote button for RAQ products */
@@ -193,6 +194,11 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 #rqa_name_row {float:left; width:49%; margin-right:2%; }
 #rqa_email_row {float:left; width:49%; }
 #rqa_phone_row {float:left; width:26%; margin: 0 2%; }
+
+.ccf-theme-light select {padding: 0 8px !important; }
+.dropdown-17 {clear:both; float:left; margin-right:1.6em;}
+#ccf_field_dropdown-17 { width: 200px;}
+#ccf_field_single-line-text-13, #ccf_field_single-line-text-15, #ccf_field_single-line-text-16 {margin-right:2%;}
 
 /* Hide form placeholders on focus */
 input:focus::-webkit-input-placeholder { color: transparent; }
