@@ -1,4 +1,5 @@
 <!-- <img style="border:3px solid #00426a;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png"/> -->
+<br />
 <div class="header-wrap-text-medical-equipment">
 <h2 class="header-wrap-text-medical-equipment-header">Imaging Parts</h2>
 </div>

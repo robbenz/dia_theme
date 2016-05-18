@@ -1,5 +1,7 @@
 <?php get_template_part('includes/header');
-$open_no_side = '<div class="container"><div class="row"><div id="content" role="main">';
+$open_no_side = '<div class="container woocommerce"><div class="row"><div id="content" role="main">';
+$open_side = '<div class="container"><div class="row">';
+$open_side_woo = '<div class="container woocommerce landing_page"><div class="row">';
 
 if ( is_home() || is_front_page() ): //  -- HOMEPAGE CHECK
   get_template_part('includes/home-index');
@@ -47,12 +49,9 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
   }
   echo '</div>';
 
-  elseif ( is_page('86') ): //  -- Parts Search CHECK ?>
-      <div class="container">
-        <div class="row">
-          <div syle="width:100%; content-align:center;">
+  elseif ( is_page('86') ): //  -- Parts Search CHECK
+    echo $open_side; ?>
             <img style="border:6px solid #00426a; max-width: 100%; " src="<?php echo site_url(); ?>/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png" />
-          </div>
           <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
             <?php dynamic_sidebar('sidebar-widget-area'); ?>
           </div>
@@ -62,9 +61,8 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
             </div><!-- /#content -->
           </div>
 
-        <?php elseif ( is_page('58430') ): //  --  CHECK HEALTHCARE EDUCATION PAGE ?>
-            <div class="container">
-              <div class="row">
+        <?php elseif ( is_page('58430') ): //  --  CHECK HEALTHCARE EDUCATION PAGE
+          echo $open_side; ?>
                 <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/Nursing_School_Header.png" />
                 <div class="col-xs-6" id="sidebar" role="navigation">
                   <?php get_template_part('includes/sidebar'); ?>
@@ -73,10 +71,9 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
                   <?php get_template_part('includes/nursing', 'page'); ?>
                 </div><!-- /#content -->
 
-            <?php elseif ( is_page('58429') ): //  --  CHECK EMS PAGE ?>
-              <div class="container woocommerce landing_page">
-                <div class="row">
-                  <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ems-header-banner.png" />
+            <?php elseif ( is_page('58429') ): //  --  CHECK EMS PAGE
+              echo $open_side_woo ; ?>
+              <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ems-header-banner.png" />
                   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                     <?php get_template_part('includes/sidebar'); ?>
                   </div>
@@ -86,9 +83,10 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
                   </div><!-- /#content -->
                 </div>
 
-              <?php elseif ( is_page('61277') ): //  --  CHECK Imaging PAGE ?>
-                <div class="container woocommerce landing_page">
-                  <div class="row">
+              <?php elseif ( is_page('61277') ): //  --  CHECK Imaging PAGE
+                echo $open_side_woo; ?>
+                <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / Imaging Parts </nav>
+
                     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                       <?php get_template_part('includes/sidebar'); ?>
                     </div>
@@ -98,9 +96,8 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
                     </div><!-- /#content -->
                   </div>
 
-                <?php elseif ( is_page('58431') ): //  --  CHECK HOSPITAL PAGE ?>
-                <div class="container woocommerce landing_page">
-                  <div class="row">
+                <?php elseif ( is_page('58431') ): //  --  CHECK HOSPITAL PAGE
+                  echo $open_side_woo; ?>
                     <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/hospitalbanner.png" />
                     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                       <?php get_template_part('includes/sidebar'); ?>
@@ -111,9 +108,8 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
                     </div><!-- /#content -->
                   </div>
 
-                <?php elseif ( is_page('58428') ): //  --  CHECK LTC PAGE ?>
-                  <div class="container woocommerce landing_page">
-                    <div class="row">
+                <?php elseif ( is_page('58428') ): //  --  CHECK LTC PAGE
+                  echo $open_side_woo; ?>
                       <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/longtermbanner.png" />
                       <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                         <?php get_template_part('includes/sidebar'); ?>
@@ -124,9 +120,8 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
                       </div><!-- /#content -->
                     </div>
 
-                  <?php else: //  -- EVERY OTHER PAGE ?>
-                        <div class="container">
-                          <div class="row">
+                  <?php else: //  -- EVERY OTHER PAGE
+                     echo $open_side; ?>
                             <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                               <?php get_template_part('includes/sidebar'); ?>
                             </div>

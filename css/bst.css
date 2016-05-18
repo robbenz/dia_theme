@@ -165,6 +165,7 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .curtain-img { margin: 0 1.8em; }
 .form-id-59858 .form-submit {width:20%; margin: 0 40%; }
 .form-id-59858 .sub-label{display:none;}
+.hill-rom-parts-cell img {max-width:50%;}
 
 /* Request a Quote button for RAQ products */
 .r-a-qbutton-price { background-color: #78be20; padding:0.3em 0.6em; border-radius: 0.25em; font-size:15.7px; text-decoration: none; border:1px solid #78be20;}
@@ -331,6 +332,11 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #dia-logo-left img { width: 100%; }
 #masthead { width: 100%; padding: 2em 0em 0em 0em; }
 .header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; font-family: lora, serif; font-size: 16.9px; }
+.page-id-61281 .header-wrap-text-medical-equipment,
+.page-id-61274 .header-wrap-text-medical-equipment,
+.page-id-61275 .header-wrap-text-medical-equipment,
+.page-id-61276 .header-wrap-text-medical-equipment,
+.page-id-61280 .header-wrap-text-medical-equipment { float:none !important; margin-left: auto;}
 .header-wrap-text-medical-equipment-header{font-family: sans-serif; border-bottom: 2px solid #ffad00; color: #ffad00; font-size: 26px; font-weight: 500; line-height: 140%; text-align: center; margin-top:0.6em !important;}
 .woocommerce-ordering{ display:none;}
 #benz-register-link { color:#fff; text-transform:uppercase; font-family: 'Open Sans', sans-serif; padding: 12px 0px; background-color:#004ea8; margin-top:5px;margin-bottom:5px; font-size:19px; font-weight:500;}
