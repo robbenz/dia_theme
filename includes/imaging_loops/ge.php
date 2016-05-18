@@ -9,6 +9,7 @@
 
 <div class="container header-wrap-text-medical-equipment">
 <h2 class="header-wrap-text-medical-equipment-header">GE Imaging Parts</h2>
+DiaMedical USA supplies GE Healthcare products to deliver the best imaging equipment technology to patients. Their broad expertise in healthcare allows GE Healthcare to be a leading imaging parts manufacturer. We supply a diverse selection of the best GE Healthcare medical imaging and information products at the lowest price.  
 </div>
 
 

@@ -10,6 +10,7 @@
 
 <div class="container header-wrap-text-medical-equipment">
 <h2 class="header-wrap-text-medical-equipment-header">Siemens Imaging Parts</h2>
+DiaMedical USA delivers a varied selection of Siemens Healthcare parts for healthcare faculties across the United States. Their commitment to advancing healthcare has expanded their company across the globe and has allowed them to engineer the best and most reliable imaging parts. Our large supply of Siemens products are guaranteed to provide the best selection of imaging parts at the lowest price! 
 </div>
 
 

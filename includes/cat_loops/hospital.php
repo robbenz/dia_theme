@@ -19,7 +19,7 @@ if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_w
     <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/Hill-Rom-Gas-Spring-GPS-5th-Wheel-43306.jpg" alt="Hospital Beds" width="250" height="275" />
       <h3>
-        Bio Medical Parts
+        Biomedical Parts
       </h3>
     </a>
   </li>
@@ -42,7 +42,7 @@ if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_w
 
   <li class="product-category product">
     <a href="<?php echo site_url(); ?>/imaging-parts/">
-      <img src="<?php echo site_url(); ?>/wp-content/uploads/wpallimport/files/imaging-parts/Siemens.png" alt="Cots &amp; Stretchers" width="250" height="275" />
+      <img src="<?php echo site_url(); ?>/wp-content/imgs/GE-AMXIV-Collimator-Cables.png" alt="Cots &amp; Stretchers" width="250" height="275" />
       <h3>
         Imaging Parts
       </h3>

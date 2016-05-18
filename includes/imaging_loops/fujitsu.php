@@ -9,6 +9,7 @@
 
 <div class="container header-wrap-text-medical-equipment">
 <h2 class="header-wrap-text-medical-equipment-header">Fujitsu Imaging Parts</h2>
+DiaMedical USA provides a variety of Fujitsu imaging equipment. They are consistently focused on enhancing the patient experience and medical outcomes through innovative IT designs at affordable prices. This high standard helps to make them a top manufacturer in the imaging parts industry. Our diverse selection of Fujitsu medical products will meet any of your medical supply needs including reconditioned, refurbished, and new imaging parts!
 </div>
 
 
