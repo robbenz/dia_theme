@@ -324,6 +324,7 @@
         <a href="<?php echo site_url(); ?>/product-category/screens-curtains/"><span>Screens &amp; Curtains</span></a>
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/screens-curtains/simscreens/"><span>SimScreens</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/privacy-curtain-sizing-form/"><span>Privacy Curtains</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/screens-curtains/privacy-screens/"><span>Privacy Screens</span></a></li>
         </ul>
       </li>
