@@ -32,18 +32,17 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 
 		<div class="col2-set" id="customer_details">
 			<div id="billing-div-wrap" class="col-1">
-				<?php do_action( 'woocommerce_checkout_billing' ); ?>    
-                
+				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+
        <!-- <h3 id="ship-to-different-address">
 			<label for="ship-to-different-address-checkbox" class="checkbox"><?php _e( 'Ship to a different address?', 'woocommerce' ); ?></label>
 			<input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( $ship_to_different_address, 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
 		</h3> -->
 			</div>
-
 			<div class="col-2">
-                
+
                 <div id="shipping-header-orange"><h3>Shipping Address</h3></div>
-                
+
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 			</div>
 		</div>
@@ -73,17 +72,17 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
-		
+
 
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
 	<div id="order_review" class="woocommerce-checkout-review-order">
-        
+
         <h3 id="order_review_heading"><?php _e( 'Order Summary', 'woocommerce' ); ?></h3>
-        
-        
+
+
 		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 	</div>
 
