@@ -462,7 +462,6 @@ function BENZ_remove_password_strength() {
 add_action( 'wp_print_scripts', 'BENZ_remove_password_strength', 100 ); */
 
 
-
 /**
  * Plugin Name: WooCommerce Enable Free Shipping on a Per Product Basis
  * Plugin URI: https://gist.github.com/BFTrick/d4a21524a8f7b25ec296
