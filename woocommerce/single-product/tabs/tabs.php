@@ -30,12 +30,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  global $product_notfree_ship;
      global $post;
      $product_id = $post->ID;
-     $product_notfree_ship= array('57953','57439','36450','36448','36446','36444','30724','30706','30712','30708','30714','30720','30722','30710','30704','30718','30716','30664','30666','30668','30670','30672','30674','30676','30678','30680','30682','30684','30686','30688','30694','30696','30698','30700','30702','30690','30692');
+     $product_notfree_ship= array('57953','57439','36450','36448','36446','36444','30724','30706','30712','30708','30714','30720','30722','30710','30704','30718','30716','30664','30666','30668','30670','30672','30674','30676','30678','30680','30682','30684','30686','30688','30694','30696','30698','30700','30702','30690','30692' '47690', '30914', '30916', '30918', '30920' );
 
      if ( is_single($product_notfree_ship) ) {
          echo '<div id="free_ship-productpage">';
          echo '<img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" style="float:left; margin-right:0.5em; ">';
-         echo '<div style="padding-top:10px;"><span class="red_free">FREE SHIPPING</span><br>on This Product</div>';
+         echo '<div style="padding-top:10px;"><span class="red_free">FREE SHIPPING</span><br>When You Order Online</div>';
          echo '</div>';
      } else {
         // echo '<div id="free_ship-productpage">';
