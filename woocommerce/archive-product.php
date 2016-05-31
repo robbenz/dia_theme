@@ -20,21 +20,60 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
-	?>
+
+
+if ( is_product_category( array ('8865', '8864', '8832', '8133' ) ) ):
+	 $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+	 $single_cat = array_shift( $product_cats );
+	 global $product;
+?>
+
+
+<div style="float:none !important; margin-left:auto;" class="container header-wrap-text-medical-equipment">
+	<h2 class="header-wrap-text-medical-equipment-header">
+		<?php echo $single_cat->name; ?>
+	</h2>
+</div>
+
+<div id="hill-rom-parts-table">
+  <div class="hill-rom-parts-row">
+    <div class="hill-rom-parts-cell"><h4></h4></div>
+		<div class="hill-rom-parts-cell"><h4>Manufacturer</h4></div>
+    <div class="hill-rom-parts-cell"><h4>Part Number</h4></div>
+		<div class="hill-rom-parts-cell"><h4>Description</h4></div>
+    <div class="hill-rom-parts-cell"><h4>Price</h4></div>
+    <div class="hill-rom-parts-cell"><h4>Condition</h4></div>
+  </div>
+
+<?php while ( have_posts() ) : the_post();
+global $product;
+?>
+
+<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/results/keyword/<?php echo $product->get_sku(); ?>/search-in/product/cat-in/all/search-other/product">
+	<div class="hill-rom-parts-cell"><?php echo $product->get_image(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
+	<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo the_content(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo '$' . $product->get_price(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), 'benz_condition_select', true ); ?></div>
+</a>
+
+<?php endwhile; // end of the loop. ?>
+
+</div>
+<br /><br /><!-- end table -->
+
+
+<?php do_action( 'woocommerce_after_main_content' ); ?>
+
+
+<?php else : ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php
-				/**
-				 * woocommerce_before_shop_loop hook
-				 *
-				 * @hooked woocommerce_result_count - 20
-				 * @hooked woocommerce_catalog_ordering - 30
-				 */
-				do_action( 'woocommerce_before_shop_loop' );
-			?>
+			<?php do_action( 'woocommerce_before_shop_loop' ); ?>
 
 			<?php woocommerce_product_loop_start(); ?>
 
@@ -48,14 +87,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php woocommerce_product_loop_end(); ?>
 
-            <?php
-				/**
-				 * woocommerce_after_shop_loop hook
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-				do_action( 'woocommerce_after_shop_loop' );
-			?>
+			<?php do_action( 'woocommerce_after_shop_loop' ); ?>
 
             <?php //THIS IS CRUCIAL FOR DIVA PLUGIN
             $t_id = get_queried_object()->term_id;
@@ -85,3 +117,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		get_template_part('includes/sidebar');
 	?>
+<?php endif; ?>

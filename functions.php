@@ -20,7 +20,6 @@ function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
 
-
 //  --  LOGIN | LOGOUT STUFF
 add_filter('woocommerce_login_redirect', 'login_redirect');
 
@@ -548,4 +547,47 @@ function hide_shipping_when_free_is_available( $rates, $package ) {
 	}
 
 	return $rates;
+}
+
+//  --  BENZ add custom produt meta for parts condition
+
+// Display Fields
+add_action( 'woocommerce_product_options_general_product_data', 'woo_add_custom_general_fields' );
+// Save Fields
+add_action( 'woocommerce_process_product_meta', 'woo_add_custom_general_fields_save' );
+
+function woo_add_custom_general_fields() {
+  global $woocommerce, $post;
+  echo '<div class="options_group">';
+// select input field
+woocommerce_wp_select(
+	array(
+		'id'          => 'benz_condition_select',
+		'label'       => __( 'Product Condition', 'woocommerce' ),
+    'options' => array(
+      'N/A'   => __( 'N/A', 'woocommerce' ),
+      'New'   => __( 'New', 'woocommerce' ),
+      'Reconditioned' => __( 'Reconditioned', 'woocommerce' ),
+      'Tested' => __( 'Tested', 'woocommerce' ),
+      'Untested' => __( 'Untested', 'woocommerce' ),
+    ),
+		'desc_tip'    => 'true',
+		'description' => __( 'Is this part New, Reconditioned, Untested, etc.?', 'woocommerce' )
+	)
+);
+
+echo '</div>';
+
+}
+
+function woo_add_custom_general_fields_save( $post_id ) {
+// Text Field
+$woocommerce_wp_select = $_POST['benz_condition_select'];
+if( !empty( $woocommerce_wp_select ) ) {
+update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
+}
+else {
+update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
+}
+
 }
