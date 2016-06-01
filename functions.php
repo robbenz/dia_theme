@@ -591,3 +591,5 @@ update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_s
 }
 
 }
+
+// -- Add custom checkbox on Category page

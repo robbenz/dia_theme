@@ -23,9 +23,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 if ( is_product_category( array ('8865', '8864', '8832', '8133' ) ) ):
-	 $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-	 $single_cat = array_shift( $product_cats );
-	 global $product;
+
+?>
+<?php
+$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+$single_cat = array_shift( $product_cats );
 ?>
 
 
@@ -33,6 +35,7 @@ if ( is_product_category( array ('8865', '8864', '8832', '8133' ) ) ):
 	<h2 class="header-wrap-text-medical-equipment-header">
 		<?php echo $single_cat->name; ?>
 	</h2>
+	<?php do_action( 'woocommerce_archive_description' ); ?>
 </div>
 
 <div id="hill-rom-parts-table">
@@ -50,7 +53,7 @@ global $product;
 ?>
 
 <a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/results/keyword/<?php echo $product->get_sku(); ?>/search-in/product/cat-in/all/search-other/product">
-	<div class="hill-rom-parts-cell"><?php echo $product->get_image(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo $product->get_image(array(150,150)); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo the_content(); ?></div>
@@ -65,7 +68,6 @@ global $product;
 
 
 <?php do_action( 'woocommerce_after_main_content' ); ?>
-
 
 <?php else : ?>
 

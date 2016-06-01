@@ -72,7 +72,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 '30914',
 			 '30916',
 			 '30918',
-			 '30920' );
+			 '30920'
+		 );
 
      if ( is_single($product_notfree_ship) ) {
          echo '<div id="free_ship-productpage">';
@@ -85,8 +86,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         // echo '</div>';
 				 echo '';
      }
-
-
 
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 ?>
