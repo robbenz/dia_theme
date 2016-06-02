@@ -82,7 +82,6 @@ $single_cat = array_shift( $product_cats );
 
 <?php
 while ( have_posts() ) : the_post();
-$_SET ['showall'];
 global $product;
 ?>
 
