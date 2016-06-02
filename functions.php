@@ -234,8 +234,8 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
 // -- Change number or products per row, and number of products per page
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
-	function loop_columns() {
-		return 3;
+    function loop_columns() {
+      return 3;
 	}
 }
 
@@ -256,7 +256,6 @@ function products_per_page_category( $count ) {
                                    '6428',
                                    '8402',
                                    '8216',
-                                   '5830',
                                    '6416',
                                    '6432',
                                    '8219',
@@ -610,11 +609,13 @@ woocommerce_wp_select(
 		'id'          => 'benz_condition_select',
 		'label'       => __( 'Product Condition', 'woocommerce' ),
     'options'     => array(
-                        'N/A'           => __( 'N/A', 'woocommerce' ),
-                        'New'           => __( 'New', 'woocommerce' ),
-                        'Reconditioned' => __( 'Reconditioned', 'woocommerce' ),
-                        'Tested'        => __( 'Tested', 'woocommerce' ),
-                        'Untested'      => __( 'Untested', 'woocommerce' ),
+                        'N/A'             => __( 'N/A', 'woocommerce' ),
+                        'New'             => __( 'New', 'woocommerce' ),
+                        'Reconditioned'   => __( 'Reconditioned', 'woocommerce' ),
+                        'OEM Replacement' => __( 'OEM Replacement', 'woocommerce' ),
+                        'OEM Original'    => __( 'OEM Original', 'woocommerce' ),
+                        'Tested'          => __( 'Tested', 'woocommerce' ),
+                        'Untested'        => __( 'Untested', 'woocommerce' ),
                         ),
 		'desc_tip'    => 'true',
 		'description' => __( 'Is this part New, Reconditioned, Untested, etc.?', 'woocommerce' )
