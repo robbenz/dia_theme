@@ -22,14 +22,47 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_main_content' );
 
 
-if ( is_product_category( array ('8865', '8864', '8832', '8133' ) ) ):
+if ( is_product_category( array ( '5828', // These are all the parts categories
+														    	'8390',
+																  '5797',
+															  	'5786',
+																	'6412',
+																	'3683',
+																	'8135',
+																	'8279',
+																	'2305',
+																	'3206',
+																	'5805',
+																	'8264',
+																	'8278',
+																	'6428',
+																	'8402',
+																	'8216',
+																	'5830',
+																	'6416',
+																	'6432',
+																	'8219',
+																	'6418',
+																	'6414',
+																	'8283',
+																	'5361',
+																	'5834',
+																	'1960',
+																	'5777',
+																	'8131',
+																	'6323',
+																	'5173',
+																	'5832',
+																	'5826',
+																	'8865',
+																	'8864',
+																	'8832',
+																	'8133'
+																	) ) ):
 
-?>
-<?php
 $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
 $single_cat = array_shift( $product_cats );
 ?>
-
 
 <div style="float:none !important; margin-left:auto;" class="container header-wrap-text-medical-equipment">
 	<h2 class="header-wrap-text-medical-equipment-header">
@@ -48,7 +81,9 @@ $single_cat = array_shift( $product_cats );
     <div class="hill-rom-parts-cell"><h4>Condition</h4></div>
   </div>
 
-<?php while ( have_posts() ) : the_post();
+<?php
+while ( have_posts() ) : the_post();
+$_SET ['showall'];
 global $product;
 ?>
 
