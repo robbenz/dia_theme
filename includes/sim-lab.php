@@ -37,7 +37,7 @@
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Emergency Crash Cart</a><br>
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Isolation Crash Cart</a><br>
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Pediatric Crash Cart</a><br>
-                           <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Procedure Crash Cart</a><br><br>
+                           <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Medication Crash Cart</a><br><br>
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/">Crash Cart Refil Kits</a><br><br>
                            <span style="color:#fff; font-weight:500;">Our loaded crash carts are pre-stocked medication carts filled with simulated medications and supplies. Explore our predesigned carts or build your own!</span><br><br>
                            <a style="color:#fff;" class="last-new" href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Shop All SimLabSolutions</a>
