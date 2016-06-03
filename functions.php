@@ -276,7 +276,7 @@ function products_per_page_category( $count ) {
                                    '8832',
                                    '8133'
                                    ) ) ) :
-        return -1;
+        return 1999;
     else :
         return 12;
     endif;
