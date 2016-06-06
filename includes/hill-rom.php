@@ -1,3 +1,12 @@
+<nav class="woocommerce-breadcrumb">
+<a href="http://localhost/parts_online">Home</a>
+ /
+<a href="http://localhost/parts_online/medical-equipment/">Medical Equipment</a>
+ /
+<a href="http://localhost/parts_online/product-category/hill-rom-parts-online/">Hill-Rom Parts</a>
+ / New &amp; Reconditioned Hill-Rom Parts
+</nav>
+
 
 <img style="border:6px solid #00426a; margin: 0 7.5%; width: 85%;" alt="Hill-Rom Parts" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/reconditioned-hill-rom-parts.png" />
 

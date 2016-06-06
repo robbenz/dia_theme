@@ -28,6 +28,7 @@ function login_redirect($redirect_to) {
     exit();
 }
 
+
 add_action('wp_logout','logout_redirect');
 
 function logout_redirect(){
