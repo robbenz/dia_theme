@@ -275,6 +275,8 @@ function products_per_page_category( $count ) {
                                    '8865',
                                    '8864',
                                    '8832',
+                                   '8868',
+                                   '8869',
                                    '8133'
                                    ) ) ) :
         return 1999;

@@ -56,6 +56,8 @@ if ( is_product_category( array ( '5828', // These are all the parts categories
 																	'8865',
 																	'8864',
 																	'8832',
+																	'8868',
+																	'8869',
 																	'8133'
 																	) ) ):
 
