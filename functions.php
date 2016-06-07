@@ -1,4 +1,4 @@
-w<?php
+<?php
 /*
 All the functions are in the PHP pages in the functions/ folder.
 */
