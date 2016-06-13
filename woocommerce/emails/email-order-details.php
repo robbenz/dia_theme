@@ -31,9 +31,10 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 	<thead>
 		<tr>
 			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Product', 'woocommerce' ); ?></th>
-            <th class="td" scope="col" style="text-align:left;"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
- <!--BENZ--><th class="td" scope="col" style="text-align:left;"><?php _e( 'Unit Price', 'woocommerce' ); ?></th>
-			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Price', 'woocommerce' ); ?></th>
+			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
+			<!--BENZ-->
+			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Unit Price', 'woocommerce' ); ?></th>
+			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
