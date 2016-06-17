@@ -42,7 +42,7 @@ if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_w
 
   <li class="product-category product">
     <a href="<?php echo site_url(); ?>/imaging-parts/">
-      <img src="<?php echo site_url(); ?>/wp-content/imgs/ie-components.png" alt="Cots &amp; Stretchers" width="250" height="275" />
+      <img src="<?php echo site_url(); ?>/wp-content/imgs/ie-components.png" alt="Imaging Parts" width="250" height="275" />
       <h3>
         Imaging Parts
       </h3>
