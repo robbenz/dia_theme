@@ -138,6 +138,8 @@
           <li><a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/hill-rom-switches-siderails/"><span>Hill-Rom Switches &amp; Siderails</span></a></li>
         </ul>
       </li>
+      <li class="active has-sub"><a href="<?php echo site_url(); ?>/imaging-parts/"><span>Imaging Parts</span></a></li>
+
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/infection-control/"><span>Infection Control</span></a>
         <ul>

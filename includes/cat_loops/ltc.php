@@ -111,15 +111,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product">
-    <a href="<?php echo site_url(); ?>/product-category/moulage/">
-      <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/05/Active-Shooter-Kit-MG119139_400x400-258x275.png" alt="Moulage" width="250" height="275" />
-      <h3>
-        Moulage
-      </h3>
-    </a>
-  </li>
-  <li class="product-category product first">
+  <li class="product-category product last">
     <a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Pedigo-Pediatric-Stretcher-Crib-500_400x400-258x275.png" alt="Obstetrics &amp; Pediatrics" width="250" height="275" />
       <h3>
@@ -127,7 +119,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/refrigerators-freezers/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/04/FF511LBIMEDDT-11960-258x275.jpg" alt="Refrigerators &amp; Freezers" width="250" height="275" />
       <h3>
@@ -143,13 +135,13 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/mobility/rollators/">
       <img width="250" height="275" alt="Rollators" src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/MDS86850EBS8_PRI03-258x275.jpg">
       <h3> Rollators </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/surgical/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Reconditioned-Amsco-3080-Surgical-Table_400x400-258x275.png" alt="Surgical" width="250" height="275" />
       <h3>
@@ -165,7 +157,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product last">
     <a href="<?php echo site_url(); ?>/product-category/mobility/walking-aids/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/G00502_HRE01-258x275.jpg" alt="Walking Aid Accessories" width="250" height="275" />
       <h3>
@@ -173,7 +165,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/mobility/wheelchairs-mobility/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/MDS806140PEDE_PRI02-258x275.jpg" alt="Wheelchairs" width="250" height="275" />
       <h3>
