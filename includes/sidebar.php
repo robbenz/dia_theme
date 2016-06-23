@@ -167,7 +167,7 @@
       </li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/"><span>Simulated IV Fluids</span></a></li>
       <li class="active has-sub">
-        <a href="<?php echo site_url(); ?>/product-category/manikins/"><span>Loaded Crash Carts&trade;</span></a>
+        <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/"><span>Loaded Crash Carts&trade;</span></a>
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/"><span>Crash Cart Refill Kits</span></a></li>
           <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/loaded-5-emergency-crash-cart-kit/"><span>Loaded 5-Drawer Emergency Crash Cart Kit</span></a></li>
