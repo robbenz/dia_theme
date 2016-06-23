@@ -278,7 +278,7 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #dmcssmenu4 ul li {list-style: none;margin: 0;padding: 0;border: 0;background-color: transparent;}
 #dmcssmenu4 ul ul li {list-style: none;margin: 0;padding: 0;border: 0;background-color: #f4f4f5;}
 #dmcssmenu4 ul {position: relative;z-index: 1;float: left;}
-#dmcssmenu4 ul li {text-transform: none; background-color: #e9e9e9; border: 1px solid #bbbbbb; line-height: 1.05em; margin: 0.34em 0; min-height: 1px; pointer-events: auto;text-align: center;text-shadow: none; vertical-align: middle;}
+#dmcssmenu4 ul li {text-transform: none; background-color: #e9e9e9; border: 1px solid #bbbbbb; line-height: 1.05em; margin: 0.3em 0; min-height: 1px; pointer-events: auto;text-align: center;text-shadow: none; vertical-align: middle;}
 #dmcssmenu4 ul li.hover,
 #dmcssmenu4 ul li:hover {position: relative;z-index: 599;cursor: default; text-shadow:none;text-transform: uppercase;}
 #dmcssmenu4 ul ul {margin-top: 0px;visibility: hidden;position: absolute;top: 0px;left: 97%; z-index: 598;width: 100%;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
@@ -294,7 +294,7 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #dmcssmenu4 > ul {float: none;}
 #dmcssmenu4 ul {background-color: transparent;}
 #cssmenu > ul > li {border-left: 3px solid #00426a;}
-#dmcssmenu4 > ul > li > a {padding: 10px 1px;font-family: 'Lato',sans-serif !important;font-size: 16px !important;}
+#dmcssmenu4 > ul > li > a {padding: 8.6px 1px;font-family: 'Lato',sans-serif !important;font-size: 15.5px !important;}
 #dmcssmenu4 > ul > li:hover {border-left: 1px solid #c3e2ff; text-shadow:none;text-decoration: none;}
 #dmcssmenu4 ul li:hover > a {color: #fff; text-decoration: none; font-weight: 500;text-shadow:none;}
 #dmcssmenu4 > ul > li:hover {background: #00426a;}
@@ -390,7 +390,7 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #footerlinks1 a { color: #a6d179; float: left; font-size: 14px; line-height: 23px; text-decoration: none; font-weight: 600; }
 #footerlinks1 a:visited { color: #a6d179; float: left; font-size: 15px; line-height: 23px; text-decoration: none; }
 #footerlinks1 a:hover { color: #fff; text-decoration: none; }
-#footerlinks2 { float: left; font-size: 15px; line-height: 20px; margin: 0 0 0 44px; width: 130px; }
+#footerlinks2 { float: left; font-size: 15px; line-height: 20px; margin: 0 0 0 44px; width: 134px; }
 #footerlinks2 a { color: #fff; float: left; font-size: 13px; line-height: 20px; text-decoration: none; }
 #footerlinks2 a:visited { color: #fff; float: left; font-size: 13px; line-height: 20px; text-decoration: none; }
 #footerlinks2 a:hover { color: #a6d179; text-decoration: none; }

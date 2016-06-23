@@ -188,7 +188,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#ffad00;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</div>';
         $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="fluidslogomenu" href="http://www.diamedicalusa.com/product-category/simulated-iv-bags/"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
+        $output .= '<a id="fluidslogomenu" href="http://www.diamedicalusa.com/simlabsolutions/"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";

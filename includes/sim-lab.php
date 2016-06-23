@@ -39,7 +39,7 @@
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Pediatric Crash Cart</a><br>
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Medication Crash Cart</a><br><br>
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/">Crash Cart Refil Kits</a><br><br>
-                           <span style="color:#fff; font-weight:500;">Our loaded crash carts are pre-stocked medication carts filled with simulated medications and supplies. Explore our predesigned carts or build your own!</span><br><br>
+                           <span style="color:#fff; font-weight:500;">DiaMedical USA Is the Exclusive provider of Loaded Crash Carts &amp; Loaded Crash Cart Refill Kits! Explore our predesigned carts or build your own!</span><br><br>
                            <a style="color:#fff;" class="last-new" href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Shop All SimLabSolutions</a>
                         </div>
                      </figcaption>
@@ -84,7 +84,7 @@
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/">Isolation Cart Refill Kits</a><br>
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/">Pediatric Cart Refill Kits</a><br>
                            <a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/">Procedure Cart Refill Kits</a><br><br>
-                           <span style="color:#fff; font-weight:500;">Each tray comes pre-packaged and ready to slide right in to each drawer. We custom designed each kit to include the medications and supplies you will need. Buy the whole kit or one drawer at a time!</span><br><br>
+                           <span style="color:#fff; font-weight:500;">DiaMedical USA Is the Exclusive provider of Loaded Crash Carts &amp; Loaded Crash Cart Refill Kits! Each tray comes pre-packaged and ready to slide right in to each drawer.</span><br><br>
                            <a style="color:#fff;" class="last-new" href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">Shop All SimLabSolutions</a>
                         </div>
                      </figcaption>

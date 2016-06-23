@@ -167,6 +167,17 @@
       </li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/"><span>Simulated IV Fluids</span></a></li>
       <li class="active has-sub">
+        <a href="<?php echo site_url(); ?>/product-category/manikins/"><span>Loaded Crash Carts&trade;</span></a>
+        <ul>
+          <li><a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/"><span>Crash Cart Refill Kits</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/loaded-5-emergency-crash-cart-kit/"><span>Loaded 5-Drawer Emergency Crash Cart Kit</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/emergency-crash-cart/"><span>Loaded 6 Drawer Emergency Crash Cart Kit</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/isolation-cart-kit/"><span>Loaded Isolation Cart Kit</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/loaded-medication-cart-kit/"><span>Loaded Medication Cart Kit</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/pediatric-crash-cart/"><span>Loaded Pediatric Crash Cart Kit</span></a></li>
+        </ul>
+      </li>
+      <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/manikins/"><span>Manikins &amp; Simulators</span></a>
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/auscultation/"><span>Auscultation</span></a></li>

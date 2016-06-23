@@ -50,7 +50,7 @@
   <a href="<?php echo site_url(); ?>/product-category/hospital-beds/">Hospital Beds</a><br />
   <a href="http://medmattress.com/product-category/mattresses/stretcher-gurney/">Stretcher Mattresses</a><br />
   <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">Replacement Parts</a><br />
-  <a href="<?php echo site_url(); ?>/product-category/screens-curtains/simscreens/">SimScreens</a><br />
+  <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts">Loaded Crash Carts&trade;</a><br />
   <a href="<?php echo site_url(); ?>/product-category/headwalls/">Headwall Units</a><br />
   <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">IV Fluids</a><br />
 </div><!--footerlinks2-->
