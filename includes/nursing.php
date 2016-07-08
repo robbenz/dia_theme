@@ -37,21 +37,18 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-
 
 <?php // echo do_shortcode('[wpb-feature-product title="Feature Products"]'); ?>
 
-<p class="diva" style=" float: right; font-size: 11px; text-align: center; width: 75%;">
+<p class="diva" style=" float: right; font-size: 13px; text-align: center; width: 98%;">
 At DiaMedical USA, we value Healthcare Education. We want to make sure your medical students and nursing students are learning quickly and effectively as they move from the classroom to medical facilities.
-<br />
 Our hospital beds are of the highest quality at the lowest price. Choose from various Hill-Rom hospital beds, Stryker hospital beds, Burke Bariatric hospital beds, Gendron hospital beds, Amico hospital beds, Invacare hospital beds, Graham-Field hospital beds, Medline hospital beds, Span America low hospital beds, and Transfer Master hospital beds.
-<br />
 Complete your patient rooms and teach your medical and nursing students with our hands-on simulated and functioning training headwalls. Students will learn how to work in a hospital room with our affordable nonfunctioning headwalls, functioning wall mounted headwall packages, mobile headwall packages, wall mounted headwalls for centralized compressor, our compressors and SOT accessories.
 <br />
+<br />
 We are the sole provider of the Loaded Crash Carts designed for use in simulation labs, nursing schools, training hospitals and other medical training facilities. Each Crash Cart is pre-stocked and available in several forms including the Emergency Crash Cart, Pediatric Crash Cart, Medication Cart, Isolation Cart and refill kits.
-<br />
 Designed for healthcare education purposes only, browse our endless amount of simulated medications, simulated IV supplies, simulated intubation and airway supplies, simulated vascular supplies, basic medical supplies, and simulated infection control supplies. Our cost-effective loaded crash carts are also available as Treatment Carts, Anesthesia Carts, Procedure Carts and Phlebotomy Carts.
-<br />
 We carry the most popular infusion pump brands including Alaris infusion pumps, B. Braun infusion pumps, Baxter infusion pumps, Hospira infusion pumps, Sabratek infusion pumps and Sigma infusion pumps. Purchase your infusion pumps with our best-selling simulated IV bags and save money while doing so. All of our simulated IV fluids are manufactured at Sim Lab Solutions here, at DiaMedical USA! Choose from our simulated IV bags, simulated lactated ringers, simulated blood bags, simulated plasma bags and simulated platelet bags. Our simulated IV fluids come in a variety of sizes and with different options for labeling. They are available for purchase pre-filled, empty, in bulk or individually.
 <br />
-Increase student readiness with our various practice medications. Choose from our crash code practice medications, practice medication CD modules, simulated injection simulators, simulated IV therapy, DiaMedical USA’s exclusive Loaded Crash Cart kits, needle free practice medication products, simulated oral medications, various peel and stick labels, practice ampules, simulated transdermal patches and simulated vials.
 <br />
+Increase student readiness with our various practice medications. Choose from our crash code practice medications, practice medication CD modules, simulated injection simulators, simulated IV therapy, DiaMedical USA’s exclusive Loaded Crash Cart kits, needle free practice medication products, simulated oral medications, various peel and stick labels, practice ampules, simulated transdermal patches and simulated vials.
 Fully stock your Medical Schools, Nursing Schools, Technical Schools, or Simulation Centers at the lowest price with DiaMedical USA!
 </p>
 
