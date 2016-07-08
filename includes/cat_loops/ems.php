@@ -53,13 +53,13 @@
       <h3>Emergency Vests</h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/emergency-highway-blanket/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3519-258x275.png" alt="Emergency Highway Blanket" width="250" height="275" />
       <h3>Emergency Highway Blanket</h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/fire-blankets/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/08/JSA_1000_W_Fire_Blanket_Cabinet-258x275.jpg" alt="Fire Blankets" width="250" height="275" />
       <h3>
@@ -73,13 +73,13 @@
       <h3>Head Immobilizers</h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/holsters/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/05/Top-Leather-Holster-19208_400x400-258x275.png" alt="Holsters" width="250" height="275" />
       <h3>Holsters</h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/10/loaded-6-drawer-emergency-crash-cart-250x275.png" alt="Holsters" width="250" height="275" />
       <h3>Loaded Crash Carts&trade;</h3>
@@ -91,13 +91,13 @@
       <h3>Multi-Purpose Tools</h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-bags/oxygen-bags/">
       <img width="250" height="275" alt="Oxygen Bags" src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/02_Sleeve_400x400-258x275.png">
       <h3>Oxygen Bags</h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/patient-slings/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/08/Mobility_Assistance_Sling_400x400-258x275.png" alt="Patient Slings" width="250" height="275" />
       <h3>Patient Slings</h3>
@@ -109,13 +109,13 @@
       <h3>Pole Stretchers</h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/immobilization/splinting-devices/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/KEDPro-258x275.png" alt="Splinting devices" width="250" height="275" />
       <h3>Splinting devices</h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/immobilization/straps/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/08/30030_Body_Loc_400x400-258x275.png" alt="Straps" width="250" height="275" />
       <h3>Straps</h3>
@@ -127,13 +127,13 @@
       <h3>Transfer Pads &amp; Accessories</h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/transport-chairs/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/05/Carry-Chair-19267_400X400-258x275.png" alt="Transport Chairs" width="250" height="275" />
       <h3>Transport Chairs</h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product ">
     <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-bags/trauma-bags/">
       <img width="250" height="275" alt="Trauma Bags" src="<?php echo site_url(); ?>/wp-content/uploads/2015/05/Emergency-Bag-Nylon-19214_400x400-258x275.png">
       <h3>Trauma Bags</h3>
