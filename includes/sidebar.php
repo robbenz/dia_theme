@@ -29,6 +29,7 @@
         <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/vertebra-models/"><span>Vertebra Models</span></a></li>
       </ul>
     </li>
+    
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/"><span>Batteries, Cables &amp; Sensors</span></a>
         <ul>
@@ -107,6 +108,7 @@
         <a href="<?php echo site_url(); ?>/product-category/furniture/"><span>Furnishings</span></a>
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/furniture/bedside-cabinets/"><span>Bedside Cabinets</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/furniture/clinical-recliners/"><span>Clinical Recliners</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/furniture/exam-lighting/"><span>Exam Lights</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/furniture/exam-stools/"><span>Exam Stools</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/furniture/exam-tables/"><span>Exam &amp; Treatment Tables</span></a></li>

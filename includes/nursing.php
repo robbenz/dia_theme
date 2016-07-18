@@ -37,7 +37,7 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-
 
 <?php // echo do_shortcode('[wpb-feature-product title="Feature Products"]'); ?>
 
-<p class="diva" style=" float: right; font-size: 12px; text-align: center; width: 98%;">
+<p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
 <br />
 At DiaMedical USA, we value Healthcare Education. We want to make sure your medical students and nursing students are learning quickly and effectively as they move from the classroom to medical facilities.
 Our hospital beds are of the highest quality at the lowest price. Choose from various Hill-Rom hospital beds, Stryker hospital beds, Burke Bariatric hospital beds, Gendron hospital beds, Amico hospital beds, Invacare hospital beds, Graham-Field hospital beds, Medline hospital beds, Span America low hospital beds, and Transfer Master hospital beds.

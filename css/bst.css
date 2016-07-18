@@ -22,6 +22,7 @@ a { color: #00426a; }
 .pdf-img{padding-left: 7px;}
 /* END */
 
+
 /* PAGES */
 .woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 100%; }
 /* END */
@@ -633,6 +634,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 #post_11 .cart_totals .shipping{font-style:italic; color:#00426a;font-weight:700;font-size: 1.1em;}
 #post_11 .cart_totals .order-total th{text-align: right;}
 #post_11 .cart_totals .cart-subtotal th{text-align: right;}
+#post_11 .cart_totals .cart-discount th{text-align: right;}
 #post_11 .cart_totals .shipping th{text-align: right; font-weight: 400;}
 #post_11 .cart_totals table{margin-top:0em;float:right;}
 #post_11 .cart_totals td  {float:right;margin-left:-4em;}
@@ -648,6 +650,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 .woocommerce .quantity .plus, .woocommerce-page .quantity .plus, .woocommerce .quantity .minus, .woocommerce-page .quantity .minus {height:50%;}
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {padding:1em !important;}
 .woocommerce a.button { margin: 0 0.5em 0 0; }
+.woocommerce-remove-coupon{font-size:0.8em !important;}
 /* END */
 
 /* MY ACCOUNT REGISTER PAGE */

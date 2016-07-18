@@ -23,6 +23,7 @@
       </h3>
     </a>
   </li>
+  
   <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/carts-storage/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Waterloo-Pediatric-Medical-Cart_400x400-258x275.png" alt="Carts &amp; Storage" width="250" height="275" />
