@@ -49,7 +49,6 @@ elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
   }
   echo '</div>';
 
-
   elseif ( is_page('86') ): //  -- Parts Search CHECK
     echo $open_side; ?>
             <img style="border:6px solid #00426a; max-width: 100%; " src="<?php echo site_url(); ?>/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png" />

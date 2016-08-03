@@ -167,6 +167,17 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .form-id-59858 .sub-label{display:none;}
 .hill-rom-parts-cell img {max-width:50%;}
 
+
+/* Repair form-submim */
+#eModal-11 { margin-top:30px;  }
+.form-id-62526 {font-family: 'Lato',sans-serif !important; margin-top:0px !important; }
+.form-id-62526 .form-title {font-size:1.7em;}
+.form-id-62526 .field-62687 {width:50%; padding-right:10px; float:left }
+.form-id-62526 .field-62688 {width:50%; padding-left:10px; float:right}
+.work-order-button input.ccf-submit-button {color:#fff !important; background-image: none !important; background-color:#00426a !important;}
+/*END*/
+
+
 /* Request a Quote button for RAQ products */
 .r-a-qbutton-price { background-color: #78be20; padding:0.3em 0.6em; border-radius: 0.25em; font-size:15.7px; text-decoration: none; border:1px solid #78be20;}
 .r-a-qbutton-price:hover { background-color: #fff; border:1px solid #78be20; text-decoration: none; }
@@ -196,7 +207,6 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 #rqa_name_row {float:left; width:49%; margin-right:2%; }
 #rqa_email_row {float:left; width:49%; }
 #rqa_phone_row {float:left; width:26%; margin: 0 2%; }
-
 .ccf-theme-light select {padding: 0 8px !important; }
 .dropdown-17 {clear:both; float:left; margin-right:1.6em;}
 #ccf_field_dropdown-17 { width: 200px;}

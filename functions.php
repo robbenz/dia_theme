@@ -13,8 +13,21 @@ require_once locate_template('/functions/feedback.php');
 
 add_action('after_setup_theme', 'true_load_theme_textdomain');
 
-wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
-wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
+// wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
+
+function wpse4339_enqueue_styles() {
+    wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
+}
+add_action( 'wp_enqueue_scripts', 'wpse4339_enqueue_styles' );
+
+
+
+add_action('wp_enqueue_script','register_my_scripts');
+function register_my_scripts(){
+wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
+}
+
+//wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
 
 function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
