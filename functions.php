@@ -92,7 +92,7 @@ function register_my_menus() {
       'repirstmp'          => __( 'repirstmp' ),
       'medical-equipment'  => __( 'Medical Equipment' ),
       'parts-search'       => __( 'Parts Search' ),
-      'repairs'            => __( 'Repairs' ),
+      'repairs'            => __( 'Service' ),
       'manufacturers'      => __( 'Manufacturers' ),
       'myaccount'          => __( 'My Account' ),
       'about-us'           => __( 'About Us' )
