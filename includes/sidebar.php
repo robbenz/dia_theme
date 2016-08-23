@@ -225,6 +225,23 @@
           <li><a href="<?php echo site_url(); ?>/product-category/supplies-2/wound-care-supplies-2/"><span>Wound Care</span></a></li>
         </ul>
       </li>
+        	<li class="active has-sub">
+        <a href="<?php echo site_url(); ?>/product-category/practi-meds/"><span>Simulated Medications</span></a>
+        <ul>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/practi-ampules"><span>Practi Ampules</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/iv-therapy"><span>IV Therapy</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/needle-free-products"><span>Needle Free Products</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/crash-code"><span>Crash Code</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/transdermal-patches"><span>Trans-Dermal Patches</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/injection-simulators"><span>Injection Simulators</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/refill-kits/"><span>Loaded Crash Cart Refill Kits</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/oral-medications"><span>Oral Medications</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/peel-stick-labels"><span>Peel &amp; Stick Labels</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/cd-modules"><span>Teaching CD Modules</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/vials"><span>Practi Vials</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/additional-products"><span>Additional Products</span></a></li>
+        </ul>
+      </li>
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/mobility/"><span>Mobility</span></a>
         <ul>
@@ -281,23 +298,6 @@
         </ul>
       </li>
       <li class="active has-sub">
-        <a href="<?php echo site_url(); ?>/product-category/practi-meds/"><span>Practi-Meds</span></a>
-        <ul>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/practi-ampules"><span>Practi Ampules</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/iv-therapy"><span>IV Therapy</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/needle-free-products"><span>Needle Free Products</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/crash-code"><span>Crash Code</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/transdermal-patches"><span>Trans-Dermal Patches</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/injection-simulators"><span>Injection Simulators</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/refill-kits/"><span>Loaded Crash Cart Refill Kits</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/oral-medications"><span>Oral Medications</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/peel-stick-labels"><span>Peel &amp; Stick Labels</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/cd-modules"><span>Teaching CD Modules</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/vials"><span>Practi Vials</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/practi-meds/additional-products"><span>Additional Products</span></a></li>
-        </ul>
-      </li>
-      <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/physical-therapy/"><span>Physical Therapy</span></a>
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/physical-therapy/cervical-collars/"><span>Cervical Collars</span></a></li>
@@ -345,7 +345,6 @@
       </li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/wp-content/pdf/medaffinity.pdf"><span>Simulation EHR</span></a></li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/supply-kits/"><span>Supply Kits</span></a></li>
-
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/surgical/"><span>Surgical</span></a>
         <ul>
