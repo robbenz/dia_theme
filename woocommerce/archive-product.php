@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_main_content' );
 
 
-if ( is_product_category( array ( '5828', // These are all the parts categories
+if ( is_product_category( array ( '5828', // These are all the parts categories - dont forget to put in functions too for producst diaply count
 														    	'8390',
 																  '5797',
 															  	'5786',
@@ -47,9 +47,9 @@ if ( is_product_category( array ( '5828', // These are all the parts categories
 																	'5361',
 																	'5834',
 																	'1960',
-                                                                    '8889',
-                                                                    '8890',
-                                                                    '8888',
+                                  '8889',
+                                  '8890',
+                                  '8888',
 																	'5777',
 																	'8131',
 																	'6323',
@@ -63,10 +63,9 @@ if ( is_product_category( array ( '5828', // These are all the parts categories
 																	'8869',
 																	'8133'
 																	) ) ):
-
-$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-$single_cat = array_shift( $product_cats );
-?>
+																	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+																	$single_cat = array_shift( $product_cats );
+																	?>
 
 <div style="float:none !important; margin-left:auto;" class="container header-wrap-text-medical-equipment">
 	<h2 class="header-wrap-text-medical-equipment-header">
@@ -103,7 +102,6 @@ global $product;
 
 </div>
 <br /><br /><!-- end table -->
-
 
 <?php do_action( 'woocommerce_after_main_content' ); ?>
 

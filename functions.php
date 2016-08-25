@@ -21,10 +21,9 @@ function wpse4339_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'wpse4339_enqueue_styles' );
 
 
-
 add_action('wp_enqueue_script','register_my_scripts');
 function register_my_scripts(){
-wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
+  wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
 }
 
 //wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
@@ -64,7 +63,6 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
-
 
 //  -- Sidebars Register
 add_action( 'widgets_init', 'my_register_sidebars' );
@@ -278,6 +276,9 @@ function products_per_page_category( $count ) {
                                    '5361',
                                    '5834',
                                    '1960',
+                                   '8889',
+                                   '8890',
+                                   '8888',
                                    '5777',
                                    '8131',
                                    '6323',
@@ -642,15 +643,13 @@ echo '</div>';
 }
 
 function woo_add_custom_general_fields_save( $post_id ) {
-// Text Field
-$woocommerce_wp_select = $_POST['benz_condition_select'];
-if( !empty( $woocommerce_wp_select ) ) {
-update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
+  // Text Field
+  $woocommerce_wp_select = $_POST['benz_condition_select'];
+  if( !empty( $woocommerce_wp_select ) ) {
+    update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
+  }
+  else {
+    update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
+  }
 }
-else {
-update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
-}
-
-}
-
 // -- Add custom checkbox on Category page
