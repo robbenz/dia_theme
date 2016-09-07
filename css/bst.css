@@ -627,6 +627,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 
 /* IV BAG WAIVER */
 #vfbp-form-1 .iv-bag-submit{ padding: 1em 6em; margin-top:20px;  }
+#vfbp-form-1 .vfb-signature {border:1.5px solid #ccc; border-radius:4px; }
 
 
 /* END */
