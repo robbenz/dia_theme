@@ -294,7 +294,9 @@ function products_per_page_category( $count ) {
                                    '8133'
                                    ) ) ) :
         return 1999;
-    else :
+    elseif( is_product_category( '9350') ) :
+      return 27;
+      else :
         return 12;
     endif;
 }
