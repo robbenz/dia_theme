@@ -29,7 +29,7 @@
         <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/vertebra-models/"><span>Vertebra Models</span></a></li>
       </ul>
     </li>
-    
+
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/"><span>Batteries, Cables &amp; Sensors</span></a>
         <ul>
@@ -96,7 +96,7 @@
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/"><span>Emergency &amp; Rescue</span></a>
         <ul>
-          <li><a href="<?php echo site_url(); ?>/product-category/manikins/ambulance-simulator/"><span>Ambulance Simulator</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/medical-equipment/emergency-rescue/ambulance-simulator/ambulance-simulator/"><span>Ambulance Simulator</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/"><span>Emergency Accessories</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-bags/"><span>Emergency Bags</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/cots-stretchers-ems/"><span>Emergency Cots &amp; Stretchers</span></a></li>
@@ -186,8 +186,8 @@
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/blood-pressure/"><span>Blood Pressure &amp; Intravenous</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/breast-examination/"><span>Breast Exam</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/cpr/"><span>CPR</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/manikins/obesity-trainers/"><span>Obesity Trainers</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/patient-care-manikins/"><span>Patient Care</span></a></li>
-          <li><a href="<?php echo site_url(); ?>/product-category/manikins/simleggings/"><span>SimLeggings</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/suturing/"><span>Suturing</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/urinary/"><span>Urinary</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/manikins/wound-care/"><span>Wound Care</span></a></li>
@@ -344,7 +344,7 @@
         </ul>
       </li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/wp-content/pdf/medaffinity.pdf"><span>Simulation EHR</span></a></li>
-      <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/supply-kits/"><span>Supply Kits</span></a></li>
+       <li style="text-align:center;" class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/supply-kits/"><span style="text-align:center;">Supply-Kits</span></a></li>
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/surgical/"><span>Surgical</span></a>
         <ul>

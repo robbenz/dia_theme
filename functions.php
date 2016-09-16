@@ -293,13 +293,16 @@ function products_per_page_category( $count ) {
                                    '8869',
                                    '8133'
                                    ) ) ) :
-        return 1999;
-    elseif( is_product_category( '9350') ) :
-      return 27;
-      else :
-        return 12;
-    endif;
-}
+                                   return 1999;
+                                   elseif( is_product_category( '9350') ) :
+                                     return 27;
+                                   elseif( is_product_category( '5357') ) :
+                                     return 9;
+                                   else :
+                                     return 12;
+                                   endif;
+                                   }
+
 add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 
 if (is_woocommerce() && is_archive()) {

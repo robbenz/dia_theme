@@ -1,6 +1,8 @@
 <div id="ns_rotate_wrap">
 
-<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
+<?php // if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
+
+<a href="<?php echo site_url(); ?>/product-category/manikins/obesity-trainers/"><img style="margin-bottom: 12px; " src="<?php echo site_url(); ?>/wp-content/imgs/SimUSuit-Rotator.png" /></a>
 
 <div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png" alt="hospital beds"
@@ -48,9 +50,9 @@ We are the sole provider of the Loaded Crash Carts designed for use in simulatio
 Designed for healthcare education purposes only, browse our endless amount of simulated medications, simulated IV supplies, simulated intubation and airway supplies, simulated vascular supplies, basic medical supplies, and simulated infection control supplies. Our cost-effective loaded crash carts are also available as Treatment Carts, Anesthesia Carts, Procedure Carts and Phlebotomy Carts.
 We carry the most popular infusion pump brands including Alaris infusion pumps, B. Braun infusion pumps, Baxter infusion pumps, Hospira infusion pumps, Sabratek infusion pumps and Sigma infusion pumps. Purchase your infusion pumps with our best-selling simulated IV bags and save money while doing so. All of our simulated IV fluids are manufactured at Sim Lab Solutions here, at DiaMedical USA! Choose from our simulated IV bags, simulated lactated ringers, simulated blood bags, simulated plasma bags and simulated platelet bags. Our simulated IV fluids come in a variety of sizes and with different options for labeling. They are available for purchase pre-filled, empty, in bulk or individually.
 <br />
-<br />
+<br /><!--
 Increase student readiness with our various practice medications. Choose from our crash code practice medications, practice medication CD modules, simulated injection simulators, simulated IV therapy, DiaMedical USA’s exclusive Loaded Crash Cart kits, needle free practice medication products, simulated oral medications, various peel and stick labels, practice ampules, simulated transdermal patches and simulated vials.
 Fully stock your Medical Schools, Nursing Schools, Technical Schools, or Simulation Centers at the lowest price with DiaMedical USA!
-</p>
+</p> -->
 
 </div><!-- ns_rotate_wrap -->

@@ -15,9 +15,6 @@
  * @version     2.0.14
  */
 
-// Benz Mod File
-// Added  " Free Shipping icon" under image if ID matches $product_notfree_ship defined in functions.php -- global;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
