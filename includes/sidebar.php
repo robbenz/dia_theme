@@ -29,7 +29,7 @@
         <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/vertebra-models/"><span>Vertebra Models</span></a></li>
       </ul>
     </li>
-    
+
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/"><span>Batteries, Cables &amp; Sensors</span></a>
         <ul>
@@ -343,6 +343,7 @@
           <li><a href="<?php echo site_url(); ?>/product-category/screens-curtains/privacy-screens/"><span>Privacy Screens</span></a></li>
         </ul>
       </li>
+      <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/service-repairs/"><span>Service &amp; Repairs</span></a></li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/wp-content/pdf/medaffinity.pdf"><span>Simulation EHR</span></a></li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/supply-kits/"><span>Supply Kits</span></a></li>
       <li class="active has-sub">
