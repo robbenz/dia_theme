@@ -23,7 +23,7 @@ a { color: #00426a; }
 /* END */
 
 /* PAGES */
-.woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 80%; }
+.woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 70%; }
 /* END */
 
   img.wp-post-image { width:80%; margin: 0 10%; }
@@ -310,7 +310,7 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #dmcssmenu4 > ul {float: none;}
 #dmcssmenu4 ul {background-color: transparent;}
 #cssmenu > ul > li {border-left: 3px solid #00426a;}
-#dmcssmenu4 > ul > li > a {padding: 8.6px 1px;font-family: 'Lato',sans-serif !important;font-size: 15.5px !important;}
+#dmcssmenu4 > ul > li > a { font-family: 'Lato',sans-serif !important;  font-size: 15.2px !important; padding: 8px 1px;}
 #dmcssmenu4 > ul > li:hover {border-left: 1px solid #c3e2ff; text-shadow:none;text-decoration: none;}
 #dmcssmenu4 ul li:hover > a {color: #fff; text-decoration: none; font-weight: 500;text-shadow:none;}
 #dmcssmenu4 > ul > li:hover {background: #00426a;}

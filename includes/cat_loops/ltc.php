@@ -10,12 +10,19 @@
     </a>
   </li>
   <li class="product-category product">
+    <a href="<?php echo site_url(); ?>/product-category/bariatric-care/">
+      <img width="250" height="275" alt="Bariatric Care" src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/MDS806450_PRI03-258x275.jpg">
+      <h3> Bariatric Care </h3>
+    </a>
+  </li>
+
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/hospital-beds/burke-bariatric-beds/">
       <img width="250" height="275" alt="Burke Bariatric Beds" src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/Burke-Tri-Flex-II-Bariatric-Bed_400x400-258x275.png">
       <h3> Burke Bariatric Beds </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/mobility/canes/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/MDS86222CHR_PRI02-258x275.jpg" alt="Canes" width="250" height="275" />
       <h3>
@@ -23,8 +30,8 @@
       </h3>
     </a>
   </li>
-  
-  <li class="product-category product first">
+
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/carts-storage/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Waterloo-Pediatric-Medical-Cart_400x400-258x275.png" alt="Carts &amp; Storage" width="250" height="275" />
       <h3>
@@ -40,7 +47,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/mobility/crutches/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/03/Aluminum-Crutches-PC023230_400x400-258x275.png" alt="Crutches" width="250" height="275" />
       <h3>
@@ -48,7 +55,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/diagnostics/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Nurse-Combo-DG090651_400x400-258x275.png" alt="Diagnostic Equipment" width="250" height="275" />
       <h3>
@@ -64,7 +71,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/05/circuit-board-258x275.jpg" alt="Hill-Rom Parts" width="250" height="275" />
       <h3>
@@ -72,7 +79,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/infection-control/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Brewer-Step-On-Steel-Waste-Can-35269_400x400-258x275.png" alt="Infection Control" width="250" height="275" />
       <h3>
@@ -88,7 +95,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/mobility/knee-walkers/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/PF59316_PRI02-258x275.jpg" alt="Knee Walkers" width="250" height="275" />
       <h3>
@@ -96,7 +103,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/supplies-2/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3526-258x275.png" alt="Medical Supplies" width="250" height="275" />
       <h3>
@@ -112,7 +119,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product last">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Pedigo-Pediatric-Stretcher-Crib-500_400x400-258x275.png" alt="Obstetrics &amp; Pediatrics" width="250" height="275" />
       <h3>
@@ -120,7 +127,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/refrigerators-freezers/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/04/FF511LBIMEDDT-11960-258x275.jpg" alt="Refrigerators &amp; Freezers" width="250" height="275" />
       <h3>
@@ -136,13 +143,13 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/mobility/rollators/">
       <img width="250" height="275" alt="Rollators" src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/MDS86850EBS8_PRI03-258x275.jpg">
       <h3> Rollators </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/surgical/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/02/Reconditioned-Amsco-3080-Surgical-Table_400x400-258x275.png" alt="Surgical" width="250" height="275" />
       <h3>
@@ -158,7 +165,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product last">
+  <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/product-category/mobility/walking-aids/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/G00502_HRE01-258x275.jpg" alt="Walking Aid Accessories" width="250" height="275" />
       <h3>
@@ -166,7 +173,7 @@
       </h3>
     </a>
   </li>
-  <li class="product-category product first">
+  <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/mobility/wheelchairs-mobility/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/MDS806140PEDE_PRI02-258x275.jpg" alt="Wheelchairs" width="250" height="275" />
       <h3>

@@ -29,7 +29,7 @@
         <li><a href="<?php echo site_url(); ?>/product-category/anatomical-models/vertebra-models/"><span>Vertebra Models</span></a></li>
       </ul>
     </li>
-
+    <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/bariatric-care/"><span>Bariatric Care</span></a></li>
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/"><span>Batteries, Cables &amp; Sensors</span></a>
         <ul>
