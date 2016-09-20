@@ -15,9 +15,6 @@
  * @version     2.0.14
  */
 
-// Benz Mod File
-// Added  " Free Shipping icon" under image if ID matches $product_notfree_ship defined in functions.php -- global;
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -55,29 +52,6 @@ global $post, $woocommerce, $product;
 		}
 	?>
 
-	<?php do_action( 'woocommerce_product_thumbnails' );
-
-/* Not Used on diamedical
-// begin if statement for free shipping icons on product pages
-global $product_notfree_ship;
-    global $post;
-    $product_id = $post->ID;
-    $product_notfree_ship = array( '799', '781', '768', '748', '2175', '2177', '2179', '2181', '2183', '2185', '2186', '2188', '2190', '2192', '2194', '2196', '2198' );
-
-    if ( is_single($product_notfree_ship) ) {
-        echo '<div id="free_ship-productpage">';
-        echo '<p class="add_shipp">*Additional Shipping Charges Apply</p>';
-        echo '</div>';
-    } else {
-        echo '<div id="free_ship-productpage">';
-        echo '<img width="110" alt="Free Shipping Mattresses" src="../../wp-content/imgs/Free_shipping.png" style="float:left;">';
-        echo '<div style="padding-top:10px;"><span class="red_free">FREE SHIPPING</span><br>on This Product</div>';
-        echo '</div>';
-    }
-*/
-
-
-    ?>
-
+	<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 
 </div>

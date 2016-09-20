@@ -31,6 +31,15 @@ if ( ! defined( 'ABSPATH' ) ) {
      global $post;
      $product_id = $post->ID;
      $product_notfree_ship= array(
+			 '68580',
+			 '68577',
+			 '68567',
+			 '68583',
+			 '68574',
+			 '68571',
+			 '68564',
+			 '68561',
+			 '68558',
 			 '57953',
 			 '57439',
 			 '36450',
