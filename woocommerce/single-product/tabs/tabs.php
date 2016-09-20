@@ -93,6 +93,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 				 echo '';
      }
 
+
+?>
+<!--
+<div id="">
+<a href=""><img src="" /></a>
+
+</div>
+-->
+
+<?php
+
+
+
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 ?>
 
