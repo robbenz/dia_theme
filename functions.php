@@ -317,7 +317,7 @@ function remove_add_to_cart_buttons() {
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart' );
 }
 
-//  --  Re-Order product page layouts
+//  --  Re-Order product page layouts -- BENZ
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
@@ -644,12 +644,40 @@ woocommerce_wp_select(
 	)
 );
 
+woocommerce_wp_checkbox(
+array(
+  'id'            => 'benz_pm_checkbox',
+	'name'            => 'benz_pm_checkbox',
+	'wrapper_class' => 'show_if_simple',
+	'label'         => __('Link To PM?', 'woocommerce' ),
+	'description'   => __( 'Check this box IF you want to link to a PM / Repair Product', 'woocommerce' )
+	)
+);
+woocommerce_wp_text_input(
+	array(
+		'id'          => 'benz_pm_text_field',
+		'label'       => __( 'PM Product Title', 'woocommerce' ),
+		'placeholder' => 'Probably an Infusion Pump',
+		'desc_tip'    => 'true',
+		'description' => __( 'Enter the Name of the product we are linking to', 'woocommerce' )
+	)
+);
+woocommerce_wp_text_input(
+array(
+  'id'          => 'benz_pm_link_text_field',
+  'label'       => __( 'PM Product URL<br>(site url included)', 'woocommerce' ),
+  'placeholder' => 'medical-equipment/infusion-dialysis/infusion-pumps/sigma/sigma-spectrum-infusion-pump/',
+  'desc_tip'    => 'true',
+  'description' => __( 'Enter the URL of the product we are linking to', 'woocommerce' )
+)
+);
+
 echo '</div>';
 
 }
 
 function woo_add_custom_general_fields_save( $post_id ) {
-  // Text Field
+  // benz_condition_select
   $woocommerce_wp_select = $_POST['benz_condition_select'];
   if( !empty( $woocommerce_wp_select ) ) {
     update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
@@ -657,5 +685,23 @@ function woo_add_custom_general_fields_save( $post_id ) {
   else {
     update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
   }
+  // benz_pm_checkbox
+  $woocommerce_checkbox = isset( $_POST['benz_pm_checkbox'] ) ? 'yes' : 'no';
+  update_post_meta( $post_id, 'benz_pm_checkbox', $woocommerce_checkbox );
+  // benz_pm_text_field
+  $woocommerce_text_field = $_POST['benz_pm_text_field'];
+  if( !empty( $woocommerce_text_field ) ) {
+    update_post_meta( $post_id, 'benz_pm_text_field', esc_attr( $woocommerce_text_field ) );
+  }
+  else {
+    update_post_meta( $post_id, 'benz_pm_text_field', esc_attr( $woocommerce_text_field ) );
+  }
+  // benz_pm_link_text_field
+  $woocommerce_link_text_field = $_POST['benz_pm_link_text_field'];
+  if( !empty( $woocommerce_link_text_field ) ) {
+    update_post_meta( $post_id, 'benz_pm_link_text_field', esc_attr( $woocommerce_link_text_field ) );
+  }
+  else {
+    update_post_meta( $post_id, 'benz_pm_link_text_field', esc_attr( $woocommerce_link_text_field ) );
+  }
 }
-// -- Add custom checkbox on Category page

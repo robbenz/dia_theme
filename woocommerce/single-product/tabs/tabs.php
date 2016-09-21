@@ -95,15 +95,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 ?>
-<!--
-<div id="">
-<a href=""><img src="" /></a>
-
-</div>
--->
 
 <?php
+global $product;
+$pm_check = get_post_meta( $post->ID, 'benz_pm_checkbox', true );
+$pm_link = get_post_meta( $post->ID, 'benz_pm_link_text_field', true );
+$pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 
+if ($pm_check == 'yes')  {
+	?>
+
+<div id="p_maint-productpage">
+	<a href="<?php echo site_url() . '/' . $pm_link; ?>"><img style="float:left; margin-right:0.5em;" width="84" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" /></a>
+	<div style="padding-top:5px;">
+		<a href="<?php echo site_url() . '/' . $pm_link; ?>">Click Here to Order<br>
+			<span class="pm_blue">Preventative Maintenance</span>
+			<br> for
+			<?php if (strlen($pm_title) > 1) {
+				echo 'your ' . $pm_title;
+			}  else {
+				echo 'this item';
+			} ?>
+		</a>
+	</div>
+</div>
+
+<?php } else { }
 
 
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );

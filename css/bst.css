@@ -114,6 +114,10 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 #free_ship-productpage { float: left; clear:both; font-family: "Open Sans",sans-serif; margin-bottom: 1em; width: 40%;  font-size: 19px; }
 #free_ship-productpage span { margin-top: 1em; }
 .red_free { color: #d6001c; font-weight: bold; line-height: 10px; text-transform: uppercase; }
+.pm_blue {color: #00426a; font-weight: bold; line-height: 10px; text-transform: uppercase;}
+#p_maint-productpage {float: left; font-family: "Open Sans",sans-serif; margin-bottom: 1em; width: 50%; padding-left:4%; font-size: 19px; }
+
+
 
 /* youre part will apear here */
 .rs_rs_price [data-product_id="32570"] {display:none !important;}
