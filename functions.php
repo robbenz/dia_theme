@@ -26,6 +26,16 @@ function register_my_scripts(){
   wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
 }
 
+function benz_adding_scripts() {
+  if (is_page('68118')) {
+    wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('curtain_form');
+  }
+}
+
+add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
+
+
 //wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
 
 function true_load_theme_textdomain(){
