@@ -107,7 +107,7 @@ if ($pm_check == 'yes')  {
 
 <div id="p_maint-productpage">
 	<a href="<?php echo site_url() . '/' . $pm_link; ?>"><img style="float:left; margin-right:0.5em;" width="84" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" /></a>
-	<div style="padding-top:5px;">
+	<div style="padding-top:3px; margin-bottom: 1em; font-size:0.87em;">
 		<a href="<?php echo site_url() . '/' . $pm_link; ?>">Click Here to Order<br>
 			<span class="pm_blue">Preventative Maintenance</span>
 			<br> for
@@ -121,7 +121,6 @@ if ($pm_check == 'yes')  {
 </div>
 
 <?php } else { }
-
 
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 ?>

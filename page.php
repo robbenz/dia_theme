@@ -42,13 +42,6 @@ elseif ( is_page('61281') ): //  --  CHECK imaging-parts-k-z PAGE
   echo $open_no_side;
   get_template_part('includes/imaging_loops/kz', 'page');
   echo  '</div>';
-elseif ( is_page('58440') ): //  --  CHECK Curtain PAGE
-  echo $open_no_side;
-  if ( function_exists( 'ccf_output_form' ) ) {
-    ccf_output_form( '59858' );
-  }
-  echo '</div>';
-
 
   elseif ( is_page('86') ): //  -- Parts Search CHECK
     echo $open_side; ?>

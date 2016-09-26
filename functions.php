@@ -13,31 +13,39 @@ require_once locate_template('/functions/feedback.php');
 
 add_action('after_setup_theme', 'true_load_theme_textdomain');
 
-// wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
-
 function wpse4339_enqueue_styles() {
     wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'wpse4339_enqueue_styles' );
-
 
 add_action('wp_enqueue_script','register_my_scripts');
 function register_my_scripts(){
   wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
 }
 
+<<<<<<< HEAD
 function benz_adding_scripts() {
   if (is_page('68118')) {
+=======
+//  --  Add Curtain Form JS
+function benz_adding_scripts() {
+  if (is_page('58440')  || is_page('68118') || is_page('68930') ) {
+>>>>>>> 0ac8033b06d41b023ff43bbe96683185e354e778
     wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),'1.1', true);
     wp_enqueue_script('curtain_form');
   }
 }
+<<<<<<< HEAD
 
 add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
 
 
 //wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
+=======
+add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
+>>>>>>> 0ac8033b06d41b023ff43bbe96683185e354e778
 
+//  -- Load Text domain
 function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
@@ -658,7 +666,7 @@ woocommerce_wp_checkbox(
 array(
   'id'            => 'benz_pm_checkbox',
 	'name'            => 'benz_pm_checkbox',
-	'wrapper_class' => 'show_if_simple',
+	// 'wrapper_class' => 'show_if_simple',
 	'label'         => __('Link To PM?', 'woocommerce' ),
 	'description'   => __( 'Check this box IF you want to link to a PM / Repair Product', 'woocommerce' )
 	)
@@ -681,6 +689,15 @@ array(
   'description' => __( 'Enter the URL of the product we are linking to', 'woocommerce' )
 )
 );
+woocommerce_wp_checkbox(
+array(
+  'id'            => 'beds_pm_checkbox',
+	'name'            => 'beds_pm_checkbox',
+	// 'wrapper_class' => 'show_if_simple',
+	'label'         => __('Auto-fill PM form?', 'woocommerce' ),
+	'description'   => __( 'Check this box IF you want to Autofil PM / Repair Product', 'woocommerce' )
+	)
+);
 
 echo '</div>';
 
@@ -698,6 +715,9 @@ function woo_add_custom_general_fields_save( $post_id ) {
   // benz_pm_checkbox
   $woocommerce_checkbox = isset( $_POST['benz_pm_checkbox'] ) ? 'yes' : 'no';
   update_post_meta( $post_id, 'benz_pm_checkbox', $woocommerce_checkbox );
+  // benz_pm_checkbox
+  $woocommerce_beds_checkbox = isset( $_POST['beds_pm_checkbox'] ) ? 'yes' : 'no';
+  update_post_meta( $post_id, 'beds_pm_checkbox', $woocommerce_beds_checkbox );
   // benz_pm_text_field
   $woocommerce_text_field = $_POST['benz_pm_text_field'];
   if( !empty( $woocommerce_text_field ) ) {

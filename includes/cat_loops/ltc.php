@@ -1,8 +1,6 @@
-
-
 <ul class="products">
   <li class="product-category product first">
-    <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/">
+    <a href="<?php echo site_url(); ?>/preventative-maintenance-work-order-request?facility-name-pm=hello">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/Hill-Rom-Small-Bed-Exit-Sensor-Strip-6360802.jpg" alt="Batteries, Cables &amp; Sensors" width="250" height="275" />
       <h3>
         Batteries, Cables &amp; Sensors
