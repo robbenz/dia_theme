@@ -122,7 +122,6 @@ if ($pm_check == 'yes')  {
 
 <?php } else { }
 
-
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 ?>
 
