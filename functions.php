@@ -25,7 +25,7 @@ function register_my_scripts(){
 
 //  --  Add Curtain Form JS
 function benz_adding_scripts() {
-  if (is_page('68118')) {
+  if (is_page('58440')  || is_page('68118') || is_page('68930') ) {
     wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),'1.1', true);
     wp_enqueue_script('curtain_form');
   }

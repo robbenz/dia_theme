@@ -639,9 +639,13 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 #vfb-field-33-first{}
 #vfbField33 {margin-bottom: 0.8vw;}
 #vfbp-form-2 .pcf-ceiling-height{}
-.swatch .row .col-md-2 button {width:5vw; height:auto;}
-.swatch .row .col-md-2 button img {width:4.5vw; height:auto; align:center;}
+.swatch .row .col-md-2 button {width:5vw; height:auto; color:#333;}
+.swatch .row .col-md-2 button:hover{text-decoration: none;}
+.swatch .row .col-md-2 button img {width:4vw; height:auto; margin:.1vw auto 0 auto;}
 .swatch .row {margin-bottom:5px;}
+#vfbField55 h3.accordion-title{margin: 1vw 0;}
+.acdn-btn {margin:0 auto;}
+
 
 /*.vfb-clearfix{margin-top:0.8vw;}*/
 /* END */
@@ -754,7 +758,7 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .wc-tabs-wrapper .description_tab { border-top-left-radius: 18px !important; -moz-border-radius-topleft: 18px !important; border-left: 1px solid #d3ced2 !important; margin-left:0px !important;}
 .wc-tabs-wrapper li.description_tab:before { border-left: 1px solid #cccccc !important; }
 .woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before { border: 1px solid #cccccc; }
-.accordion-title{ background-color: #ececec; border: 1px solid #464444; border-radius: 0.3em; font-size: 18px; padding: 0.4em; }
+.accordion-title{ background-color: #ececec; border: 1px solid #464444; border-radius: 0.3em; font-size: 12px; padding: 0.4em; }
 .accordion-title:hover{cursor: pointer; background-color:#d7d7d7}
 .woocommerce-tabs ul ul { margin-left: 20px; padding-bottom: 6px; }
 .wc-tab li { margin-left: 1.8em; }
