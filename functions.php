@@ -34,7 +34,7 @@ add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
 
 //  --  PM Page
 function benz_add_jss() {
-  if (is_page('62913')  || is_page('58428') ) {
+  if (is_page('62913')) {
 
     wp_register_script('pm_form', get_template_directory_uri() . '/js/pm_form_script.js', array('jquery'),'1.1', true);
     wp_enqueue_script('pm_form');

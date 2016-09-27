@@ -1,7 +1,6 @@
 <ul class="products">
   <li class="product-category product first">
-  <!--  <a href="<?php// echo add_query_arg( 'ccf_field_single-line-text-1', 'Sup Dawg', get_permalink(62913) );?>"> -->
-      <a href="<?php echo site_url(); ?>/preventative-maintenance-work-order-request#ccf_field_single-line-text-1=something">
+      <a href="<?php echo site_url(); ?>/product-category/batteries-cables-sensors/">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/Hill-Rom-Small-Bed-Exit-Sensor-Strip-6360802.jpg" alt="Batteries, Cables &amp; Sensors" width="250" height="275" />
       <h3>
         Batteries, Cables &amp; Sensors
@@ -14,10 +13,6 @@
       <h3> Bariatric Care </h3>
     </a>
   </li>
-<!--   <form action="https://localhost/parts_online/preventative-maintenance-work-order-request/" method="POST" >
-  <input type="text" name="ccf_field_single-line-text-1" value="subject goes here"/>
-  <input type="submit" value="Open the Contact Form" />
-</form> -->
   <li class="product-category product">
     <a href="<?php echo site_url(); ?>/product-category/hospital-beds/burke-bariatric-beds/">
       <img width="250" height="275" alt="Burke Bariatric Beds" src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/Burke-Tri-Flex-II-Bariatric-Bed_400x400-258x275.png">

@@ -114,6 +114,18 @@ elseif ( is_page('61281') ): //  --  CHECK imaging-parts-k-z PAGE
                       </div><!-- /#content -->
                     </div>
 
+                  <?php elseif ( is_page('68934') ): //  --  CHECK Hospital Bed Repair PAGE
+                    echo $open_side_woo; ?>
+                        <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+                          <?php get_template_part('includes/sidebar'); ?>
+                        </div>
+                      <div class="col-xs-12 col-sm-8">
+                        <div id="content" role="main">
+                          <?php get_template_part('includes/cat_loops/beds_pm', 'page'); ?>
+                        </div><!-- /#content -->
+                      </div>
+
+
                   <?php else: //  -- EVERY OTHER PAGE
                      echo $open_side; ?>
                             <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
