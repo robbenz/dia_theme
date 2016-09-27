@@ -5,7 +5,7 @@
 <ul class="products">
 
   <li class="product-category product first">
-    <a href="<?php  echo add_query_arg( 'vfb-field-89', 'Does This Work?', get_permalink(62913) );?>">
+    <a href="<?php echo add_query_arg( 'vfb-field-89', 'Does This Work?', get_permalink(62913) );?>">
       <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/07/Hill-Rom-835_400x400-258x275.png" alt="Batteries, Cables &amp; Sensors" width="250" height="275" />
       <h3>Hill-Rom 835</h3>
     </a>
