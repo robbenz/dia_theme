@@ -22,28 +22,25 @@ add_action('wp_enqueue_script','register_my_scripts');
 function register_my_scripts(){
   wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
 }
-
-<<<<<<< HEAD
-function benz_adding_scripts() {
-  if (is_page('68118')) {
-=======
-//  --  Add Curtain Form JS
+//  --  Curtian Page
 function benz_adding_scripts() {
   if (is_page('58440')  || is_page('68118') || is_page('68930') ) {
->>>>>>> 0ac8033b06d41b023ff43bbe96683185e354e778
+
     wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),'1.1', true);
     wp_enqueue_script('curtain_form');
   }
 }
-<<<<<<< HEAD
-
 add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
 
+//  --  PM Page
+function benz_add_jss() {
+  if (is_page('62913')  || is_page('58428') ) {
 
-//wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
-=======
-add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
->>>>>>> 0ac8033b06d41b023ff43bbe96683185e354e778
+    wp_register_script('pm_form', get_template_directory_uri() . '/js/pm_form_script.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('pm_form');
+  }
+}
+add_action( 'wp_enqueue_scripts', 'benz_add_jss' );
 
 //  -- Load Text domain
 function true_load_theme_textdomain(){
