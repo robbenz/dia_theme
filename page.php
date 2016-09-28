@@ -57,7 +57,6 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
    }
  }
 
-
  elseif ( is_page('68934') ): //  --  CHECK Hospital Bed Repair PAGE
   echo $open_side; ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
