@@ -6,10 +6,14 @@ Preventive Maintenance Services from DiaMedical USA will evaluate the condition 
     <?php
         $args = array( 'post_type' => 'product', 'posts_per_page' => 12, 'product_cat' => 'hill-rom-beds', 'orderby' => 'title', 'order'   => 'ASC' );
         $loop = new WP_Query( $args );
+        $i=1;
         while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
                 <li class="product">
-                    <a href="<?php echo esc_url(add_query_arg('vfb-field-97', 'hello', get_permalink(62913) ) ); ?>">
+                    <a id='<?php echo "link$i" ?>' href="<?php echo esc_url(add_query_arg('vfb-field-97', 'hello', get_permalink(62913) ) ); ?>">
+                        <?php echo '<script> $("#'; echo "link$i"; echo '").click(function(){alert("Hello");})</script>'; $i++; ?>
+                        <?php  ?>
+                        <?php  ?>
                         <?php
                         if (has_post_thumbnail( $loop->post->ID )) {
                            echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
@@ -27,3 +31,4 @@ Preventive Maintenance Services from DiaMedical USA will evaluate the condition 
     <?php endwhile; ?>
     <?php wp_reset_query(); ?>
 </ul><!--/.products-->
+<!--echo '<script> $(".product").click(function(){alert("Hello");})</script>';-->
