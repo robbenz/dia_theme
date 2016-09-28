@@ -686,15 +686,6 @@ array(
   'description' => __( 'Enter the URL of the product we are linking to', 'woocommerce' )
 )
 );
-woocommerce_wp_checkbox(
-array(
-  'id'            => 'beds_pm_checkbox',
-	'name'            => 'beds_pm_checkbox',
-	// 'wrapper_class' => 'show_if_simple',
-	'label'         => __('Auto-fill PM form?', 'woocommerce' ),
-	'description'   => __( 'Check this box IF you want to Autofil PM / Repair Product', 'woocommerce' )
-	)
-);
 
 echo '</div>';
 
@@ -712,9 +703,6 @@ function woo_add_custom_general_fields_save( $post_id ) {
   // benz_pm_checkbox
   $woocommerce_checkbox = isset( $_POST['benz_pm_checkbox'] ) ? 'yes' : 'no';
   update_post_meta( $post_id, 'benz_pm_checkbox', $woocommerce_checkbox );
-  // benz_pm_checkbox
-  $woocommerce_beds_checkbox = isset( $_POST['beds_pm_checkbox'] ) ? 'yes' : 'no';
-  update_post_meta( $post_id, 'beds_pm_checkbox', $woocommerce_beds_checkbox );
   // benz_pm_text_field
   $woocommerce_text_field = $_POST['benz_pm_text_field'];
   if( !empty( $woocommerce_text_field ) ) {
