@@ -2,6 +2,16 @@
 $open_no_side = '<div class="container woocommerce"><div class="row"><div id="content" role="main">';
 $open_side = '<div class="container"><div class="row">';
 $open_side_woo = '<div class="container woocommerce landing_page"><div class="row">';
+$loops_arr = array(
+  '57882' => 'includes/hill-rom',
+  '58427' => 'includes/sim-lab',
+  '61274' => 'includes/imaging_loops/fujitsu',
+  '61275' => 'includes/imaging_loops/ge',
+  '61276' => 'includes/imaging_loops/siemens',
+  '61280' => 'includes/imaging_loops/al',
+  '61281' => 'includes/imaging_loops/kz',
+  '58688' => 'includes/mft'
+);
 
 if ( is_home() || is_front_page() ): //  -- HOMEPAGE CHECK
   get_template_part('includes/home-index');
@@ -10,38 +20,15 @@ elseif ( is_cart() || is_checkout() || is_account_page() ): //  -- WOO ENDPOINT 
   echo $open_no_side;
   get_template_part('includes/loops/content', 'page');
   echo '</div>';
-elseif ( is_page('57882') ): //  --  CHECK HILL-ROM PAGE
-  echo $open_no_side;
-  get_template_part('includes/hill-rom', 'page');
-  echo '</div>';
-elseif ( is_page('58427') ): //  --  CHECK SIM LAB SOLUTIONS PAGE
-  echo $open_no_side;
-  get_template_part('includes/sim-lab', 'page');
-  echo '</div>';
-elseif ( is_page('58688') ): //  --  CHECK MFT SOLUTIONS PAGE
-  echo $open_no_side;
-  get_template_part('includes/mft', 'page');
-  echo '</div>';
-elseif ( is_page('61274') ): //  --  CHECK fujitsu PAGE
-  echo $open_no_side;
-  get_template_part('includes/imaging_loops/fujitsu', 'page');
-  echo  '</div>';
-elseif ( is_page('61275') ): //  --  CHECK ge PAGE
-  echo $open_no_side;
-  get_template_part('includes/imaging_loops/ge', 'page');
-  echo  '</div>';
-elseif ( is_page('61276') ): //  --  CHECK siemens PAGE
- echo $open_no_side;
- get_template_part('includes/imaging_loops/siemens', 'page');
- echo  '</div>';
-elseif ( is_page('61280') ): //  --  CHECK imaging-parts-a-l PAGE
-  echo $open_no_side;
-  get_template_part('includes/imaging_loops/al', 'page');
-  echo  '</div>';
-elseif ( is_page('61281') ): //  --  CHECK imaging-parts-k-z PAGE
-  echo $open_no_side;
-  get_template_part('includes/imaging_loops/kz', 'page');
-  echo  '</div>';
+
+elseif ( is_page(array_keys($loops_arr) ) ) :
+  foreach ($loops_arr as $key => $value) {
+   if ( is_page($key) ) {
+     echo $open_no_side;
+     get_template_part($value, 'page');
+     echo '</div>';
+   }
+ }
 
   elseif ( is_page('86') ): //  -- Parts Search CHECK
     echo $open_side; ?>
