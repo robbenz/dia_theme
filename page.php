@@ -1,7 +1,7 @@
-<?php get_template_part('includes/header');
+<?php
+get_template_part('includes/header');
 $open_no_side = '<div class="container woocommerce"><div class="row"><div id="content" role="main">';
-$open_side = '<div class="container"><div class="row">';
-$open_side_woo = '<div class="container woocommerce landing_page"><div class="row">';
+$open_side = '<div class="container woocommerce landing_page"><div class="row">';
 $loops_arr = array(
   '57882' => 'includes/hill-rom',
   '58427' => 'includes/sim-lab',
@@ -53,7 +53,7 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
                 </div><!-- /#content -->
 
             <?php elseif ( is_page('58429') ): //  --  CHECK EMS PAGE
-              echo $open_side_woo ; ?>
+              echo $open_side ; ?>
               <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ems-header-banner.png" />
                   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                     <?php get_template_part('includes/sidebar'); ?>
@@ -64,21 +64,8 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
                   </div><!-- /#content -->
                 </div>
 
-              <?php elseif ( is_page('61277') ): //  --  CHECK Imaging PAGE
-                echo $open_side_woo; ?>
-                <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / Imaging Parts </nav>
-
-                    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-                      <?php get_template_part('includes/sidebar'); ?>
-                    </div>
-                  <div class="col-xs-12 col-sm-8">
-                    <div id="content" role="main">
-                      <?php get_template_part('includes/cat_loops/imaging', 'page'); ?>
-                    </div><!-- /#content -->
-                  </div>
-
                 <?php elseif ( is_page('58431') ): //  --  CHECK HOSPITAL PAGE
-                  echo $open_side_woo; ?>
+                  echo $open_side; ?>
                     <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/hospitalbanner.png" />
                     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                       <?php get_template_part('includes/sidebar'); ?>
@@ -90,7 +77,7 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
                   </div>
 
                 <?php elseif ( is_page('58428') ): //  --  CHECK LTC PAGE
-                  echo $open_side_woo; ?>
+                  echo $open_side; ?>
                       <img style="width:97%; margin:0 1.5% 1em;" src="<?php echo site_url(); ?>/wp-content/imgs/longtermbanner.png" />
                       <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                         <?php get_template_part('includes/sidebar'); ?>
@@ -102,7 +89,7 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
                     </div>
 
                   <?php elseif ( is_page('68934') ): //  --  CHECK Hospital Bed Repair PAGE
-                    echo $open_side_woo; ?>
+                    echo $open_side; ?>
                         <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
                           <?php get_template_part('includes/sidebar'); ?>
                         </div>
@@ -113,18 +100,30 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
                       </div>
 
 
-                  <?php else: //  -- EVERY OTHER PAGE
-                     echo $open_side; ?>
-                            <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-                              <?php get_template_part('includes/sidebar'); ?>
-                            </div>
-                            <div class="col-xs-12 col-sm-8">
-                              <div id="content" role="main">
-                                <?php get_template_part('includes/loops/content', 'page'); ?>
-                              </div><!-- /#content -->
-                            </div>
+<?php elseif ( is_page('61277') ): //  --  CHECK Imaging PAGE
+  echo $open_side; ?>
+  <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / Imaging Parts </nav>
+  <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+    <?php get_template_part('includes/sidebar'); ?>
+  </div>
+  <div class="col-xs-12 col-sm-8">
+    <div id="content" role="main">
+      <?php get_template_part('includes/cat_loops/imaging', 'page'); ?>
+    </div><!-- /#content -->
+  </div>
 
-                          <?php endif; ?>
+<?php else: //  -- EVERY OTHER PAGE
+  echo $open_side; ?>
+  <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+    <?php get_template_part('includes/sidebar'); ?>
+  </div>
+  <div class="col-xs-12 col-sm-8">
+    <div id="content" role="main">
+      <?php get_template_part('includes/loops/content', 'page'); ?>
+    </div><!-- /#content -->
+  </div>
+
+<?php endif; ?>
 
   </div><!-- /.row -->
 </div><!-- /.container -->
