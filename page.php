@@ -73,7 +73,7 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
     </div><!-- /#content -->
   </div>
 
-<?php  elseif ( is_page('68956') ): //  --  CHECK  Repair parent caregtoy PAGE
+<?php  elseif ( is_page(array('68956', '68967') ) ): //  --  CHECK  Repair parent caregtoy PAGE
     echo $open_side;
     woocommerce_breadcrumb(); ?>
     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">

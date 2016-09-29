@@ -17,14 +17,14 @@
     'stryker-beds' => '68962',
     'span-america-beds' => '68963',
     'transfer-master-beds' => '68964',
-    'amico-stretchers' -- '68968',
-  //  'ferno-cots-and-stretchers' -- '68969',
-    'hausted-stretchers' -- '68970',
-    'hill-rom-stretchers' -- '68971',
-    'pedigo-stretchers' -- '68972',
-    'stryker-stretchers' -- '68973',
-    'exam-tables' -- '68965',
-    'vital-signs-monitors'  -- '68966' //    '31167' / '31169'  (exclude 2 stands )
+    'amico-stretchers' => '68968',
+    'ferno-cots-stretchers-ems' => '68969',
+    'hausted-stretchers' => '68970',
+    'hill-rom-stretchers' => '68971',
+    'pedigo-stretchers' => '68972',
+    'stryker-stretchers' => '68973',
+    'exam-tables' => '68965',
+    'vital-signs-monitors'  => '68966' //    '31167' / '31169'  (exclude 2 stands )
   );
 
   foreach ($product_pm_array as $key => $value) :
