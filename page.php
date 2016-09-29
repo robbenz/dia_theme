@@ -32,6 +32,7 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
   foreach ($loops_arr as $key => $value) {
    if ( is_page($key) ) {
      echo $open_no_side;
+     //woocommerce_breadcrumb();
      get_template_part($value, 'page');
      echo '</div>';
    }
@@ -41,6 +42,7 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
   foreach ($side_loops_arr as $key => $value) {
    if ( is_page($key) ) {
      echo $open_side ;
+     woocommerce_breadcrumb();
      echo '<img style="width:97%; margin:0 1.5% 1em;" src="' . site_url() . '/wp-content/imgs/' . $value . '.png" />';
      echo '<div class="col-xs-6" id="sidebar" role="navigation">';
      get_template_part('includes/sidebar');
@@ -58,9 +60,8 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
  }
 
  elseif ( is_page('68934') ): //  --  CHECK Hospital Bed Repair PAGE
-  echo $open_side; ?>
-  <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Service &amp; Repair</a> / Hospital Beds </nav>
-
+  echo $open_side;
+  woocommerce_breadcrumb(); ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
     <?php get_template_part('includes/sidebar'); ?>
   </div>
@@ -69,6 +70,18 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
       <?php get_template_part('includes/cat_loops/beds_pm', 'page'); ?>
     </div><!-- /#content -->
   </div>
+
+<?php  elseif ( is_page('68956') ): //  --  CHECK  Repair parent caregtoy PAGE
+    echo $open_side;
+    woocommerce_breadcrumb(); ?>
+    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+      <?php get_template_part('includes/sidebar'); ?>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <div id="content" role="main">
+        <?php get_template_part('includes/cat_loops/category_pm', 'page'); ?>
+      </div><!-- /#content -->
+    </div>
 
 <?php elseif ( is_page('86') ): //  -- Parts Search CHECK
   echo $open_side; ?>
@@ -84,7 +97,7 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
 
 <?php elseif ( is_page('61277') ): //  --  CHECK Imaging PAGE
   echo $open_side; ?>
-  <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / Imaging Parts </nav>
+    <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / Imaging Parts </nav>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
     <?php get_template_part('includes/sidebar'); ?>
   </div>

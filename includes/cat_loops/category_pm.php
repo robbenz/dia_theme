@@ -8,7 +8,7 @@
 <ul class="products">
   <?php
     $counter = 0;
-    $args = array( 'post_type' => 'product', 'posts_per_page' => 36, 'product_cat' => 'hill-rom-beds', 'orderby' => 'title', 'order'   => 'ASC' );
+    $args = array( 'post_type' => 'product_cat', 'posts_per_page' => 36, 'product_cat' => 'hospital-beds', 'orderby' => 'title', 'order'   => 'ASC' );
     $loop = new WP_Query( $args );
     while ( $loop->have_posts() ) : $loop->the_post(); global $product;
     $pm_product_id = $loop->post->ID;
@@ -20,7 +20,7 @@
       $first = '' ;
     }  ?>
     <li class="product<?php echo $first; ?>">
-      <a href="<?php echo site_url(); ?>/preventative-maintenance-work-order-request/?<?php echo esc_attr($slug); ?>">
+      <a href=" ">
         <?php
         if (has_post_thumbnail( $loop->post->ID )) {
           echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
