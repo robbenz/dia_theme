@@ -29,7 +29,7 @@ foreach ($pm_cats_array as $key => $value) :
       $image = wp_get_attachment_url( $thumbnail_id );
       ?>
       <li class ="product-category product<?php echo $first; ?>">
-        <a href=" ">
+        <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/<?php echo $sc->slug ?>-repairs">
           <img src="<?php echo $image ?>" />
           <?php
           echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; bottom: 50px; right:6px; z-index:99" src="';
@@ -41,7 +41,7 @@ foreach ($pm_cats_array as $key => $value) :
       </li>
       <?php $counter++;
     endforeach;
-  endif
+  endif;
 endforeach; ?>
 
 </ul><!--/.products-->
