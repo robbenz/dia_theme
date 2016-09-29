@@ -1,7 +1,6 @@
 <div class="term-description">
   <div class="header-wrap-text-medical-equipment">
     <h2 class="header-wrap-text-medical-equipment-header"><?php the_title(); ?></h2>
-Preventive Maintenance Services from DiaMedical USA will evaluate the condition of your equipment and determine the most cost-effective and manageable solution to ensure its overall performance, safety and reliability.
 </div>
 </div>
 <ul class="products">
@@ -14,11 +13,11 @@ Preventive Maintenance Services from DiaMedical USA will evaluate the condition 
     $product = get_post( $pm_product_id );
     $slug = $product->post_name;
     if ($counter % 3 == 0) {
-      $first = 'first' ;
-    } elseif ($counter % 3 == 1 || $counter % 3 == 2) {
-      $first = ' ' ;
+      $first = ' first' ;
+    } elseif ($counter % 3 != 0) {
+      $first = '' ;
     }  ?>
-    <li class="product <?php echo $first; ?>">
+    <li class="product<?php echo $first; ?>">
       <a href="<?php echo site_url(); ?>/preventative-maintenance-work-order-request/?<?php echo esc_attr($slug); ?>">
         <?php
         if (has_post_thumbnail( $loop->post->ID )) {

@@ -343,7 +343,17 @@
           <li><a href="<?php echo site_url(); ?>/product-category/screens-curtains/privacy-screens/"><span>Privacy Screens</span></a></li>
         </ul>
       </li>
-      <li class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/service-repairs/"><span>Service &amp; Repairs</span></a></li>
+      <li class="active has-sub">
+        <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/"><span>Service &amp; Repairs</span></a>
+        <ul>
+          <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/"><span>Cots &amp; Stretchers</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/"><span>Exam Tables</span></a></li>
+          <li><a href="<?php echo site_url(); ?>site-repairs-preventive-maintenance/headwalls-repairs/"><span>Headwalls</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/"><span>Hospital Beds</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/"><span>Infusion Pumps</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs"><span>Vital Signs Monitors</span></a></li>
+        </ul>
+      </li>
       <li class="active has-sub"><a href="<?php echo site_url(); ?>/wp-content/pdf/medaffinity.pdf"><span>Simulation EHR</span></a></li>
        <li style="text-align:center;" class="active has-sub"><a href="<?php echo site_url(); ?>/product-category/supply-kits/"><span style="text-align:center;">Supply-Kits</span></a></li>
       <li class="active has-sub">

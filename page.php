@@ -59,6 +59,8 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
 
  elseif ( is_page('68934') ): //  --  CHECK Hospital Bed Repair PAGE
   echo $open_side; ?>
+  <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Service &amp; Repair</a> / Hospital Beds </nav>
+
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
     <?php get_template_part('includes/sidebar'); ?>
   </div>
