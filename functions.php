@@ -720,3 +720,29 @@ function woo_add_custom_general_fields_save( $post_id ) {
     update_post_meta( $post_id, 'benz_pm_link_text_field', esc_attr( $woocommerce_link_text_field ) );
   }
 }
+
+// -- add this to make this function excecutable - will need for redo menu
+
+function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
+  $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $parent_cat_ID, 'taxonomy' => 'product_cat' );
+  $subcategories = get_categories($args);
+  echo '<ul class="Some menu or something ">';
+  foreach ($subcategories as $kat) {
+    $link = get_term_link( $kat->slug, $kat->taxonomy );
+    echo '<li><a href="'. $link .'">'.$kat->name.'</a></li>';
+  }
+  echo '</ul>';
+}
+
+function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
+  $IDbyNAME = get_term_by('name', $parent_cat_NAME, 'product_cat');
+  $product_cat_ID = $IDbyNAME->term_id;
+  $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $product_cat_ID, 'taxonomy' => 'product_cat' );
+  $subcategories = get_categories($args);
+  echo '<ul class="wooc_sclist">';
+  foreach ($subcategories as $kat) {
+    $link = get_term_link( $kat->slug, $kat->taxonomy );
+    echo '<li><a href="'. $link .'">'.$kat->name.'</a></li>';
+  }
+  echo '</ul>';
+}

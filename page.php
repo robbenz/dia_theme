@@ -20,6 +20,8 @@ $side_loops_arr = array(
   '58428' => 'includes/ltc'
 );
 
+$pm_loops_arr = array();
+
 if ( is_home() || is_front_page() ): //  -- HOMEPAGE CHECK
   get_template_part('includes/home-index');
 
@@ -59,7 +61,7 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
    }
  }
 
- elseif ( is_page('68934') ): //  --  CHECK Hospital Bed Repair PAGE
+ elseif ( is_page(array('68934', '68957', '68958', '68959','68960', '68961', '68962', '68963', '68964', '68968', '68970', '68971', '68972', '68973', '68965', '68966', '68969') ) ): //  --  CHECK Hospital Bed Repair PAGE
   echo $open_side;
   woocommerce_breadcrumb(); ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
@@ -67,7 +69,7 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
   </div>
   <div class="col-xs-12 col-sm-8">
     <div id="content" role="main">
-      <?php get_template_part('includes/cat_loops/beds_pm', 'page'); ?>
+      <?php get_template_part('includes/cat_loops/products_pm', 'page'); ?>
     </div><!-- /#content -->
   </div>
 
