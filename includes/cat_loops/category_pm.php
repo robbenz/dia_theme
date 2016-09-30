@@ -27,11 +27,7 @@ foreach ($pm_cats_array as $key => $value) :
       <li class ="product-category product<?php echo $first; ?>">
         <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/<?php echo $sc->slug ?>-repairs">
           <img src="<?php echo $image ?>" />
-          <?php
-          echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; bottom: 50px; right:6px; z-index:99" src="';
-          echo site_url();
-          echo '/wp-content/imgs/repairs-preventive-maintenance.png" />';
-          ?>
+          <?php benz_pm_img_placement(); ?>
           <h3><?php echo $sc->name ?></h3>
         </a>
       </li>

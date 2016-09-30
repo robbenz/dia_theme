@@ -49,9 +49,7 @@
           <?php
           if (has_post_thumbnail( $loop->post->ID )) {
             echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
-            echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; bottom: 50px; right:6px; z-index:99" src="';
-            echo site_url();
-            echo '/wp-content/imgs/repairs-preventive-maintenance.png" />';
+            benz_pm_img_placement();
           } else {
             echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />';
           }
