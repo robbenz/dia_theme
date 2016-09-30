@@ -1,9 +1,4 @@
-<div class="term-description">
-  <div class="header-wrap-text-medical-equipment">
-    <h2 class="header-wrap-text-medical-equipment-header"><?php the_title(); ?></h2>
-    <?php the_excerpt(); ?>
-  </div>
-</div>
+<?php benz_add_category_headers(); ?>
 
 <ul class="products">
 
@@ -11,7 +6,8 @@
 
 $pm_cats_array = array(
   '68956' => '6398',    // Hospital Beds
-  '68967' => '6458'     // Cots & Stretchers
+  '68967' => '6458',    // Cots & Stretchers
+  '68990' => '5241'   // Headwalls
 );
 
 foreach ($pm_cats_array as $key => $value) :

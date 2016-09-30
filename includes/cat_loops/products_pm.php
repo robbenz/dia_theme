@@ -1,9 +1,4 @@
-<div class="term-description">
-  <div class="header-wrap-text-medical-equipment">
-    <h2 class="header-wrap-text-medical-equipment-header"><?php the_title(); ?></h2>
-    <?php the_excerpt(); ?>
-  </div>
-</div>
+<?php benz_add_category_headers(); ?>
 
 <ul class="products">
   <?php
@@ -24,13 +19,19 @@
     'pedigo-stretchers' => '68972',
     'stryker-stretchers' => '68973',
     'exam-tables' => '68965',
-    'vital-signs-monitors'  => '68966' //    '31167' / '31169'  (exclude 2 stands )
+    'vital-signs-monitors'  => '68966',  // '31167' / '31169' (exclude 2 stands )
+    'non-functioning-headwalls' => '68991',
+    'functioning-wall-mounted-headwall-packages-w-compressor' => '68992',
+    'mobile-headwall-packages' => '68993',
+    'wall-mounted-headwalls-for-use-w-centralized-compressor' => '68994',
+    'air-compressors' => '68995',
+    'sot-accessories' => '68996'
   );
 
   foreach ($product_pm_array as $key => $value) :
     if (is_page($value)) :
       $counter = 0;
-      $args = array( 'post_type' => 'product', 'posts_per_page' => 36, 'product_cat' => $key, 'orderby' => 'title', 'order'   => 'ASC' );
+      $args = array( 'post_type' => 'product', 'posts_per_page' => 36, 'product_cat' => $key, 'orderby' => 'title', 'order'   => 'ASC', 'post__not_in' => array(31167,31169) );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); global $product;
       $pm_product_id = $loop->post->ID;
@@ -40,7 +41,8 @@
         $first = ' first' ;
       } elseif ($counter % 3 != 0) {
         $first = '' ;
-      }  ?>
+      }
+       ?>
 
       <li class="product<?php echo $first; ?>">
         <a href="<?php echo site_url(); ?>/preventative-maintenance-work-order-request/?<?php echo esc_attr($slug); ?>">
@@ -54,10 +56,11 @@
             echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />';
           }
           ?>
-          <h3><?php the_title(); ?></h3>
+          <h3><?php the_title(); ?> - <span style="font-weight:bold;">Repair</span></h3>
         </a>
       </li>
       <?php
+
       $counter++ ;
     endwhile;
     wp_reset_query();

@@ -267,47 +267,7 @@ if (!function_exists('loop_columns')) {
 }
 
 function products_per_page_category( $count ) {
-  if( is_product_category( array ( '5828',   // These are all the parts categories
-                                   '8390',
-                                   '5797',
-                                   '5786',
-                                   '6412',
-                                   '3683',
-                                   '8135',
-                                   '8279',
-                                   '2305',
-                                   '3206',
-                                   '5805',
-                                   '8264',
-                                   '8278',
-                                   '6428',
-                                   '8402',
-                                   '8216',
-                                   '6416',
-                                   '6432',
-                                   '8219',
-                                   '6418',
-                                   '6414',
-                                   '8283',
-                                   '5361',
-                                   '5834',
-                                   '1960',
-                                   '8889',
-                                   '8890',
-                                   '8888',
-                                   '5777',
-                                   '8131',
-                                   '6323',
-                                   '5173',
-                                   '5832',
-                                   '5826',
-                                   '8865',
-                                   '8864',
-                                   '8832',
-                                   '8868',
-                                   '8869',
-                                   '8133'
-                                   ) ) ) :
+  if( is_product_category( array ( '5828', '8390', '5797', '5786', '6412', '3683', '8135', '8279', '2305', '3206', '5805', '8264', '8278', '6428', '8402', '8216', '6416', '6432', '8219', '6418', '6414', '8283', '5361', '5834', '1960', '8889', '8890', '8888', '5777', '8131', '6323', '5173', '5832', '5826', '8865', '8864', '8832', '8868', '8869', '8133' ) ) ) :
                                    return 1999;
                                    elseif( is_product_category( '9350') ) :
                                      return 27;
@@ -721,7 +681,7 @@ function woo_add_custom_general_fields_save( $post_id ) {
   }
 }
 
-// -- add this to make this function excecutable - will need for redo menu
+// -- will need for redo menu
 
 function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
   $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $parent_cat_ID, 'taxonomy' => 'product_cat' );
@@ -745,4 +705,14 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
     echo '<li><a href="'. $link .'">'.$kat->name.'</a></li>';
   }
   echo '</ul>';
+}
+
+
+function benz_add_category_headers() {
+  echo '<div class="term-description"><div class="header-wrap-text-medical-equipment"><h2 class="header-wrap-text-medical-equipment-header">';
+  the_title();
+  echo '</h2>';
+  the_excerpt();
+  echo '</div></div>';
+
 }

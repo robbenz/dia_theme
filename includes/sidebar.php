@@ -274,7 +274,7 @@
         <ul>
           <li><a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/baby-oil/"><span>Baby Oil, Powder &amp; Wipes</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/bassinets/"><span>Bassinets</span></a></li>
-          <li><a href="obstetrics-pediatrics/breastfeeding-supplies/"><span>Breastfeeding Supplies</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/breastfeeding-supplies/"><span>Breastfeeding Supplies</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/cribs/"><span>Cribs</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/fetal-monitors/"><span>Fetal Monitors</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/obstetrics-pediatrics/gynecology/"><span>Gynecology</span></a></li>
@@ -348,7 +348,7 @@
         <ul>
           <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/"><span>Cots &amp; Stretchers</span></a></li>
           <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/"><span>Exam Tables</span></a></li>
-          <li><a href="<?php echo site_url(); ?>site-repairs-preventive-maintenance/headwalls-repairs/"><span>Headwalls</span></a></li>
+          <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/"><span>Headwalls</span></a></li>
           <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/"><span>Hospital Beds</span></a></li>
           <li><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/"><span>Infusion Pumps</span></a></li>
           <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs"><span>Vital Signs Monitors</span></a></li>
