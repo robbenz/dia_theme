@@ -19,7 +19,7 @@
     'pedigo-stretchers' => '68972',
     'stryker-stretchers' => '68973',
     'exam-tables' => '68965',
-    'vital-signs-monitors'  => '68966',  // '31167' / '31169' (exclude 2 stands )
+    'vital-signs-monitors'  => '68966',
     'non-functioning-headwalls' => '68991',
     'functioning-wall-mounted-headwall-packages-w-compressor' => '68992',
     'mobile-headwall-packages' => '68993',
@@ -31,7 +31,14 @@
   foreach ($product_pm_array as $key => $value) :
     if (is_page($value)) :
       $counter = 0;
-      $args = array( 'post_type' => 'product', 'posts_per_page' => 36, 'product_cat' => $key, 'orderby' => 'title', 'order'   => 'ASC', 'post__not_in' => array(31167,31169) );
+      $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 36, 
+        'product_cat' => $key,
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'post__not_in' => array(31167,31169)
+      );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); global $product;
       $pm_product_id = $loop->post->ID;
