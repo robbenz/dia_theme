@@ -351,7 +351,6 @@ function remove_user_posts_column($column_headers) {
     return $column_headers;
 }
 
-
 //  --  Price Things -- From :$20 for variable products
 add_filter( 'woocommerce_variable_sale_price_html', 'wc_wc20_variation_price_format', 10, 2 );
 add_filter( 'woocommerce_variable_price_html', 'wc_wc20_variation_price_format', 10, 2 );
@@ -686,7 +685,7 @@ function woo_add_custom_general_fields_save( $post_id ) {
 function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
   $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $parent_cat_ID, 'taxonomy' => 'product_cat' );
   $subcategories = get_categories($args);
-  echo '<ul class="Some menu or something ">';
+  echo '<ul class="Some menu or something">';
   foreach ($subcategories as $kat) {
     $link = get_term_link( $kat->slug, $kat->taxonomy );
     echo '<li><a href="'. $link .'">'.$kat->name.'</a></li>';
@@ -699,14 +698,13 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
   $product_cat_ID = $IDbyNAME->term_id;
   $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $product_cat_ID, 'taxonomy' => 'product_cat' );
   $subcategories = get_categories($args);
-  echo '<ul class="wooc_sclist">';
+  echo '<ul class="Some menu or something">';
   foreach ($subcategories as $kat) {
     $link = get_term_link( $kat->slug, $kat->taxonomy );
     echo '<li><a href="'. $link .'">'.$kat->name.'</a></li>';
   }
   echo '</ul>';
 }
-
 
 function benz_add_category_headers() {
   echo '<div class="term-description"><div class="header-wrap-text-medical-equipment"><h2 class="header-wrap-text-medical-equipment-header">';
@@ -718,7 +716,7 @@ function benz_add_category_headers() {
 }
 
 function benz_pm_img_placement(){
-  echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; top: 190px; right:-4px; z-index:99" src="';
+  echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; top: 170px; right:-4px; z-index:99" src="';
   echo site_url();
   echo '/wp-content/imgs/repairs-preventive-maintenance.png" />';
 }

@@ -23,15 +23,19 @@ foreach ($pm_cats_array as $key => $value) :
       }
       $thumbnail_id = get_woocommerce_term_meta( $sc->term_id, 'thumbnail_id', true );
       $image = wp_get_attachment_url( $thumbnail_id );
-      ?>
-      <li class ="product-category product<?php echo $first; ?>">
-        <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/<?php echo $sc->slug ?>-repairs">
-          <img src="<?php echo $image ?>" />
-          <?php benz_pm_img_placement(); ?>
-          <h3><?php echo $sc->name ?></h3>
-        </a>
-      </li>
-      <?php $counter++;
+        ?>
+        <li class ="product-category product<?php echo $first; ?>">
+          <?php if ($sc->term_id == '6031') : ?>
+            <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/ferno-cots-stretchers-ems-repairs/">
+            <?php else : ?>
+              <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/<?php echo $sc->slug ?>-repairs">
+              <?php endif ;?>
+              <img src="<?php echo $image ?>" />
+              <?php benz_pm_img_placement(); ?>
+              <h3><?php echo $sc->name ?></h3>
+            </a>
+          </li>
+        <?php $counter++;
     endforeach;
   endif;
 endforeach; ?>

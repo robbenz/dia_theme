@@ -34,7 +34,6 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
   foreach ($loops_arr as $key => $value) {
    if ( is_page($key) ) {
      echo $open_no_side;
-     //woocommerce_breadcrumb();
      get_template_part($value, 'page');
      echo '</div>';
    }
@@ -61,7 +60,8 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
    }
  }
 
- elseif ( is_page(array('68934', '68957', '68958', '68959', '68960', '68961', '68962', '68963', '68964', '68968', '68970', '68971', '68972', '68973', '68965', '68966', '68969', '68991', '68992', '68993', '68994', '68995', '68996') ) ): //  --  CHECK Hospital Bed Repair PAGE
+//  --  CHECK Hospital Bed Repair PAGE
+ elseif ( is_page(array('68934', '68957', '68958', '68959', '68960', '68961', '68962', '68963', '68964', '68968', '68970', '68971', '68972', '68973', '68965', '68966', '68969', '68991', '68992', '68993', '68994', '68995', '68996') ) ):
   echo $open_side;
   woocommerce_breadcrumb(); ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
@@ -73,7 +73,9 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
     </div><!-- /#content -->
   </div>
 
-<?php  elseif ( is_page(array('68956', '68967', '68990') ) ): //  --  CHECK  Repair parent caregtoy PAGE
+<?php
+//  --  CHECK  Repair parent caregtoy PAGE
+elseif ( is_page(array('68956', '68967', '68990') ) ):
     echo $open_side;
     woocommerce_breadcrumb(); ?>
     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
