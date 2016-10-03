@@ -44,7 +44,8 @@ $side_loops_arr = array(
   '68996' => $pro_pm,
   '68956' => $cat_pm,
   '68967' => $cat_pm,
-  '68990' => $cat_pm
+  '68990' => $cat_pm,
+  '61277' => 'includes/cat_loops/imaging'
 );
 
 if ( is_home() || is_front_page() ): //  -- HOMEPAGE CHECK
@@ -55,6 +56,7 @@ elseif ( is_cart() || is_checkout() || is_account_page() ): //  -- WOO ENDPOINT 
   get_template_part('includes/loops/content', 'page');
   echo '</div>';
 
+// -- Pages with no left side menu
 elseif ( is_page(array_keys($loops_arr) ) ) :
   foreach ($loops_arr as $key => $value) {
    if ( is_page($key) ) {
@@ -64,6 +66,7 @@ elseif ( is_page(array_keys($loops_arr) ) ) :
    }
  }
 
+// -- Pages with left side menu
 elseif ( is_page(array_keys($side_loops_arr) ) ) :
   foreach ($side_loops_arr as $key => $value) {
    if ( is_page($key) ) {
@@ -87,7 +90,8 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
    }
  }
 
- elseif ( is_page('86') ): //  -- Parts Search CHECK
+//  -- Parts Search CHECK
+ elseif ( is_page('86') ):
   echo $open_side; ?>
   <img style="border:6px solid #00426a; max-width: 100%; " src="<?php echo site_url(); ?>/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png" />
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
@@ -99,19 +103,8 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
     </div><!-- /#content -->
   </div>
 
-<?php elseif ( is_page('61277') ): //  --  CHECK Imaging PAGE
-  echo $open_side; ?>
-    <nav class="woocommerce-breadcrumb"> <a href="<?php echo site_url(); ?>">Home</a> / <a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> / Imaging Parts </nav>
-  <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-    <?php get_template_part('includes/sidebar'); ?>
-  </div>
-  <div class="col-xs-12 col-sm-8">
-    <div id="content" role="main">
-      <?php get_template_part('includes/cat_loops/imaging', 'page'); ?>
-    </div><!-- /#content -->
-  </div>
 
-<?php else: //  -- EVERY OTHER PAGE
+<?php else:
   echo $open_side; ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
     <?php get_template_part('includes/sidebar'); ?>
