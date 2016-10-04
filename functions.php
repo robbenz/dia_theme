@@ -83,7 +83,6 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
-
 //  --  LOGIN | LOGOUT STUFF
 add_filter('woocommerce_login_redirect', 'login_redirect');
 
@@ -743,4 +742,43 @@ function benz_pm_img_placement(){
   echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; top: 170px; right:-4px; z-index:99" src="';
   echo site_url();
   echo '/wp-content/imgs/repairs-preventive-maintenance.png" />';
+}
+
+
+/** Add Custom Field To Category Form */
+add_action( 'product_cat_add_form_fields', 'product_cat_taxonomy_custom_fields', 10, 2 );
+add_action( 'product_cat_edit_form_fields', 'product_cat_taxonomy_custom_fields', 10, 2 );
+function product_cat_taxonomy_custom_fields($tag) {
+   // Check for existing taxonomy meta for the term you're editing
+   $t_id = $tag->term_id; // Get the ID of the term you're editing
+   $term_meta = get_option( "product_cat_featured_$t_id" ); // Do the check
+?>
+<div style="width:100%;clear:both;float:left;margin:15px 0 30px 0;">
+<tr class="form-field">
+    <th scope="row" valign="top">
+        <label style="margin-right:110px; font-weight:bold;" for="presenter_id"><?php _e('Category Staus'); ?></label>
+    </th>
+    <td>
+      <select style="width:300px;" name="featured" id="featured" class="postform">
+    <option value="0">Select</option>
+    <option <?= $term_meta=='Parts'?'selected':'' ?>   value="Parts">Parts</option>
+    <option <?= $term_meta=='Equipment'?'selected':'' ?>   value="Equipment">Equipment</option>
+    <option <?= $term_meta=='Repairs'?'selected':'' ?>   value="Repairs">Repairs</option>
+</select>
+    </td>
+</tr>
+</div>
+<?php
+}
+
+/** Save Custom Field Of Category Form */
+add_action( 'created_product_cat', 'product_cat_form_custom_field_save', 10, 2 );
+add_action( 'edited_product_cat', 'product_cat_form_custom_field_save', 10, 2 );
+
+function product_cat_form_custom_field_save( $term_id, $tt_id ) {
+
+    if ( isset( $_POST['featured'] ) ) {
+        $option_name = 'product_cat_featured_' . $term_id;
+        update_option( $option_name, $_POST['featured'] );
+    }
 }

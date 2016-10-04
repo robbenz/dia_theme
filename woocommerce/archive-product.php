@@ -22,51 +22,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_main_content' );
 
 
-if ( is_product_category( array ( '5828', // These are all the parts categories - dont forget to put in functions too for producst diaply count
-														    	'8390',
-																  '5797',
-															  	'5786',
-																	'6412',
-																	'3683',
-																	'8135',
-																	'8279',
-																	'2305',
-																	'3206',
-																	'5805',
-																	'8264',
-																	'8278',
-																	'6428',
-																	'8402',
-																	'8216',
-																	'6416',
-																	'6432',
-																	'8219',
-																	'6418',
-																	'6414',
-																	'8283',
-																	'5361',
-																	'5834',
-																	'1960',
-                                  '8889',
-                                  '8890',
-                                  '8888',
-																	'5777',
-																	'8131',
-																	'6323',
-																	'5173',
-																	'5832',
-																	'5826',
-																	'8865',
-																	'8864',
-																	'8832',
-																	'8868',
-																	'8869',
-																	'8256',  // hill rom parts
-																	'8133'
-																	) ) ):
-																	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-																	$single_cat = array_shift( $product_cats );
-																	?>
+global $post;
+$parts_cats_all = array();
+$t_id = get_queried_object()->term_id;
+$option_find = get_option("product_cat_featured_$t_id");
+if ($option_find == 'Parts') {
+	array_push($parts_cats_all, $t_id ) ;
+}
+
+  //  if (! is_product_category( array_keys($parts_cats_all) ) ):   -- this works but i cant figure out why
+	if ( in_array($t_id, $parts_cats_all ) ):
+
+	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+	$single_cat = array_shift( $product_cats );
+?>
 
 <div style="float:none !important; margin-left:auto;" class="container header-wrap-text-medical-equipment">
 	<h2 class="header-wrap-text-medical-equipment-header">
@@ -88,7 +57,6 @@ if ( is_product_category( array ( '5828', // These are all the parts categories 
 <?php
 while ( have_posts() ) : the_post();
 global $product;
-$hrpc = array()
 ?>
 
 <a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/results/keyword/<?php echo $product->get_sku(); ?>/search-in/product/cat-in/all/search-other/product">
@@ -103,11 +71,13 @@ $hrpc = array()
 <?php endwhile; // end of the loop. ?>
 
 </div>
-<br /><br /><!-- end table -->
+<br />
+<br /><!-- end table -->
 
 <?php do_action( 'woocommerce_after_main_content' ); ?>
 
-<?php else : ?>
+
+<?php else: ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
@@ -129,10 +99,10 @@ $hrpc = array()
 
 			<?php do_action( 'woocommerce_after_shop_loop' ); ?>
 
-            <?php //THIS IS CRUCIAL FOR DIVA PLUGIN
+			<?php //THIS IS CRUCIAL FOR DIVA PLUGIN
             $t_id = get_queried_object()->term_id;
-            $term_meta = get_option( "taxonomy_$t_id" );?>
-            <p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva"><?php echo $term_meta['custom_term_meta']; ?></p>
+            $term_meta = get_option( "taxonomy_$t_id" );
+            echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>'; ?>
 
 		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 
@@ -140,21 +110,8 @@ $hrpc = array()
 
 		<?php endif; ?>
 
-	<?php
-		/**
-		 * woocommerce_after_main_content hook
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
+	<?php do_action( 'woocommerce_after_main_content' ); ?>
 
-	<?php
-		/**
-		 * woocommerce_sidebar hook
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		get_template_part('includes/sidebar');
-	?>
+	<?php get_template_part('includes/sidebar'); ?>
+
 <?php endif; ?>

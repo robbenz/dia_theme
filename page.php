@@ -90,7 +90,6 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
    }
  }
 
-
 //  -- Parts Search CHECK
  elseif ( is_page('86') ):
   echo $open_side; ?>
