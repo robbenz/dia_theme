@@ -103,7 +103,6 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
     </div><!-- /#content -->
   </div>
 
-
 <?php else:
   echo $open_side; ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
