@@ -645,7 +645,7 @@ woocommerce_wp_select(
 		'id'          => 'benz_product_select',
 		'label'       => __( 'Product Status', 'woocommerce' ),
     'options'     => array(
-                        ' '         => __( ' ', 'woocommerce' ),
+                        'N/A'         => __( 'N/A', 'woocommerce' ),
                         'Part'      => __( 'Part', 'woocommerce' ),
                         'Equipment' => __( 'Equipment', 'woocommerce' ),
                         'Repair'    => __( 'Repair', 'woocommerce' )
