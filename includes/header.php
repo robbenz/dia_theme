@@ -50,12 +50,26 @@ jQuery(document).ready(function() {
 
 </script>
 <script>
+
+
+$(window).on('resize', function() {
+    if($(window).width() < 800) {
+			$('#mobile-navbar').addClass('navbar');
+			$('#mobile-navbar').addClass('navbar-default');
+      $('#mobile-navbar').addClass('navbar-fixed-top');
+    }
+});
+
+
+/*
 if(window.innerWidth<800){
 	jQuery("#mobile-navbar").addClass("navbar");
 	//jQuery("#mobile-navbar").addClass("navbar-default");
 	//jQuery("#mobile-navbar").addClass("navbar-fixed-top");
 	console.log(window.innerWidth);
 };
+
+*/
 </script>
 
 </head>
