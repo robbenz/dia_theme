@@ -75,42 +75,7 @@ global $product;
 
 <?php do_action( 'woocommerce_after_main_content' ); ?>
 
-<?php elseif (is_shop() ): ?>
-
-	<?php do_action( 'woocommerce_archive_description' ); ?>
-
-	<?php if ( have_posts() ) : ?>
-
-		<?php do_action( 'woocommerce_before_shop_loop' ); ?>
-
-		<?php woocommerce_product_loop_start(); ?>
-
-			<?php woocommerce_product_subcategories(); ?>
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php wc_get_template_part( 'content', 'product' ); ?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		<?php woocommerce_product_loop_end(); ?>
-
-		<?php do_action( 'woocommerce_after_shop_loop' ); ?>
-
-		<?php //THIS IS CRUCIAL FOR DIVA PLUGIN
-					$t_id = get_queried_object()->term_id;
-					$term_meta = get_option( "taxonomy_$t_id" );
-					echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>'; ?>
-
-	<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
-
-		<?php wc_get_template( 'loop/no-products-found.php' ); ?>
-
-	<?php endif; ?>
-
-	<?php do_action( 'woocommerce_after_main_content' ); ?>
-	<?php get_template_part('includes/sidebar'); ?>
-<?php else: ?>
+<?php else : ?>
 
 		<?php do_action( 'woocommerce_archive_description' ); ?>
 
