@@ -158,7 +158,8 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .rs_rs_tag a {text-decoration: line-through;color: #ffffff;pointer-events: none !important;}
 .rs_rs_tag a:before{content:"$";}
  .ctr_search .txt_livesearch, #wrap .ctr_search .txt_livesearch {padding: 6px 7px !important;}
-.ctr_search { border-radius: 0.5em; height:2.4em; padding: 6px 7px !important;}
+.ctr_search { border-radius: 0.5em; height:2.4em; padding: 6px 7px !important; margin-top: -27px;
+}
 .rs_result_others{display:none;}
 .sorry-you-cant-find{color:#cc1100;font-weight:900;font-size:1.18em;letter-spacing: 1px;}
 /* END */
@@ -857,8 +858,11 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .rgt-img-home{padding:0;margin-bottom: 4%;}
 .lft-img-home {display:none;}
 .home-img-thirds{width:90%;margin: 0 5% 3% 5%;}
-#masthead { height:217px; }
+#masthead { height:107px; }
 #click-menu {top: 224px !important;}
+#responsive-menu-button{margin-top: -70px !important;}
+.mobile-fixed-top{position: relative; top: 0; transition: top 0.2s ease-in-out;}
+.nav-up{top:-100px !important;}
 
 }
 
