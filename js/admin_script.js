@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
 });
 
 jQuery(document).ready(function() {
-//  jQuery("#pm_fields").hide();
+  jQuery("#pm_fields").hide();
   jQuery(".benz_pm_checkbox").click(function() {
       if(jQuery(this).is(":checked")) {
           jQuery("#pm_fields").show(300);
