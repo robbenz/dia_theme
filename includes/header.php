@@ -60,6 +60,13 @@ $(window).on('resize', function() {
     }
 });
 
+$(window).on('load', function() {
+    if($(window).width() < 800) {
+			$('#mobile-navbar').addClass('navbar');
+			$('#mobile-navbar').addClass('navbar-default');
+      $('#mobile-navbar').addClass('navbar-fixed-top');
+    }
+});
 
 /*
 if(window.innerWidth<800){
