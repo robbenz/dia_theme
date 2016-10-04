@@ -293,16 +293,57 @@ if (!function_exists('loop_columns')) {
 }
 
 function products_per_page_category( $count ) {
-  if( is_product_category( array ( '5828', '8390', '5797', '5786', '6412', '3683', '8135', '8279', '2305', '3206', '5805', '8264', '8278', '6428', '8402', '8216', '6416', '6432', '8219', '6418', '6414', '8283', '5361', '5834', '1960', '8889', '8890', '8888', '5777', '8131', '6323', '5173', '5832', '5826', '8865', '8864', '8832', '8868', '8869', '8133' ) ) ) :
-                                   return 1999;
-                                   elseif( is_product_category( '9350') ) : // Bariatric Care
-                                     return 27;
-                                   elseif( is_product_category( '5357') ) : // obesity trainers
-                                     return 9;
-                                   else :
-                                     return 12;
-                                   endif;
-                                   }
+  if( is_product_category( array (
+  '5828',
+  '8390',
+  '5797',
+  '5786',
+  '6412',
+  '3683',
+  '8135',
+  '8279',
+  '2305',
+  '3206',
+  '5805',
+  '8264',
+  '8278',
+  '6428',
+  '8402',
+  '8216',
+  '6416',
+  '6432',
+  '8219',
+  '6418',
+  '6414',
+  '8283',
+  '5361',
+  '5834',
+  '1960',
+  '8889',
+  '8890',
+  '8888',
+  '5777',
+  '8131',
+  '6323',
+  '5173',
+  '5832',
+  '5826',
+  '8865',
+  '8864',
+  '8832',
+  '8868',
+  '8869',
+  '8133'
+  ))):
+  return 1999;
+elseif( is_product_category( '9350') ) :  // Bariatric Care
+  return 27;
+elseif( is_product_category( '5357') ) : // obesity trainers
+  return 9;
+else :
+  return 12;
+endif;
+}
 
 add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 
