@@ -13,10 +13,11 @@ require_once locate_template('/functions/feedback.php');
 
 add_action('after_setup_theme', 'true_load_theme_textdomain');
 
-function wpse4339_enqueue_styles() {
+// -- Begin Scripts Styles
+function benzy_enqueue_styles() {
     wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
 }
-add_action( 'wp_enqueue_scripts', 'wpse4339_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'benzy_enqueue_styles' );
 
 add_action('wp_enqueue_script','register_my_scripts');
 function register_my_scripts(){
@@ -24,8 +25,7 @@ function register_my_scripts(){
 }
 //  --  Curtian Page
 function benz_adding_scripts() {
-  if (is_page('58440')  || is_page('68118') || is_page('68930') ) {
-
+  if (is_page('58440') ) {
     wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),'1.1', true);
     wp_enqueue_script('curtain_form');
   }
@@ -35,17 +35,54 @@ add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
 //  --  PM Page
 function benz_add_jss() {
   if (is_page('62913') ) {
-
     wp_register_script('pm_form', get_template_directory_uri() . '/js/pm_form_script.js', array('jquery'),'1.1', true);
     wp_enqueue_script('pm_form');
   }
 }
 add_action( 'wp_enqueue_scripts', 'benz_add_jss' );
 
+// -- admin script
+add_action( 'admin_enqueue_scripts', 'benz_admin_script' );
+function benz_admin_script() {
+    wp_enqueue_script('custom_js_script', get_bloginfo('template_url').'/js/admin_script.js', array('jquery'));
+}
+
+//  --  Benz admin css
+function benz_chromefix_inline_css() {
+  wp_add_inline_style( 'wp-admin', '.term-description-wrap { display: none ; }' );
+  wp_add_inline_style( 'wp-admin', '#product_cat-all { max-height:400px }' );
+  wp_add_inline_style( 'wp-admin', '#the-list .column-name a { display: inline ; }' );
+  wp_add_inline_style( 'wp-admin', '#adminmenu { transform: translateZ(0); }' );
+  wp_add_inline_style( 'wp-admin', 'table.wp-list-table img { max-width: 165px; }' );
+  wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
+}
+add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
+// -- End Scripts / Styles
+
+
 //  -- Load Text domain
 function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
+
+// --  ADD woocommerce support to theme
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+  echo '';
+}
+
+function my_theme_wrapper_end() {
+  echo '';
+}
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
 
 //  --  LOGIN | LOGOUT STUFF
 add_filter('woocommerce_login_redirect', 'login_redirect');
@@ -69,16 +106,6 @@ function custom_call_for_price() {
      return '<a href="#" class="eModal-2 r-a-qbutton-price">Request A Quote</a>';
 }
 
-//  --  Benz fix for multiple html input field in category edit smashboard becuase of tnymce plugin
-function benz_chromefix_inline_css() {
-  wp_add_inline_style( 'wp-admin', '.term-description-wrap { display: none ; }' );
-  wp_add_inline_style( 'wp-admin', '#product_cat-all { max-height:400px }' );
-  wp_add_inline_style( 'wp-admin', '#the-list .column-name a { display: inline ; }' );
-  wp_add_inline_style( 'wp-admin', '#adminmenu { transform: translateZ(0); }' );
-  wp_add_inline_style( 'wp-admin', 'table.wp-list-table img { max-width: 165px; }' );
-  wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
-}
-add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 
 //  -- Sidebars Register
 add_action( 'widgets_init', 'my_register_sidebars' );
@@ -269,9 +296,9 @@ if (!function_exists('loop_columns')) {
 function products_per_page_category( $count ) {
   if( is_product_category( array ( '5828', '8390', '5797', '5786', '6412', '3683', '8135', '8279', '2305', '3206', '5805', '8264', '8278', '6428', '8402', '8216', '6416', '6432', '8219', '6418', '6414', '8283', '5361', '5834', '1960', '8889', '8890', '8888', '5777', '8131', '6323', '5173', '5832', '5826', '8865', '8864', '8832', '8868', '8869', '8133' ) ) ) :
                                    return 1999;
-                                   elseif( is_product_category( '9350') ) :
+                                   elseif( is_product_category( '9350') ) : // Bariatric Care
                                      return 27;
-                                   elseif( is_product_category( '5357') ) :
+                                   elseif( is_product_category( '5357') ) : // obesity trainers
                                      return 9;
                                    else :
                                      return 12;
@@ -453,23 +480,6 @@ class RRHE {
 }
 new RRHE();
 
-// --  ADD woocommerce support to theme
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
-add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
-
-function my_theme_wrapper_start() {
-  echo '';
-}
-
-function my_theme_wrapper_end() {
-  echo '';
-}
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
 
 // Edit order items table template defaults
 function BENZ_wc_order_email_skus( $table, $order ) {
@@ -490,16 +500,6 @@ function BENZ_wc_order_email_skus( $table, $order ) {
 	return ob_get_clean();
 }
 add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
-
-//  --  Remove password strength
-/*
-function BENZ_remove_password_strength() {
-	if ( wp_script_is( 'wc-password-strength-meter', 'enqueued' ) ) {
-		wp_dequeue_script( 'wc-password-strength-meter' );
-	}
-}
-add_action( 'wp_print_scripts', 'BENZ_remove_password_strength', 100 ); */
-
 
 /**
  * Plugin Name: WooCommerce Enable Free Shipping on a Per Product Basis
@@ -598,12 +598,27 @@ add_action( 'woocommerce_process_product_meta', 'woo_add_custom_general_fields_s
 
 function woo_add_custom_general_fields() {
   global $woocommerce, $post;
-  echo '<div class="options_group">';
+  echo '<div id="benz_product_select" class="options_group">';
 // select input field
 woocommerce_wp_select(
 	array(
+		'id'          => 'benz_product_select',
+		'label'       => __( 'Product Status', 'woocommerce' ),
+    'options'     => array(
+                        ' '         => __( ' ', 'woocommerce' ),
+                        'Part'      => __( 'Part', 'woocommerce' ),
+                        'Equipment' => __( 'Equipment', 'woocommerce' ),
+                        'Repair'    => __( 'Repair', 'woocommerce' )
+                        ),
+		'desc_tip'    => 'true',
+		'description' => __( 'Part or Equipment?' )
+	)
+);
+echo '</div><div id="benz_condition_select" class="options_group">';
+woocommerce_wp_select(
+	array(
 		'id'          => 'benz_condition_select',
-		'label'       => __( 'Product Condition', 'woocommerce' ),
+		'label'       => __( 'Part Condition', 'woocommerce' ),
     'options'     => array(
                         'N/A'             => __( 'N/A', 'woocommerce' ),
                         'New'             => __( 'New', 'woocommerce' ),
@@ -611,22 +626,23 @@ woocommerce_wp_select(
                         'OEM Replacement' => __( 'OEM Replacement', 'woocommerce' ),
                         'OEM Original'    => __( 'OEM Original', 'woocommerce' ),
                         'Tested'          => __( 'Tested', 'woocommerce' ),
-                        'Untested'        => __( 'Untested', 'woocommerce' ),
+                        'Untested'        => __( 'Untested', 'woocommerce' )
                         ),
 		'desc_tip'    => 'true',
 		'description' => __( 'Is this part New, Reconditioned, Untested, etc.?', 'woocommerce' )
 	)
 );
-
+echo '</div><div id="benz_pm_checkbox" class="options_group">';
 woocommerce_wp_checkbox(
 array(
   'id'            => 'benz_pm_checkbox',
-	'name'            => 'benz_pm_checkbox',
-	// 'wrapper_class' => 'show_if_simple',
+  'name'          => 'benz_pm_checkbox',
+	'class'         => 'benz_pm_checkbox checkbox',
 	'label'         => __('Link To PM?', 'woocommerce' ),
 	'description'   => __( 'Check this box IF you want to link to a PM / Repair Product', 'woocommerce' )
 	)
 );
+echo '</div><div id="pm_fields" class="options_group">';
 woocommerce_wp_text_input(
 	array(
 		'id'          => 'benz_pm_text_field',
@@ -651,13 +667,21 @@ echo '</div>';
 }
 
 function woo_add_custom_general_fields_save( $post_id ) {
-  // benz_condition_select
+  // benz_condition_select  benz_product_select
   $woocommerce_wp_select = $_POST['benz_condition_select'];
   if( !empty( $woocommerce_wp_select ) ) {
     update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
   }
   else {
     update_post_meta( $post_id, 'benz_condition_select', esc_attr( $woocommerce_wp_select ) );
+  }
+
+  $woocommerce_wp_select_product = $_POST['benz_product_select'];
+  if( !empty( $woocommerce_wp_select_product ) ) {
+    update_post_meta( $post_id, 'benz_product_select', esc_attr( $woocommerce_wp_select_product ) );
+  }
+  else {
+    update_post_meta( $post_id, 'benz_product_select', esc_attr( $woocommerce_wp_select_product ) );
   }
   // benz_pm_checkbox
   $woocommerce_checkbox = isset( $_POST['benz_pm_checkbox'] ) ? 'yes' : 'no';
@@ -681,7 +705,6 @@ function woo_add_custom_general_fields_save( $post_id ) {
 }
 
 // -- will need for redo menu
-
 function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
   $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $parent_cat_ID, 'taxonomy' => 'product_cat' );
   $subcategories = get_categories($args);
@@ -706,6 +729,7 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
   echo '</ul>';
 }
 
+// -- Category headers - need to impliment
 function benz_add_category_headers() {
   echo '<div class="term-description"><div class="header-wrap-text-medical-equipment"><h2 class="header-wrap-text-medical-equipment-header">';
   the_title();
@@ -714,7 +738,7 @@ function benz_add_category_headers() {
   echo '</div></div>';
 
 }
-
+// -- Small Repairs img for every gallery page
 function benz_pm_img_placement(){
   echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; top: 170px; right:-4px; z-index:99" src="';
   echo site_url();

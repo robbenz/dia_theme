@@ -90,6 +90,7 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
    }
  }
 
+
 //  -- Parts Search CHECK
  elseif ( is_page('86') ):
   echo $open_side; ?>
@@ -102,7 +103,6 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
       <?php get_template_part('includes/loops/content', 'page'); ?>
     </div><!-- /#content -->
   </div>
-
 
 <?php else:
   echo $open_side; ?>

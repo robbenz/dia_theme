@@ -61,6 +61,7 @@ if ( is_product_category( array ( '5828', // These are all the parts categories 
 																	'8832',
 																	'8868',
 																	'8869',
+																	'8256',  // hill rom parts
 																	'8133'
 																	) ) ):
 																	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
@@ -87,6 +88,7 @@ if ( is_product_category( array ( '5828', // These are all the parts categories 
 <?php
 while ( have_posts() ) : the_post();
 global $product;
+$hrpc = array()
 ?>
 
 <a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/results/keyword/<?php echo $product->get_sku(); ?>/search-in/product/cat-in/all/search-other/product">
