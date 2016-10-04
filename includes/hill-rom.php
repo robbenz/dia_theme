@@ -1,9 +1,9 @@
 <nav class="woocommerce-breadcrumb">
-<a href="http://localhost/parts_online">Home</a>
+<a href="<?php echo site_url(); ?>/">Home</a>
  /
-<a href="http://localhost/parts_online/medical-equipment/">Medical Equipment</a>
+<a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a>
  /
-<a href="http://localhost/parts_online/product-category/hill-rom-parts-online/">Hill-Rom Parts</a>
+<a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">Hill-Rom Parts</a>
  / New &amp; Reconditioned Hill-Rom Parts
 </nav>
 
@@ -31,7 +31,7 @@
            <h4>Category</h4>
         </div>
     </div>
-    
+
    <a class="hill-rom-parts-row" target="_blank" href="/results/keyword/17291/search-in/product/cat-in/all/search-other/product">
         <div class="hill-rom-parts-cell">17291</div>
         <div class="hill-rom-parts-cell">Push Nut</div>
