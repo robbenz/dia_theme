@@ -85,6 +85,8 @@ function addClassesMobile($when) {
 	$(window).on($when, function() {
 		if($(window).width() < 800) {
 			$('#mobile-navbar').addClass('navbar navbar-default navbar-fixed-top');
+		} else {
+			$('#mobile-navbar').removeClass('navbar navbar-default navbar-fixed-top');
 		}
 	})
 }
