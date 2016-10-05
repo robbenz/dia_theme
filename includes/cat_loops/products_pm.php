@@ -33,11 +33,11 @@
       $counter = 0;
       $args = array(
         'post_type' => 'product',
-        'posts_per_page' => 36, 
+        'posts_per_page' => 36,
         'product_cat' => $key,
         'orderby' => 'title',
         'order' => 'ASC',
-        'post__not_in' => array(31167,31169)
+        'post__not_in' => array(31167,31169)  // stuff to exclude - vital signs stands
       );
       $loop = new WP_Query( $args );
       while ( $loop->have_posts() ) : $loop->the_post(); global $product;
