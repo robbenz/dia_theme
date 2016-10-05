@@ -1,7 +1,4 @@
-<div class="header-wrap-text-medical-equipment">
-<h2 class="header-wrap-text-medical-equipment-header">Imaging Parts</h2>
-DiaMedical USA provides a diverse selection of medical imaging parts at the most cost-effective price for our customers. We carry a variety of diagnostic medical imaging equipment and medical imaging parts from numerous companies, including Fujitsu, GE Healthcare, Siemens Healthcare and other top medical imaging manufacturers. This wide selection of manufacturers provides the best selection of imaging parts for MRI, PET/CT, CT, CR, C-Arm, Digital X-Ray and the Siemens ECAT Series. We guarantee the best value on all reconditioned, refurbished and new imaging parts at the highest quality possible!
-</div>
+<?php benz_add_category_headers(); ?>
 <ul class="products">
   <li class="product-category product first">
     <a href="<?php echo site_url(); ?>/fujitsu-imaging-parts/">
