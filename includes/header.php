@@ -45,38 +45,23 @@ jQuery(document).ready(function() {
 		});
 
  });
-
 */
-
 </script>
+
 <script>
 
+/*** Add classes to #mobile-navbar on load & Resize ***/
 
-$(window).on('resize', function() {
-    if($(window).width() < 800) {
-			$('#mobile-navbar').addClass('navbar');
-			$('#mobile-navbar').addClass('navbar-default');
-      $('#mobile-navbar').addClass('navbar-fixed-top');
-    }
-});
+function addClassesMobile($when) {
+	$(window).on($when, function() {
+		if($(window).width() < 800) {
+			$('#mobile-navbar').addClass('navbar navbar-default navbar-fixed-top');
+		}
+	})
+}
+addClassesMobile('load');
+addClassesMobile('resize');
 
-$(window).on('load', function() {
-    if($(window).width() < 800) {
-			$('#mobile-navbar').addClass('navbar');
-			$('#mobile-navbar').addClass('navbar-default');
-      $('#mobile-navbar').addClass('navbar-fixed-top');
-    }
-});
-
-/*
-if(window.innerWidth<800){
-	jQuery("#mobile-navbar").addClass("navbar");
-	//jQuery("#mobile-navbar").addClass("navbar-default");
-	//jQuery("#mobile-navbar").addClass("navbar-fixed-top");
-	console.log(window.innerWidth);
-};
-
-*/
 </script>
 
 </head>
