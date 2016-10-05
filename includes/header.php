@@ -50,6 +50,34 @@ jQuery(document).ready(function() {
 
 </script>
 <script>
+/*
+
+$(window).on('resize', function() {
+    if($(window).width() < 800) {
+			$('#mobile-navbar').addClass('navbar');
+			$('#mobile-navbar').addClass('navbar-default');
+      $('#mobile-navbar').addClass('navbar-fixed-top');
+    } else {
+			$('#mobile-navbar').removeClass('navbar');
+			$('#mobile-navbar').removeClass('navbar-default');
+      $('#mobile-navbar').removeClass('navbar-fixed-top');
+		}
+});
+
+$(window).on('load', function() {
+    if($(window).width() < 800) {
+			$('#mobile-navbar').addClass('navbar');
+			$('#mobile-navbar').addClass('navbar-default');
+      $('#mobile-navbar').addClass('navbar-fixed-top');
+    } else {got
+			$('#mobile-navbar').addRemove('navbar');
+			$('#mobile-navbar').addRemove('navbar-default');
+      $('#mobile-navbar').addRemove('navbar-fixed-top');
+		}
+});
+
+
+*/
 
 /*** Add classes to #mobile-navbar on load & Resize ***/
 
@@ -63,6 +91,17 @@ function addClassesMobile($when) {
 addClassesMobile('load');
 addClassesMobile('resize');
 
+
+
+/*
+if(window.innerWidth<800){
+	jQuery("#mobile-navbar").addClass("navbar");
+	//jQuery("#mobile-navbar").addClass("navbar-default");
+	//jQuery("#mobile-navbar").addClass("navbar-fixed-top");
+	console.log(window.innerWidth);
+};
+
+*/
 </script>
 
 </head>
