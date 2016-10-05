@@ -1,8 +1,8 @@
 jQuery(document).ready(function() {
     jQuery("#benz_product_select").find('select').change(function() {
         var $val = jQuery(this).val();
-        if($val == 'Part'){
-          jQuery('#benz_condition_select').show();
+        if($val === 'Part'){
+          jQuery('#benz_condition_select').show(300);
         } else if($val != 'Part'){
           jQuery('#benz_condition_select').hide(200);
         } else {
