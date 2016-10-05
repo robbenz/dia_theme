@@ -69,7 +69,7 @@ $(window).on('load', function() {
 			$('#mobile-navbar').addClass('navbar');
 			$('#mobile-navbar').addClass('navbar-default');
       $('#mobile-navbar').addClass('navbar-fixed-top');
-    } else {
+    } else {got
 			$('#mobile-navbar').addRemove('navbar');
 			$('#mobile-navbar').addRemove('navbar-default');
       $('#mobile-navbar').addRemove('navbar-fixed-top');
