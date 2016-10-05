@@ -1,45 +1,49 @@
-<?php benz_add_category_headers(); ?>
+<?php benz_add_category_headers();
+
+$imagingLinks = array(
+  array(
+    "name" => "Fujitsu Imaging Parts",
+    "img"  => "/wp-content/uploads/wpallimport/files/imaging-parts/Fujitsu.png",
+    "slug" => "fujitsu-imaging-parts"
+  ),
+  array(
+    "name" => "GE Imaging Parts",
+    "img"  => "/wp-content/uploads/wpallimport/files/imaging-parts/GE.png",
+    "slug" => "ge-imaging-parts"
+  ),
+  array(
+    "name" => "Siemens Imaging Parts",
+    "img"  => "/wp-content/uploads/wpallimport/files/imaging-parts/Siemens.png",
+    "slug" => "siemens-imaging-parts"
+  ),
+  array(
+    "name" => "All Imaging Parts A-L",
+    "img"  => "/wp-content/uploads/wpallimport/files/imaging-parts/HP.png",
+    "slug" => "imaging-parts-a-l"
+  ),
+  array(
+    "name" => "All Imaging Parts K-Z",
+    "img"  => "/wp-content/uploads/wpallimport/files/imaging-parts/Toshiba.png",
+    "slug" => "imaging-parts-k-z"
+  )
+
+);
+?>
+
 <ul class="products">
-  <li class="product-category product first">
-    <a href="<?php echo site_url(); ?>/fujitsu-imaging-parts/">
-      <img src="<?php echo site_url(); ?>/wp-content/uploads/wpallimport/files/imaging-parts/Fujitsu.png" alt="Fujitsu Imaging Parts" width="250" height="275" />
-      <h3>
-        Fujitsu Imaging Parts
-      </h3>
-    </a>
-  </li>
+  <?php
+foreach ($imagingLinks as $link) :
+
+?>
+
   <li class="product-category product">
-    <a href="<?php echo site_url(); ?>/ge-imaging-parts/">
-      <img src="<?php echo site_url(); ?>/wp-content/uploads/wpallimport/files/imaging-parts/GE.png" alt="GE Imaging Parts" width="250" height="275" />
-      <h3>
-        GE Imaging Parts
-      </h3>
+    <a href="<?php echo site_url(); ?>/<?php echo $link[slug]; ?>">
+      <img src="<?php echo site_url(); ?>/<?php echo $link[img]; ?>" alt="<?php echo $link[name]; ?>" width="250" height="275" />
+      <h3><?php echo $link[name]; ?></h3>
     </a>
   </li>
-  <li class="product-category product last">
-    <a href="<?php echo site_url(); ?>/siemens-imaging-parts/">
-      <img src="<?php echo site_url(); ?>/wp-content/uploads/wpallimport/files/imaging-parts/Siemens.png" alt="Siemens Imaging Parts" width="250" height="275" />
-      <h3>
-        Siemens Imaging Parts
-      </h3>
-    </a>
-  </li>
-  <li class="product-category product first">
-    <a href="<?php echo site_url(); ?>/imaging-parts-a-l/">
-      <img src="<?php echo site_url(); ?>/wp-content/uploads/wpallimport/files/imaging-parts/HP.png" alt="Imaging Parts A-L" width="250" height="275" />
-      <h3>
-        All Imaging Parts A-L
-      </h3>
-    </a>
-  </li>
-  <li class="product-category product">
-    <a href="<?php echo site_url(); ?>/imaging-parts-k-z/">
-      <img src="<?php echo site_url(); ?>/wp-content/uploads/wpallimport/files/imaging-parts/Toshiba.png" alt="Imaging Parts K-Z" width="250" height="275" />
-      <h3>
-        All Imaging Parts K-Z
-      </h3>
-    </a>
-  </li>
+
+<?php endforeach ; ?>
 </ul>
 
 <p class="diva" style="margin-top:200px; float: right; font-size: 13px; text-align: center; width: 100%;">
