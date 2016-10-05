@@ -861,9 +861,6 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #masthead { height:107px; }
 #click-menu {top: 224px !important;}
 #responsive-menu-button{margin-top: -70px !important;}
-.mobile-fixed-top{position: relative; top: 0; transition: top 0.2s ease-in-out;}
-.nav-up{top:-100px !important;}
-
 }
 
 

@@ -57,7 +57,11 @@ $(window).on('resize', function() {
 			$('#mobile-navbar').addClass('navbar');
 			$('#mobile-navbar').addClass('navbar-default');
       $('#mobile-navbar').addClass('navbar-fixed-top');
-    }
+    } else {
+			$('#mobile-navbar').removeClass('navbar');
+			$('#mobile-navbar').removeClass('navbar-default');
+      $('#mobile-navbar').removeClass('navbar-fixed-top');
+		}
 });
 
 $(window).on('load', function() {
@@ -65,7 +69,11 @@ $(window).on('load', function() {
 			$('#mobile-navbar').addClass('navbar');
 			$('#mobile-navbar').addClass('navbar-default');
       $('#mobile-navbar').addClass('navbar-fixed-top');
-    }
+    } else {
+			$('#mobile-navbar').addRemove('navbar');
+			$('#mobile-navbar').addRemove('navbar-default');
+      $('#mobile-navbar').addRemove('navbar-fixed-top');
+		}
 });
 
 /*
@@ -103,6 +111,7 @@ if(window.innerWidth<800){
 			echo '</p>';
 		}
 ?>
+<!-- TODO: create a container that goes around the menu button and the search bar. give it a background of whatever blue.-->
 <header id="masthead" role="banner">
 	<nav id="mobile-navbar">
 	<div class="container-fluid">
@@ -111,6 +120,7 @@ if(window.innerWidth<800){
 				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical-Logo-main.png" />
 			</a>
 		</div>
+		<div class="container-fluid">
 <div style="width:300px; float:left; margin-left: 43px;">
 		<?php
 	$ps_echo = true ;
@@ -148,6 +158,7 @@ if(window.innerWidth<800){
 	?>
 </div> <!-- #mm-right-contact -->
 </div> <!-- .container -->
+</div>
 </nav>
 </header> <!-- #masthead -->
 
