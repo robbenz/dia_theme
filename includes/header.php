@@ -47,39 +47,7 @@ jQuery(document).ready(function() {
  });
 
 */
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('#mobile-navbar').outerHeight();
 
-setInterval(function() {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-}, 250);
-
-function hasScrolled() {
-    var st = $(this).scrollTop();
-
-    // Make sure they scroll more than delta
-    if(Math.abs(lastScrollTop - st) <= delta)
-        return;
-
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('#mobile-navbar').addClass('nav-up');
-    } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('#mobile-navbar').removeClass('nav-up');
-        }
-    }
-
-    lastScrollTop = st;
-}
 
 </script>
 
@@ -108,8 +76,7 @@ function hasScrolled() {
 		}
 ?>
 <header id="masthead" role="banner">
-	<nav id="mobile-navbar" class ="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
+	<div class="container">
 		<div id="dia-logo-left">
 			<a href="<?php echo site_url(); ?>">
 				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical-Logo-main.png" />
@@ -152,7 +119,6 @@ function hasScrolled() {
 	?>
 </div> <!-- #mm-right-contact -->
 </div> <!-- .container -->
-</nav>
 </header> <!-- #masthead -->
 
 
