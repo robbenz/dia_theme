@@ -860,3 +860,9 @@ function benz_loop_special_cats($cat_array) {
 <?php
 
 }
+
+function is_dia_part() {
+  $isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
+  if ($isPart == 'Part')
+  return true;
+}

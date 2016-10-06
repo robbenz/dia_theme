@@ -135,8 +135,8 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 		</ul>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
 			<?php
-			$isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
-			if($isPart == 'Part'): ?>
+
+			if( is_dia_part() ): ?>
 
 			<div style="height:auto !important;padding-bottom:10px !important;" class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
 			<?php else : ?>

@@ -43,12 +43,10 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 	<?php
 
-$isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
-$condition = get_post_meta( get_the_ID(), 'benz_condition_select', true );
-//echo $isPart;
-//echo $condition;
-if($isPart == 'Part' && $condition != 'N/A' ) {
 
+$condition = get_post_meta( get_the_ID(), 'benz_condition_select', true );
+
+if (is_dia_part() && $condition != 'N/A' ) {
 	echo '<br><br>Part Condition: <span style="color:#000;">' . $condition . '</span><br>';
 
 }

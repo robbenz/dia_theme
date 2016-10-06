@@ -42,7 +42,6 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
 	'post__not_in'         => array( $product->id )
 ) );
 
-$isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
 $products = new WP_Query( $args );
 $woocommerce_loop['columns'] = $columns;
 
@@ -51,7 +50,7 @@ if ( $products->have_posts() ) : ?>
 	<div class="related products">
 
 	<?php
-	if($isPart == 'Part'):
+	if( is_dia_part() ):
 		$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
 		$single_cat = array_shift( $product_cats );
 	?>
