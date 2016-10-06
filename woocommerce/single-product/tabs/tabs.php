@@ -86,13 +86,11 @@ if ( ! defined( 'ABSPATH' ) ) {
          echo '<img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" style="float:left; margin-right:0.5em; ">';
          echo '<div style="padding-top:10px;"><span class="red_free">FREE SHIPPING</span><br>When You Order Online</div>';
          echo '</div>';
-     } else {
+     }  // else {
         // echo '<div id="free_ship-productpage">';
         // echo '<p class="add_shipp">*Additional Shipping Charges Apply</p>';
         // echo '</div>';
-				 echo '';
-     }
-
+     // }
 
 ?>
 
@@ -134,9 +132,8 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 			<?php endforeach; ?>
 		</ul>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<?php
 
-			if( is_dia_part() ): ?>
+			<?php if( is_dia_part() ): ?>
 
 			<div style="height:auto !important;padding-bottom:10px !important;" class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
 			<?php else : ?>

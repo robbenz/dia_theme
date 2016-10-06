@@ -91,31 +91,31 @@ jQuery(document).ready(function() {
 	echo '<span class="mm-right-contact-1">' . 'CONTACT US: (877) 593-6011' . '</span>';
 	echo '<span class="mm-right-contact-2">' . '   (M-F: 7-6 EST)' . '</span>' . '<br />';
 
-	wp_nav_menu( array( 'theme_location'  => 'header-menu',
-	                    'items_wrap'      => $benzitems,
-	                    'walker'          => new BENZ_Walker_Nav_Menu
-										) );
-
-										if ( is_user_logged_in() ) {
-											wp_nav_menu( array( 'theme_location'  => 'myaccount',
-											                    'items_wrap'      => $benzitems,
-	                                        'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
-																				) );
-										} else {
-											wp_nav_menu( array( 'theme_location'  => 'sign-in-menu',
-    																			'items_wrap'      => $benzitems,
-																					'walker'          => new BENZ_Walker_Nav_Menu_SIGNIN
-																				) );
+	wp_nav_menu( array(
+		'theme_location'  => 'header-menu',
+		'items_wrap'      => $benzitems,
+	  'walker'          => new BENZ_Walker_Nav_Menu
+	) );
+	if ( is_user_logged_in() ) {
+		wp_nav_menu( array(
+			'theme_location'  => 'myaccount',
+			'items_wrap'      => $benzitems,
+			'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
+		) );
+	} else {
+		wp_nav_menu( array(
+			'theme_location'  => 'sign-in-menu',
+			'items_wrap'      => $benzitems,
+			'walker'          => new BENZ_Walker_Nav_Menu_SIGNIN
+		) );
 	};
 
 	echo do_shortcode('[WooCommerceWooCartPro]');
+?>
 
-	?>
 </div> <!-- #mm-right-contact -->
 </div> <!-- .container -->
 </header> <!-- #masthead -->
-
-
 
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
@@ -150,7 +150,6 @@ if ( function_exists( 'woo_predictive_search_widget' ) ) {
         'container_class' => $benzmenu . ' ' . $benzmenu . '-parts'
     ));
 }
-
 wp_nav_menu(array(
     'theme_location'  => 'repirstmp',
     'items_wrap'      => $benzitems,
