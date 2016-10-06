@@ -858,5 +858,4 @@ function benz_loop_special_cats($cat_array) {
 
 <?php
 
-
 }
