@@ -861,12 +861,21 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #masthead { height:107px; }
 #click-menu {top: 224px !important;}
 #responsive-menu-button{margin:-70px 0 0 5px !important;}
-.ctr_search{margin:-27px 0 0 25px;}
+.ctr_search{margin:-27px 0 0 72px; width: 80%;}
 #form-row{background: #00426a;height: 54px; margin-top: -26px;}
+.form-row-child{width:300px; float:right; margin-right: 43px;}
+#dia-logo-left img {width: 88%; display:block; margin-left:auto; margin-right:auto;}
+
 }
 
+@media (min-width: 350px) {
+.ctr_search{margin:-28px 0 0 25px; width: 95%;}
+}
+
+
+
 @media (min-width: 669px) {
-.ctr_search{margin:0 30px 0 0;}
+.ctr_search{margin:-2px 0px 0 25px; width: 95%;}
 }
 
 @media (min-width: 745px) {
@@ -881,7 +890,6 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
 #masthead { height:117px; }
 #click-menu { top: 125px !important;}
-.ctr_search {margin-top: 0;}
 #responsive-menu-button {margin-top: -66px !important;}
 .navbar-fixed-top {min-height: 110px;}
 }
@@ -911,6 +919,7 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #responsive-menu-button { margin-top: -45px !important;}
 #fixed-row{height:50px;}
 #form-row{background: #fff !important;}
+.ctr_search {margin-top: -27px;}
 }
 
 @media screen and (max-width: 992px){
@@ -918,7 +927,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 }
 
 @media (min-width: 1200px) {
-#mm-right-contact{display:block;}
+#mm-right-contact{display:block; margin-top: -50px;}
 .benz-menu > ul > li > a{ padding: 11px 1.8198em; }
 .benz-menu .sub-menu{width: 1171px;}
 #menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }
@@ -938,4 +947,6 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #benz-menu-about .benz-menu-about-copy { font-size:14px;}
 #landing_nav-wrap a.landing_nav{font-size:1.1em; font-weight: 600 !important; }
 #landing_nav-wrap .container { padding:0;}
+.form-row-child{width:300px; float:left; margin-left: 43px;}
+.ctr_search{margin:-27px 0 0 0;}
 }
