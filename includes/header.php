@@ -54,10 +54,12 @@ jQuery(document).ready(function() {
 
 function addClassesMobile($when) {
 	$(window).on($when, function() {
-		if($(window).width() < 800) {
+		if($(window).width() < 992) {
 				$('#mobile-navbar').addClass('navbar navbar-default navbar-fixed-top');
+				$('#form-row').addClass('row');
 		} else {
 			$('#mobile-navbar').removeClass('navbar navbar-default navbar-fixed-top');
+			$('#form-row').removeClass('row');
 		}
 	})
 }
@@ -90,32 +92,32 @@ addClassesMobile('resize');
 			echo '</p>';
 		}
 ?>
-<!-- TODO: create a container that goes around the menu button and the search bar. give it a background of whatever blue.-->
 <header id="masthead" role="banner">
 	<nav id="mobile-navbar">
-	<div class="container-fluid">
+	<div id="fixed-row" class="row">
 		<div id="dia-logo-left">
 			<a href="<?php echo site_url(); ?>">
 				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical-Logo-main.png" />
 			</a>
 		</div>
-		<div class="container-fluid">
-<div style="width:300px; float:left; margin-left: 43px;">
-		<?php
-	$ps_echo = true ;
-	if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
-	?>
-</div>
-	<div id="mm-right-contact">
+	</div>
+		<div id="form-row"class="row">
+			<div style="width:300px; float:left; margin-left: 43px;">
+				<?php
+				$ps_echo = true ;
+				if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
+				?>
+			</div>
+			<div id="mm-right-contact">
 
-		<?php
+				<?php
 
- $benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
+ 				$benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
 
-	echo '<span class="mm-right-contact-1">' . 'CONTACT US: (877) 593-6011' . '</span>';
-	echo '<span class="mm-right-contact-2">' . '   (M-F: 7-6 EST)' . '</span>' . '<br />';
+				echo '<span class="mm-right-contact-1">' . 'CONTACT US: (877) 593-6011' . '</span>';
+				echo '<span class="mm-right-contact-2">' . '   (M-F: 7-6 EST)' . '</span>' . '<br />';
 
-	wp_nav_menu( array( 'theme_location'  => 'header-menu',
+				wp_nav_menu( array( 'theme_location'  => 'header-menu',
 	                    'items_wrap'      => $benzitems,
 	                    'walker'          => new BENZ_Walker_Nav_Menu
 										) );
@@ -130,21 +132,19 @@ addClassesMobile('resize');
     																			'items_wrap'      => $benzitems,
 																					'walker'          => new BENZ_Walker_Nav_Menu_SIGNIN
 																				) );
-	};
+																			};
 
-	echo do_shortcode('[WooCommerceWooCartPro]');
+																			echo do_shortcode('[WooCommerceWooCartPro]');
 
-	?>
+																			?>
 </div> <!-- #mm-right-contact -->
 </div> <!-- .container -->
-</div>
 </nav>
 </header> <!-- #masthead -->
 
 
 
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
+
     <div class="navbar-header">
 
 			<?php
@@ -198,5 +198,3 @@ wp_nav_menu(array(
 ?>
 
 		</div><!-- .navbar-header -->
-  </div><!-- /.container -->
-</nav>
