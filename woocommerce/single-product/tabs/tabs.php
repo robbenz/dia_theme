@@ -134,7 +134,15 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 			<?php endforeach; ?>
 		</ul>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
-			<div class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
+			<?php
+			$isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
+			if($isPart == 'Part'): ?>
+
+			<div style="height:auto !important;padding-bottom:10px !important;" class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
+			<?php else : ?>
+				<div class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
+				<?php endif ; ?>
+
 				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
 			</div>
 		<?php endforeach; ?>

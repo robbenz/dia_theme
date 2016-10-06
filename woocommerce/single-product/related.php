@@ -42,25 +42,55 @@ $args = apply_filters( 'woocommerce_related_products_args', array(
 	'post__not_in'         => array( $product->id )
 ) );
 
+$isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
 $products = new WP_Query( $args );
-
 $woocommerce_loop['columns'] = $columns;
 
 if ( $products->have_posts() ) : ?>
 
 	<div class="related products">
 
+	<?php
+	if($isPart == 'Part'):
+		$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+		$single_cat = array_shift( $product_cats );
+	?>
+
+	<h2>Shop More <?php echo $product->get_categories();?> Parts</h2><hr>
+	<div id="hill-rom-parts-table">
+		<div class="hill-rom-parts-row">
+			<div class="hill-rom-parts-cell"><h4></h4></div>
+			<div class="hill-rom-parts-cell"><h4>Manufacturer</h4></div>
+			<div class="hill-rom-parts-cell"><h4>Part Number</h4></div>
+			<div class="hill-rom-parts-cell"><h4>Description</h4></div>
+			<div class="hill-rom-parts-cell"><h4>Price</h4></div>
+			<div class="hill-rom-parts-cell"><h4>Condition</h4></div>
+		</div>
+
+		<?php	while ( $products->have_posts() ) : $products->the_post(); ?>
+
+			<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/results/keyword/<?php echo $product->get_sku(); ?>/search-in/product/cat-in/all/search-other/product">
+				<div class="hill-rom-parts-cell"><?php echo $product->get_image(array(150,150)); ?></div>
+				<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
+				<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>
+				<div class="hill-rom-parts-cell"><?php echo the_content(); ?></div>
+				<div class="hill-rom-parts-cell"><?php echo '$' . $product->get_price(); ?></div>
+				<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), 'benz_condition_select', true ); ?></div>
+			</a>
+
+		<?php endwhile; ?>
+
+	</div>
+
+<?php else : ?>
 		<h2><?php _e( 'You may also like…', 'woocommerce' ); ?></h2>
-
 		<?php woocommerce_product_loop_start(); ?>
-
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-
 				<?php wc_get_template_part( 'content', 'product' ); ?>
-
 			<?php endwhile; // end of the loop. ?>
-
 		<?php woocommerce_product_loop_end(); ?>
+
+<?php endif; ?>
 
 	</div>
 

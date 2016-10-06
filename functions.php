@@ -645,11 +645,11 @@ woocommerce_wp_select(
 		'id'          => 'benz_product_select',
 		'label'       => __( 'Product Status', 'woocommerce' ),
     'options'     => array(
-                        'N/A'       => __( 'N/A', 'woocommerce' ),
-                        'Part'      => __( 'Part', 'woocommerce' ),
-                        'Equipment' => __( 'Equipment', 'woocommerce' ),
-                        'Part'      => __( 'Part Repair', 'woocommerce' ),
-                        'Repair'    => __( 'Equipment Repair', 'woocommerce' )
+                        'N/A'              => __( 'N/A', 'woocommerce' ),
+                        'Part'             => __( 'Part', 'woocommerce' ),
+                        'Part Repair'      => __( 'Part Repair', 'woocommerce' ),
+                        'Equipment'        => __( 'Equipment', 'woocommerce' ),
+                        'Equipment Repair' => __( 'Equipment Repair', 'woocommerce' )
                         ),
 		'desc_tip'    => 'true',
 		'description' => __( 'Part or Equipment?' )
@@ -663,6 +663,7 @@ woocommerce_wp_select(
     'options'     => array(
                         'N/A'             => __( 'N/A', 'woocommerce' ),
                         'New'             => __( 'New', 'woocommerce' ),
+                        'Used'            => __( 'Used', 'woocommerce' ),
                         'Reconditioned'   => __( 'Reconditioned', 'woocommerce' ),
                         'OEM Replacement' => __( 'OEM Replacement', 'woocommerce' ),
                         'OEM Original'    => __( 'OEM Original', 'woocommerce' ),
