@@ -920,6 +920,7 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #fixed-row{height:50px;}
 #form-row{background: #fff !important;}
 .ctr_search {margin-top: -27px;}
+#dia-logo-left img { width: 100%; margin-left: 15px}
 }
 
 @media screen and (max-width: 992px){
@@ -948,5 +949,5 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #landing_nav-wrap a.landing_nav{font-size:1.1em; font-weight: 600 !important; }
 #landing_nav-wrap .container { padding:0;}
 .form-row-child{width:300px; float:left; margin-left: 43px;}
-.ctr_search{margin:-27px 0 0 0;}
+.ctr_search{margin:-20px 0 0 0;}
 }

@@ -57,9 +57,11 @@ function addClassesMobile($when) {
 		if($(window).width() < 992) {
 				$('#mobile-navbar').addClass('navbar navbar-default navbar-fixed-top');
 				$('#form-row').addClass('row');
+				$('#drop-menu').removeClass('navbar navbar-default navbar-static-top');
 		} else {
 			$('#mobile-navbar').removeClass('navbar navbar-default navbar-fixed-top');
 			$('#form-row').removeClass('row');
+			$('#drop-menu').addClass('navbar navbar-default navbar-static-top');
 		}
 	})
 }
@@ -144,9 +146,8 @@ addClassesMobile('resize');
 </div>
 </header> <!-- #masthead -->
 
-
-
-
+<nav id="drop-menu" class="navbar navbar-default navbar-static-top">
+	<div class="container">
     <div class="navbar-header">
 
 			<?php
@@ -200,3 +201,5 @@ wp_nav_menu(array(
 ?>
 
 		</div><!-- .navbar-header -->
+	</div> <!-- /.container -->
+</nav>
