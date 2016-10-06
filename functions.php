@@ -828,10 +828,7 @@ function product_cat_form_custom_field_save( $term_id, $tt_id ) {
     }
 }
 
-
-
-/** Function to loop through arrays for special pages - hospital - ltc - ems **/
-
+// --  Function to loop through arrays for special pages - hospital - ltc - ems
 function benz_loop_special_cats($cat_array) {
 ?>
   <ul class="products">
@@ -844,23 +841,19 @@ function benz_loop_special_cats($cat_array) {
       $first = '' ;
     }
   ?>
-
     <li class="product-category product<?php echo $first; ?>">
       <a href="<?php echo site_url(); ?>/product-category/<?php echo $link[slug]; ?>">
         <img width="250" height="275" alt="<?php echo $link[name]; ?>" src="<?php echo site_url(); ?>/wp-content/uploads/<?php echo $link[img]; ?>">
         <h3><?php echo $link[name]; ?></h3>
       </a>
     </li>
-
   <?php $count++; ?>
   <?php endforeach ; ?>
-
   </ul>
-
 <?php
-
 }
 
+// -- IS_DIA_PART()
 function is_dia_part() {
   $isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
   if ($isPart == 'Part')
