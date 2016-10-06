@@ -826,3 +826,37 @@ function product_cat_form_custom_field_save( $term_id, $tt_id ) {
         update_option( $option_name, $_POST['featured'] );
     }
 }
+
+
+
+/** Function to loop through arrays for special pages - hospital - ltc - ems **/
+
+function benz_loop_special_cats($cat_array) {
+?>
+  <ul class="products">
+  <?php
+  $count = 0;
+  foreach ($cat_array as $link ) :
+    if ($count % 3 == 0) {
+      $first = ' first' ;
+    } elseif ($count % 3 != 0) {
+      $first = '' ;
+    }
+  ?>
+
+    <li class="product-category product<?php echo $first; ?>">
+      <a href="<?php echo site_url(); ?>/product-category/<?php echo $link[slug]; ?>">
+        <img width="250" height="275" alt="<?php echo $link[name]; ?>" src="<?php echo site_url(); ?>/wp-content/uploads/<?php echo $link[img]; ?>">
+        <h3><?php echo $link[name]; ?></h3>
+      </a>
+    </li>
+
+  <?php $count++; ?>
+  <?php endforeach ; ?>
+
+  </ul>
+
+<?php
+
+
+}
