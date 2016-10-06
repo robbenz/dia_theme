@@ -93,6 +93,7 @@ addClassesMobile('resize');
 		}
 ?>
 <header id="masthead" role="banner">
+	<div class="container">
 	<nav id="mobile-navbar">
 	<div id="fixed-row" class="row">
 		<div id="dia-logo-left">
@@ -140,6 +141,7 @@ addClassesMobile('resize');
 </div> <!-- #mm-right-contact -->
 </div> <!-- .container -->
 </nav>
+</div>
 </header> <!-- #masthead -->
 
 
