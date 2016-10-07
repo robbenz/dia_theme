@@ -20,18 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_breadcrumb - 20
 		 */
 		do_action( 'woocommerce_before_main_content' );
-
-global $post;
-$parts_cats_all = array();
-$t_id = get_queried_object()->term_id;
-$option_find = get_option("product_cat_featured_$t_id");
-if ($option_find == 'Parts') {
-	array_push($parts_cats_all, $t_id ) ;
-}
-
-  //  if (! is_product_category( array_keys($parts_cats_all) ) ):   -- this works but i cant figure out why
-	if ( in_array($t_id, $parts_cats_all ) ):
-
+?>
+<?php
+if ( is_dia_parts_cat() ) :
 	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
 	$single_cat = array_shift( $product_cats );
 ?>
@@ -90,7 +81,10 @@ global $product;
 		<?php //THIS IS CRUCIAL FOR DIVA PLUGIN
 		$t_id = get_queried_object()->term_id;
 		$term_meta = get_option( "taxonomy_$t_id" );
-		echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>'; ?>
+		if 	(isset($term_meta['custom_term_meta'])) {
+		echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
+	}
+	?>
 	<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 		<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 	<?php endif; ?>

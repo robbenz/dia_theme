@@ -26,83 +26,26 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see woocommerce_default_product_tabs()
  */
 
- // begin if statement for free shipping icons on product pages
- global $product_notfree_ship;
-     global $post;
-     $product_id = $post->ID;
-     $product_notfree_ship= array(
-			 '68580',
-			 '68577',
-			 '68567',
-			 '68583',
-			 '68574',
-			 '68571',
-			 '68564',
-			 '68561',
-			 '68558',
-			 '57953',
-			 '57439',
-			 '36450',
-			 '36448',
-			 '36446',
-			 '36444',
-			 '30724',
-			 '30706',
-			 '30712',
-			 '30708',
-			 '30714',
-			 '30720',
-			 '30722',
-			 '30710',
-			 '30704',
-			 '30718',
-			 '30716',
-			 '30664',
-			 '30666',
-			 '30668',
-			 '30670',
-			 '30672',
-			 '30674',
-			 '30676',
-			 '30678',
-			 '30680',
-			 '30682',
-			 '30684',
-			 '30686',
-			 '30688',
-			 '30694',
-			 '30696',
-			 '30698',
-			 '30700',
-			 '30702',
-			 '30690',
-			 '30692',
-			 '30928',
-			 '30937'
-		 );
+ global $product;
+ $shipping_class = $product->get_shipping_class(); ?>
 
-     if ( is_single($product_notfree_ship) ) {
-         echo '<div id="free_ship-productpage">';
-         echo '<img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" style="float:left; margin-right:0.5em; ">';
-         echo '<div style="padding-top:10px;"><span class="red_free">FREE SHIPPING</span><br>When You Order Online</div>';
-         echo '</div>';
-     }  // else {
-        // echo '<div id="free_ship-productpage">';
-        // echo '<p class="add_shipp">*Additional Shipping Charges Apply</p>';
-        // echo '</div>';
-     // }
-
-?>
+ <?php if ( $shipping_class == 'free-shipping' ) : ?>
+ <div id="free_ship-productpage">
+	 <img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" style="float:left; margin-right:0.5em;" />
+	 <div style="padding-top:10px;">
+		 <span class="red_free">FREE SHIPPING</span><br>When You Order Online
+	 </div>
+</div>
+<?php endif; ?>
 
 <?php
-global $product;
+global $post;
 $pm_check = get_post_meta( $post->ID, 'benz_pm_checkbox', true );
 $pm_link = get_post_meta( $post->ID, 'benz_pm_link_text_field', true );
 $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
+?>
 
-if ($pm_check == 'yes')  {
-	?>
-
+<?php if ($pm_check == 'yes') : ?>
 <div id="p_maint-productpage">
 	<a href="<?php echo site_url() . '/' . $pm_link; ?>"><img style="float:left; margin-right:0.5em;" width="84" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" /></a>
 	<div style="padding-top:3px; margin-bottom: 1em; font-size:0.87em;">
@@ -117,11 +60,9 @@ if ($pm_check == 'yes')  {
 		</a>
 	</div>
 </div>
+<?php endif ;?>
 
-<?php } else { }
-
-$tabs = apply_filters( 'woocommerce_product_tabs', array() );
-?>
+<?php $tabs = apply_filters( 'woocommerce_product_tabs', array() ); ?>
 
 	<div class="woocommerce-tabs wc-tabs-wrapper">
 		<ul class="tabs wc-tabs">
