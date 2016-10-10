@@ -33,13 +33,20 @@ if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;
 
-	if (is_product_category('9363')) { // infusion pump repairs ?>
+	if (is_product_category('9363')) { // infusion pump repairs?>
 		<nav class="woocommerce-breadcrumb">
 			<a href="<?php echo site_url(); ?>">Home</a> /
 			<a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">On-Site Repairs &amp; Preventive Maintenance</a> /
 			Infusion Pump - Service &amp; Repairs
 		</nav>
 	<?php
+} elseif (is_product_category('9374')) { // component repairs ?>
+	<nav class="woocommerce-breadcrumb">
+		<a href="<?php echo site_url(); ?>">Home</a> /
+		<a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">On-Site Repairs &amp; Preventive Maintenance</a> /
+		Hill-Rom Components - Repairs
+	</nav>
+<?php
 } elseif (is_product_category(array_keys($repairs_cat_pumps) ) ){
 	foreach ($repairs_cat_pumps as $key => $value) {
 		if (is_product_category($key)) { ?>
