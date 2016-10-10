@@ -59,9 +59,9 @@ function addClassesMobile($when) {
 				$('#form-row').addClass('row');
 				$('#drop-menu').removeClass('navbar navbar-default navbar-static-top');
 		} else {
-			$('#mobile-navbar').removeClass('navbar navbar-default navbar-fixed-top');
-			$('#form-row').removeClass('row');
-			$('#drop-menu').addClass('navbar navbar-default navbar-static-top');
+				$('#mobile-navbar').removeClass('navbar navbar-default navbar-fixed-top');
+				$('#form-row').removeClass('row');
+				$('#drop-menu').addClass('navbar navbar-default navbar-static-top');
 		}
 	})
 }
