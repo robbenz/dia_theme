@@ -302,8 +302,6 @@ function products_per_page_category( $count ) {
     return 1999;
   elseif( is_product_category( '9350') ) :  // Bariatric Care
     return 27;
-  elseif( is_product_category( '5357') ) : // obesity trainers
-    return 9;
   else :
    return 12;
   endif;
