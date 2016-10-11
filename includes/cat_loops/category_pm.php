@@ -33,7 +33,7 @@ foreach ($pm_cats_array as $key => $value) :
       }
       echo '<img src="' . $image . '" />' ;
       benz_pm_img_placement();
-      echo '<h3>' . $sc->name . '</h3></a></li>';
+      echo '<h3>' . $sc->name . ' <br>- <span style="font-weight:bold;">Repair</span></h3></a></li>';
       $counter++;
     endforeach;
   endif;

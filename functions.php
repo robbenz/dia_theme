@@ -833,26 +833,3 @@ function is_dia_part() {
   }
 }
 /* END */
-
-
-// -- Remove specific category ID's from the WooCommerce shop page ( Medical Equipment )
-add_action( 'pre_get_posts', 'dia_remove_product_cats_shop_page' );
-function dia_remove_product_cats_shop_page( $query ) {
-
-	// Comment out the line below to hide products in the admin as well
- //	if ( is_admin() ) return;
-
-	if ( is_shop() && $query->is_main_query() ) {
-
-		$query->set( 'tax_query', array(
-			array(
-				'taxonomy' => 'product_cat',
-				'field' => 'ID',
-				'terms' => array( 9363, 9374 ),
-				'operator' => 'NOT IN'
-			)
-		) );
-
-	}
-
-}
