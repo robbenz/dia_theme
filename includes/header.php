@@ -68,6 +68,22 @@ function addClassesMobile($when) {
 addClassesMobile('load');
 addClassesMobile('resize');
 
+/*function menuToggle(){
+	var previousScroll=0;
+
+	$(window).scroll(function(){
+		var currentScroll = $(this).scrollTop();
+		if( currentScroll > previousScroll){
+			$('#fixed-row').hide(300);
+			//$('#responsive-menu-button').addClass('header-toggle')
+		} else {
+			$('#fixed-row').show(300);
+			//$('#responsive-menu-button').removeClass('header-toggle');
+		}
+		previousScroll = currentScroll;
+	});
+}
+menuToggle();*/
 </script>
 
 </head>

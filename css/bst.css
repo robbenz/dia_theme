@@ -858,24 +858,36 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .rgt-img-home{padding:0;margin-bottom: 4%;}
 .lft-img-home {display:none;}
 .home-img-thirds{width:90%;margin: 0 5% 3% 5%;}
-#masthead { height:107px; }
 #click-menu {top: 224px !important;}
-#responsive-menu-button{margin:-70px 0 0 5px !important;}
-.ctr_search{margin:-27px 0 0 72px; width: 80%;}
-#form-row{background: #00426a;height: 54px; margin-top: -26px;}
+#responsive-menu-button{margin:-22px 0 0 -3px !important;}
+.ctr_search{margin:-2px 0 0 72px; width: 80%;}
+#form-row{background: #00426a;height: 54px;}
 .form-row-child{width:300px; float:right; margin-right: 43px;}
-#dia-logo-left img {width: 88%; display:block; margin-left:auto; margin-right:auto;}
+#dia-logo-left img {width: 88%; display:block; margin:25px auto 0 auto;}
 
 }
 
-@media (min-width: 350px) {
-.ctr_search{margin:-28px 0 0 15px; width: 95%;}
+@media (min-width: 360px) {
+.ctr_search{margin:-2px 0 0 15px; width: 95%;}
 }
 
+@media(max-width:385px) {
+  .social-left{padding:0;}
+  .social-mid, .social-right{padding: 0 0 0 10px;}
 
+}
+
+@media(min-width:386px){
+  .social-left{padding:0px 10px 0px 0px;}
+  .social-mid{padding:0px 15px 0px 15px;}
+  .social-right{padding:0px 0px 0px 15px;}
+}
 
 @media (min-width: 657px) {
 .ctr_search{margin:-2px 0px 0 15px; width: 95%;}
+.social-left{padding:0px 10px 0px 0px;}
+.social-mid{padding:0px 15px 0px 15px;}
+.social-right{padding:0px 0px 0px 15px;}
 }
 
 @media (min-width: 745px) {
@@ -888,13 +900,14 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .rgt-img-home{ padding:0;margin-bottom: 4%;}
 .lft-img-home { display:none;}
 .home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
-#masthead { height:117px; }
 #click-menu { top: 125px !important;}
-#responsive-menu-button {margin-top: -66px !important;}
+#responsive-menu-button {margin-top: -22px !important;}
 .navbar-fixed-top {min-height: 110px;}
 }
 @media(max-width: 767px){
   #footerlogos{display:none;}
+  #footerconnect{margin:0;}
+  #footerwrap{height: 200px;}
 }
 @media (min-width: 992px) {
 #mm-right-contact{ display:none;}
@@ -935,6 +948,9 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #medmatlogo{margin: 30px 0 0 10px; width:30%;}
 #simlablogo{margin: 30px 0 0 15px; width:30%;}
 #footerlinks1, #footerlinks2, #footerlinks3{display:none;}
+#form-row{margin-top:20px}
+#masthead { height:170px; }
+.header-toggle{top:-170px; transition-timing-function: ease-in-out;}
 }
 
 @media (min-width: 1200px) {
