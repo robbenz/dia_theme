@@ -348,7 +348,7 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 /* END */
 
 /*HEADERS*/
-#dia-logo-left { float: left; height: 80px; margin: 0; width: 356px; }
+#dia-logo-left { float: left; height: 80px; margin-top: -20px; width: 356px; }
 #dia-logo-left img { width: 100%; margin-left: 15px}
 #masthead { width: 100%; padding: 2em 0em 0em 0em; }
 .header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; font-family: lora, serif; font-size: 16.9px; }
@@ -859,12 +859,13 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .lft-img-home {display:none;}
 .home-img-thirds{width:90%;margin: 0 5% 3% 5%;}
 #click-menu {top: 224px !important;}
-#responsive-menu-button{margin:-22px 0 0 -3px !important;}
-.ctr_search{margin:-2px 0 0 72px; width: 80%;}
+#responsive-menu-button{margin:-40px 0 0 -3px !important;}
+.ctr_search{margin:-2px 0 0 63px; width: 80%;}
 #form-row{background: #00426a;height: 54px;}
 .form-row-child{width:300px; float:right; margin-right: 43px;}
 #dia-logo-left img {width: 88%; display:block; margin:25px auto 0 auto;}
-#responsive-menu-container{top:153px !important;}
+#responsive-menu-container{top:133px !important;}
+#footerlinks1{display:none;}
 
 }
 
@@ -885,12 +886,16 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 }
 
 @media (min-width: 657px) {
-.ctr_search{margin:-2px 0px 0 15px; width: 95%;}
+.ctr_search{margin:-2px 0px 0 0px; width: 95%;}
 .social-left{padding:0px 10px 0px 0px;}
 .social-mid{padding:0px 15px 0px 15px;}
 .social-right{padding:0px 0px 0px 15px;}
+#footerlinks1{margin: -153px 0 0 500px; display: block}
 }
 
+@media (max-width: 632px) {
+#content .col-md-4{padding:0 25px !important;}
+}
 @media (min-width: 745px) {
 #mm-right-contact{ display:none;}
 #homeorangewrap img{  display:none;}
@@ -902,9 +907,13 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .lft-img-home { display:none;}
 .home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
 #click-menu { top: 125px !important;}
-#responsive-menu-button {margin-top: -22px !important;}
 .navbar-fixed-top {min-height: 110px;}
 }
+
+@media (max-width: 744px){
+#content .col-md-4{padding: 0 100px;}
+}
+
 @media(max-width: 767px){
   #footerlogos{display:none;}
   #footerconnect{margin:0;}
@@ -935,11 +944,12 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #responsive-menu-button { margin-top: -45px !important;}
 #fixed-row{height:50px;}
 #form-row{background: #fff !important;}
-.ctr_search {margin-top: -27px;}
+.ctr_search {margin-top: -45px;}
 #dia-logo-left img { width: 100%; margin-left: 15px}
+#footerlinks1{margin: 0 0 0 24px;}
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
 button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #footerconnect{width:100%;}
 #footerwrap {width: 100%;}
@@ -948,7 +958,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #diamedicallogo{margin: 26px 0 0 48px; width:30%;}
 #medmatlogo{margin: 30px 0 0 10px; width:30%;}
 #simlablogo{margin: 30px 0 0 15px; width:30%;}
-#footerlinks1, #footerlinks2, #footerlinks3{display:none;}
+#footerlinks2, #footerlinks3{display:none;}
 #form-row{margin-top:20px}
 #masthead { height:170px; }
 .header-toggle{top:-170px; transition-timing-function: ease-in-out;}
@@ -976,5 +986,5 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #landing_nav-wrap a.landing_nav{font-size:1.1em; font-weight: 600 !important; }
 #landing_nav-wrap .container { padding:0;}
 .form-row-child{width:300px; float:left; margin-left: 43px;}
-.ctr_search{margin:-20px 0 0 0;}
+.ctr_search{margin:-44px 0 0 0;}
 }
