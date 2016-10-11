@@ -45,7 +45,9 @@ jQuery(document).ready(function() {
 		});
 
  });
+
 */
+
 </script>
 <script>
 /*** Add classes to #mobile-navbar on load & Resize ***/
@@ -66,9 +68,7 @@ function addClassesMobile($when) {
 addClassesMobile('load');
 addClassesMobile('resize');
 
-/* save for later - on scroll stuff
-
-function menuToggle(){
+/*function menuToggle(){
 	var previousScroll=0;
 
 	$(window).scroll(function(){
@@ -84,13 +84,12 @@ function menuToggle(){
 	});
 }
 menuToggle();*/
-
-
 </script>
 
 </head>
-<body <?php body_class(); ?>>
 
+
+<body <?php body_class(); ?>>
 <div id="landing_nav-wrap">
 	<div class="container">
 <a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
@@ -103,6 +102,7 @@ menuToggle();*/
 
 </div>
 
+</div>
 <?php
 		if(isset($_GET['login']) && $_GET['login']=='failed') {
 			echo '<p style="margin-top:0.8em;" class="woo-ma-login-failed woo-ma-error error-home-class-red">';
@@ -114,7 +114,6 @@ menuToggle();*/
 	<div class="container">
 	<nav id="mobile-navbar">
 	<div id="fixed-row" class="row">
-
 		<div id="dia-logo-left">
 			<a href="<?php echo site_url(); ?>">
 				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical-Logo-main.png" />
@@ -165,7 +164,6 @@ menuToggle();*/
 
 <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
 	<div class="container">
-
     <div class="navbar-header">
 
 			<?php
@@ -197,6 +195,7 @@ if ( function_exists( 'woo_predictive_search_widget' ) ) {
         'container_class' => $benzmenu . ' ' . $benzmenu . '-parts'
     ));
 }
+
 wp_nav_menu(array(
     'theme_location'  => 'repirstmp',
     'items_wrap'      => $benzitems,
