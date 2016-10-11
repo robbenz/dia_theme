@@ -47,20 +47,61 @@ jQuery(document).ready(function() {
  });
 */
 </script>
+<script>
+/*** Add classes to #mobile-navbar on load & Resize ***/
+
+function addClassesMobile($when) {
+	$(window).on($when, function() {
+		if($(window).width() < 992) {
+				$('#mobile-navbar').addClass('navbar navbar-default navbar-fixed-top');
+				$('#form-row').addClass('row');
+				$('#drop-menu').removeClass('navbar navbar-default navbar-static-top');
+		} else {
+				$('#mobile-navbar').removeClass('navbar navbar-default navbar-fixed-top');
+				$('#form-row').removeClass('row');
+				$('#drop-menu').addClass('navbar navbar-default navbar-static-top');
+		}
+	})
+}
+addClassesMobile('load');
+addClassesMobile('resize');
+
+/* save for later - on scroll stuff
+
+function menuToggle(){
+	var previousScroll=0;
+
+	$(window).scroll(function(){
+		var currentScroll = $(this).scrollTop();
+		if( currentScroll > previousScroll){
+			$('#fixed-row').hide(300);
+			//$('#responsive-menu-button').addClass('header-toggle')
+		} else {
+			$('#fixed-row').show(300);
+			//$('#responsive-menu-button').removeClass('header-toggle');
+		}
+		previousScroll = currentScroll;
+	});
+}
+menuToggle();*/
+
+
+</script>
 
 </head>
 <body <?php body_class(); ?>>
-	<div id="landing_nav-wrap">
-		<div class="container">
-			<a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
-			<a class="landing_nav hvr-shutter-out-horizontal landing_nav-mattresses" target="_blank" href="http://www.medmattress.com">Mattresses</a>
-			<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
-			<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
-			<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ems" href="<?php echo site_url(); ?>/emergency-rescue">Emergency &amp; Rescue</a>
-			<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
-			<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
-		</div>
-	</div>
+
+<div id="landing_nav-wrap">
+	<div class="container">
+<a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
+<a class="landing_nav hvr-shutter-out-horizontal landing_nav-mattresses" target="_blank" href="http://www.medmattress.com">Mattresses</a>
+<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
+<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
+<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ems" href="<?php echo site_url(); ?>/emergency-rescue">Emergency &amp; Rescue</a>
+<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
+<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
+
+</div>
 
 <?php
 		if(isset($_GET['login']) && $_GET['login']=='failed') {
@@ -71,54 +112,60 @@ jQuery(document).ready(function() {
 ?>
 <header id="masthead" role="banner">
 	<div class="container">
+	<nav id="mobile-navbar">
+	<div id="fixed-row" class="row">
+
 		<div id="dia-logo-left">
 			<a href="<?php echo site_url(); ?>">
 				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical-Logo-main.png" />
 			</a>
 		</div>
-<div style="width:300px; float:left; margin-left: 43px;">
-		<?php
-	$ps_echo = true ;
-	if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
-	?>
-</div>
-	<div id="mm-right-contact">
+	</div>
+		<div id="form-row"class="row">
+			<div id="form-row-c1" class="form-row-child">
+				<?php
+				$ps_echo = true ;
+				if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
+				?>
+			</div>
+			<div id="mm-right-contact">
 
-		<?php
+				<?php
 
- $benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
+ 				$benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
 
-	echo '<span class="mm-right-contact-1">' . 'CONTACT US: (877) 593-6011' . '</span>';
-	echo '<span class="mm-right-contact-2">' . '   (M-F: 7-6 EST)' . '</span>' . '<br />';
+				echo '<span class="mm-right-contact-1">' . 'CONTACT US: (877) 593-6011' . '</span>';
+				echo '<span class="mm-right-contact-2">' . '   (M-F: 7-6 EST)' . '</span>' . '<br />';
 
-	wp_nav_menu( array(
-		'theme_location'  => 'header-menu',
-		'items_wrap'      => $benzitems,
-	  'walker'          => new BENZ_Walker_Nav_Menu
-	) );
-	if ( is_user_logged_in() ) {
-		wp_nav_menu( array(
-			'theme_location'  => 'myaccount',
-			'items_wrap'      => $benzitems,
-			'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
-		) );
-	} else {
-		wp_nav_menu( array(
-			'theme_location'  => 'sign-in-menu',
-			'items_wrap'      => $benzitems,
-			'walker'          => new BENZ_Walker_Nav_Menu_SIGNIN
-		) );
-	};
+				wp_nav_menu( array( 'theme_location'  => 'header-menu',
+	                    'items_wrap'      => $benzitems,
+	                    'walker'          => new BENZ_Walker_Nav_Menu
+										) );
 
-	echo do_shortcode('[WooCommerceWooCartPro]');
-?>
+										if ( is_user_logged_in() ) {
+											wp_nav_menu( array( 'theme_location'  => 'myaccount',
+											                    'items_wrap'      => $benzitems,
+	                                        'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
+																				) );
+										} else {
+											wp_nav_menu( array( 'theme_location'  => 'sign-in-menu',
+    																			'items_wrap'      => $benzitems,
+																					'walker'          => new BENZ_Walker_Nav_Menu_SIGNIN
+																				) );
+																			};
 
+																			echo do_shortcode('[WooCommerceWooCartPro]');
+
+																			?>
 </div> <!-- #mm-right-contact -->
 </div> <!-- .container -->
+</nav>
+</div>
 </header> <!-- #masthead -->
 
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="container">
+<nav id="drop-menu" class="navbar navbar-default navbar-static-top">
+	<div class="container">
+
     <div class="navbar-header">
 
 			<?php
@@ -171,5 +218,5 @@ wp_nav_menu(array(
 ?>
 
 		</div><!-- .navbar-header -->
-  </div><!-- /.container -->
+	</div> <!-- /.container -->
 </nav>
