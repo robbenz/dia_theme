@@ -1,17 +1,14 @@
 <footer id="colophon" class="site-footer" role="contentinfo">
   <div id="footer2014">
   <div id="footerwrap" class="container">
-
   <div id="footerlogos" class="row">
   <div id="diamedicallogo" class="col-xs-4"><a href="<?php echo site_url(); ?>"><img src="https://diamedicalusa.com/wp-content/imgs/footer-sample/diamedicallogosmall.png" /></a></div>
   <div id="medmatlogo" class="col-xs-4"><a href="http://medmattress.com"><img src="https://diamedicalusa.com/wp-content/imgs/footer-sample/medmattlogo.png" /></a></div>
   <div id="simlablogo" class="col-xs-4"><a href="<?php echo site_url(); ?>/simlabsolutions/"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/simlablogo.png" /></a></div>
-
   </div><!--footerlogos-->
 
   <div id="footerconnect">
   <span class="connecttop">p. (877) 593-6011<br />f.&nbsp;&nbsp;(248) 671-1550<br /></span>
-
   <span class="connectbottom">Info@DiaMedicalUSA.com<br />5807 W. Maple, Suite #175, <br>West Bloomfield, MI 48322<br /></span>
   <br />
 
@@ -33,7 +30,6 @@
   onMouseOut="this.src='https://diamedicalusa.com/wp-content/imgs/social/pinterest-hover.png';"/></a>
 
   <a href="http://diamedicalusa.com/blog/" target="_blank"><img class="social-right" src="https://diamedicalusa.com/wp-content/imgs/social/wordpress-hover.png"
-
   onMouseOver="this.src='https://diamedicalusa.com/wp-content/imgs/social/wordpress.png';"
   onMouseOut="this.src='https://diamedicalusa.com/wp-content/imgs/social/wordpress-hover.png';"/></a>
   </span><!--socialicons2014-->
