@@ -742,7 +742,7 @@ function benz_add_category_headers() {
 
 // -- Small Repairs img for every gallery page -- PM project
 function benz_pm_img_placement(){
-  echo '<img style="width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; top: 170px; right:-4px; z-index:99" src="';
+  echo '<img class="img_plc_pm_wrench" src="';
   echo site_url();
   echo '/wp-content/imgs/repairs-preventive-maintenance.png" />';
 }

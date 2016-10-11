@@ -41,7 +41,7 @@ td.quotes-actions a{margin:0 1em; }
 /* END */
 
 /* landing_nav */
-.landing_page .col-sm-8 {width:72.5% !important; }
+
 .landing_page ul.products li.product { margin: 0 2% !important;}
 .page-id-58427 .grid figcaption {text-align:left; }
 .page-id-58427 .grid figcaption a{background-color: none; }
@@ -266,7 +266,6 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .wc-tabs > div { }
 .panel { border: 0 !important; box-shadow: 0 !important; border: none !important; box-shadow: none !important; }
 .related h2, .upsells h2 { text-transform: uppercase; color:#78be20; font-size: 30px; font-weight:400;}
-.woocommerce .woocommerce-breadcrumb {font-size:18px;}
 .reset_variations{display:none !important;}
 [id*="product-"] .onsale{display:none;}
 .woocommerce_widget_cart-5 h4 { background-color: #ffad00; border-radius: 0.2em; color: #00426a; font-size: 165%; padding: 0.2em; text-align: center; text-shadow: none; }
@@ -308,7 +307,7 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #dmcssmenu4 ul li:hover > ul {visibility: visible; text-shadow:none;}
 #dmcssmenu4 ul li {float: none;}
 #dmcssmenu4 ul ul li {font-weight: normal;}
-#dmcssmenu4 {font-family: 'Lato', sans-serif !important;font-size: 16px !important;width: 250px;border: 0;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
+#dmcssmenu4 {font-family: 'Lato', sans-serif !important;border: 0;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
 #dmcssmenu4 ul a,
 #dmcssmenu4 ul a:link,
 #dmcssmenu4 ul a:visited {display: block;color: #00426a;text-decoration: none;font-weight: 700;}
@@ -865,6 +864,11 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .form-row-child{width:300px; float:right; margin-right: 43px;}
 #dia-logo-left img {width: 88%; display:block; margin:25px auto 0 auto;}
 #responsive-menu-container{top:153px !important;}
+.woocommerce .woocommerce-breadcrumb {font-size:12px;padding: 0 3vw;}
+.landing_page .col-sm-8 {width:100% !important; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width:95%;}
+img.img_plc_pm_wrench {  max-height:80px; max-width:80px; position:absolute; top: 73vw; right:4vw; z-index:99; }
+
 
 }
 
@@ -884,11 +888,19 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
   .social-right{padding:0px 0px 0px 15px;}
 }
 
+@media (min-width: 500px) {
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width:45%;}
+img.img_plc_pm_wrench {   top: 35vw; right:1vw; max-height:60px; max-width:60px;}
+
+}
+
+
 @media (min-width: 657px) {
 .ctr_search{margin:-2px 0px 0 15px; width: 95%;}
 .social-left{padding:0px 10px 0px 0px;}
 .social-mid{padding:0px 15px 0px 15px;}
 .social-right{padding:0px 0px 0px 15px;}
+.woocommerce .woocommerce-breadcrumb {font-size:15px;padding: 0; }
 }
 
 @media (min-width: 745px) {
@@ -897,7 +909,8 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .sidebar{ display:none;}
 .archive #content .products { float: none; width: 100%; }
 .header-wrap-text-medical-equipment { width:100%; }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product { margin: 0 3%; width: 40%; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product { margin: 0; width: 29%; }
+img.img_plc_pm_wrench {   top: 180px; }
 .rgt-img-home{ padding:0;margin-bottom: 4%;}
 .lft-img-home { display:none;}
 .home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
@@ -909,6 +922,7 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
   #footerlogos{display:none;}
   #footerconnect{margin:0;}
   #footerwrap{height: 200px;}
+/* .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 40%;margin:0 ;} */
 }
 @media (min-width: 992px) {
 #mm-right-contact{ display:none;}
@@ -924,11 +938,11 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .sidebar{display:block;}
 .archive #content .products {float:right; width:70%;}
 .header-wrap-text-medical-equipment { width: 684px; }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%;margin:0 1.2%;}
+/*.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%;margin:0 1.2%;}*/
 .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
 .lft-img-home {display:block;}
 .home-img-thirds{width:100%;}
-#sidebar { float: left; max-width: 300px; min-height: 400px; }
+#sidebar { float: left; max-width: 300px; min-height: 400px; width:27%;}
 #benz-menu-about .benz-menu-about-copy { font-size: 12.88px; }
 #landing_nav-wrap a.landing_nav{font-size:0.89em;}
 #landing_nav-wrap{display:block }
@@ -937,6 +951,10 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #form-row{background: #fff !important;}
 .ctr_search {margin-top: -27px;}
 #dia-logo-left img { width: 100%; margin-left: 15px}
+.woocommerce .woocommerce-breadcrumb {font-size:18px;padding:0;}
+.landing_page .col-sm-8 {width:72.5% !important; }
+img.img_plc_pm_wrench { width: 5.6vw; height:5.6vw; max-height:80px; max-width:80px; position:absolute; top: 170px; right:-4px; z-index:99; }
+#dmcssmenu4 { width:199px; font-size: 14px; }
 }
 
 @media screen and (max-width: 992px){
@@ -952,6 +970,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #form-row{margin-top:20px}
 #masthead { height:170px; }
 .header-toggle{top:-170px; transition-timing-function: ease-in-out;}
+
 }
 
 @media (min-width: 1200px) {
@@ -977,4 +996,5 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #landing_nav-wrap .container { padding:0;}
 .form-row-child{width:300px; float:left; margin-left: 43px;}
 .ctr_search{margin:-20px 0 0 0;}
+#dmcssmenu4 { width:250px; font-size: 16px; }
 }
