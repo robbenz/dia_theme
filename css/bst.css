@@ -229,7 +229,7 @@ input:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 textarea:focus::-webkit-input-placeholder { color: transparent; }
 textarea:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
 textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
-#responsive-menu {top: 166px !important; position:absolute !important;}
+#responsive-menu {top: 25px !important; position:absolute !important;}
 #click-menu{ position:absolute !important; }
 #responsive-menu .appendLink {font-size:20px; width:26px; text-align:center; }
 /* END */
@@ -864,6 +864,7 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #form-row{background: #00426a;height: 54px;}
 .form-row-child{width:300px; float:right; margin-right: 43px;}
 #dia-logo-left img {width: 88%; display:block; margin:25px auto 0 auto;}
+#responsive-menu-container{top:153px !important;}
 
 }
 
