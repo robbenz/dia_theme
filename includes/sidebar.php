@@ -346,6 +346,7 @@
       <li class="active has-sub">
         <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/"><span>Service &amp; Repairs</span></a>
         <ul>
+          <li><a href="<?php echo site_url(); ?>/product-category/components-service-repairs/"><span>Components</span></a></li>
           <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/"><span>Cots &amp; Stretchers</span></a></li>
           <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/"><span>Exam Tables</span></a></li>
           <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/"><span>Headwalls</span></a></li>
