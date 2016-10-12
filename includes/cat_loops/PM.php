@@ -21,7 +21,7 @@
 
 <div class="new_pm_row row">
   <div class="col-sm-4">
-    <a href="<?php echo site_url(); ?>site-repairs-preventive-maintenance/hospital-bed-repair/">
+    <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">
       <div class="pm_square">
         <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/hospital-bed-service.png" />
         HOSPITAL BED
@@ -32,7 +32,7 @@
     </a>
   </div>
   <div class="col-sm-4">
-    <a href="<?php echo site_url(); ?>product-category/infusion-pump-service-repairs/">
+    <a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">
       <div class="pm_square">
         <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/infusion-pump-service.png" />
         INFUSION PUMP
@@ -107,9 +107,9 @@
   </div>
 
 </div><!-- .new_pm_row -->
-
+<a href="#" class="eModal-13">
 <img style="margin-top:20px;" src="<?php echo site_url(); ?>/wp-content/imgs/National-Service-network.png" />
-
+</a>
 
 <!--
 light green #b7dd79

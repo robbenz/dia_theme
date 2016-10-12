@@ -732,16 +732,19 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
 
 // -- Category headers
 function benz_add_category_headers() {
+  $content = get_the_content();
   echo '<div class="term-description"><div class="header-wrap-text-medical-equipment"><h2 class="header-wrap-text-medical-equipment-header">';
   the_title();
   echo '</h2>';
-  the_excerpt();
+//  the_content();
+  echo mb_strimwidth($content, 0, 507, '');
   echo '</div></div>';
 }
 /* END */
 
 // -- Small Repairs img for every gallery page -- PM project
 function benz_pm_img_placement(){
+
   echo '<img class="img_plc_pm_wrench" src="';
   echo site_url();
   echo '/wp-content/imgs/repairs-preventive-maintenance.png" />';
