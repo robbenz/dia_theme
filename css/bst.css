@@ -1,3 +1,49 @@
+@font-face {
+    font-family: 'ristretto_promedium';
+    src: url('ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.eot');
+    src: url('ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.woff2') format('woff2'),
+         url('ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.woff') format('woff'),
+         url('ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.ttf') format('truetype'),
+         url('ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.svg#ristretto_promedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ristretto_proregular';
+    src: url('ristrettopro_regular_macroman/ristrettopro_regular_macroman/RistrettoPro-Regular-webfont.eot');
+    src: url('ristrettopro_regular_macroman/ristrettopro_regular_macroman/RistrettoPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('ristrettopro_regular_macroman/RistrettoPro-Regular-webfont.woff2') format('woff2'),
+    url('ristrettopro_regular_macroman/RistrettoPro-Regular-webfont.woff') format('woff'),
+    url('ristrettopro_regular_macroman/RistrettoPro-Regular-webfont.ttf') format('truetype'),
+    url('ristrettopro_regular_macroman/RistrettoPro-Regular-webfont.svg#ristretto_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ristretto_prolight';
+    src: url('ristrettopro_light_macroman/RistrettoPro-Light-webfont.eot');
+    src: url('ristrettopro_light_macroman/RistrettoPro-Light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('ristrettopro_light_macroman/RistrettoPro-Light-webfont.woff2') format('woff2'),
+    url('ristrettopro_light_macroman/RistrettoPro-Light-webfont.woff') format('woff'),
+    url('ristrettopro_light_macroman/RistrettoPro-Light-webfont.ttf') format('truetype'),
+    url('ristrettopro_light_macroman/RistrettoPro-Light-webfont.svg#ristretto_prolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ristretto_probold';
+    src: url('ristrettopro_bold_macroman/RistrettoPro-Bold-webfont.eot');
+    src: url('ristrettopro_bold_macroman/RistrettoPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('ristrettopro_bold_macroman/RistrettoPro-Bold-webfont.woff2') format('woff2'),
+    url('ristrettopro_bold_macroman/RistrettoPro-Bold-webfont.woff') format('woff'),
+    url('ristrettopro_bold_macroman/RistrettoPro-Bold-webfont.ttf') format('truetype'),
+    url('ristrettopro_bold_macroman/RistrettoPro-Bold-webfont.svg#ristretto_probold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Max content widths */
 .size-auto, .size-full, .size-large, .size-medium, .size-thumbnail { max-width: 100%; height: auto }
 /* END */
@@ -806,9 +852,6 @@ ul.icons-medium li { margin:0 7.5%; }
 #robly_embedded_subscribe_form #robly_embedded_subscribe{width:100%; margin-top:5%; }
 /*END*/
 
-.rs_rs_addtocart .product_type_variable { margin-top:22px !important; }
-
-
 
 /* MFT PAGE */
 #content-directory { margin-left:150px; margin-top:20px; }
@@ -818,71 +861,52 @@ ul.icons-medium li { margin:0 7.5%; }
 #content-directory-list4 { width: 225px; margin: 0px 0px 0px 0px; padding: 0px 10px; background: url(/wp-content/imgs/homepage/directory-bg-col2_bottom.jpg) bottom left repeat-x; float: left; height: 1190px; }
 /* END */
 
+/* MISC */
+.rs_rs_addtocart .product_type_variable { margin-top:22px !important; }
 .viewprice-detail{display:block;}
 .logged-in .viewprice-detail{display:none;}
 .woocommerce div.product div.images, .woocommerce div.product div.summary {margin-top:1em; }
 #wpp-buttons{  left: 0; position: absolute;  top: -19px;}
 #wpp-buttons a{ padding:5px 10px; background-color:#78be20; color:#fff; border-radius:0.3em;   }
 #wpp-buttons a:hover {background-color:#00426a; }
-
-
 #viewprice-detail{display:block !important;}
 .logged-in #viewprice-detail{display:none !important;}
-
 ul.products .cart { display:none;}
 ul.products .variations{ display:none;}
 ul.products #viewprice-detail  { display:none !important;}
 .single-product .r-a-qbutton-price {display:none !important; }
-
 p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
-
+/* END */
 
 /* PM PAGE */
 #pm_blue_1 { padding-top:0.4em; height:50px; background-color:#00426a; width:100%; text-align:center;}
 #pm_blue_1 p{ color:#fff; font-family: 'Lato',sans-serif; font-weight:300; letter-spacing: 1.3px;}
 .pm_ltgreen{float:left; font-family: 'Lato',sans-serif;text-align:center;}
-
-#pm_ltgreen_1{
-
-  background-color:#b7dd79;
-   width:45%;
-  height:90px;
-  padding:10px;
-
-
-}
-
-.pm_ltgreen em{font-weight:300}
-.pm_ltgreen span{font-weight:600}
-#pm_ltgreen_2{
-float:left;
-  background-color:#b7dd79;
-  width:10%;
-  height:0px;
-
-border-bottom: 90px solid #e4f2cc;
-border-left: 50px solid transparent;
-
-}
-#pm_ltgreen_3{
-  background-color:#e4f2cc;
-  width:45%;
-
-  height:0px;
-  border-bottom: 90px solid #b7dd79;
-  border-left: 50px solid transparent;
-
-}
-.pm_square {background-color:#00426a; color:#ffad00; text-align:center;}
+#pm_ltgreen_1{ background-color:#b7dd79; width:45%; height:90px; padding:10px; }
+.pm_ltgreen em { font-weight:300;}
+.pm_ltgreen span{ font-weight:600; }
+#pm_ltgreen_2 p { font-size:42px; font-family: 'ristretto_promedium', Arial, sans-serif; position:relative; top:10px;}
+#pm_ltgreen_2 { float:left; background-color:#b7dd79; width:10%; height:0px; border-bottom: 90px solid #e4f2cc; border-left: 50px solid transparent; }
+#pm_ltgreen_3 { background-color:#e4f2cc; width:45%; height:0px; border-bottom: 90px solid #b7dd79; border-left: 50px solid transparent; }
+.pm_square {background-color:#00426a; color:#ffad00; text-align:center; font-family: 'ristretto_proregular', Arial, sans-serif;  }
 .new_pm_row {margin-top:20px;}
 .pm_white{color:#fff !important;}
-/*.page-id-57935 .row{margin:0 20px;} */
+
+
+
+.new_pm_row .col-sm-4 .pm_square{font-size:35px;}
+.new_pm_row .col-sm-3 .pm_square{font-size:24px;}
 /* END */
 
 
-/*.single_add_to_cart_button {display:none !important;}
-.logged-in .single_add_to_cart_button {display:block !important;}
+/*
+font-family: 'ristretto_proregular', Arial, sans-serif;
+font-family: 'ristretto_promedium', Arial, sans-serif;
+font-family: 'ristretto_prolight', Arial, sans-serif;
+font-family: 'ristretto_probold', Arial, sans-serif;
 */
+
+
 
 /*  =================================================================================  */
 /*  ==============================                         ==========================  */
@@ -983,7 +1007,7 @@ img.img_plc_pm_wrench { top: 171px; }
   #footerlogos{display:none;}
   #footerconnect{margin:0;}
   #footerwrap{height: 200px;}
-.new_pm_row{}
+
 
 }
 
