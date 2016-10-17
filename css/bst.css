@@ -298,7 +298,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce div.product form.cart .variations {width:90%; }
 .woocommerce div.product form.cart .variations select {margin-top:10px; }
 .product_meta{ font-size:15px; color:#ffad00; margin-bottom: 20px; }
-.woocommerce .upsells li.product, .woocommerce .related li.product, .woocommerce-page .upsells li.product, .woocommerce-page .related li.product { max-width: 22.8% !important; margin-right: 1% !important; }
+
 .posted_in a{color:#000;}
 .posted_in a:hover{color:#000;}
 .woocommerce div.product p.price, .woocommerce div.product span.price { color: #78be20; font-size: 1.95em; margin-bottom:0.5em;}
@@ -763,7 +763,7 @@ tr.cart-discount td {text-align:right !important;}
 #post_13 .entry-wrap {padding: 16px 0px 0px 0px !important;}
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: none !important; border-radius: 0px !important; margin:0 !important; padding: 0px !important; text-align: left; }
 #left-col-first-name{clear:both;}
-.woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; width: 21.05% !important; }
+.woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; }
 /* END */
 
 /*LOST PASSWORD*/
@@ -942,6 +942,8 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
 img.wp-post-image{margin:-42px 0 -55px 0; padding: 0;}
 #p_maint-productpage{width:66%; padding-left:9%;}
 #free_ship-productpage{width:33%;}
+.woocommerce .upsells li.product, .woocommerce .related li.product, .woocommerce-page .upsells li.product, .woocommerce-page .related li.product { max-width: 94.8% !important; margin-right: 1% !important; }
+
 }
 
 @media(min-width:320px) and (max-width:560px){
@@ -980,7 +982,12 @@ img.wp-post-image{margin:-42px 0 -55px 0; padding: 0;}
 @media (min-width: 500px) {
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width:45%;}
 img.img_plc_pm_wrench {   top: 35vw; right:1vw; max-height:60px; max-width:60px;}
-}
+.woocommerce .upsells li.product,
+.woocommerce .related li.product,
+.woocommerce-page .upsells li.product,
+.woocommerce-page .related li.product { max-width: 44.05% !important;width: 44.05% !important; }
+.woocommerce .related  ul.products li.product,
+.woocommerce-page .related ul.products li.product {  width: 44.05% !important;}}
 
 @media (min-width: 320px) and (max-width: 344px){
   .wc-tabs{font-size:12.7px;}
@@ -1026,6 +1033,7 @@ img.wp-post-image{padding: 0}
 .woocommerce .woocommerce-breadcrumb {font-size:15px;padding: 0; }
 #footerlinks1{margin: -153px 0 0 500px; display: block}
 img.wp-post-image{margin:-44px 0; padding: 0 10%}
+
 }
 
 @media (max-width: 744px){
@@ -1064,9 +1072,15 @@ img.img_plc_pm_wrench { top: 221px; }
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product { margin: 0; width: 29%; }
 img.img_plc_pm_wrench { top: 171px; }
 img.wp-post-image{margin:0; padding: 0}
+.woocommerce .upsells li.product,
+.woocommerce .related li.product,
+.woocommerce-page .upsells li.product,
+.woocommerce-page .related li.product { max-width: 21.05% !important;width: 21.05% !important; }
+.woocommerce .related  ul.products li.product,
+.woocommerce-page .related ul.products li.product {  width: 21.05% !important;}
 }
 
-<<<<<<< HEAD
+
 @media screen and (max-width: 991px){
 button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #footerconnect{width:100%;}
@@ -1082,14 +1096,14 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 .header-toggle{top:-170px; transition-timing-function: ease-in-out;}
 #wpp-buttons{display:none !important;}
 .woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
-=======
+
+}
+
 @media(max-width: 767px){
   #footerlogos{display:none;}
   #footerconnect{margin:0;}
   #footerwrap{height: 200px;}
 
-
->>>>>>> 3d2309d2d232306993c5236b64da76b0d74cbead
 }
 
 @media (min-width: 992px) {
@@ -1125,6 +1139,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 img.img_plc_pm_wrench {   top: 152px; }
 #pm_blue_1 p {font-size: 20px; }
 .pm_ltgreen {font-size:18px;}
+
 }
 
 @media (min-width: 992px) and (max-width:1200px){
@@ -1160,4 +1175,5 @@ img.img_plc_pm_wrench {   top: 192px; }
 #pm_blue_1 p {font-size: 24px; }
 .pm-page-circle-img{display:block; max-width:76px !important;}
 .pm_ltgreen {font-size:24px;}
+
 }
