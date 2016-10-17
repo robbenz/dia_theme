@@ -40,3 +40,74 @@ foreach ($pm_cats_array as $key => $value) :
 endforeach; ?>
 
 </ul><!--/.products-->
+<hr>
+<strong>Who We Service:</strong>
+
+<table>
+<tbody>
+<tr>
+<td width="300">
+<ul>
+ 	<li>Hospitals</li>
+</ul>
+</td>
+<td width="300">
+<ul>
+ 	<li>Nursing Schools</li>
+</ul>
+</td>
+<td width="300">
+<ul>
+ 	<li>Government Facilities</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="300">
+<ul>
+ 	<li>Long Term Care</li>
+</ul>
+</td>
+<td width="300">
+<ul>
+ 	<li>Doctors’ Offices</li>
+</ul>
+</td>
+<td width="300">
+<ul>
+ 	<li>Surgery Centers</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="300">
+<ul>
+ 	<li>Veterinarians</li>
+</ul>
+</td>
+<td width="300">
+<ul>
+ 	<li>Research Facilities</li>
+</ul>
+</td>
+<td width="300">
+<ul>
+ 	<li>Simulation Centers</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<strong>Benefits:</strong><br>
+
+<strong>Customized Service Contracts</strong> – Work with our advisors to piece together a contract that is perfect for your facility.
+<br>
+<strong>Preventive Maintenance</strong> – Avoid unnecessary downtime and extend the life of your equipment with regular tune-ups.
+<br>
+<strong>On-site Repair</strong> – Let our technicians lend a helping hand especially for time-sensitive repairs.
+<br>
+<strong>Equipment Upgrades</strong> – Keep your equipment up to date with the latest OEM upgrades.
+<br>
+<strong>Calibration, Safety Checks and Regulatory Compliance</strong> – Rest easy knowing that your equipment is accurate, safe and compliant.
+<br><br>
