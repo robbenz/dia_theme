@@ -1,5 +1,5 @@
 <script>
-function addClassesMobile($when) {
+function addClassesProducts($when) {
 	$(window).on($when, function() {
 		if($(window).width() < 992) {
 				$('#ship-repair-container').addClass('container');
@@ -12,8 +12,8 @@ function addClassesMobile($when) {
 		}
 	})
 }
-addClassesMobile('load');
-addClassesMobile('resize');
+addClassesProducts('load');
+addClassesProducts('resize');
 </script>
 <?php
 /**

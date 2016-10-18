@@ -960,7 +960,8 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
 @media(min-width:320px) and (max-width:500px){
   .woocommerce div.product {padding: 1em 3em !important;}
   .product_title{font-size:24px;}
-  .woocommerce ul.products li.product h3 {margin:0px 0 -50px;}
+  .woocommerce div.product div.images img {margin: -42px 0;}
+  .woocommerce ul.products li.product a img {width:66%; margin:0 auto 10px;}
 }
 
 @media (min-width: 360px) {
@@ -995,7 +996,7 @@ img.img_plc_pm_wrench {   top: 35vw; right:1vw; max-height:60px; max-width:60px;
 
 @media (min-width:320px) and (max-width: 426px){
   .maint-img {margin-right: .2em; width:60px;}
-  #ship-repair-container{padding:0;}
+
 }
 
 @media (min-width:320px) and (max-width: 366px){
@@ -1011,10 +1012,17 @@ img.img_plc_pm_wrench {   top: 35vw; right:1vw; max-height:60px; max-width:60px;
   .woocommerce div.product .woocommerce-tabs ul.tabs{margin:0 -33px 1.618em;}
 }
 
+@media (min-width:320px) and (max-width:768px){
+    #ship-repair-container{padding:0;}
+}
+
 @media (min-width:367px) and (max-width:535px){
   .maint-text{font-size:.7em;}
 }
 
+@media (min-width:500px) and (max-width:768px){
+  .woocommerce div.product div.images img {max-width: 57%; margin: -44px 0;}
+}
 @media (max-width: 632px) {
 #content .col-md-4{padding:0 25px !important;}
 img.wp-post-image{padding: 0}
