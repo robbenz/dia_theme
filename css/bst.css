@@ -949,6 +949,10 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
 @media (min-width:320px) and (max-width:991px){
   #p_maint-productpage{width:100%; padding:0;}
   #free_ship-productpage{width:100%;}
+  .wc-tabs li:first-child {border-top-left-radius: 18px !important; -moz-border-radius-topleft: 18px !important; border-top-right-radius: 18px !important; -moz-border-radius-topright: 18px !important; width: 100%; text-align: center}
+  .wc-tabs li:not(:first-child):not(:last-child) {width: 100%; text-align: center}
+  .wc-tabs-wrapper li:last-child {border-top-right-radius: 0px !important; width: 100%; text-align: center}
+  .woocommerce div.product .woocommerce-tabs ul.tabs li {margin:-3px -1px}
 }
 
 @media(min-width:320px) and (max-width:560px){
@@ -959,7 +963,7 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
 
 @media(min-width:320px) and (max-width:500px){
   .woocommerce div.product {padding: 1em 3em !important;}
-  .woocommerce div.product div.images img {margin: -42px 0;}
+  .woocommerce div.product div.images img {margin: -25px 0;}
   .woocommerce ul.products li.product a img {width:66%; margin:0 auto 10px;}
 }
 
@@ -1092,7 +1096,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #footerlogos div a img{width:100%}
 #diamedicallogo{margin: 26px 0 0 48px; width:30%;}
 #medmatlogo{margin: 30px 0 0 10px; width:30%;}
-#simlablogo{margin: 30px 0 0 15px; width:30%;}
+#simlablogo{margin: 30px 0 0 10px; width:30%;}
 #footerlinks2, #footerlinks3{display:none;}
 #form-row{margin-top:20px}
 #masthead { height:170px; }
