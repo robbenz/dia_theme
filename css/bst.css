@@ -1134,6 +1134,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #fixed-row{height:50px;}
 #form-row{background: #fff !important;}
 .ctr_search {margin-top: -45px;}
+#menu-parts-search .ctr_search, .landing_page .ctr_search{margin-top:0px;}
 #dia-logo-left img { width: 100%; margin-left: 15px}
 .woocommerce .woocommerce-breadcrumb {font-size:18px;padding:0;}
 .landing_page .col-sm-8 {width:72.5% !important; }
@@ -1171,7 +1172,6 @@ img.img_plc_pm_wrench {   top: 152px; }
 #landing_nav-wrap a.landing_nav{font-size:1.1em; font-weight: 600 !important; }
 #landing_nav-wrap .container { padding:0;}
 .form-row-child{width:300px; float:left; margin-left: 43px;}
-.ctr_search{margin:-20px 0 0 0;}
 #dmcssmenu4 { width:250px; font-size: 16px; }
 .ctr_search{margin:-44px 0 0 0;}
 img.img_plc_pm_wrench {   top: 192px; }
