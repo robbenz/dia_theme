@@ -1,3 +1,20 @@
+<script>
+function addClassesMobile($when) {
+	$(window).on($when, function() {
+		if($(window).width() < 992) {
+				$('#ship-repair-container').addClass('container');
+				$('#ship-row').addClass('row');
+				$('repair-row').addClass('row');
+		} else {
+			$('#ship-repair-container').removeClass('container');
+			$('#ship-row').removeClass('row');
+			$('repair-row').removeClass('row');
+		}
+	})
+}
+addClassesMobile('load');
+addClassesMobile('resize');
+</script>
 <?php
 /**
  * Single Product tabs
@@ -15,10 +32,10 @@
  * @version 2.4.0
  */
 
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 /**
  * Filter tabs and allow third parties to add their own.
  *
@@ -30,12 +47,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  $shipping_class = $product->get_shipping_class(); ?>
 
  <?php if ( $shipping_class == 'free-shipping' ) : ?>
- <div id="free_ship-productpage">
-	 <img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" style="float:left; margin-right:0.5em;" />
-	 <div style="padding-top:10px;">
+ <div id="ship-repair-container" class="">
+  <div id="ship-row" class="">
+ 	 <div id="free_ship-productpage" class="">
+	 <img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" class="shipping-img" />
+	  <div style="padding-top:10px;">
 		 <span class="red_free">FREE SHIPPING</span><br>When You Order Online
+	  </div>
 	 </div>
-</div>
+ </div> <!-- end row -->
 <?php endif; ?>
 
 <?php
@@ -46,20 +66,23 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 ?>
 
 <?php if ($pm_check == 'yes') : ?>
-<div id="p_maint-productpage">
-	<a href="<?php echo site_url() . '/' . $pm_link; ?>"><img style="float:left; margin-right:0.5em;" width="84" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" /></a>
-	<div style="padding-top:3px; margin-bottom: 1em; font-size:0.87em;">
-		<a href="<?php echo site_url() . '/' . $pm_link; ?>">Click Here to Order<br>
-			<span class="pm_blue">Preventative Maintenance</span>
-			<br> for
-			<?php if (strlen($pm_title) > 1) {
-				echo 'your ' . $pm_title;
-			}  else {
-				echo 'this item';
-			} ?>
-		</a>
-	</div>
-</div>
+  <div id="repair-row" class="">
+    <div id="p_maint-productpage">
+	    <a href="<?php echo site_url() . '/' . $pm_link; ?>"><img class="maint-img" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" /></a>
+	    <div class="maint-text">
+		    <a href="<?php echo site_url() . '/' . $pm_link; ?>">Click Here to Order<br>
+			    <span class="pm_blue">Preventative Maintenance</span>
+			    <br> for
+			    <?php if (strlen($pm_title) > 1) {
+				    echo 'your ' . $pm_title;
+			    }  else {
+				    echo 'this item';
+			    } ?>
+		    </a>
+	    </div>
+    </div>
+  </div> <!-- end row -->
+</div> <!-- end container -->
 <?php endif ;?>
 
 <?php $tabs = apply_filters( 'woocommerce_product_tabs', array() ); ?>
