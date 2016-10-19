@@ -705,29 +705,59 @@ function woo_add_custom_general_fields_save( $post_id ) {
 /* END */
 
 
-// -- will need for redo menu
+// -- will need for redo menu /*
+
+
 function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
-  $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $parent_cat_ID, 'taxonomy' => 'product_cat' );
-  $subcategories = get_categories($args);
-  echo '<ul class="Some menu or something">';
-  foreach ($subcategories as $kat) {
-    $link = get_term_link( $kat->slug, $kat->taxonomy );
-    echo '<li><a href="'. $link .'">'.$kat->name.'</a></li>';
-  }
-  echo '</ul>';
+    $args = array(
+       'hierarchical' => 1,
+       'show_option_none' => '',
+       'hide_empty' => 0,
+       'parent' => $parent_cat_ID,
+       'taxonomy' => 'product_cat'
+    );
+  $subcats = get_categories($args);
+    echo '<ul class="wooc_sclist">';
+      foreach ($subcats as $sc) {
+        $link = get_term_link( $sc->slug, $sc->taxonomy );
+          echo '<li><a href="'. $link .'">'.$sc->name.'</a></li>';
+      }
+    echo '</ul>';
 }
+
+
+
 function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
   $IDbyNAME = get_term_by('name', $parent_cat_NAME, 'product_cat');
   $product_cat_ID = $IDbyNAME->term_id;
-  $args = array( 'hierarchical' => 1, 'show_option_none' => '', 'hide_empty' => 0, 'parent' => $product_cat_ID, 'taxonomy' => 'product_cat' );
-  $subcategories = get_categories($args);
-  echo '<ul class="Some menu or something">';
-  foreach ($subcategories as $kat) {
-    $link = get_term_link( $kat->slug, $kat->taxonomy );
-    echo '<li><a href="'. $link .'">'.$kat->name.'</a></li>';
+    $args = array(
+       'hierarchical' => 1,
+       'show_option_none' => '',
+       'hide_empty' => 0,
+       'parent' => $product_cat_ID,
+       'taxonomy' => 'product_cat'
+    );
+
+  $subcats = get_categories($args);
+  echo '<li class="active has-sub">';
+  $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
+  echo '<a href="' . $parent_link . '"><span>' . $parent_cat_NAME . '</span></a><ul>';
+  if ($product_cat_ID != '8482'){
+    foreach ($subcats as $sc) {
+      $link = get_term_link( $sc->slug, $sc->taxonomy );
+      echo '<li><a href="' . $link . '">' . '<span>' . $sc->name . '</span></a></li>';
+    }
+    if ($product_cat_ID == '5302') {
+      echo '<li><a href="http://medmattress.com/custom-sizing-form/"><span>Custom Sizing</span></a></li>';
+    }
+    if ($product_cat_ID == '5249') {
+      echo '<li><a href="' . site_url() . '/privacy-curtain-sizing-form/"><span>Privacy Curtains</span></a></li>';
+    }
   }
-  echo '</ul>';
+  echo '</ul></li>';
 }
+
+
 /* END */
 
 // -- Category headers
