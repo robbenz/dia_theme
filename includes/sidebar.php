@@ -1,42 +1,30 @@
 <aside class="sidebar">
   <div id="dmcssmenu4" style="pointer-events:auto;">
     <ul>
+
       <?php
       $dia_product_cats = array(
-        "AEDs &amp; Defibrillators",
-        "Anatomical Models",
-        "Bariatric Care",
-        "Batteries, Cables &amp; Sensors",
-        "Hospital Beds",
-        "Carts &amp; Storage",
-        "Cots &amp; Stretchers",
-        "Diagnostic Equipment",
-        "Emergency &amp; Rescue",
-        "Furnishings",
-        "Headwalls &amp; SOT",
-        "Hill-Rom Parts",
-        "Imaging Parts",
-        "Infection Control",
-        "Infusion &amp; Dialysis",
-        "Simulated IV Fluids",
         "Loaded Crash Carts&trade;",
-        "Manikins &amp; Simulators",
-        "Mattresses",
-        "Mattress Covers",
-        "Medical Supplies",
-        "Simulated Medications",
-        "Mobility",
-        "Moulage",
-        "Obstetrics &amp; Pediatrics",
-        "Patient Care",
-        "Physical Therapy",
-        "Refrigerators &amp; Freezers",
-        "Respiratory",
-        "Screens &amp; Curtains",
-        "Service &amp; Repairs",
-        "Supply Kits",
-        "Surgical"
+        "Service &amp; Repairs"
       );
+      $args = array(
+        'taxonomy'     => 'product_cat',
+        'orderby'      => 'name',
+        'show_count'   => 0,   // 1 for yes, 0 for no
+        'pad_counts'   => 0,   // 1 for yes, 0 for no
+        'hierarchical' => 1,   // 1 for yes, 0 for no
+        'title_li'     => '',
+        'hide_empty'   => 0
+      );
+      $all_categories = get_categories( $args );
+      foreach ($all_categories as $cat) {
+        if($cat->category_parent == 0) {
+          $category_id = $cat->term_id;
+          array_push($dia_product_cats, $cat->name );
+        }
+      }
+      $dia_product_cats = array_diff($dia_product_cats, ["Parts", "Infusion Pump - Service &amp; Repairs", "Hill-Rom Components - Repairs" ]);
+      asort($dia_product_cats);
 
       foreach ( $dia_product_cats as $KAT ) {
         if ($KAT == "Loaded Crash Carts&trade;"){ ?>
