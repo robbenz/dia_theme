@@ -1,7 +1,6 @@
 <aside class="sidebar">
   <div id="dmcssmenu4" style="pointer-events:auto;">
     <ul>
-
       <?php
       $dia_product_cats = array(
         "Loaded Crash Carts&trade;",
@@ -19,13 +18,11 @@
       $all_categories = get_categories( $args );
       foreach ($all_categories as $cat) {
         if($cat->category_parent == 0) {
-          $category_id = $cat->term_id;
           array_push($dia_product_cats, $cat->name );
         }
       }
       $dia_product_cats = array_diff($dia_product_cats, ["Parts", "Infusion Pump - Service &amp; Repairs", "Hill-Rom Components - Repairs" ]);
       asort($dia_product_cats);
-
       foreach ( $dia_product_cats as $KAT ) {
         if ($KAT == "Loaded Crash Carts&trade;"){ ?>
           <li class="active has-sub">
