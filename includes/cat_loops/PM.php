@@ -16,14 +16,13 @@
   <em style="position:relative; top:10px;">Call to Schedule a Repair</em><br>
   <span style="position:relative; top:10px;">(877) 593-6011</span>
 </div>
-
 <div class="clearfix"></div>
-
 <div class="new_pm_row row">
-  <div class="col-sm-4">
+  <div class="col-sm-4 col-xs-4">
     <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">
-      <div class="pm_square">
-        <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/hospital-bed-service.png" />
+
+        <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/hospital-bed-service.png" />
+        <div class="pm_square">
         HOSPITAL BED
         <span class="pm_white">
         SERVICE
@@ -31,10 +30,11 @@
       </div>
     </a>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-4 col-xs-4">
     <a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">
-      <div class="pm_square">
-        <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/infusion-pump-service.png" />
+
+        <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/infusion-pump-service.png" />
+        <div class="pm_square">
         INFUSION PUMP
         <span class="pm_white">
         SERVICE
@@ -44,10 +44,11 @@
   </div>
   <!-- Optional: clear the XS cols if their content doesn't match in height -->
    <!-- <div class="clearfix hidden-sm-up"></div> -->
-  <div class="col-sm-4">
+  <div class="col-sm-4 col-xs-4">
     <a href="<?php echo site_url(); ?>/product-category/components-service-repairs/">
-      <div class="pm_square">
-        <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/component-repair.png" />
+
+        <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/component-repair.png" />
+        <div class="pm_square">
         COMPONENT
         <span class="pm_white">
         REPAIR
@@ -59,10 +60,11 @@
 </div><!-- .new_pm_row -->
 
 <div class="new_pm_row row">
-  <div class="col-sm-3">
+  <div class="col-sm-3 col-xs-3">
     <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/">
-      <div class="pm_square">
-        <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/exam-table-service.png" />
+
+        <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/exam-table-service.png" />
+        <div class="pm_square">
         EXAM TABLE
         <span class="pm_white">
         SERVICE
@@ -70,10 +72,11 @@
       </div>
     </a>
   </div>
-  <div class="col-sm-3">
+  <div class="col-sm-3 col-xs-3">
     <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/">
-      <div class="pm_square">
-        <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/headwall-installation.png" />
+
+        <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/headwall-installation.png" />
+        <div class="pm_square">
         HEADWALL
         <span class="pm_white">
         INSTALLATION
@@ -83,10 +86,11 @@
   </div>
   <!-- Add the extra clearfix for only the required viewport -->
   <!--  <div class="clearfix hidden-sm-up"></div> -->
-  <div class="col-sm-3">
+  <div class="col-sm-3 col-xs-3">
     <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs/">
-      <div class="pm_square">
-        <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/patient-monitor-repair.png" />
+
+        <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/patient-monitor-repair.png" />
+          <div class="pm_square">
         PATIENT MONITOR
         <span class="pm_white">
         REPAIR
@@ -94,10 +98,11 @@
       </div>
     </a>
   </div>
-  <div class="col-sm-3">
+  <div class="col-sm-3 col-xs-3">
     <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/">
-      <div class="pm_square">
-        <img src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/stretcher-repair.png" />
+
+        <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/stretcher-repair.png" />
+        <div class="pm_square">
         STRETCHER
         <span class="pm_white">
         REPAIR
