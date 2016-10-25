@@ -452,6 +452,10 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #medmatlogo { height: 100px; width: 300px; float: left; margin: 28px 0px 0px 30px; }
 #simlablogo { height: 100px; width: 300px; float: left; margin: 26px 0px 0px 10px; }
 #footerconnect { height: 172px; width: 390px; float: left; padding: 20px 25px 20px 25px; margin: -39px 0 0 27px; }
+#footerconnect a { color:#fff; }
+#footerconnect a:active { color:#fff; }
+#footerconnect a:hover { color:#fff; }
+#footerconnect a:visited { color:#fff; }
 .connecttop { font-size: 16px; color: #fff; line-height: 24px; }
 .connectbottom { font-size: 13px; color: #fff; line-height: 24px; }
 .socialicons2014 { line-height: 0px; }

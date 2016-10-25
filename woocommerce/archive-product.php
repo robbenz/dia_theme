@@ -70,10 +70,18 @@ global $product;
 
 <?php
 		echo '<div class="header-wrap-text-medical-equipment"><h2 class="header-wrap-text-medical-equipment-header">';
-		single_cat_title();
-		echo '</h2>' ;
-		do_action( 'woocommerce_archive_description' );
-		echo '</div>';
+		if ( is_shop() ) {
+			echo 'Medical Equipment';
+			echo '</h2>' ;
+			echo '';
+			echo '</div>';
+		} else {
+			single_cat_title();
+			echo '</h2>' ;
+			do_action( 'woocommerce_archive_description' );
+			echo '</div>';
+	}
+
 ?>
 <?php if ( have_posts() ) : ?>
 	<?php do_action( 'woocommerce_before_shop_loop' ); ?>
@@ -85,10 +93,12 @@ global $product;
 	<?php woocommerce_product_loop_end(); ?>
 	<?php do_action( 'woocommerce_after_shop_loop' ); ?>
 	<?php
-	$t_id = get_queried_object()->term_id;
-	$term_meta = get_option( "taxonomy_$t_id" );
-	if 	(isset($term_meta['custom_term_meta'])) {
-		echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
+	if ( !is_shop() ) {
+		$t_id = get_queried_object()->term_id;
+		$term_meta = get_option( "taxonomy_$t_id" );
+		if 	(isset($term_meta['custom_term_meta'])) {
+			echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
+		}
 	}
 	?>
 <?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
