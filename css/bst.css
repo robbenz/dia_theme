@@ -889,7 +889,7 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #pm_blue_1 { padding-top:0.4em; height:50px; background-color:#00426a; width:100%; text-align:center;}
 #pm_blue_1 p{ color:#fff; font-family: 'Lato',sans-serif; font-weight:300; letter-spacing: 1.3px;}
 .pm_ltgreen{float:left; font-family: 'Lato',sans-serif;text-align:center; font-size: 18px;}
-#pm_ltgreen_1{ background-color:#b7dd79; width:45%; height:90px; padding:10px; font-size: 18px }
+#pm_ltgreen_1{ background-color:#b7dd79; width:45%; height:90px; padding:10px;}
 .pm_ltgreen em { font-weight:300;}
 .pm_ltgreen span{ font-weight:600; }
 #pm_ltgreen_2 p { font-size:42px; font-family: 'ristretto_promedium', Arial, sans-serif; position:relative; top:10px;}
