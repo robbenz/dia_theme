@@ -73,7 +73,7 @@ global $product;
 		if ( is_shop() ) {
 			echo 'Medical Equipment';
 			echo '</h2>' ;
-			echo '';
+			echo 'DiaMedical USA, along with its subsidiaries MedMattress.com and SimLabSolutions, is a manufacturer and global distributor of healthcare products, supplies, mattresses and replacement parts. We lead the industry in Healthcare education by offering full service solutions in outfitting your simulation labs with products such as hospitals beds, training headwalls, infusion pumps, simulated IV fluids, loaded crash carts, and more!';
 			echo '</div>';
 		} else {
 			single_cat_title();
