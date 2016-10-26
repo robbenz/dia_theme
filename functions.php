@@ -475,6 +475,11 @@ class RRHE {
 new RRHE();
 /* END */
 
+
+/*** Ship to a different address closed by default ***/
+add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
+
+
 // Edit order items table template defaults  -- Show Sku on emails
 function BENZ_wc_order_email_skus( $table, $order ) {
 
