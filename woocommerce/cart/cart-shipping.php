@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<tr class="shipping">
+<tr class="shipping" id="shipping">
 	<th>Shipping Charges will be calculated, and then added to your total</th>
 	<td data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php if ( 1 < count( $available_methods ) ) : ?>
