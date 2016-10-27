@@ -81,8 +81,8 @@ global $product;
 			do_action( 'woocommerce_archive_description' );
 			echo '</div>';
 	}
-
 ?>
+
 <?php if ( have_posts() ) : ?>
 	<?php do_action( 'woocommerce_before_shop_loop' ); ?>
 	<?php woocommerce_product_loop_start(); ?>
