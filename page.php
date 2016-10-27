@@ -4,12 +4,12 @@ $open_no_side = '<div class="container woocommerce"><div class="row"><div id="co
 $open_side = '<div class="container woocommerce landing_page"><div class="row">';
 $loops_arr = array(
   '57882' => 'includes/hill-rom',
-  '58427' => 'includes/sim-lab',
   '61274' => 'includes/imaging_loops/fujitsu',
   '61275' => 'includes/imaging_loops/ge',
   '61276' => 'includes/imaging_loops/siemens',
   '61280' => 'includes/imaging_loops/al',
   '61281' => 'includes/imaging_loops/kz',
+  '69773' => 'includes/loops/content',
   '58688' => 'includes/mft'
 );
 $pro_pm = 'includes/cat_loops/products_pm';
@@ -20,6 +20,7 @@ $side_loops_arr = array(
   '58431' => 'includes/hospital',
   '58428' => 'includes/ltc',
   '57935' => 'includes/cat_loops/PM',
+  '58427' => 'includes/cat_loops/sim-lab',
   '68934' => $pro_pm,
   '68957' => $pro_pm,
   '68958' => $pro_pm,
