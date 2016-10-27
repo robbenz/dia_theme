@@ -955,6 +955,7 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
 @media (min-width:320px) and (max-width: 366px){
   .maint-text{font-size:.54em;}
   #free_ship-productpage img {width:85px;}
+    #shipping th {font-size: 1.1em !important;}
 }
 
 @media (min-width:320px) and (max-width:385px){
@@ -966,6 +967,10 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
   #pm_blue_1 p {font-size: 15px;}
   #pm_ltgreen_1 em, #pm_ltgreen_1 span{margin-right:0px;}
   #pm_ltgreen_2 p {margin: -17px 0 0 42vw;}
+}
+
+@media (min-width:320px) and (max-width:400px){
+  #order-total td::before{font-size: .71em;}
 }
 
 @media (min-width:320px) and (max-width: 424px){
@@ -994,6 +999,26 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
     .product_title{font-size:24px;}
     #pm_ltgreen_2 {width: 100%; border-left:0; border-bottom: 50px solid #e4f2cc;}
     .pm-page-circle-img {max-width: 71px !important; float: left;}
+}
+
+  @media (min-width:320px) and (max-width:768px){
+    #post_11{width: 90% !important; margin: 0 5% !important;}
+    #product-img{display:block !important; border-top: none; max-width: 79px !important;}
+    #product-img::before{display: none;}
+    .product-name::before, .product-price::before, .product-quantity::before, .product-subtotal::before{color:#ffad00;}
+    #table-body tr td {color: #ffad00;}
+    #cart-name::before {padding-right: 30px;}
+    #cart-name dl dt, #cart-name dl dd {float:none;}
+    #coupon_code{width:100% !important; margin-bottom: 5px;}
+    #post_11 .shop_table .button[name$="apply_coupon"], #update_cart{width:100% !important;}
+    #quote-button-id{display:none;}
+    #post_11 .checkout-button{float:none; margin:0 auto;}
+    #post_11 .cart_totals td {float: none; margin:0;}
+    #post_11 .cart_totals td::before{color: #ffad00;}
+    #post_11 .cart_totals .order-total{margin-left: 0;}
+    #post_11 .checkout-button {width:75%;}
+    #shipping th {display:-webkit-box; text-align: left !important;}
+    
 }
 
 @media (min-width:320px) and (max-width:991px){

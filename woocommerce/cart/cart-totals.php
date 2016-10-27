@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<tr class="shipping">
 				<th><?php _e( 'Shipping costs will be added to your invoice', 'woocommerce' ); ?></th>
-				<td data-title="<?php _e( 'Total Before Shipping:', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
+				<td data-title="<?php _e( 'Total Before Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></td>
 			</tr>
 
 		<?php endif; ?>
@@ -87,9 +87,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
-		<tr class="order-total">
-			<th><?php _e( 'Total Before Shipping Costs:', 'woocommerce' ); ?></th>
-			<td data-title="<?php _e( 'Total Before Shipping:', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
+		<tr class="order-total" id="order-total">
+			<th><?php _e( 'Total Before Shipping Costs', 'woocommerce' ); ?></th>
+			<td data-title="<?php _e( 'Total Before Shipping', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
