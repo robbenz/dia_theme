@@ -1,7 +1,7 @@
 <!-- START IMG_FLIP -->
 <div style="width:100%; padding:0 75px; text-align:left; ">
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="margin-bottom:24px;">
+            <div class="hospital-t-left sls-img-left">
                <li>
                   <figure>
                      <div>
@@ -24,7 +24,7 @@
             </div></ul>
             <!-- hospital-t-left --><!-- START IMG_FLIP -->
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="float:right !important; margin-bottom:24px;">
+            <div class="hospital-t-left sls-img-right">
                <li>
                   <figure>
                      <div>
@@ -48,7 +48,7 @@
             </div></ul>
             <!-- hospital-t-left --><!-- START IMG_FLIP -->
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="margin-bottom:24px;">
+            <div class="hospital-t-left sls-img-left">
                <li>
                   <figure>
                      <div>
@@ -70,7 +70,7 @@
             </div></ul>
             <!-- hospital-t-left --><!-- START IMG_FLIP -->
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="float:right !important; margin-bottom:24px;">
+            <div class="hospital-t-left sls-img-right">
                <li>
                   <figure>
                      <div>

@@ -529,6 +529,7 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #menu-repirstmp li a,
 .sf-menu > .page_item_has_children > a:first-child {font-size: 18.9px;}
 }
+
 .benz-menu > ul > li > a:active{ background-color: #2774ae }
 .benz-menu > ul > li > a:hover {background-color: #2774ae }
 .arrow-down { z-index: 999; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #2774ae; position:relative; }
@@ -888,6 +889,13 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 #authorize-net-cim-cc-number, #authorize-net-cim-cc-cvv, #po_number_field{line-height:2; padding:4px 10px;]}
 /* END */
 
+/* Career Page */
+.career-submit{width:100%;}
+/* END */
+
+/* Sim Lab Solutions */
+.sls-img-left{margin-bottom:24px;}
+.sls-img-right{float:right; margin-bottom:24px;}
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
 font-family: 'ristretto_promedium', Arial, sans-serif;
@@ -1009,6 +1017,11 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
   .wc-tabs-wrapper li:last-child {border-top-right-radius: 0px !important; width: 101%; text-align: center}
   .woocommerce div.product .woocommerce-tabs ul.tabs li {margin:-3px -1px}
   .woocommerce div.product div.images img {width:100% !important;}
+}
+
+@media (min-width:320px) and (max-width:1199px){
+  .sls-img-right{float:left;}
+  .hospital-t-left{width:80%;}
 }
 
 @media (min-width: 360px) {
