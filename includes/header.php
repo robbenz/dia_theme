@@ -12,100 +12,20 @@
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 	<?php wp_head(); ?>
 
-<?php
-$newFormRow = '<div class="userRow"><p style="clear:both;" class="form-row form-row-wide validate-required" id="add_pro_PN"><label for="rqa-part" class="">Part Number</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text" value="" name="addedonepart[]" id="rqa-part[]"></p><p class="form-row form-row-wide validate-required" id="add_pro_DS"><label for="rqa-desc" class="">Product Name / Description</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text " name="addedonedesc[]" value="" id="rqa-desc[]" ></p><p class="form-row form-row-wide validate-required" id="add_pro_QT"><label for="rqa-qty" class="">Quantity</label><input style="height: 34px; border: 1px solid #ccc; border-radius: 4px;" type="text" class="input-text " name="addedoneqty[]" value="" id="rqa-qty[]" ></p><a href="javascript:;" class="removeRow">X</a><div>';
-?>
-<script type="text/javascript">
-
-jQuery(function(){
-    var rows = 0;
-
-    jQuery('#addRow').click(function(){
-jQuery('#userRows').append('<?php echo($newFormRow); ?>'); rows++;
-    });
-
-    jQuery(document).on('click', '.removeRow', function(){
-        jQuery(this).closest('.userRow').remove();
-    });
-});
-
-</script>
-
-<script type="text/javascript">
-/*
-jQuery(document).ready(function() {
-    jQuery('#cat_mail').hide();
-		jQuery("option[name=rqa_cat_email]").click(function () {
-				jQuery('#cat_mail').hide();
-		});
-		jQuery("option[name=rqa_cat_select]").click(function () {
-				jQuery('#cat_mail').hide();
-		});
-    jQuery("option[name=rqa_cat_sendmail]").click(function () {
-        jQuery('#cat_mail').show();
-    });
-		jQuery("option[name=rqa_cat_both]").click(function () {
-				jQuery('#cat_mail').show();
-		});
-
- });
-
-*/
-
-</script>
-<script>
-/*** Add classes to #mobile-navbar on load & Resize ***/
-
-function addClassesMobile($when) {
-	$(window).on($when, function() {
-		if($(window).width() < 992) {
-				$('#mobile-navbar').addClass('navbar navbar-default navbar-fixed-top');
-				$('#form-row').addClass('row');
-				$('#drop-menu').removeClass('navbar navbar-default navbar-static-top');
-		} else {
-				$('#mobile-navbar').removeClass('navbar navbar-default navbar-fixed-top');
-				$('#form-row').removeClass('row');
-				$('#drop-menu').addClass('navbar navbar-default navbar-static-top');
-		}
-	})
-}
-addClassesMobile('load');
-addClassesMobile('resize');
-
-/*function menuToggle(){
-	var previousScroll=0;
-
-	$(window).scroll(function(){
-		var currentScroll = $(this).scrollTop();
-		if( currentScroll > previousScroll){
-			$('#fixed-row').hide(300);
-			//$('#responsive-menu-button').addClass('header-toggle')
-		} else {
-			$('#fixed-row').show(300);
-			//$('#responsive-menu-button').removeClass('header-toggle');
-		}
-		previousScroll = currentScroll;
-	});
-}
-menuToggle();*/
-</script>
-
 </head>
 
 
 <body <?php body_class(); ?>>
 <div id="landing_nav-wrap">
 	<div class="container">
-<a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
-<a class="landing_nav hvr-shutter-out-horizontal landing_nav-mattresses" target="_blank" href="http://www.medmattress.com">Mattresses</a>
-<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
-<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
-<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ems" href="<?php echo site_url(); ?>/emergency-rescue">Emergency &amp; Rescue</a>
-<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
-<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
-
-</div>
-
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-mattresses" target="_blank" href="http://www.medmattress.com">Mattresses</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ems" href="<?php echo site_url(); ?>/emergency-rescue">Emergency &amp; Rescue</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
+	</div>
 </div>
 <?php
 		if(isset($_GET['login']) && $_GET['login']=='failed') {

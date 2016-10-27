@@ -163,9 +163,7 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .pm_blue {color: #00426a; font-weight: bold; line-height: 10px; text-transform: uppercase;}
 #p_maint-productpage {float: left; font-family: "Open Sans",sans-serif; margin-bottom: 1em; width: 50%; padding-left:4%; font-size: 19px; }
 
-
-
-/* youre part will apear here */
+/* your part will apear here */
 .rs_rs_price [data-product_id="32570"] {display:none !important;}
 .rs_rs_addtocart [data-product_id="32570"] {pointer-events:none;}
 .posted_in [data-product_id="32570"] {pointer-events:none;}
@@ -298,7 +296,6 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce div.product form.cart .variations {width:90%; }
 .woocommerce div.product form.cart .variations select {margin-top:10px; }
 .product_meta{ font-size:15px; color:#ffad00; margin-bottom: 20px; }
-
 .posted_in a{color:#000;}
 .posted_in a:hover{color:#000;}
 .woocommerce div.product p.price, .woocommerce div.product span.price { color: #78be20; font-size: 1.95em; margin-bottom:0.5em;}
@@ -337,8 +334,6 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 .product-addon, .product-addon-totals {display:none;}
 .logged-in .product-addon, .logged-in .product-addon-totals { display:block;}
 /* END */
-
-.tax-product_cat .cart { /*display:none !important;*/ }
 
 /*LEFT MENU*/
 #dmcssmenu4 {margin:1px 0 0 2px; height: 1397px; width: 250px; list-style: none; padding: 0px; border: 0; text-shadow:none;
@@ -522,7 +517,7 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 .sf-menu .menu-item-has-children > a:first-child::after, .sf-menu .page_item_has_children > a:first-child::after { border: none !important; }
 .navbar-header{ padding:0;}
 .benz-menu{ float:left;}
-.navbar-static-top{ background: #00426a; }
+.navbar-static-top{ background: #00426a; z-index: 99;}
 .sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
 #menu-repirstmp li a,
@@ -668,10 +663,6 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 #vfbField184 div div p span {margin-top:12px;}
 #vfbField186 div label span{display:none;}
 #eModal-2{padding:9px;}
-
-
-
-/*.vfb-clearfix{margin-top:0.8vw;}*/
 /* END */
 
 /* CART PAGE */
@@ -867,9 +858,8 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .new_pm_row .col-sm-3 .pm_square{font-size:24px;}
 /* END */
 
-
 /*Checkout*/
-.wizard.wizard > .steps a{padding: 10px 10px 10px 16px;}
+.wizard.wizard > .steps a{padding: 10px 10px 10px 16px; width:85%;}
 .wizard.wizard > .steps a::before {content: none; }
 .wizard.wizard > .steps a::after { right:-20px; height:0px; }
 #wizard li.current { background-color:#00426a; }
@@ -880,7 +870,7 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 .wizard.wizard > .steps li.current span { color:#fff; }
 .wizard.wizard > .steps li.done span { color:#fff; }
 /*.wizard > .steps li.current a::after {border-left: 28px solid #5e8fc8 !important; margin-right:3px; } */
-.wizard > .steps li.current a::after {border-left: 33px solid #00426a !important; margin-right:-1px; }
+.wizard > .steps li.current a::after {border-left: 33px solid #00426a !important; margin-right:1px; }
 .wizard > .steps li span {color: auto; }
 .wizard > .steps > ul { padding-left:0px; margin-left:0px; }
 .wizard > .steps > ul > li { width: 230px }
@@ -897,7 +887,6 @@ body.woocommerce-checkout .steps *{ box-sizing:content-box; }
 body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 #authorize-net-cim-cc-number, #authorize-net-cim-cc-cvv, #po_number_field{line-height:2; padding:4px 10px;]}
 /* END */
-
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;

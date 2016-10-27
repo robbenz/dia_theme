@@ -1,20 +1,3 @@
-<script>
-function addClassesProducts($when) {
-	$(window).on($when, function() {
-		if($(window).width() < 992) {
-				$('#ship-repair-container').addClass('container');
-				$('#ship-row').addClass('row');
-				$('repair-row').addClass('row');
-		} else {
-			$('#ship-repair-container').removeClass('container');
-			$('#ship-row').removeClass('row');
-			$('repair-row').removeClass('row');
-		}
-	})
-}
-addClassesProducts('load');
-addClassesProducts('resize');
-</script>
 <?php
 /**
  * Single Product tabs

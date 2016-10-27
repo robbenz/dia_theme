@@ -13,56 +13,10 @@ require_once locate_template('/functions/feedback.php');
 
 add_action('after_setup_theme', 'true_load_theme_textdomain');
 
-// -- Begin Scripts Styles
-function benzy_enqueue_styles() {
-    wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
-}
-add_action( 'wp_enqueue_scripts', 'benzy_enqueue_styles' );
-
-add_action('wp_enqueue_script','register_my_scripts');
-function register_my_scripts(){
-  wp_register_script( 'superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), false, true );
-}
-//  --  Curtian Page
-function benz_adding_scripts() {
-  if (is_page('58440') ) {
-    wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('curtain_form');
-  }
-}
-add_action( 'wp_enqueue_scripts', 'benz_adding_scripts' );
-//  --  PM Page
-function benz_add_jss() {
-  if (is_page('62913') ) {
-    wp_register_script('pm_form', get_template_directory_uri() . '/js/pm_form_script.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('pm_form');
-  }
-}
-add_action( 'wp_enqueue_scripts', 'benz_add_jss' );
-
-// -- admin script
-add_action( 'admin_enqueue_scripts', 'benz_admin_script' );
-function benz_admin_script() {
-    wp_enqueue_script('custom_js_script', get_bloginfo('template_url').'/js/admin_script.js', array('jquery'));
-}
-//  --  Benz admin css
-function benz_chromefix_inline_css() {
-  wp_add_inline_style( 'wp-admin', '.term-description-wrap { display: none ; }' );
-  wp_add_inline_style( 'wp-admin', '#product_cat-all { max-height:400px }' );
-  wp_add_inline_style( 'wp-admin', '#the-list .column-name a { display: inline ; }' );
-  wp_add_inline_style( 'wp-admin', '#adminmenu { transform: translateZ(0); }' );
-  wp_add_inline_style( 'wp-admin', 'table.wp-list-table img { max-width: 165px; }' );
-  wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
-}
-add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
-/* END Scripts / Styles */
-
-
 //  -- Load Text domain
 function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
-/* END */
 
 // --  ADD woocommerce support to theme
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
@@ -81,7 +35,46 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
-/* END */
+
+/****** END THEME CORE ******/
+
+
+// -- Begin Scripts Styles
+function benzy_enqueue_styles() {
+    wp_enqueue_style( 'superfish', get_template_directory_uri() . '/css/superfish.css', false, false, 'all' );
+}
+add_action( 'wp_enqueue_scripts', 'benzy_enqueue_styles' );
+
+// scripts for tricky forms
+function benz_add_jss() {
+  if (is_page('62913') ) {
+    wp_register_script('pm_form', get_template_directory_uri() . '/js/pm_form_script.js', array('jquery'),false, true);
+    wp_enqueue_script('pm_form');
+  }
+  if (is_page('58440') ) {
+    wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),false, true);
+    wp_enqueue_script('curtain_form');
+  }
+}
+add_action( 'wp_enqueue_scripts', 'benz_add_jss' );
+
+// -- WP-ADMIN script
+add_action( 'admin_enqueue_scripts', 'benz_admin_script' );
+function benz_admin_script() {
+    wp_enqueue_script('custom_js_script', get_bloginfo('template_url').'/js/admin_script.js', array('jquery'));
+}
+//  --  Benz admin css
+function benz_chromefix_inline_css() {
+  wp_add_inline_style( 'wp-admin', '.term-description-wrap { display: none ; }' );
+  wp_add_inline_style( 'wp-admin', '#product_cat-all { max-height:400px }' );
+  wp_add_inline_style( 'wp-admin', '#the-list .column-name a { display: inline ; }' );
+  wp_add_inline_style( 'wp-admin', '#adminmenu { transform: translateZ(0); }' );
+  wp_add_inline_style( 'wp-admin', 'table.wp-list-table img { max-width: 165px; }' );
+  wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
+}
+add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
+/* END Scripts / Styles */
+
 
 //  --  LOGIN | LOGOUT STUFF
 add_filter('woocommerce_login_redirect', 'login_redirect');
