@@ -1021,7 +1021,7 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
 
 @media (min-width:320px) and (max-width:1199px){
   .sls-img-right{float:left;}
-  .hospital-t-left{width:80%;}
+  .sls-img-left, .sls-img-right{width:80%; height:auto;}
 }
 
 @media (min-width: 360px) {
