@@ -10,6 +10,7 @@ $loops_arr = array(
   '61280' => 'includes/imaging_loops/al',
   '61281' => 'includes/imaging_loops/kz',
   '69773' => 'includes/loops/content',
+  '58427' => 'includes/sim-lab',
   '58688' => 'includes/mft'
 );
 $pro_pm = 'includes/cat_loops/products_pm';
@@ -20,7 +21,7 @@ $side_loops_arr = array(
   '58431' => 'includes/hospital',
   '58428' => 'includes/ltc',
   '57935' => 'includes/cat_loops/PM',
-  '58427' => 'includes/cat_loops/sim-lab',
+  '58427' => 'includes/sim-lab',
   '68934' => $pro_pm,
   '68957' => $pro_pm,
   '68958' => $pro_pm,
@@ -75,7 +76,7 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
      echo $open_side ;
      woocommerce_breadcrumb();
      if (!strpos($value, 'cat_loops') ) {
-       echo '<img style="width:97%; margin:0 1.5% 1em;" src="' . site_url() . '/wp-content/imgs/' . $value . '.png" />';
+       echo '<img class="header-img" src="' . site_url() . '/wp-content/imgs/' . $value . '.png" />';
      }
      echo '<div class="col-xs-6" id="sidebar" role="navigation">';
      get_template_part('includes/sidebar');
