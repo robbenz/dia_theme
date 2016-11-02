@@ -70,6 +70,7 @@ a { color: #00426a; }
 
 /* PAGES */
 .woocommerce nav.woocommerce-pagination { float: right; text-align: right; width: 70%; }
+.header-img{width:97%; margin:0 1.5% 1em;}
 /* END */
 
   img.wp-post-image { width:80%; margin: 0; }
@@ -107,6 +108,7 @@ ul.cs-style-8{list-style:none;}
 no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit-transform: translateX(50px); -moz-transform: translateX(50px); -ms-transform: translateX(50px); transform: translateX(50px); }
 .cs-style-8 figcaption { height: 100%; width: 236px; top: auto; bottom: 0; opacity: 0; -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s; -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s; transition: transform 0.4s, opacity 0.1s 0.3s; }
 .no-touch .cs-style-8 figure:hover figcaption, .cs-style-8 figure.cs-hover figcaption { opacity: 1; -webkit-transform: translateX(0px); -moz-transform: translateX(0px); -ms-transform: translateX(0px); transform: translateX(0px); -webkit-transition: -webkit-transform 0.4s, opacity 0.1s; -moz-transition: -moz-transform 0.4s, opacity 0.1s; transition: transform 0.4s, opacity 0.1s; }
+.touch .cs-style-8 figure:hover figcaption, .cs-style-8 figure.cs-hover figcaption { opacity: 1; -webkit-transform: translateX(0px); -moz-transform: translateX(0px); -ms-transform: translateX(0px); transform: translateX(0px); -webkit-transition: -webkit-transform 0.4s, opacity 0.1s; -moz-transition: -moz-transform 0.4s, opacity 0.1s; transition: transform 0.4s, opacity 0.1s; }
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal { display: inline-block; vertical-align: middle; -webkit-transform: translateZ(0); transform: translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); -webkit-backface-visibility: hidden; backface-visibility: hidden; -moz-osx-font-smoothing: grayscale; position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
 .hvr-shutter-out-horizontal:before { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; -webkit-transform: scaleX(0); transform: scaleX(0); -webkit-transform-origin: 50%; transform-origin: 50%; -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; }
@@ -122,7 +124,7 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .hvr-shutter-out-horizontal:active, .hvr-shutter-out-horizontal:visited, .hvr-shutter-out-horizontal:focus{ text-transform: none !important;}
 /*end*/
 #top-flip-home{margin:15px 0px -20px 0px; width:1020px; height:392px;}
-.hospital-t-left{float:left; height:385px; width:498px;margin:2px 0px 10px 0px;box-sizing: border-box;}
+.hospital-t-left{float:left; height:auto; width:50%;margin:2px 0px 10px 0px;box-sizing: border-box;}
 .hos-links-menu{padding:16px 20px 0px 20px;}
 .hos-links-menu a{color:#c3e2ff;text-decoration:none; background-color: none !important; }
 .hos-links-menu a:hover{color:#c3e2ff;text-decoration: underline; background-color: none !important;}
@@ -279,7 +281,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 /* END */
 
 /* WOOCOMMERCE SPECIFIC */
-.woocommerce ul.products li.product .price {color:#78be20; font-size:1.2345em; }
+.woocommerce ul.products li.product .price {color:#78be20; font-size:1.2345em; }2
 .variations_form .variations td.label { display:none !important;}
 .woocommerce-result-count { display:none;}
 .emodal a.emodal-close{color:#fff !important;}
@@ -438,7 +440,7 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 /* END */
 
 /*footer*/
-#footerwrap { width: 1030px; height: 300px; font-family: 'Open Sans', sans-serif; }
+#footerwrap { width: 992px; height: 300px; font-family: 'Open Sans', sans-serif; }
 #footer2014 { background: #00426a; clear: both; }
 #footerlogos { width: 980px; height: 100px; }
 #diamedicallogo { height: 100px; width: 300px; float: left; margin: 20px 0px 0px 40px; }
@@ -527,6 +529,7 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #menu-repirstmp li a,
 .sf-menu > .page_item_has_children > a:first-child {font-size: 18.9px;}
 }
+
 .benz-menu > ul > li > a:active{ background-color: #2774ae }
 .benz-menu > ul > li > a:hover {background-color: #2774ae }
 .arrow-down { z-index: 999; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #2774ae; position:relative; }
@@ -646,6 +649,7 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 /* IV BAG WAIVER */ /* AND Privacy form */
 #vfbp-form-1 .iv-bag-submit{ padding: 1em 6em; margin-top:20px;  }
 #vfbp-form-1 .vfb-signature {border:1.5px solid #ccc; border-radius:4px; }
+.wpb-wps-wrapper .item img {max-width:85% !important; }
 #vfb-field-33-first{}
 #vfbField33 {margin-bottom: 0.8vw;}
 #vfbp-form-2 .pcf-ceiling-height{}
@@ -885,6 +889,14 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 #authorize-net-cim-cc-number, #authorize-net-cim-cc-cvv, #po_number_field{line-height:2; padding:4px 10px;]}
 /* END */
 
+/* Career Page */
+.career-submit{width:100%;}
+/* END */
+
+/* Sim Lab Solutions */
+.sls-img-left{margin-bottom:24px;}
+.sls-img-right{float:right; margin-bottom:24px;}
+.sls-container{width:100%; padding:0 75px; text-align:left;}
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
@@ -999,7 +1011,16 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
     #post_11 .cart_totals .order-total{margin-left: 0;}
     #post_11 .checkout-button {width:75%;}
     #shipping th {display:-webkit-box; text-align: left !important;}
-
+    #free_ship-productpage img {margin-right: 0em !important; padding-bottom: 1em;}
+    #hospitalbuttonhome {width:31.5%;}
+    #infusionbuttonhome{width:32%;}
+    #simlabbuttonhome{width:32.4%;}
+    #infusionbuttonhome{width:32%;}
+    #headwallbuttonhome {width:31.5%; margin-top: -1px;}
+    #practibuttonhome{margin-top: -62px; width:32%;}
+    #medmatbuttonhome {margin-top: -42px; width: 32.4%;}
+    #ns_rotate_wrap{margin-right: 0; width:100%; height: auto;}
+    .header-img{width: 100%; margin: 0 0 1em;}
 }
 
 @media (min-width:320px) and (max-width:991px){
@@ -1010,6 +1031,12 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
   .wc-tabs-wrapper li:last-child {border-top-right-radius: 0px !important; width: 101%; text-align: center}
   .woocommerce div.product .woocommerce-tabs ul.tabs li {margin:-3px -1px}
   .woocommerce div.product div.images img {width:100% !important;}
+}
+
+@media (min-width:320px) and (max-width:1199px){
+  .sls-img-right{float:left;}
+  .sls-img-left, .sls-img-right{width:100%; height:auto;}
+  .sls-container{padding:0;}
 }
 
 @media (min-width: 360px) {
@@ -1149,6 +1176,21 @@ img.img_plc_pm_wrench { top: 171px; }
 
 @media(min-width: 768px) and (max-width: 991px){
 #free_ship-productpage img {margin-right: 0em !important; padding-bottom: 1em;}
+#hospitalbuttonhome {width:31.5%;}
+#infusionbuttonhome{width:32%;}
+#simlabbuttonhome{width:32.4%;}
+#infusionbuttonhome{width:32%;}
+#headwallbuttonhome {width:31.5%; margin-top: -1px;}
+#practibuttonhome{margin-top: -62px; width:32%;}
+#medmatbuttonhome {margin-top: -42px; width: 32.4%;}
+#ns_rotate_wrap{margin-right: 0; width:100%; height: auto;}
+.header-img{width: 100%; margin: 0 0 1em;}
+.hos-links-menu{font-size: 11.5px;}
+}
+
+@media(min-width:768px) and (max-width:1199px){
+  .page-id-58427 .grid figure img {max-width: 97%;}
+  .sls-img-left, .sls-img-right{width: 50%;}
 }
 
 @media screen and (max-width: 991px){
@@ -1166,7 +1208,6 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 .header-toggle{top:-170px; transition-timing-function: ease-in-out;}
 #wpp-buttons{display:none !important;}
 .woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
-
 }
 
 @media (min-width: 992px) {
@@ -1211,6 +1252,14 @@ img.img_plc_pm_wrench {   top: 152px; }
 #pm_blue_1 p {letter-spacing: 1px;}
 .new_pm_row .col-sm-4 .pm_square {font-size: 33px;}
 .new_pm_row .col-sm-3 .pm_square {font-size: 23px;}
+#ns_rotate_wrap{width:71%;}
+#hospitalbuttonhome {width:31.5%;}
+#infusionbuttonhome{width:32%;}
+#simlabbuttonhome{width:32.4%;}
+#infusionbuttonhome{width:32%;}
+#headwallbuttonhome {width:31.5%; margin-top: -1px;}
+#practibuttonhome{margin-top: -62px; width:32%;}
+#medmatbuttonhome {margin-top: -42px; width: 32.4%;}
 }
 
 @media (min-width: 1200px) {

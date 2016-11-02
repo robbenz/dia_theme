@@ -1,11 +1,11 @@
 <!-- START IMG_FLIP -->
-<div style="width:100%; padding:0 75px; text-align:left; ">
+<div class="sls-container">
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="margin-bottom:24px;">
+            <div class="hospital-t-left sls-img-left">
                <li>
                   <figure>
                      <div>
-                        <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
+                        <a id="sls-link-1" href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
                         <img class="img-flip-img-1" src="<?php echo site_url(); ?>/wp-content/imgs/sim-lab-home-iv-bags.png" alt="Simulated IV Bags"></a>
                      </div>
                      <figcaption>
@@ -24,11 +24,11 @@
             </div></ul>
             <!-- hospital-t-left --><!-- START IMG_FLIP -->
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="float:right !important; margin-bottom:24px;">
+            <div class="hospital-t-left sls-img-right">
                <li>
                   <figure>
                      <div>
-                        <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
+                        <a id="sls-link-2" href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
                         <img class="img-flip-img-1" src="<?php echo site_url(); ?>/wp-content/imgs/sim-lab-home-loaded-carts.png" alt="Loaded Crash Carts"></a>
                      </div>
                      <figcaption>
@@ -48,11 +48,11 @@
             </div></ul>
             <!-- hospital-t-left --><!-- START IMG_FLIP -->
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="margin-bottom:24px;">
+            <div class="hospital-t-left sls-img-left">
                <li>
                   <figure>
                      <div>
-                        <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
+                        <a id="sls-link-3" href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
                         <img class="img-flip-img-1" src="<?php echo site_url(); ?>/wp-content/imgs/sim-lab-home-blood-bags.png" alt="Hospital Beds"></a>
                      </div>
                      <figcaption>
@@ -70,7 +70,7 @@
             </div></ul>
             <!-- hospital-t-left --><!-- START IMG_FLIP -->
          <ul class="grid cs-style-8">
-            <div class="hospital-t-left" style="float:right !important; margin-bottom:24px;">
+            <div id="sls-link-4" class="hospital-t-left sls-img-right">
                <li>
                   <figure>
                      <div>
@@ -90,5 +90,22 @@
                      </figcaption>
                   </figure>
                </li>
-            </div></ul>
+            </div>
+          </ul>
 </div>
+<script>
+    if(window.innerWidth < 992 || jQuery(window).width() < 992) {
+        jQuery("#sls-link-1, #sls-link-2, #sls-link-3, #sls-link-4").on("click", function(event){
+          event.preventDefault();
+          console.log("prevented");
+        });
+    }
+
+    /*function mobileLinksMenu($when) {
+        $(window).on($when, function() {
+  })
+}
+mobileLinksMenu('load');
+mobileLinksMenu('resize');*/
+
+</script>
