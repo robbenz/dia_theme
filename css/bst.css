@@ -281,7 +281,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 /* END */
 
 /* WOOCOMMERCE SPECIFIC */
-.woocommerce ul.products li.product .price {color:#78be20; font-size:1.2345em; }2
+.woocommerce ul.products li.product .price {color:#78be20; font-size:1.2345em; }
 .variations_form .variations td.label { display:none !important;}
 .woocommerce-result-count { display:none;}
 .emodal a.emodal-close{color:#fff !important;}
@@ -649,7 +649,6 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 /* IV BAG WAIVER */ /* AND Privacy form */
 #vfbp-form-1 .iv-bag-submit{ padding: 1em 6em; margin-top:20px;  }
 #vfbp-form-1 .vfb-signature {border:1.5px solid #ccc; border-radius:4px; }
-.wpb-wps-wrapper .item img {max-width:85% !important; }
 #vfb-field-33-first{}
 #vfbField33 {margin-bottom: 0.8vw;}
 #vfbp-form-2 .pcf-ceiling-height{}
@@ -897,7 +896,6 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .sls-img-left{margin-bottom:24px;}
 .sls-img-right{float:right; margin-bottom:24px;}
 .sls-container{width:100%; padding:0 75px; text-align:left;}
-
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
 font-family: 'ristretto_promedium', Arial, sans-serif;
