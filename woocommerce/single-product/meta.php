@@ -15,7 +15,7 @@
  * @version     1.6.4
  */
 
-//Benz Mod File
+// Benz Mod File
 // Change SKU to "Part Number" commented out Category "Posted-in" so category doesnt display on product page
 
 
@@ -46,9 +46,10 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 $condition = get_post_meta( get_the_ID(), 'benz_condition_select', true );
 
-if (is_dia_part() && $condition != 'N/A' ) {
-	echo '<br><br>Part Condition: <span style="color:#000;">' . $condition . '</span><br>';
-
+if (function_exists('is_dia_part')) {
+	if (is_dia_part() && $condition != 'N/A' ) {
+		echo '<br><br>Part Condition: <span style="color:#000;">' . $condition . '</span><br>';
+	}
 }
 
 	 // echo $product->get_tags( ', ', '<span class="tagged_as">' . _n( 'Tag:', 'Tags:', $tag_count, 'woocommerce' ) . ' ', '</span>' );

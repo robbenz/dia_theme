@@ -1,4 +1,4 @@
-<?php benz_add_category_headers(); ?>
+<?php if (function_exists('benz_add_category_headers')) benz_add_category_headers(); ?>
 
 <ul class="products">
   <?php
@@ -56,7 +56,7 @@
           <?php
           if (has_post_thumbnail( $loop->post->ID )) {
             echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog');
-            benz_pm_img_placement();
+            if (function_exists('benz_pm_img_placement')) benz_pm_img_placement();
           } else {
             echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />';
           }

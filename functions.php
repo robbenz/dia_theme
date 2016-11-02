@@ -291,7 +291,7 @@ if (!function_exists('loop_columns')) {
 	}
 }
 function products_per_page_category( $count ) {
-  if ( is_dia_parts_cat() ) :
+  if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
     return 1999;
   elseif( is_product_category( '9350') ) :  // Bariatric Care
     return 27;
@@ -752,6 +752,7 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
 /* END */
 
 // -- Category headers
+add_action( 'after_theme_setup', 'benz_add_category_headers' );
 function benz_add_category_headers() {
   $content = get_the_content();
   echo '<div class="term-description"><div class="header-wrap-text-medical-equipment"><h2 class="header-wrap-text-medical-equipment-header">';
@@ -764,8 +765,8 @@ function benz_add_category_headers() {
 /* END */
 
 // -- Small Repairs img for every gallery page -- PM project
+add_action( 'after_theme_setup', 'benz_pm_img_placement' );
 function benz_pm_img_placement(){
-
   echo '<img class="img_plc_pm_wrench" src="';
   echo site_url();
   echo '/wp-content/imgs/repairs-preventive-maintenance.png" />';
@@ -809,6 +810,7 @@ function product_cat_form_custom_field_save( $term_id, $tt_id ) {
     }
 }
 /** query the post and turn into usuable function */
+add_action( 'after_theme_setup', 'is_dia_parts_cat' );
 function is_dia_parts_cat(){
   global $post;
   $parts_cats_all = array();
@@ -824,6 +826,7 @@ function is_dia_parts_cat(){
 /* END */
 
 // --  Function to loop through arrays for special pages - hospital - ltc - ems - imaging
+add_action( 'after_theme_setup', 'benz_loop_special_cats' );
 function benz_loop_special_cats($cat_array) {
 ?>
   <ul class="products">
@@ -837,9 +840,9 @@ function benz_loop_special_cats($cat_array) {
     }
   ?>
     <li class="product-category product<?php echo $first; ?>">
-      <a href="<?php echo site_url(); ?>/product-category/<?php echo $link[slug]; ?>">
-        <img width="250" height="275" alt="<?php echo $link[name]; ?>" src="<?php echo site_url(); ?>/wp-content/uploads/<?php echo $link[img]; ?>">
-        <h3><?php echo $link[name]; ?></h3>
+      <a href="<?php echo site_url(); ?>/product-category/<?php echo $link['slug']; ?>">
+        <img width="250" height="275" alt="<?php echo $link['name']; ?>" src="<?php echo site_url(); ?>/wp-content/uploads/<?php echo $link['img']; ?>">
+        <h3><?php echo $link['name']; ?></h3>
       </a>
     </li>
   <?php $count++; ?>
@@ -850,6 +853,7 @@ function benz_loop_special_cats($cat_array) {
 /* END */
 
 // -- IS_DIA_PART()
+add_action( 'after_theme_setup', 'is_dia_part' );
 function is_dia_part() {
   $isPart = get_post_meta( get_the_ID(), 'benz_product_select', true );
   if ($isPart == 'Part'){
@@ -857,3 +861,34 @@ function is_dia_part() {
   }
 }
 /* END */
+
+
+/**
+ * Hide ALL shipping options when free shipping is available and customer is NOT in certain states
+ * Hide Free Shipping if customer IS in those states
+ */
+add_filter( 'woocommerce_package_rates', 'hide_all_shipping_when_free_is_available' , 10, 2 );
+
+// Hide ALL Shipping option when free shipping is available
+function hide_all_shipping_when_free_is_available( $rates, $package ) {
+
+	$excluded_states = array( 'AK','HI', 'GU', 'PR', 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT' );
+	if( isset( $rates['free_shipping'] ) AND !in_array( WC()->customer->shipping_state, $excluded_states ) ) :
+		// Get Free Shipping array into a new array
+		$freeshipping = array();
+		$freeshipping = $rates['free_shipping'];
+
+		// Empty the $available_methods array
+		unset( $rates );
+
+		// Add Free Shipping back into $avaialble_methods
+		$rates = array();
+		$rates[] = $freeshipping;
+
+	endif;
+
+	if( isset( $rates['free_shipping'] ) AND in_array( WC()->customer->shipping_state, $excluded_states ) ) {
+		unset( $rates['free_shipping'] );
+	}
+	return $rates;
+}

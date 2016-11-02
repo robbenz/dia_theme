@@ -2,9 +2,6 @@
 <?php
 $ps_echo = true ;
 if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
-?>
-
-<?php
 
 $hospitalLinks = array(
   array(
@@ -81,6 +78,6 @@ $hospitalLinks = array(
     "slug" => "surgical/" )
 );
 
-?>
+if ( function_exists('benz_loop_special_cats') ) benz_loop_special_cats($hospitalLinks);
 
-<?php benz_loop_special_cats($hospitalLinks); ?>
+?>

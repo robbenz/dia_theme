@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_main_content' );
 ?>
 <?php
-if ( is_dia_parts_cat() ) :
+if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
 	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
 	$single_cat = array_shift( $product_cats );
 ?>

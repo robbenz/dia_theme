@@ -94,6 +94,6 @@ $emsLinks = array(
     "slug" => "emergency-rescue/emergency-bags/trauma-bags/" )
 );
 
-?>
+if ( function_exists('benz_loop_special_cats') ) benz_loop_special_cats($emsLinks);
 
-<?php benz_loop_special_cats($emsLinks); ?>
+?>

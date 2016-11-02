@@ -80,7 +80,7 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 		</ul>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
 
-			<?php if( is_dia_part() ): ?>
+			<?php if( function_exists('is_dia_part') && is_dia_part() ): ?>
 
 			<div style="height:auto !important;padding-bottom:10px !important;" class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
 			<?php else : ?>

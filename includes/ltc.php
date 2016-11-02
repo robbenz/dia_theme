@@ -95,6 +95,6 @@ $ltcLinks = array(
     "slug" => "mobility/wheelchairs-mobility/" )
 );
 
-?>
+if(function_exists('benz_loop_special_cats')) benz_loop_special_cats($ltcLinks);
 
-<?php benz_loop_special_cats($ltcLinks); ?>
+?>

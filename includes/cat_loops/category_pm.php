@@ -1,4 +1,4 @@
-<?php benz_add_category_headers(); ?>
+<?php if (function_exists('benz_add_category_headers')) benz_add_category_headers(); ?>
 
 <ul class="products">
 
@@ -32,7 +32,7 @@ foreach ($pm_cats_array as $key => $value) :
         echo '<a href="' . site_url() . '/site-repairs-preventive-maintenance\/' . $sc->slug . '-repairs">';
       }
       echo '<img src="' . $image . '" />' ;
-      benz_pm_img_placement();
+      if (function_exists('benz_pm_img_placement')) benz_pm_img_placement();  
       echo '<h3>' . $sc->name . ' <br>- <span style="font-weight:bold;">Repair</span></h3></a></li>';
       $counter++;
     endforeach;

@@ -50,7 +50,8 @@ if ( $products->have_posts() ) : ?>
 	<div class="related products">
 
 	<?php
-	if( is_dia_part() ):
+
+	if( function_exists('is_dia_part') && is_dia_part() ):
 		$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
 		$single_cat = array_shift( $product_cats );
 	?>
