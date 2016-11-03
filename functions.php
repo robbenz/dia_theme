@@ -290,17 +290,34 @@ if (!function_exists('loop_columns')) {
       return 3;
 	}
 }
+
 function products_per_page_category( $count ) {
   if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
-    return 1999;
+    return 9999;
   elseif( is_product_category( '9350') ) :  // Bariatric Care
     return 27;
-  else :
-   return 12;
+  elseif ($_GET['view'] === 'all') :
+   return 9999;
+   else :
+    return 12;
   endif;
 }
 add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 /* END */
+
+// --  VIEW ALL STUFF
+/*
+add_filter('loop_shop_per_page', 'dia_view_all_products');
+
+function dia_view_all_products(){
+	if($_GET['view'] === 'all'){
+		return '9999';
+	}
+}
+
+
+/* END */
+
 
 //  --  remove "Add to Cart" button on product listing page in WooCommerce
 add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
@@ -735,6 +752,7 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
   echo '<li class="active has-sub">';
   $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
   echo '<a href="' . $parent_link . '"><span>' . $parent_cat_NAME . '</span></a><ul>';
+  // special cats
   if ($product_cat_ID != '8482'){
     foreach ($subcats as $sc) {
       $link = get_term_link( $sc->slug, $sc->taxonomy );
@@ -861,34 +879,3 @@ function is_dia_part() {
   }
 }
 /* END */
-
-
-/**
- * Hide ALL shipping options when free shipping is available and customer is NOT in certain states
- * Hide Free Shipping if customer IS in those states
- */
-add_filter( 'woocommerce_package_rates', 'hide_all_shipping_when_free_is_available' , 10, 2 );
-
-// Hide ALL Shipping option when free shipping is available
-function hide_all_shipping_when_free_is_available( $rates, $package ) {
-
-	$excluded_states = array( 'AK','HI', 'GU', 'PR', 'AB', 'BC', 'MB', 'NB', 'NL', 'NT', 'NS', 'NU', 'ON', 'PE', 'QC', 'SK', 'YT' );
-	if( isset( $rates['free_shipping'] ) AND !in_array( WC()->customer->shipping_state, $excluded_states ) ) :
-		// Get Free Shipping array into a new array
-		$freeshipping = array();
-		$freeshipping = $rates['free_shipping'];
-
-		// Empty the $available_methods array
-		unset( $rates );
-
-		// Add Free Shipping back into $avaialble_methods
-		$rates = array();
-		$rates[] = $freeshipping;
-
-	endif;
-
-	if( isset( $rates['free_shipping'] ) AND in_array( WC()->customer->shipping_state, $excluded_states ) ) {
-		unset( $rates['free_shipping'] );
-	}
-	return $rates;
-}
