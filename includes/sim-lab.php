@@ -3,9 +3,9 @@
          <ul class="grid cs-style-8">
             <div class="hospital-t-left sls-img-left">
                <li>
-                  <figure>
+                  <figure id="sls-link-1">
                      <div>
-                        <a id="sls-link-1" href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
+                        <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
                         <img class="img-flip-img-1" src="<?php echo site_url(); ?>/wp-content/imgs/sim-lab-home-iv-bags.png" alt="Simulated IV Bags"></a>
                      </div>
                      <figcaption>
@@ -26,9 +26,9 @@
          <ul class="grid cs-style-8">
             <div class="hospital-t-left sls-img-right">
                <li>
-                  <figure>
+                  <figure id="sls-link-2">
                      <div>
-                        <a id="sls-link-2" href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
+                        <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
                         <img class="img-flip-img-1" src="<?php echo site_url(); ?>/wp-content/imgs/sim-lab-home-loaded-carts.png" alt="Loaded Crash Carts"></a>
                      </div>
                      <figcaption>
@@ -50,9 +50,9 @@
          <ul class="grid cs-style-8">
             <div class="hospital-t-left sls-img-left">
                <li>
-                  <figure>
+                  <figure id="sls-link-3">
                      <div>
-                        <a id="sls-link-3" href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
+                        <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
                         <img class="img-flip-img-1" src="<?php echo site_url(); ?>/wp-content/imgs/sim-lab-home-blood-bags.png" alt="Hospital Beds"></a>
                      </div>
                      <figcaption>
@@ -70,9 +70,9 @@
             </div></ul>
             <!-- hospital-t-left --><!-- START IMG_FLIP -->
          <ul class="grid cs-style-8">
-            <div id="sls-link-4" class="hospital-t-left sls-img-right">
+            <div class="hospital-t-left sls-img-right">
                <li>
-                  <figure>
+                  <figure id="sls-link-4">
                      <div>
                         <a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/">
                         <img class="img-flip-img-1" src="<?php echo site_url(); ?>/wp-content/imgs/sim-lab-home-refill-kits.png" alt="Crash Cart Refill Kits"></a>
@@ -94,13 +94,22 @@
           </ul>
 </div>
 <script>
+var link1=false; var link2=false; var link3=false; var link4=false; console.log(link1, link2, link3, link4);
     if(window.innerWidth < 992 || jQuery(window).width() < 992) {
+
         jQuery("#sls-link-1, #sls-link-2, #sls-link-3, #sls-link-4").on("click", function(event){
-          event.preventDefault();
-          console.log("prevented");
+          if(!link1){event.preventDefault();console.log(link1, link2, link3, link4);}
+          else if (!link2){event.preventDefault();console.log(link1, link2, link3, link4);}
+          else if (!link3){event.preventDefault();console.log(link1, link2, link3, link4);}
+          else if (!link4){event.preventDefault();console.log(link1, link2, link3, link4);}
+          switch(this.id){
+            case "sls-link-1" : link1=true; link2=false; link3=false; link4=false; console.log("1", link1, link2, link3, link4); break;
+            case "sls-link-2" : link1=false; link2=true; link3=false; link4=false; console.log("2", link1, link2, link3, link4); break;
+            case "sls-link-3" : link1=false; link2=false; link3=true; link4=false; console.log("3", link1, link2, link3, link4); break;
+            case "sls-link-4" : link1=false; link2=false; link3=false; link4=true; console.log("4", link1, link2, link3, link4); break;
+          }
         });
     }
-
     /*function mobileLinksMenu($when) {
         $(window).on($when, function() {
   })
