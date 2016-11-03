@@ -93,7 +93,25 @@
             </div>
           </ul>
 </div>
+
 <script>
+var link1=false; var link2=false; var link3=false; var link4=false; console.log(link1, link2, link3, link4);
+    if(window.innerWidth < 992 || jQuery(window).width() < 992) {
+
+        jQuery("#sls-link-1, #sls-link-2, #sls-link-3, #sls-link-4").on("click", function(event){
+          event.preventDefault();console.log(link1, link2, link3, link4);
+          switch(this.id){
+            case "sls-link-1" : link1=true; console.log("1", link1, link2, link3, link4); break;
+            case "sls-link-2" : link2=true; console.log("2", link1, link2, link3, link4); break;
+            case "sls-link-3" : link3=true; console.log("3", link1, link2, link3, link4); break;
+            case "sls-link-4" : link4=true; console.log("4", link1, link2, link3, link4); break;
+          }
+        });
+    }
+</script>
+
+<script>
+/*
 var link1=false; var link2=false; var link3=false; var link4=false; console.log(link1, link2, link3, link4);
     if(window.innerWidth < 992 || jQuery(window).width() < 992) {
 
