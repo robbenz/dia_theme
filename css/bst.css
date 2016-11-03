@@ -968,11 +968,16 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
   #pm_ltgreen_3 {width: 100%; border-left:0; font-size: 24px;}
 }
 
+@media (min-width:320px) and (max-width:523px){
+  .hos-links-menu {font-size: 2.8vw;}
+}
+
 @media (min-width:320px) and (max-width:560px){
   .woocommerce div.product .woocommerce-tabs ul.tabs{margin:0 -33px 1.618em;}
   .woocommerce div.product .woocommerce-tabs .panel{margin: 0px -33px 2em !important;}
   .ems-approved-img {margin-right:-50px;}
   .ems-img-size{width:66%;}
+  .sls-img-left, .sls-img-right{padding:0 15px; margin-bottom:10px;}
 }
 
 @media(min-width:320px) and (max-width:499px){
