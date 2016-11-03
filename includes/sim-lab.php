@@ -98,10 +98,10 @@ var link1=false; var link2=false; var link3=false; var link4=false; console.log(
     if(window.innerWidth < 992 || jQuery(window).width() < 992) {
 
         jQuery("#sls-link-1, #sls-link-2, #sls-link-3, #sls-link-4").on("click", function(event){
-          if(!link1){event.preventDefault();console.log(link1, link2, link3, link4);}
-          else if (!link2){event.preventDefault();console.log(link1, link2, link3, link4);}
-          else if (!link3){event.preventDefault();console.log(link1, link2, link3, link4);}
-          else if (!link4){event.preventDefault();console.log(link1, link2, link3, link4);}
+          if(!link1 && this.id=="sls-link-1"){event.preventDefault();console.log(link1, link2, link3, link4);}
+          else if (!link2 && this.id=="sls-link-2"){event.preventDefault();console.log(link1, link2, link3, link4);}
+          else if (!link3 && this.id=="sls-link-3"){event.preventDefault();console.log(link1, link2, link3, link4);}
+          else if (!link4 && this.id=="sls-link-4"){event.preventDefault();console.log(link1, link2, link3, link4);}
           switch(this.id){
             case "sls-link-1" : link1=true; link2=false; link3=false; link4=false; console.log("1", link1, link2, link3, link4); break;
             case "sls-link-2" : link1=false; link2=true; link3=false; link4=false; console.log("2", link1, link2, link3, link4); break;
