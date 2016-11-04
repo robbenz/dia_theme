@@ -283,7 +283,18 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
 }
 /* END */
 
-// -- Change number or products per row, and number of products per page
+
+/****** WOOCOMMERCE GALLERY PAGE STUFF ******/
+
+// -- WooCommerce orderby dropdown
+// -- Options: menu_order, popularity, rating, date, price, price-desc
+add_filter( "woocommerce_catalog_orderby", "dia_woocommerce_catalog_orderby", 20 );
+function dia_woocommerce_catalog_orderby( $orderby ) {
+	unset($orderby["date"]);
+	return $orderby;
+}
+
+// -- Change number or products per row
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
     function loop_columns() {
@@ -291,33 +302,21 @@ if (!function_exists('loop_columns')) {
 	}
 }
 
+// -- number of products per page
+add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 function products_per_page_category( $count ) {
   if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
     return 9999;
   elseif( is_product_category( '9350') ) :  // Bariatric Care
     return 27;
-  elseif ($_GET['view'] === 'all') :
-   return 9999;
-   else :
-    return 12;
+  elseif (isset($_GET['view']) && $_GET['view'] === 'all') :  // View all page
+    return 9999;
+  else :
+   return 12;
   endif;
 }
-add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
-/* END */
-
-// --  VIEW ALL STUFF
-/*
-add_filter('loop_shop_per_page', 'dia_view_all_products');
-
-function dia_view_all_products(){
-	if($_GET['view'] === 'all'){
-		return '9999';
-	}
-}
-
 
 /* END */
-
 
 //  --  remove "Add to Cart" button on product listing page in WooCommerce
 add_action( 'woocommerce_after_shop_loop_item', 'remove_add_to_cart_buttons', 1 );
@@ -830,15 +829,17 @@ function product_cat_form_custom_field_save( $term_id, $tt_id ) {
 /** query the post and turn into usuable function */
 add_action( 'after_theme_setup', 'is_dia_parts_cat' );
 function is_dia_parts_cat(){
-  global $post;
-  $parts_cats_all = array();
-  $t_id = get_queried_object()->term_id;
-  $option_find = get_option("product_cat_featured_$t_id");
-  if ($option_find == 'Parts') {
-    array_push($parts_cats_all, $t_id ) ;
-  }
-  if ( in_array($t_id, $parts_cats_all ) ){
-    return true;
+  if ( !is_shop() ){
+    global $post;
+    $parts_cats_all = array();
+    $t_id = get_queried_object()->term_id;
+    $option_find = get_option("product_cat_featured_$t_id");
+    if ($option_find == 'Parts') {
+      array_push($parts_cats_all, $t_id ) ;
+    }
+    if ( in_array($t_id, $parts_cats_all ) ){
+      return true;
+    }
   }
 }
 /* END */
@@ -877,5 +878,16 @@ function is_dia_part() {
   if ($isPart == 'Part'){
     return true;
   }
+}
+/* END */
+
+// -- category_has_parent()
+add_action( 'after_theme_setup', 'dia_cat_has_parent' );
+function dia_cat_has_parent($catid) {
+  $category = get_category($catid);
+  if ($category->category_parent > 0){
+      return true;
+  }
+  return false;
 }
 /* END */

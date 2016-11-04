@@ -43,7 +43,6 @@ $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 	<?php
 
-
 $condition = get_post_meta( get_the_ID(), 'benz_condition_select', true );
 
 if (function_exists('is_dia_part')) {

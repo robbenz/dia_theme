@@ -67,8 +67,7 @@ global $product;
 <?php do_action( 'woocommerce_after_main_content' ); ?>
 
 <?php else : ?>
-
-<?php
+<?php    // header stuff
 		echo '<div class="header-wrap-text-medical-equipment"><h2 class="header-wrap-text-medical-equipment-header">';
 		if ( is_shop() ) {
 			echo 'Medical Equipment';
@@ -83,28 +82,39 @@ global $product;
 	}
 ?>
 
-<?php if ( have_posts() ) : ?>
-	<?php do_action( 'woocommerce_before_shop_loop' ); ?>
-	<?php woocommerce_product_loop_start(); ?>
-	<?php woocommerce_product_subcategories(); ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php wc_get_template_part( 'content', 'product' ); ?>
-	<?php endwhile; // end of the loop. ?>
-	<?php woocommerce_product_loop_end(); ?>
-	<?php do_action( 'woocommerce_after_shop_loop' ); ?>
-	<?php
-	if ( !is_shop() ) {
-		$t_id = get_queried_object()->term_id;
-		$term_meta = get_option( "taxonomy_$t_id" );
-		if 	(isset($term_meta['custom_term_meta'])) {
-			echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
-		}
+<?php
+$katt = get_queried_object();
+$kattID = $katt->term_id;
+if ( have_posts() ) :
+	get_template_part('includes/sidebar');
+	do_action( 'woocommerce_before_shop_loop' );
+	if ( !is_shop() && dia_cat_has_parent($kattID) == true ):
+		do_action( 'woocommerce_after_shop_loop');
+		if( isset($_GET['view']) && $_GET['view'] === 'all' ) : ?>
+			<div style="float: right"><a class="btn btn-primary" href=".">View Less</a></div>
+			<?php
+		endif;
+	endif;
+	woocommerce_product_loop_start();
+	woocommerce_product_subcategories();
+	while ( have_posts() ) : the_post();
+	wc_get_template_part( 'content', 'product' );
+endwhile;
+woocommerce_product_loop_end();
+do_action( 'woocommerce_after_shop_loop' );
+
+if ( !is_shop() ) {
+	$t_id = get_queried_object()->term_id;
+	$term_meta = get_option( "taxonomy_$t_id" );
+	if 	(isset($term_meta['custom_term_meta'])) {
+		echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
 	}
+}
 	?>
 <?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 	<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 <?php endif; ?>
+
 <?php do_action( 'woocommerce_after_main_content' ); ?>
-<?php get_template_part('includes/sidebar'); ?>
 
 <?php endif; ?>

@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * Pagination - Show numbered pagination for catalog pages
  *
@@ -23,10 +23,6 @@ global $wp_query;
 
 $button_classes = 'btn btn-primary';
 
-if( $_GET['view'] === 'all' ) { ?>
-  <div style="float: right"><a class="<?php echo $button_classes; ?>" href=".">View Less</a></div>
-<?php }
-
 if ( $wp_query->max_num_pages <= 1 ) {
 	return;
 }
@@ -47,8 +43,8 @@ if ( $wp_query->max_num_pages <= 1 ) {
 		) ) );
 	?>
 	<?php if (is_paged()) : ?>
-	  <div style="float: right"><a class="<?php echo $button_classes; ?>" href="../../?view=all">View All</a></div>
+	  <div style="float: right; margin-left:2em;"><a class="<?php echo $button_classes; ?>" href="../../?view=all">View All</a></div>
 	<?php else: ?>
-	  <div style="float: right"><a class="<?php echo $button_classes; ?>" href="?view=all">View All</a></div>
+	  <div style="float: right; margin-left:2em;"><a class="<?php echo $button_classes; ?>" href="?view=all">View All</a></div>
 	<?php endif; ?>
 </nav>
