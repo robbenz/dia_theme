@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="../css/ristrettopro_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" href="../css/ristrettopro_bold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/css/bst.css'); ?>" type="text/css" media="screen, projection" />
 	<?php wp_head(); ?>
 
 </head>
@@ -27,6 +28,7 @@
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
 	</div>
 </div>
+
 <?php
 		if(isset($_GET['login']) && $_GET['login']=='failed') {
 			echo '<p style="margin-top:0.8em;" class="woo-ma-login-failed woo-ma-error error-home-class-red">';
