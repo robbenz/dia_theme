@@ -897,3 +897,23 @@ function dia_cat_has_children( $term_id = 0, $taxonomy = 'category' ) {
     $children = get_categories( array( 'child_of' => $term_id, 'taxonomy' => $taxonomy ) );
     return ( $children );
 }
+
+
+
+
+add_action( 'wp_enqueue_scripts', 'dia_enqueue_scripts', 999 );
+function dia_enqueue_scripts() {
+
+	if ( ! wp_style_is( 'style', 'done' ) ) {
+
+		wp_deregister_style( 'style' );
+		wp_dequeue_style( 'style' );
+
+		$style_filepath = get_stylesheet_directory() . '/css/bst.css';
+		if ( file_exists($style_filepath) ) {
+			wp_enqueue_style( 'style', get_stylesheet_uri() . '?' . filemtime( $style_filepath ) );
+		}
+
+	}
+
+}
