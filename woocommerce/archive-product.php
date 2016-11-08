@@ -83,24 +83,43 @@ global $product;
 ?>
 
 <?php
+
 $katt = get_queried_object();
+
 $kattID = $katt->term_id;
+
 if ( have_posts() ) :
+
 	get_template_part('includes/sidebar');
+
 	do_action( 'woocommerce_before_shop_loop' );
+
 	if ( !is_shop() && dia_cat_has_parent($kattID) == true ):
+
 		do_action( 'woocommerce_after_shop_loop');
+
 		if( isset($_GET['view']) && $_GET['view'] === 'all' ) : ?>
+
 			<div style="float: right"><a class="btn btn-primary" href=".">View Less</a></div>
+
 			<?php
+
 		endif;
+
 	endif;
+
 	woocommerce_product_loop_start();
+
 	woocommerce_product_subcategories();
+
 	while ( have_posts() ) : the_post();
+
 	wc_get_template_part( 'content', 'product' );
+
 endwhile;
+
 woocommerce_product_loop_end();
+
 do_action( 'woocommerce_after_shop_loop' );
 
 if ( !is_shop() ) {

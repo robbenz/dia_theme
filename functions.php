@@ -891,3 +891,9 @@ function dia_cat_has_parent($catid) {
   return false;
 }
 /* END */
+
+add_action( 'after_theme_setup', 'dia_cat_has_children' );
+function dia_cat_has_children( $term_id = 0, $taxonomy = 'category' ) {
+    $children = get_categories( array( 'child_of' => $term_id, 'taxonomy' => $taxonomy ) );
+    return ( $children );
+}
