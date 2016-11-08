@@ -868,10 +868,8 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #vfbp-form-7 .vfb-checkbox .subscribe_lists_li{color:#fff; font-size:23px !important; font-family: 'ristretto_prolight', Arial, sans-serif;letter-spacing:0.89px; list-style:none;}
 #vfbp-form-7 .vfb-checkbox label{ margin-left:9px;  line-height: 2px;}
 #vfbp-form-7 .vfb-checkbox{margin-bottom:3px !important; margin-top: 0 !important;}
-#vfbp-form-7 .subscribe_email {}
-#vfbp-form-7 .subscribe_lists {height:30px; width:30px; margin-left:-40px; }
+#vfbp-form-7 .subscribe_lists { height: 26px; margin-left: -35px; width: 26px; }
 #vfbp-form-7 button.subscribe_btn{width:100%; background-color:#78be20;border:none; margin-top:10px; }
-
 /* END */
 
 /*Checkout*/
