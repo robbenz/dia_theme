@@ -814,7 +814,7 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 #categories-4 label{display:none;}
 ul.icons-medium { padding:0; }
 ul.icons-medium li { margin:0 7.5%; }
-.blog p, .blog li { font-size: 1.2em; margin-top:1.5%;}
+.blog #sidebar p, .blog #sidebar li { font-size: 1.2em; margin-top:1.5%; }
 #robly_embedded_subscribe_form #robly_embedded_subscribe{width:100%; margin-top:5%; }
 /*END*/
 
