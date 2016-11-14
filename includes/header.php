@@ -38,7 +38,7 @@
 ?>
 <header id="masthead" role="banner">
 	<div class="container">
-	<nav id="mobile-navbar">
+	<nav id="mobile-navbar" class="">
 	<div id="fixed-row" class="row">
 		<div id="dia-logo-left">
 			<a href="<?php echo site_url(); ?>">
@@ -88,7 +88,7 @@
 </div>
 </header> <!-- #masthead -->
 
-<nav id="drop-menu" class="navbar navbar-default navbar-static-top">
+<nav id="drop-menu" class="">
 	<div class="container">
     <div class="navbar-header">
 

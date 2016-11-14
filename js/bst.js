@@ -50,10 +50,11 @@
         addClassesMobile('resize');
         /*** END ***/
 
+        /*** Remove blue bar when previous button is clicked on checkout page ***/
         $("[href='#previous']").click(function() {
             $(".current").next().removeClass("done");
         });
-
+        /*** END ***/
     });
 
 }(jQuery));
