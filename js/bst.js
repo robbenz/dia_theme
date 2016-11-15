@@ -59,8 +59,11 @@
         $("#billing_address_1").attr("maxlength", 60);
         $("#billing_address_1").on("keyup", function() {
             if ($(this).val().length == 60) {
+                $(".red-alert").remove();
                 $("#billing_address_1_field").append("<p class='red-alert'>Maximum Length Reached</p>");
-                $(".red-alert").hide(2000);
+                $(".red-alert").hide(2000, function() {
+
+                });
             }
         });
 
