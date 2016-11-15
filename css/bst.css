@@ -906,6 +906,8 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .career-submit{width:100%;}
 /* END */
 
+/* Checkout Page */
+.red-alert{color:#f00;}
 /* Sim Lab Solutions */
 .sls-img-left{margin-bottom:24px;}
 .sls-img-right{float:right; margin-bottom:24px;}
