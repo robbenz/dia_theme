@@ -40,7 +40,7 @@
       <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/"><img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/Simulated-iv-fluids.png" /></a>
     </div>
     <div class="col-md-4" style="">
-      <a href="http://www.diamedicalusa.com/Catalog.pdf" target="_blank"><img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/download-catalog.png" /></a>
+      <a href="http://www.diamedicalusa.com/Catalog.pdf" target="_blank"><img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical_Catalog_2017.png" /></a>
     </div>
     <div class="col-md-4" style="">
       <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">  <img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/loaded-crash-carts.jpg" /></a>

@@ -12,8 +12,6 @@
         $('select, input[type=text], input[type=email], input[type=password], textarea').addClass('form-control');
         $('input[type=submit]').addClass('btn btn-primary');
 
-        // You can put your own code in here
-
         /*** Add classes to #PM # Shipping -- product page on load & Resize ***/
         function addClassesProducts($when) {
             $(window).on($when, function() {
@@ -56,6 +54,7 @@
         });
         /*** END ***/
 
+        /*** Max Length for checkout shipping input field ***/
         $("#billing_address_1").attr("maxlength", 60);
         $("#billing_address_1").on("keyup", function() {
             if ($(this).val().length == 60) {
@@ -66,7 +65,22 @@
                 });
             }
         });
+        /*** END ***/
 
-    });
+        /*** Little hover effect for work order form on PM page ***/
+        function littleHoverPM() {
+          if ($(window).width() > 991) {
+            $("#pm_ltgreen_1_link").mouseover(function() {
+              $("#pm_ltgreen_1_link em, #pm_ltgreen_1_link span").animate({fontSize: "25px"}, 200 ).css('color', '#00426a');
+            });
+            $("#pm_ltgreen_1_link").mouseleave(function() {
+              $("#pm_ltgreen_1_link em, #pm_ltgreen_1_link span").animate({fontSize: "24px"}, 100 ).css('color', '#000');
+            });
+          }
+        }
+        littleHoverPM();
+        /*** END ***/
+
+        });
 
 }(jQuery));

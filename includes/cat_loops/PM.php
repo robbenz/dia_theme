@@ -2,10 +2,10 @@
 <div id="pm_blue_1">
   <p><em>Equipment in Need of Repair, Maintenance, Service or Installation?</em></p>
 </div>
-<a style="color:#000" href="<?php echo site_url(); ?>/preventative-maintenance-work-order-request/">
+<a id="pm_ltgreen_1_link" style="color:#000" href="<?php echo site_url(); ?>/preventative-maintenance-work-order-request/">
   <div id="pm_ltgreen_1" class="pm_ltgreen">
     <img class="pm-page-circle-img" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" />
-    <em>Submit an Online</em><br>
+    <em>Click Here &amp; Submit</em><br>
     <span>Work Order Request</span>
   </div>
 </a>

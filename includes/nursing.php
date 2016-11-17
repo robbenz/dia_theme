@@ -35,7 +35,7 @@ onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4.png';"/></a></div>
 
 <a style="margin-top:1em;" href="#" class="eModal-2">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-modal-requst.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-modal-requst-hover.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-modal-requst.png';"/></a>
+<img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education-hv.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png';"/></a>
 
 <?php // echo do_shortcode('[wpb-feature-product title="Feature Products"]'); ?>
 
