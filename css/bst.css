@@ -1245,7 +1245,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 }
 
 @media (min-width: 992px) {
-#mm-right-contact{ display:inline-block; margin-top: -40px;}
+#mm-right-contact{ display:none; margin-top: -40px;}
 .benz-menu > ul > li > a{ padding: 11px 0.961em; }
 .benz-menu .sub-menu{ width: 971px; }
 #menu-item-32373 > .sub-menu { left: -108px; letter-spacing: 0.8px;}
