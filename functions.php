@@ -736,6 +736,7 @@ function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
     echo '</ul>';
 }
 
+
 function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
   $IDbyNAME = get_term_by('name', $parent_cat_NAME, 'product_cat');
   $product_cat_ID = $IDbyNAME->term_id;
@@ -881,26 +882,24 @@ function is_dia_part() {
 }
 /* END */
 
-// -- category_has_parent()
-add_action( 'after_theme_setup', 'dia_cat_has_parent' );
-function dia_cat_has_parent($catid) {
-  $category = get_category($catid);
-  if ($category->category_parent > 0){
-      return true;
+/** check for children categories -- if this returns true, its a gallery page with only products **/
+add_action( 'after_theme_setup', 'dia_check_for_kids' );
+function dia_check_for_kids($parent_cat_ID) {
+    $args = array(
+       'hierarchical' => 1,
+       'show_option_none' => '',
+       'hide_empty' => 0,
+       'parent' => $parent_cat_ID,
+       'taxonomy' => 'product_cat'
+    );
+  $subcats = get_categories($args);
+  if ( count($subcats) == 0 ) {
+    return true;
   }
-  return false;
 }
 /* END */
 
-add_action( 'after_theme_setup', 'dia_cat_has_children' );
-function dia_cat_has_children( $term_id = 0, $taxonomy = 'category' ) {
-    $children = get_categories( array( 'child_of' => $term_id, 'taxonomy' => $taxonomy ) );
-    return ( $children );
-}
-
-
-
-
+/** Load CSS sheet **/
 add_action( 'wp_enqueue_scripts', 'dia_enqueue_scripts', 999 );
 function dia_enqueue_scripts() {
 
@@ -917,3 +916,4 @@ function dia_enqueue_scripts() {
 	}
 
 }
+/* END */
