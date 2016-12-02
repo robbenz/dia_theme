@@ -205,8 +205,7 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 .rs_rs_tag a {text-decoration: line-through;color: #ffffff;pointer-events: none !important;}
 .rs_rs_tag a:before{content:"$";}
  .ctr_search .txt_livesearch, #wrap .ctr_search .txt_livesearch {padding: 6px 7px !important;}
-.ctr_search { border-radius: 0.5em; height:2.4em; padding: 6px 7px !important; margin-top: 0px;
-}
+.ctr_search { border-radius: 0.5em; height:2.4em; padding: 6px 7px !important; margin-top: 0px;}
 .rs_result_others{display:none;}
 .sorry-you-cant-find{color:#cc1100;font-weight:900;font-size:1.18em;letter-spacing: 1px;}
 /* END */
@@ -588,7 +587,7 @@ li.main-header-link:hover {background-color:#2774ae; }
 
 /* Part Search Menu */
 #menu-parts-search .benz-bottom-colors { top: 145px; }
-#menu-parts-search  .arrow-down {  left: 40%;; top: -100px; }
+#menu-parts-search  .arrow-down { left: 40%;; top: -100px; }
 #menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
 #menu-parts-search .ctr_search{ position: relative !important; top:-23px; }
 #menu-item-57558 { width:200px;}
@@ -817,7 +816,6 @@ ul.icons-medium li { margin:0 7.5%; }
 .blog #sidebar p, .blog #sidebar li { font-size: 1.2em; margin-top:1.5%; }
 #robly_embedded_subscribe_form #robly_embedded_subscribe{width:100%; margin-top:5%; }
 /*END*/
-
 
 /* MFT PAGE */
 #content-directory { margin-left:150px; margin-top:20px; }

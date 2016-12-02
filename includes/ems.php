@@ -1,99 +1,57 @@
-<?php
-$emsLinks = array(
-  array(
-    "name" => "Ambulance Simulator",
-    "img"  => "2015/09/Ambulance_Simulator-250x275.png",
-    "slug" => "emergency-rescue/ambulance-simulator/" ),
-  array(
-    "name" => "Backboards",
-    "img"  => "2015/07/Millennia-Plastic-Backboard-16-258x275.png",
-    "slug" => "emergency-rescue/immobilization/backboards/" ),
-  array(
-    "name" => "Basket Stretchers",
-    "img"  => "2015/05/Dakar-Basket-Stretcher-with-Wheels-19264_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-transport-supplies/basket-stretchers/" ),
-  array(
-    "name" => "Blades &amp; Scalpels",
-    "img"  => "2015/06/4187-258x275.png",
-    "slug" => "emergency-rescue/emergency-accessories/blades-scalpels/" ),
-  array(
-    "name" => "Body Bags",
-    "img"  => "2015/06/4776-258x275.png",
-    "slug" => "emergency-rescue/emergency-accessories/body-bags/" ),
-  array(
-    "name" => "CPR Products",
-    "img"  => "2015/06/4924-258x275.png",
-    "slug" => "emergency-rescue/emergency-accessories/cpr-products/" ),
-  array(
-    "name" => "Emergency Bags",
-    "img"  => "2015/05/Professional-Resuscitation-Bag-19220_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-bags/" ),
-  array(
-    "name" => "Emergency Cots &amp; Stretchers",
-    "img"  => "2015/06/Ferno-35-A-Mobile-Transporter-Series-291_400x4001-258x275.png",
-    "slug" => "emergency-rescue/cots-stretchers-ems/" ),
-  array(
-    "name" => "Emergency Vests",
-    "img"  => "2016/07/G32001FLG3-250x275.jpg",
-    "slug" => "emergency-rescue/emergency-accessories/vest-emergency-bags/" ),
-  array(
-    "name" => "Emergency Highway Blanket",
-    "img"  => "2015/06/3519-258x275.png",
-    "slug" => "emergency-rescue/emergency-accessories/emergency-highway-blanket/" ),
-  array(
-    "name" => "Fire Blankets",
-    "img"  => "2015/08/JSA_1000_W_Fire_Blanket_Cabinet-258x275.jpg",
-    "slug" => "emergency-rescue/emergency-accessories/fire-blankets/" ),
-  array(
-    "name" => "Head Immobilizers",
-    "img"  => "2015/08/35721HI_Pro-Lite_Pediatric_Head_Immobilizer_400x400-258x275.png",
-    "slug" => "emergency-rescue/immobilization/head-immobilizers/" ),
-  array(
-    "name" => "Holsters",
-    "img"  => "2015/05/Top-Leather-Holster-19208_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-accessories/holsters/" ),
-  array(
-    "name" => "Loaded Crash Carts&trade;",
-    "img"  => "2015/10/loaded-6-drawer-emergency-crash-cart-250x275.png",
-    "slug" => "carts-storage/loaded-crash-carts/" ),
-  array(
-    "name" => "Multi-Purpose Tools",
-    "img"  => "2015/05/Multi-Purpose-Tools-and-Accessories-19261_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-accessories/multi-purpose-tools/" ),
-  array(
-    "name" => "Oxygen Bags",
-    "img"  => "2015/07/02_Sleeve_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-bags/oxygen-bags/" ),
-  array(
-    "name" => "Patient Slings",
-    "img"  => "2015/08/Mobility_Assistance_Sling_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-transport-supplies/patient-slings/" ),
-  array(
-    "name" => "Pole Stretchers",
-    "img"  => "2015/08/JSA_501NA_Aluminum_Pole_Stretcher-258x275.png",
-    "slug" => "emergency-rescue/emergency-transport-supplies/pole-stretchers/" ),
-  array(
-    "name" => "Splinting devices",
-    "img"  => "2015/07/KEDPro-258x275.png",
-    "slug" => "emergency-rescue/immobilization/splinting-devices/" ),
-  array(
-    "name" => "Straps",
-    "img"  => "2015/08/30030_Body_Loc_400x400-258x275.png",
-    "slug" => "emergency-rescue/immobilization/straps/" ),
-  array(
-    "name" => "Transfer Pads &amp; Accessories",
-    "img"  => "2015/07/AirPal-Lectrolite-Sani-Liner_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-transport-supplies/transfer-pads-accessories/" ),
-  array(
-    "name" => "Transport Chairs",
-    "img"  => "2015/05/Carry-Chair-19267_400X400-258x275.png",
-    "slug" => "emergency-rescue/emergency-transport-supplies/transport-chairs/" ),
-  array(
-    "name" => "Trauma Bags",
-    "img"  => "2015/05/Emergency-Bag-Nylon-19214_400x400-258x275.png",
-    "slug" => "emergency-rescue/emergency-bags/trauma-bags/" )
-);
+<div id="ns_rotate_wrap">
 
-if ( function_exists('benz_loop_special_cats') ) benz_loop_special_cats($emsLinks);
+<?php // if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
 
-?>
+<a href="<?php echo site_url(); ?>/product-category/manikins/obesity-trainers/"><img style="margin-bottom: 12px; " src="<?php echo site_url(); ?>/wp-content/imgs/SimUSuit-Rotator.png" /></a>
+
+<div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png" alt="hospital beds"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="infusionbuttonhome"><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5.png" alt="infusion pumps"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="simlabbuttonhome"><a href="<?php echo site_url(); ?>/simlabsolutions/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-3.png" alt="sim labs"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-3-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-3.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="headwallbuttonhome"><a href="<?php echo site_url(); ?>/product-category/headwalls/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1.png" alt="headwalls"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="practibuttonhome"><a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6.png" alt="practi-meds"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="medmatbuttonhome"><a href="<?php echo site_url(); ?>/product-category/practi-meds/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4.png" alt="hospital mattresses"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4.png';"/></a></div>
+
+<a style="margin-top:1em;" href="#" class="eModal-2">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education-hv.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png';"/></a>
+
+<p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
+<br />
+At DiaMedical USA, we value Healthcare Education. We want to make sure your medical students and nursing students are learning quickly and effectively as they move from the classroom to medical facilities.
+Our hospital beds are of the highest quality at the lowest price. Choose from various Hill-Rom hospital beds, Stryker hospital beds, Burke Bariatric hospital beds, Gendron hospital beds, Amico hospital beds, Invacare hospital beds, Graham-Field hospital beds, Medline hospital beds, Span America low hospital beds, and Transfer Master hospital beds.
+Complete your patient rooms and teach your medical and nursing students with our hands-on simulated and functioning training headwalls. Students will learn how to work in a hospital room with our affordable nonfunctioning headwalls, functioning wall mounted headwall packages, mobile headwall packages, wall mounted headwalls for centralized compressor, our compressors and SOT accessories.
+<br />
+<br />
+We are the sole provider of the Loaded Crash Carts designed for use in simulation labs, nursing schools, training hospitals and other medical training facilities. Each Crash Cart is pre-stocked and available in several forms including the Emergency Crash Cart, Pediatric Crash Cart, Medication Cart, Isolation Cart and refill kits.
+Designed for healthcare education purposes only, browse our endless amount of simulated medications, simulated IV supplies, simulated intubation and airway supplies, simulated vascular supplies, basic medical supplies, and simulated infection control supplies. Our cost-effective loaded crash carts are also available as Treatment Carts, Anesthesia Carts, Procedure Carts and Phlebotomy Carts.
+We carry the most popular infusion pump brands including Alaris infusion pumps, B. Braun infusion pumps, Baxter infusion pumps, Hospira infusion pumps, Sabratek infusion pumps and Sigma infusion pumps. Purchase your infusion pumps with our best-selling simulated IV bags and save money while doing so. All of our simulated IV fluids are manufactured at Sim Lab Solutions here, at DiaMedical USA! Choose from our simulated IV bags, simulated lactated ringers, simulated blood bags, simulated plasma bags and simulated platelet bags. Our simulated IV fluids come in a variety of sizes and with different options for labeling. They are available for purchase pre-filled, empty, in bulk or individually.
+<br />
+<br />
+<!--
+Increase student readiness with our various practice medications. Choose from our crash code practice medications, practice medication CD modules, simulated injection simulators, simulated IV therapy, DiaMedical USA’s exclusive Loaded Crash Cart kits, needle free practice medication products, simulated oral medications, various peel and stick labels, practice ampules, simulated transdermal patches and simulated vials.
+Fully stock your Medical Schools, Nursing Schools, Technical Schools, or Simulation Centers at the lowest price with DiaMedical USA!
+</p> -->
+
+</div><!-- ns_rotate_wrap -->
