@@ -2,7 +2,7 @@
 
 <?php // if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
 
-<a href="<?php echo site_url(); ?>/emergency-rescue/"><img style="margin-bottom: 12px; " src="<?php echo site_url(); ?>/wp-content/imgs/ems/Loaded_EMS_Packs.png" /></a>
+<a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/"><img style="margin-bottom: 12px; " src="<?php echo site_url(); ?>/wp-content/imgs/ems/Loaded_EMS_Packs.png" /></a>
 
 <div class="ns_home_flt-lft" id="hospitalbuttonhome">
   <a href="<?php echo site_url(); ?>/emergency-rescue/">
