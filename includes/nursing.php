@@ -32,7 +32,7 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc.png';"/></a></div>
 
-<div class="ns_home_flt-lft" id="medmatbuttonhome"><a href="<?php echo site_url(); ?>/product-category/practi-meds/">
+<div class="ns_home_flt-lft" id="medmatbuttonhome"><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome.png" alt="hospital mattresses"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome.png';"/></a></div>
