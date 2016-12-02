@@ -2,37 +2,40 @@
 
 <?php // if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
 
-<a href="<?php echo site_url(); ?>/product-category/manikins/obesity-trainers/"><img style="margin-bottom: 12px; " src="<?php echo site_url(); ?>/wp-content/imgs/SimUSuit-Rotator.png" /></a>
+<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '70956' ); } ?>
 
+<!-- <a href="<?php //echo site_url(); ?>/product-category/manikins/obesity-trainers/"><img style="margin-bottom: 12px; " src="<?php //echo site_url(); ?>/wp-content/imgs/SimUSuit-Rotator.png" /></a>
+-->
+<br />
 <div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png" alt="hospital beds"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png';"/></a></div>
 
 <div class="ns_home_flt-lft" id="infusionbuttonhome"><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5.png" alt="infusion pumps"
-onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5-hover.png';"
-onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-5.png';"/></a></div>
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-infusion.png" alt="infusion pumps"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-infusion-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-infusion.png';"/></a></div>
 
 <div class="ns_home_flt-lft" id="simlabbuttonhome"><a href="<?php echo site_url(); ?>/simlabsolutions/">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-3.png" alt="sim labs"
-onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-3-hover.png';"
-onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-3.png';"/></a></div>
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-iv-fluid.png" alt="sim labs"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-iv-fluid-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-iv-fluid.png';"/></a></div>
 
 <div class="ns_home_flt-lft" id="headwallbuttonhome"><a href="<?php echo site_url(); ?>/product-category/headwalls/">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1.png" alt="headwalls"
-onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1-hover.png';"
-onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-1.png';"/></a></div>
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-headwall.png" alt="headwalls"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-headwall-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-headwall.png';"/></a></div>
 
 <div class="ns_home_flt-lft" id="practibuttonhome"><a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6.png" alt="practi-meds"
-onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6-hover.png';"
-onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-6.png';"/></a></div>
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc.png" alt="practi-meds"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc.png';"/></a></div>
 
 <div class="ns_home_flt-lft" id="medmatbuttonhome"><a href="<?php echo site_url(); ?>/product-category/practi-meds/">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4.png" alt="hospital mattresses"
-onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4-hover.png';"
-onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-4.png';"/></a></div>
+<img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome.png" alt="hospital mattresses"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome-hover.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome.png';"/></a></div>
 
 <a style="margin-top:1em;" href="#" class="eModal-2">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education-hv.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png';"/></a>

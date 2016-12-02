@@ -154,10 +154,31 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 #soliloquy-container-58433{ margin-bottom: 1em; }
 #ns_rotate_wrap{  float: right; height: 880px; margin-right: 18px; margin-top: 19px; width: 850px; }
 .ns_home_flt-lft { float:left; }
+
+/*  cool image over trick
+.ems_home_flt-lft:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.3);
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.ems_home_flt-lft:hover:after {
+    opacity:1;
+} */
+
+
 #infusionbuttonhome, #practibuttonhome { margin:0 14px; }
 #practibuttonhome { margin-top:-82px; margin-bottom:1em; }
 #medmatbuttonhome { margin-top:-57px; }
 #headwallbuttonhome{ clear:both; margin-top:-8px; }
+/*ems home page */
+#emsmanikinsbuttonhome  { clear:both; margin-top:-36px; }
+#ambulancebuttonhome { margin: -124px 14px 1em 14px; }
+#stretchersbuttonhome { margin-top:-176px; }
 /* END */
 
 #free_ship-productpage { float: left; clear:both; font-family: "Open Sans",sans-serif; margin-bottom: 1em; width: 40%;  font-size: 19px; }
