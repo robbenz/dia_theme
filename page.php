@@ -21,7 +21,6 @@ $side_loops_arr = array(
   '58431' => 'includes/hospital',
   '58428' => 'includes/ltc',
   '57935' => 'includes/cat_loops/PM',
-  '58427' => 'includes/sim-lab',
   '68934' => $pro_pm,
   '68957' => $pro_pm,
   '68958' => $pro_pm,
