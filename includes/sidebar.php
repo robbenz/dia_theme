@@ -4,6 +4,7 @@
       <?php
       $dia_product_cats = array(
         "Loaded Crash Carts&trade;",
+        "Loaded Emergency Packs&trade;",
         "Service &amp; Repairs"
       );
       $args = array(
@@ -34,6 +35,26 @@
               <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/isolation-cart-kit/"><span>Loaded Isolation Cart Kit</span></a></li>
               <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/loaded-medication-cart-kit/"><span>Loaded Medication Cart Kit</span></a></li>
               <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/pediatric-crash-cart/"><span>Loaded Pediatric Crash Cart Kit</span></a></li>
+            </ul>
+          </li>
+          <?php
+        } elseif ($KAT == "Loaded Emergency Packs&trade;"){ 
+
+            $ems_packs = array (
+                'ALS Training Pack' => 'loaded-als-training-pack',
+                'BLS Training Pack' => 'loaded-bls-training-pack',
+                'Simulated Medication Box' => 'loaded-simulated-medication-box',
+                'Opioid Overdose Training Kit – Naloxone Syringe' => 'opioid-overdose-training-kit-narcan-syringe',
+                'Opioid Overdose Training Kit – Naloxone Vial' => 'opioid-overdose-training-kit-narcan-vial'
+                
+            );
+?>
+          <li class="active has-sub">
+            <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/"><span>Loaded Emergency Packs&trade;</span></a>
+            <ul>
+<?php foreach($ems_packs as $name => $slug) {
+             echo '<li><a href="'.site_url().'/medical-equipment/emergency-rescue/loaded-emergency-packs/'.$slug.'/"><span>'.$name.'</span></a></li>';
+} ?>
             </ul>
           </li>
           <?php

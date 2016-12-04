@@ -5,14 +5,14 @@
 <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/"><img style="margin-bottom: 12px; " src="<?php echo site_url(); ?>/wp-content/imgs/ems/Loaded_EMS_Packs.png" /></a>
 
 <div class="ns_home_flt-lft" id="hospitalbuttonhome">
-  <a href="<?php echo site_url(); ?>/emergency-rescue/">
+  <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/Emergency_Packs.png" alt="Loaded Emergency Packs"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/Emergency_Packs_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/Emergency_Packs.png';"/>
   </a>
 </div>
 <div class="ns_home_flt-lft" id="infusionbuttonhome">
-  <a href="<?php echo site_url(); ?>/emergency-rescue/">
+  <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/>"
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/Opiod_kits.png" alt="Opiod Kits"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/Opiod_kits_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/Opiod_kits.png';"/>
@@ -27,7 +27,7 @@
 </div>
 <div class="ns_home_flt-lft" id="emsmanikinsbuttonhome">
   <a href="<?php echo site_url(); ?>/product-category/manikins/">
-    <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems_Manikins.png" alt="EMS Training Aids"
+    <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems_Manikins.png" alt="EMS Training ZZAids"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_Manikins_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_Manikins.png';"/>
   </a>
