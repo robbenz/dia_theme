@@ -81,6 +81,39 @@
         littleHoverPM();
         /*** END ***/
 
+        /*** Add archive class to body for hospital & ltc pages - so they behave like woocomerce pages ***/
+        $(function() {
+          var spot = window.location.href;
+          if(/long-term-care/.test(spot) || /hospital-equipment/.test(spot) ) {
+            $('body').addClass("archive");
+          }
         });
+        /*** END ***/
+
+        /*** add active look to top menu pages ***/
+        $(function() {
+          var topMenus = [
+            { "Slug": "/hospital-equipment/", "Class": ".landing_nav-hospital", "Color": "#00426a" },
+            { "Slug": "/healthcare-education/", "Class": ".landing_nav-schools", "Color":"#2774ae" },
+            { "Slug": "/simlabsolutions/", "Class": ".landing_nav-simlab", "Color":"#ffad00" },
+            { "Slug": "/emergency-rescue/", "Class": ".landing_nav-ems", "Color":"#d6001c" },
+            { "Slug": "/long-term-care/", "Class": ".landing_nav-ltc", "Color":"#72d0f4" },
+            { "Slug": "/request-quote/", "Class": ".landing_nav-qq", "Color":"#464444" }
+          ]
+          for(var x=0; x < topMenus.length; x++){
+            var place = window.location.href;
+            var slug = new RegExp (topMenus[x].Slug);
+            if(slug.test(place)){
+              $(topMenus[x].Class).css({
+                'background-color' : topMenus[x].Color,
+                'color' : '#fff'
+              });
+            }
+          }
+        });
+      /* END */
+
+
+});
 
 }(jQuery));
