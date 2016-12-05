@@ -932,12 +932,9 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .sls-img-right{float:right; margin-bottom:24px;}
 .sls-container{width:100%; padding:0 75px; text-align:left;}
 
-.sls_header{font-family: 'ristretto_probold', Arial, sans-serif; letter-spacing:2.5px; color:#3e87cb; font-size:56px;  margin-right: 2.45em; float:right; text-transform:uppercase; line-height: 38px;}
-.sls_copy {
-    color: #3e87cb; margin-top: -52px;
-    float: right;
-    font-family: "ristretto_proregular",Arial,sans-serif;font-size: 35px; letter-spacing: 1.5px; margin-right: 2.4em;
-    }
+.sls_header{ font-family: 'ristretto_probold', Arial, sans-serif; letter-spacing:2.5px; color:#3e87cb; font-size:56px;  margin-right: 2.45em; float:right; text-transform:uppercase; line-height: 38px;}
+.sls_copy { color: #3e87cb; margin-top: -52px; float: right; font-family: "ristretto_proregular",Arial,sans-serif;font-size: 35px; letter-spacing: 1.5px; margin-right: 2.4em; }
+#sls_red_div {width:100%; text-align:center; background-color:#d6001c; padding:4px 0; color:#fff; font-size: 17px; letter-spacing: 1px; }
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
 font-family: 'ristretto_promedium', Arial, sans-serif;
