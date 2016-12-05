@@ -46,6 +46,7 @@
               $ems_packs = array (
                   'ALS Training Pack' => 'loaded-als-training-pack',
                   'BLS Training Pack' => 'loaded-bls-training-pack',
+                  'Pediatric Training Pack' => 'loaded-pediatric-training-pack',
                   'Simulated Medication Box' => 'loaded-simulated-medication-box',
                   'Opioid Overdose Training Kit' => 'opioid-overdose-training-kit'
               );
