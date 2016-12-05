@@ -12,7 +12,7 @@
   </a>
 </div>
 <div class="ns_home_flt-lft" id="infusionbuttonhome">
-  <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/>"
+  <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/Opiod_kits.png" alt="Opiod Kits"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/Opiod_kits_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/Opiod_kits.png';"/>
