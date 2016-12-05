@@ -28,7 +28,13 @@
 
 
 <div id="content" role="main">
+<a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
+<img style="margin-bottom: 12px; margin-top:24px;" src="<?php echo site_url(); ?>/wp-content/imgs/ems/Loaded_EMS_Packs.png" />
+</a>
 
+
+<a style="margin-top:1em;" href="#" class="eModal-2">
+ <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/SLS_Home_catalog.gif" alt="Emergency &amp; Rescue Training" /></a>
 
 </div>
 </div>
