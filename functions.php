@@ -202,7 +202,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
         $output .= '<div class="arrow-down"></div>';
         $output .= '<a href="http://diamedicalusa.com/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="https://diamedicalusa.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" /></a>';
-        $output .= '<a href="http://www.diamedicalusa.com/results/keyword/stryker/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://diamedicalusa.com/wp-content/imgs/MFT-drop-Stryker.png" id="benz-menu-img-mft2" class="benz-menu-img"/></a>';
+        $output .= '<a href="http://www.diamedicalusa.com/simlabsolutions/"><img src="https://diamedicalusa.com/wp-content/imgs/includes/sim-lab.png" id="benz-menu-img-mft4" class="benz-menu-img"/></a>';
         $output .= '<a href="http://www.diamedicalusa.com/results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img src="https://diamedicalusa.com/wp-content/imgs/haustedlogo.png" id="benz-menu-img-mft3" class="benz-menu-img" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
@@ -238,7 +238,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<div class="benz-bottom-colors" style="background-color:#ffad00;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</div>';
         $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
         $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="fluidslogomenu" href="http://www.diamedicalusa.com/simlabsolutions/"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/simuulated-iv-fluids-menu.png" /></a>';
+        $output .= '<a id="fluidslogomenu" href="http://www.diamedicalusa.com/simlabsolutions/"><img src="https://diamedicalusa.com/wp-content/imgs/ns-home-imgs/simulated-iv-fluids-menu.png" /></a>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";

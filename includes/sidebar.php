@@ -38,23 +38,20 @@
             </ul>
           </li>
           <?php
-        } elseif ($KAT == "Loaded Emergency Packs&trade;"){ 
-
-            $ems_packs = array (
-                'ALS Training Pack' => 'loaded-als-training-pack',
-                'BLS Training Pack' => 'loaded-bls-training-pack',
-                'Simulated Medication Box' => 'loaded-simulated-medication-box',
-                'Opioid Overdose Training Kit – Naloxone Syringe' => 'opioid-overdose-training-kit-narcan-syringe',
-                'Opioid Overdose Training Kit – Naloxone Vial' => 'opioid-overdose-training-kit-narcan-vial'
-                
-            );
-?>
+        } elseif ($KAT == "Loaded Emergency Packs&trade;"){ ?>
           <li class="active has-sub">
             <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/"><span>Loaded Emergency Packs&trade;</span></a>
             <ul>
-<?php foreach($ems_packs as $name => $slug) {
+              <?php
+              $ems_packs = array (
+                  'ALS Training Pack' => 'loaded-als-training-pack',
+                  'BLS Training Pack' => 'loaded-bls-training-pack',
+                  'Simulated Medication Box' => 'loaded-simulated-medication-box',
+                  'Opioid Overdose Training Kit' => 'opioid-overdose-training-kit'
+              );
+              foreach($ems_packs as $name => $slug) {
              echo '<li><a href="'.site_url().'/medical-equipment/emergency-rescue/loaded-emergency-packs/'.$slug.'/"><span>'.$name.'</span></a></li>';
-} ?>
+           } ?>
             </ul>
           </li>
           <?php

@@ -1,7 +1,8 @@
-<h3>Search From Over 1,000,000 New &amp; Reconditioned Replacement Parts!</h3>
+<!-- <h3>Search From Over 1,000,000 New &amp; Reconditioned Replacement Parts!</h3> -->
 <?php
-$ps_echo = true ;
-if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
+
+// $ps_echo = true ;
+// if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
 
 $hospitalLinks = array(
   array(
