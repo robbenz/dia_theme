@@ -25,21 +25,21 @@
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/Simulated_iv_Fluids_meds.png';"/>
   </a>
 </div>
-<div class="ns_home_flt-lft" id="emsmanikinsbuttonhome">
+<div class="ns_home_flt-lft" id="emsmanikinsbuttonhome" style="clear:both; margin-top:-36px;">
   <a href="<?php echo site_url(); ?>/product-category/manikins/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems_Manikins.png" alt="EMS Training ZZAids"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_Manikins_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_Manikins.png';"/>
   </a>
 </div>
-<div class="ns_home_flt-lft" id="ambulancebuttonhome">
+<div class="ns_home_flt-lft" id="ambulancebuttonhome" style="margin: -124px 14px 1em 14px;">
   <a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/ambulance-simulator/ambulance-simulator/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems_ambulance_simulator.png" alt="Ambulance Simulator"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_ambulance_simulator_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_ambulance_simulator.png';"/>
   </a>
 </div>
-<div class="ns_home_flt-lft" id="stretchersbuttonhome">
+<div class="ns_home_flt-lft" id="stretchersbuttonhome" style="margin-top:-176px;">
   <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/cots-stretchers-ems/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems_cots_stretchers.png" alt="EMS cots &amp; Stretchers"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_cots_stretchers_hover.png';"
