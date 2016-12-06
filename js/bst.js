@@ -82,6 +82,7 @@
         /*** END ***/
 
         /*** add active look to top menu pages ***/
+        /*
         $(function() {
           var topMenus = [
             { "Slug": "/hospital-equipment/", "Class": ".landing_nav-hospital", "Color": "#00426a" },
@@ -101,7 +102,7 @@
               });
             }
           }
-        });
+        }); */
       /* END */
 
 

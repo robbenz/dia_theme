@@ -898,22 +898,3 @@ function dia_check_for_kids($parent_cat_ID) {
   }
 }
 /* END */
-
-/** Load CSS sheet **/
-add_action( 'wp_enqueue_scripts', 'dia_enqueue_scripts', 999 );
-function dia_enqueue_scripts() {
-
-	if ( ! wp_style_is( 'style', 'done' ) ) {
-
-		wp_deregister_style( 'style' );
-		wp_dequeue_style( 'style' );
-
-		$style_filepath = get_stylesheet_directory() . '/css/bst.css';
-		if ( file_exists($style_filepath) ) {
-			wp_enqueue_style( 'style', get_stylesheet_uri() . '?' . filemtime( $style_filepath ) );
-		}
-
-	}
-
-}
-/* END */
