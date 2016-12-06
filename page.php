@@ -80,13 +80,12 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
      echo '<div class="col-xs-6" id="sidebar" role="navigation">';
      get_template_part('includes/sidebar');
      echo '</div>';
-     if(! $key == array('58430', '58429') ) {
-       echo 'hello';
+     if(!$key == array('58430', '58429') ) {
         echo '<div class="col-xs-12 col-sm-8">';
       }
      echo '<div id="content" role="main">';
      get_template_part($value, 'page');
-     if(! $key == array('58430', '58429') ) {
+     if(!$key == array('58430', '58429') ) {
        echo '</div>';
      }
      echo '</div>';
