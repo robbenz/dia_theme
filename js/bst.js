@@ -81,15 +81,6 @@
         littleHoverPM();
         /*** END ***/
 
-        /*** Add archive class to body for hospital & ltc pages - so they behave like woocomerce pages ***/
-        $(function() {
-          var spot = window.location.href;
-          if(/long-term-care/.test(spot) || /hospital-equipment/.test(spot) ) {
-            $('body').addClass("archive");
-          }
-        });
-        /*** END ***/
-
         /*** add active look to top menu pages ***/
         $(function() {
           var topMenus = [
