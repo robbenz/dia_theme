@@ -66,6 +66,9 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
     </div>
   </div> <!-- end row -->
 </div> <!-- end container -->
+<?php elseif ( $shipping_class == 'free-shipping' && $pm_check !== 'yes')  : ?>
+</div> <!-- ship-repair-container -->
+
 <?php endif ;?>
 
 <?php $tabs = apply_filters( 'woocommerce_product_tabs', array() ); ?>
