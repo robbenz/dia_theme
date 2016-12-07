@@ -12,12 +12,12 @@
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png';"/></a></div>
 
-<div class="ns_home_flt-lft" id="infusionbuttonhome"><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/">
+<div class="ns_home_flt-lft" id="infusionbuttonhome"><a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-infusion.png" alt="infusion pumps"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-infusion-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-infusion.png';"/></a></div>
 
-<div class="ns_home_flt-lft" id="simlabbuttonhome"><a href="<?php echo site_url(); ?>/simlabsolutions/">
+<div class="ns_home_flt-lft" id="simlabbuttonhome"><a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-iv-fluid.png" alt="sim labs"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-iv-fluid-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-iv-fluid.png';"/></a></div>
@@ -27,7 +27,7 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-headwall-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-headwall.png';"/></a></div>
 
-<div class="ns_home_flt-lft" id="practibuttonhome"><a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">
+<div class="ns_home_flt-lft" id="practibuttonhome"><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc.png" alt="practi-meds"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-lcc.png';"/></a></div>
