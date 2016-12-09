@@ -15,9 +15,7 @@
       <?php get_template_part('includes/sidebar'); ?>
     </div>
     <div id="ns_rotate_wrap">
-      <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
-      <img style="margin-bottom: 14px; margin-top:6px;" src="<?php echo site_url(); ?>/wp-content/imgs/ems/Loaded_EMS_Packs.png" />
-      </a>
+      <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71058' ); } ?>>
       <div class="row" style="margin-bottom:14px;">
         <div class="col-md-6">
         	<a href="<?php echo site_url(); ?>//product-category/carts-storage/loaded-crash-carts/">

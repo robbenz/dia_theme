@@ -1,8 +1,6 @@
 <div style="float: right; height: 880px; margin-right: -26px; margin-top: 19px; width: 850px;">
 
-<?php // if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
-
-<a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/"><img style="margin-bottom: 12px; " src="<?php echo site_url(); ?>/wp-content/imgs/ems/Loaded_EMS_Packs.png" /></a>
+<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71058' ); } ?>
 
 <div class="ns_home_flt-lft" id="hospitalbuttonhome">
   <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
