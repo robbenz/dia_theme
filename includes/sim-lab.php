@@ -15,7 +15,7 @@
       <?php get_template_part('includes/sidebar'); ?>
     </div>
     <div id="ns_rotate_wrap">
-      <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71058' ); } ?>>
+      <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71058' ); } ?>
       <div class="row" style="margin-bottom:14px;">
         <div class="col-md-6">
         	<a href="<?php echo site_url(); ?>//product-category/carts-storage/loaded-crash-carts/">
