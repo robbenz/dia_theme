@@ -1,11 +1,7 @@
 <div id="ns_rotate_wrap">
 
-<?php // if ( function_exists( 'soliloquy' ) ) { soliloquy( '58433' ); } ?>
-
 <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '70956' ); } ?>
 
-<!-- <a href="<?php //echo site_url(); ?>/product-category/manikins/obesity-trainers/"><img style="margin-bottom: 12px; " src="<?php //echo site_url(); ?>/wp-content/imgs/SimUSuit-Rotator.png" /></a>
--->
 <br />
 <div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png" alt="hospital beds"
