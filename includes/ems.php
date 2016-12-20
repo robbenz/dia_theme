@@ -59,5 +59,4 @@ Choose from our simulated IV bags, simulated normal saline, simulated lactated r
 Increase student readiness with our various practice medications. Choose from our crash code practice medications, practice medication CD modules, simulated injection simulators, simulated IV therapy, DiaMedical USA’s exclusive Loaded Crash Cart kits, needle free practice medication products, simulated oral medications, various peel and stick labels, practice ampules, simulated transdermal patches and simulated vials.
 Fully stock your Medical Schools, Nursing Schools, Technical Schools, or Simulation Centers at the lowest price with DiaMedical USA!
 </p> -->
-
 </div><!-- ns_rotate_wrap -->

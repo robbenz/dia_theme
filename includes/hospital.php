@@ -7,11 +7,11 @@
 $hospitalLinks = array(
   array(
     "name" => "Batteries, Cables &amp; Sensors",
-    "img"  => "2015/06/Hill-Rom-Small-Bed-Exit-Sensor-Strip-6360802.jpg",
+    "img"  => "2016/12/batery.jpg",
     "slug" => "batteries-cables-sensors/" ),
   array(
     "name" => "Biomedical Parts",
-    "img"  => "2015/07/Hill-Rom-Gas-Spring-GPS-5th-Wheel-43306.jpg",
+    "img"  => "2016/12/biomedical_parts.jpg",
     "slug" => "../results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat" ),
   array(
     "name" => "Hospital Beds",
