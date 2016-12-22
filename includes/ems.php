@@ -1,6 +1,6 @@
 <div style="float: right; height: 880px; margin-right: -26px; margin-top: 19px; width: 850px;">
 
-<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71058' ); } ?>
+<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71778' ); } ?>
 <br />
 <div class="ns_home_flt-lft" id="hospitalbuttonhome">
   <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
