@@ -55,16 +55,19 @@
         /*** END ***/
 
         /*** Max Length for checkout shipping input field ***/
-        $("#billing_address_1").attr("maxlength", 60);
-        $("#billing_address_1").on("keyup", function() {
-            if ($(this).val().length == 60) {
-                $(".red-alert").remove();
-                $("#billing_address_1_field").append("<p class='red-alert'>Maximum Length Reached</p>");
-                $(".red-alert").hide(2000, function() {
-
-                });
+        function FUauthorize_net($inputField, $maxLen) {
+          $($inputField).attr("maxlength", $maxLen);
+          $($inputField).on("keyup", function() {
+            if ($(this).val().length == $maxLen) {
+              $(".red-alert").remove();
+              $($inputField+"_field").append("<p class='red-alert'>Maximum Length Reached</p>");
+              $(".red-alert").hide(2000, function() {
+              });
             }
-        });
+          });
+        }
+        FUauthorize_net("#billing_address_1", 60)
+        FUauthorize_net("#billing_company", 50)
         /*** END ***/
 
         /*** Little hover effect for work order form on PM page ***/
