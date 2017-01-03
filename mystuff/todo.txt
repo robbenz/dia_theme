@@ -1,0 +1,7 @@
+-----------
+cleanup pdf and product_pdfs directories, no reason to have serpearete folders, need to run db search-replace
+
+-----------
+
+
+-----------
