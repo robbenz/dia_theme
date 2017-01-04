@@ -88,6 +88,14 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 			<div style="height:auto !important;padding-bottom:10px !important;" class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
 			<?php else : ?>
 				<div class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
+
+					<?php
+					/*  Need to delete a lot of html before this can work
+					if ( esc_attr( $key ) != "description"){
+						echo '<h2>' . apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ) . '</h2>';
+					}  */
+					?>
+
 				<?php endif ; ?>
 
 				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
