@@ -307,7 +307,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering { float: left; margin-left:2.4em; }
 .woocommerce ul.products li.product .price {color:#d6001c !important; font-size:1.2345em; text-align: center;}
 .variations_form .variations td.label { display:none !important;}
-.woocommerce-result-count { display:none;}
+.woocommerce-result-count, mark.count { display:none;}
 .emodal a.emodal-close{color:#fff !important;}
 #viewprice-detail{position:relative; top:10px; left:0px;margin-bottom: 36px; }
 #viewprice-detail a {background-color: #78be20; border-radius: 0.4em; color: #ffffff; font-size: 14.5px; font-weight: 700; padding: 10px 23px 12px; }
