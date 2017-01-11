@@ -11,16 +11,16 @@ $hospitalLinks = array(
     "slug" => "batteries-cables-sensors/" ),
   array(
     "name" => "Biomedical Parts",
-    "img"  => "2016/12/biomedical_parts.jpg",
+    "img"  => "2017/01/pillow_speaker.png",
     "slug" => "../results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat" ),
   array(
     "name" => "Hospital Beds",
     "img"  => "2015/07/Hill-Rom-Total-Care-P1900_400x400-258x275.png",
     "slug" => "hospital-beds/" ),
   array(
-    "name" => "Carts &amp; Storage",
-    "img"  => "2015/02/Waterloo-Pediatric-Medical-Cart_400x400-258x275.png",
-    "slug" => "carts-storage/" ),
+    "name" => "Casters",
+    "img"  => "2017/01/hill-rom-caster.png",
+    "slug" => "../results/keyword/casters/search-in/product/cat-in/all/search-other/product,p_sku" ),
   array(
     "name" => "Imaging Parts",
     "img"  => "2016/05/imaging-parts-category-1.png",
@@ -58,9 +58,9 @@ $hospitalLinks = array(
     "img"  => "2015/07/MDS806250NH2_PRI02-258x275.jpg",
     "slug" => "mobility/" ),
   array(
-    "name" => "Moulage",
-    "img"  => "2015/05/Active-Shooter-Kit-MG119139_400x400-258x275.png",
-    "slug" => "moulage/" ),
+    "name" => "Carts &amp; Storage",
+    "img"  => "2015/02/Waterloo-Pediatric-Medical-Cart_400x400-258x275.png",
+    "slug" => "carts-storage/" ),
   array(
     "name" => "Obstetrics &amp; Pediatrics",
     "img"  => "2015/02/Pedigo-Pediatric-Stretcher-Crib-500_400x400-258x275.png",
