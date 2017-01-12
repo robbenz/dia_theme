@@ -964,7 +964,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 .ctr_search{margin:-2px 0 0 63px; width: 80%;}
 #form-row{background: #00426a;height: 54px;}
 .form-row-child{width:300px; float:right; margin-right: 43px;}
-#dia-logo-left img {width: 88%; display:block; margin:25px auto 0 auto;}
+#dia-logo-left img {width: 88%; display:block; margin:5px auto 0 auto;}
 #responsive-menu-container{top:153px !important;}
 .woocommerce .woocommerce-breadcrumb {font-size:12px;padding: 0 3vw;}
 .landing_page .col-sm-8 {width:100% !important; }
@@ -1211,7 +1211,7 @@ img.img_plc_pm_wrench { top: 221px; }
 .lft-img-home { display:none;}
 .home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
 #click-menu { top: 125px !important;}
-.navbar-fixed-top {min-height: 110px;}
+.navbar-fixed-top {min-height: 110px;background-color:#fff;}
 .wpb_slider_area .item {width:96% ;margin: 0 2%; }
 .wpb_slider_area .owl-buttons {top: -33px;}
 
@@ -1311,7 +1311,7 @@ p.diva{width: 95% !important; margin: 0 10px;}
 img.img_plc_pm_wrench {   top: 152px; }
 #pm_blue_1 p {font-size: 20px; }
 .pm_ltgreen {font-size:18px;}
-
+#dia-logo-left img { margin:0px auto;}
 }
 
 @media (min-width: 992px) and (max-width:1199px){
