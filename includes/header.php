@@ -43,7 +43,7 @@
 	<div id="fixed-row" class="row">
 		<div id="dia-main-logo-left">
 			<a href="<?php echo site_url(); ?>">
-				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical_USA_Logo.png" />
+				<img src="<?php echo site_url(); ?>/wp-content/imgs/logo/DiaMedical_USA_Logo.png" />
 			</a>
 		</div>
 	</div>
