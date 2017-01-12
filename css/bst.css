@@ -414,8 +414,8 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 /* END */
 
 /*HEADERS*/
-#dia-logo-left { float: left; height: 80px; margin-top: -20px; width: 356px; }
-#dia-logo-left img { width: 100%; margin-left: 15px}
+#dia-main-logo-left { float: left; height: 80px; margin-top: -20px; width: 356px; }
+#dia-main-logo-left img { width: 100%; margin-left: 15px}
 #masthead { width: 100%; padding: 2em 0em 0em 0em; }
 .header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; font-family: lora, serif; font-size: 16.9px; }
 .page-id-61281 .header-wrap-text-medical-equipment,
@@ -964,7 +964,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 .ctr_search{margin:-2px 0 0 63px; width: 80%;}
 #form-row{background: #00426a;height: 54px;}
 .form-row-child{width:300px; float:right; margin-right: 43px;}
-#dia-logo-left img {width: 88%; display:block; margin:5px auto 0 auto;}
+#dia-main-logo-left img {width: 88%; display:block; margin:5px auto 0 auto;}
 #responsive-menu-container{top:153px !important;}
 .woocommerce .woocommerce-breadcrumb {font-size:12px;padding: 0 3vw;}
 .landing_page .col-sm-8 {width:100% !important; }
@@ -1303,7 +1303,7 @@ p.diva{width: 95% !important; margin: 0 10px;}
 #form-row{background: #fff !important;}
 .ctr_search {margin-top: -45px;}
 #menu-parts-search .ctr_search, .landing_page .ctr_search{margin-top:0px;}
-#dia-logo-left img { width: 100%; margin-left: 15px}
+#dia-main-logo-left img { width: 100%;margin:0px auto;}
 .woocommerce .woocommerce-breadcrumb {font-size:18px;padding:0;}
 .landing_page .col-sm-8 {width:72.5% !important; }
 #dmcssmenu4 { width:199px; font-size: 14px; }
@@ -1311,7 +1311,7 @@ p.diva{width: 95% !important; margin: 0 10px;}
 img.img_plc_pm_wrench {   top: 152px; }
 #pm_blue_1 p {font-size: 20px; }
 .pm_ltgreen {font-size:18px;}
-#dia-logo-left img { margin:0px auto;}
+
 }
 
 @media (min-width: 992px) and (max-width:1199px){

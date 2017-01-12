@@ -36,11 +36,12 @@
 			echo '</p>';
 		}
 ?>
+
 <header id="masthead" role="banner">
 	<div class="container">
 	<nav id="mobile-navbar" class="">
 	<div id="fixed-row" class="row">
-		<div id="dia-logo-left">
+		<div id="dia-main-logo-left">
 			<a href="<?php echo site_url(); ?>">
 				<img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical_USA_Logo.png" />
 			</a>
