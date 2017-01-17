@@ -68,6 +68,7 @@
         }
         FUauthorize_net("#billing_address_1", 60)
         FUauthorize_net("#billing_company", 50)
+        FUauthorize_net("#billing_address_2", 50)
         /*** END ***/
 
         /*** Little hover effect for work order form on PM page ***/

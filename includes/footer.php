@@ -2,8 +2,8 @@
   <div id="footer2014">
   <div id="footerwrap" class="container">
   <div id="footerlogos" class="row">
-  <div id="diamedicallogo" class="col-xs-4"><a href="<?php echo site_url(); ?>"><img src="https://diamedicalusa.com/wp-content/imgs/footer-sample/diamedicallogosmall.png" /></a></div>
-  <div id="medmatlogo" class="col-xs-4"><a href="http://medmattress.com"><img src="https://diamedicalusa.com/wp-content/imgs/footer-sample/medmattlogo.png" /></a></div>
+  <div id="diamedicallogo" class="col-xs-4"><a href="<?php echo site_url(); ?>"><img src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical-USA-Logo-White.png" /></a></div>
+  <div id="medmatlogo" class="col-xs-4"><a href="http://medmattress.com"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/medmattlogo.png" /></a></div>
   <div id="simlablogo" class="col-xs-4"><a href="<?php echo site_url(); ?>/simlabsolutions/"><img src="<?php echo site_url(); ?>/wp-content/imgs/footer-sample/simlablogo.png" /></a></div>
   </div><!--footerlogos-->
 

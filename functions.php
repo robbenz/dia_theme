@@ -404,7 +404,6 @@ function wc_wc20_variation_price_format( $price, $product ) {
 add_filter( 'woocommerce_show_variation_price', function() { return true; } );
 /* END */
 
-
 // only 3 related products instead of 4
 add_filter( 'woocommerce_output_related_products_args', 'benz_related_products_args' );
   function benz_related_products_args( $args ) {
