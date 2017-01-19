@@ -44,7 +44,7 @@ if ( ! empty( $breadcrumb ) ) {
 	<nav class="woocommerce-breadcrumb">
 		<a href="<?php echo site_url(); ?>">Home</a> /
 		<a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">On-Site Repairs &amp; Preventive Maintenance</a> /
-		Hill-Rom Components - Repairs
+		Components - Repairs &amp; Service
 	</nav>
 <?php
 } elseif (is_product_category(array_keys($repairs_cat_pumps) ) ){

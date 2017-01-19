@@ -22,7 +22,7 @@
           array_push($dia_product_cats, $cat->name );
         }
       }
-      $dia_product_cats = array_diff($dia_product_cats, ["Parts", "Infusion Pump - Service &amp; Repairs", "Hill-Rom Components - Repairs" ]);
+      $dia_product_cats = array_diff($dia_product_cats, ["Parts", "Infusion Pump - Service &amp; Repairs", "Components - Repairs &amp; Service" ]);
       asort($dia_product_cats);
       foreach ( $dia_product_cats as $KAT ) {
         if ($KAT == "Loaded Crash Carts&trade;"){ ?>
