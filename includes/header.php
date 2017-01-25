@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="../css/ristrettopro_bold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/css/bst.css'); ?>" type="text/css" media="screen, projection" />
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
 	<?php wp_head(); ?>
 
 </head>

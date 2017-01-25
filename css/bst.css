@@ -417,7 +417,7 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #dia-main-logo-left { float: left; height: 80px; margin-top: -20px; width: 356px; }
 #dia-main-logo-left img { width: 100%; margin-left: 15px}
 #masthead { width: 100%; padding: 2em 0em 0em 0em; }
-.header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; font-family: lora, serif; font-size: 16.9px; }
+.header-wrap-text-medical-equipment{ float:right; line-height: 1.4; text-align:center;  margin-top: 8px; background-image: url("https://diamedicalusa.com/wp-content/uploads/wpallimport/files/medical-equipment-header.png");color: #ffffff; height: 229px; margin-bottom: 1em; margin-left: -164px; padding: 1px 31px 0; font-family: lora, serif; font-size: 15.8px; }
 .page-id-61281 .header-wrap-text-medical-equipment,
 .page-id-61274 .header-wrap-text-medical-equipment,
 .page-id-61275 .header-wrap-text-medical-equipment,
@@ -1222,6 +1222,7 @@ img.img_plc_pm_wrench { top: 221px; }
   #footerconnect{margin:0;}
   #footerwrap{height: 200px;}
   .woocommerce-cart .woocommerce table.shop_table { width: 90% !important ;margin: 0 5% !important;}
+  #hr-part-searrch{display:none;}
 }
 
 @media (min-width: 768px) {
@@ -1275,6 +1276,7 @@ button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
 #wpp-buttons{display:none !important;}
 .woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
 p.diva{width: 95% !important; margin: 0 10px;}
+
 }
 
 @media (min-width: 992px) {
@@ -1314,12 +1316,12 @@ img.img_plc_pm_wrench {   top: 152px; }
 
 }
 
-@media (min-width: 992px) and (max-width:1199px){
-#free_ship-productpage img {margin-right: 0.5em; padding-bottom: 1em;}
-#pm_blue_1 p {letter-spacing: 1px;}
-.new_pm_row .col-sm-4 .pm_square {font-size: 33px;}
-.new_pm_row .col-sm-3 .pm_square {font-size: 23px;}
-#ns_rotate_wrap{width:71%;}
+@media (min-width: 992px) and (max-width:1199px) {
+  #free_ship-productpage img {margin-right: 0.5em; padding-bottom: 1em;}
+  #pm_blue_1 p {letter-spacing: 1px;}
+  .new_pm_row .col-sm-4 .pm_square {font-size: 33px;}
+  .new_pm_row .col-sm-3 .pm_square {font-size: 23px;}
+  #ns_rotate_wrap{width:71%;}
 #hospitalbuttonhome {width:31.5%;}
 #infusionbuttonhome{width:32%;}
 #simlabbuttonhome{width:32.4%;}
@@ -1328,6 +1330,8 @@ img.img_plc_pm_wrench {   top: 152px; }
 #practibuttonhome{margin-top: -62px; width:32%;}
 #medmatbuttonhome {margin-top: -42px; width: 32.4%;}
 .wizard.wizard > .steps a {width:81.1%;}
+#hr-part-searrch{display:none;}
+
 }
 
 @media (min-width: 1200px) {

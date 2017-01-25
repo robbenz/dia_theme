@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * woocommerce_before_main_content hook
 		 *
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
+		 * @hooked woocommerce_breadcrumb - 20  5999
 		 */
 		do_action( 'woocommerce_before_main_content' );
 ?>
@@ -80,9 +80,9 @@ global $product;
 			do_action( 'woocommerce_archive_description' );
 			echo '</div>';
 	}
-?>
 
-<?php
+
+
 
 
 $katt = get_queried_object();
@@ -108,6 +108,15 @@ if ( have_posts() ) :
 		endif;
 
 	endif;
+
+	if( is_product_category('5999') ) {
+		?>
+		<div id="hr-part-searrch">
+			<a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
+				<img style="margin:2px 10%;float:right;" src="<?php echo site_url() ?>/wp-content/imgs/shop-parts-search-bar.gif" />
+			</a>
+		</div>
+	<?php }
 
 	woocommerce_product_loop_start();
 
