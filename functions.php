@@ -907,15 +907,13 @@ function dia_check_for_kids($parent_cat_ID) {
 }
 /* END */
 
-
+// add custom shipping method to replace woocommerce jetpack 
 add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
-
 function add_another_custom_flat_rate( $method, $rate ) {
 	$new_rate          = $rate;
-	$new_rate['id']    .= ':' . 'nextday_rate_name'; 
-	$new_rate['label'] = 'Next Day';
+	$new_rate['id']    .= ':' . 'second_day_rate_name';
+	$new_rate['label'] = '2nd Day';
 	$new_rate['cost']  += 0;
-
 	// Add it to WC
 	$method->add_rate( $new_rate );
 }

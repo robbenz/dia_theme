@@ -8,11 +8,29 @@
           <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/Healthcare-Education.png" />
           </a>
         </div>
+
         <div class="col-xs-6 col-md-4 lft-img-home" style="padding: 0 0 0 0.75%;margin-bottom: 4%;">
-          <a href="/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/product">
-          <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/biomedical-repair.png" />
-          </a>
+
+          <?php if ( is_user_logged_in() ) : ?>
+
+            <a href="/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/product">
+              <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/biomedical-parts-repairs.png" />
+            </a>
+
+          <?php else : ?>
+
+            <div style="border: 1.5px solid #000;padding: 1.5% 2.5%">
+              <span style="font-size: 23px; font-weight: 600;">SIGN IN</span>
+              <?php echo do_shortcode('[wppb-login]'); ?>
+              <a href="<?php echo site_url(); ?>/my-account/lost-password/" id="benz_forgot">Lost Password?</a>
+            </div>
+            <div style="width:94%; margin:0 3%;">
+            <a href="<?php echo site_url(); ?>/my-account" id="benz-register-link">New Customer? <em>Register Here</em></a>
+</div>
+        <?php endif ;?>
+
         </div>
+
       </div>
       <?php echo do_shortcode('[wpb-feature-product title="Feature Products"]'); ?>
     </div>

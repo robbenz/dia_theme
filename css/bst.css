@@ -574,7 +574,7 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #mm-right-contact .sub-menu li{list-style:disc; text-align:left; line-height:24px; margin-left:19px; }
 #mm-right-contact .sub-menu li a:hover{ background-color: #fff; color: #2774ae }
 #mm-right-contact .sub-menu li a{color:#00426a;}
-#menu-item-57565 .sub-menu #wppb-submit {  background-color: #78be20; border: medium none; border-radius: 0; font-family: "Open Sans",sans-serif; font-size: 21px; margin-top: 3px; padding: 7px 109px; text-transform: uppercase; }
+#menu-item-57565 .sub-menu #wppb-submit, .lft-img-home #wppb-submit{  background-color: #78be20; border: medium none; border-radius: 0; font-family: "Open Sans",sans-serif; font-size: 21px; margin-top: 3px; padding: 7px 109px; text-transform: uppercase; }
 #menu-item-57565 .sub-menu #benz-register-link { color:#fff; text-transform:uppercase; font-family: 'Open Sans', sans-serif; padding: 12px 0px; background-color:#004ea8; margin-top:5px;margin-bottom:5px; font-size:19px; font-weight:500;}
 .menu-sign_in-container input[type="text"], .menu-sign_in-container input[type="email"], .menu-sign_in-container input[type="url"], .menu-sign_in-container input[type="password"], .menu-sign_in-container input[type="search"], .menu-sign_in-container textarea { width: 100%; border-radius: none;  }
 .wppb-form-field label, #wppb-login-wrap .login-username label, #wppb-login-wrap .login-password label { float: left !important; font-size: 14px !important; font-weight: 400 !important; min-height: 1px !important; text-align: left !important; width: 100%!important;  }
@@ -582,6 +582,17 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 .wppb-form-field input, .wppb-form-field input[type="text"], .wppb-form-field input[type="email"], .wppb-form-field input[type="url"], .wppb-form-field input[type="password"], .wppb-form-field input[type="search"], .wppb-form-field select, .wppb-form-field textarea, .wppb-checkboxes, .wppb-radios, #wppb-login-wrap .login-username input, #wppb-login-wrap .login-password input { width: 100% !important; }
 #mm-right-contact .sub-menu > .insert-img-here{padding-top:30px; margin-top:-28px;}
 #benz-main-menu-box .sub-menu { overflow: hidden;}
+/* END */
+
+/* Sign in dia homepage */
+.lft-img-home #wppb-submit{ width:100% !important;}
+.lft-img-home #wppb-submit:hover{text-decoration:underline !important;}
+.lft-img-home #benz-register-link {background-color: #00466a !important; text-transform: capitalize !important;  width: 100%; text-align: center; padding: 12px; display: block; }
+.lft-img-home #wppb-login-wrap p{padding-bottom:6.5px;}
+.lft-img-home #wppb-login-wrap input.input {border-radius:0 !important; border: 1px solid #000;}
+.lft-img-home #benz_forgot{text-decoration: none; color: #000; font-size: 14px; position: relative; top: -83px; float: right; font-weight: 700; right: 5px; }
+.lft-img-home #benz_forgot:hover{text-decoration:underline; color:#000; }
+
 /* END */
 
 /* Menu Sub Menu items styles li */
