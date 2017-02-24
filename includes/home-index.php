@@ -23,10 +23,11 @@
               <span style="font-size: 23px; font-weight: 600;">SIGN IN</span>
               <?php echo do_shortcode('[wppb-login]'); ?>
               <a href="<?php echo site_url(); ?>/my-account/lost-password/" id="benz_forgot">Lost Password?</a>
-            </div>
-            <div style="width:94%; margin:0 3%;">
-            <a href="<?php echo site_url(); ?>/my-account" id="benz-register-link">New Customer? <em>Register Here</em></a>
-</div>
+
+              <a href="<?php echo site_url(); ?>/my-account" id="benz-register-link">New Customer? <em>Register Here</em></a>
+           </div>
+
+
         <?php endif ;?>
 
         </div>

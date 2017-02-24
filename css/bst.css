@@ -586,10 +586,10 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 
 /* Sign in dia homepage */
 .lft-img-home #wppb-submit{ width:100% !important;}
-.lft-img-home #wppb-submit:hover{text-decoration:underline !important;}
-.lft-img-home #benz-register-link {background-color: #00466a !important; text-transform: capitalize !important;  width: 100%; text-align: center; padding: 12px; display: block; }
-.lft-img-home #wppb-login-wrap p{padding-bottom:6.5px;}
-.lft-img-home #wppb-login-wrap input.input {border-radius:0 !important; border: 1px solid #000;}
+.lft-img-home #wppb-submit:hover{ text-decoration:underline !important;}
+.lft-img-home #benz-register-link { background-color: #00466a !important; text-transform: capitalize !important;  width: 100%; text-align: center; padding: 12px; display: inline-block; margin-top: -17px; }
+.lft-img-home #wppb-login-wrap p{ padding-bottom:6.5px; }
+.lft-img-home #wppb-login-wrap input.input { border-radius:0 !important; border: 1px solid #000;}
 .lft-img-home #benz_forgot{text-decoration: none; color: #000; font-size: 14px; position: relative; top: -83px; float: right; font-weight: 700; right: 5px; }
 .lft-img-home #benz_forgot:hover{text-decoration:underline; color:#000; }
 
