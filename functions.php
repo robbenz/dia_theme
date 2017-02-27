@@ -907,7 +907,7 @@ function dia_check_for_kids($parent_cat_ID) {
 }
 /* END */
 
-// add custom shipping method to replace woocommerce jetpack 
+// add custom shipping method to replace woocommerce jetpack
 add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
 function add_another_custom_flat_rate( $method, $rate ) {
 	$new_rate          = $rate;
@@ -916,4 +916,11 @@ function add_another_custom_flat_rate( $method, $rate ) {
 	$new_rate['cost']  += 0;
 	// Add it to WC
 	$method->add_rate( $new_rate );
+}
+
+// Add custom placeholder image for woocommerce
+add_filter( 'woocommerce_placeholder_img_src', 'dia_custom_woocommerce_placeholder', 10 );
+function dia_custom_woocommerce_placeholder( $image_url ) {
+  $image_url = 'https://diamedicalusa.com/wp-content/uploads/2015/06/hill-rom-bed-parts.png';
+  return $image_url;
 }
