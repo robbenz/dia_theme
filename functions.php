@@ -907,6 +907,7 @@ function dia_check_for_kids($parent_cat_ID) {
 }
 /* END */
 
+
 // add custom shipping method to replace woocommerce jetpack
 add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
 function add_another_custom_flat_rate( $method, $rate ) {
