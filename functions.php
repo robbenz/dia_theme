@@ -932,3 +932,22 @@ function dia_custom_woocommerce_placeholder( $image_url ) {
   $image_url = 'https://diamedicalusa.com/wp-content/uploads/2015/06/hill-rom-bed-parts.png';
   return $image_url;
 }
+
+/* Remove reviews tab -- do we use this?
+add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
+    function wcs_woo_remove_reviews_tab($tabs) {
+    unset($tabs['reviews']);
+    return $tabs;
+}  */
+
+// Add BCC for admin new order email
+add_filter( 'woocommerce_email_headers', 'mycustom_headers_filter_function', 10, 2);
+function mycustom_headers_filter_function( $headers, $object ) {
+    if ($object == 'admin_new_order') {
+      $headers .= 'BCC: Gillian Peralta <gperalta@diamedicalusa.com>' . "\r\n";
+      $headers .= 'BCC: April Kirkland <akirkland@diamedicalusa.com>' . "\r\n";
+      $headers .= 'BCC: Rob Benz <rbenz@diamedicalusa.com>' . "\r\n";
+    }
+
+    return $headers;
+}
