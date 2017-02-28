@@ -943,10 +943,10 @@ add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
 // Add BCC for admin new order email
 add_filter( 'woocommerce_email_headers', 'mycustom_headers_filter_function', 10, 2);
 function mycustom_headers_filter_function( $headers, $object ) {
-    if ($object == 'admin_new_order') {
-      $headers[] = 'BCC: Gillian Peralta <gperalta@diamedicalusa.com>' . "\r\n";
-      $headers[] = 'BCC: April Kirkland <akirkland@diamedicalusa.com>' . "\r\n";
-      $headers[] = 'BCC: Rob Benz <rbenz@diamedicalusa.com>' . "\r\n";
+    if ($object == 'new_order') {
+      $headers[] = "Bcc: Rob Benz <rbenz@diamedicalusa.com>" . "\r\n";
+      $headers[] = "Bcc: Gillian Peralta <gperalta@diamedicalusa.com>" . "\r\n";
+      $headers[] = "Bcc: April Kirkland <akirkland@diamedicalusa.com>" . "\r\n";
     }
 
     return $headers;
