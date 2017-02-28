@@ -918,6 +918,14 @@ function add_another_custom_flat_rate( $method, $rate ) {
 	$method->add_rate( $new_rate );
 }
 
+// reset default shipping method
+add_filter('woocommerce_shipping_chosen_method', 'dia_reset_default_shipping_method', 10, 2);
+function dia_reset_default_shipping_method( $method, $available_methods ) {
+	// get the id of the first method in the list
+	$method = key($available_methods);
+	return $method;
+}
+
 // Add custom placeholder image for woocommerce
 add_filter( 'woocommerce_placeholder_img_src', 'dia_custom_woocommerce_placeholder', 10 );
 function dia_custom_woocommerce_placeholder( $image_url ) {
