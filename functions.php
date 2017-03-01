@@ -934,9 +934,9 @@ function dia_custom_woocommerce_placeholder( $image_url ) {
   return $image_url;
 }
 
-/* Remove reviews tab -- do we use this?
+// Remove reviews tab 
 add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
     function wcs_woo_remove_reviews_tab($tabs) {
     unset($tabs['reviews']);
     return $tabs;
-}  */
+}  
