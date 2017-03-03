@@ -725,7 +725,6 @@ function woo_add_custom_general_fields_save( $post_id ) {
 }
 /* END */
 
-
 /** Some menu functions - only really use by_NAME right now **/
 function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
     $args = array(
@@ -934,9 +933,9 @@ function dia_custom_woocommerce_placeholder( $image_url ) {
   return $image_url;
 }
 
-// Remove reviews tab 
+// Remove reviews tab
 add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
     function wcs_woo_remove_reviews_tab($tabs) {
     unset($tabs['reviews']);
     return $tabs;
-}  
+}
