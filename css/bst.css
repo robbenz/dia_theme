@@ -962,7 +962,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 /*  =================================================================================  */
 
 @media (min-width: 320px) {
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {  max-height: 300px; }
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {  max-height: 350px; }
 #homeorangewrap img{ display:none;}
 .sidebar{display:none;}
 .archive #content .products { float: none; width: 100%; }
