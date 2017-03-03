@@ -118,8 +118,10 @@ if ( have_posts() ) :
 		</div>
 	<?php }
 
-	woocommerce_product_loop_start();
 
+
+	woocommerce_product_loop_start();
+   if (! is_user_logged_in() ) { echo '<div style="width:100%; height:30px;"></div>'; }
 	woocommerce_product_subcategories();
 
 	while ( have_posts() ) : the_post();
