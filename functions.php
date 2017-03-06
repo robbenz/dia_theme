@@ -72,6 +72,7 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', 'table.wp-list-table img { max-width: 165px; }' );
   wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
   wp_add_inline_style( 'wp-admin', '#dia-cust-fav-role-meta-box h2 {background-color: #00426a; color:#fff;}' );
+  wp_add_inline_style( 'wp-admin', '#dia-tab-meta-box h2 {background-color: #00426a; color:#fff;}' );
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 /* END Scripts / Styles */
