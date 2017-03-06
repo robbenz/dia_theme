@@ -81,10 +81,6 @@ global $product;
 			echo '</div>';
 	}
 
-
-
-
-
 $katt = get_queried_object();
 
 $kattID = $katt->term_id;
@@ -117,8 +113,6 @@ if ( have_posts() ) :
 			</a>
 		</div>
 	<?php }
-
-
 
 	woocommerce_product_loop_start();
    if (! is_user_logged_in() ) { echo '<div style="width:100%; height:30px;"></div>'; }
