@@ -350,10 +350,10 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 
 /* Product Add Ons */
 
-.product-addon h3 {font-size:18.5px; margin-bottom:2px !important;  }
-.burke-adds p{ padding: 0 !important; margin:0 !important;}
-.burke-adds label {font-weight: 500 !important; margin-bottom: 0;  }
-.logged-in #product-41480 .product_meta { margin-bottom:1px; }
+.product-addon h3 {font-size:18.5px; margin-bottom:2px !important; margin-top:0px !important; }
+.product-addon p{ padding: 0 !important; margin:0 !important;}
+.product-addon label { margin-bottom: 0;  }
+.logged-in #product-41480 .product_meta, .logged-in #product-73130 .product_meta{ margin-bottom:1px; }
 .product-addon, .product-addon-totals {display:none;}
 .logged-in .product-addon, .logged-in .product-addon-totals { display:block;}
 /* END */
@@ -863,7 +863,8 @@ ul.icons-medium li { margin:0 7.5%; }
 .rs_rs_addtocart .product_type_variable { margin-top:22px !important; }
 .viewprice-detail{display:block;}
 .logged-in .viewprice-detail{display:none;}
-.woocommerce div.product div.images, .woocommerce div.product div.summary {margin-top:1em; max-height:400px; }
+.woocommerce div.product div.images{margin-top:1em; max-height:400px; }
+
 #wpp-buttons{  left: 0; position: absolute;  top: -19px;}
 #wpp-buttons a{ padding:5px 10px; background-color:#78be20; color:#fff; border-radius:0.3em;   }
 #wpp-buttons a:hover {background-color:#00426a; }
