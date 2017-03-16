@@ -936,6 +936,10 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 #authorize-net-cim-cc-number, #authorize-net-cim-cc-cvv, #po_number_field{line-height:2; padding:4px 10px;]}
 /* END */
 
+.woocommerce ul.products li.product .onsale {
+    margin: 0em -.5em 0 0;
+    z-index: 999; }
+
 /* Career Page */
 .career-submit{width:100%;}
 /* END */
@@ -964,35 +968,35 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 /*  =================================================================================  */
 
 @media (min-width: 320px) {
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {  max-height: 350px; }
-#homeorangewrap img{ display:none;}
-.sidebar{display:none;}
-.archive #content .products { float: none; width: 100%; }
-#mm-right-contact, #landing_nav-wrap{display:none;}
-.header-wrap-text-medical-equipment { width:100%; }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product { /*margin: 0 3%; width: 80%; */}
-.rgt-img-home{padding:0;margin-bottom: 4%;}
-.lft-img-home {display:none;}
-.home-img-thirds{width:90%;margin: 2% 5% 8%;}
-#click-menu {top: 224px !important;}
-#responsive-menu-button{margin:-40px 0 0 -3px !important;}
-.ctr_search{margin:-2px 0 0 63px; width: 80%;}
-#form-row{background: #00426a;height: 54px;}
-.form-row-child{width:300px; float:right; margin-right: 43px;}
-#dia-main-logo-left img {width: 88%; display:block; margin:5px auto 0 auto;}
-#responsive-menu-container{top:153px !important;}
-.woocommerce .woocommerce-breadcrumb {font-size:12px;padding: 0 3vw;}
-.landing_page .col-sm-8 {width:100% !important; }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width:100%;}
-img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top: 69vw; right:4vw; z-index:99; }
-#responsive-menu-container{top:133px !important;}
-#footerlinks1{display:none;}
-/*img.wp-post-image{margin:-42px 0 -55px 0; padding: 0;}*/
-.woocommerce .upsells li.product, .woocommerce .related li.product, .woocommerce-page .upsells li.product, .woocommerce-page .related li.product { max-width: 94.8% !important; margin-right: 1% !important; }
-.wpb-wps-wrapper .item img {max-width:80% ;margin: 0 10%; }
-.wpb_slider_area .item {width:80% ;margin: 0 10%; }
-.wpb_slider_area .owl-buttons {top: -14px;}
-.woocommerce nav.woocommerce-pagination { width: 100%; margin-right: 10px;}
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {  max-height: 350px; }
+  #homeorangewrap img{ display:none;}
+  .sidebar{display:none;}
+  .archive #content .products { float: none; width: 100%; }
+  #mm-right-contact, #landing_nav-wrap{display:none;}
+  .header-wrap-text-medical-equipment { width:100%; }
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product { /*margin: 0 3%; width: 80%; */}
+  .rgt-img-home{padding:0;margin-bottom: 4%;}
+  .lft-img-home {display:none;}
+  .home-img-thirds{width:90%;margin: 2% 5% 8%;}
+  #click-menu {top: 224px !important;}
+  #responsive-menu-button{margin:-40px 0 0 -3px !important;}
+  .ctr_search{margin:-2px 0 0 63px; width: 80%;}
+  #form-row{background: #00426a;height: 54px;}
+  .form-row-child{width:300px; float:right; margin-right: 43px;}
+  #dia-main-logo-left img {width: 88%; display:block; margin:5px auto 0 auto;}
+  #responsive-menu-container{top:153px !important;}
+  .woocommerce .woocommerce-breadcrumb {font-size:12px;padding: 0 3vw;}
+  .landing_page .col-sm-8 {width:100% !important; }
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width:100%;}
+  img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top: 69vw; right:4vw; z-index:99; }
+  #responsive-menu-container{top:133px !important;}
+  #footerlinks1{display:none;}
+  /*img.wp-post-image{margin:-42px 0 -55px 0; padding: 0;}*/
+  .woocommerce .upsells li.product, .woocommerce .related li.product, .woocommerce-page .upsells li.product, .woocommerce-page .related li.product { max-width: 94.8% !important; margin-right: 1% !important; }
+  .wpb-wps-wrapper .item img {max-width:80% ;margin: 0 10%; }
+  .wpb_slider_area .item {width:80% ;margin: 0 10%; }
+  .wpb_slider_area .owl-buttons {top: -14px;}
+  .woocommerce nav.woocommerce-pagination { width: 100%; margin-right: 10px;}
 }
 
 @media (min-width: 320px) and (max-width: 344px){
@@ -1025,7 +1029,6 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
   #pm_ltgreen_1 {width: 100%; font-size: 19px;}
   #pm_ltgreen_3 {width: 100%; border-left:0; font-size: 24px;}
   #wizard{width:100%;}
-
 }
 
 @media (min-width:320px) and (max-width:500px){
@@ -1163,15 +1166,15 @@ img.img_plc_pm_wrench {  max-height:70px; max-width:70px; position:absolute; top
 }
 
 @media (min-width: 500px) {
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width:45%;margin: 0px 10px;}
-img.img_plc_pm_wrench {   top: 35vw; right:1vw; max-height:60px; max-width:60px;}
-.woocommerce .upsells li.product,
-.woocommerce .related li.product,
-.woocommerce-page .upsells li.product,
-.woocommerce-page .related li.product { max-width: 44.05% !important;width: 44.05% !important; }
-.woocommerce .related  ul.products li.product,
-.woocommerce-page .related ul.products li.product {  width: 44.05% !important;}
-.woocommerce nav.woocommerce-pagination { width: 45%;}
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width:45%;margin: 0px 10px;}
+  img.img_plc_pm_wrench {   top: 35vw; right:1vw; max-height:60px; max-width:60px;}
+  .woocommerce .upsells li.product,
+  .woocommerce .related li.product,
+  .woocommerce-page .upsells li.product,
+  .woocommerce-page .related li.product { max-width: 44.05% !important;width: 44.05% !important; }
+  .woocommerce .related  ul.products li.product,
+  .woocommerce-page .related ul.products li.product {  width: 44.05% !important;}
+  .woocommerce nav.woocommerce-pagination { width: 45%;}
 }
 
 @media (min-width:500px) and (max-width:768px){
@@ -1193,43 +1196,39 @@ img.img_plc_pm_wrench {   top: 35vw; right:1vw; max-height:60px; max-width:60px;
 }
 
 @media (max-width: 632px) {
-#content .col-md-4{padding:0 25px !important;}
-img.wp-post-image{padding: 0}
-
-
+  #content .col-md-4{padding:0 25px !important;}
+  img.wp-post-image{padding: 0}
 }
 
 @media (min-width: 657px) {
-.ctr_search{margin:-2px 0px 0 0px; width: 95%;}
-.social-left{padding:0px 10px 0px 0px;}
-.social-mid{padding:0px 15px 0px 15px;}
-.social-right{padding:0px 0px 0px 15px;}
-.woocommerce .woocommerce-breadcrumb {font-size:15px;padding: 0; }
-#footerlinks1{margin: -153px 0 0 500px; display: block}
-/*img.wp-post-image{margin:-44px 0; padding: 0 10%}*/
-
+  .ctr_search{margin:-2px 0px 0 0px; width: 95%;}
+  .social-left{padding:0px 10px 0px 0px;}
+  .social-mid{padding:0px 15px 0px 15px;}
+  .social-right{padding:0px 0px 0px 15px;}
+  .woocommerce .woocommerce-breadcrumb {font-size:15px;padding: 0; }
+  #footerlinks1{margin: -153px 0 0 500px; display: block}
+  /*img.wp-post-image{margin:-44px 0; padding: 0 10%}*/
 }
 
 @media (max-width: 744px){
-#content .col-md-4{padding: 0 100px;}
+  #content .col-md-4{padding: 0 100px;}
 }
 
 @media (min-width: 745px) {
-#mm-right-contact{ display:none;}
-#homeorangewrap img{  display:none;}
-.sidebar{ display:none;}
-.archive #content .products { float: none; width: 100%; }
-.header-wrap-text-medical-equipment { width:100%; }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {margin: 0px 38px; width: 39%; }
-img.img_plc_pm_wrench { top: 221px; }
-.rgt-img-home{ padding:0;margin-bottom: 4%;}
-.lft-img-home { display:none;}
-.home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
-#click-menu { top: 125px !important;}
-.navbar-fixed-top {min-height: 110px;background-color:#fff;}
-.wpb_slider_area .item {width:96% ;margin: 0 2%; }
-.wpb_slider_area .owl-buttons {top: -33px;}
-
+  #mm-right-contact{ display:none;}
+  #homeorangewrap img{  display:none;}
+  .sidebar{ display:none;}
+  .archive #content .products { float: none; width: 100%; }
+  .header-wrap-text-medical-equipment { width:100%; }
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {margin: 0px 38px; width: 39%; }
+  img.img_plc_pm_wrench { top: 221px; }
+  .rgt-img-home{ padding:0;margin-bottom: 4%;}
+  .lft-img-home { display:none;}
+  .home-img-thirds{ width:30%;float:left; margin: 0 1% 2% 1%;}
+  #click-menu { top: 125px !important;}
+  .navbar-fixed-top {min-height: 110px;background-color:#fff;}
+  .wpb_slider_area .item {width:96% ;margin: 0 2%; }
+  .wpb_slider_area .owl-buttons {top: -33px;}
 }
 
 @media(max-width: 767px){
@@ -1241,33 +1240,31 @@ img.img_plc_pm_wrench { top: 221px; }
 }
 
 @media (min-width: 768px) {
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product { margin: 0 1.2% 38px; width: 29%; }
-img.img_plc_pm_wrench { top: 171px; }
-/*img.wp-post-image{margin:0; padding: 0}*/
-.woocommerce .upsells li.product,
-.woocommerce .related li.product,
-.woocommerce-page .upsells li.product,
-.woocommerce-page .related li.product { max-width: 21.05% !important;width: 21.05% !important; }
-.woocommerce .related  ul.products li.product,
-.woocommerce-page .related ul.products li.product {  width: 21.05% !important;}
-.pm-page-circle-img {max-width:56px !important;float:left;}
-
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product { margin: 0 1.2% 38px; width: 29%; }
+  img.img_plc_pm_wrench { top: 171px; }
+  /*img.wp-post-image{margin:0; padding: 0}*/
+  .woocommerce .upsells li.product,
+  .woocommerce .related li.product,
+  .woocommerce-page .upsells li.product,
+  .woocommerce-page .related li.product { max-width: 21.05% !important;width: 21.05% !important; }
+  .woocommerce .related  ul.products li.product,
+  .woocommerce-page .related ul.products li.product {  width: 21.05% !important;}
+  .pm-page-circle-img {max-width:56px !important;float:left;}
 }
 
-
 @media(min-width: 768px) and (max-width: 991px){
-#free_ship-productpage img {margin-right: 0em !important; padding-bottom: 1em;}
-#hospitalbuttonhome {width:31.5%;}
-#infusionbuttonhome{width:32%;}
-#simlabbuttonhome{width:32.4%;}
-#infusionbuttonhome{width:32%;}
-#headwallbuttonhome {width:31.5%; margin-top: -1px;}
-#practibuttonhome{margin-top: -62px; width:32%;}
-#medmatbuttonhome {margin-top: -42px; width: 32.4%;}
-#ns_rotate_wrap{margin-right: 0; width:100%; height: auto;}
-.header-img{width: 100%; margin: 0 0 1em;}
-.hos-links-menu{font-size: 11.5px;}
-.wizard.wizard > .steps a {width:75.4%;}
+  #free_ship-productpage img {margin-right: 0em !important; padding-bottom: 1em;}
+  #hospitalbuttonhome {width:31.5%;}
+  #infusionbuttonhome{width:32%;}
+  #simlabbuttonhome{width:32.4%;}
+  #infusionbuttonhome{width:32%;}
+  #headwallbuttonhome {width:31.5%; margin-top: -1px;}
+  #practibuttonhome{margin-top: -62px; width:32%;}
+  #medmatbuttonhome {margin-top: -42px; width: 32.4%;}
+  #ns_rotate_wrap{margin-right: 0; width:100%; height: auto;}
+  .header-img{width: 100%; margin: 0 0 1em;}
+  .hos-links-menu{font-size: 11.5px;}
+  .wizard.wizard > .steps a {width:75.4%;}
 }
 
 @media(min-width:768px) and (max-width:1199px){
@@ -1276,60 +1273,57 @@ img.img_plc_pm_wrench { top: 171px; }
 }
 
 @media screen and (max-width: 991px){
-button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
-#footerconnect{width:100%;}
-#footerwrap {width: 100%;}
-#footerlogos{width:100%;}
-#footerlogos div a img{width:100%}
-#diamedicallogo{margin: 26px 0 0 48px; width:30%;}
-#medmatlogo{margin: 30px 0 0 10px; width:30%;}
-#simlablogo{margin: 30px 0 0 10px; width:30%;}
-#footerlinks2, #footerlinks3{display:none;}
-#form-row{margin-top:20px}
-#masthead { height:170px; }
-.header-toggle{top:-170px; transition-timing-function: ease-in-out;}
-#wpp-buttons{display:none !important;}
-.woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
-p.diva{width: 95% !important; margin: 0 10px;}
-
+  button#responsive-menu-button .responsive-menu-box {color: #78be20 !important;}
+  #footerconnect{width:100%;}
+  #footerwrap {width: 100%;}
+  #footerlogos{width:100%;}
+  #footerlogos div a img{width:100%}
+  #diamedicallogo{margin: 26px 0 0 48px; width:30%;}
+  #medmatlogo{margin: 30px 0 0 10px; width:30%;}
+  #simlablogo{margin: 30px 0 0 10px; width:30%;}
+  #footerlinks2, #footerlinks3{display:none;}
+  #form-row{margin-top:20px}
+  #masthead { height:170px; }
+  .header-toggle{top:-170px; transition-timing-function: ease-in-out;}
+  #wpp-buttons{display:none !important;}
+  .woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
+  p.diva{width: 95% !important; margin: 0 10px;}
 }
 
 @media (min-width: 992px) {
-#mm-right-contact{ display:none; margin-top: -40px;}
-.benz-menu > ul > li > a{ padding: 11px 0.961em; }
-.benz-menu .sub-menu{ width: 971px; }
-#menu-item-32373 > .sub-menu { left: -108px; letter-spacing: 0.8px;}
-#menu-parts-search .sub-menu { left: -339px; }
-#menu-repairs > li > .sub-menu { left: -496px; }
-#menu-manufacturers > li > .sub-menu { left: -606px; }
-#benz-menu-img-mft3 { left: 20%; }
-#homeorangewrap img{ display:inline;}
-#menu-contact-us > li > .sub-menu { left: -802px; }
-.sidebar{display:block;}
-.archive #content .products {float:right; width:70%; clear:none;}
-.header-wrap-text-medical-equipment { width: 684px; }
-.rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
-.lft-img-home {display:block;}
-.home-img-thirds{width:100%;}
-#sidebar { float: left; max-width: 300px; min-height: 400px; width:27%;}
-#benz-menu-about .benz-menu-about-copy { font-size: 12.88px; }
-#landing_nav-wrap a.landing_nav{font-size:0.89em;}
-#landing_nav-wrap{display:block }
-#responsive-menu-button { margin-top: -45px !important;}
-#fixed-row{height:50px;}
-#form-row{background: #fff !important;}
-.ctr_search {margin-top: -45px;}
-#menu-parts-search .ctr_search, .landing_page .ctr_search{margin-top:0px;}
-#dia-main-logo-left img { width: 100%;margin:0px auto;}
-.woocommerce .woocommerce-breadcrumb {font-size:18px;padding:0;}
-.landing_page .col-sm-8 {width:72.5% !important; }
-#dmcssmenu4 { width:199px; font-size: 14px; }
-#footerlinks1{margin: 0 0 0 24px;}
-img.img_plc_pm_wrench {   top: 152px; }
-#pm_blue_1 p {font-size: 20px; }
-.pm_ltgreen {font-size:18px;}
-
-
+  #mm-right-contact{ display:none; margin-top: -40px;}
+  .benz-menu > ul > li > a{ padding: 11px 0.961em; }
+  .benz-menu .sub-menu{ width: 971px; }
+  #menu-item-32373 > .sub-menu { left: -108px; letter-spacing: 0.8px;}
+  #menu-parts-search .sub-menu { left: -339px; }
+  #menu-repairs > li > .sub-menu { left: -496px; }
+  #menu-manufacturers > li > .sub-menu { left: -606px; }
+  #benz-menu-img-mft3 { left: 20%; }
+  #homeorangewrap img{ display:inline;}
+  #menu-contact-us > li > .sub-menu { left: -802px; }
+  .sidebar{display:block;}
+  .archive #content .products {float:right; width:70%; clear:none;}
+  .header-wrap-text-medical-equipment { width: 684px; }
+  .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
+  .lft-img-home {display:block;}
+  .home-img-thirds{width:100%;}
+  #sidebar { float: left; max-width: 300px; min-height: 400px; width:27%;}
+  #benz-menu-about .benz-menu-about-copy { font-size: 12.88px; }
+  #landing_nav-wrap a.landing_nav{font-size:0.89em;}
+  #landing_nav-wrap{display:block }
+  #responsive-menu-button { margin-top: -45px !important;}
+  #fixed-row{height:50px;}
+  #form-row{background: #fff !important;}
+  .ctr_search {margin-top: -45px;}
+  #menu-parts-search .ctr_search, .landing_page .ctr_search{margin-top:0px;}
+  #dia-main-logo-left img { width: 100%;margin:0px auto;}
+  .woocommerce .woocommerce-breadcrumb {font-size:18px;padding:0;}
+  .landing_page .col-sm-8 {width:72.5% !important; }
+  #dmcssmenu4 { width:199px; font-size: 14px; }
+  #footerlinks1{margin: 0 0 0 24px;}
+  img.img_plc_pm_wrench {   top: 152px; }
+  #pm_blue_1 p {font-size: 20px; }
+  .pm_ltgreen {font-size:18px;}
 }
 
 @media (min-width: 992px) and (max-width:1199px) {
@@ -1338,46 +1332,45 @@ img.img_plc_pm_wrench {   top: 152px; }
   .new_pm_row .col-sm-4 .pm_square {font-size: 33px;}
   .new_pm_row .col-sm-3 .pm_square {font-size: 23px;}
   #ns_rotate_wrap{width:71%;}
-#hospitalbuttonhome {width:31.5%;}
-#infusionbuttonhome{width:32%;}
-#simlabbuttonhome{width:32.4%;}
-#infusionbuttonhome{width:32%;}
-#headwallbuttonhome {width:31.5%; margin-top: -1px;}
-#practibuttonhome{margin-top: -62px; width:32%;}
-#medmatbuttonhome {margin-top: -42px; width: 32.4%;}
-.wizard.wizard > .steps a {width:81.1%;}
-#hr-part-searrch{display:none;}
-
+  #hospitalbuttonhome {width:31.5%;}
+  #infusionbuttonhome{width:32%;}
+  #simlabbuttonhome{width:32.4%;}
+  #infusionbuttonhome{width:32%;}
+  #headwallbuttonhome {width:31.5%; margin-top: -1px;}
+  #practibuttonhome{margin-top: -62px; width:32%;}
+  #medmatbuttonhome {margin-top: -42px; width: 32.4%;}
+  .wizard.wizard > .steps a {width:81.1%;}
+  #hr-part-searrch{display:none;}
 }
 
 @media (min-width: 1200px) {
-#mm-right-contact{display:block; margin-top: -50px;}
-.benz-menu > ul > li > a{ padding: 11px 1.8198em; }
-.benz-menu .sub-menu{width: 1171px;}
-#menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }
-#menu-parts-search .sub-menu { left: -406px;}
-#menu-repairs > li > .sub-menu { left: -597px; }
-#menu-manufacturers > li > .sub-menu { left: -740px; }
-#benz-menu-img-mft3 { left: 12%; }
-#menu-contact-us > li > .sub-menu { left: -802px; left: -969px; }
-.sidebar{display:block;}
-.archive #content .products {float:right; width:70%;}
-.header-wrap-text-medical-equipment {  width: 844px; }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%; margin:0 1.2% 50px;}
-/* .term-1946  ul.products li.product, .term-1946 ul.products li.product {width: 20.05%; margin:0 1.2%;} */
-.rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
-.lft-img-home {display:block;}
-.home-img-thirds{width:100%;}
-#benz-menu-about .benz-menu-about-copy { font-size:14px;}
-#landing_nav-wrap a.landing_nav{font-size:1.1em; font-weight: 600 !important; }
-#landing_nav-wrap .container { padding:0;}
-.form-row-child{width:300px; float:left; margin-left: 43px;}
-#dmcssmenu4 { width:250px; font-size: 16px; }
-.ctr_search{margin:-44px 0 0 0;}
-img.img_plc_pm_wrench {   top: 192px; }
-#pm_blue_1 p {font-size: 24px; }
-.pm-page-circle-img{display:block; max-width:76px !important;}
-.pm_ltgreen {font-size:24px;}
+  #mm-right-contact{display:block; margin-top: -50px;}
+  .benz-menu > ul > li > a{ padding: 11px 1.8198em; }
+  .benz-menu .sub-menu{width: 1171px;}
+  #menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }
+  #menu-parts-search .sub-menu { left: -406px;}
+  #menu-repairs > li > .sub-menu { left: -597px; }
+  #menu-manufacturers > li > .sub-menu { left: -740px; }
+  #benz-menu-img-mft3 { left: 12%; }
+  #menu-contact-us > li > .sub-menu { left: -802px; left: -969px; }
+  .sidebar{display:block;}
+  .archive #content .products {float:right; width:70%;}
+  .header-wrap-text-medical-equipment {  width: 844px; }
+  .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {width: 29.05%; margin:0 1.2% 50px;}
+  /* .term-1946  ul.products li.product, .term-1946 ul.products li.product {width: 20.05%; margin:0 1.2%;} */
+  .rgt-img-home{padding:0 3% 0 0;margin-bottom: 4%;}
+  .lft-img-home {display:block;}
+  .home-img-thirds{width:100%;}
+  #benz-menu-about .benz-menu-about-copy { font-size:14px;}
+  #landing_nav-wrap a.landing_nav{font-size:1.1em; font-weight: 600 !important; }
+  #landing_nav-wrap .container { padding:0;}
+  .form-row-child{width:300px; float:left; margin-left: 43px;}
+  #dmcssmenu4 { width:250px; font-size: 16px; }
+  .ctr_search{margin:-44px 0 0 0;}
+  img.img_plc_pm_wrench {   top: 192px; }
+  #pm_blue_1 p {font-size: 24px; }
+  .pm-page-circle-img{display:block; max-width:76px !important;}
+  .pm_ltgreen {font-size:24px;}
 
 
 }

@@ -28,18 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
  global $product;
  $shipping_class = $product->get_shipping_class();
- $attachment_ids = $product->get_gallery_attachment_ids();
  ?>
 
  <?php if ( $shipping_class == 'free-shipping' ) : ?>
- <?php
- if ( sizeof($attachment_ids) > 0 ) { $sss = "margin-top:100px;"; }
- else { $sss = ""; } ?>
 
  <div id="ship-repair-container" class="">
   <div id="ship-row" class="">
 
- 	 <div id="free_ship-productpage" style="<?php echo $sss; ?>" class="">
+ 	 <div id="free_ship-productpage" class="">
 	 <img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" class="shipping-img" />
 	  <div style="padding-top:10px;">
 		 <span class="red_free">FREE SHIPPING</span><br>When You Order Online
