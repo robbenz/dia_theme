@@ -936,9 +936,7 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 #authorize-net-cim-cc-number, #authorize-net-cim-cc-cvv, #po_number_field{line-height:2; padding:4px 10px;]}
 /* END */
 
-.woocommerce ul.products li.product .onsale {
-    margin: 0em -.5em 0 0;
-    z-index: 999; }
+.woocommerce ul.products li.product .onsale { z-index: 999 !important; }
 
 /* Career Page */
 .career-submit{width:100%;}
