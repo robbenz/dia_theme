@@ -12,7 +12,7 @@ $hospitalLinks = array(
   array(
     "name" => "Biomedical Parts",
     "img"  => "2017/01/pillow_speaker.png",
-    "slug" => "../results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat" ),
+    "slug" => "../results/keyword/your+part/search-in/product/cat-in/all/search-other/product" ),
   array(
     "name" => "Hospital Beds",
     "img"  => "2015/07/Hill-Rom-Total-Care-P1900_400x400-258x275.png",
@@ -25,6 +25,10 @@ $hospitalLinks = array(
     "name" => "Imaging Parts",
     "img"  => "2016/05/imaging-parts-category-1.png",
     "slug" => "../imaging-parts/" ),
+  array(
+    "name" => "Infusion Pump Parts",
+    "img"  => "2016/05/alaris.png",
+    "slug" => "infusion-pump-parts/" ),
   array(
     "name" => "Cots &amp; Stretchers",
     "img"  => "2015/06/Ferno-35-A-Mobile-Transporter-Series-291_400x400-258x275.png",
