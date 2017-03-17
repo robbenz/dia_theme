@@ -350,7 +350,6 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 /* END */
 
 /* Product Add Ons */
-
 .product-addon h3 {font-size:18.5px; margin-bottom:2px !important; margin-top:0px !important; }
 .product-addon p{ padding: 0 !important; margin:0 !important;}
 .product-addon label { margin-bottom: 0;  }
@@ -389,7 +388,7 @@ div.thumbnails img{width:100px !important; max-width:100px !important; }
 #dmcssmenu4 ul ul a:link,
 #dmcssmenu4 ul ul a:visited {font-weight: 700;font-size: 14px;color:#f1f1f1;}
 #dmcssmenu4 ul ul a:hover {color: #00426a;background-color:#f1f1f1;text-transform: uppercase;}
-#dmcssmenu4 ul ul {width: 225px;background: none; padding-left: 10px;}
+#dmcssmenu4 ul ul { width: 225px; background: none; padding-left: 10px; }
 #dmcssmenu4 ul ul a {padding: 8px 0;border-bottom: 1px solid #cfc8c8;}
 #dmcssmenu4 ul ul li {background-color: #00426a;border-right: 1px solid #cfc8c8;border-left: 1px solid #cfc8c8; line-height: 1.4em;}
 #dmcssmenu4 ul ul li:first-child {border-left: 1px solid #cfc8c8;border-top: 1px solid #cfc8c8;border-right: 1px solid #cfc8c8;}
@@ -936,11 +935,13 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 #authorize-net-cim-cc-number, #authorize-net-cim-cc-cvv, #po_number_field{line-height:2; padding:4px 10px;]}
 /* END */
 
-.woocommerce ul.products li.product .onsale { z-index: 999 !important; right:-30px !important;}
+.woocommerce ul.products li.product .onsale { z-index:1; top: 10px; right:-30px !important; }
 
 /* Career Page */
 .career-submit{width:100%;}
 /* END */
+
+ul.some_div_z_index{z-index:999 !important;}
 
 /* Checkout Page */
 .red-alert{color:#f00;}

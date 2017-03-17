@@ -28,7 +28,7 @@
         if ($KAT == "Loaded Crash Carts&trade;"){ ?>
           <li class="active has-sub">
             <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/"><span>Loaded Crash Carts&trade;</span></a>
-            <ul>
+            <ul class="some_div_z_index">
               <li><a href="<?php echo site_url(); ?>/product-category/carts-storage/refill-kits/"><span>Crash Cart Refill Kits</span></a></li>
               <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/loaded-5-emergency-crash-cart-kit/"><span>Loaded 5-Drawer Emergency Crash Cart Kit</span></a></li>
               <li><a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/emergency-crash-cart/"><span>Loaded 6 Drawer Emergency Crash Cart Kit</span></a></li>
