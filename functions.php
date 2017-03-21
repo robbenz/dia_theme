@@ -38,6 +38,8 @@ function woocommerce_support() {
 
 /****** END THEME CORE ******/
 
+// uncomment to delete user role
+// $wp_roles = new WP_Roles(); $wp_roles->remove_role("shop_observer");
 
 // -- Begin Scripts Styles
 function benzy_enqueue_styles() {
@@ -73,6 +75,7 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
   wp_add_inline_style( 'wp-admin', '#dia-cust-fav-role-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-tab-meta-box h2 {background-color: #00426a; color:#fff;}' );
+
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 /* END Scripts / Styles */
