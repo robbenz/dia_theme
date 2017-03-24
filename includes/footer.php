@@ -9,7 +9,7 @@
 
   <div id="footerconnect">
   <span class="connecttop">p. (877) 593-6011<br />f.&nbsp;&nbsp;(248) 671-1550<br /></span>
-  <span class="connectbottom">Info@DiaMedicalUSA.com<br />7013 Orchard Lake Rd, Suite #110, <br>West Bloomfield, MI 48322<br /></span>
+  <span class="connectbottom">Info@DiaMedicalUSA.com<br />7013 Orchard Lake Rd, Suite #110<br>West Bloomfield, MI 48322<br /></span>
   <br />
 
 
