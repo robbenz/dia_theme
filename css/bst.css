@@ -545,7 +545,6 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 #menu-home li a,
 #menu-repirstmp li a,
 .sf-menu > .page_item_has_children > a:first-child { color: #fff; font-size: 19px; text-transform: uppercase; }
-
 @media screen and (-moz-os-version:windows-win7) {
 .sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
@@ -738,8 +737,6 @@ p.about-mail-number {position:relative; top:12px; left:-13px;  }
 tr.cart-discount td {text-align:right !important;}
 /* END */
 
-
-
 /* MY ACCOUNT REGISTER PAGE */
 #customer_login .col-1{float:right; width:34%; height:477px; border: 3px dashed #00426a;padding:1.2em;}
 #customer_login .col-2{float:left; width: 64%; border: 3px dashed #00426a;padding:1.2em;}
@@ -765,7 +762,7 @@ tr.cart-discount td {text-align:right !important;}
 .woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; }
 /* END */
 
-/*LOST PASSWORD*/
+/* LOST PASSWORD */
 #post_13 #lost-pass-wrap {float:left; width: 100%; margin:1em 0 3em 0;height: auto;border: 3px dashed #00426a;padding:2em;}
 #post_13 #lost-pass-wrap .entry-content {padding:0 10em 0 10em;}
 #post_13 #lost-pass-wrap .lost_reset_password form-row input {width:100em;}
@@ -864,7 +861,6 @@ ul.icons-medium li { margin:0 7.5%; }
 .viewprice-detail{display:block;}
 .logged-in .viewprice-detail{display:none;}
 .woocommerce div.product div.images{margin-top:1em; }
-
 #wpp-buttons{  left: 0; position: absolute;  top: -19px;}
 #wpp-buttons a{ padding:5px 10px; background-color:#78be20; color:#fff; border-radius:0.3em;   }
 #wpp-buttons a:hover {background-color:#00426a; }
@@ -937,12 +933,11 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 
 .woocommerce ul.products li.product .onsale {padding: .05em 0.3em !important; z-index:1; top: 10px; right:-240px !important; }
 .logged-in ul.products li.product .onsale {right:-100px !important; }
+#content .thumbnails a.zoom { width: 27.75% !important; margin: 0.3% 0 !important }
 
 /* Career Page */
 .career-submit{width:100%;}
 /* END */
-
-ul.some_div_z_index{z-index:999 !important;}
 
 /* Checkout Page */
 .red-alert{color:#f00;}
@@ -950,21 +945,10 @@ ul.some_div_z_index{z-index:999 !important;}
 .sls-img-left{margin-bottom:24px;}
 .sls-img-right{float:right; margin-bottom:24px;}
 .sls-container{width:100%; padding:0 75px; text-align:left;}
-
 .sls_header{ font-family: 'ristretto_probold', Arial, sans-serif; letter-spacing:2.5px; color:#3e87cb; font-size:56px;  margin-right: 2.45em; float:right; text-transform:uppercase; line-height: 38px;}
 .sls_copy { color: #3e87cb; margin-top: -52px; float: right; font-family: "ristretto_proregular",Arial,sans-serif;font-size: 35px; letter-spacing: 1.5px; margin-right: 2.4em; }
 #sls_red_div {width:100%; text-align:center; background-color:#d6001c; padding:4px 0; color:#fff; font-size: 17px; letter-spacing: 1px; }
-
-
-/*
-.woocommerce #content div.product div.thumbnails a,
-.woocommerce div.product div.thumbnails a,
-.woocommerce-page #content div.product div.thumbnails a,
-.woocommerce-page div.product div.thumbnails a {
-  width: 27.75% !important; margin: 0.3% 0 !important;   }
-*/
-
-#content .thumbnails a.zoom { width: 27.75% !important; margin: 0.3% 0 !important }
+/* END */
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;

@@ -911,7 +911,6 @@ function dia_check_for_kids($parent_cat_ID) {
 }
 /* END */
 
-
 // add custom shipping method to replace woocommerce jetpack
 add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
 function add_another_custom_flat_rate( $method, $rate ) {
@@ -922,6 +921,7 @@ function add_another_custom_flat_rate( $method, $rate ) {
 	// Add it to WC
 	$method->add_rate( $new_rate );
 }
+/* END */
 
 // reset default shipping method
 add_filter('woocommerce_shipping_chosen_method', 'dia_reset_default_shipping_method', 10, 2);
@@ -930,6 +930,7 @@ function dia_reset_default_shipping_method( $method, $available_methods ) {
 	$method = key($available_methods);
 	return $method;
 }
+/* END */
 
 // Add custom placeholder image for woocommerce
 add_filter( 'woocommerce_placeholder_img_src', 'dia_custom_woocommerce_placeholder', 10 );
@@ -937,6 +938,7 @@ function dia_custom_woocommerce_placeholder( $image_url ) {
   $image_url = 'https://diamedicalusa.com/wp-content/uploads/2015/06/hill-rom-bed-parts.png';
   return $image_url;
 }
+/* END */
 
 // Remove reviews tab
 add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
@@ -944,17 +946,11 @@ add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
     unset($tabs['reviews']);
     return $tabs;
 }
+/* END */
 
-/*
-Plugin Name: Style.css Load Last Version
-Plugin URI: http://github.com/mirkolofio/wp-style-load-last-version/
-Description: Load the Last Version of style.css everytime, whenever and ever. No side effects on performance.
-Author: Mirco Babini <mirkolofio@gmail.com>
-Version: 1.0.1
-Author URI: http://github.com/mirkolofio
-*/
-add_action( 'wp_enqueue_scripts', 'stylellv_enqueue_scripts', 999 );
-function stylellv_enqueue_scripts() {
+/* bst.css Load Last Version */
+add_action( 'wp_enqueue_scripts', 'dia_last_css_enqueue_scripts', 999 );
+function dia_last_css_enqueue_scripts() {
 	if ( ! wp_style_is( 'style', 'done' ) ) {
 		wp_deregister_style( 'style' );
 		wp_dequeue_style( 'style' );
@@ -964,3 +960,4 @@ function stylellv_enqueue_scripts() {
 		}
 	}
 }
+/* END */
