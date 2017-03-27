@@ -319,7 +319,6 @@ function products_per_page_category( $count ) {
    return 12;
   endif;
 }
-
 /* END */
 
 //  --  remove "Add to Cart" button on product listing page in WooCommerce
