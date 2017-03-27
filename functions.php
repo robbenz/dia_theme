@@ -945,7 +945,6 @@ add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
     return $tabs;
 }
 
-
 /*
 Plugin Name: Style.css Load Last Version
 Plugin URI: http://github.com/mirkolofio/wp-style-load-last-version/

@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $woocommerce, $product;
 
 ?>
-<div class="images">
+<div style="max-height:none !important; " class="images">
 
 	<?php
 		if ( has_post_thumbnail() ) {
