@@ -944,3 +944,24 @@ add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
     unset($tabs['reviews']);
     return $tabs;
 }
+
+
+/*
+Plugin Name: Style.css Load Last Version
+Plugin URI: http://github.com/mirkolofio/wp-style-load-last-version/
+Description: Load the Last Version of style.css everytime, whenever and ever. No side effects on performance.
+Author: Mirco Babini <mirkolofio@gmail.com>
+Version: 1.0.1
+Author URI: http://github.com/mirkolofio
+*/
+add_action( 'wp_enqueue_scripts', 'stylellv_enqueue_scripts', 999 );
+function stylellv_enqueue_scripts() {
+	if ( ! wp_style_is( 'style', 'done' ) ) {
+		wp_deregister_style( 'style' );
+		wp_dequeue_style( 'style' );
+		$style_filepath = get_stylesheet_directory() . '/css/bst.css';
+		if ( file_exists($style_filepath) ) {
+			wp_enqueue_style( 'style', get_stylesheet_uri() . '?' . filemtime( $style_filepath ) );
+		}
+	}
+}
