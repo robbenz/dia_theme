@@ -747,7 +747,6 @@ function woocommerce_subcats_from_parentcat_by_ID($parent_cat_ID) {
     echo '</ul>';
 }
 
-
 function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
   $IDbyNAME = get_term_by('name', $parent_cat_NAME, 'product_cat');
   $product_cat_ID = $IDbyNAME->term_id;
@@ -811,19 +810,19 @@ function product_cat_taxonomy_custom_fields($tag) {
    $term_meta = get_option( "product_cat_featured_$t_id" ); // Do the check
 ?>
 <div style="width:100%;clear:both;float:left;margin:15px 0 30px 0;">
-<tr class="form-field">
+  <tr class="form-field">
     <th scope="row" valign="top">
-        <label style="margin-right:110px; font-weight:bold;" for="presenter_id"><?php _e('Category Staus'); ?></label>
+      <label style="margin-right:110px; font-weight:bold;" for="presenter_id"><?php _e('Category Staus'); ?></label>
     </th>
     <td>
       <select style="width:300px;" name="featured" id="featured" class="postform">
-    <option value="0">Select</option>
-    <option <?= $term_meta=='Parts'?'selected':'' ?>   value="Parts">Parts</option>
-    <option <?= $term_meta=='Equipment'?'selected':'' ?>   value="Equipment">Equipment</option>
-    <option <?= $term_meta=='Repairs'?'selected':'' ?>   value="Repairs">Repairs</option>
-</select>
+        <option value="0">Select</option>
+        <option <?= $term_meta=='Parts'?'selected':'' ?>   value="Parts">Parts</option>
+        <option <?= $term_meta=='Equipment'?'selected':'' ?>   value="Equipment">Equipment</option>
+        <option <?= $term_meta=='Repairs'?'selected':'' ?>   value="Repairs">Repairs</option>
+      </select>
     </td>
-</tr>
+  </tr>
 </div>
 <?php
 }
