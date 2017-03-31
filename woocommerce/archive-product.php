@@ -22,7 +22,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_main_content' );
 ?>
 <?php
-if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
+
+
+if ( is_search() ):  ?>
+	<div class="container">
+	  <div class="row">
+	    <img style="border:6px solid #00426a; margin-bottom:10px; max-width: 100%;" src="https://diamedicalusa.com/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png">
+<?php wc_print_notices(); ?>
+	    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
+	        <?php get_template_part('includes/sidebar'); ?>
+	    </div>
+
+	    <div class="col-xs-12 col-sm-8">
+	      <div id="content" role="main">
+	        <h2><?php _e('Search Results for', 'bst'); ?> &ldquo;<?php the_search_query(); ?>&rdquo;</h2>
+	        <hr/>
+					<?php get_template_part('includes/loops/content', 'search'); ?>
+	      </div><!-- /#content -->
+	    </div>
+</div>
+</div>
+
+<?php
+
+elseif ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
 	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
 	$single_cat = array_shift( $product_cats );
 ?>
@@ -81,9 +104,10 @@ global $product;
 			echo '</div>';
 	}
 
-$katt = get_queried_object();
-
-$kattID = $katt->term_id;
+	if ( !is_shop() ) {
+		$katt = get_queried_object();
+		$kattID = $katt->term_id;
+	}
 
 if ( have_posts() ) :
 

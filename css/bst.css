@@ -74,7 +74,9 @@ a { color: #00426a; }
 .header-img{width:97%; margin:0 1.5% 1em;}
 /* END */
 
-  img.wp-post-image { width:80%; margin: 0; }
+img.wp-post-image { width:80%; margin: 0;  }
+
+.search-results img.wp-post-image {width:100%; height:100%; }
 /*
 #post_13 #reg_password{ width:40%;}
 #post_13 label[for="reg_password"] {width:40%;}
@@ -443,9 +445,9 @@ span.festi-cart-product-count { margin-left:80%; text-align:right;}
 #mm-right-contact .sub-menu a:hover{ background-color:#ececec; }
 #mm-right-contact .sf-menu .menu-item-has-children > a:first-child, .sf-menu .page_item_has_children > a:first-child {padding-right:3px;}
 #mm-right-contact a{color: #000000; font-size: 15px; font-weight: 500; }
-#mm-right-contact{color: #636363; float: right; font-family: "Open Sans",sans-serif; font-size: 15px; text-align: right; width: 427px;}
-@-moz-document url-prefix() { #mm-right-contact{ width:430px } }
-.logged-in #mm-right-contact{ width: 343px;}
+#mm-right-contact{color: #636363; float: right; font-family: "Open Sans",sans-serif; font-size: 15px; text-align: right; width: 430px;}
+@-moz-document url-prefix() { #mm-right-contact{ width:434px } }
+.logged-in #mm-right-contact{ width: 351px;}
 .insert-img-here {text-align:center; padding-top:6px; padding-left:0;}
 header h2{display:none;}
 div.festi-cart-content { color: #636363 !important; font-family: "Open Sans",sans-serif !important; font-size: 15px !important; font-weight: 600 !important; }
@@ -932,7 +934,6 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 /* END */
 
 .woocommerce ul.products li.product .onsale {padding: .05em 0.3em !important; z-index:1; top: 10px; right:-240px !important; }
-.logged-in ul.products li.product .onsale {right:-100px !important; }
 #content .thumbnails a.zoom { width: 27.75% !important; margin: 0.3% 0 !important }
 
 /* Career Page */
@@ -948,6 +949,21 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .sls_header{ font-family: 'ristretto_probold', Arial, sans-serif; letter-spacing:2.5px; color:#3e87cb; font-size:56px;  margin-right: 2.45em; float:right; text-transform:uppercase; line-height: 38px;}
 .sls_copy { color: #3e87cb; margin-top: -52px; float: right; font-family: "ristretto_proregular",Arial,sans-serif;font-size: 35px; letter-spacing: 1.5px; margin-right: 2.4em; }
 #sls_red_div {width:100%; text-align:center; background-color:#d6001c; padding:4px 0; color:#fff; font-size: 17px; letter-spacing: 1px; }
+/* END */
+
+/* SEARCH RESULTS ADMIN DROPS */
+.search-results .show_spec_div_wrap {padding:0; position: relative; z-index:0;}
+.search-results h6.search-results-description a{color:#78be20;}
+.search-results h6.search-results-description a:hover{color:#ffad00;}
+.search-results button.single_add_to_cart_button{border:1.5px solid #00426a;}
+.search-results button.single_add_to_cart_button:hover{border:1.5px solid #78be20;}
+.search-results button.search-rs-read-more {font-weight: 700;margin-top:8px; border:1.5px solid #00426a; font-size: 100%; background-color:#78be20; color:#fff; border-radius:0.25em; padding:0.69em 1.19em;}
+.search-results button.search-rs-read-more:hover{border:1.5px solid #78be20;text-decoration:none; background-color:#00426a; }
+
+.search-results .quantity .plus { top: 8px; height:34%; }
+.search-results .quantity .minus { bottom:2px; height:34%; }
+.search-results .woocommerce-message {margin-bottom: 1px !important;}
+
 /* END */
 
 /*

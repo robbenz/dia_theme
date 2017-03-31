@@ -309,7 +309,7 @@ if (!function_exists('loop_columns')) {
 // -- number of products per page
 add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 function products_per_page_category( $count ) {
-  if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
+  if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() || is_search() ) :
     return 9999;
   elseif( is_product_category( '9350') ) :  // Bariatric Care
     return 27;
