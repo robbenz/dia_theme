@@ -959,3 +959,5 @@ function dia_last_css_enqueue_scripts() {
 	}
 }
 /* END */
+
+ remove_role( 'seo_specialist' );

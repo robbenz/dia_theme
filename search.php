@@ -2,6 +2,7 @@
 
 <div class="container">
   <div class="row">
+
     <img style="border:6px solid #00426a; max-width: 100%;" src="https://diamedicalusa.com/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png">
 
     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">

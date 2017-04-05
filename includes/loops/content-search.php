@@ -7,7 +7,7 @@ The Search Loop
 
 <?php
 
-$allowed_roles = array('shop_manager', 'administrators', 'shop_observers');
+$allowed_roles = array('shop_managers', 'administrators', 'shop_observers');
 
 if(have_posts()): while(have_posts()): the_post();
 
@@ -78,7 +78,10 @@ if(have_posts()): while(have_posts()): the_post();
                   <input type="number" step="1" min="1" max="" style="width:40px;" name="quantity" value="1" title="Quantity" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric">
                 </div>
                 <input type="hidden" name="add-to-cart" value="<?php echo get_the_ID(); ?>">
-                <button style="margin-top:8px; border-radius:0.25em; padding:0.69em 1.19em;" type="submit" class="single_add_to_cart_button ajax_add_to_cart button alt"><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button>
+                <button style="margin-top:8px; border-radius:0.25em; padding:0.69em 1.19em;"
+                        type="submit"
+                        class="alt ajax_add_to_cart add_to_cart_button product_type_simple button">
+                  <i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button>
               </form>
 
             <?php elseif( $product->is_type( 'variable' ) ) : ?>
@@ -93,8 +96,8 @@ if(have_posts()): while(have_posts()): the_post();
     <div id="search_results_specs_wrap" style="padding-top:8px; clear:both;width:100%; height:auto;">
 
     <?php  if( array_intersect($allowed_roles, $current_user->roles ) ) : ?>
-      <input id="show_spec_chex_<?php echo $id; ?>" type="checkbox" class="show_specs_archive_each">
-      <label for="show_spec_chex_<?php echo $id; ?>">&nbsp;&nbsp;Show Specs</label>
+        <input id="show_spec_chex_<?php echo $id; ?>" type="checkbox" class="show_specs_archive_each">
+        <label for="show_spec_chex_<?php echo $id; ?>">&nbsp;&nbsp;Show Specs</label>
 
         <script type="text/javascript">
         jQuery(document).ready(function() {
@@ -128,7 +131,7 @@ if(have_posts()): while(have_posts()): the_post();
             $_x=1;
 
             foreach ( $dia_specs_coolshit as $key => $value ) {
-              if ( strlen($value) > 0 ) {   // switch to n/a for empty value
+              if ( strlen($value) > 0 ) {
                 echo '<tr><td>' . $key . '</td><td>';
                 if ( $_x == 3 || $_x == 5 || $_x == 8 ) {
                   echo '<span style="color:#78be20;">$'.number_format($value, 2).'</span>';
@@ -137,7 +140,7 @@ if(have_posts()): while(have_posts()): the_post();
                 }
                 echo '</td></tr>';
               } else {
-                echo '<tr><td>' . $key . '</td><td>n/a</td></tr>';
+                echo '<tr><td>' . $key . '</td><td>n/a</td></tr>';  // switch to n/a for empty value
               }
               $_x++;
             }
