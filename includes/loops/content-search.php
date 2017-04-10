@@ -7,7 +7,7 @@ The Search Loop
 
 <?php
 
-$allowed_roles = array('shop_managers', 'administrators', 'shop_observers');
+$allowed_roles = array('shop_manager', 'administrators', 'shop_observers');
 
 if(have_posts()): while(have_posts()): the_post();
 
@@ -122,6 +122,7 @@ if(have_posts()): while(have_posts()): the_post();
               "MFT Part #: " => $_mft_part_number,
               "MFT List Price: " => $_list_price,
               "Vendor 1: " => $_supplier_1,
+              "Vendor 1 Part Number" => $_vendor_pn_1,
               "Cost: " => $_cost_1,
               "Verified on: " => $_price_check_1,
               "2nd Vendor: " => $_supplier_2,
@@ -133,7 +134,7 @@ if(have_posts()): while(have_posts()): the_post();
             foreach ( $dia_specs_coolshit as $key => $value ) {
               if ( strlen($value) > 0 ) {
                 echo '<tr><td>' . $key . '</td><td>';
-                if ( $_x == 3 || $_x == 5 || $_x == 8 ) {
+                if ( $_x == 3 || $_x == 6 || $_x == 9 ) {
                   echo '<span style="color:#78be20;">$'.number_format($value, 2).'</span>';
                 } else {
                   echo $value;
