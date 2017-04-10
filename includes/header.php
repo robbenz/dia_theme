@@ -49,25 +49,17 @@
 		</div>
 	</div>
 
-<!-- begin new search bar -->
-	<form class="navbar-form navbar-left" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<div class="form-group">
-			<input class="form-control" type="text" value="<?php echo get_search_query(); ?>" placeholder="Search..." name="s" id="s">
-			<input type="hidden" name="post_type" value="product" />
-		</div>
-		<button type="submit" id="searchsubmit" value="<?php esc_attr_x('Search', 'bst') ?>" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-	</form>
-<!-- end new search bar -->
-
 		<div id="form-row"class="row">
-			<div id="form-row-c1" class="form-row-child">
 				<?php
 				$ps_echo = true ;
-				if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
-				?>
+				if ( function_exists( 'woo_predictive_search_widget' ) ) :
+					echo '<div id="form-row-c1" class="form-row-child">';
+					woo_predictive_search_widget( $ps_echo );
+				 else : ?>
+					<div>
+						<?php get_template_part('includes/navbar-search'); ?>
+					<?php	endif ; ?>
 			</div>
-
-
 
 			<div id="mm-right-contact">
 				<?php
