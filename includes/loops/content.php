@@ -24,7 +24,7 @@ Alternatively, notice that index.php, category.php and single.php have a post_cl
         </header>
         <section>
             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' );  ?></a>
-            <?php//  the_content( __( '&hellip; ' . __('Continue reading', 'bst' ) . ' <i class="glyphicon glyphicon-arrow-right"></i>', 'bst' ) ); ?>
+
         </section>
         <footer>
             <p class="text-muted" style="margin-bottom: 20px;">
