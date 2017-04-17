@@ -14,7 +14,7 @@
           <?php if ( is_user_logged_in() ) : ?>
 
             <a href="/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/product">
-              <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/biomedical-parts-repairs.png" />
+              <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/biomedical-parts-search.png " />
             </a>
 
           <?php else : ?>

@@ -187,12 +187,14 @@ class BENZ_Walker_Nav_Menu_PS extends Walker_Nav_Menu {
 
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
+      //$ps_echo = true;
         $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a part request and we’ll email you a quote!</div>';
         $output .= woo_predictive_search_widget( $ps_echo );
         $output .= '<div id="mattresshomeimgwrap"><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://diamedicalusa.com//wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/STRYKER/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:7px 0.8em 0;" src="https://diamedicalusa.com//wp-content/imgs/strykerlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/amico/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin: -6px 0.8em 0.6em; max-height: 50px; height:50px;" src="https://diamedicalusa.com//wp-content/imgs/amico_logo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/hausted/search-in/product/cat-in/all/search-other/product,p_sku"><img style="margin:1.0em 0.8em 0 -17px;" src="https://diamedicalusa.com//wp-content/imgs/haustedlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com//results/keyword/midmark/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat"><img style="margin:7px 0.8em 0 -10px;" src="https://diamedicalusa.com//wp-content/imgs/midmarklogo.png" alt=" " /></a></div><div class="arrow-down"></div>';
     }
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
+
 }
 }
 // -- Manufacturers
@@ -954,7 +956,9 @@ function dia_last_css_enqueue_scripts() {
 		wp_dequeue_style( 'style' );
 		$style_filepath = get_stylesheet_directory() . '/css/bst.css';
 		if ( file_exists($style_filepath) ) {
-			wp_enqueue_style( 'style', get_stylesheet_uri() . '?' . filemtime( $style_filepath ) );
+      wp_enqueue_style('site_responsive',
+      get_template_directory_uri() . '/css/bst.css', false,
+      filemtime(get_stylesheet_directory() . '/css/bst.css'));
 		}
 	}
 }

@@ -1,88 +1,61 @@
-<!-- <h3>Search From Over 1,000,000 New &amp; Reconditioned Replacement Parts!</h3> -->
+<div id="hospital_content_wrap" style="float: right; height: 880px; margin-right: -26px; margin-top: 19px; width: 850px;">
+
+<div style="height:382px; position:relative; background-image: url(https://diamedicalusa.com/wp-content/imgs/hospital-home/Hospital-home-part-search.png); ">
+
+<div style="font-family: 'ristretto_probold', Arial, sans-serif; position:absolute; top:22px;line-height:46px; right:17px;color:#00426a;">
+  <span style="font-size:68px; ">ANY PART</span>
+  <span style="font-size:38px; ">&nbsp;&nbsp;FOR</span><br />
+  <span style="font-size:68px; ">ANY HOSPITAL BED</span>
+  <span style="font-size:38px;">&nbsp;&nbsp;FROM</span><br />
+  <span style="font-size:68px; ">ANY MANUFACTURER</span>
+</div>
+  <span style="color:#fff; position:absolute; bottom:56px; left:14px; font-family: 'ristretto_promedium', Arial, sans-serif; font-size:48px; line-height:43px;">
+SEARCH <br />
+BIOMEDICAL <br />
+PARTS</span>
+
 <?php
-
-// $ps_echo = true ;
-// if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
-
-$hospitalLinks = array(
-  array(
-    "name" => "Batteries, Cables &amp; Sensors",
-    "img"  => "2016/12/batery.jpg",
-    "slug" => "batteries-cables-sensors/" ),
-  array(
-    "name" => "Biomedical Parts",
-    "img"  => "2017/01/pillow_speaker.png",
-    "slug" => "../results/keyword/your+part/search-in/product/cat-in/all/search-other/product" ),
-  array(
-    "name" => "Hospital Beds",
-    "img"  => "2015/07/Hill-Rom-Total-Care-P1900_400x400-258x275.png",
-    "slug" => "hospital-beds/" ),
-  array(
-    "name" => "Casters",
-    "img"  => "2017/01/hill-rom-caster.png",
-    "slug" => "../results/keyword/casters/search-in/product/cat-in/all/search-other/product,p_sku" ),
-  array(
-    "name" => "Imaging Parts",
-    "img"  => "2016/05/imaging-parts-category-1.png",
-    "slug" => "../imaging-parts/" ),
-  array(
-    "name" => "Infusion Pump Parts",
-    "img"  => "2016/05/alaris.png",
-    "slug" => "infusion-pump-parts/" ),
-  array(
-    "name" => "Cots &amp; Stretchers",
-    "img"  => "2015/06/Ferno-35-A-Mobile-Transporter-Series-291_400x400-258x275.png",
-    "slug" => "ems-cots-and-stretchers/" ),
-  array(
-    "name" => "Hill-Rom Parts",
-    "img"  => "2015/05/circuit-board-258x275.jpg",
-    "slug" => "hill-rom-parts-online/" ),
-  array(
-    "name" => "Furnishings",
-    "img"  => "2015/03/Classic-Bedside-Cabinet_400x400-258x275.png",
-    "slug" => "furniture/" ),
-  array(
-    "name" => "Diagnostic Equipment",
-    "img"  => "2015/02/Nurse-Combo-DG090651_400x400-258x275.png",
-    "slug" => "diagnostics/" ),
-  array(
-    "name" => "Infection Control",
-    "img"  => "2015/02/Brewer-Step-On-Steel-Waste-Can-35269_400x400-258x275.png",
-    "slug" => "infection-control/" ),
-  array(
-    "name" => "Infusion &amp; Dialysis",
-    "img"  => "2015/02/Alaris-Imed-Gemini-PC-4-Infusion-PumpPC-4_400x400-258x275.png",
-    "slug" => "infusion-dialysis/" ),
-  array(
-    "name" => "Medical Supplies",
-    "img"  => "2015/06/3526-258x275.png",
-    "slug" => "supplies-2/" ),
-  array(
-    "name" => "Mobility",
-    "img"  => "2015/07/MDS806250NH2_PRI02-258x275.jpg",
-    "slug" => "mobility/" ),
-  array(
-    "name" => "Carts &amp; Storage",
-    "img"  => "2015/02/Waterloo-Pediatric-Medical-Cart_400x400-258x275.png",
-    "slug" => "carts-storage/" ),
-  array(
-    "name" => "Obstetrics &amp; Pediatrics",
-    "img"  => "2015/02/Pedigo-Pediatric-Stretcher-Crib-500_400x400-258x275.png",
-    "slug" => "obstetrics-pediatrics/" ),
-  array(
-    "name" => "Refrigerators &amp; Freezers",
-    "img"  => "2015/04/FF511LBIMEDDT-11960-258x275.jpg",
-    "slug" => "refrigerators-freezers/" ),
-  array(
-    "name" => "Respiratory",
-    "img"  => "2015/02/Puritan-Bennett-760-Ventilator_400x400-258x275.png",
-    "slug" => "respiratory/" ),
-  array(
-    "name" => "Surgical",
-    "img"  => "2015/02/Reconditioned-Amsco-3080-Surgical-Table_400x400-258x275.png",
-    "slug" => "surgical/" )
-);
-
-if ( function_exists('benz_loop_special_cats') ) benz_loop_special_cats($hospitalLinks);
-
+$ps_echo = true ;
+if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
 ?>
+
+</div>
+
+
+
+<br />
+<div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Hospital-Beds.png" alt="hospital beds"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Hospital-Beds-Select.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Hospital-Beds.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="infusionbuttonhome"><a href="<?php echo site_url(); ?>/product-category/supplies-2/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Medical-Supplies.png" alt="infusion pumps"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Medical-Supplies-Select.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Medical-Supplies.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="simlabbuttonhome"><a href="<?php echo site_url(); ?>/product-category/refrigerators-freezers/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers.png" alt="sim labs"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers-Select.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="headwallbuttonhome"><a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Bio-Med-Imaging-Parts.png" alt="headwalls"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Bio-Med-Imaging-Parts-Select.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Bio-Med-Imaging-Parts.png';"/></a></div>
+
+<div class="ns_home_flt-lft" style="margin-top: -79px !important ;" id="practibuttonhome"><a href="<?php echo site_url(); ?>/product-category/loaded-crash-carts/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Medical-Equipment.png" alt="practi-meds"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Medical-Equipment-Select.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Medical-Equipment.png';"/></a></div>
+
+<div class="ns_home_flt-lft" id="medmatbuttonhome"><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Furnishings.png" alt="hospital mattresses"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Furnishings-Select.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Furnishings.png';"/></a></div>
+
+
+
+<a target="_blank" href="https://medmattress.com/custom-sizing-form/" ><img style="margin-bottom:1em;" src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/HealthcareMattress.png" /></a>
+<a href="<?php echo site_url(); ?>/medical-equipment/" ><img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Hospital-Equipmentgallery.png" /></a>
+</div>
