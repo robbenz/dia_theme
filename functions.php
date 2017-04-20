@@ -511,11 +511,12 @@ function BENZ_wc_order_email_skus( $table, $order ) {
 	wc_get_template( $template, array(
 		'order'                 => $order,
 		'items'                 => $order->get_items(),
-		'show_download_links'   => $show_download_links,
-		'show_sku'              => true,
-		'show_purchase_note'    => $show_purchase_note,
-		'show_image'            => $show_image,
-		'image_size'            => $image_size
+	//	'show_download_links'   => $show_download_links,
+		'show_sku'              => true
+	//	'show_purchase_note'    => $show_purchase_note,
+//		'show_image'            => $show_image,
+	//	'image_size'            => $image_size
+
 	) );
 
 	return ob_get_clean();
@@ -956,10 +957,41 @@ function dia_last_css_enqueue_scripts() {
 		wp_dequeue_style( 'style' );
 		$style_filepath = get_stylesheet_directory() . '/css/bst.css';
 		if ( file_exists($style_filepath) ) {
-      wp_enqueue_style('site_responsive',
+      wp_enqueue_style('style',
       get_template_directory_uri() . '/css/bst.css', false,
       filemtime(get_stylesheet_directory() . '/css/bst.css'));
 		}
 	}
 }
 /* END */
+
+/* light box photo shit */
+add_action( 'wp_enqueue_scripts', 'frontend_scripts_include_lightbox' );
+
+function frontend_scripts_include_lightbox() {
+  global $woocommerce;
+  $suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+  $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false;
+
+  if ( $lightbox_en ) {
+    wp_enqueue_script( 'prettyPhoto', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
+    wp_enqueue_script( 'prettyPhoto-init', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
+    wp_enqueue_style( 'woocommerce_prettyPhoto_css', $woocommerce->plugin_url() . '/assets/css/prettyPhoto.css' );
+  }
+}
+function autoadd_rel_prettyPhoto($content) {
+ global $post;
+ $pattern = "/(<a(?![^>]*?data-rel=['\"]prettyPhoto.*)[^>]*?href=['\"][^'\"]+?\.(?:bmp|gif|jpg|jpeg|png)['\"][^\>]*)>/i";
+ $replacement = '$1 data-rel="prettyPhoto['.$post->ID.']">';
+ $content = preg_replace($pattern, $replacement, $content);
+ return $content;
+}
+add_filter("the_content","autoadd_rel_prettyPhoto");
+/* END */
+
+
+add_filter('woocommerce_registration_redirect', 'dia_wc_registration_redirect');
+function dia_wc_registration_redirect( $redirect_to ) {
+     $redirect_to = '/medical-equipment';
+     return $redirect_to;
+}

@@ -13,9 +13,13 @@
 
           <?php if ( is_user_logged_in() ) : ?>
 
-            <a href="/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/product">
-              <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/biomedical-parts-search.png " />
+            <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/product">
+              <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/biomedical-parts-search-for-hill-rom-parts.png" />
             </a>
+            <?php
+            $ps_echo = true ;
+            if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
+            ?>
 
           <?php else : ?>
 
@@ -26,7 +30,6 @@
 
               <a href="<?php echo site_url(); ?>/my-account" id="benz-register-link">New Customer? <em>Register Here</em></a>
            </div>
-
 
         <?php endif ;?>
 

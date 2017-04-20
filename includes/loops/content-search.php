@@ -11,7 +11,9 @@ $allowed_roles = array('shop_manager', 'administrators', 'shop_observers');
 
 if(have_posts()): while(have_posts()): the_post();
 
- global $product;
+ global $post, $woocommerce, $product;
+
+ $product_full_price = $product->get_price();
 
  $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
  $single_cat = array_shift( $product_cats );
@@ -49,27 +51,81 @@ if(have_posts()): while(have_posts()): the_post();
             <h4><a href="<?php the_permalink(); ?>"><span style="color:#78be20;">Part Number: </span><span style="color:#fff;"><?php the_title()?></span></a></h4>
         </header>
 
-        <div class="lightbox" style="float:left; width:15%; margin-right:2%; ">
-          <?php echo $product->get_image(array(150,150)); ?>
+        <div class="images" style="float:left; width:15%; margin-right:1.9%; ">
+
+          <?php
+
+          if ( has_post_thumbnail() ) {
+            $image_title 	= esc_attr( get_the_title( get_post_thumbnail_id() ) );
+      			$image_caption 	= get_post( get_post_thumbnail_id() )->post_excerpt;
+      			$image_link  	= wp_get_attachment_url( get_post_thumbnail_id() );
+      			$image       	= get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
+      				'title'	=> $image_title,
+      				'alt'	=> $image_title
+      				) );
+      			$attachment_count = count( $product->get_gallery_attachment_ids() );
+      			if ( $attachment_count > 0 ) {
+      				$gallery = '[product-gallery]';
+      			} else {
+      				$gallery = '';
+      			}
+      			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>', $image_link, $image_caption, $image ), $post->ID );
+      		} else {
+      			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
+      		}
+
+           ?>
         </div>
 
-        <div style="float:left; width:60%;margin-right:4%; ">
+        <div style="float:left; width:57.5%;margin-right:3.5%; ">
           <h6>Part Number: <?php echo $product->get_sku(); ?></h6>
+
+          <?php
+          $condition = get_post_meta( get_the_ID(), 'benz_condition_select', true );
+
+          if (function_exists('is_dia_part')) {
+          	if (is_dia_part() && strlen($condition) >= 3 ) {
+          		echo '<h6>Part Condition: ' . $condition . '</h6>';
+          	}
+          } ?>
+
           <h6><span style="color:#fbad17;">Category: </span><?php echo $single_cat->name; ?></h6>
-          <h6 class="search-results-description"><span style="color:#78be20;">Description: </span><?php the_content(); ?></h6>
+          <h6 class="search-results-description"><span style="color:#78be20;">Description: </span>
+            <?php
+            $content = get_the_content();
+            $driection = '... <a href="';
+            $driection .= get_the_permalink();
+            $driection .= '">Read more &rarr; </a>';
+            echo mb_strimwidth($content, 0, 420, $driection );
+            ?>
+          </h6>
         </div>
 
-        <div style="float:left; width:18%;margin-top:-25px; ">
+        <div style="float:left; width:22%;margin-top:-25px; ">
           <h6><span style="color:#78be20;">List Price: </span>
-            <?php if (strlen($_list_price) > 0 ) : ?>
-            <span style="text-decoration: line-through;"><?php echo '$'.number_format($_list_price, 2); ?></span>
-          <?php else : ?>
-            n/a
-          <?php endif ; ?>
+            <?php if ( strlen($_list_price) > 0 ) : ?>
+              <?php if ( intval($product_full_price) < intval($_list_price)  ): ?>
+                <span style="text-decoration: line-through;"><?php echo '$'.number_format($_list_price, 2); ?></span>
+              <?php else : ?>
+                n/a
+              <?php endif ;?>
+            <?php else : ?>
+              n/a
+            <?php endif ; ?>
           </h6>
 
           <?php if ( is_user_logged_in() ) : ?>
-            <h6><span style="color:#78be20;">Price: </span><?php echo $product->get_price_html(); ?></h6>
+            <h6><span style="color:#78be20;">Price: </span>
+              <?php
+              if ( intval($product_full_price) > 0 ) {
+                echo $product->get_price_html();
+              } else {
+                echo 'n/a';
+              }
+            ?>
+          </h6>
+
+          <?php if ( intval($product_full_price) > 0 ) : ?>
 
             <?php if( $product->is_type( 'simple' ) ) : ?>
 
@@ -89,9 +145,14 @@ if(have_posts()): while(have_posts()): the_post();
             <?php endif ; ?>
 
       <?php else : ?>
-        <button href="#" class="search-rs-read-more eModal-1" >View Price</button>
+        <a href="#" class="eModal-2 r-a-qbutton-price">Request Quote</a>
       <?php endif ; ?>
-    </div>
+
+    <?php else : ?>
+      <button href="#" class="search-rs-read-more eModal-1" >View Price</button>
+    <?php endif ; ?>
+
+  </div>
 
     <div id="search_results_specs_wrap" style="padding-top:8px; clear:both;width:100%; height:auto;">
 
@@ -115,38 +176,50 @@ if(have_posts()): while(have_posts()): the_post();
 
         <div id="show_spec_div_wrap_<?php echo $id; ?>" class="show_spec_div_wrap">
           <table class="dia_tg" id="imfuckingsweetatcoding">
-            <?php
 
+            <?php
             $dia_specs_coolshit = array (
-              "Manufacturer: " => $_mft,
-              "MFT Part #: " => $_mft_part_number,
-              "MFT List Price: " => $_list_price,
-              "Vendor 1: " => $_supplier_1,
-              "Vendor 1 Part Number" => $_vendor_pn_1,
-              "Cost: " => $_cost_1,
-              "Verified on: " => $_price_check_1,
-              "2nd Vendor: " => $_supplier_2,
-              "2nd Cost: " => $_cost_2,
-              "2nd Verified on: " => $_price_check_2
+              "Manufacturer: "           => $_mft,
+              "MFT Part #: "             => $_mft_part_number,
+              "MFT List Price: "         => $_list_price,
+              "Vendor 1: "               => $_supplier_1,
+              "Cost: "                   => $_cost_1,
+              "Vendor 1 Part Number: "   => $_vendor_pn_1,
+              "2nd Vendor: "             => $_supplier_2,
+              "2nd Cost: "               => $_cost_2,
+              "2nd Vendor Part Number: " => $_vendor_pn_2
             );
             $_x=1;
 
             foreach ( $dia_specs_coolshit as $key => $value ) {
-              if ( strlen($value) > 0 ) {
-                echo '<tr><td>' . $key . '</td><td>';
-                if ( $_x == 3 || $_x == 6 || $_x == 9 ) {
-                  echo '<span style="color:#78be20;">$'.number_format($value, 2).'</span>';
+              if ( $_x <= 6 ){
+                if ( strlen($value) > 0 ) {
+                  echo '<tr><td>'.$key.'</td><td>';
+                  if ( intval($value) > 0 ) {
+                    echo '<span style="color:#78be20;">$'.number_format($value, 2).'</span>';
+                  } else {
+                    echo $value;
+                  }
+                  echo '</td></tr>';
                 } else {
-                  echo $value;
+                  echo '<tr><td>'.$key.'</td><td>n/a</td></tr>';
                 }
-                echo '</td></tr>';
-              } else {
-                echo '<tr><td>' . $key . '</td><td>n/a</td></tr>';  // switch to n/a for empty value
+              } else {   // 2nd vendor -- hide entire row if empty -- no reason for n/a
+                if ( strlen($value) > 0 ) {
+                  echo '<tr><td>'.$key.'</td><td>';
+                  if ( intval($value) > 0 ) {
+                    echo '<span style="color:#78be20;">$'.number_format($value, 2).'</span>';
+                  } else {
+                    echo $value;
+                  }
+                  echo '</td></tr>';
+                } else {
+                  echo ' ';  // switch to n/a for empty value
+                }
               }
               $_x++;
             }
             ?>
-
           </table>
         </div>
 

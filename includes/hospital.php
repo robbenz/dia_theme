@@ -21,8 +21,6 @@ if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_w
 
 </div>
 
-
-
 <br />
 <div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Hospital-Beds.png" alt="hospital beds"
@@ -54,8 +52,6 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Me
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Furnishings-Select.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Furnishings.png';"/></a></div>
 
-
-
-<a target="_blank" href="https://medmattress.com/custom-sizing-form/" ><img style="margin-bottom:1em;" src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/HealthcareMattress.png" /></a>
+<a target="_blank" href="https://medmattress.com/" ><img style="margin-bottom:1em;" src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/HealthcareMattress.png" /></a>
 <a href="<?php echo site_url(); ?>/medical-equipment/" ><img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Hospital-Equipmentgallery.png" /></a>
 </div>

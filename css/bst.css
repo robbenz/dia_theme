@@ -259,6 +259,9 @@ no-touch .cs-style-8 figure:hover img, .cs-style-8 figure.cs-hover img { -webkit
 /* Request a Quote button for RAQ products */
 .r-a-qbutton-price { background-color: #78be20; padding:0.3em 0.6em; border-radius: 0.25em; font-size:15.7px; text-decoration: none; border:1px solid #78be20;}
 .r-a-qbutton-price:hover { background-color: #fff; border:1px solid #78be20; text-decoration: none; }
+.search-results .r-a-qbutton-price { font-size: 13.75px; color:#fff;}
+.search-results .r-a-qbutton-price:hover { color:#00426a;}
+
 /* END */
 #yith-ywraq-mail-form { width:100%;}
 #yith-ywraq-mail-form .form-row {clear:none;}
@@ -976,7 +979,7 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 /* END */
 
 #hospital_content_wrap .pp_search_container {position:absolute !important; bottom:0px !important; left:6px !important; width:350px !important;}
-
+.lft-img-home .pp_search_container {position:absolute !important; bottom:0px !important; left:9px !important; width:80% !important;}
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
 font-family: 'ristretto_promedium', Arial, sans-serif;

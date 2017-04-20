@@ -6,7 +6,7 @@
     <img style="border:6px solid #00426a; max-width: 100%;" src="https://diamedicalusa.com/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png">
 
     <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-        <?php get_template_part('includes/sidebar'); ?>
+        <?php get_template_part('includes/partssearch-sidebar'); ?>
     </div>
 
     <div class="col-xs-12 col-sm-8">
