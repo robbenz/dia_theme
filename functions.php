@@ -57,6 +57,8 @@ function benz_add_jss() {
     wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),false, true);
     wp_enqueue_script('curtain_form');
   }
+  wp_register_script('typedJS', get_template_directory_uri() . '/js/typed.js', array('jquery'),false, true);
+  wp_enqueue_script('typedJS');
 }
 add_action( 'wp_enqueue_scripts', 'benz_add_jss' );
 

@@ -20,7 +20,7 @@ Then you can insert the Search Widget into the sidebar.
 		<input class="search-field form-control"
 					 type="text search"
 					 value="<?php echo get_search_query() ?>"
-					 placeholder="hello"
+					 placeholder=""
 					 name="s"
 					 id="s"/>
 
