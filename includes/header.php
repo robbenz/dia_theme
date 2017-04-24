@@ -133,7 +133,8 @@
 						wp_nav_menu( array(
 							'theme_location'  => 'parts-search',
 							'items_wrap'      => $benzitems,
-							'container_class' => $benzmenu . ' ' . $benzmenu . '-parts'
+							'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
+							'walker'          => new BENZ_Walker_Nav_Menu_NEWSEARCH
 						));
 					}
 

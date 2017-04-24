@@ -344,7 +344,6 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .reset_variations{display:none !important;}
 [id*="product-"] .onsale{display:none;}
 .woocommerce_widget_cart-5 h4 { background-color: #ffad00; border-radius: 0.2em; color: #00426a; font-size: 165%; padding: 0.2em; text-align: center; text-shadow: none; }
-.page-id-86 #sidebar { margin-top:89px; }
 .products li h3{ color: #00426a !important; font-size: 17px !important; font-weight: 600; text-align: center; text-transform: uppercase; }
 .products .r-a-qbutton-price { display:none;}
 div.thumbnails{height:100px;}
@@ -631,7 +630,7 @@ li.main-header-link:hover {background-color:#2774ae; }
 
 /* Part Search Menu */
 #menu-parts-search .benz-bottom-colors { top: 145px; }
-#menu-parts-search  .arrow-down { left: 40%;; top: -100px; }
+#menu-parts-search  .arrow-down { left: 40%;; top: -91px; }
 #menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
 #menu-parts-search .ctr_search{ position: relative !important; top:-23px; }
 #menu-item-57558 { width:200px;}
@@ -980,7 +979,59 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 
 #hospital_content_wrap .pp_search_container {position:absolute !important; bottom:0px !important; left:6px !important; width:350px !important;}
 .lft-img-home .pp_search_container {position:absolute !important; bottom:0px !important; left:9px !important; width:80% !important;}
-.lft-img-home #searchform{position:absolute; bottom:0px; left:4px; }
+
+.lft-img-home #searchform{position:absolute; bottom: -2px; left: 16px; background-color: #ffad00; padding: 0.36em; width: 289px; border-radius: 0.3em; }
+.lft-img-home #searchform #s{width:230px; border-radius: 0; }
+.lft-img-home #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
+
+#hospital_content_wrap #searchform{position:absolute; bottom:0px; left:5.5px; background-color: #ffad00; padding: 0.36em; width: 360px; border-radius: 0.3em; }
+#hospital_content_wrap #searchform #s{width:300px; border-radius: 0; }
+#hospital_content_wrap #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
+
+#masthead #searchform {margin-top: -35px; margin-left: 26px;  }
+#masthead #searchform #s{font-size: 1.1em; padding: 2px 9px; height: 42px; width: 237px; }
+#masthead #searchform #searchsubmit{font-size: 16px; padding: 8.5px 14px; }
+.logged-in #masthead #searchform { margin-left: 53px;  }
+
+
+#menu-parts-search #searchform {margin-top:-21px; margin-bottom:26px; }
+#menu-parts-search #searchform #s {width:900px; height:50px; }
+#menu-parts-search #searchform #searchsubmit{ font-size: 18px; padding: 11px 16px; }
+
+
+.search-results #sidebar #searchform,
+.page-id-86 #sidebar #searchform,
+.search-no-results #sidebar #searchform { padding: 8px 0; }
+.search-results #sidebar #searchform #s,
+.page-id-86 #sidebar #searchform #s,
+.search-no-results #sidebar #searchform #s {width:224px; height:44px;  }
+.search-results #sidebar #searchsubmit,
+.page-id-86 #sidebar #searchsubmit,
+.search-no-results #sidebar #searchsubmit {font-size: 14px; padding: 11px 12px;  }
+
+
+#hospital_content_wrap #searchform .form-control::-webkit-input-placeholder,
+.lft-img-home #searchform .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #8bbee8 !important;
+    font-weight: 600;
+}
+#hospital_content_wrap #searchform .form-control:-moz-placeholder,
+.lft-img-home #searchform .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #8bbee8 !important;
+   font-weight: 600;
+   opacity:  1;
+}
+#hospital_content_wrap #searchform .form-control::-moz-placeholder,
+.lft-img-home #searchform .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #8bbee8 !important;
+   font-weight: 600;
+   opacity:  1;
+}
+#hospital_content_wrap #searchform .form-control:-ms-input-placeholder,
+.lft-img-home #searchform .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #8bbee8 !important;
+   font-weight: 600;
+}
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
@@ -1372,7 +1423,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 }
 
 @media (min-width: 1200px) {
-  #mm-right-contact{display:block; margin-top: -50px;}
+  #mm-right-contact{display:block; margin-top: -38px;}
   .benz-menu > ul > li > a{ padding: 11px 1.8198em; }
   .benz-menu .sub-menu{width: 1171px;}
   #menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }

@@ -1,26 +1,26 @@
 <div style="text-align:center;"><img src="<?php echo site_url(); ?>/wp-content/imgs/homepage/DiscountDirectoryPage.png" alt="Discount Directory Logos" usemap="#Map3">
 
 <map name="Map3">
-                  <area shape="rect" coords="52,207,192,249" href="<?php echo site_url(); ?>/results/keyword/Hill-Rom/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="230,208,404,249" href="<?php echo site_url(); ?>/results/keyword/Stryker/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="447,197,580,257" href="<?php echo site_url(); ?>/results/keyword/Invacare/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="648,206,769,251" href="<?php echo site_url(); ?>/results/keyword/Midmark-Pedigo/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="825,209,983,252" href="<?php echo site_url(); ?>/results/keyword/Drive Medical/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="46,282,206,336" href="<?php echo site_url(); ?>/results/keyword/Hausted/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="239,289,401,331" href="<?php echo site_url(); ?>/results/keyword/Joerns/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="469,277,558,342" href="<?php echo site_url(); ?>/results/keyword/Medline/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="632,288,780,331" href="<?php echo site_url(); ?>/results/keyword/Posey/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="816,293,980,327" href="<?php echo site_url(); ?>/results/keyword/Span America/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="40,365,178,406" href="<?php echo site_url(); ?>/results/keyword/Lumex/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="230,371,383,401" href="<?php echo site_url(); ?>/results/keyword/Airpal/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="470,358,536,416" href="<?php echo site_url(); ?>/results/keyword/Graham-Field/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="646,358,753,413" href="<?php echo site_url(); ?>/results/keyword/Amico/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="833,361,962,416" href="<?php echo site_url(); ?>/results/keyword/Kci/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="40,439,179,482" href="<?php echo site_url(); ?>/results/keyword/Alaris/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="256,424,356,495" href="<?php echo site_url(); ?>/results/keyword/Hospira/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="433,444,571,482" href="<?php echo site_url(); ?>/results/keyword/Ferno/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="670,432,727,488" href="<?php echo site_url(); ?>/results/keyword/Tente/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-                  <area shape="rect" coords="829,430,963,489" href="<?php echo site_url(); ?>/results/keyword/Burke/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
+                  <area shape="rect" coords="52,207,192,249" href="<?php echo site_url(); ?>/?s=Hill-Rom&amp;post_type=product">
+                  <area shape="rect" coords="230,208,404,249" href="<?php echo site_url(); ?>/?s=Stryker&amp;post_type=product">
+                  <area shape="rect" coords="447,197,580,257" href="<?php echo site_url(); ?>/?s=Invacare&amp;post_type=product">
+                  <area shape="rect" coords="648,206,769,251" href="<?php echo site_url(); ?>/?s=Midmark-Pedigo&amp;post_type=product">
+                  <area shape="rect" coords="825,209,983,252" href="<?php echo site_url(); ?>/?s=Drive Medical&amp;post_type=product">
+                  <area shape="rect" coords="46,282,206,336" href="<?php echo site_url(); ?>/?s=Hausted&amp;post_type=product">
+                  <area shape="rect" coords="239,289,401,331" href="<?php echo site_url(); ?>/?s=Joerns&amp;post_type=product">
+                  <area shape="rect" coords="469,277,558,342" href="<?php echo site_url(); ?>/?s=Medline&amp;post_type=product">
+                  <area shape="rect" coords="632,288,780,331" href="<?php echo site_url(); ?>/?s=Posey&amp;post_type=product">
+                  <area shape="rect" coords="816,293,980,327" href="<?php echo site_url(); ?>/?s=Span America&amp;post_type=product">
+                  <area shape="rect" coords="40,365,178,406" href="<?php echo site_url(); ?>/?s=Lumex&amp;post_type=product">
+                  <area shape="rect" coords="230,371,383,401" href="<?php echo site_url(); ?>/?s=Airpal&amp;post_type=product">
+                  <area shape="rect" coords="470,358,536,416" href="<?php echo site_url(); ?>/?s=Graham-Field&amp;post_type=product">
+                  <area shape="rect" coords="646,358,753,413" href="<?php echo site_url(); ?>/?s=Amico&amp;post_type=product">
+                  <area shape="rect" coords="833,361,962,416" href="<?php echo site_url(); ?>/?s=Kci&amp;post_type=product">
+                  <area shape="rect" coords="40,439,179,482" href="<?php echo site_url(); ?>/?s=Alaris&amp;post_type=product">
+                  <area shape="rect" coords="256,424,356,495" href="<?php echo site_url(); ?>/?s=Hospira&amp;post_type=product">
+                  <area shape="rect" coords="433,444,571,482" href="<?php echo site_url(); ?>/?s=Ferno&amp;post_type=product">
+                  <area shape="rect" coords="670,432,727,488" href="<?php echo site_url(); ?>/?s=Tente&amp;post_type=product">
+                  <area shape="rect" coords="829,430,963,489" href="<?php echo site_url(); ?>/?s=Burke&amp;post_type=product">
               </map>
 
 </div>

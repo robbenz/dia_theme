@@ -16,7 +16,11 @@ PARTS</span>
 
 <?php
 $ps_echo = true ;
-if ( function_exists( 'woo_predictive_search_widget' ) ) woo_predictive_search_widget( $ps_echo );
+if ( function_exists( 'woo_predictive_search_widget' ) ) {
+   woo_predictive_search_widget( $ps_echo );
+ } else {
+     get_template_part( 'includes/navbar-search' );
+ }
 ?>
 
 </div>
@@ -37,7 +41,7 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Me
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers-Select.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers.png';"/></a></div>
 
-<div class="ns_home_flt-lft" id="headwallbuttonhome"><a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
+<div class="ns_home_flt-lft" id="headwallbuttonhome"><a href="<?php echo site_url(); ?>/results">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Bio-Med-Imaging-Parts.png" alt="headwalls"
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Bio-Med-Imaging-Parts-Select.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Bio-Med-Imaging-Parts.png';"/></a></div>

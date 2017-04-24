@@ -44,7 +44,7 @@ if(have_posts()): while(have_posts()): the_post();
     outline: 5px solid #00426a;
     height:auto;
     min-height:225px;
-    border-radius: 8px; "
+    border-radius: 8px;"
     role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
 
         <header>
@@ -227,7 +227,23 @@ if(have_posts()): while(have_posts()): the_post();
 
     </article>
 <?php endwhile; else: ?>
-    <div class="alert alert-warning">
-        <i class="glyphicon glyphicon-exclamation-sign"></i> <?php _e('Sorry, your search yielded no results.', 'bst'); ?>
-    </div>
+
+  <div id="ps_footer_container"><div style="clear:both"></div>
+  <p style="padding-left:2em;">
+    <i class="glyphicon glyphicon-exclamation-sign"></i>
+    <span class="sorry-you-cant-find">&nbsp;Could not find any results</span>
+    <br><br>
+    <span>However, we may still carry this product</span>
+  </p>
+  <p style="padding-left:2em;">Please <a href="#" class="eModal-2 click-here-parts-link" style="font-weight:bold">contact us</a>
+    and we will get back to you with an answer as soon as possible.</p>
+    <p style="padding-left:2em;">Please include your facility name and address so we can email you an official quote.</p>
+    <p style="padding-left:2em;">Thank you</p>
+    <p style="padding-left:2em;"><strong>Tel:</strong> (877) 593-6011</p>
+    <p style="padding-left:2em;"><strong>Fax:</strong> (248) 671-1550</p>
+    <p style="padding-left:2em;"><strong>Email:</strong> sales@diamedicalusa.com</p>
+    <p></p>
+  </div>
+
+
 <?php endif; ?>

@@ -40,8 +40,8 @@
 <div id="footerlinks1">
   <a href="<?php echo site_url(); ?>">Home</a><br />
   <a href="<?php echo site_url(); ?>/medical-equipment/">Products</a><br />
-  <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">Manufacturers</a><br />
-  <a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">Parts</a><br />
+  <a href="<?php echo site_url(); ?>/manufacturers/">Manufacturers</a><br />
+  <a href="<?php echo site_url(); ?>/results/">Parts</a><br />
   <a href="#" class="eModal-2">Contact</a><br />
 <a href="<?php echo site_url(); ?>/blog">Blog</a><br />
 </div><!--footerlinks1-->
@@ -59,7 +59,7 @@
 <div id="footerlinks3">
 <p class="popularproducts">&nbsp;&nbsp;</p><br />
 <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps">Infusion Pumps</a><br />
-<a href="<?php echo site_url(); ?>/results/keyword/caster/search-in/product/cat-in/all/search-other/product,p_sku,p_cat">Casters &amp; Wheels</a><br />
+<a href="<?php echo site_url(); ?>/?s=caster&amp;post_type=product">Casters &amp; Wheels</a><br />
 <a href="http://medmattress.com/product-category/mattresses/operating-table/">OR Table Pads</a><br />
 <a href="http://medmattress.com/product-category/mattresses/">Mattresses</a><br />
 <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">Repairs</a><br />

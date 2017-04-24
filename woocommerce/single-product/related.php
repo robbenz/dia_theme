@@ -69,7 +69,7 @@ if ( $products->have_posts() ) : ?>
 
 		<?php	while ( $products->have_posts() ) : $products->the_post(); ?>
 
-			<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/results/keyword/<?php echo $product->get_sku(); ?>/search-in/product/cat-in/all/search-other/product">
+			<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/?s=<?php echo $product->get_sku(); ?>&amp;post_type=product">
 				<div class="hill-rom-parts-cell"><?php echo $product->get_image(array(150,150)); ?></div>
 				<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
 				<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>

@@ -3,7 +3,6 @@ get_template_part('includes/header');
 $open_no_side = '<div class="container woocommerce"><div class="row"><div id="content" role="main">';
 $open_side = '<div class="container woocommerce landing_page"><div class="row">';
 $loops_arr = array(
-  '57882' => 'includes/hill-rom',
   '61274' => 'includes/imaging_loops/fujitsu',
   '61275' => 'includes/imaging_loops/ge',
   '61276' => 'includes/imaging_loops/siemens',
@@ -97,13 +96,16 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
 //  -- Parts Search CHECK
  elseif ( is_page('86') ):
   echo $open_side; ?>
-  <img style="border:6px solid #00426a; max-width: 100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png" />
+  <img style="border:6px solid #00426a; margin-bottom:10px; max-width: 100%;" src="https://diamedicalusa.com/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png">
+<?php wc_print_notices(); ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-    <?php dynamic_sidebar('sidebar-widget-area'); ?>
+      <?php get_template_part('includes/partssearch-sidebar'); ?>
   </div>
   <div class="col-xs-12 col-sm-8">
     <div id="content" role="main">
-      <?php get_template_part('includes/loops/content', 'page'); ?>
+      <h2>Welcome to the Part Search</h2>
+      <hr/>
+      <?php get_template_part('includes/search-html'); ?>
     </div><!-- /#content -->
   </div>
 

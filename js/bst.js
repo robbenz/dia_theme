@@ -84,6 +84,10 @@
         }
         littleHoverPM();
         /*** END ***/
+        $("#menu-parts-search #searchform #s").attr("placeholder", "Search Over 1,000,000 Parts").val("").focus().blur();
+
+
+
 
         /*** add active look to top menu pages ***/
         /*

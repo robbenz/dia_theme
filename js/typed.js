@@ -1,6 +1,6 @@
 // http://jsfiddle.net/mattboldt/M3YaZ/
 // http://jsfiddle.net/ByLGs/
-// http://jsfiddle.net/davidThomas/9BpGC/
+//
 !function($){
 
 	"use strict";
