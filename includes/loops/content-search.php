@@ -117,7 +117,7 @@ if(have_posts()): while(have_posts()): the_post();
           <?php if ( is_user_logged_in() ) : ?>
             <h6><span style="color:#78be20;">Price: </span>
               <?php
-              if ( intval($product_full_price) > 0 ) {
+              if ( $product->is_purchasable() ) {
                 echo $product->get_price_html();
               } else {
                 echo 'n/a';
@@ -125,7 +125,7 @@ if(have_posts()): while(have_posts()): the_post();
             ?>
           </h6>
 
-          <?php if ( intval($product_full_price) > 0 ) : ?>
+          <?php if ( $product->is_purchasable() ) : ?>
 
             <?php if( $product->is_type( 'simple' ) ) : ?>
 

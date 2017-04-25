@@ -28,7 +28,7 @@ if ( is_search() ):  ?>
 	<div class="container">
 	  <div class="row">
 	    <img style="border:6px solid #00426a; margin-bottom:10px; max-width: 100%;" src="https://diamedicalusa.com/wp-content/imgs/homepage/parts-search-circuit-board_FINAL.png">
-<?php wc_print_notices(); ?>
+			<?php wc_print_notices(); ?>
 	    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
 	        <?php get_template_part('includes/partssearch-sidebar'); ?>
 	    </div>
@@ -69,15 +69,15 @@ elseif ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
 
 <?php
 while ( have_posts() ) : the_post();
-global $product;
+global $product, $post;
 ?>
 
-<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/results/keyword/<?php echo $product->get_sku(); ?>/search-in/product/cat-in/all/search-other/product">
+<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/?s=<?php echo $product->get_sku(); ?>&amp;post_type=product">
 	<div class="hill-rom-parts-cell"><?php echo $product->get_image(array(150,150)); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo the_content(); ?></div>
-	<div class="hill-rom-parts-cell"><?php echo '$' . $product->get_price(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo $product->get_price_html(); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), 'benz_condition_select', true ); ?></div>
 </a>
 
@@ -129,14 +129,6 @@ if ( have_posts() ) :
 
 	endif;
 
-	if( is_product_category('5999') ) {
-		?>
-		<div id="hr-part-searrch">
-			<a href="<?php echo site_url(); ?>/results/keyword/search+for+parts/search-in/product/cat-in/all/search-other/productPeepOpen_skuPeepOpen_cat">
-				<img style="margin:2px 10%;float:right;" src="<?php echo site_url() ?>/wp-content/imgs/shop-parts-search-bar.gif" />
-			</a>
-		</div>
-	<?php }
 
 	woocommerce_product_loop_start();
    if (! is_user_logged_in() ) { echo '<div style="width:100%; height:30px;"></div>'; }

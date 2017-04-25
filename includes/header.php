@@ -16,8 +16,8 @@
 
 </head>
 
-
 <body <?php body_class(); ?>>
+
 <div id="landing_nav-wrap">
 	<div class="container">
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
@@ -62,6 +62,7 @@
 			</div>
 
 			<div id="mm-right-contact">
+
 				<?php
 
 				$benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';

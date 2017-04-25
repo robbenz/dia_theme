@@ -988,10 +988,8 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 #hospital_content_wrap #searchform #s{width:300px; border-radius: 0; }
 #hospital_content_wrap #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
 
-#masthead #searchform {margin-top: -35px; margin-left: 26px;  }
-#masthead #searchform #s{font-size: 1.1em; padding: 2px 9px; height: 42px; width: 237px; }
+#masthead #searchform #s{font-size: 1.1em; padding: 2px 9px; height: 42px; }
 #masthead #searchform #searchsubmit{font-size: 16px; padding: 8.5px 14px; }
-.logged-in #masthead #searchform { margin-left: 53px;  }
 
 
 #menu-parts-search #searchform {margin-top:-21px; margin-bottom:26px; }
@@ -1004,7 +1002,7 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .search-no-results #sidebar #searchform { padding: 8px 0; }
 .search-results #sidebar #searchform #s,
 .page-id-86 #sidebar #searchform #s,
-.search-no-results #sidebar #searchform #s {width:224px; height:44px;  }
+.search-no-results #sidebar #searchform #s { height:44px;  }
 .search-results #sidebar #searchsubmit,
 .page-id-86 #sidebar #searchsubmit,
 .search-no-results #sidebar #searchsubmit {font-size: 14px; padding: 11px 12px;  }
@@ -1076,6 +1074,13 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   .wpb_slider_area .item {width:80% ;margin: 0 10%; }
   .wpb_slider_area .owl-buttons {top: -14px;}
   .woocommerce nav.woocommerce-pagination { width: 100%; margin-right: 10px;}
+
+  #masthead #searchform { margin: 6px 0 0 76px; border: none; box-shadow: none; padding:0px;  }
+  #masthead #searchform #s{display: inline-block; width:54vw;   }
+  #masthead #searchform #searchsubmit { display: inline-block; margin-top: -4px;  }
+  #masthead #searchform .form-group {display:inline-block;}
+  .search-results #sidebar,
+  .page-id-86 #sidebar {display:none;}
 }
 
 @media (min-width: 320px) and (max-width: 344px){
@@ -1254,6 +1259,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   .woocommerce .related  ul.products li.product,
   .woocommerce-page .related ul.products li.product {  width: 44.05% !important;}
   .woocommerce nav.woocommerce-pagination { width: 45%;}
+
 }
 
 @media (min-width:500px) and (max-width:768px){
@@ -1329,6 +1335,14 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   .woocommerce .related  ul.products li.product,
   .woocommerce-page .related ul.products li.product {  width: 21.05% !important;}
   .pm-page-circle-img {max-width:56px !important;float:left;}
+  #masthead #searchform #s{ width: 82vw; }
+  #masthead #searchform #searchsubmit{margin-top:0px; }
+  .search-results #sidebar,
+  .page-id-86 #sidebar {display:block;}
+  .search-results #sidebar #searchform #s,
+  .page-id-86 #sidebar #searchform #s,
+  .search-no-results #sidebar #searchform #s {width:174px; }
+
 }
 
 @media(min-width: 768px) and (max-width: 991px){
@@ -1403,6 +1417,15 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   img.img_plc_pm_wrench {   top: 152px; }
   #pm_blue_1 p {font-size: 20px; }
   .pm_ltgreen {font-size:18px;}
+
+  /* search bar */
+  .search-results #sidebar #searchform #s,
+  .page-id-86 #sidebar #searchform #s,
+  .search-no-results #sidebar #searchform #s {width:188px; }
+  #masthead #searchform {margin-top: -35px; margin-left: 26px;  }
+  #masthead #searchform #s{ width: 237px; }
+  .logged-in #masthead #searchform { margin-left: 53px;  }
+
 }
 
 @media (min-width: 992px) and (max-width:1199px) {
@@ -1450,6 +1473,8 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #pm_blue_1 p {font-size: 24px; }
   .pm-page-circle-img{display:block; max-width:76px !important;}
   .pm_ltgreen {font-size:24px;}
-
+  .search-results #sidebar #searchform #s,
+  .page-id-86 #sidebar #searchform #s,
+  .search-no-results #sidebar #searchform #s {width:224px; }
 
 }

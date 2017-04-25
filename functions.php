@@ -181,7 +181,6 @@ class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
 
 }
 // -- PART SEARCH
-//$output .= get_template_part( 'includes/navbar-search');BENZ_Walker_Nav_Menu_NEWSEARCH
 
 class BENZ_Walker_Nav_Menu_PS extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
@@ -349,7 +348,7 @@ if (!function_exists('loop_columns')) {
 add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 function products_per_page_category( $count ) {
   if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() || is_search() ) :
-    return 9999;
+    return 2700;
   elseif( is_product_category( '9350') ) :  // Bariatric Care
     return 27;
   elseif (isset($_GET['view']) && $_GET['view'] === 'all') :  // View all page
