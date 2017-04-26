@@ -77,6 +77,9 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '.column-predictive_search_focuskw { height:50px; max-height:50px;}' );
   wp_add_inline_style( 'wp-admin', '#dia-cust-fav-role-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-tab-meta-box h2 {background-color: #00426a; color:#fff;}' );
+  wp_add_inline_style( 'wp-admin', '#dia-search-pri-meta-box h2 {background-color: #00426a; color:#fff;}' );
+
+
 
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
@@ -1031,3 +1034,56 @@ function dia_wc_registration_redirect( $redirect_to ) {
      $redirect_to = '/medical-equipment';
      return $redirect_to;
 }
+
+
+
+
+
+
+
+
+
+/*** ADD CUSTOM META BOX ***/
+function add_dia_search_meta_box() {
+    add_meta_box("dia-search-pri-meta-box", "DiaMedical USA Search Priority", "dia_search_meta_box_markup", "product", "normal", "high", null);
+}
+add_action("add_meta_boxes", "add_dia_search_meta_box");
+/*** END ***/
+
+/*** ADD CUSTOM META BOX MARKUP FOR ADMIN ***/
+function dia_search_meta_box_markup() {
+  wp_nonce_field(basename(__FILE__), "meta-box-nonce");
+  	global $post;
+    $dia_search_priority = get_post_meta( $post->ID, '_dia_search_priority_number', true );
+    ?>
+
+    <label for="_dia_search_priority_number"><?php echo __( 'Enter Search Priority', 'woocommerce' ); ?></label>
+    <input name="_dia_search_priority_number" class="" type="number" name=" " value="<?php echo $dia_search_priority; ?>" step="any" min="0" max="50" style="width: 150px;" />
+    <?php
+  } // dia_search_meta_box_markup
+/*** END ***/
+
+/*** SAVE THAT SHIT ***/
+function save_dia_search_meta_box($post_id, $post, $update) {
+    if (!isset($_POST["meta-box-nonce"]) || !wp_verify_nonce($_POST["meta-box-nonce"], basename(__FILE__)))
+        return $post_id;
+
+    if(!current_user_can("edit_post", $post_id))
+        return $post_id;
+
+    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+        return $post_id;
+
+    $slug = "product";
+    if($slug != $post->post_type)
+        return $post_id;
+
+    // Search number
+    $dia_search_number_save = "";
+    if(isset($_POST["_dia_search_priority_number"])) {
+      $dia_search_number_save = $_POST["_dia_search_priority_number"];
+    }
+    update_post_meta($post_id, "_dia_search_priority_number", $dia_search_number_save);
+  } // end save_custom_meta_box
+
+add_action("save_post", "save_dia_search_meta_box", 10, 3);
