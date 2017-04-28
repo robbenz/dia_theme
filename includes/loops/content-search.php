@@ -7,7 +7,7 @@ The Search Loop
 
 <?php
 
-$allowed_roles = array('shop_manager', 'administrators', 'shop_observers');
+$allowed_roles = array('shop_manager', 'administrator', 'shop_observer');
 
 if(have_posts()): while(have_posts()): the_post();
 

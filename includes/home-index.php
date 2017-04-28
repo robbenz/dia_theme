@@ -16,14 +16,7 @@
             <a href="<?php echo site_url(); ?>/results">
               <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/biomedical-parts-search-for-hill-rom-parts.png" />
             </a>
-            <?php
-            $ps_echo = true ;
-            if ( function_exists( 'woo_predictive_search_widget' ) ) {
-               woo_predictive_search_widget( $ps_echo );
-             } else {
-               get_template_part( 'includes/navbar-search' );
-             }
-            ?>
+            <?php get_template_part( 'includes/navbar-search' ); ?>
 
           <?php else : ?>
 
@@ -53,10 +46,10 @@
   replacement parts for your Hill-Rom, Stryker, Hausted, MidMark, Span America beds, stretchers, wheelchairs &amp; more!<br />
   <div style="margin-top: 10px;" id="mattresshomeimgwrap">
     <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="<?php echo site_url(); ?>/wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a>
-    <a href="<?php echo site_url(); ?>/?s=STRYKER&post_type=product"><img style="margin:0 0.8em;" src="<?php echo site_url(); ?>/wp-content/imgs/strykerlogo.png" alt=" " /></a>
-    <a href="<?php echo site_url(); ?>/?s=amico&post_type=product"><img style="margin: 0 0.8em 0.3em; max-height: 50px; height:50px;" src="<?php echo site_url(); ?>/wp-content/imgs/amico_logo.png" alt=" " /></a>
-    <a href="<?php echo site_url(); ?>/?s=hausted&post_type=product"><img style="margin:1.2em 0.8em 0;" src="<?php echo site_url(); ?>/wp-content/imgs/haustedlogo.png" alt=" " /></a>
-    <a href="<?php echo site_url(); ?>/?s=midmark&post_type=product"><img style="margin:0 0.8em;" src="<?php echo site_url(); ?>/wp-content/imgs/midmarklogo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/?s=STRYKER&amp;post_type=product"><img style="margin:0 0.8em;" src="<?php echo site_url(); ?>/wp-content/imgs/strykerlogo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/?s=amico&amp;post_type=product"><img style="margin: 0 0.8em 0.3em; max-height: 50px; height:50px;" src="<?php echo site_url(); ?>/wp-content/imgs/amico_logo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/?s=hausted&amp;post_type=product"><img style="margin:1.2em 0.8em 0;" src="<?php echo site_url(); ?>/wp-content/imgs/haustedlogo.png" alt=" " /></a>
+    <a href="<?php echo site_url(); ?>/?s=midmark&amp;post_type=product"><img style="margin:0 0.8em;" src="<?php echo site_url(); ?>/wp-content/imgs/midmarklogo.png" alt=" " /></a>
   </div>
 </div>
 <div class="container" style="margin-bottom:2%;">

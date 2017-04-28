@@ -774,7 +774,7 @@ tr.cart-discount td {text-align:right !important;}
 #left-col-first-name{clear:both;}
 .woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; }
 
-.related .customer_fav_img{display:none;}
+.related #customer_fav_img{display:none !important;}
 /* END */
 
 /* LOST PASSWORD */

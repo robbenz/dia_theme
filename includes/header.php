@@ -50,15 +50,8 @@
 	</div>
 
 		<div id="form-row"class="row">
-				<?php
-				$ps_echo = true ;
-				if ( function_exists( 'woo_predictive_search_widget' ) ) :
-					echo '<div id="form-row-c1" class="form-row-child">';
-					woo_predictive_search_widget( $ps_echo );
-				 else : ?>
-					<div>
-						<?php get_template_part('includes/navbar-search'); ?>
-					<?php	endif ; ?>
+			<div>
+				<?php get_template_part('includes/navbar-search'); ?>
 			</div>
 
 			<div id="mm-right-contact">
@@ -106,7 +99,6 @@
 				<div class="navbar-header">
 
 					<?php
-
 					$benzmenu  = 'benz-menu';
 					wp_nav_menu( array(
 						'theme_location' => 'home',
@@ -121,23 +113,12 @@
 						'walker'          => new BENZ_Walker_Nav_Menu_EQP
 					));
 
-					$ps_echo = true ;
-					if ( function_exists( 'woo_predictive_search_widget' ) ) {
-						wp_nav_menu( array(
-							'theme_location'  => 'parts-search',
-							'items_wrap'      => $benzitems,
-							'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
-							'walker'          => new BENZ_Walker_Nav_Menu_PS
-						));
-
-					} else {
-						wp_nav_menu( array(
-							'theme_location'  => 'parts-search',
-							'items_wrap'      => $benzitems,
-							'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
-							'walker'          => new BENZ_Walker_Nav_Menu_NEWSEARCH
-						));
-					}
+					wp_nav_menu( array(
+						'theme_location'  => 'parts-search',
+						'items_wrap'      => $benzitems,
+						'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
+						'walker'          => new BENZ_Walker_Nav_Menu_NEWSEARCH
+					));
 
 					wp_nav_menu( array(
 						'theme_location'  => 'repirstmp',

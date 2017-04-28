@@ -14,14 +14,7 @@ SEARCH <br />
 BIOMEDICAL <br />
 PARTS</span>
 
-<?php
-$ps_echo = true ;
-if ( function_exists( 'woo_predictive_search_widget' ) ) {
-   woo_predictive_search_widget( $ps_echo );
- } else {
-     get_template_part( 'includes/navbar-search' );
- }
-?>
+<?php get_template_part( 'includes/navbar-search' ); ?>
 
 </div>
 

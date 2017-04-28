@@ -183,36 +183,8 @@ class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
     }
 
 }
-// -- PART SEARCH
-
-class BENZ_Walker_Nav_Menu_PS extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu">';
-
-    }
-
-function end_lvl(&$output, $depth = 0, $args = Array()) {
-    if( 0 == $depth ) {
-      //$ps_echo = true;
-        $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a part request and we’ll email you a quote!</div>';
-        $output .= woo_predictive_search_widget( $ps_echo );
-        $output .= '<div id="mattresshomeimgwrap"><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/product-category/hill-rom-parts-online/">';
-        $output .= '<img style="margin:0 0.8em;" src="https://diamedicalusa.com//wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/?s=STRYKER&amp;post_type=product">';
-        $output .= '<img style="margin:7px 0.8em 0;" src="https://diamedicalusa.com//wp-content/imgs/strykerlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/?s=amico&amp;post_type=product">';
-        $output .= '<img style="margin: -6px 0.8em 0.6em; max-height: 50px; height:50px;" src="https://diamedicalusa.com//wp-content/imgs/amico_logo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/?s=hausted&amp;post_type=product">';
-        $output .= '<img style="margin:1.0em 0.8em 0 -17px;" src="https://diamedicalusa.com//wp-content/imgs/haustedlogo.png" alt=" " /></a><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/?s=midmark/&amp;post_type=product">';
-        $output .= '<img style="margin:7px 0.8em 0 -10px;" src="https://diamedicalusa.com//wp-content/imgs/midmarklogo.png" alt=" " /></a></div><div class="arrow-down"></div>';
-    }
-    $indent = str_repeat( "\t", $depth );
-    $output .= "{$indent}</ul>\n";
-
-}
-}
-
 
 // -- NEW SEARCH  PART SEARCH
-//$output .= get_template_part( 'includes/navbar-search');BENZ_Walker_Nav_Menu_NEWSEARCH
-
 class BENZ_Walker_Nav_Menu_NEWSEARCH extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
         $output .= '<ul class="sub-menu">';
@@ -238,7 +210,6 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
 
 }
 }
-
 
 // -- Manufacturers
     class BENZ_Walker_Nav_Menu_MFT extends Walker_Nav_Menu {
