@@ -1008,7 +1008,7 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .search-results #sidebar #searchsubmit,
 .page-id-86 #sidebar #searchsubmit,
 .search-no-results #sidebar #searchsubmit {font-size: 14px; padding: 11px 12px;  }
-
+.search-results .ems-approved-img {display:none;}
 
 #hospital_content_wrap #searchform .form-control::-webkit-input-placeholder,
 .lft-img-home #searchform .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
