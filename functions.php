@@ -221,8 +221,12 @@ class BENZ_Walker_Nav_Menu_NEWSEARCH extends Walker_Nav_Menu {
 
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
-        $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a request and we’ll email you a quote!</div>';
-        $output .= file_get_contents(locate_template("includes/navbar-search.php"));
+      $searchBarNeeds = file_get_contents("wp-content/themes/diamedical/includes/navbar-search.php");
+    //  $searchBarNeeds = require(locate_template("includes/navbar-search.php"));
+
+      $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a request and we’ll email you a quote!</div>';
+        $output .=  $searchBarNeeds;
+      //  $output .= file_get_contents(locate_template("includes/navbar-search.php"));
         $output .= '<div id="mattresshomeimgwrap"><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://diamedicalusa.com//wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a>';
         $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=STRYKER&amp;post_type=product"><img style="margin:7px 0.8em 0;" src="https://diamedicalusa.com//wp-content/imgs/strykerlogo.png" alt=" " /></a>';
         $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=amico&amp;post_type=product"><img style="margin: -6px 0.8em 0.6em; max-height: 50px; height:50px;" src="https://diamedicalusa.com//wp-content/imgs/amico_logo.png" alt=" " /></a>';

@@ -1,25 +1,14 @@
-<?php
-/*
-Navbar search form
-==================
-echo get_search_query();
-If you don't want a search form in your navbar, then delete the link to this PHP page from within the navbar in header.php.
-
-Then you can insert the Search Widget into the sidebar.
-*/
-?>
-
 <form class="navbar-form navbar-left"
 			role="search"
 			method="get"
-			action="<?php echo esc_url( home_url( '/' ) ); ?>"
+			action="https://diamedicalusa.com/"
 			id="searchform">
 
 	<div class="form-group">
 
-		<input class="search-field form-control"
+		<input class="search-field form-control search_input"
 					 type="text search"
-					 value="<?php echo get_search_query() ?>"
+					 value=""
 					 placeholder=""
 					 name="s"
 					 id="s"/>
