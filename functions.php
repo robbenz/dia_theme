@@ -1028,62 +1028,72 @@ function autoadd_rel_prettyPhoto($content) {
 add_filter("the_content","autoadd_rel_prettyPhoto");
 /* END */
 
-
 add_filter('woocommerce_registration_redirect', 'dia_wc_registration_redirect');
 function dia_wc_registration_redirect( $redirect_to ) {
      $redirect_to = '/medical-equipment';
      return $redirect_to;
 }
 
-
-
-
-
-
-
-
-
-/*** ADD CUSTOM META BOX ***/
+/*** ADD CUSTOM META BOX for Search Priority ***/
 function add_dia_search_meta_box() {
     add_meta_box("dia-search-pri-meta-box", "DiaMedical USA Search Priority", "dia_search_meta_box_markup", "product", "normal", "high", null);
 }
 add_action("add_meta_boxes", "add_dia_search_meta_box");
-/*** END ***/
 
-/*** ADD CUSTOM META BOX MARKUP FOR ADMIN ***/
 function dia_search_meta_box_markup() {
-  wp_nonce_field(basename(__FILE__), "meta-box-nonce");
-  	global $post;
-    $dia_search_priority = get_post_meta( $post->ID, '_dia_search_priority_number', true );
-    ?>
+  global $post;
+  wp_nonce_field(basename(__FILE__), "dia-search-priority-meta-box-nonce");
 
-    <label for="_dia_search_priority_number"><?php echo __( 'Enter Search Priority', 'woocommerce' ); ?></label>
-    <input name="_dia_search_priority_number" class="" type="number" name=" " value="<?php echo $dia_search_priority; ?>" step="any" min="0" max="50" style="width: 150px;" />
-    <?php
-  } // dia_search_meta_box_markup
-/*** END ***/
+  woocommerce_wp_text_input(
+    array(
+  		'id'                => 'dia_search_priority',
+  		'label'             => __( 'DiaMedical Search Product Priority<br />', 'woocommerce' ),
+  		'placeholder'       => '',
+      'style'             => 'width: 100px;',
+  		'description'       => __( 'Enter the Priority number here. 1-50. 50 is top priority this will show first', 'woocommerce' ),
+  		'type'              => 'number',
+  		'custom_attributes' => array(
+  				'step' 	=> 'any',
+  				'min'	  => '1',
+          'max'   => '50'
+        )
+        )
+      );
+    }
 
 /*** SAVE THAT SHIT ***/
 function save_dia_search_meta_box($post_id, $post, $update) {
-    if (!isset($_POST["meta-box-nonce"]) || !wp_verify_nonce($_POST["meta-box-nonce"], basename(__FILE__)))
-        return $post_id;
+  if (!isset($_POST["dia-search-priority-meta-box-nonce"]) || !wp_verify_nonce($_POST["dia-search-priority-meta-box-nonce"], basename(__FILE__)))
+      return $post_id;
 
-    if(!current_user_can("edit_post", $post_id))
-        return $post_id;
+  if(!current_user_can("edit_post", $post_id))
+      return $post_id;
 
-    if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
-        return $post_id;
+  if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+      return $post_id;
 
-    $slug = "product";
-    if($slug != $post->post_type)
-        return $post_id;
+  $slug = "product";
+  if($slug != $post->post_type)
+      return $post_id;
 
-    // Search number
-    $dia_search_number_save = "";
-    if(isset($_POST["_dia_search_priority_number"])) {
-      $dia_search_number_save = $_POST["_dia_search_priority_number"];
-    }
-    update_post_meta($post_id, "_dia_search_priority_number", $dia_search_number_save);
-  } // end save_custom_meta_box
-
+  $woo_dia_search_priority = $_POST['dia_search_priority'];
+  if( !empty( $woo_dia_search_priority ) ) {
+    update_post_meta( $post_id, 'dia_search_priority', esc_attr( $woo_dia_search_priority ) );
+  } else {
+    update_post_meta( $post_id, 'dia_search_priority', esc_attr( $woo_dia_search_priority ) );
+  }
+}
 add_action("save_post", "save_dia_search_meta_box", 10, 3);
+
+/*** Re sort based on custom priority field ***/
+function SearchFilter($query) {
+    if ($query->is_main_query() && $query->is_search()) {
+        $query->set('post_type', 'product');
+        $query->set('meta_key', 'dia_search_priority' );
+        $query->set('orderby', 'meta_value_num' );
+        $query->set('order', 'DESC' );
+    }
+    return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
+/*** End new search funtion ***/

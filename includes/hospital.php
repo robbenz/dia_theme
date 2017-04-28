@@ -37,9 +37,9 @@ onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/M
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Medical-Supplies.png';"/></a></div>
 
 <div class="ns_home_flt-lft" id="simlabbuttonhome"><a href="<?php echo site_url(); ?>/product-category/refrigerators-freezers/">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers.png" alt="sim labs"
-onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers-Select.png';"
-onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refridgerators-Freezers.png';"/></a></div>
+<img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refrigerators-Freezers.png" alt="Refrigerators-Freezers"
+onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refrigerators-Freezers-Select.png';"
+onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Refrigerators-Freezers.png';"/></a></div>
 
 <div class="ns_home_flt-lft" id="headwallbuttonhome"><a href="<?php echo site_url(); ?>/results">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/hospital-home/Bio-Med-Imaging-Parts.png" alt="headwalls"

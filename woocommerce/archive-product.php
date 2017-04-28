@@ -40,8 +40,8 @@ if ( is_search() ):  ?>
 					<?php get_template_part('includes/loops/content', 'search'); ?>
 	      </div><!-- /#content -->
 	    </div>
-</div>
-</div>
+		</div>
+	</div>
 
 <?php
 

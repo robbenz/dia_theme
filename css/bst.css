@@ -773,6 +773,8 @@ tr.cart-discount td {text-align:right !important;}
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: none !important; border-radius: 0px !important; margin:0 !important; padding: 0px !important; text-align: left; }
 #left-col-first-name{clear:both;}
 .woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; }
+
+.related .customer_fav_img{display:none;}
 /* END */
 
 /* LOST PASSWORD */
