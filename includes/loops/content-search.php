@@ -45,11 +45,26 @@ if(have_posts()): while(have_posts()): the_post();
     height:auto;
     min-height:225px;
     border-radius: 8px;"
-    role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
+    role="article" id="post_<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header>
-            <h4><a href="<?php the_permalink(); ?>"><span style="color:#78be20;">Part Number: </span><span style="color:#fff;"><?php the_title()?></span></a></h4>
-        </header>
+          <h4>
+          <?php if( current_user_can('shop_manager') || current_user_can('administrator') ) : ?>
+            <a href="<?php echo site_url(); ?>/wp-admin/post.php?post=<?php echo $id; ?>&amp;action=edit">
+          <?php else : ?>
+            <a href="<?php the_permalink(); ?>">
+          <?php endif ;?>
+          <span style="color:#78be20;">
+          <?php if ( function_exists('is_dia_part') && is_dia_part() ) : ?>
+          Part Number:
+        <?php else : ?>
+          Product Name:
+        <?php endif ; ?>
+        </span>
+          <span style="color:#fff;"><?php the_title(); ?></span>
+        </a>
+      </h4>
+    </header>
 
         <div class="images" style="float:left; width:15%; margin-right:1.9%; ">
 
@@ -196,7 +211,7 @@ if(have_posts()): while(have_posts()): the_post();
               if ( $_x <= 7 ){
                 if ( strlen($value) > 0 ) {
                   echo '<tr><td>'.$key.'</td><td>';
-                  if ( intval($value) > 0 ) {
+                  if ( $_x == 3 || $_x == 5 ) {
                     echo '<span style="color:#78be20;">$'.number_format($value, 2).'</span>';
                   } else {
                     echo $value;
@@ -208,7 +223,7 @@ if(have_posts()): while(have_posts()): the_post();
               } else {   // 2nd vendor -- hide entire row if empty -- no reason for n/a
                 if ( strlen($value) > 0 ) {
                   echo '<tr><td>'.$key.'</td><td>';
-                  if ( intval($value) > 0 ) {
+                  if ( $_x == 9 ) {
                     echo '<span style="color:#78be20;">$'.number_format($value, 2).'</span>';
                   } else {
                     echo $value;
