@@ -184,6 +184,7 @@ if(have_posts()): while(have_posts()): the_post();
               "MFT List Price: "         => $_list_price,
               "Vendor 1: "               => $_supplier_1,
               "Cost: "                   => $_cost_1,
+              "Price Verified: "         => $_price_check_1,
               "Vendor 1 Part Number: "   => $_vendor_pn_1,
               "2nd Vendor: "             => $_supplier_2,
               "2nd Cost: "               => $_cost_2,
@@ -192,7 +193,7 @@ if(have_posts()): while(have_posts()): the_post();
             $_x=1;
 
             foreach ( $dia_specs_coolshit as $key => $value ) {
-              if ( $_x <= 6 ){
+              if ( $_x <= 7 ){
                 if ( strlen($value) > 0 ) {
                   echo '<tr><td>'.$key.'</td><td>';
                   if ( intval($value) > 0 ) {
