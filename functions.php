@@ -1063,6 +1063,7 @@ add_action("save_post", "save_dia_search_meta_box", 10, 3);
 /*** Re sort based on custom priority field ***/
 function SearchFilter($query) {
     if ($query->is_main_query() && $query->is_search()) {
+        $query->set('posts_per_page', '100');
         $query->set('post_type', 'product');
         $query->set('meta_key', 'dia_search_priority' );
         $query->set('orderby', 'meta_value_num' );
