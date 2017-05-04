@@ -165,7 +165,7 @@ if(have_posts()): while(have_posts()): the_post();
   </div>
 
   <?php if( current_user_can('shop_manager') || current_user_can('administrator') ) : ?>
-    <a style="color:#fff;" href="<?php echo site_url(); ?>/wp-admin/post.php?post=<?php echo $id; ?>&amp;action=edit">edit</a>
+    <a style="color:#fff;clear: both;float: left;" href="<?php echo site_url(); ?>/wp-admin/post.php?post=<?php echo $id; ?>&amp;action=edit">edit</a>
   <?php endif ;?>
 
     <div id="search_results_specs_wrap" style="padding-top:8px; clear:both;width:100%; height:auto;">

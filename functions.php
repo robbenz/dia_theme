@@ -1110,7 +1110,7 @@ function html_red_flag_code() {
 	echo '<form id="red_flag_protocol" action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
 	echo '<p><input id="red_flag_protocol_submitted" type="submit" name="red-flag-protocol-submitted';
   echo $product->id;
-  echo '" value="Alert Jeff" style=""></p>';
+  echo '" value="Alert Jeff" style="background-color: #d6001c;border: none;font-weight: 600;margin-top:5px;"></p>';
 	echo '</form>';
 }
 // make sure the email will allow for html -- not just plain text
@@ -1129,10 +1129,11 @@ function deliver_red_flag_mail() {
     $_name = esc_html( $_user->user_firstname );
     $_email = esc_html( $_user->user_email );
 
-    $subject = "Price Verification [ACTION REQUIRED] [URGENT]";
+    $subject = "DiaMedical Website Price Conflict [Urgent]";
 
     $message = '<p>Hey Jeff, This is a <span style="font-weight:bold;color:red">price conflict</span> alert!</p>';
-    $message .='<p>The Product is question is ' . $product->get_title() . '</p>';
+    $message .='<p>The product is question is <strong>' . $product->get_title() . '</strong></p>';
+    $message .='<p>The current online price is <strong>' . $product->get_price() . '</strong></p>';
     $message .='<p><a href="https://diamedicalusa.com/?s=' . $product->get_sku() . '&amp;post_type=product">Here is a link to the Search Results Page</a></p>';
     $message .='<p><a href="https://diamedicalusa.com/wp-admin/post.php?post=' . $product->id . '&amp;action=edit">Here is a link to the Edit Product Page</a></p>';
     $message .='<p>Please address immediately</p>';
@@ -1140,9 +1141,8 @@ function deliver_red_flag_mail() {
 
 		$to = 'jambrose@diamedicalusa.com';
 
-		$headers[] = "From: $_name <$_email>" . "\r\n";
+		$headers[] = "From: $_name <orders@diamedicalusa.com>" . "\r\n";
     $headers[] = "Bcc: Rob Benz <rbenz@diamedicalusa.com>" . "\r\n";
-    $headers[] = "Bcc: Gillian Peralta <gperalta@diamedicalusa.com>" . "\r\n";
 
 		// If everything worked -- display a success message
 		if ( wp_mail( $to, $subject, $message, $headers ) ) {
