@@ -1073,3 +1073,29 @@ function SearchFilter($query) {
 }
 add_filter('pre_get_posts','SearchFilter');
 /*** End new search funtion ***/
+
+// Add Custom BACK TO SEARCH link to admin bar
+function back_search_toolbar_link($wp_admin_bar) {
+  if ( is_admin() ) {
+    if( current_user_can('shop_manager') || current_user_can('administrator') ) {
+      $screen = get_current_screen();
+      if ( $screen->id == 'product' ) {
+        global $post;
+        $product_sku = get_post_meta( $post->ID, '_sku', true );
+        $args = array(
+          'id' => 'back_to_search',
+          'post_type' => 'product',
+          'title' => 'Back To Search',
+          'href' => 'https://diamedicalusa.com/?s='.$product_sku.'&amp;post_type=product',
+          'meta' => array(
+            'class' => 'back-to-search',
+            'title' => 'Go Back To The Search Results For This Product'
+          )
+        );
+        $wp_admin_bar -> add_node($args);
+      }
+    }
+  }
+}
+add_action('admin_bar_menu', 'back_search_toolbar_link', 999);
+/* END */

@@ -48,13 +48,7 @@ if(have_posts()): while(have_posts()): the_post();
     role="article" id="post_<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header>
-          <h4>
-          <?php if( current_user_can('shop_manager') || current_user_can('administrator') ) : ?>
-            <a href="<?php echo site_url(); ?>/wp-admin/post.php?post=<?php echo $id; ?>&amp;action=edit">
-          <?php else : ?>
-            <a href="<?php the_permalink(); ?>">
-          <?php endif ;?>
-          <span style="color:#78be20;">
+          <h4><a href="<?php the_permalink(); ?>"><span style="color:#78be20;">
           <?php if ( function_exists('is_dia_part') && is_dia_part() ) : ?>
           Part Number:
         <?php else : ?>
@@ -64,6 +58,7 @@ if(have_posts()): while(have_posts()): the_post();
           <span style="color:#fff;"><?php the_title(); ?></span>
         </a>
       </h4>
+
     </header>
 
         <div class="images" style="float:left; width:15%; margin-right:1.9%; ">
@@ -168,7 +163,9 @@ if(have_posts()): while(have_posts()): the_post();
     <?php endif ; ?>
 
   </div>
-
+  <?php if( current_user_can('shop_manager') || current_user_can('administrator') ) : ?>
+    <a style="color:#fff;" href="<?php echo site_url(); ?>/wp-admin/post.php?post=<?php echo $id; ?>&amp;action=edit">edit</a>
+  <?php endif ;?>
     <div id="search_results_specs_wrap" style="padding-top:8px; clear:both;width:100%; height:auto;">
 
     <?php  if( array_intersect($allowed_roles, $current_user->roles ) ) : ?>
