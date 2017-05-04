@@ -163,9 +163,11 @@ if(have_posts()): while(have_posts()): the_post();
     <?php endif ; ?>
 
   </div>
+
   <?php if( current_user_can('shop_manager') || current_user_can('administrator') ) : ?>
     <a style="color:#fff;" href="<?php echo site_url(); ?>/wp-admin/post.php?post=<?php echo $id; ?>&amp;action=edit">edit</a>
   <?php endif ;?>
+
     <div id="search_results_specs_wrap" style="padding-top:8px; clear:both;width:100%; height:auto;">
 
     <?php  if( array_intersect($allowed_roles, $current_user->roles ) ) : ?>
@@ -234,6 +236,7 @@ if(have_posts()): while(have_posts()): the_post();
             }
             ?>
           </table>
+          <?php echo do_shortcode('[RED_FLAG]'); ?>
         </div>
 
       <?php endif ; ?>
@@ -257,6 +260,5 @@ if(have_posts()): while(have_posts()): the_post();
     <p style="padding-left:2em;"><strong>Email:</strong> sales@diamedicalusa.com</p>
     <p></p>
   </div>
-
 
 <?php endif; ?>

@@ -1083,11 +1083,10 @@ function back_search_toolbar_link($wp_admin_bar) {
         global $post;
         $product_sku = get_post_meta( $post->ID, '_sku', true );
         $args = array(
-          'id' => 'back_to_search',
-          'post_type' => 'product',
+          'id'    => 'back_to_search',
           'title' => 'Back To Search',
-          'href' => 'https://diamedicalusa.com/?s='.$product_sku.'&amp;post_type=product',
-          'meta' => array(
+          'href'  => 'https://diamedicalusa.com/?s='.$product_sku.'&amp;post_type=product',
+          'meta'  => array(
             'class' => 'back-to-search',
             'title' => 'Go Back To The Search Results For This Product'
           )
@@ -1099,3 +1098,71 @@ function back_search_toolbar_link($wp_admin_bar) {
 }
 add_action('admin_bar_menu', 'back_search_toolbar_link', 999);
 /* END */
+
+
+
+
+
+
+// HTML for Jeff Red flag protocol
+function html_red_flag_code() {
+  global $product;
+	echo '<form id="red_flag_protocol" action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
+	echo '<p><input id="red_flag_protocol_submitted" type="submit" name="red-flag-protocol-submitted';
+  echo $product->id;
+  echo '" value="Alert Jeff" style=""></p>';
+	echo '</form>';
+}
+// make sure the email will allow for html -- not just plain text
+add_filter( 'wp_mail_content_type', 'set_html_red_flag_content_type' );
+function set_html_red_flag_content_type() {
+  return 'text/html';
+}
+
+// if the submit button is clicked, send the email
+function deliver_red_flag_mail() {
+  global $product;
+  if ( isset($_POST["red-flag-protocol-submitted$product->id"]) ) {
+    global $woocommerce, $product;
+
+    $_user = wp_get_current_user();
+    $_name = esc_html( $_user->user_firstname );
+    $_email = esc_html( $_user->user_email );
+
+    $subject = "Price Verification [ACTION REQUIRED] [URGENT]";
+
+    $message = '<p>Hey Jeff, This is a <span style="font-weight:bold;color:red">price conflict</span> alert!</p>';
+    $message .='<p>The Product is question is ' . $product->get_title() . '</p>';
+    $message .='<p><a href="https://diamedicalusa.com/?s=' . $product->get_sku() . '&amp;post_type=product">Here is a link to the Search Results Page</a></p>';
+    $message .='<p><a href="https://diamedicalusa.com/wp-admin/post.php?post=' . $product->id . '&amp;action=edit">Here is a link to the Edit Product Page</a></p>';
+    $message .='<p>Please address immediately</p>';
+    $message .='<p>Thanks, <br /> ' . $_name . '</p>';
+
+		$to = 'jambrose@diamedicalusa.com';
+
+		$headers[] = "From: $_name <$_email>" . "\r\n";
+    $headers[] = "Bcc: Rob Benz <rbenz@diamedicalusa.com>" . "\r\n";
+    $headers[] = "Bcc: Gillian Peralta <gperalta@diamedicalusa.com>" . "\r\n";
+
+		// If everything worked -- display a success message
+		if ( wp_mail( $to, $subject, $message, $headers ) ) {
+			echo '<p>sent</p>';
+		} else {
+			echo 'An unexpected error occurred';
+		}
+    // reset wp_mail_content_type
+    remove_filter( 'wp_mail_content_type', 'set_html_red_flag_content_type' );
+	}
+
+} // end function
+
+function red_flag_shortcode() {
+	ob_start();
+	deliver_red_flag_mail();
+	html_red_flag_code();
+
+	return ob_get_clean();
+}
+
+add_shortcode( 'RED_FLAG', 'red_flag_shortcode' );
+?>
