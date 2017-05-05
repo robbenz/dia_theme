@@ -1099,11 +1099,6 @@ function back_search_toolbar_link($wp_admin_bar) {
 add_action('admin_bar_menu', 'back_search_toolbar_link', 999);
 /* END */
 
-
-
-
-
-
 // HTML for Jeff Red flag protocol
 function html_red_flag_code() {
   global $product;
