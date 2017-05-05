@@ -67,12 +67,14 @@ if ( $products->have_posts() ) : ?>
 			<div class="hill-rom-parts-cell"><h4>Condition</h4></div>
 		</div>
 
-		<?php	while ( $products->have_posts() ) : $products->the_post(); ?>
+		<?php	while ( $products->have_posts() ) : $products->the_post();
+		$_sku = get_post_meta( get_the_ID(), '_sku', true );
+		?>
 
-			<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/?s=<?php echo $product->get_sku(); ?>&amp;post_type=product">
+			<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/?s=<?php echo $_sku; ?>&amp;post_type=product">
 				<div class="hill-rom-parts-cell"><?php echo $product->get_image(array(150,150)); ?></div>
 				<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
-				<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), '_sku', true ); ?></div>
+				<div class="hill-rom-parts-cell"><?php echo $_sku; ?></div>
 				<div class="hill-rom-parts-cell"><?php echo the_content(); ?></div>
 				<div class="hill-rom-parts-cell"><?php echo '$' . get_post_meta( get_the_ID(), '_price', true ); ?></div>
 				<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), 'benz_condition_select', true ); ?></div>
