@@ -56,7 +56,7 @@ if ( $products->have_posts() ) : ?>
 		$single_cat = array_shift( $product_cats );
 	?>
 
-	<h2>Shop More <?php echo $product->get_categories();?> Parts</h2><hr>
+	<h2>Shop More <?php echo $product->get_categories();?></h2><hr>
 	<div id="hill-rom-parts-table">
 		<div class="hill-rom-parts-row">
 			<div class="hill-rom-parts-cell"><h4></h4></div>
