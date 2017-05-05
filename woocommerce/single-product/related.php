@@ -72,9 +72,9 @@ if ( $products->have_posts() ) : ?>
 			<a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/?s=<?php echo $product->get_sku(); ?>&amp;post_type=product">
 				<div class="hill-rom-parts-cell"><?php echo $product->get_image(array(150,150)); ?></div>
 				<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
-				<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>
+				<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), '_sku', true ); ?></div>
 				<div class="hill-rom-parts-cell"><?php echo the_content(); ?></div>
-				<div class="hill-rom-parts-cell"><?php echo '$' . $product->get_price(); ?></div>
+				<div class="hill-rom-parts-cell"><?php echo '$' . get_post_meta( get_the_ID(), '_price', true ); ?></div>
 				<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), 'benz_condition_select', true ); ?></div>
 			</a>
 
