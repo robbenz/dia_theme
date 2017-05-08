@@ -1,4 +1,4 @@
-<div style="text-align:center;"><img src="<?php echo site_url(); ?>/wp-content/imgs/homepage/DiscountDirectoryPage.png" alt="Discount Directory Logos" usemap="#Map3">
+<div style="text-align:center;"><img src="<?php echo site_url(); ?>/wp-content/imgs/homepage/DiscountDirectoryPage_zoll.png" alt="Discount Directory Logos" usemap="#Map3">
 
 <map name="Map3">
                   <area shape="rect" coords="52,207,192,249" href="<?php echo site_url(); ?>/?s=Hill-Rom&amp;post_type=product">
@@ -9,7 +9,7 @@
                   <area shape="rect" coords="46,282,206,336" href="<?php echo site_url(); ?>/?s=Hausted&amp;post_type=product">
                   <area shape="rect" coords="239,289,401,331" href="<?php echo site_url(); ?>/?s=Joerns&amp;post_type=product">
                   <area shape="rect" coords="469,277,558,342" href="<?php echo site_url(); ?>/?s=Medline&amp;post_type=product">
-                  <area shape="rect" coords="632,288,780,331" href="<?php echo site_url(); ?>/?s=Posey&amp;post_type=product">
+                  <area shape="rect" coords="632,288,780,331" href="<?php echo site_url(); ?>/?s=Zoll&amp;post_type=product">
                   <area shape="rect" coords="816,293,980,327" href="<?php echo site_url(); ?>/?s=Span America&amp;post_type=product">
                   <area shape="rect" coords="40,365,178,406" href="<?php echo site_url(); ?>/?s=Lumex&amp;post_type=product">
                   <area shape="rect" coords="230,371,383,401" href="<?php echo site_url(); ?>/?s=Airpal&amp;post_type=product">
