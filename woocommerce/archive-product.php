@@ -76,7 +76,7 @@ global $product, $post;
 	<div class="hill-rom-parts-cell"><?php echo $product->get_image(array(150,150)); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>
-	<div class="hill-rom-parts-cell"><?php echo the_content(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo wp_trim_words( get_the_content(), 16 ); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $product->get_price_html(); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), 'benz_condition_select', true ); ?></div>
 </a>
