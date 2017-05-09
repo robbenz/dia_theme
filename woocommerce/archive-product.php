@@ -129,9 +129,10 @@ if ( have_posts() ) :
 
 	endif;
 
-
 	woocommerce_product_loop_start();
-   if (! is_user_logged_in() ) { echo '<div style="width:100%; height:30px;"></div>'; }
+
+	 if (! is_user_logged_in() ) { echo '<div style="width:100%; height:30px;"></div>'; }
+
 	woocommerce_product_subcategories();
 
 	while ( have_posts() ) : the_post();
