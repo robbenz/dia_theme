@@ -310,7 +310,6 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .products li h3{ color: #00426a !important; font-size: 17px !important; font-weight: 600; text-align: center; text-transform: uppercase; }
 .products .r-a-qbutton-price { display:none;}
 div.thumbnails{height:100px;}
-div.thumbnails img{width:100px !important; max-width:100px !important; }
 .maint-img {float:left; margin-right:0.5em; width:84px}
 .shipping-img {float:left; margin-right:0.5em;}
 .maint-text{padding-top:3px; margin-bottom: 1em; font-size:0.87em;}
@@ -909,7 +908,7 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 /* END */
 
 .woocommerce ul.products li.product .onsale {padding: .05em 0.3em !important; z-index:1; top: 10px; right:-240px !important; }
-#content .thumbnails a.zoom { width: 27.75% !important; margin: 0.3% 0 !important }
+#content .thumbnails a.zoom { width: 23% !important; margin: 0.3% 0 !important }
 
 /* Career Page */
 .career-submit{width:100%;}
@@ -1045,6 +1044,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #masthead #searchform .form-group {display:inline-block;}
   .search-results #sidebar,
   .page-id-86 #sidebar {display:none;}
+  div.thumbnails img{width:90px !important; max-width:90px !important; }
 }
 
 @media (min-width: 320px) and (max-width: 344px){
@@ -1440,5 +1440,6 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   .search-results #sidebar #searchform #s,
   .page-id-86 #sidebar #searchform #s,
   .search-no-results #sidebar #searchform #s {width:224px; }
+  div.thumbnails img{width:100px !important; max-width:100px !important; }
 
 }
