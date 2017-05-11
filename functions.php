@@ -327,8 +327,6 @@ add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 function products_per_page_category( $count ) {
   if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() || is_search() ) :
     return 2700;
-  elseif( is_product_category( '9350') ) :  // Bariatric Care
-    return 27;
   elseif (isset($_GET['view']) && $_GET['view'] === 'all') :  // View all page
     return 9999;
   else :
