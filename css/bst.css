@@ -275,7 +275,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 .woocommerce ul.products li.product .price {color:#d6001c !important; font-size:1.2345em; text-align: center;}
 .variations_form .variations td.label { display:none ; }
 #product-54177 .variations_form .variations td.label,
-#product-77991 .variations_form .variations td.label { display:block; color:#000;text-align: left; padding-right: 0; }
+#product-77991 .variations_form .variations td.label {vertical-align: text-bottom; display:block; color:#000;text-align: left; padding-right: 0; }
 .woocommerce-result-count, mark.count { display:none;}
 .emodal a.emodal-close{color:#fff !important;}
 #viewprice-detail{position:relative; top:10px; left:0px;margin-bottom: 36px; }
