@@ -1158,4 +1158,12 @@ function red_flag_shortcode() {
 }
 
 add_shortcode( 'RED_FLAG', 'red_flag_shortcode' );
-?>
+/*** END ***/
+
+
+add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
+function display_product_title_as_link( $item_name, $item ) {
+  $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
+  $link = get_permalink( $_product->id );
+  return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
+}
