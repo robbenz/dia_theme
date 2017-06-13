@@ -1135,6 +1135,72 @@ add_filter( 'pre_get_posts', 'me_search_query');
 */
 
 
+
+
+/**
+ * Add sku, author, publisher and format to product search
+ */
+
+// hook into wp pre_get_posts
+add_action('pre_get_posts', 'jc_woo_search_pre_get_posts');
+
+/**
+ * Add custom join and where statements to product search query
+ * @param  mixed $q query object
+ * @return void
+ */
+function jc_woo_search_pre_get_posts($q){
+
+    if ( is_search() ) {
+        add_filter( 'posts_join', 'jc_search_post_join' );
+        add_filter( 'posts_where', 'jc_search_post_excerpt' );
+    }
+}
+
+/**
+ * Add Custom Join Code for wp_mostmeta table
+ * @param  string $join
+ * @return string
+ */
+function jc_search_post_join($join = ''){
+
+    global $wp_the_query;
+
+    // escape if not woocommerce searcg query
+    if ( empty( $wp_the_query->query_vars['wc_query'] ) || empty( $wp_the_query->query_vars['s'] ) )
+            return $join;
+
+    $join .= "INNER JOIN wp_postmeta AS jcmt1 ON (wp_posts.ID = jcmt1.post_id)";
+    return $join;
+}
+
+/**
+ * Add custom where statement to product search query
+ * @param  string $where
+ * @return string
+ */
+function jc_search_post_excerpt($where = ''){
+
+    global $wp_the_query;
+
+    // escape if not woocommerce search query
+    if ( empty( $wp_the_query->query_vars['wc_query'] ) || empty( $wp_the_query->query_vars['s'] ) )
+            return $where;
+
+    $where = preg_replace("/post_title LIKE ('%[^%]+%')/", "post_title LIKE $1)
+                OR (jcmt1.meta_key = '_sku' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1)
+                OR  (jcmt1.meta_key = 'dia_search_extra_terms' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1)
+                OR  (jcmt1.meta_key = 'dia_product_mft_part_number' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1)
+                OR  (jcmt1.meta_key = 'dia_product_vendor_pn_1' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1 ", $where);
+
+    return $where;
+}
+
+
+
+
+
+
 // Add Custom BACK TO SEARCH link to admin bar
 function back_search_toolbar_link($wp_admin_bar) {
   if ( is_admin() ) {
