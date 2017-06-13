@@ -1009,7 +1009,7 @@ function dia_wc_registration_redirect( $redirect_to ) {
 
 /*** ADD CUSTOM META BOX for Search Priority ***/
 function add_dia_search_meta_box() {
-    add_meta_box("dia-search-pri-meta-box", "DiaMedical USA Search Priority", "dia_search_meta_box_markup", "product", "normal", "high", null);
+    add_meta_box("dia-search-pri-meta-box", "DiaMedical USA Search Priority &amp; Additional Terms", "dia_search_meta_box_markup", "product", "normal", "high", null);
 }
 add_action("add_meta_boxes", "add_dia_search_meta_box");
 
@@ -1032,7 +1032,16 @@ function dia_search_meta_box_markup() {
         )
         )
       );
-    }
+  woocommerce_wp_text_input(
+        array(
+          'id'           => 'dia_search_extra_terms',
+          'label'       => __( '<hr>DiaMedical Search Extra Terms<br />', 'woocommerce' ),
+          'style'       => 'width: 100%;',
+          'description' => __( 'Enter the Additional Search Terms - competitor part numbers, obsolete part numbers, etc.', 'woocommerce' ),
+          'type'        => 'text'
+          )
+        );
+      }
 
 /*** SAVE THAT SHIT ***/
 function save_dia_search_meta_box($post_id, $post, $update) {
@@ -1055,6 +1064,13 @@ function save_dia_search_meta_box($post_id, $post, $update) {
   } else {
     update_post_meta( $post_id, 'dia_search_priority', esc_attr( $woo_dia_search_priority ) );
   }
+
+  $woo_dia_search_extra_shit = $_POST['dia_search_extra_terms'];
+  if( !empty( $woo_dia_search_extra_shit ) ) {
+    update_post_meta( $post_id, 'dia_search_extra_terms', esc_attr( $woo_dia_search_extra_shit ) );
+  } else {
+    update_post_meta( $post_id, 'dia_search_extra_terms', esc_attr( $woo_dia_search_extra_shit ) );
+  }
 }
 add_action("save_post", "save_dia_search_meta_box", 10, 3);
 
@@ -1067,10 +1083,40 @@ function SearchFilter($query) {
         $query->set('orderby', 'meta_value_num' );
         $query->set('order', 'DESC' );
     }
+
     return $query;
+
 }
 add_filter('pre_get_posts','SearchFilter');
 /*** End new search funtion ***/
+
+/*** Add ability to search through custom product meta ***/
+function custom_search_query( $query ) {
+  $custom_fields = array(
+    "dia_product_mft",
+    "dia_search_extra_terms",
+    "dia_product_mft_part_number",
+    "dia_product_vendor_pn_1"
+  );
+  $searchterm = $query->query_vars['s'];
+  $searchtermback = $query->query_vars['s'];
+
+// we have to remove the "s" parameter from the query, because it will prevent the posts from being found
+  $query->query_vars['s'] = "";
+  if ($searchterm != "") {
+    $meta_query = array('relation' => 'OR');
+    foreach($custom_fields as $cf) {
+      array_push($meta_query, array(
+        'key' => $cf,
+        'value' => $searchterm,
+        'compare' => 'LIKE'
+      ));
+    }
+    $query->set("meta_query", $meta_query);
+  };
+}
+add_filter( "pre_get_posts", "custom_search_query");
+/*** END ***/
 
 // Add Custom BACK TO SEARCH link to admin bar
 function back_search_toolbar_link($wp_admin_bar) {
@@ -1160,10 +1206,11 @@ function red_flag_shortcode() {
 add_shortcode( 'RED_FLAG', 'red_flag_shortcode' );
 /*** END ***/
 
-
+/*** Display Product Title at link in email ***/
 add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
 function display_product_title_as_link( $item_name, $item ) {
   $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
   $link = get_permalink( $_product->id );
   return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
 }
+/*** END ***/
