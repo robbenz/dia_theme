@@ -13,11 +13,11 @@
       <div id="content" role="main">
         <h2><?php _e('Search Results for', 'bst'); ?> &ldquo;
           <?php
-          $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-          $parts = parse_url($actual_link);
-          parse_str($parts['query'], $query);
-          echo $query['s'];
-          //the_search_query();
+    //      $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    //      $parts = parse_url($actual_link);
+    //      parse_str($parts['query'], $query);
+    //      echo $query['s'];
+          the_search_query();
           ?>&rdquo;</h2>
         <hr/>
 				<?php get_template_part('includes/loops/content', 'search'); ?>

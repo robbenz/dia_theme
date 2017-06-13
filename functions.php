@@ -1090,18 +1090,18 @@ function SearchFilter($query) {
 add_filter('pre_get_posts','SearchFilter');
 /*** End new search funtion ***/
 
-/*** Add ability to search through custom product meta ***/
+/*** Add ability to search through custom product meta **
 function custom_search_query( $query ) {
   $custom_fields = array(
     "dia_product_mft",
+    "_sku",
+    "_post_title",
     "dia_search_extra_terms",
     "dia_product_mft_part_number",
     "dia_product_vendor_pn_1"
   );
   $searchterm = $query->query_vars['s'];
-  $searchtermback = $query->query_vars['s'];
 
-// we have to remove the "s" parameter from the query, because it will prevent the posts from being found
   $query->query_vars['s'] = "";
   if ($searchterm != "") {
     $meta_query = array('relation' => 'OR');
@@ -1117,6 +1117,23 @@ function custom_search_query( $query ) {
 }
 add_filter( "pre_get_posts", "custom_search_query");
 /*** END ***/
+
+/*
+function me_search_query( $query ) {
+  if ( $query->is_search ) {
+    $meta_query_args = array(
+      array(
+        'key' => 'dia_search_extra_terms',
+        'value' => $query->query_vars['s'] = '',
+        'compare' => 'LIKE',
+      ),
+    );
+    $query->set('meta_query', $meta_query_args);
+  };
+}
+add_filter( 'pre_get_posts', 'me_search_query');
+*/
+
 
 // Add Custom BACK TO SEARCH link to admin bar
 function back_search_toolbar_link($wp_admin_bar) {

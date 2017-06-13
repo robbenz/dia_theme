@@ -32,7 +32,8 @@ $repairs_cat_pumps = array(
 if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;
-	if ( is_search() ) { ?>
+
+	/*if ( is_search() ) { ?>
 		<a href="<?php echo site_url(); ?>">Home</a> /
 		<a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> /
 <?php
@@ -40,7 +41,9 @@ if ( ! empty( $breadcrumb ) ) {
 		$parts = parse_url($actual_link);
 		parse_str($parts['query'], $query);
 		echo $query['s'];
-	} elseif (is_product_category('9363')) { // infusion pump repairs?>
+	} else */
+
+	if (is_product_category('9363')) { // infusion pump repairs?>
 		<nav class="woocommerce-breadcrumb">
 			<a href="<?php echo site_url(); ?>">Home</a> /
 			<a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">On-Site Repairs &amp; Preventive Maintenance</a> /
