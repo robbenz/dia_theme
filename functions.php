@@ -1037,7 +1037,7 @@ function dia_search_meta_box_markup() {
           'id'           => 'dia_search_extra_terms',
           'label'       => __( '<hr>DiaMedical Search Extra Terms<br />', 'woocommerce' ),
           'style'       => 'width: 100%;',
-          'description' => __( 'Enter the Additional Search Terms - competitor part numbers, obsolete part numbers, etc.', 'woocommerce' ),
+          'description' => __( 'Enter the Additional Search Terms - competitor part numbers, obsolete part numbers, etc. Seperate with a space', 'woocommerce' ),
           'type'        => 'text'
           )
         );
