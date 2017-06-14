@@ -1035,9 +1035,9 @@ function dia_search_meta_box_markup() {
   woocommerce_wp_text_input(
         array(
           'id'           => 'dia_search_extra_terms',
-          'label'       => __( '<hr>DiaMedical Search - Extra Terms &amp; keywords<br />', 'woocommerce' ),
+          'label'       => __( '<hr>DiaMedical Search - Extra Terms &amp; Keywords<br />', 'woocommerce' ),
           'style'       => 'width: 100%;',
-          'description' => __( 'Type in competitor part numbers, obsolete part numbers, etc. Seperate with a space', 'woocommerce' ),
+          'description' => __( 'Type in competitor part numbers, obsolete part numbers, etc. Seperate each keyword with a space.', 'woocommerce' ),
           'type'        => 'text'
           )
         );
@@ -1090,55 +1090,10 @@ function SearchFilter($query) {
 add_filter('pre_get_posts','SearchFilter');
 /*** End new search funtion ***/
 
-/*** Add ability to search through custom product meta **
-function custom_search_query( $query ) {
-  $custom_fields = array(
-    "dia_product_mft",
-    "_sku",
-    "_post_title",
-    "dia_search_extra_terms",
-    "dia_product_mft_part_number",
-    "dia_product_vendor_pn_1"
-  );
-  $searchterm = $query->query_vars['s'];
-
-  $query->query_vars['s'] = "";
-  if ($searchterm != "") {
-    $meta_query = array('relation' => 'OR');
-    foreach($custom_fields as $cf) {
-      array_push($meta_query, array(
-        'key' => $cf,
-        'value' => $searchterm,
-        'compare' => 'LIKE'
-      ));
-    }
-    $query->set("meta_query", $meta_query);
-  };
-}
-add_filter( "pre_get_posts", "custom_search_query");
-/*** END ***/
-
-/*
-function me_search_query( $query ) {
-  if ( $query->is_search ) {
-    $meta_query_args = array(
-      array(
-        'key' => 'dia_search_extra_terms',
-        'value' => $query->query_vars['s'] = '',
-        'compare' => 'LIKE',
-      ),
-    );
-    $query->set('meta_query', $meta_query_args);
-  };
-}
-add_filter( 'pre_get_posts', 'me_search_query');
-*/
-
-
 
 
 /**
- * Add sku, author, publisher and format to product search
+ * Add sku, others to searchables
  */
 
 // hook into wp pre_get_posts
@@ -1195,11 +1150,7 @@ function jc_search_post_excerpt($where = ''){
 
     return $where;
 }
-
-
-
-
-
+/*** END ***/
 
 // Add Custom BACK TO SEARCH link to admin bar
 function back_search_toolbar_link($wp_admin_bar) {
