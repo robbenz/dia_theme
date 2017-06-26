@@ -24,7 +24,15 @@
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-mattresses" target="_blank" href="http://www.medmattress.com">Mattresses</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
-		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ems" href="<?php echo site_url(); ?>/emergency-rescue">Emergency &amp; Rescue</a>
+
+		<div class="dropdown ">
+			<button class="dropbtn hvr-shutter-out-horizontal landing_nav-ems landing_nav ">Emergency &amp; Rescue</button>
+			<div class="dropdown-content">
+				<a href="<?php echo site_url(); ?>/emergency-rescue/	">EMS Education</a>
+      	<a href="<?php echo site_url(); ?>/field-ready-ems-equipment/">Field Ready Gear</a>
+    	</div>
+		</div>
+
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
 	</div>

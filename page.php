@@ -17,6 +17,7 @@ $cat_pm = 'includes/cat_loops/category_pm';
 $side_loops_arr = array(
   '58430' => 'includes/nursing',
   '58429' => 'includes/ems',
+  '81086' => 'includes/ems-field-ready',
   '58431' => 'includes/hospital',
   '58428' => 'includes/ltc',
   '57935' => 'includes/cat_loops/PM',
