@@ -5,7 +5,8 @@
       $dia_product_cats = array(
         "Loaded Crash Carts&trade;",
         "Loaded Emergency Packs&trade;",
-        "Service &amp; Repairs"
+        "Service &amp; Repairs",
+        "Field Ready EMS Equipment"
       );
       $args = array(
         'taxonomy'     => 'product_cat',
@@ -67,6 +68,21 @@
               <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/"><span>Hospital Beds</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/"><span>Infusion Pumps</span></a></li>
               <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs"><span>Vital Signs Monitors</span></a></li>
+            </ul>
+          </li>
+          <?php
+        } elseif ($KAT == "Field Ready EMS Equipment") { ?>
+          <li class="active has-sub">
+            <a href="<?php echo site_url(); ?>/field-ready-ems-equipment/"><span>Field Ready EMS Equipment</span></a>
+            <ul>
+              <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/"><span>Emergency Accessories</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-bags/"><span>Emergency Bags</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/cots-stretchers-ems/"><span>Emergency Cots &amp; Stretchers</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/"><span>Extrication Devices &amp; Patient Transfer</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/"><span>Loaded Emergency Packs™</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/immobilization/"><span>Trauma Supplies</span></a></li>
+
+
             </ul>
           </li>
           <?php

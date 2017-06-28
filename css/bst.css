@@ -107,6 +107,7 @@ td.quotes-actions a{margin:0 1em; }
 .landing_nav-qq { border-bottom:5px solid #464444;}
 
 .dropdown { float: left; position: relative; }
+.dropdown:hover {font-weight: 600 !important; }
 .dropdown .dropbtn { padding: 6px 12px; font-size: 1.1em; font-weight: 600 !important; border-left:none; border-top:none; border-right:none; background-color: inherit; }
 .dropdown:hover .dropbtn { background-color:#d6001c; color:#fff; font-weight:600 !important;  }
 .dropdown-content { display: none; position: absolute; top: 34px; z-index: 9999; }

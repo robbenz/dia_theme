@@ -50,7 +50,7 @@
 </a>
 
 <a style="margin-top:1em;" href="#" class="eModal-2">
- <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems_catalog_button.gif" alt="Emergency &amp; Rescue Training" /></a>
+ <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems-catalog-button.png" alt="Emergency &amp; Rescue Training" /></a>
 
 <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
 <br />
