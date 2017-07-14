@@ -86,6 +86,16 @@
         /*** END ***/
         $("#menu-parts-search #searchform #s").attr("placeholder", "Search Over 1,000,000 Parts").val("").focus().blur();
 
+          /*** show hide add-on desc for headwalls ***/
+          $(".addon-description").hide();
+          $(".addon-checkbox").click(function() {
+            if($(this).is(":checked")) {
+              $(".addon-description").show(269);
+            } else {
+              $(".addon-description").hide(169);
+            }
+          });
+        /*** END ***/
 
         /*** add active look to top menu pages ***/
         /*

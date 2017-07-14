@@ -9,7 +9,22 @@
 		<link rel="stylesheet" href="../css/ristrettopro_medium_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" href="../css/ristrettopro_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
 		<link rel="stylesheet" href="../css/ristrettopro_bold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
+
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
+
+		<!--[if lte IE 8]>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:700italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
+		<![endif]-->
+
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/css/bst.css'); ?>" type="text/css" media="screen, projection" />
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<?php wp_head(); ?>
@@ -26,14 +41,15 @@
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
 
 		<div class="dropdown ">
-			<button class="dropbtn hvr-shutter-out-horizontal landing_nav-ems landing_nav ">Emergency &amp; Rescue</button>
+			<button class="dropbtn hvr-shutter-out-horizontal landing_nav-ems landing_nav ems-button-cursor">Emergency &amp; Rescue</button>
 			<div class="dropdown-content">
-				<a href="<?php echo site_url(); ?>/emergency-rescue/	">EMS Education</a>
+				<a href="<?php echo site_url(); ?>/emergency-rescue/">EMS Education</a>
       	<a href="<?php echo site_url(); ?>/field-ready-ems-equipment/">Field Ready Gear</a>
     	</div>
 		</div>
 
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-pt" href="<?php echo site_url(); ?>/product-category/physical-therapy/">Physical Therapy</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
 	</div>
 </div>

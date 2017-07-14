@@ -14,6 +14,12 @@ $ltcLinks = array(
     "name" => "Ambulance Child Restraint",
     "img"  => "2017/06/Ambulance-Child-Restraint-1-250x275.png",
     "slug" => "../medical-equipment/emergency-rescue/emergency-transport-supplies/ambulance-child-restraints/ambulance-child-restraint/" ),
+/*
+  array(
+    "name" => "Caridac",
+    "img"  => "2015/08/JSA_1000_W_Fire_Blanket_Cabinet-258x275.jpg",
+    "slug" => "emergency-accessories/" ),
+*/
   array(
     "name" => "Emergency Accessories",
     "img"  => "2015/08/JSA_1000_W_Fire_Blanket_Cabinet-258x275.jpg",
