@@ -339,7 +339,7 @@ div.thumbnails{height:100px;}
 #dmcssmenu4 ul li {list-style: none;margin: 0;padding: 0;border: 0;background-color: transparent;}
 #dmcssmenu4 ul ul li {list-style: none;margin: 0;padding: 0;border: 0;background-color: #f4f4f5;text-transform: none;}
 #dmcssmenu4 ul {position: relative;z-index: 1;float: left;}
-#dmcssmenu4 ul li.has-sub {text-transform: none; background-color: #fff; border-bottom: 2px solid #00426a!important; line-height: 1.05em; margin: 0.3em 0; min-height: 1px; pointer-events: auto;text-align: center;text-shadow: none; vertical-align: middle;}
+#dmcssmenu4 ul li.has-sub {text-transform: none; background-color: #fff; border-bottom: 2px solid #00426a!important; line-height: 1em; margin: 0.3em 0; min-height: 1px; pointer-events: auto;text-align: center;text-shadow: none; vertical-align: middle;}
 #dmcssmenu4 ul li.has-sub:after {
     content: "";
     background-color: #00426a;;
