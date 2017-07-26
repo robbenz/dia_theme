@@ -36,7 +36,7 @@ $ltcLinks = array(
     "slug" => "emergency-transport-supplies/" ),
   array(
     "name" => "Loaded Emergency Packs™",
-    "img"  => "2017/06/Field_Ready_ALS_Jump_Bag-250x275.jpg",
+    "img"  => "2017/06/Field_Ready_ALS_Jump_Bag-250x275.png",
     "slug" => "field-ready-loaded-packs/" ),
   array(
     "name" => "Trauma Supplies",
