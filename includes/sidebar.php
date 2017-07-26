@@ -5,8 +5,7 @@
       $dia_product_cats = array(
         "Loaded Crash Carts&trade;",
         "Loaded Emergency Packs&trade;",
-        "Service &amp; Repairs",
-        "EMS Field Ready Gear "
+        "Service &amp; Repairs"
       );
       $args = array(
         'taxonomy'     => 'product_cat',
@@ -71,9 +70,9 @@
             </ul>
           </li>
           <?php
-        } elseif ($KAT == "EMS Field Ready Gear ") { ?>
+        } elseif ($KAT == "EMS Field Ready Gear") { ?>
           <li class="active has-sub">
-            <a href="<?php echo site_url(); ?>/field-ready-ems-equipment/"><span>EMS Field Ready Gear </span></a>
+            <a href="<?php echo site_url(); ?>/field-ready-ems-equipment/"><span>EMS Field Ready Gear</span></a>
             <ul>
               <li><a href="<?php echo site_url(); ?>/product-category/aeds-defibrillators/"><span>AEDs, Defibrillators &amp; CPR Management</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/"><span>Emergency Accessories</span></a></li>
