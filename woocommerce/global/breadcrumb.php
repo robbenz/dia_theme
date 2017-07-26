@@ -33,7 +33,18 @@ if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_before;
 
-	if (is_product_category('9363')) { // infusion pump repairs?>
+
+	if (is_page('81086')) { // ems field ready ?>
+
+		<nav class="woocommerce-breadcrumb">
+			<a href="<?php echo site_url(); ?>">Home</a> /
+			<a href="<?php echo site_url(); ?>/medical-equipment/">Medical Equipment</a> /
+			Field Ready EMS Equipment
+		</nav>
+
+		<?php
+
+	} elseif (is_product_category('9363')) { // infusion pump repairs?>
 		<nav class="woocommerce-breadcrumb">
 			<a href="<?php echo site_url(); ?>">Home</a> /
 			<a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">On-Site Repairs &amp; Preventive Maintenance</a> /
