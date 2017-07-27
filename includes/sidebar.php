@@ -74,12 +74,13 @@
           <li class="active has-sub">
             <a href="<?php echo site_url(); ?>/field-ready-ems-equipment/"><span>EMS Field Ready Gear</span></a>
             <ul>
+              <li><a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/airway-respiratory/"><span>Airway &amp; Respiratory</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/aeds-defibrillators/"><span>AEDs, Defibrillators &amp; CPR Management</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/"><span>Emergency Accessories</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-bags/"><span>Emergency Bags</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/cots-stretchers-ems/"><span>Emergency Cots &amp; Stretchers</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/"><span>Extrication Devices &amp; Patient Transfer</span></a></li>
-              <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/"><span>Loaded Emergency Packs™</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/field-ready-loaded-packs/"><span>Loaded Emergency Packs™</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/immobilization/"><span>Trauma Supplies</span></a></li>
 
 
