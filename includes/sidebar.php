@@ -79,6 +79,7 @@
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-accessories/"><span>Emergency Accessories</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-bags/"><span>Emergency Bags</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/cots-stretchers-ems/"><span>Emergency Cots &amp; Stretchers</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/ems-field-ready-bundles/"><span>EMS Field Ready Bundles</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/"><span>Extrication Devices &amp; Patient Transfer</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/field-ready-loaded-packs/"><span>Loaded Emergency Packs™</span></a></li>
               <li><a href="<?php echo site_url(); ?>/product-category/emergency-rescue/immobilization/"><span>Trauma Supplies</span></a></li>

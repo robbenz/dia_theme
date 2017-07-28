@@ -48,7 +48,7 @@
   </a>
 </div>
 
-<a href="#" class="eModal-2">
+<a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/ems-field-ready-bundles/">
   <img style="margin-bottom:1em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/FIELD-READY-BUNDLE.png" />
 </a>
 
