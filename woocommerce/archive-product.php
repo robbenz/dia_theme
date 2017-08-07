@@ -178,6 +178,21 @@ if ( have_posts() ) :
 
 endwhile;
 
+// Trauma Supplies
+if (is_product_category('6325')) {  ?>
+
+	<li class=" product type-product status-publish has-post-thumbnail">
+
+		<a href="<?php echo site_url(); ?>/product-category/supplies-2/wound-care-first-aid//">
+			<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3615-258x275.png"
+					 class="attachment-shop_catalog size-shop_catalog wp-post-image"
+					 alt="Wound Care &amp; First Aid"
+					 width="250" height="266">
+					 <h3>Wound Care &amp; First Aid</h3>
+				 </a>
+	</li>
+	<?php }
+
 woocommerce_product_loop_end();
 
 do_action( 'woocommerce_after_shop_loop' );
