@@ -1,8 +1,7 @@
 <div style="float: right; height: auto; margin-right: -26px; margin-top: 19px; width: 850px;">
 
-<a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/emergency-transport-supplies/ambulance-child-restraints/ambulance-child-restraint/">
-  <img style="margin-bottom:0.69em;" src="<?php echo site_url(); ?>/wp-content/imgs/ems/ACR-ROTATOR.png" />
-</a>
+<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '83581' ); } ?>
+
 
 <br />
 <div class="ns_home_flt-lft" id="hospitalbuttonhome">

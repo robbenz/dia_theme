@@ -1286,3 +1286,32 @@ function t_brady_cart_page_button() {
 
 }
 /*** END ***/
+
+
+
+// update some shit
+$update_pumps = array (
+  '57953',
+  '36448',
+  '30684',
+  '30664',
+  '30686',
+  '30666',
+  '30688',
+  '30668',
+  '30724',
+  '30670',
+  '36450',
+  '30672',
+  '30674',
+  '36446',
+  '30676',
+  '36444',
+  '30678',
+  '30680',
+  '30682'
+);
+
+foreach ($update_pumps as $pumps) {
+  update_post_meta( $pumps, 'mft_image', 'https://diamedicalusa.com/wp-content/uploads/2017/08/carefusion.png' );
+}

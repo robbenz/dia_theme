@@ -10,6 +10,8 @@ $loops_arr = array(
   '61281' => 'includes/imaging_loops/kz',
   '69773' => 'includes/loops/content',
   '58427' => 'includes/sim-lab',
+  '83650' => 'includes/contact',
+  '83308' => 'includes/contact',  // localhost contact
   '58688' => 'includes/mft'
 );
 $pro_pm = 'includes/cat_loops/products_pm';
