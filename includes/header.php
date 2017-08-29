@@ -12,19 +12,6 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 
-		<!--[if lte IE 8]>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:600italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:700italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
-		<![endif]-->
-
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/css/bst.css'); ?>" type="text/css" media="screen, projection" />
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<?php wp_head(); ?>
@@ -34,6 +21,7 @@
 <body <?php body_class(); ?>>
 
 <div id="landing_nav-wrap">
+
 	<div class="container">
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-mattresses" target="_blank" href="http://www.medmattress.com">Mattresses</a>
@@ -50,8 +38,9 @@
 
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-pt" href="<?php echo site_url(); ?>/product-category/physical-therapy/">Physical Therapy</a>
-		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>/request-quote">Quick Quote</a>
+		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>//product-category/veterinary-equipment/">Veterinary</a>
 	</div>
+
 </div>
 
 <?php
@@ -79,7 +68,13 @@
 			</div>
 
 			<div id="mm-right-contact">
-
+				<div style="width:100%; height:39px; text-align:right">
+					<a href="<?php echo site_url(); ?>/request-quote" class="qq_button">
+						<i class=" 	glyphicon glyphicon-envelope"></i>
+						&nbsp;Quick Quote
+					</a>
+					<?php echo do_shortcode('[google-translator]'); ?>
+				</div>
 				<?php
 
 				$benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';

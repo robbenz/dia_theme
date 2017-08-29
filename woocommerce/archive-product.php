@@ -104,6 +104,8 @@ global $product, $post;
 			echo '</div>';
 	}
 
+
+
 	if ( !is_shop() ) {
 		$katt = get_queried_object();
 		$kattID = $katt->term_id;
@@ -114,6 +116,8 @@ if ( have_posts() ) :
 	get_template_part('includes/sidebar');
 
 	do_action( 'woocommerce_before_shop_loop' );
+
+
 
 	if ( !is_shop() && dia_check_for_kids($kattID) == true ):
 
@@ -132,6 +136,15 @@ if ( have_posts() ) :
 	woocommerce_product_loop_start();
 
 	 if (! is_user_logged_in() ) { echo '<div style="width:100%; height:30px;"></div>'; }
+
+	 $vet_cats_dogs = array ( '10604', '10850', '10851', '10852', '10854', '10853', '10855', '10856', '10857', '10858' );
+	 foreach ($vet_cats_dogs as $hank) {
+ 		if (is_product_category($hank)) {
+ 			echo '<div style="width:100%;margin-top: -10px; margin-bottom: 1.5em; text-align: center;"><img style="margin-left:-7.5em;"class="aligncenter size-full wp-image-83810" src="';
+ 			echo site_url();
+ 			echo '/wp-content/uploads/2017/08/leading-edge.png" alt="" width="392" height="80" /></div>';
+ 		}
+ 	}
 
 	woocommerce_product_subcategories();
 
@@ -158,7 +171,6 @@ if ( have_posts() ) :
 						 <h3>Oxygen Supplies</h3>
 					 </a>
 		</li>
-
 
 		<li class="first product type-product status-publish has-post-thumbnail">
 

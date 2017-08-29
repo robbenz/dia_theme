@@ -948,7 +948,7 @@ function dia_reset_default_shipping_method( $method, $available_methods ) {
 // Add custom placeholder image for woocommerce
 add_filter( 'woocommerce_placeholder_img_src', 'dia_custom_woocommerce_placeholder', 10 );
 function dia_custom_woocommerce_placeholder( $image_url ) {
-  $image_url = 'https://diamedicalusa.com/wp-content/uploads/2015/06/hill-rom-bed-parts.png';
+  $image_url = 'https://diamedicalusa.com/wp-content/imgs/diamedical_coming_soon.png';
   return $image_url;
 }
 /* END */
@@ -1090,8 +1090,6 @@ function SearchFilter($query) {
 add_filter('pre_get_posts','SearchFilter');
 /*** End new search funtion ***/
 
-
-
 /**
  * Add sku, others to searchables
  */
@@ -1144,9 +1142,7 @@ function jc_search_post_excerpt($where = ''){
 
     $where = preg_replace("/post_title LIKE ('%[^%]+%')/", "post_title LIKE $1)
                 OR (jcmt1.meta_key = '_sku' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1)
-                OR  (jcmt1.meta_key = 'dia_search_extra_terms' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1)
-                OR  (jcmt1.meta_key = 'dia_product_mft_part_number' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1)
-                OR  (jcmt1.meta_key = 'dia_product_vendor_pn_1' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1 ", $where);
+                OR  (jcmt1.meta_key = 'dia_search_extra_terms' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1 ", $where);
 
     return $where;
 }
@@ -1288,30 +1284,20 @@ function t_brady_cart_page_button() {
 /*** END ***/
 
 
-
 // update some shit
-$update_pumps = array (
-  '57953',
-  '36448',
-  '30684',
-  '30664',
-  '30686',
-  '30666',
-  '30688',
-  '30668',
-  '30724',
-  '30670',
-  '36450',
-  '30672',
-  '30674',
-  '36446',
-  '30676',
-  '36444',
-  '30678',
-  '30680',
-  '30682'
+/*
+$update_hrbedss = array (
+  '30712',
+  '30706',e
+  '30708',
+  '30714',
+  '30720',
+  '30722',
+  '30710'
 );
 
-foreach ($update_pumps as $pumps) {
-  update_post_meta( $pumps, 'mft_image', 'https://diamedicalusa.com/wp-content/uploads/2017/08/carefusion.png' );
+foreach ($update_hrbedss as $bed69) {
+  //update_post_meta( $bed69, 'dia_whitespace_adj', 'yes' );
+  update_post_meta( $bed69, 'mft_image', 'https://diamedicalusa.com/wp-content/uploads/2017/08/hospira-logo-crop.png' );
 }
+*/

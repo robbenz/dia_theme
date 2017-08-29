@@ -98,13 +98,25 @@ td.quotes-actions a{margin:0 1em; }
 #landing_nav-wrap a.landing_nav{color:#464444; padding:0.25em 0; text-align:center; display:block; float:left; }
 #landing_nav-wrap a.landing_nav:hover{text-decoration:none; color:#fff;}
 
+.qq_button {margin-top:1px; background-color: #00426a; color:#fff !important;float: right; margin-left: 1em; border-radius: 0.25em; padding:5px 0.75em; }
+.qq_button:hover {text-decoration: none !important; background-color: #78be20 !important; }
+
+#google_language_translator .goog-te-gadget-simple { margin-top:1px; padding:5px 5px; background-color:#00426a;color:#fff; border: 0; border-radius: 0.25em; }
+#google_language_translator .goog-te-gadget-simple:hover { background-color: #78be20; }
+#google_language_translator .goog-te-menu-value span {color:#fff; }
+#google_language_translator .goog-te-gadget-simple a:hover {text-decoration: none !important; }
+
+#google_language_translator .goog-te-gadget-icon {display:none;}
+.goog-te-menu2 {box-shadow: none;}
+
+
 .landing_nav-hospital{border-bottom:5px solid #00426a;}
 .landing_nav-mattresses{border-bottom:5px solid #78be20;}
 .landing_nav-schools{border-bottom:5px solid #2774ae;}
 .landing_nav-simlab{border-bottom:5px solid #ffad00;}
 .landing_nav-ems{border-bottom:5px solid #d6001c;}
 .landing_nav-ltc{border-bottom:5px solid #72d0f4;}
-.landing_nav-qq { border-bottom:5px solid #464444;}
+.landing_nav-qq { border-bottom:5px solid #41848d;}
 .landing_nav-pt{ border-bottom:5px solid #9e71a2;}
 .ems-button-cursor {cursor: default;}
 
@@ -126,7 +138,7 @@ td.quotes-actions a{margin:0 1em; }
 .landing_nav-simlab:before { background:#ffad00; }
 .landing_nav-ems:before { background:#d6001c;  }
 .landing_nav-ltc:before { background:#72d0f4; }
-.landing_nav-qq:before { background:#464444; color:#fff; }
+.landing_nav-qq:before { background:#41848d; }
 .landing_nav-pt:before { background:#9e71a2; }
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active { color: white;  }
 .hvr-shutter-out-horizontal:hover:before { -webkit-transform: scaleX(1); transform: scaleX(1); text-transform:none; }
@@ -446,13 +458,13 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 /* END */
 
 /*footer*/
-#footerwrap { width: 992px; height: 300px; font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; }
+#footerwrap { width: 992px; height: 327px; font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; }
 #footer2014 { background: #00426a; clear: both; }
 #footerlogos { width: 980px; height: 100px; }
 #diamedicallogo { height: 100px; width: 300px; float: left; margin: 20px 0px 0px 40px; }
 #medmatlogo { height: 100px; width: 300px; float: left; margin: 28px 0px 0px 30px; }
 #simlablogo { height: 100px; width: 300px; float: left; margin: 26px 0px 0px 10px; }
-#footerconnect { height: 172px; width: 390px; float: left; padding: 20px 25px 20px 25px; margin: -39px 0 0 27px; }
+#footerconnect { height: 200px; width: 390px; float: left; padding: 20px 25px 20px 25px; margin: -39px 0 0 27px; }
 #footerconnect a { color:#fff; }
 #footerconnect a:active { color:#fff; }
 #footerconnect a:hover { color:#fff; }
@@ -1466,7 +1478,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 }
 
 @media (min-width: 1200px) {
-  #mm-right-contact{display:block; margin-top: -38px;}
+  #mm-right-contact{display:block; margin-top: -53px;}
   .benz-menu > ul > li > a{ padding: 11px 1.8198em; }
   .benz-menu .sub-menu{width: 1171px;}
   #menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }
