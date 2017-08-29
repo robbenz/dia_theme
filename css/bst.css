@@ -100,15 +100,12 @@ td.quotes-actions a{margin:0 1em; }
 
 .qq_button {margin-top:1px; background-color: #00426a; color:#fff !important;float: right; margin-left: 1em; border-radius: 0.25em; padding:5px 0.75em; }
 .qq_button:hover {text-decoration: none !important; background-color: #78be20 !important; }
-
 #google_language_translator .goog-te-gadget-simple { margin-top:1px; padding:5px 5px; background-color:#00426a;color:#fff; border: 0; border-radius: 0.25em; }
 #google_language_translator .goog-te-gadget-simple:hover { background-color: #78be20; }
 #google_language_translator .goog-te-menu-value span {color:#fff; }
 #google_language_translator .goog-te-gadget-simple a:hover {text-decoration: none !important; }
-
 #google_language_translator .goog-te-gadget-icon {display:none;}
 .goog-te-menu2 {box-shadow: none;}
-
 
 .landing_nav-hospital{border-bottom:5px solid #00426a;}
 .landing_nav-mattresses{border-bottom:5px solid #78be20;}
