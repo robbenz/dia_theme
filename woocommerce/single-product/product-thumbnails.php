@@ -24,8 +24,15 @@ global $post, $product, $woocommerce;
 $attachment_ids = $product->get_gallery_attachment_ids();
 
 if ( $attachment_ids ) {
-	$loop 		= 0;
-	$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
+	$loop = 0;
+
+	$total_gals = count($attachment_ids);
+	if ($total_gals == 1 || $total_gals == 2 || $total_gals == 3 || $total_gals == 5 || $total_gals == 6 || $total_gals == 9) {
+		$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
+	} else {
+		$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
+	}
+
 	?>
 	<div class="thumbnails <?php echo 'columns-' . $columns; ?>"><?php
 

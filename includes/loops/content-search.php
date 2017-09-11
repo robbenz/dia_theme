@@ -144,7 +144,7 @@ if(have_posts()): while(have_posts()): the_post();
               </form>
 
             <?php elseif( $product->is_type( 'variable' ) ) : ?>
-              <button class="search-rs-read-more" href="<?php the_permalink(); ?>">View Options</button>
+              <br><a class="search-rs-read-more" href="<?php the_permalink(); ?>">View Options</a>
             <?php endif ; ?>
 
       <?php else : ?>

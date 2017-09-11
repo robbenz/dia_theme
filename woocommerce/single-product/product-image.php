@@ -21,21 +21,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $woocommerce, $product;
 
-
-
+/*
+$sls_array_products = array ('54313', '1234ff5' );
+foreach ($sls_array_products as $SLS) {
+	if ($post->ID == $SLS){ ?>
+		<div style="margin-top: -0.5em; margin-bottom: -20px;">
+			<img style="margin-left:38px;" src="https://diamedicalusa.com/wp-content/imgs/includes/sim-lab.png" alt="SimLabSolutions Exclusive" width="330" />
+		</div>
+		<style>
+		.single-product .favimg_bottomleft, .single-product .favimg_bottomright { top: 384px; }
+		.single-product .favimg_topleft, .single-product .favimg_topright { top: 120px; }
+		div.product div.summary { margin-top:-69px !important; }
+		</style>
+	<?php	}
+} */
 ?>
 
 <div style="max-height:none !important; " class="images">
 
 	<?php
+
 	$vet_array_products = array ('73131', '73141', '78818', '78788', '78808', '78813', '78828', '78823', '78764', '78802', '78807', '78772', '73130', '78833', '78797', '78777', '78756', '78760', '78767', '78793' );
 	foreach ($vet_array_products as $vet) {
-		if ($post->ID == $vet){
+		if ($post->ID == $vet) {
 			echo '<div style="margin-top: -1.5em; margin-bottom: -20px;"><img style="position:relative; z-index:999;" class="aligncenter size-full wp-image-83810" src="';
 			echo site_url();
 			echo '/wp-content/uploads/2017/08/leading-edge.png" alt="" width="392" height="80" /></div>';
 		}
 	}
+
 
 		if ( has_post_thumbnail() ) {
 

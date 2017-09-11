@@ -786,9 +786,6 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
     if ($product_cat_ID == '5302') {
       echo '<li><a href="http://medmattress.com/custom-sizing-form/"><span>Custom Sizing</span></a></li>';
     }
-    if ($product_cat_ID == '5249') {
-      echo '<li><a href="' . site_url() . '/privacy-curtain-sizing-form/"><span>Privacy Curtains</span></a></li>';
-    }
   }
   echo '</ul></li>';
 }
@@ -1140,9 +1137,7 @@ function jc_search_post_excerpt($where = ''){
     if ( empty( $wp_the_query->query_vars['wc_query'] ) || empty( $wp_the_query->query_vars['s'] ) )
             return $where;
 
-    $where = preg_replace("/post_title LIKE ('%[^%]+%')/", "post_title LIKE $1)
-                OR (jcmt1.meta_key = '_sku' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1)
-                OR  (jcmt1.meta_key = 'dia_search_extra_terms' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1 ", $where);
+    $where = preg_replace("/post_title LIKE ('%[^%]+%')/", "post_title LIKE $1) OR (jcmt1.meta_key = 'dia_search_extra_terms' AND CAST(jcmt1.meta_value AS CHAR) LIKE $1 ", $where);
 
     return $where;
 }

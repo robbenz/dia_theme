@@ -205,6 +205,22 @@ if (is_product_category('6325')) {  ?>
 	</li>
 	<?php }
 
+	elseif (is_product_category('10957')) {  ?>
+
+		<li class=" product type-product status-publish has-post-thumbnail">
+
+			<a href="<?php echo site_url(); ?>/privacy-curtain-sizing-form/">
+
+				<img src="<?php echo site_url(); ?>/wp-content/uploads/2017/09/custom-size-privacy-curtains.png"
+						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
+						 alt="Custom Privacy Curtains"
+						 width="250" height="266">
+						 <h3>Custom Size Privacy Curtains</h3>
+					 </a>
+		</li>
+		<?php }
+
+
 woocommerce_product_loop_end();
 
 do_action( 'woocommerce_after_shop_loop' );
