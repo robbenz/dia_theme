@@ -78,9 +78,6 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#dia-cust-fav-role-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-tab-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-search-pri-meta-box h2 {background-color: #00426a; color:#fff;}' );
-
-
-
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 /* END Scripts / Styles */
@@ -194,11 +191,9 @@ class BENZ_Walker_Nav_Menu_NEWSEARCH extends Walker_Nav_Menu {
 function end_lvl(&$output, $depth = 0, $args = Array()) {
     if( 0 == $depth ) {
       $searchBarNeeds = file_get_contents("wp-content/themes/diamedical/includes/navbar-search.php");
-    //  $searchBarNeeds = require(locate_template("includes/navbar-search.php"));
 
       $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a request and we’ll email you a quote!</div>';
         $output .=  $searchBarNeeds;
-      //  $output .= file_get_contents(locate_template("includes/navbar-search.php"));
         $output .= '<div id="mattresshomeimgwrap"><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://diamedicalusa.com//wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a>';
         $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=STRYKER&amp;post_type=product"><img style="margin:7px 0.8em 0;" src="https://diamedicalusa.com//wp-content/imgs/strykerlogo.png" alt=" " /></a>';
         $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=amico&amp;post_type=product"><img style="margin: -6px 0.8em 0.6em; max-height: 50px; height:50px;" src="https://diamedicalusa.com//wp-content/imgs/amico_logo.png" alt=" " /></a>';
@@ -230,23 +225,6 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
   }
 }
 
-// -- REPAIRS
-
-class BENZ_Walker_Nav_Menu_RP extends Walker_Nav_Menu {
-  function start_lvl(&$output, $depth = 0, $args = Array()) {
-    $output .= '<ul class="sub-menu">';
-  }
-  function end_lvl(&$output, $depth = 0, $args = Array()) {
-    if( 0 == $depth ) {
-        $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
-        $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="biomedrepairs" href="#"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/biomedical-repairs-menu.png" /></a>';
-    }
-    $indent = str_repeat( "\t", $depth );
-    $output .= "{$indent}</ul>\n";
-  }
-}
-
 // -- MEDICAL EQUIPMENT
 class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {
     function start_lvl(&$output, $depth = 0, $args = Array()) {
@@ -264,44 +242,6 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
     $output .= "{$indent}</ul>\n";
 }
 }
-// -- ABOUT US
-class BENZ_Walker_Nav_Menu_ABOUT extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu">';
-        $output .= '<div id="benz-menu-about"><p class="benz-menu-about-header">WHO ARE WE?</p>';
-        $output .= '<p class="benz-menu-about-copy">DiaMedical USA, along with its subsidiaries MedMattress.com and SimLabSolutions, is a manufacturer ';
-        $output .= 'and global distributor of healthcare products, supplies, mattresses and replacement parts. ';
-        $output .= 'We lead the industry in Healthcare education by offering full service solutions in outfitting your simulation labs with products such as hospitals beds, training headwalls, infusion pumps, simulated IV fluids, loaded crash carts, and more! </p>';
-        $output .= '<p class="benz-menu-about-header">OUR MISSION</p>';
-        $output .= '<p class="benz-menu-about-copy">We understand how tough it is to for hospitals and universities to build a budget ';
-        $output .= 'without making sacrifices. That’s why we have no hidden fees nor built-in shipping ';
-        $output .= 'costs! Our customers always have the lowest prices for their products without any ';
-        $output .= 'sacrifice in quality. For every shipment we send we calculate the lowest price ';
-        $output .= 'through our many shipping company affiliates. So you can always rest assured that ';
-        $output .= 'we’re always getting you the lowest price - GUARANTEED. </p>';
-        $output .= '<p class="benz-menu-about-header">CAREERS</p>';
-        $output .= '<p class="benz-menu-about-copy">We want the brilliant ones, the tenacious ones, the ones who have the initiative and instincts to think outside the box. We want people who are resilient, team-oriented, and driven. We want all of this because we are intensely focused on customer service and helping our customers and carriers grow their businesses.</p></div>';
-        $output .= '<div class="arrow-down"></div>';
-    }
-
-function end_lvl(&$output, $depth = 0, $args = Array()) {
-    if( 0 == $depth ) {
-        $output .= '<div id="about_fltrght">';
-        $output .= '<p class="about-phone" style="color:#000;">Phone Number:</p>';
-        $output .= '<p class="about-phone-number" style="color:#004ea8;"><i class="fa icon-phone fa-lg"></i>(877) 593-6011</p>';
-        $output .= '<p class="about-fax" style="color:#000;">Fax Number:</p>';
-        $output .= '<p class="about-fax-number" style="color:#004ea8;"><i class="fa icon-print fa-lg"></i>(248) 671-1550</p>';
-        $output .= '<p class="about-email" style="color:#000;">Email Address:</p>';
-        $output .= '<p class="about-email-number" style="color:#004ea8;"><i class="fa icon-laptop fa-lg"></i>Info@DiaMedicalUSA.com</p>';
-        $output .= '<p class="about-mail" style="color:#000;">Mailing Address: </p>';
-        $output .= '<p class="about-mail-number" style="color:#004ea8;"><i class="fa icon-envelope fa-lg"></i>7013 Orchard Lake Rd, Suite #110<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;West Bloomfield, MI 48322</p>';
-        $output .= '</div><div class="benz-bottom-colors" style="background-color:#7fa6d3">Need help finding our policies? Visit our help page for our shipping and return policies.</div>';
-    }
-    $indent = str_repeat( "\t", $depth );
-    $output .= "{$indent}</ul>\n";
-  }
-}
-/* END */
 
 
 /****** WOOCOMMERCE GALLERY PAGE STUFF ******/
@@ -926,7 +866,7 @@ add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_
 function add_another_custom_flat_rate( $method, $rate ) {
 	$new_rate          = $rate;
 	$new_rate['id']    .= ':' . 'second_day_rate_name';
-	$new_rate['label'] = '2nd Day';
+	$new_rate['label'] = 'Next Day';
 	$new_rate['cost']  += 0;
 	// Add it to WC
 	$method->add_rate( $new_rate );

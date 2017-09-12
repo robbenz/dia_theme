@@ -28,7 +28,7 @@
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
 
-		<div class="dropdown ">
+		<div class="dropdown">
 			<button class="dropbtn hvr-shutter-out-horizontal landing_nav-ems landing_nav ems-button-cursor">Emergency &amp; Rescue</button>
 			<div class="dropdown-content">
 				<a href="<?php echo site_url(); ?>/emergency-rescue/">EMS Education</a>
@@ -156,8 +156,8 @@
 					wp_nav_menu( array(
 						'theme_location'  => 'about-us',
 						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-about',
-						'walker'          => new BENZ_Walker_Nav_Menu_ABOUT
+						'container_class' => $benzmenu . ' ' . $benzmenu . '-about'
+				//		'walker'          => new BENZ_Walker_Nav_Menu_ABOUT
 					));
 					?>
 				</div><!-- .navbar-header -->
