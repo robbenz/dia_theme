@@ -187,7 +187,7 @@ if(have_posts()): while(have_posts()): the_post();
             $available_variations = $product->get_available_variations();
             ?>
 
-              <select id="var_pro_drop_<?php echo $_id; ?>" >
+              <select id="var_pro_drop_<?php echo $id; ?>" >
                 <option class="nothing" value="select-option">Select Option</option>
 
                 <?php foreach ( $available_variations as $attribute_name => $options ) :
@@ -203,14 +203,21 @@ if(have_posts()): while(have_posts()): the_post();
 
              <?php
                 foreach ($available_variations as $_AV ) {
+
+                  $dia_varlistprice     = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_list_price', true );
+                  $dia_varlistprice_fi  = floatval($dia_varlistprice);
+                  $dia_var_cost         = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost', true );
+                  $dia_var_cost_fi      = floatval($dia_var_cost);
+                  $var_vend2cost        = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost2', true );
+
                   echo '<div style="color:#fff;border: 1px solid #fff;" class="var_specs_wrap" id="var_specs_wrap_'. $_AV[ 'variation_id' ] . '">';
                   echo 'Manufacturer: ' . get_post_meta( $_AV[ 'variation_id' ], 'dia_var_mft', true ) .'<br>';
                   echo 'MFT Part #: ' . get_post_meta( $_AV[ 'variation_id' ], 'dia_var_mft_pn', true ) .'<br>';
-                  echo 'List Price: <span style="color:#78be20;">$' . number_format(get_post_meta( $_AV[ 'variation_id' ], 'dia_var_list_price', true )) .'</span><br>';
+                  echo 'List Price: <span style="color:#78be20;">$' . number_format($dia_varlistprice_fi, 2) .'</span><br>';
 
                   echo 'Vendor 1: ' . get_post_meta( $_AV[ 'variation_id' ], 'dia_var_vendor1', true ) .'<br>';
                   echo 'Vendor PN: ' . get_post_meta( $_AV[ 'variation_id' ], 'dia_var_vendor_pn', true ) .'<br>';
-                  echo 'Cost: <span style="color:#78be20;">$' . number_format(get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost', true )) .'</span><br>';
+                  echo 'Cost: <span style="color:#78be20;">$' . number_format($dia_var_cost_fi, 2) .'</span><br>';
                   echo 'Date Verified: ' . get_post_meta( $_AV[ 'variation_id' ], 'dia_var_date_check', true ) .'<br>';
                   echo 'Verified by: ' . get_post_meta( $_AV[ 'variation_id' ], 'dia_var_date_check_person1', true ) .'<br>';
 
@@ -220,9 +227,9 @@ if(have_posts()): while(have_posts()): the_post();
                   $var_vendpn2 = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_vendor_pn2', true );
                   if (strlen($var_vendpn2) > 0) { echo 'Vender 2 PN: ' . $var_vendpn2 .'<br>'; }
 
-                  $var_vend2cost = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost2', true );
                   if (strlen($var_vend2cost) > 0) {
-                    echo 'Vender 2 Cost: <span style="color:#78be20;">$' . number_format($var_vend2cost) .'</span><br>';
+                    $var_vend2cost_fi = floatval($var_vend2cost);
+                    echo 'Vender 2 Cost: <span style="color:#78be20;">$' . number_format($var_vend2cost_fi, 2) .'</span><br>';
                   }
 
                   $var_vend2dv = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_date_check2', true );
@@ -242,7 +249,7 @@ if(have_posts()): while(have_posts()): the_post();
 
                 jQuery(".var_specs_wrap").hide();
 
-                jQuery("#var_pro_drop_<?php echo $_id; ?>").change(function() {
+                jQuery("#var_pro_drop_<?php echo $id; ?>").change(function() {
                     var val = jQuery(this).val();
                     if(val === "var_product_<?php echo $options["variation_id"]; ?>") {
                         jQuery(".var_specs_wrap").hide();
