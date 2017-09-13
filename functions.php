@@ -80,6 +80,15 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#dia-search-pri-meta-box h2 {background-color: #00426a; color:#fff;}' );
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
+
+
+function ds_enqueue_jquery_in_footer( &$scripts ) {
+
+	if ( ! is_admin() )
+		$scripts->add_data( 'jquery', 'group', 1 );
+}
+add_action( 'wp_default_scripts', 'ds_enqueue_jquery_in_footer' );
+
 /* END Scripts / Styles */
 
 
@@ -147,14 +156,17 @@ add_action( 'init', 'register_my_menus' );
 
 // -- NEED HELP?
 class BENZ_Walker_Nav_Menu extends Walker_Nav_Menu {
-   function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu" style="color:#004ea8; font-weight:700;"><div class="arrow-up-mm"></div><div class="insert-img-here">NEED SOME ASSISTANCE?<br>';
-        $output .= '<span style="color:#000; font-weight:normal;"><em>Browse these pages to read<br>our policies or to drop us a line!</em></span></div>';
-    }
-        function end_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '</ul>';
-    }
+  function start_lvl(&$output, $depth = 0, $args = Array()) {
+    $output .= '<ul class="sub-menu" style="color:#004ea8; font-weight:700;">';
+    $output .= '<div class="arrow-up-mm"></div><div class="insert-img-here">NEED SOME ASSISTANCE?<br>';
+    $output .= '<span style="color:#000; font-weight:normal;"><em>Browse these pages to read<br>our policies or to drop us a line!</em></span></div>';
+  }
+  function end_lvl(&$output, $depth = 0, $args = Array()) {
+    $output .= '</ul>';
+  }
 }
+
+
 // -- My Account
 class BENZ_Walker_Nav_Menu_MYACCOUNT extends Walker_Nav_Menu {
    function start_lvl(&$output, $depth = 0, $args = Array()) {
@@ -203,7 +215,7 @@ function end_lvl(&$output, $depth = 0, $args = Array()) {
     $indent = str_repeat( "\t", $depth );
     $output .= "{$indent}</ul>\n";
 
-}
+  }
 }
 
 // -- Manufacturers

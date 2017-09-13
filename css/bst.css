@@ -633,17 +633,6 @@ li.main-header-link:hover {background-color:#2774ae; }
 #menu-item-57558 { width:200px;}
 /* END */
 
-/* Repiars Menu */
-/*
-#menu-repairs > li > .sub-menu, #menu-manufacturers > li > .sub-menu { height: 185px;  }
-#menu-repairs .benz-bottom-colors { top: 108px;}
-#menu-repairs .arrow-down { left: 55.6%; top: -78px; }
-#menu-item-57556 > ul li, #menu-item-57620 > ul li, #menu-item-57624 > ul li, #menu-item-57627 > ul li, #menu-item-57630 > ul li, #menu-item-57637 > ul li { margin-top:6px; }
-#menu-repairs #biomedrepairs{  float: right; margin-right: -49px; top: -101px; width: 430px; z-index: 100; }
-#menu-repairs > li .sub-menu li.menu-item-has-children, #menu-manufacturers > li .sub-menu li.menu-item-has-children  { width:23%; }
-*/
-/* END */
-
 /* Manufacturers Menu */
 #menu-manufacturers > li > .sub-menu { height: 185px;  }
 #menu-manufacturers > li .sub-menu li.menu-item-has-children  { width:23%; }
@@ -660,36 +649,6 @@ li.main-header-link:hover {background-color:#2774ae; }
 #menu-item-57575 .sub-menu { margin-top:10px;}
 #menu-item-57575 > a {font-size: 15px; color:#00426a !important; margin-bottom:8px; }
 #menu-item-57591 > a, #menu-item-57609 > a, #menu-item-57556 > a, #menu-item-57620 > a, #menu-item-57624 > a, #menu-item-57627 > a, #menu-item-57630 > a, #menu-item-57637 > a {font-size: 15px; }
-/* END */
-
-/* ABOUT MENU*/
-/*
-#menu-contact-us .benz-bottom-colors { top: 91px;}
-#menu-contact-us > li > .sub-menu {  height: 447px;}
-#menu-contact-us .arrow-down { left: 91%;  top: -27px; }
-#benz-menu-about{ width: 55%; height:300px; text-align:left; padding-left:10px; float:left; color:#000;}
-#benz-menu-about .benz-menu-about-copy { color:#000; }
-#benz-menu-about .benz-menu-about-header { margin-top:6px; color:#2668b5; font-weight:600;}
-#menu-item-6812:hover{ color:#000;}
-#menu-item-6812 a:hover{ color:#000;}
-#menu-item-6812{float: right; font-size: 17px; font-weight: 600; position: relative; width: 44%; }
-#menu-item-6812 a{color: #004ea8 !important}
-#menu-item-6812 a:hover{font-weight:600; !important; color: #004ea8 !important}
-#about_fltrght {float:right; height:230px; width:41%;}
-#about_fltrght p {font-size: 17px; }
-p.about-phone {position:relative; top:16px; }
-p.about-phone-number {position:relative; top:17px; left:-11px;  }
-.about-phone-number i {position:relative; top:2px; left:-8px;}
-p.about-fax {  position: relative; top: -32px; left: 174px;  }
-p.about-fax-number {position:relative; top:-30px; left:161px;  }
-.about-fax-number i {position:relative; top:2px; left:-8px;}
-p.about-email {position:relative; top:-5px; left:0; }
-p.about-email-number {position:relative; top:-3px; left:-13px;  }
-.about-email-number i {position:relative; top:2px; left:-8px;}
-p.about-mail {position:relative; top:8px; left:0;  }
-p.about-mail-number {position:relative; top:12px; left:-13px;  }
-.about-mail-number i {position:relative; top:2px; left:-8px;}
-*/
 /* END */
 
 /* IV BAG WAIVER */ /* AND Privacy form */

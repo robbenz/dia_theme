@@ -31,7 +31,7 @@
   </a>
 </div>
 <div class="ns_home_flt-lft" id="ambulancebuttonhome" style="margin: -124px 14px 1em 14px;">
-  <a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/ambulance-simulator/ambulance-simulator/">
+  <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/ambulance-simulator/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems_ambulance_simulator.png" alt="Ambulance Simulator"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_ambulance_simulator_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_ambulance_simulator.png';"/>
