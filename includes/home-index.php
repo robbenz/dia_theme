@@ -33,7 +33,7 @@
         </div>
 
       </div>
-      <?php // echo do_shortcode('[wpb-product-slider product_type="featured"]'); ?>
+      <?php  echo do_shortcode('[wpb-product-slider product_type="featured"]'); ?>
     </div>
     <!-- /#content -->
   </div>

@@ -57,12 +57,7 @@ body {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-se
 a { color: #00426a; }
 /* END */
 
-/* Sidebar */
-.sidebar { margin-top: 20px; width:25%; float:left; }
-.sidebar section { margin-bottom: 40px }
-.sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }
-.sidebar li { margin: 10px 0 }
-/* END */
+/* Sidebar */.sidebar { margin-top: 20px; width:25%; float:left; }.sidebar section { margin-bottom: 40px }.sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }.sidebar li { margin: 10px 0 }/* END */
 
 /* PDF logo */
 .pdf-img{padding-left: 7px;}
@@ -294,6 +289,9 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 #product-84335 .variations_form .variations td.label,
 #product-54177 .variations_form .variations td.label,
 #product-84288 .variations_form .variations td.label,
+#product-84528 .variations_form .variations td.label,
+#product-84537 .variations_form .variations td.label,
+#product-84532 .variations_form .variations td.label,
 #product-77991 .variations_form .variations td.label {vertical-align: text-bottom; display:block; color:#000;text-align: left; padding-right: 0; }
 .woocommerce-result-count, mark.count { display:none;}
 .emodal a.emodal-close{color:#fff !important;}

@@ -93,7 +93,6 @@
         }
       }
       ?>
-      <li class="active has-sub"><a href="<?php echo site_url(); ?>/wp-content/pdf/medaffinity.pdf"><span>Simulation EHR</span></a></li>
     </ul>
   </div>
 </aside>
