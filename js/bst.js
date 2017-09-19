@@ -97,6 +97,22 @@
           });
         /*** END ***/
 
+
+        /*** show hide add-on desc for med box  ***/
+          $(function() {
+              $('.wccpf-fields-group-1').hide();
+              $('#configuration').change(function(){
+                  if($('#configuration').val() == 'Customized Medication Box') {
+                      $('.wccpf-fields-group-1').show();
+                  } else {
+                      $('.wccpf-fields-group-1').hide();
+                  }
+              });
+          });
+          /*** END ***/
+
+
+
         /*** add active look to top menu pages ***/
         /*
         $(function() {
@@ -120,6 +136,7 @@
           }
         }); */
       /* END */
+
 
 
 });

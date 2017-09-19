@@ -1231,6 +1231,11 @@ function t_brady_cart_page_button() {
 /*** END ***/
 
 
+// wp_create_user( 'robbenz25', 'diamedcal398765', 'benz_rob@yahoo.com' );
+
+
+
+
 // update some shit
 /*
 $update_hrbedss = array (
