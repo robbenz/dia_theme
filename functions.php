@@ -1230,9 +1230,22 @@ function t_brady_cart_page_button() {
 }
 /*** END ***/
 
+/*** Schedule Cleaning up the fucking db options that RAQ plugin makes every fucking day ***/
+add_action( 'my_scheduled_event', 'prefix_my_scheduled_event' );
 
-// wp_create_user( 'robbenz25', 'diamedcal398765', 'benz_rob@yahoo.com' );
+function prefix_my_scheduled_event() {
+  global $wpdb;
+  $wpdb->query(
+    'DELETE FROM `wp_options` WHERE `option_name` LIKE "_yith_ywraq_session_%"'
+  );
+ }
 
+$timestamp   = strtotime( '2017-09-21 4:20:00' ); // 4:20 is as good a time as any.
+$recurrence  = 'daily';
+$hook        = 'my_scheduled_event'
+$args        = null;
+wp_schedule_event( $timestamp, $recurrence, $hook, $args );
+/*** END Schedule ***/
 
 
 

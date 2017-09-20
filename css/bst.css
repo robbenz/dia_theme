@@ -82,7 +82,7 @@ td.quotes-actions a{margin:0 1em; }
 .obesity_table { width:100%; border:2.3px solid #C0C0C0; border-collapse:collapse; padding:6px; text-align:center; }
 .obesity_table th { border:2.3px solid #C0C0C0; padding:6px; background:#F0F0F0; }
 .obesity_table td { border:2.3px solid #C0C0C0; padding:6px; }
-.obesity_table .obese-table-img { width:60%; height:60%; max-width:60%; }
+.obesity_table .obese-table-img { width:60%; max-width:60%; }
 /* END */
 
 /* landing_nav */
