@@ -1244,7 +1244,9 @@ $timestamp   = strtotime( '2017-09-21 4:20:00' ); // 4:20 is as good a time as a
 $recurrence  = 'daily';
 $hook        = 'my_scheduled_event'
 $args        = null;
-wp_schedule_event( $timestamp, $recurrence, $hook, $args );
+if ( ! wp_next_scheduled( 'my_scheduled_event' ) ) {
+  wp_schedule_event( $timestamp, $recurrence, $hook, $args );
+}
 /*** END Schedule ***/
 
 
@@ -1263,6 +1265,6 @@ $update_hrbedss = array (
 
 foreach ($update_hrbedss as $bed69) {
   //update_post_meta( $bed69, 'dia_whitespace_adj', 'yes' );
-  update_post_meta( $bed69, 'mft_image', 'https://diamedicalusa.com/wp-content/uploads/2017/08/hospira-logo-crop.png' );
+  update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.png' );
 }
 */
