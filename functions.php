@@ -1243,9 +1243,9 @@ function prefix_my_scheduled_event() {
 $timestamp   = strtotime( '2017-09-21 4:20:00' ); // 4:20 is as good a time as any.
 $recurrence  = 'daily';
 $hook        = 'my_scheduled_event'
-$args        = null;
+
 if ( ! wp_next_scheduled( 'my_scheduled_event' ) ) {
-  wp_schedule_event( $timestamp, $recurrence, $hook, $args );
+  wp_schedule_event( $timestamp, $recurrence, $hook);
 }
 /*** END Schedule ***/
 
