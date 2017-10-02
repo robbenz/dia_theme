@@ -97,7 +97,6 @@
           });
         /*** END ***/
 
-
         /*** show hide add-on desc for med box  ***/
           $(function() {
               $('.wccpf-fields-group-1').hide();
@@ -110,7 +109,6 @@
               });
           });
           /*** END ***/
-
 
 
         /*** add active look to top menu pages ***/

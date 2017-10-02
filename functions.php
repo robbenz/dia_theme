@@ -1231,6 +1231,8 @@ function t_brady_cart_page_button() {
 /*** END ***/
 
 /*** Schedule Cleaning up the fucking db options that RAQ plugin makes every fucking day ***/
+
+/*
 add_action( 'my_scheduled_event', 'prefix_my_scheduled_event' );
 
 function prefix_my_scheduled_event() {
@@ -1247,6 +1249,7 @@ $hook        = 'my_scheduled_event';
 if ( ! wp_next_scheduled( 'my_scheduled_event' ) ) {
   wp_schedule_event( $timestamp, $recurrence, $hook);
 }
+*/
 /*** END Schedule ***/
 
 
