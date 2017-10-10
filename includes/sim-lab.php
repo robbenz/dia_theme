@@ -1,5 +1,10 @@
-<div class="container">
+<?php /* Template Name: SimLabSolutions */
+get_template_part('includes/header');
+?>
+<div class="container woocommerce">
   <div class="row">
+    <div id="content" role="main">
+
     <img src="<?php echo site_url();?>/wp-content/imgs/includes/sim-lab.png" />
     <span style="font-family: 'ristretto_probold', Arial, sans-serif; letter-spacing:2.5px; color:#3e87cb; font-size:56px;  margin-right: 0.8em; float:right; text-transform:uppercase; line-height: 38px;">exclusive Healthcare Education products</span><br />
     <span style="color: #3e87cb; margin-top: -52px; float: right; font-family: 'ristretto_proregular',Arial,sans-serif;font-size: 35px; letter-spacing: 1.5px; margin-right: 2.4em;">that Improve Training Simulations for Students &amp; Instructors</span>
@@ -58,5 +63,9 @@
       <a style="margin-top:1em;" href="#" class="eModal-2">
       <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/SLS_Home_catalog.gif" alt="Emergency &amp; Rescue Training" /></a>
     </div>
-  </div>
-</div>
+
+
+</div><!-- /.row -->
+</div><!-- /.container -->
+
+<?php get_template_part('includes/footer'); ?>

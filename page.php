@@ -1,7 +1,11 @@
 <?php
 get_template_part('includes/header');
+
 $open_no_side = '<div class="container woocommerce"><div class="row"><div id="content" role="main">';
+
 $open_side = '<div class="container woocommerce landing_page"><div class="row">';
+
+
 $loops_arr = array(
   '61274' => 'includes/imaging_loops/fujitsu',
   '61275' => 'includes/imaging_loops/ge',
@@ -9,13 +13,16 @@ $loops_arr = array(
   '61280' => 'includes/imaging_loops/al',
   '61281' => 'includes/imaging_loops/kz',
   '69773' => 'includes/loops/content',
-  '58427' => 'includes/sim-lab',
+//  '58427' => 'includes/sim-lab',
   '83650' => 'includes/contact',
   '83308' => 'includes/contact',  // localhost contact
   '58688' => 'includes/mft'
 );
+
+
 $pro_pm = 'includes/cat_loops/products_pm';
 $cat_pm = 'includes/cat_loops/category_pm';
+
 $side_loops_arr = array(
   '58430' => 'includes/nursing',
   '58429' => 'includes/ems',

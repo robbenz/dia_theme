@@ -1,6 +1,11 @@
-<div style="text-align:center;"><img src="<?php echo site_url(); ?>/wp-content/imgs/homepage/DiscountDirectoryPage_zoll.png" alt="Discount Directory Logos" usemap="#Map3">
+<?php /* Template Name: MFT Directory */
+get_template_part('includes/header');
+?>
+<div class="container woocommerce landing_page"><div class="row">
 
-<map name="Map3">
+<div style="text-align:center;">
+  <img src="<?php echo site_url(); ?>/wp-content/imgs/homepage/DiscountDirectoryPage_zoll.png" alt="Discount Directory Logos" usemap="#Map3">
+  <map name="Map3">
                   <area shape="rect" coords="52,207,192,249" href="<?php echo site_url(); ?>/?s=Hill-Rom&amp;post_type=product">
                   <area shape="rect" coords="230,208,404,249" href="<?php echo site_url(); ?>/?s=Stryker&amp;post_type=product">
                   <area shape="rect" coords="447,197,580,257" href="<?php echo site_url(); ?>/?s=Invacare&amp;post_type=product">
@@ -262,3 +267,8 @@ ZOLL
 <br /> </p>
 </div>
 </div><br />
+
+</div><!-- /.row -->
+</div><!-- /.container -->
+
+<?php get_template_part('includes/footer'); ?>
