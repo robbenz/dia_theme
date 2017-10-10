@@ -1,10 +1,12 @@
 <div class="container">
   <div class="row">
     <div id="content" role="main">
-      <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '57643' ); } ?>
+      <?php if ( function_exists( 'soliloquy' ) ) {
+        soliloquy( '57643' );
+      } ?>
       <div style="margin-top:28px; width:100%;">
         <div class="col-xs-12 col-md-8 rgt-img-home">
-          <a href="/healthcare-education/">
+          <a href="<?php echo site_url(); ?>/healthcare-education/">
           <img style="width:100%;" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/Healthcare-Education.png" />
           </a>
         </div>
