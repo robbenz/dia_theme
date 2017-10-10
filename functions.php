@@ -926,7 +926,7 @@ function dia_last_css_enqueue_scripts() {
 }
 /* END */
 
-/* light box photo shit */
+/* light box photo shit
 add_action( 'wp_enqueue_scripts', 'frontend_scripts_include_lightbox' );
 
 function frontend_scripts_include_lightbox() {
@@ -1229,6 +1229,7 @@ function t_brady_cart_page_button() {
 
 }
 /*** END ***/
+
 
 /*** Schedule Cleaning up the fucking db options that RAQ plugin makes every fucking day ***/
 

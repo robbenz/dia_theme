@@ -96,10 +96,17 @@ td.quotes-actions a{margin:0 1em; }
 .qq_button {margin-top:1px; background-color: #00426a; color:#fff !important;float: right; margin-left: 1em; border-radius: 0.25em; padding:5px 0.75em; }
 .qq_button:hover {text-decoration: none !important; background-color: #78be20 !important; }
 #google_language_translator .goog-te-gadget-simple { margin-top:1px; padding:5px 5px; background-color:#00426a;color:#fff; border: 0; border-radius: 0.25em; }
-#google_language_translator .goog-te-gadget-simple:hover { background-color: #78be20; }
-#google_language_translator .goog-te-menu-value span {color:#fff; }
-#google_language_translator .goog-te-gadget-simple a:hover {text-decoration: none !important; }
-#google_language_translator .goog-te-gadget-icon {display:none;}
+#google_language_translator .goog-te-gadget-simple:hover {
+   background-color: #78be20;
+ }
+#google_language_translator .goog-te-menu-value span {
+  color:#fff;
+}
+#google_language_translator .goog-te-gadget-simple a:hover {
+  text-decoration: none !important; }
+#google_language_translator .goog-te-gadget-icon {display:none;
+}
+
 .goog-te-menu2 {box-shadow: none;}
 
 .landing_nav-hospital{border-bottom:5px solid #00426a;}
@@ -495,6 +502,7 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 .woocommerce-message a {color:#00426a;}
 .woocommerce-message a:hover {color:#fff;}
 .error-home-class-red{width:75%; margin: 0 auto; background-color:#cc1100; color:#fff; padding:0.3em; border-radius: 0.3em;text-align: center;font-size:18px; margin-bottom:0.4em;}
+.white-background {background-color: white !important;}
 /* END */
 
 /* MY ACCOUNT PAGE LOGGED IN */
@@ -844,16 +852,18 @@ ul.products #viewprice-detail  { display:none !important;}
 p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 /* END */
 
-/* contact page */
+/* contact page, customer service request form page 85138 */
+.gray-background-wrapper {background-color: #f6f6f6; margin-top: 1em; border-radius: 0.5em; padding: 1em 2em 2em 2em; margin-bottom: 1em;}
 .page-id-83308 .main-contact-wrap a,
 .page-id-83650 .main-contact-wrap a {color:#00426a; font-weight: bold; text-decoration: underline;}
 #dat_wrap {background:#fff;border: 5px solid #288dcc; padding-top:1em; height:420px;}
 #dat_wrap h3,
 .page-id-83650 h2,
-.page-id-83308 h2{ font-family: 'ristretto_promedium', Arial, sans-serif; color: #00426a; letter-spacing: 1.1px;font-size:41px;text-transform: uppercase;}
+.page-id-83308 h2, .page-id-85138 h2, .page-id-85140 h2{ font-family: 'ristretto_promedium', Arial, sans-serif; color: #00426a; letter-spacing: 1.1px;font-size:41px;text-transform: uppercase;}
 #dat_wrap h4,
 .page-id-83308 .main-contact-wrap h3,
 .page-id-83650 .main-contact-wrap h3{font-family: 'ristretto_prolight', Arial, sans-serif; color: #288dcc; font-size:35px;}
+.page-id-85138 h2, .page-id-85140 h2 {margin-bottom: 20px;}
 #dat_order_left{float:left; }
 #dat_order_left img{max-width:34px;padding: 0px 0px 38px 0px;}
 #dat_order_rght{float:left; }
