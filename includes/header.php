@@ -113,7 +113,7 @@
 			</div>
 		</header> <!-- #masthead -->
 
-		<nav id="drop-menu" class="">
+		<nav id="drop-menu" class="navbar navbar-default navbar-static-top">
 			<div class="container">
 				<div class="navbar-header">
 
