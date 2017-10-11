@@ -123,6 +123,19 @@ elseif ( is_page(array_keys($side_loops_arr) ) ) :
     </div><!-- /#content -->
   </div>
 
+
+<?php elseif ( is_page('85159') ):
+  echo $open_side; ?>
+  <div class="col-xs-6 col-sm-4" id="new_sidebar" role="navigation">
+    <?php get_template_part('includes/new-sidebar'); ?>
+  </div>
+  <div class="col-xs-12 col-sm-8">
+    <div id="content" role="main">
+      <?php get_template_part('includes/loops/content', 'page'); ?>
+    </div><!-- /#content -->
+  </div>
+
+
 <?php else:
   echo $open_side; ?>
   <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
