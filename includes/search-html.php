@@ -16,7 +16,8 @@
         <div class="images" style="float:left; width:15%; margin-right:1.9%; ">
           <img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/hill-rom-bed-parts.png"
               alt="Hill-Rom Part P3207B01 Repair"
-              title="Hill-Rom Part P3207B01 Repair" />
+              title="Hill-Rom Part P3207B01 Repair"
+              style="max-width:100px;" />
         </div>
 
         <div style="float:left; width:57.5%;margin-right:3.5%; ">
