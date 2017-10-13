@@ -1,3 +1,9 @@
+<?php
+/* Template Name: HOME PAGE */
+get_template_part('includes/header');
+
+?>
+
 <div class="container">
   <div class="row">
     <div id="content" role="main">
@@ -70,3 +76,6 @@
   <!-- /#content -->
 </div>
 <!-- /.row -->
+</div>
+
+  <?php get_template_part('includes/footer'); ?>

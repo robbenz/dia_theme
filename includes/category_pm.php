@@ -1,4 +1,21 @@
-<?php if (function_exists('benz_add_category_headers')) benz_add_category_headers(); ?>
+<?php
+/* Template Name: Repairs - Category */
+get_template_part('includes/header');
+
+?>
+
+  <div class="container woocommerce landing_page">
+    <div class="row">
+
+      <?php woocommerce_breadcrumb(); ?>
+
+      <div class="col-xs-6" id="sidebar" role="navigation">
+        <?php get_template_part('includes/sidebar'); ?>
+      </div>
+<div class="col-xs-12 col-sm-8">
+      <div id="content" role="main">
+
+        <?php if (function_exists('benz_add_category_headers')) benz_add_category_headers(); ?>
 
 <ul class="products">
 
@@ -32,7 +49,7 @@ foreach ($pm_cats_array as $key => $value) :
         echo '<a href="' . site_url() . '/site-repairs-preventive-maintenance\/' . $sc->slug . '-repairs">';
       }
       echo '<img src="' . $image . '" />' ;
-      if (function_exists('benz_pm_img_placement')) benz_pm_img_placement();  
+      if (function_exists('benz_pm_img_placement')) benz_pm_img_placement();
       echo '<h3>' . $sc->name . ' <br>- <span style="font-weight:bold;">Repair</span></h3></a></li>';
       $counter++;
     endforeach;
@@ -111,3 +128,14 @@ endforeach; ?>
 <br>
 <strong>Calibration, Safety Checks and Regulatory Compliance</strong> – Rest easy knowing that your equipment is accurate, safe and compliant.
 <br><br>
+
+
+
+    </div>
+    </div>
+  </div>
+  <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <?php get_template_part('includes/footer'); ?>
