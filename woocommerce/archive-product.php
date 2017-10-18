@@ -113,7 +113,7 @@ global $product, $post;
 
 if ( have_posts() ) :
 
-	get_template_part('includes/sidebar');
+	get_template_part('includes/new-sidebar');
 
 	do_action( 'woocommerce_before_shop_loop' );
 
