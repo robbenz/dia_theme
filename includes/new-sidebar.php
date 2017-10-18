@@ -4,34 +4,70 @@
 .panel-body { padding:0px; }
 .panel-body table tr td { padding: 4px 0 4px 16px }
 .panel-body .table {margin-bottom: 0px; }
-.static-categories{margin-bottom: 6px}
-.static-categories .panel{margin-bottom:0;border-radius:4px}
-.static-categories .panel+.panel{margin-top:5px}
-.static-categories .panel-heading{border-bottom:0}
+.static-categories {margin-bottom: 6px}
+.static-categories .panel {margin-bottom:0; border-radius: 4px;}
+.static-categories .panel>.panel-heading {background-color: #00426a}
+.static-categories .panel+.panel{margin-top:5px;}
+.static-categories .panel-heading{border-bottom:0;}
 .static-categories .panel-heading+.panel-collapse>.list-group,.static-categories .panel-heading+.panel-collapse>.panel-body{border-top:1px solid #ddd}
 .static-categories .panel-footer{border-top:0}
 .static-categories .panel-footer+.panel-collapse .panel-body{border-bottom:1px solid #ddd}
 .part-search-panel table tr td {padding: 0;}
 .part-search-panel .navbar-form {margin: 20px 0;}
-td a {font-size: 12px;}
-.panel-heading h4.panel-title a {font-size: 14px;}
-.panel-heading {padding: 8px 14px;}
+td a {font-size: 13.5px; text-transform: capitalize;}
+td a:hover {text-transform: uppercase;}
+.panel-heading h4.panel-title a {font-size: 15px; color: #f1f1f1; text-transform: uppercase;}
+.table td:hover {background-color: #f1f1f1;}
+h4.panel-title:hover {color: #fff;}
+.select-wrap {padding: 20px; background-color: #e9e9e9; border: 2px solid #f1f1f1; border-radius: 4px;}
+
+.hospital .panel-default>.panel-heading {padding: 8px 14px; background-color: #636363; color: #fff; box-shadow: inset 0 0 0 0 #00426a;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	transition: all ease 0.3s;}
+.hospital .panel-default>.panel-heading:hover {color: #fff; box-shadow: inset 0 100px 0 0 #00426a; -webkit-transition: all ease 0.3s;
+-moz-transition: all ease 0.3s;
+transition: all ease 0.3s;}
+
+.education .panel-default>.panel-heading {padding: 8px 14px; background-color: #636363; color: #fff; box-shadow: inset 0 0 0 0 #ffad00;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	transition: all ease 0.3s;}
+.education .panel-default>.panel-heading:hover {color: #fff; box-shadow: inset 0 100px 0 0 #ffad00; -webkit-transition: all ease 0.3s;
+-moz-transition: all ease 0.3s;
+transition: all ease 0.3s;}
+
 </style>
+
+<script type="text/javascript">
+  var headings = document.getElementsByClassName("panel-heading");
+  console.log(headings);
+  for (var i = 0; i < headings.length; i++) {
+    console.log(headings[i]);
+    headings[i].addEventListener('click', function(e) {
+      console.log(e);
+      this.style.backgroundColor = "ccc";
+    })
+  }
+
+</script>
 
 <?php //get_template_part('includes/navbar-search'); ?>
 
 
-<div class="container">
-    <div class="row">
+<!-- <div class="container"> -->
+    <!-- <div class="row"> -->
         <div class="col-sm-3 col-md-3">
-          <select id="facility_select">
-            <option value="" selected disabled>SHOP BY FACILITY</option>
-            <option value="hospital">hospital</option>
-            <option value="education">education</option>
-            <option value="long-term-care">three</option>
-            <option value="four">four</option>
-            <option value="five">five</option>
-          </select>
+          <div class="select-wrap">
+            <select id="facility_select">
+              <option value="" selected disabled>SHOP BY FACILITY</option>
+              <option value="hospital">hospital</option>
+              <option value="education">education</option>
+              <option value="long-term-care">three</option>
+              <option value="four">four</option>
+              <option value="five">five</option>
+            </select>
+          </div>
             <div class="panel-group hospital sidebar-replace" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -1521,5 +1557,5 @@ td a {font-size: 12px;}
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    <!-- </div> -->
+<!-- </div> -->
