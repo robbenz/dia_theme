@@ -117,6 +117,7 @@ asort($vet_product_cats);
 <?php $_x=1; foreach ($dia_product_cats as $single_cat) : $_x ++;
 	$grabID = get_term_by('name', $single_cat, 'product_cat');
 		 $product_cat_ID = $grabID->term_id;
+		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
 		 $args = array(
 				 'hierarchical' => 1,
 				 'show_option_none' => '',
@@ -139,7 +140,7 @@ asort($vet_product_cats);
 					<table class="table">
 						<tr>
 							<td>
-								<a href="#">VIEW ALL <?php echo $single_cat; ?></a>
+								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
 							</td>
 						</tr>
 						<?php foreach ($subcats as $sc) :
