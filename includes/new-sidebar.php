@@ -100,8 +100,8 @@ asort($pt_product_cats);
 asort($vet_product_cats);
 
 
-function sweet_dia_cats_menu($which_array = array(), $which_class) {
-$_x=1;
+function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counter) {
+	$_x = $which_counter;
 	foreach ($which_array as $single_cat) : $_x ++;
 		$grabID = get_term_by('name', $single_cat, 'product_cat');
 			 $product_cat_ID = $grabID->term_id;
@@ -172,14 +172,14 @@ endforeach;
 
 <?php
 
-sweet_dia_cats_menu($hospital_product_cats, "hospital" );
-sweet_dia_cats_menu($nursing_product_cats, "education" );
-sweet_dia_cats_menu($sls_product_cats, "sls" );
-sweet_dia_cats_menu($ltc_product_cats, "long-term-care" );
-sweet_dia_cats_menu($emsedu_product_cats, "emsedu" );
-sweet_dia_cats_menu($emsfr_product_cats, "emsfr" );
-sweet_dia_cats_menu($pt_product_cats, "physical-therapy" );
-sweet_dia_cats_menu($vet_product_cats, "veterinary" );
+sweet_dia_cats_menu($hospital_product_cats, "hospital",1 );
+sweet_dia_cats_menu($nursing_product_cats, "education",100 );
+sweet_dia_cats_menu($sls_product_cats, "sls",200 );
+sweet_dia_cats_menu($ltc_product_cats, "long-term-care",300 );
+sweet_dia_cats_menu($emsedu_product_cats, "emsedu",400 );
+sweet_dia_cats_menu($emsfr_product_cats, "emsfr",500 );
+sweet_dia_cats_menu($pt_product_cats, "physical-therapy",600 );
+sweet_dia_cats_menu($vet_product_cats, "veterinary",700 );
 
  ?>
 
