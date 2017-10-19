@@ -117,7 +117,7 @@
           });
 
 
-          $('.close-all').click(function(e){$('.collapse').collapse('hide');})
+          // $('.close-all').click(function(e){$('.collapse').collapse('hide');})
         /*** add active look to top menu pages ***/
         /*
         $(function() {

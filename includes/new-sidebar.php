@@ -116,6 +116,9 @@ asort($vet_product_cats);
 			<option value="five">Veterinary</option>
     </select>
   </div>
+
+<?php $_selectedOption = option.value ?>
+
 <?php $_x=1; foreach ($dia_product_cats as $single_cat) : $_x ++;
 	$grabID = get_term_by('name', $single_cat, 'product_cat');
 		 $product_cat_ID = $grabID->term_id;
@@ -134,7 +137,7 @@ asort($vet_product_cats);
 		<div class="panel panel-default">
 		  <div class="panel-heading">
 		    <h4 class="panel-title">
-		      <a class="close-all" data-toggle="collapse" data-parent="#accordion<?php echo $_x; ?>" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
+		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
 		    </h4>
 		  </div>
 			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
@@ -161,6 +164,210 @@ asort($vet_product_cats);
 
 <?php endforeach; ?>
 
+
+	<hr>
+	<div class="static-categories" id="">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic1">parts search</a>
+				</h4>
+			</div>
+			<div id="collapseStatic1" class="panel-collapse collapse">
+				<div class="panel-body part-search-panel">
+					<table class="table">
+						<tr>
+							<td>
+								<?php get_template_part('includes/navbar-search'); ?>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+					<h4 class="panel-title">
+							<a data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic2">service | repairs</a>
+					</h4>
+			</div>
+			<div id="collapseStatic2" class="panel-collapse collapse">
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<td>
+								<a href="#">hospital bed service</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">infusion pump service</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">component repair</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">exam table service</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">headwall installation</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">patient monitor repair</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">stretcher repair</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic3">manufacturers</a>
+				</h4>
+			</div>
+			<div id="collapseStatic3" class="panel-collapse collapse">
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<td>
+								<a href="#">VIEW ALL</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">alaris</a>
+							</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">baxter</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">hill-rom</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">invacare</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">hausted</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">hospira</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">medline</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">midmark</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">simlabsolutions</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">span america</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">stryker</a>
+								</td>
+						</tr>
+						<tr>
+								<td>
+										<a href="#">zoll</a>
+								</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic4">contact us</a>
+				</h4>
+			</div>
+			<div id="collapseStatic4" class="panel-collapse collapse">
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<td>
+								<a href="#">contact</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">terms and conditions</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">shipping and returns</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic5">my account</a>
+				</h4>
+			</div>
+			<div id="collapseStatic5" class="panel-collapse collapse">
+				<div class="panel-body">
+					<table class="table">
+						<tr>
+							<td>
+								<a href="#">cart</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">account settings</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">logout</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
