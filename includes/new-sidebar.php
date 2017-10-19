@@ -114,8 +114,6 @@ asort($vet_product_cats);
       <option value="five">five</option>
     </select>
   </div>
-
-
 <?php $_x=1; foreach ($dia_product_cats as $single_cat) : $_x ++; ?>
 	<div class="panel-group hospital sidebar-replace" id="accordion<?php echo $_x; ?>">
 		<div class="panel panel-default">
