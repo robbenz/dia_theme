@@ -1,5 +1,20 @@
-<?php
+<?php /* Template Name: Long Term Care */
+get_template_part('includes/header');
 
+?>
+
+<div class="container woocommerce landing_page">
+  <div class="row">
+    <?php woocommerce_breadcrumb(); ?>
+    <img class="header-img" src="<?php echo site_url(); ?>/wp-content/imgs/includes/ltc.png" />
+
+    <div class="col-xs-6" id="sidebar" role="navigation">
+      <?php get_template_part('includes/sidebar'); ?>
+    </div>
+
+    <div class="col-xs-12 col-sm-8">
+
+      <?php
 $ltcLinks = array(
   array(
     "name" => "Batteries, Cables &amp; Sensors",
@@ -98,3 +113,12 @@ $ltcLinks = array(
 if(function_exists('benz_loop_special_cats')) benz_loop_special_cats($ltcLinks);
 
 ?>
+
+    </div>
+  </div>
+</div>
+<!-- /.row -->
+</div>
+<!-- /.container -->
+
+<?php get_template_part('includes/footer'); ?>
