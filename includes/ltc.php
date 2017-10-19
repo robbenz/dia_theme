@@ -22,7 +22,7 @@ $ltcLinks = array(
     "slug" => "batteries-cables-sensors/" ),
   array(
     "name" => "Bariatric Care",
-    "img"  => "2015/07/MDS806450_PRI03-258x275.jpg",
+    "img"  => "2017/05/Bariatric_patient_lift-250x275.jpg",
     "slug" => "bariatric-care/" ),
   array(
     "name" => "Burke Bariatric Beds",
@@ -62,7 +62,7 @@ $ltcLinks = array(
     "slug" => "infection-control/" ),
   array(
     "name" => "Infusion &amp; Dialysis",
-    "img"  => "2015/02/Alaris-Imed-Gemini-PC-4-Infusion-PumpPC-4_400x400-258x275.png",
+    "img"  => "2015/05/Alaris-Medley-infusion-pump-combo-IV010519_400x400-258x275.png",
     "slug" => "infusion-dialysis/" ),
   array(
     "name" => "Knee Walkers",
@@ -74,19 +74,19 @@ $ltcLinks = array(
     "slug" => "supplies-2/" ),
   array(
     "name" => "Mobility",
-    "img"  => "2015/07/MDS806250NH2_PRI02-258x275.jpg",
+    "img"  => "2016/07/Lynx_LX3_blue400-250x275.gif",
     "slug" => "mobility/" ),
   array(
     "name" => "Obstetrics &amp; Pediatrics",
-    "img"  => "2015/02/Pedigo-Pediatric-Stretcher-Crib-500_400x400-258x275.png",
-    "slug" => "obstetrics-pediatrics/" ),
+    "img"  => "2015/03/Novum-Medical-Standard-Infant-Crib-1980_400x400-258x275.png",
+    "slug" => "medical-pediatrics-obstetrics/" ),
   array(
     "name" => "Refrigerators &amp; Freezers",
-    "img"  => "2015/04/FF511LBIMEDDT-11960-258x275.jpg",
+    "img"  => "2015/04/FF590VAC-31057-main-258x275.jpg",
     "slug" => "refrigerators-freezers/" ),
   array(
     "name" => "Respiratory",
-    "img"  => "2015/02/Puritan-Bennett-760-Ventilator_400x400-258x275.png",
+    "img"  => "2015/03/Laerdal-Suction-Unit-RS014201_400x400-258x275.png",
     "slug" => "respiratory/" ),
   array(
     "name" => "Rollators",
@@ -94,11 +94,11 @@ $ltcLinks = array(
     "slug" => "mobility/rollators/" ),
   array(
     "name" => "Surgical",
-    "img"  => "2015/02/Reconditioned-Amsco-3080-Surgical-Table_400x400-258x275.png",
+    "img"  => "2015/03/Reconditioned-Amsco-3080-Surgical-Table_400x400-258x275.png",
     "slug" => "surgical/" ),
   array(
     "name" => "Walkers",
-    "img"  => "2015/07/PF05009_PRI01-258x275.jpg",
+    "img"  => "2015/07/MDS86410URRH_PRI01-258x275.jpg",
     "slug" => "mobility/walkers/" ),
   array(
     "name" => "Walking Aid Accessories",
