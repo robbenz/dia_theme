@@ -99,6 +99,57 @@ asort($emsfr_product_cats);
 asort($pt_product_cats);
 asort($vet_product_cats);
 
+
+function sweet_dia_cats_menu($which_array = array(), $which_class) {
+$_x=1;
+	foreach ($which_array as $single_cat) : $_x ++;
+		$grabID = get_term_by('name', $single_cat, 'product_cat');
+			 $product_cat_ID = $grabID->term_id;
+			 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
+			 $args = array(
+					 'hierarchical' => 1,
+					 'show_option_none' => '',
+					 'hide_empty' => 0,
+					 'parent' => $product_cat_ID,
+					 'taxonomy' => 'product_cat'
+		);
+		$subcats = get_categories($args);
+
+	?>
+		<div class="panel-group <?php echo $which_class; ?> sidebar-replace" id="accordion<?php echo $_x; ?>">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h4 class="panel-title">
+			      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
+			    </h4>
+			  </div>
+				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
+					<div class="panel-body">
+						<table class="table">
+							<tr>
+								<td>
+									<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
+								</td>
+							</tr>
+							<?php foreach ($subcats as $sc) :
+	              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
+	                <tr>
+	                  <td style="padding-left: 20px;" >
+	                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
+	                	</td>
+	                </tr>
+	            <?php endforeach; ?>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<?php
+endforeach;
+
+} // sweet_dia_cats_menu
+
 ?>
 
 
@@ -119,374 +170,18 @@ asort($vet_product_cats);
   </div>
 
 
-<?php $_x=1; foreach ($hospital_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
+<?php
 
-?>
-	<div class="panel-group hospital sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
+sweet_dia_cats_menu($hospital_product_cats, "hospital" );
+sweet_dia_cats_menu($nursing_product_cats, "education" );
+sweet_dia_cats_menu($sls_product_cats, "sls" );
+sweet_dia_cats_menu($ltc_product_cats, "long-term-care" );
+sweet_dia_cats_menu($emsedu_product_cats, "emsedu" );
+sweet_dia_cats_menu($emsfr_product_cats, "emsfr" );
+sweet_dia_cats_menu($pt_product_cats, "physical-therapy" );
+sweet_dia_cats_menu($vet_product_cats, "veterinary" );
 
-<?php endforeach; ?>
-
-
-
-<?php $_x=1; foreach ($nursing_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-
-?>
-	<div class="panel-group education sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<?php endforeach; ?>
-
-<?php $_x=1; foreach ($sls_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-
-?>
-	<div class="panel-group sls sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<?php endforeach; ?>
-
-<?php $_x=1; foreach ($ltc_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-
-?>
-	<div class="panel-group long-term-care sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<?php endforeach; ?>
-
-<?php $_x=1; foreach ($emsedu_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-
-?>
-	<div class="panel-group emsedu sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<?php endforeach; ?>
-
-<?php $_x=1; foreach ($emsfr_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-
-?>
-	<div class="panel-group emsfr sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<?php endforeach; ?>
-
-<?php $_x=1; foreach ($pt_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-
-?>
-	<div class="panel-group physical-therapy sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<?php endforeach; ?>
-
-<?php $_x=1; foreach ($vet_product_cats as $single_cat) : $_x ++;
-	$grabID = get_term_by('name', $single_cat, 'product_cat');
-		 $product_cat_ID = $grabID->term_id;
-		 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-		 $args = array(
-				 'hierarchical' => 1,
-				 'show_option_none' => '',
-				 'hide_empty' => 0,
-				 'parent' => $product_cat_ID,
-				 'taxonomy' => 'product_cat'
-	);
-	$subcats = get_categories($args);
-
-?>
-	<div class="panel-group veterinary sidebar-replace" id="accordion<?php echo $_x; ?>">
-		<div class="panel panel-default">
-		  <div class="panel-heading">
-		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
-		    </h4>
-		  </div>
-			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr>
-							<td>
-								<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
-							</td>
-						</tr>
-						<?php foreach ($subcats as $sc) :
-              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-                <tr>
-                  <td style="padding-left: 20px;" >
-                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-                	</td>
-                </tr>
-            <?php endforeach; ?>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-
-<?php endforeach; ?>
-
-
-
-
-
-
-
+ ?>
 
 
 
