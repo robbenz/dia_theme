@@ -18,7 +18,7 @@ get_template_part('includes/header');
           <div class="main-contact-wrap col-12 col-sm-6 col-md-8">
             <h3>WHO ARE WE?</h3>
             <p>DiaMedical USA, along with its subsidiaries MedMattress.com and SimLabSolutions, is a manufacturer and global distributor of healthcare products, supplies, mattresses and replacement parts. We lead the industry in Healthcare education by offering
-              full service solutions in outfitting your simulation labs with products such as hospitals beds, training headwalls, infusion pumps, simulated IV fluids, loaded crash carts, and more!</p>
+              full service solutions in outfitting your simulation labs with products such as hospital beds, training headwalls, infusion pumps, simulated IV fluids, loaded crash carts, and more!</p>
 
             <h3>OUR MISSION</h3>
             <p>We understand how tough it is to for hospitals and universities to build a budget without making sacrifices. That’s why we have no hidden fees nor built-in shipping costs! Our customers always have the lowest prices for their products without
@@ -54,7 +54,7 @@ get_template_part('includes/header');
               service and helping our customers and carriers grow their businesses.
             </p>
 
-            <h3 style="margin: 4px 0px; font-size: 25px;">Contact Carrers Department</h3>
+            <h3 style="margin: 4px 0px; font-size: 25px;">Contact Careers Department</h3>
             <p>Phone: (877) 593-6011
               <br> E-mail:
               <a href="mailto:Careers@diamedicalusa.com">Careers@DiaMedicalUSA.com</a>
