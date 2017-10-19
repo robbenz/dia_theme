@@ -115,6 +115,9 @@
             $('.sidebar-replace').slideUp();
             $('.' + $(this).val()).slideDown();
           });
+
+
+          $('.close-all').click(function(e){$('.collapse').collapse('hide');})
         /*** add active look to top menu pages ***/
         /*
         $(function() {

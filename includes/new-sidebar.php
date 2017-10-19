@@ -105,7 +105,7 @@ asort($vet_product_cats);
 <div class="col-sm-3 col-md-3">
   <div class="select-wrap">
     <select id="facility_select">
-      <option value="" selected disabled>SHOP BY FACILITY</option>
+      <option value="" selected disabled>FILTER BY FACILITY</option>
       <option value="view-all">VIEW ALL CATEGORIES</option>
       <option value="hospital">hospital</option>
       <option value="education">education</option>
@@ -114,12 +114,24 @@ asort($vet_product_cats);
       <option value="five">five</option>
     </select>
   </div>
-<?php $_x=1; foreach ($dia_product_cats as $single_cat) : $_x ++; ?>
-	<div class="panel-group hospital sidebar-replace" id="accordion<?php echo $_x; ?>">
+<?php $_x=1; foreach ($dia_product_cats as $single_cat) : $_x ++;
+	$grabID = get_term_by('name', $single_cat, 'product_cat');
+		 $product_cat_ID = $grabID->term_id;
+		 $args = array(
+				 'hierarchical' => 1,
+				 'show_option_none' => '',
+				 'hide_empty' => 0,
+				 'parent' => $product_cat_ID,
+				 'taxonomy' => 'product_cat'
+	);
+	$subcats = get_categories($args);
+
+?>
+	<div class="panel-group hospital" id="accordion<?php echo $_x; ?>">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
 		    <h4 class="panel-title">
-		      <a data-toggle="collapse" data-parent="#accordion<?php echo $_x ?>" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
+		      <a class="close-all" data-toggle="collapse" data-parent="#accordion<?php echo $_x; ?>" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
 		    </h4>
 		  </div>
 			<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
@@ -130,11 +142,14 @@ asort($vet_product_cats);
 								<a href="#">VIEW ALL <?php echo $single_cat; ?></a>
 							</td>
 						</tr>
-						<tr>
-							<td style="padding-left: 20px;" >
-								<a href="#">ITERATION FOR SUB CATEGORIES</a>
-							</td>
-						</tr>
+						<?php foreach ($subcats as $sc) :
+              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
+                <tr>
+                  <td style="padding-left: 20px;" >
+                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
+                	</td>
+                </tr>
+            <?php endforeach; ?>
 					</table>
 				</div>
 			</div>
