@@ -110,7 +110,7 @@
           });
           /*** END ***/
 
-          // $('.sidebar-replace').hide();
+          $('.sidebar-replace').hide();
           $('#facility_select').change(function() {
             $('.sidebar-replace').slideUp();
             $('.' + $(this).val()).slideDown();

@@ -107,11 +107,13 @@ asort($vet_product_cats);
     <select id="facility_select">
       <option value="" selected disabled>FILTER BY FACILITY</option>
       <option value="view-all">VIEW ALL CATEGORIES</option>
-      <option value="hospital">hospital</option>
-      <option value="education">education</option>
-      <option value="long-term-care">three</option>
-      <option value="four">four</option>
-      <option value="five">five</option>
+      <option value="hospital">Hospitals</option>
+      <option value="education">Nursing Schools</option>
+      <option value="long-term-care">Long Term Care</option>
+      <option value="four">EMS Education</option>
+      <option value="five">EMS Field Ready</option>
+      <option value="five">Physical Therapy</option>
+			<option value="five">Veterinary</option>
     </select>
   </div>
 <?php $_x=1; foreach ($dia_product_cats as $single_cat) : $_x ++;
@@ -128,7 +130,7 @@ asort($vet_product_cats);
 	$subcats = get_categories($args);
 
 ?>
-	<div class="panel-group hospital" id="accordion<?php echo $_x; ?>">
+	<div class="panel-group hospital sidebar-replace" id="accordion<?php echo $_x; ?>">
 		<div class="panel panel-default">
 		  <div class="panel-heading">
 		    <h4 class="panel-title">
@@ -156,7 +158,6 @@ asort($vet_product_cats);
 			</div>
 		</div>
 	</div>
-
 
 <?php endforeach; ?>
 
