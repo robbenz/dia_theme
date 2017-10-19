@@ -21,22 +21,32 @@ td a {font-size: 13.5px; text-transform: capitalize;}
 h4.panel-title:hover {color: #fff;}
 .select-wrap {padding: 20px; background-color: #e9e9e9; border: 2px solid #f1f1f1; border-radius: 4px;}
 
-.hospital .panel-default>.panel-heading {padding: 6px 12px; background-color: #636363; color: #fff; box-shadow: inset 0 0 0 0 #00426a;
-	-webkit-transition: all ease 0.3s;
-	-moz-transition: all ease 0.3s;
-	transition: all ease 0.3s;}
-.hospital .panel-default>.panel-heading:hover {color: #fff; box-shadow: inset 0 100px 0 0 #00426a; -webkit-transition: all ease 0.3s;
--moz-transition: all ease 0.3s;
-transition: all ease 0.3s;}
+.panel-group .panel-default>.panel-heading {padding: 6px 12px; background-color: #636363; color: #fff; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; -webkit-transition: all ease 0.3s; transition: all ease 0.3s;}
+.panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; -webkit-transition: all ease 0.3s; transition: all ease 0.3s;}
 
-.education .panel-default>.panel-heading {padding: 8px 14px; background-color: #636363; color: #fff; box-shadow: inset 0 0 0 0 #ffad00;
-	-webkit-transition: all ease 0.3s;
-	-moz-transition: all ease 0.3s;
-	transition: all ease 0.3s;}
-.education .panel-default>.panel-heading:hover {color: #fff; box-shadow: inset 0 100px 0 0 #ffad00; -webkit-transition: all ease 0.3s;
--moz-transition: all ease 0.3s;
-transition: all ease 0.3s;}
+.hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
+.hospital .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a;}
 
+.education .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(39, 116, 174);box-shadow: inset 0 0 0 0 rgb(39, 116, 174);}
+.education .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(39, 116, 174); box-shadow: inset 0 100px 0 0 rgb(39, 116, 174);}
+
+.sls .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #ffad00;box-shadow: inset 0 0 0 0 #ffad00;}
+.sls .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #ffad00; box-shadow: inset 0 100px 0 0 #ffad00;}
+
+.long-term-care .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(114, 208, 244);box-shadow: inset 0 0 0 0 rgb(114, 208, 244);}
+.long-term-care .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(114, 208, 244); box-shadow: inset 0 100px 0 0 rgb(114, 208, 244);}
+
+.emsedu .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
+.emsedu .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(214, 0, 28); box-shadow: inset 0 100px 0 0 rgb(214, 0, 28);}
+
+.emsfr .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
+.emsfr .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(214, 0, 28); box-shadow: inset 0 100px 0 0 rgb(214, 0, 28);}
+
+.physical-therapy .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(158, 113, 162);box-shadow: inset 0 0 0 0 rgb(158, 113, 162);}
+.physical-therapy .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(158, 113, 162); box-shadow: inset 0 100px 0 0 rgb(158, 113, 162);}
+
+.veterinary .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(65, 132, 141);box-shadow: inset 0 0 0 0 rgb(65, 132, 141);}
+.veterinary .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(65, 132, 141); box-shadow: inset 0 100px 0 0 rgb(65, 132, 141);}
 </style>
 
 <?php //get_template_part('includes/navbar-search');
@@ -172,14 +182,15 @@ endforeach;
 
 <?php
 
-sweet_dia_cats_menu($hospital_product_cats, "hospital",1 );
-sweet_dia_cats_menu($nursing_product_cats, "education",100 );
-sweet_dia_cats_menu($sls_product_cats, "sls",200 );
-sweet_dia_cats_menu($ltc_product_cats, "long-term-care",300 );
-sweet_dia_cats_menu($emsedu_product_cats, "emsedu",400 );
-sweet_dia_cats_menu($emsfr_product_cats, "emsfr",500 );
-sweet_dia_cats_menu($pt_product_cats, "physical-therapy",600 );
-sweet_dia_cats_menu($vet_product_cats, "veterinary",700 );
+sweet_dia_cats_menu($dia_product_cats, "view-all", 800);
+sweet_dia_cats_menu($hospital_product_cats, "hospital", 1 );
+sweet_dia_cats_menu($nursing_product_cats, "education", 100 );
+sweet_dia_cats_menu($sls_product_cats, "sls", 200 );
+sweet_dia_cats_menu($ltc_product_cats, "long-term-care", 300 );
+sweet_dia_cats_menu($emsedu_product_cats, "emsedu", 400 );
+sweet_dia_cats_menu($emsfr_product_cats, "emsfr", 500 );
+sweet_dia_cats_menu($pt_product_cats, "physical-therapy", 600 );
+sweet_dia_cats_menu($vet_product_cats, "veterinary", 700 );
 
  ?>
 
@@ -214,41 +225,13 @@ sweet_dia_cats_menu($vet_product_cats, "veterinary",700 );
 			<div id="collapseStatic2" class="panel-collapse collapse">
 				<div class="panel-body">
 					<table class="table">
-						<tr>
-							<td>
-								<a href="#">hospital bed service</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">infusion pump service</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">component repair</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">exam table service</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">headwall installation</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">patient monitor repair</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">stretcher repair</a>
-							</td>
-						</tr>
+						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">hospital bed service</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">infusion pump service</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/product-category/components-service-repairs/">component repair</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/">exam table service</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/">headwall installation</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs/">patient monitor repair</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/">stretcher repair</a></td></tr>
 					</table>
 				</div>
 			</div>
@@ -262,71 +245,19 @@ sweet_dia_cats_menu($vet_product_cats, "veterinary",700 );
 			<div id="collapseStatic3" class="panel-collapse collapse">
 				<div class="panel-body">
 					<table class="table">
-						<tr>
-							<td>
-								<a href="#">VIEW ALL</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">alaris</a>
-							</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">baxter</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">hill-rom</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">invacare</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">hausted</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">hospira</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">medline</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">midmark</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">simlabsolutions</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">span america</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">stryker</a>
-								</td>
-						</tr>
-						<tr>
-								<td>
-										<a href="#">zoll</a>
-								</td>
-						</tr>
+						<tr><td><a href="<?php echo site_url(); ?>/manufacturers/">VIEW ALL</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=alaris&post_type=product">alaris</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=baxter&post_type=product">baxter</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=hausted&post_type=product">hausted</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">hill-rom</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=hospira&post_type=product">hospira</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=invacare&post_type=product">invacare</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=medline&post_type=product">medline</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=midmark&post_type=product">midmark</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/simlabsolutions/">SimLabSolutions</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=span+america&post_type=product">span america</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=stryker&post_type=product">stryker</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=zoll&post_type=product">zoll</a></td></tr>
 					</table>
 				</div>
 			</div>
@@ -340,21 +271,9 @@ sweet_dia_cats_menu($vet_product_cats, "veterinary",700 );
 			<div id="collapseStatic4" class="panel-collapse collapse">
 				<div class="panel-body">
 					<table class="table">
-						<tr>
-							<td>
-								<a href="#">contact</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">terms and conditions</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">shipping and returns</a>
-							</td>
-						</tr>
+						<tr><td><a href="<?php echo site_url(); ?>/contact-us/">contact</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/terms-conditions">terms and conditions</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/shipping-returns">shipping and returns</a></td></tr>
 					</table>
 				</div>
 			</div>
@@ -368,21 +287,9 @@ sweet_dia_cats_menu($vet_product_cats, "veterinary",700 );
 			<div id="collapseStatic5" class="panel-collapse collapse">
 				<div class="panel-body">
 					<table class="table">
-						<tr>
-							<td>
-								<a href="#">cart</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">account settings</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#">logout</a>
-							</td>
-						</tr>
+						<tr><td><a href="<?php echo site_url(); ?>/cart/">cart</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/my-account/">account settings</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/wp-login.php?action=logout">logout</a></td></tr>
 					</table>
 				</div>
 			</div>

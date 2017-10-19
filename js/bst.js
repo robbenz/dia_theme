@@ -111,6 +111,7 @@
           /*** END ***/
 
           $('.sidebar-replace').hide();
+          $('.view-all').show();
           $('#facility_select').change(function() {
             $('.sidebar-replace').slideUp();
             $('.' + $(this).val()).slideDown();
