@@ -458,8 +458,9 @@ body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
 /* Product Slider */
 .wpb_area_title { display:none !important;}
 .wpb_slider_area{ clear:both; margin-top:10px;}
-.grid figcaption h3 { font-weight:500; font-size:1.2em; padding: 0 4px 4px 4px; }
+.grid figcaption h3 { font-weight:500 !important; font-size:1.12em; padding: 0 4px 4px 4px; }
 .cs-style-3 figcaption{height: auto !important;background: rgba(0,0,0,0.7) !important;}
+body.page-template-nursing .wpb-wps-slider-item {padding: 0.75em 0.3em !important; }  pro_title
 /* END */
 
 /*footer*/
