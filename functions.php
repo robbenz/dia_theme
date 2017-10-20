@@ -475,12 +475,7 @@ function BENZ_wc_order_email_skus( $table, $order ) {
 	wc_get_template( $template, array(
 		'order'                 => $order,
 		'items'                 => $order->get_items(),
-	//	'show_download_links'   => $show_download_links,
 		'show_sku'              => true
-	//	'show_purchase_note'    => $show_purchase_note,
-//		'show_image'            => $show_image,
-	//	'image_size'            => $image_size
-
 	) );
 
 	return ob_get_clean();
