@@ -22,6 +22,9 @@ get_template_part('includes/header');
 
           <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '70956' ); } ?>
 
+          <?php echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$phpstuff.'"]' ); ?>
+
+
           <br />
           <div class="ns_home_flt-lft" id="hospitalbuttonhome"><a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-home-2.png" alt="hospital beds"
