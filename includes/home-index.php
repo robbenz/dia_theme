@@ -42,7 +42,7 @@ get_template_part('includes/header');
 
       </div>
       <?php
-        // echo do_shortcode('[wpb-product-slider product_type="featured"]');
+         echo do_shortcode('[wpb-product-slider product_type="featured"]');
       //  echo do_shortcode('[wpb-product-slider product_type="category" category="5235"]');
 
       ?>
