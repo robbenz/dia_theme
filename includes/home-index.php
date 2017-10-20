@@ -41,11 +41,8 @@ get_template_part('includes/header');
         </div>
 
       </div>
-      <?php echo do_shortcode('[wpb-product-slider product_type="featured"]'); // new try
-            echo do_shortcode('[wpb-product-slider posts="12"]'); // old
-            echo do_shortcode('[wpb-product-slider product_type="category" category="10831,22,26,33,37"]') ;
-
-
+      <?php echo do_shortcode('[wpb-product-slider category="10837"]'); 
+      echo do_shortcode('[wpb-feature-product title="Feature Products"]');
       ?>
     </div>
     <!-- /#content -->
