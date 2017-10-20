@@ -1,4 +1,4 @@
-<style>
+/*<style>
 .glyphicon { margin-right:10px; }
 .panel-group { margin: 6px 0; }
 .panel-body { padding:0px; }
@@ -40,7 +40,7 @@ h4.panel-title:hover {color: #fff;}
 .veterinary .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(65, 132, 141); box-shadow: inset 0 100px 0 0 rgb(65, 132, 141);}
 #collapseStatic1 div.form-group {width:76%;}
 #collapseStatic1 div.form-group input {width:100%;}
-</style>
+</style>*/
 
 <?php
 
