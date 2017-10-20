@@ -22,7 +22,23 @@ get_template_part('includes/header');
 
           <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '70956' ); } ?>
 
-          <?php echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$phpstuff.'"]' ); ?>
+          <?php
+          global $wpdb;
+          $result = array();
+          foreach( $wpdb->get_results('SELECT post_id FROM wp_postmeta WHERE meta_key = "ns_featured_slider" AND meta_value = "yes" ') as $key => $row) {
+            $ns_feat_id = $row->post_id;
+            array_push($result, $ns_feat_id);
+          }
+
+          $ft_count = count($result);
+
+          if ($ft_count >= 5 ) {
+            $clean_ns_ft =  implode (",", $result);
+            echo '<h3 class="slider-headers">Featured Products</h3>';
+            echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$clean_ns_ft.'"]' );
+          }
+
+          ?>
 
 
           <br />
@@ -59,7 +75,24 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems
           <a style="margin-top:1em;" href="#" class="eModal-2">
 <img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education-hv.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png';"/></a>
 
-          <?php // echo do_shortcode('[wpb-feature-product title="Feature Products"]'); ?>
+<?php
+
+$sale_result = array();
+foreach( $wpdb->get_results('SELECT post_id FROM wp_postmeta WHERE meta_key = "ns_sale_slider" AND meta_value = "yes" ') as $key => $row) {
+  $ns_sale_id = $row->post_id;
+  array_push($sale_result, $ns_sale_id);
+}
+
+$sale_count = count($sale_result);
+
+if ($sale_count >= 5 ) {
+  $clean_ns_sale =  implode (",", $sale_result);
+  echo '<h3 class="slider-headers">Recently Discounted Items</h3>';
+  echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$clean_ns_sale.'"]' );
+}
+
+?>
+
 
           <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
             <br /> At DiaMedical USA, we value Healthcare Education. We want to make sure your medical students and nursing students are learning quickly and effectively as they move from the classroom to medical facilities. Our hospital beds are of the
