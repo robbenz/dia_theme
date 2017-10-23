@@ -52,6 +52,9 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 ?>
 
 <?php if ($pm_check == 'yes') : ?>
+	 <?php if (! $shipping_class == 'free-shipping' ) : ?>
+		 <div id="ship-repair-container" class="">
+	 <?php endif; ?>
   <div id="repair-row" class="">
     <div id="p_maint-productpage">
 	    <a href="<?php echo site_url() . '/' . $pm_link; ?>"><img class="maint-img" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" /></a>
@@ -69,6 +72,7 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
     </div>
   </div> <!-- end row -->
 </div> <!-- end container -->
+
 <?php elseif ( $shipping_class == 'free-shipping' && $pm_check !== 'yes')  : ?>
 </div> <!-- ship-repair-container -->
 
