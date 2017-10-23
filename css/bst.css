@@ -338,6 +338,8 @@ div.thumbnails{height:100px;}
 .maint-img {float:left; margin-right:0.5em; width:84px}
 .shipping-img {float:left; margin-right:0.5em;}
 .maint-text{padding-top:3px; margin-bottom: 1em; font-size:0.87em;}
+span.price del, span.price ins {display: block;}
+.woocommerce-variation-price {padding-bottom: 8px;}
 /* END */
 
 /* Product Add Ons */
