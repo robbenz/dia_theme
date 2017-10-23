@@ -988,6 +988,8 @@ h3.slider-headers{font-family: 'ristretto_promedium', Arial, sans-serif; color:#
 #hospital_content_wrap .pp_search_container {position:absolute !important; bottom:0px !important; left:6px !important; width:350px !important;}
 .lft-img-home .pp_search_container {position:absolute !important; bottom:0px !important; left:9px !important; width:80% !important;}
 
+button#searchsubmit.btn.btn-default {border: 1px solid rgb(204,204,204);}
+
 .lft-img-home #searchform{position:absolute; bottom: -2px; left: 16px; background-color: #ffad00; padding: 0.36em; width: 289px; border-radius: 0.3em; }
 .lft-img-home #searchform #s{width:230px; border-radius: 0; }
 .lft-img-home #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
