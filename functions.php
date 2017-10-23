@@ -1190,6 +1190,43 @@ function t_brady_cart_page_button() {
 /*** END ***/
 
 
+
+
+/*** Repairs Special Image   ***/
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+
+
+ if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
+	function woocommerce_template_loop_product_thumbnail() {
+		echo woocommerce_get_product_thumbnail();
+	}
+ }
+
+
+ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
+
+	function woocommerce_get_product_thumbnail( $size = 'shop_catalog' ) {
+		global $post, $woocommerce;
+    $output = '';
+
+    if ( has_post_thumbnail() ) {
+      $output .= get_the_post_thumbnail( $post->ID, $size );
+    } else {
+      $output .= '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" width="' . $placeholder_width . '" height="' . $placeholder_height . '" />';
+    }
+
+    if ( is_product_category('10829') ){
+      $output .= '<img style="width:84px;float: right;margin-top: -98px;"src="'.site_url().'/wp-content/imgs/repairs-preventive-maintenance.png" /><div style="clear:both;"></div>';
+    }
+			return $output;
+	}
+}
+
+/*** END ***/
+
+
+
 /*** Schedule Cleaning up the fucking db options that RAQ plugin makes every fucking day ***/
 
 /*

@@ -72,9 +72,6 @@ onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ns-
 onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome-hover.png';"
 onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/ems_packs_nshome.png';"/></a></div>
 
-          <a style="margin-top:1em;" href="#" class="eModal-2">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education-hv.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png';"/></a>
-
 <?php
 
 $sale_result = array();
@@ -87,11 +84,16 @@ $sale_count = count($sale_result);
 
 if ($sale_count >= 5 ) {
   $clean_ns_sale =  implode (",", $sale_result);
-  echo '<h3 class="slider-headers">Recently Discounted Items</h3>';
+  echo '<div style="clear:both;"></div>';
+  echo '<h3 class="slider-headers">On Sale This Month!</h3>';
   echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$clean_ns_sale.'"]' );
 }
 
 ?>
+          <a style="margin-top:1em;" href="#" class="eModal-2">
+<img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education-hv.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png';"/></a>
+
+
 
 
           <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
