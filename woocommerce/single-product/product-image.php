@@ -78,10 +78,17 @@ foreach ($sls_array_products as $SLS) {
 		}
 
 		// stuff for repairs image
+
+		/*
 		$descendant = get_the_terms( $post->ID, 'product_cat' );
     $descendant = array_reverse($descendant);
     $descendant = $descendant[0];
-		if ( $descendant->term_id == '10974' || $descendant->term_id == '10975' ) : ?>
+		if ( $descendant->term_id == '10981' || $descendant->term_id == '10975' ) :
+
+
+
+			benz_product_select
+		*/?>
 		<img
 			style="float: right;width: 119px;position: relative;margin-bottom: -130px;bottom: 130px;right: 119px;"
 			src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" />
