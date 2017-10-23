@@ -76,7 +76,16 @@ foreach ($sls_array_products as $SLS) {
 			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
 
 		}
-	?>
+
+		// stuff for repairs image
+		$descendant = get_the_terms( $post->ID, 'product_cat' );
+    $descendant = array_reverse($descendant);
+    $descendant = $descendant[0];
+		if ( $descendant->term_id == '10974' || $descendant->term_id == '10975' ) : ?>
+		<img
+			style="float: right;width: 119px;position: relative;margin-bottom: -130px;bottom: 130px;right: 119px;"
+			src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" />
+		<?php endif ; ?>
 
 	<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 
