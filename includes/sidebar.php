@@ -22,7 +22,7 @@
           array_push($dia_product_cats, $cat->name );
         }
       }
-      $dia_product_cats = array_diff($dia_product_cats, ["Parts", "Infusion Pump - Service &amp; Repairs", "Components - Repairs &amp; Service" ]);
+      $dia_product_cats = array_diff($dia_product_cats, ["Parts", "Infusion Pump - Service &amp; Repairs", "Components - Repairs &amp; Service", "On-Site Repairs &amp; Preventive Maintenance" ]);
       asort($dia_product_cats);
       foreach ( $dia_product_cats as $KAT ) {
         if ($KAT == "Loaded Crash Carts&trade;"){ ?>
@@ -60,12 +60,13 @@
           <li class="active has-sub">
             <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/"><span>Service &amp; Repairs</span></a>
             <ul>
-              <li><a href="<?php echo site_url(); ?>/product-category/components-service-repairs/"><span>Components</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/on-site-repairs-preventive-maintenance/aeds-defibrillators-service-repairs/"><span>AEDS &amp; Defibrillators</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/on-site-repairs-preventive-maintenance/components-service-repairs/"><span>Components</span></a></li>
               <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/"><span>Cots &amp; Stretchers</span></a></li>
               <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/"><span>Exam Tables</span></a></li>
               <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/"><span>Headwalls</span></a></li>
               <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/"><span>Hospital Beds</span></a></li>
-              <li><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/"><span>Infusion Pumps</span></a></li>
+              <li><a href="<?php echo site_url(); ?>/product-category/on-site-repairs-preventive-maintenance/infusion-pump-service-repairs/"><span>Infusion Pumps</span></a></li>
               <li><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs"><span>Vital Signs Monitors</span></a></li>
             </ul>
           </li>

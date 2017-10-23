@@ -1193,7 +1193,7 @@ function t_brady_cart_page_button() {
 
 
 /*** Repairs Special Image   ***/
-/*
+
 remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 
@@ -1217,13 +1217,15 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
       $output .= '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" width="' . $placeholder_width . '" height="' . $placeholder_height . '" />';
     }
 
-    if ( is_product_category('10973') || is_product_category('10975') {
-      $output .= '<img style="width:84px;float: right;margin-top: -98px;"src="'.site_url().'/wp-content/imgs/repairs-preventive-maintenance.png" /><div style="clear:both;"></div>';
+    if ( is_product_category('10973') || is_product_category('10981') ) {
+      $output .= '<img style="width:84px;float: right;margin-top: -98px;"  src="' ;
+      $output .= site_url();
+      $output .= '/wp-content/imgs/repairs-preventive-maintenance.png" /><div style="clear:both;"></div>';
     }
 			return $output;
 	}
 }
-*/
+
 
 /*** END ***/
 
