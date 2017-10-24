@@ -1210,13 +1210,14 @@ function t_brady_cart_page_button() {
 /*** Repairs Special Image ***/
 function product_thumbnail_wrapper() {
 	function product_thumbnail_wrapper_html( $html ) {
-      if ( is_dia_repairs_cat() ) {
       $html = $html;
+      if ( is_dia_repairs_cat() ) {
       $html .= '<img style="width:84px;float: right;margin-top: -98px;position:relative;z-index:8000;"  src="' ;
       $html .= site_url();
       $html .= '/wp-content/imgs/repairs-preventive-maintenance.png" /><div style="clear:both;"></div>';
-  		return $html;
+
   	}
+    return $html;
   }
   add_filter( 'post_thumbnail_html', 'product_thumbnail_wrapper_html' );
 }
