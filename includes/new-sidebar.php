@@ -103,16 +103,23 @@ asort($vet_product_cats);
 
 function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counter) {
 	$_x = $which_counter;
-	foreach ($which_array as $single_cat) : $_x ++;
-		$grabID = get_term_by('name', $single_cat, 'product_cat');
-			 $product_cat_ID = $grabID->term_id;
-			 $parent_link = get_term_link( $product_cat_ID, 'product_cat' );
-			 $args = array(
-					 'hierarchical' => 1,
-					 'show_option_none' => '',
-					 'hide_empty' => 0,
-					 'parent' => $product_cat_ID,
-					 'taxonomy' => 'product_cat'
+	foreach ($which_array as $single_cat) :
+		$_x ++;
+		$grabID 					= get_term_by('name', $single_cat, 'product_cat');
+		$product_cat_ID 	= $grabID->term_id;
+		$parent_link			= get_term_link( $product_cat_ID, 'product_cat' );
+
+
+$parent = $grabID->category_parent;
+
+// echo '<pre>';var_dump($grabID);echo'</pre>';
+
+		$args = array(
+			'hierarchical'		 	=> 1,
+			'show_option_none' 	=> '',
+			'hide_empty'			 	=> 0,
+			'parent' 						=> $product_cat_ID,
+			'taxonomy' 					=> 'product_cat'
 		);
 		$subcats = get_categories($args);
 
@@ -124,7 +131,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
 			    </h4>
 			  </div>
-				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse  ">
+				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse <?php if ( is_product_category($grabID->slug) ) echo 'in'; ?>">
 					<div class="panel-body">
 						<table class="table">
 							<tr>
@@ -148,6 +155,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 
 	<?php
 endforeach;
+
 
 } // sweet_dia_cats_menu
 
