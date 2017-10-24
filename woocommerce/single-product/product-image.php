@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $post, $woocommerce, $product;
-$shipping_class = $product->get_shipping_class();
+
 /*
 $sls_array_products = array ('54313', '1234ff5' );
 foreach ($sls_array_products as $SLS) {
@@ -97,52 +97,3 @@ foreach ($sls_array_products as $SLS) {
 	<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 
 </div>
-
-
-<?php if ( $shipping_class == 'free-shipping' ) : ?>
-
-<div id="ship-repair-container" class="">
- <div id="ship-row" class="">
-
-	<div id="free_ship-productpage" class="">
-	<img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" class="shipping-img" />
-	 <div style="padding-top:10px;">
-		<span class="red_free">FREE SHIPPING</span><br>When You Order Online
-	 </div>
-	</div>
-</div> <!-- end row -->
-<?php endif; ?>
-
-<?php
-global $post;
-$pm_check = get_post_meta( $post->ID, 'benz_pm_checkbox', true );
-$pm_link = get_post_meta( $post->ID, 'benz_pm_link_text_field', true );
-$pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
-?>
-
-<?php if ($pm_check == 'yes') : ?>
-	<?php if (! $shipping_class == 'free-shipping' ) : ?>
-		<div id="ship-repair-container" class="">
-	<?php endif; ?>
- <div id="repair-row" class="">
-	 <div id="p_maint-productpage">
-		 <a href="<?php echo site_url() . '/' . $pm_link; ?>"><img class="maint-img" src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" /></a>
-		 <div class="maint-text">
-			 <a href="<?php echo site_url() . '/' . $pm_link; ?>">Click Here to Order<br>
-				 <span class="pm_blue">Preventative Maintenance</span>
-				 <br> for
-				 <?php if (strlen($pm_title) > 1) {
-					 echo 'your ' . $pm_title;
-				 }  else {
-					 echo 'this item';
-				 } ?>
-			 </a>
-		 </div>
-	 </div>
- </div> <!-- end row -->
-</div> <!-- end container -->
-
-<?php elseif ( $shipping_class == 'free-shipping' && $pm_check !== 'yes')  : ?>
-</div> <!-- ship-repair-container -->
-
-<?php endif ;?>

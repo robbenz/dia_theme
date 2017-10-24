@@ -778,6 +778,24 @@ function is_dia_parts_cat(){
 }
 /* END */
 
+/** query the post and turn into usuable function */
+add_action( 'after_theme_setup', 'is_dia_repairs_cat' );
+function is_dia_repairs_cat(){
+  if ( !is_shop() ){
+    global $post;
+    $repairs_cats_all = array();
+    $tid = get_queried_object()->term_id;
+    $dia_option_find = get_option("product_cat_featured_$tid");
+    if ($dia_option_find == 'Repairs') {
+      array_push($repairs_cats_all, $tid ) ;
+    }
+    if ( in_array($tid, $repairs_cats_all ) ){
+      return true;
+    }
+  }
+}
+/* END */
+
 // --  Function to loop through arrays for special pages - hospital - ltc - ems - imaging
 add_action( 'after_theme_setup', 'benz_loop_special_cats' );
 function benz_loop_special_cats($cat_array) {
@@ -1217,7 +1235,8 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
       $output .= '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" width="' . $placeholder_width . '" height="' . $placeholder_height . '" />';
     }
 
-    if ( is_product_category('10973') || is_product_category('10981') ) {
+  if ( is_dia_repairs_cat() ) {
+  //  if ( is_product_category('10973') || is_product_category('10981') ) {
       $output .= '<img style="width:84px;float: right;margin-top: -98px;"  src="' ;
       $output .= site_url();
       $output .= '/wp-content/imgs/repairs-preventive-maintenance.png" /><div style="clear:both;"></div>';
