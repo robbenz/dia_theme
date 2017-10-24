@@ -1215,7 +1215,6 @@ function product_thumbnail_wrapper() {
       $html .= '<img style="width:84px;float: right;margin-top: -98px;position:relative;z-index:8000;"  src="' ;
       $html .= site_url();
       $html .= '/wp-content/imgs/repairs-preventive-maintenance.png" /><div style="clear:both;"></div>';
-
   	}
     return $html;
   }
@@ -1223,7 +1222,7 @@ function product_thumbnail_wrapper() {
 }
 add_action( 'woocommerce_before_shop_loop', 'product_thumbnail_wrapper' );
 
-/*
+
 if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
   function woocommerce_subcategory_thumbnail( $category ) {
     $small_thumbnail_size   = apply_filters( 'single_product_small_thumbnail_size', 'shop_catalog' );
@@ -1250,7 +1249,7 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
   }
 
 }
-*/
+
 /*** END ***/
 
 
