@@ -124,7 +124,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
 			    </h4>
 			  </div>
-				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse  <?php if () echo 'in'; ?>  ">
+				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse  ">
 					<div class="panel-body">
 						<table class="table">
 							<tr>
