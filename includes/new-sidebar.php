@@ -124,7 +124,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
 			    </h4>
 			  </div>
-				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse">
+				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse  <?php if () echo 'in'; ?>  ">
 					<div class="panel-body">
 						<table class="table">
 							<tr>
@@ -136,7 +136,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 	              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
 	                <tr>
 	                  <td style="padding-left: 20px;" >
-	                    <a href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
+	                    <a style="<?php if (is_product_category($sc->slug) ) echo 'font-weight:700'; ?>" href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
 	                	</td>
 	                </tr>
 	            <?php endforeach; ?>
