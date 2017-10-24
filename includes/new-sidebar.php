@@ -108,12 +108,6 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		$grabID 					= get_term_by('name', $single_cat, 'product_cat');
 		$product_cat_ID 	= $grabID->term_id;
 		$parent_link			= get_term_link( $product_cat_ID, 'product_cat' );
-
-
-$parent = $grabID->category_parent;
-
-// echo '<pre>';var_dump($grabID);echo'</pre>';
-
 		$args = array(
 			'hierarchical'		 	=> 1,
 			'show_option_none' 	=> '',
@@ -122,6 +116,11 @@ $parent = $grabID->category_parent;
 			'taxonomy' 					=> 'product_cat'
 		);
 		$subcats = get_categories($args);
+		$_in = '';
+		if ( is_product_category($grabID->slug) ) $_in = ' in';
+		foreach ($subcats as $maybecat) {
+			if ( is_product_category($maybecat->slug) ) $_in = ' in';
+		}
 
 	?>
 		<div class="panel-group <?php echo $which_class; ?> sidebar-replace" id="accordion<?php echo $_x; ?>">
@@ -131,7 +130,8 @@ $parent = $grabID->category_parent;
 			      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
 			    </h4>
 			  </div>
-				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse <?php if ( is_product_category($grabID->slug) ) echo 'in'; ?>">
+				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse<?php echo $_in; ?>">
+
 					<div class="panel-body">
 						<table class="table">
 							<tr>
