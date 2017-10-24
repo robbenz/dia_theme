@@ -1207,11 +1207,6 @@ function t_brady_cart_page_button() {
 }
 /*** END ***/
 
-
-
-
-/*** Repairs Special Image   ***/
-
 /*** Repairs Special Image ***/
 function product_thumbnail_wrapper() {
 	function product_thumbnail_wrapper_html( $html ) {
@@ -1223,15 +1218,40 @@ function product_thumbnail_wrapper() {
   		return $html;
   	}
   }
-	add_filter( 'post_thumbnail_html', 'product_thumbnail_wrapper_html' );
+  add_filter( 'post_thumbnail_html', 'product_thumbnail_wrapper_html' );
 }
 add_action( 'woocommerce_before_shop_loop', 'product_thumbnail_wrapper' );
+
+if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
+  function woocommerce_subcategory_thumbnail( $category ) {
+    $small_thumbnail_size   = apply_filters( 'single_product_small_thumbnail_size', 'shop_catalog' );
+    $dimensions             = wc_get_image_size( $small_thumbnail_size );
+    $thumbnail_id           = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true  );
+
+    if ( $thumbnail_id ) {
+      $image = wp_get_attachment_image_src( $thumbnail_id, $small_thumbnail_size  );
+      $image = $image[0];
+    } else {
+      $image = wc_placeholder_img_src();
+    }
+
+    if ( $image ) {
+      $image = str_replace( ' ', '%20', $image );
+      echo '<img src="' . esc_url( $image ) . '" alt="' . esc_attr( $category->name ) . '" width="' . esc_attr( $dimensions['width'] ) . '" height="' . esc_attr( $dimensions['height'] ) . '" />';
+
+      if ( is_dia_repairs_cat() ) {
+        echo '<img style="width:84px;float: right;margin-top: -98px;position:relative;z-index:8000;"  src="' ;
+        echo site_url();
+        echo  '/wp-content/imgs/repairs-preventive-maintenance.png" /><div style="clear:both;"></div>';
+      }
+    }
+  }
+}
 /*** END ***/
 
-/*** END ***/
 
 
-/*** Schedule Cleaning up the fucking db options that RAQ plugin makes every fucking day ***/
+/*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 
 /*
 add_action( 'my_scheduled_event', 'prefix_my_scheduled_event' );
