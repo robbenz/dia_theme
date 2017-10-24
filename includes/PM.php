@@ -35,23 +35,30 @@ get_template_part('includes/header');
           <div class="clearfix"></div>
 
           <div class="new_pm_row row">
-            <div class="col-sm-4 col-xs-4">
+            <div class="col-sm-3 col-xs-3">
+              <a href="<?php echo site_url(); ?>/product-category/aeds-defibrillators-service-repairs/">
+                <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/aed-defib-service1.png" />
+                <div class="pm_square">AED &amp; DEFIBRILLATOR <span class="pm_white">SERVICE</span></div>
+              </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-3">
               <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">
-                <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/hospital-bed-service.png" />
+                <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/hospital-bed-service1.png" />
                 <div class="pm_square">HOSPITAL BED <span class="pm_white">SERVICE</span></div>
               </a>
             </div>
 
-            <div class="col-sm-4 col-xs-4">
+            <div class="col-sm-3 col-xs-3">
               <a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">
-                <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/infusion-pump-service.png" />
+                <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/infusion-pump-service1.png" />
                 <div class="pm_square">INFUSION PUMP <span class="pm_white">SERVICE</span></div>
               </a>
             </div>
 
-            <div class="col-sm-4 col-xs-4">
+            <div class="col-sm-3 col-xs-3">
               <a href="<?php echo site_url(); ?>/product-category/components-service-repairs/">
-                <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/component-repair.png" />
+                <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/component-repair1.png" />
                 <div class="pm_square">COMPONENT <span class="pm_white">REPAIR</span></div>
               </a>
             </div>
