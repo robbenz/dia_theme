@@ -136,6 +136,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		$grabID 					= get_term_by('name', $single_cat, 'product_cat');
 		$product_cat_ID 	= $grabID->term_id;
 		$parent_link			= get_term_link( $product_cat_ID, 'product_cat' );
+
 		$args = array(
 			'hierarchical'		 	=> 1,
 			'show_option_none' 	=> '',
@@ -144,6 +145,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			'taxonomy' 					=> 'product_cat'
 		);
 		$subcats = get_categories($args);
+
 		$_in = '';
 		if ( is_product_category($grabID->slug) ) $_in = ' in';
 		foreach ($subcats as $maybecat) {
@@ -169,14 +171,29 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 									<a style="font-weight:700; font-size: " href="<?php echo $parent_link; ?>">VIEW ALL</a>
 								</td>
 							</tr>
-							<?php foreach ($subcats as $sc) :
-	              $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
+							<?php if (count($subcats) >= 1 ) : foreach ($subcats as $sc) : $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
 	                <tr>
-	                  <td style="padding-left: 20px;" >
+										<td style="padding-left: 20px;" >
 	                    <a style="<?php if (is_product_category($sc->slug) ) echo 'font-weight:700'; ?>" href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
 	                	</td>
 	                </tr>
-	            <?php endforeach; ?>
+	            <?php
+						endforeach;
+					else:
+						$find_products = array(
+							'post_type' 	=> 'product',
+							'product_cat' => $grabID->slug,
+							'orderby' 		=> 'title',
+							'order' 			=> 'ASC'
+						);
+						$loop = new WP_Query( $find_products );
+						while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+								<tr>
+									<td style="padding-left: 20px;" >
+										<a href="<?php echo $loop->post->guid; ?>"><?php echo $loop->post->post_title ; ?></a>
+									</td>
+								</tr>
+							<?php endwhile; endif; ?>
 						</table>
 					</div>
 				</div>
