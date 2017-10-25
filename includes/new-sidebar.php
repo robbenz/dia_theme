@@ -42,7 +42,7 @@ a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {
 .panel-heading h4.panel-title a {font-size: 20px; padding: 8px 12px; color: #00426a; text-transform: uppercase;}
 .table td:hover {background-color: #f1f1f1;}
 h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
-.select-wrap {padding: 20px; background-color: #e9e9e9; border: 2px solid #f1f1f1; border-radius: 4px;}
+.select-wrap {padding: 20px;}
 .panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
 .panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
 .hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
@@ -204,10 +204,8 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 
 <div class="col-sm-3 col-md-3">
   <div class="select-wrap">
+		<h4>Filter By Facility</h4>
     <select id="facility_select">
-
-      <option value="" disabled>FILTER BY FACILITY</option>
-
       <option value="view-all">VIEW ALL CATEGORIES</option>
       <option value="hospital">Hospitals</option>
 			<option value="education">Nursing Schools</option>
@@ -220,6 +218,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 
     </select>
   </div>
+	<hr />
 
 <?php
 
@@ -283,7 +282,7 @@ sweet_dia_cats_menu($vet_product_cats, "veterinary", 700 );
 			<div id="collapseStatic3" class="panel-collapse collapse">
 				<div class="panel-body">
 					<table class="table">
-						<tr><td><a href="<?php echo site_url(); ?>/manufacturers/">VIEW ALL</a></td></tr>
+						<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/manufacturers/">VIEW ALL</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/?s=alaris&post_type=product">alaris</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/?s=baxter&post_type=product">baxter</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/?s=hausted&post_type=product">hausted</a></td></tr>
