@@ -113,24 +113,25 @@
           /*** left sidebar ***/
           $('.sidebar-replace').hide();
           $('.view-all').show();
+
           $('#facility_select').change(function() {
-            $('.sidebar-replace').slideUp();
+            $('.sidebar-replace').hide();
             $('.' + $(this).val()).slideDown();
             $.cookie( 'diaMenuSelected', $(this).val(), { expires: 90, path: '/'} );
           });
+
           $('.arrow-toggle').click(function() {
             // $(this).toggleClass();
       			$('.rotate').removeClass('down');
       			$(this).children('.rotate').toggleClass('down');
       		});
-          /*** END ***/
 
           if($.cookie('diaMenuSelected') != null) {
                 $('#facility_select option[value="' + $.cookie('diaMenuSelected') + '"]').attr('selected', 'selected');
-                $('.sidebar-replace').slideUp();
+                $('.sidebar-replace').hide();
                 $('.' + $.cookie('diaMenuSelected')).slideDown();
               }
-
+          /*** END ***/
 
         /*** add active look to top menu pages ***/
         /*
