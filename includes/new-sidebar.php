@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}
 .glyphicon { margin-right:10px; }
+.panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
 .panel-group { margin: 0; }
 .panel-group:after {
     content: ""; /* This is necessary for the pseudo element to work. */
@@ -27,8 +28,9 @@ a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {
 .panel-body table tr td+td {padding: 4px 0 4px 24px;}
 .panel-body .table {margin-bottom: 0px;}
 .static-categories {margin-bottom: 6px;}
+.static-categories  .panel-heading h4.panel-title a { color: #fff;}
 .static-categories .panel {margin-bottom:0; border-radius: 4px;}
-.static-categories .panel>.panel-heading {background-color: #00426a;}
+.static-categories .panel>.panel-heading {background-color: #00426a; padding: 0;}
 .static-categories .panel+.panel{margin-top:5px;}
 .static-categories .panel-heading{border-bottom:0;}
 .static-categories .panel-heading+.panel-collapse>.list-group,.static-categories .panel-heading+.panel-collapse>.panel-body{border-top:1px solid #ddd}
@@ -41,8 +43,8 @@ a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {
 .table td:hover {background-color: #f1f1f1;}
 h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
 .select-wrap {padding: 20px; background-color: #e9e9e9; border: 2px solid #f1f1f1; border-radius: 4px;}
-.panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; -webkit-transition: all ease 0.3s; transition: all ease 0.3s;}
-.panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; -webkit-transition: all ease 0.3s; transition: all ease 0.3s;}
+.panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
+.panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
 .hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
 .hospital .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a;}
 .education .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(39, 116, 174);box-shadow: inset 0 0 0 0 rgb(39, 116, 174);}

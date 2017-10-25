@@ -121,7 +121,8 @@
           });
 
           $('.arrow-toggle').click(function() {
-            $(this).toggleClass();
+            // $(this).toggleClass();
+      			$('.rotate').removeClass('down');
       			$(this).children('.rotate').toggleClass('down');
       		});
 
