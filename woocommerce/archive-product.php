@@ -70,6 +70,12 @@ elseif ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
 <?php
 while ( have_posts() ) : the_post();
 global $product, $post;
+
+$part_price = $product->get_price();
+if (empty($part_price) ) {
+	$part_price = 'Reqeust A Quote';
+}
+
 ?>
 
 <a class="hill-rom-parts-row" target="_blank" href="<?php echo site_url(); ?>/?s=<?php echo $product->get_sku(); ?>&amp;post_type=product">
@@ -77,7 +83,7 @@ global $product, $post;
 	<div class="hill-rom-parts-cell"><?php echo $single_cat->name; ?></div>
 	<div class="hill-rom-parts-cell"><?php echo $product->get_sku(); ?></div>
 	<div class="hill-rom-parts-cell"><?php echo wp_trim_words( get_the_content(), 16 ); ?></div>
-	<div class="hill-rom-parts-cell"><?php echo $product->get_price_html(); ?></div>
+	<div class="hill-rom-parts-cell"><?php echo $part_price; ?></div>
 	<div class="hill-rom-parts-cell"><?php echo get_post_meta( get_the_ID(), 'benz_condition_select', true ); ?></div>
 </a>
 
