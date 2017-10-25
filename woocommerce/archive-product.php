@@ -71,7 +71,7 @@ elseif ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
 while ( have_posts() ) : the_post();
 global $product, $post;
 
-$part_price = $product->get_price();
+$part_price = $product->get_price_html();
 if (empty($part_price) ) {
 	$part_price = 'Reqeust A Quote';
 }
