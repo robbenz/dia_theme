@@ -1,18 +1,8 @@
 <style>
-@font-face {
-    font-family: 'ristretto_promedium';
-		src: url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.eot');
-    src: url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.woff2') format('woff2'),
-         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.woff') format('woff'),
-         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.ttf') format('truetype'),
-         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.svg#ristretto_promedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
-a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}
+/*h4.panel-title,
+.panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}*/
+
 .glyphicon { margin-right:10px; }
 .panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
 .panel-group { margin: 0; }
@@ -24,7 +14,7 @@ a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {
     border-bottom: 1px solid #ddd; /* This creates the border. Replace black with whatever color you want. */
 }
 .panel-body { padding:0px; }
-.panel-body table tr td { padding: 4px 0 4px 16px;}
+.panel-body table tr td { padding: 2px 0 2px 15px;}
 .panel-body table tr td+td {padding: 4px 0 4px 24px;}
 .panel-body .table {margin-bottom: 0px;}
 .static-categories {margin-bottom: 6px;}
@@ -38,11 +28,11 @@ a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {
 .static-categories .panel-footer+.panel-collapse .panel-body{border-bottom:1px solid #ddd}
 .part-search-panel table tr td {padding: 0;}
 .part-search-panel .navbar-form {margin: 20px 0;}
-.panel-body table td a {font-size: 16px; text-transform: capitalize; color: #00426a;}
-.panel-heading h4.panel-title a {font-size: 20px; padding: 8px 12px; color: #00426a; text-transform: uppercase;}
+.panel-body table td a {font-size: 12.5px;text-transform: capitalize;color: #00426a;font-family: 'Open Sans', sans-serif}
+.panel-heading h4.panel-title a {font-size: 13.5px;padding: 7px 12px;color: #00426a;text-transform: uppercase;font-family: 'Open Sans', sans-serif;font-weight: 600;}
 .table td:hover {background-color: #f1f1f1;}
 h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
-.select-wrap {padding: 20px;}
+/*.select-wrap {padding: 20px;}*/
 .panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
 .panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
 .hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
@@ -158,8 +148,9 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			    <h4 class="panel-title">
-			      <a class="arrow-toggle" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?><div class="fa fa-chevron-up rotate"></div></a>
-						<!-- <a href="#"><div class="fa fa-chevron-up rotate"></div></a> -->
+			      <a class="arrow-toggle" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?>
+							<div class="fa fa-chevron-up rotate"></div>
+						</a>
 			    </h4>
 			  </div>
 				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse<?php echo $_in; ?>">
@@ -204,7 +195,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 
 <div class="col-sm-3 col-md-3">
   <div class="select-wrap">
-		<h4>Filter By Facility</h4>
+		<h2 style="color:#00426a;font-family: 'ristretto_promedium', sans-serif;">Filter By Facility</h2>
     <select id="facility_select">
       <option value="view-all">VIEW ALL CATEGORIES</option>
       <option value="hospital">Hospitals</option>
