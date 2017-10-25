@@ -157,7 +157,9 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 <div class="col-sm-3 col-md-3">
   <div class="select-wrap">
     <select id="facility_select">
-      <option value="" selected disabled>FILTER BY FACILITY</option>
+
+      <option value="" disabled>FILTER BY FACILITY</option>
+
       <option value="view-all">VIEW ALL CATEGORIES</option>
       <option value="hospital">Hospitals</option>
 			<option value="education">Nursing Schools</option>
@@ -167,6 +169,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
       <option value="emsfr">EMS Field Ready</option>
       <option value="physical-therapy">Physical Therapy</option>
 			<option value="veterinary">Veterinary</option>
+
     </select>
   </div>
 
