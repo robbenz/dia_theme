@@ -113,14 +113,14 @@
           $('.sidebar-replace').hide();
           $('.view-all').show();
           $('#facility_select').change(function() {
-            $('.sidebar-replace').slideUp();
+            $('.sidebar-replace').hide();
             $('.' + $(this).val()).slideDown();
             $.cookie( 'diaMenuSelected', $(this).val(), { expires: 90, path: '/'} );
           });
 
           if($.cookie('diaMenuSelected') != null) {
                 $('#facility_select option[value="' + $.cookie('diaMenuSelected') + '"]').attr('selected', 'selected');
-                $('.sidebar-replace').slideUp();
+                $('.sidebar-replace').hide();
                 $('.' + $.cookie('diaMenuSelected')).slideDown();
               }
 
