@@ -119,7 +119,8 @@
             $.cookie( 'diaMenuSelected', $(this).val(), { expires: 90, path: '/'} );
           });
           $('.arrow-toggle').click(function() {
-            $(this).toggleClass();
+            // $(this).toggleClass();
+      			$('.rotate').removeClass('down');
       			$(this).children('.rotate').toggleClass('down');
       		});
           /*** END ***/
