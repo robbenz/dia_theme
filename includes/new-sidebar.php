@@ -1,6 +1,27 @@
 <style>
+@font-face {
+    font-family: 'ristretto_promedium';
+		src: url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.eot');
+    src: url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.woff2') format('woff2'),
+         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.woff') format('woff'),
+         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.ttf') format('truetype'),
+         url('../css/ristrettopro_medium_macroman/RistrettoPro-Medium-webfont.svg#ristretto_promedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+a.arrow-toggle, h4.panel-title, select#facility_select, .panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}
 .glyphicon { margin-right:10px; }
-.panel-group { margin: 6px 0; }
+.panel-group { margin: 0; }
+.panel-group:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 90%; /* Change this to whatever width you want. */
+    border-bottom: 1px solid #ddd; /* This creates the border. Replace black with whatever color you want. */
+}
 .panel-body { padding:0px; }
 .panel-body table tr td { padding: 4px 0 4px 16px;}
 .panel-body table tr td+td {padding: 4px 0 4px 24px;}
@@ -15,12 +36,12 @@
 .static-categories .panel-footer+.panel-collapse .panel-body{border-bottom:1px solid #ddd}
 .part-search-panel table tr td {padding: 0;}
 .part-search-panel .navbar-form {margin: 20px 0;}
-td a {font-size: 13.5px; text-transform: capitalize;}
-.panel-heading h4.panel-title a {font-size: 15px; color: #f1f1f1; text-transform: uppercase;}
+.panel-body table td a {font-size: 16px; text-transform: capitalize; color: #00426a;}
+.panel-heading h4.panel-title a {font-size: 20px; padding: 8px 12px; color: #00426a; text-transform: uppercase;}
 .table td:hover {background-color: #f1f1f1;}
-h4.panel-title:hover {color: #fff;}
+h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
 .select-wrap {padding: 20px; background-color: #e9e9e9; border: 2px solid #f1f1f1; border-radius: 4px;}
-.panel-group .panel-default>.panel-heading {padding: 6px 12px; background-color: #636363; color: #fff; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; -webkit-transition: all ease 0.3s; transition: all ease 0.3s;}
+.panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; -webkit-transition: all ease 0.3s; transition: all ease 0.3s;}
 .panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; -webkit-transition: all ease 0.3s; transition: all ease 0.3s;}
 .hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
 .hospital .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a;}
@@ -40,6 +61,12 @@ h4.panel-title:hover {color: #fff;}
 .veterinary .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(65, 132, 141); box-shadow: inset 0 100px 0 0 rgb(65, 132, 141);}
 #collapseStatic1 div.form-group {width:76%;}
 #collapseStatic1 div.form-group input {width:100%;}
+.rotate{float: right;	font-size: 12px; -moz-transition: -moz-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -moz-transform:rotate(180deg);	-webkit-transform:rotate(180deg);	transform:rotate(180deg);}
+.rotate.down{-moz-transform:rotate(0deg); -webkit-transform:rotate(0deg); transform:rotate(0deg);}
+a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
+.table>tbody>tr>td {border: none;}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {border: none;}
 </style>
 
 <?php
@@ -122,11 +149,13 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		}
 
 	?>
+
 		<div class="panel-group <?php echo $which_class; ?> sidebar-replace" id="accordion<?php echo $_x; ?>">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			    <h4 class="panel-title">
-			      <a data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?></a>
+			      <a class="arrow-toggle" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?><div class="fa fa-chevron-up rotate"></div></a>
+						<!-- <a href="#"><div class="fa fa-chevron-up rotate"></div></a> -->
 			    </h4>
 			  </div>
 				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse<?php echo $_in; ?>">
@@ -135,7 +164,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 						<table class="table">
 							<tr>
 								<td>
-									<a style="font-weight:700; font-size:1.1em;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
+									<a style="font-weight:700; font-size: " href="<?php echo $parent_link; ?>">VIEW ALL</a>
 								</td>
 							</tr>
 							<?php foreach ($subcats as $sc) :

@@ -110,15 +110,20 @@
           });
           /*** END ***/
 
+          /*** left sidebar ***/
           $('.sidebar-replace').hide();
           $('.view-all').show();
           $('#facility_select').change(function() {
             $('.sidebar-replace').slideUp();
             $('.' + $(this).val()).slideDown();
           });
+          $('.arrow-toggle').click(function() {
+            $(this).toggleClass();
+      			$(this).children('.rotate').toggleClass('down');
+      		});
+          /*** END ***/
 
 
-          // $('.close-all').click(function(e){$('.collapse').collapse('hide');})
         /*** add active look to top menu pages ***/
         /*
         $(function() {
