@@ -110,6 +110,7 @@
           });
           /*** END ***/
 
+          /*** left sidebar ***/
           $('.sidebar-replace').hide();
           $('.view-all').show();
           $('#facility_select').change(function() {
@@ -117,6 +118,11 @@
             $('.' + $(this).val()).slideDown();
             $.cookie( 'diaMenuSelected', $(this).val(), { expires: 90, path: '/'} );
           });
+          $('.arrow-toggle').click(function() {
+            $(this).toggleClass();
+      			$(this).children('.rotate').toggleClass('down');
+      		});
+          /*** END ***/
 
           if($.cookie('diaMenuSelected') != null) {
                 $('#facility_select option[value="' + $.cookie('diaMenuSelected') + '"]').attr('selected', 'selected');
@@ -125,7 +131,6 @@
               }
 
 
-          // $('.close-all').click(function(e){$('.collapse').collapse('hide');})
         /*** add active look to top menu pages ***/
         /*
         $(function() {
