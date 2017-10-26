@@ -147,8 +147,8 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			    <h4 class="panel-title">
-			      <a class="arrow-toggle arrow-toggle<?php echo $_x; ?>" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?>
-							<div class="arrow<?php echo $_x; ?> fa fa-chevron-up rotate"></div>
+			      <a class="arrow-toggle" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?>
+							<div class="fa fa-chevron-up rotate"></div>
 						</a>
 			    </h4>
 			  </div>
