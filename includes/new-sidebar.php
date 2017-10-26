@@ -17,7 +17,6 @@
 .emsfr .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
 .physical-therapy .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(158, 113, 162);box-shadow: inset 0 0 0 0 rgb(158, 113, 162);}
 .veterinary .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(65, 132, 141);box-shadow: inset 0 0 0 0 rgb(65, 132, 141);}
-
 */
 
 .panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
@@ -37,7 +36,7 @@ h4.panel-title { border-top: 1.5px solid #00426a; }
 .table td:hover {background-color: #f1f1f1;}
 h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
 .panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
-.panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
+.panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; }
 .hospital .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a;}
 .education .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(39, 116, 174); box-shadow: inset 0 100px 0 0 rgb(39, 116, 174);}
 .sls .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #ffad00; box-shadow: inset 0 100px 0 0 #ffad00; }
@@ -48,8 +47,7 @@ h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
 .veterinary .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(65, 132, 141); box-shadow: inset 0 100px 0 0 rgb(65, 132, 141);}
 #collapseStatic1 div.form-group {width:76%;}
 #collapseStatic1 div.form-group input {width:100%;}
-.rotate{float: right;	font-size: 12px; -moz-transition: -moz-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550);
-    transition: transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -moz-transform:rotate(90deg);	-webkit-transform:rotate(90deg);	transform:rotate(90deg);}
+.rotate{float: right;	font-size: 12px; -moz-transition: -moz-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550);transition: transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -moz-transform:rotate(90deg);	-webkit-transform:rotate(90deg);	transform:rotate(90deg);}
 .rotate.down{-moz-transform:rotate(180deg); -webkit-transform:rotate(180deg); transform:rotate(180deg);}
 a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
 .table>tbody>tr>td {border: none;}
@@ -140,8 +138,6 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		}
 
 	?>
-
-
 
 		<div class="panel-group <?php echo $which_class; ?> sidebar-replace" id="accordion<?php echo $_x; ?>">
 			<div class="panel panel-default">
