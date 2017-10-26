@@ -1,64 +1,61 @@
 <style>
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
-/*h4.panel-title,
-.panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}*/
-
-.glyphicon { margin-right:10px; }
-.panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
-.panel-group { margin: 0; }
-.panel-group:after {
-    content: ""; /* This is necessary for the pseudo element to work. */
-    display: block; /* This will put the pseudo element on its own line. */
-    margin: 0 auto; /* This will center the border. */
-    width: 90%; /* Change this to whatever width you want. */
-    border-bottom: 1px solid #ddd; /* This creates the border. Replace black with whatever color you want. */
-}
-.panel-body { padding:0px; }
-.panel-body table tr td { padding: 2px 0 2px 15px;}
+/*
+.panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}
 .panel-body table tr td+td {padding: 4px 0 4px 24px;}
-.panel-body .table {margin-bottom: 0px;}
-.static-categories {margin-bottom: 6px;}
-.static-categories  .panel-heading h4.panel-title a { color: #fff;}
+.static-categories .panel-footer{border-top:0}
+.static-categories .panel-footer+.panel-collapse .panel-body{border-bottom:1px solid #ddd}
+.panel-group:after { content: ""; display: block; margin: 0 auto; width: 100%; border-bottom: 1px solid #00426a; }
 .static-categories .panel {margin-bottom:0; border-radius: 4px;}
-.static-categories .panel>.panel-heading {background-color: #00426a; padding: 0;}
 .static-categories .panel+.panel{margin-top:5px;}
 .static-categories .panel-heading{border-bottom:0;}
 .static-categories .panel-heading+.panel-collapse>.list-group,.static-categories .panel-heading+.panel-collapse>.panel-body{border-top:1px solid #ddd}
-.static-categories .panel-footer{border-top:0}
-.static-categories .panel-footer+.panel-collapse .panel-body{border-bottom:1px solid #ddd}
+.hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
+.education .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(39, 116, 174);box-shadow: inset 0 0 0 0 rgb(39, 116, 174);}
+.sls .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #ffad00;box-shadow: inset 0 0 0 0 #ffad00;}
+.long-term-care .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(114, 208, 244);box-shadow: inset 0 0 0 0 rgb(114, 208, 244);}
+.emsedu .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
+.emsfr .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
+.physical-therapy .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(158, 113, 162);box-shadow: inset 0 0 0 0 rgb(158, 113, 162);}
+.veterinary .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(65, 132, 141);box-shadow: inset 0 0 0 0 rgb(65, 132, 141);}
+
+*/
+
+.panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
+.panel-group { margin: 0; }
+h4.panel-title { border-top: 1.5px solid #00426a; }
+.panel-body { padding:0px; }
+.panel-body table tr td { padding: 2px 0 2px 15px;}
+.panel-body .table {margin-bottom: 0px;}
+.static-categories {margin-bottom: 6px;}
+.static-categories .panel-heading h4.panel-title a { color: #fff;}
+.static-categories .panel>.panel-heading {background-color: #00426a; padding: 0;}
+.static-categories .panel {margin: 5px 0 0 0;}
 .part-search-panel table tr td {padding: 0;}
 .part-search-panel .navbar-form {margin: 20px 0;}
 .panel-body table td a {font-size: 12.5px;text-transform: capitalize;color: #00426a;font-family: 'Open Sans', sans-serif}
 .panel-heading h4.panel-title a {font-size: 13.5px;padding: 7px 12px;color: #00426a;text-transform: uppercase;font-family: 'Open Sans', sans-serif;font-weight: 600;}
 .table td:hover {background-color: #f1f1f1;}
 h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
-/*.select-wrap {padding: 20px;}*/
 .panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
 .panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
-.hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
 .hospital .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a;}
-.education .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(39, 116, 174);box-shadow: inset 0 0 0 0 rgb(39, 116, 174);}
 .education .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(39, 116, 174); box-shadow: inset 0 100px 0 0 rgb(39, 116, 174);}
-.sls .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #ffad00;box-shadow: inset 0 0 0 0 #ffad00;}
-.sls .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #ffad00; box-shadow: inset 0 100px 0 0 #ffad00;}
-.long-term-care .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(114, 208, 244);box-shadow: inset 0 0 0 0 rgb(114, 208, 244);}
+.sls .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #ffad00; box-shadow: inset 0 100px 0 0 #ffad00; }
 .long-term-care .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(114, 208, 244); box-shadow: inset 0 100px 0 0 rgb(114, 208, 244);}
-.emsedu .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
 .emsedu .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(214, 0, 28); box-shadow: inset 0 100px 0 0 rgb(214, 0, 28);}
-.emsfr .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
 .emsfr .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(214, 0, 28); box-shadow: inset 0 100px 0 0 rgb(214, 0, 28);}
-.physical-therapy .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(158, 113, 162);box-shadow: inset 0 0 0 0 rgb(158, 113, 162);}
 .physical-therapy .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(158, 113, 162); box-shadow: inset 0 100px 0 0 rgb(158, 113, 162);}
-.veterinary .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(65, 132, 141);box-shadow: inset 0 0 0 0 rgb(65, 132, 141);}
 .veterinary .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(65, 132, 141); box-shadow: inset 0 100px 0 0 rgb(65, 132, 141);}
 #collapseStatic1 div.form-group {width:76%;}
 #collapseStatic1 div.form-group input {width:100%;}
 .rotate{float: right;	font-size: 12px; -moz-transition: -moz-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550);
-    transition: transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -moz-transform:rotate(180deg);	-webkit-transform:rotate(180deg);	transform:rotate(180deg);}
-.rotate.down{-moz-transform:rotate(0deg); -webkit-transform:rotate(0deg); transform:rotate(0deg);}
+    transition: transform 0.35s cubic-bezier(0.680, -0.550, 0.265, 1.550); -moz-transform:rotate(90deg);	-webkit-transform:rotate(90deg);	transform:rotate(90deg);}
+.rotate.down{-moz-transform:rotate(180deg); -webkit-transform:rotate(180deg); transform:rotate(180deg);}
 a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
 .table>tbody>tr>td {border: none;}
 .panel-default>.panel-heading+.panel-collapse>.panel-body {border: none;}
+.select-wrap { margin-bottom:1.75em ; }
+
 </style>
 
 <?php
@@ -83,7 +80,7 @@ $args = array(
 );
 $all_categories = get_categories( $args );
 
-foreach ($all_categories as $cat) {
+foreach ($all_categories as $cat) :
 
 	$myID = $cat->cat_ID;
 
@@ -107,7 +104,7 @@ foreach ($all_categories as $cat) {
 	if ( $_pt_cbx 				== 'yes' && $cat->category_parent == 0 ) array_push($pt_product_cats, $cat->name );
 	if ( $_vet_cbx 				== 'yes' && $cat->category_parent == 0 ) array_push($vet_product_cats, $cat->name );
 
-}
+endforeach;
 
 $dia_product_cats 			= array_diff( $dia_product_cats, 			["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($dia_product_cats);
 $hospital_product_cats 	= array_diff( $hospital_product_cats, ["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($hospital_product_cats);
@@ -144,12 +141,14 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 
 	?>
 
+
+
 		<div class="panel-group <?php echo $which_class; ?> sidebar-replace" id="accordion<?php echo $_x; ?>">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			    <h4 class="panel-title">
-			      <a class="arrow-toggle" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?>
-							<div class="fa fa-chevron-up rotate"></div>
+			      <a class="arrow-toggle arrow-toggle<?php echo $_x; ?>" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?>
+							<div class="arrow<?php echo $_x; ?> fa fa-chevron-up rotate"></div>
 						</a>
 			    </h4>
 			  </div>
@@ -190,12 +189,19 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				</div>
 			</div>
 		</div>
+
+		<script type="text/javascript">
+		if ( jQuery('#collapse<?php echo $_x; ?>').hasClass('in') ) {
+			jQuery('.arrow<?php echo $_x; ?>').addClass('down');
+		}
+		</script>
+
 	<?php endforeach;
 } // sweet_dia_cats_menu();  ?>
 
 <div class="col-sm-3 col-md-3">
   <div class="select-wrap">
-		<h2 style="color:#00426a;font-family: 'ristretto_promedium', sans-serif;">Filter By Facility</h2>
+		<h2 style="color:#00426a;font-family: 'ristretto_promedium', sans-serif;">Filter By Facility Type</h2>
     <select id="facility_select">
       <option value="view-all">VIEW ALL CATEGORIES</option>
       <option value="hospital">Hospitals</option>
@@ -209,7 +215,6 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 
     </select>
   </div>
-	<hr />
 
 <?php
 

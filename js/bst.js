@@ -120,9 +120,20 @@
       });
 
       $('.arrow-toggle').click(function() {
+
         $('.rotate').removeClass('down');
         $(this).children('.rotate').toggleClass('down');
+        $(this).not('.rotate').toggleClass('down');
+
       });
+
+
+
+      // $('.arrow-toggle').click(function() {
+      //   if ( !$("[id^=collapse]").hasClass("in") ) {
+      //     $(".rotate").removeClass('down');
+      //   }
+      // });
 
       if($.cookie('diaMenuSelected') != null) {
         $('.sidebar-replace').hide();
