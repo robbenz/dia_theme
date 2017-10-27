@@ -19,23 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $post, $woocommerce, $product;
-
-/*
-$sls_array_products = array ('54313', '1234ff5' );
-foreach ($sls_array_products as $SLS) {
-	if ($post->ID == $SLS){ ?>
-		<div style="margin-top: -0.5em; margin-bottom: -20px;">
-			<img style="margin-left:38px;" src="https://diamedicalusa.com/wp-content/imgs/includes/sim-lab.png" alt="SimLabSolutions Exclusive" width="330" />
-		</div>
-		<style>
-		.single-product .favimg_bottomleft, .single-product .favimg_bottomright { top: 384px; }
-		.single-product .favimg_topleft, .single-product .favimg_topright { top: 120px; }
-		div.product div.summary { margin-top:-69px !important; }
-		</style>
-	<?php	}
-} */
-?>
+global $post, $woocommerce, $product; ?>
 
 <div style="max-height:none !important; " class="images">
 
@@ -49,7 +33,6 @@ foreach ($sls_array_products as $SLS) {
 			echo '/wp-content/uploads/2017/08/leading-edge.png" alt="" width="392" height="80" /></div>';
 		}
 	}
-
 
 		if ( has_post_thumbnail() ) {
 
@@ -68,27 +51,15 @@ foreach ($sls_array_products as $SLS) {
 			} else {
 				$gallery = '';
 			}
-
 			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>', $image_link, $image_caption, $image ), $post->ID );
-
 		} else {
-
 			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
-
 		}
 
 		// stuff for repairs image
-
-		/*
-		$descendant = get_the_terms( $post->ID, 'product_cat' );
-    $descendant = array_reverse($descendant);
-    $descendant = $descendant[0];
-		if ( $descendant->term_id == '10981' || $descendant->term_id == '10975' ) :
-*/
 		$is_repair = get_post_meta( get_the_ID(), 'benz_product_select', true );
-		if ( $is_repair == "Equipment Repair" ) :
+		if ( $is_repair == "Equipment Repair" ) : ?>
 
-?>
 		<img
 			style="float: right;width: 119px;position: relative;margin-bottom: -130px;bottom: 130px;right: 119px;"
 			src="<?php echo site_url(); ?>/wp-content/imgs/repairs-preventive-maintenance.png" />

@@ -27,6 +27,8 @@ get_template_part('includes/header');
             <h2>Call DiaMedical USA</h2>
             <p>Dial: (877) 593-6011<br>Standard Business Hours: 7:30am - 5:30pm EST</p>
 
+            <h3>New Customer?</h3>
+            <p>Please Fill Out This <a href="<?php echo site_url(); ?>/new-customer-profile">New Customer Profile Form</a></p><br>
             <h2>Frequently Contacted Departments</h2>
 
             <h3>Need A Quote?</h3>
