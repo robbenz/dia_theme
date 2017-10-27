@@ -119,6 +119,16 @@
         $.cookie( 'diaMenuSelected', $(this).val(), { expires: 90, path: '/'} );
       });
 
+      // arrow stuff for nnot used menu items
+      // $('.arrow-toggle').click(function() {
+      //   if ( $(this).children('.rotate').hasClass('down') ) {
+      //     $('.rotate').removeClass('down');
+      //   } else {
+      //     $('.rotate').removeClass('down');
+      //     $(this).children('.rotate').toggleClass('down');
+      //   }
+      // });
+
       $('.arrow-toggle').click(function() {
         if ( $(this).children('.rotate').hasClass('down') ) {
           $('.rotate').removeClass('down');
@@ -126,6 +136,11 @@
           $('.rotate').removeClass('down');
           $(this).children('.rotate').toggleClass('down');
         }
+      });
+
+      $('.rotate-medqpt').addClass('down');
+      $('.arrow-toggle-medqpt').click(function() {
+        $('.rotate-medqpt').toggleClass('down');
       });
 
       if($.cookie('diaMenuSelected') != null) {

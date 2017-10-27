@@ -1,5 +1,5 @@
 <style>
-/*
+/*   comment becuase i dont think we need it at all
 .panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}
 .panel-body table tr td+td {padding: 4px 0 4px 24px;}
 .static-categories .panel-footer{border-top:0}
@@ -19,7 +19,10 @@
 .veterinary .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(65, 132, 141);box-shadow: inset 0 0 0 0 rgb(65, 132, 141);}
 */
 
-.panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
+
+
+/* commented becuase i dont want to overwrite newer side bar - just in case while working on gp notes */
+/*.panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
 .panel-group { margin: 0; }
 h4.panel-title { border-top: 1.5px solid #00426a; }
 .panel-body { padding:0px; }
@@ -35,7 +38,7 @@ h4.panel-title { border-top: 1.5px solid #00426a; }
 .panel-heading h4.panel-title a {font-size: 13.5px;padding: 7px 12px;color: #00426a;text-transform: uppercase;font-family: 'Open Sans', sans-serif;font-weight: 600;}
 .table td:hover {background-color: #f1f1f1;}
 h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
-.panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; /*-webkit-transition: all ease 0.3s; transition: all ease 0.3s;*/}
+.panel-group .panel-default>.panel-heading {padding: 0px; background-color: #fff; color: #222; -webkit-box-shadow: inset 0 0 0 0 #00426a; box-shadow: inset 0 0 0 0 #00426a; }
 .panel-group .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a; }
 .hospital .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 #00426a; box-shadow: inset 0 100px 0 0 #00426a;}
 .education .panel-default>.panel-heading:hover {color: #fff; -webkit-box-shadow: inset 0 100px 0 0 rgb(39, 116, 174); box-shadow: inset 0 100px 0 0 rgb(39, 116, 174);}
@@ -52,7 +55,7 @@ h4.panel-title a:hover, .panel-heading:hover {color: #fff;}
 a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
 .table>tbody>tr>td {border: none;}
 .panel-default>.panel-heading+.panel-collapse>.panel-body {border: none;}
-.select-wrap { margin-bottom:1.75em ; }
+.select-wrap { margin-bottom:1.75em ; }*/
 
 </style>
 
