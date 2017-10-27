@@ -3,8 +3,11 @@
 get_template_part('includes/header');
 
 ?>
+<?php woocommerce_breadcrumb(); ?>
   <div class="container" style="background-color: #f6f6f6; margin-top: 1em; border-radius: 0.5em; padding: 1em 2em 2em 2em; margin-bottom: 1em;">
     <div class="row">
+
+
       <h2 style="font-family: 'ristretto_promedium',Arial,sans-serif; color: #00426a; letter-spacing: 1.1px; font-size: 41px; text-transform: uppercase;">Terms &amp; Conditions</h2>
       <div class="main-contact-wrap col-12 col-sm-6 col-md-8">
         <h3 style="font-family: 'ristretto_prolight',Arial,sans-serif; color: #288dcc; font-size: 35px;">Accepted Payment Methods<img style="width: 120px; margin: 5px 16px 9px;" src="https://medmattress.com/wp-content/imgs/accepted_cards.png" /></h3>
@@ -38,10 +41,10 @@ get_template_part('includes/header');
         <div id="dat_wrap">
           <h3 style="text-align: center; line-height: 15px; font-size: 49px;">How To Order</h3>
           <h4 style="text-align: center; margin-bottom: 18px;">from DiaMedical USA</h4>
-          <div id="dat_order_left"><img style="padding-bottom: 32px !important;" src="<?php echo site_url(); ?>wp-content/themes/diamedical/imgs/icon/phone-blue.png" />
-            <img src="<?php echo site_url(); ?>wp-content/themes/diamedical/imgs/icon/fax-blues.png" />
-            <img src="<?php echo site_url(); ?>wp-content/themes/diamedical/imgs/icon/laptop-blues.png" />
-            <img src="<?php echo site_url(); ?>wp-content/themes/diamedical/imgs/icon/mail-blue.png" /></div>
+          <div id="dat_order_left"><img style="padding-bottom: 32px !important;" src="<?php echo site_url(); ?>/wp-content/themes/diamedical/imgs/icon/phone-blue.png" />
+            <img src="<?php echo site_url(); ?>/wp-content/themes/diamedical/imgs/icon/fax-blues.png" />
+            <img src="<?php echo site_url(); ?>/wp-content/themes/diamedical/imgs/icon/laptop-blues.png" />
+            <img src="<?php echo site_url(); ?>/wp-content/themes/diamedical/imgs/icon/mail-blue.png" /></div>
           <div id="dat_order_rght">
 
             <em>By Phone:</em>
