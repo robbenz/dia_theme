@@ -3,7 +3,7 @@
 get_template_part('includes/header');
 
 ?>
-<?php woocommerce_breadcrumb(); ?>
+
   <div class="container" style="background-color: #f6f6f6; margin-top: 1em; border-radius: 0.5em; padding: 1em 2em 2em 2em; margin-bottom: 1em;">
     <div class="row">
 
