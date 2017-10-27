@@ -1497,7 +1497,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #landing_nav-wrap a.landing_nav{ font-size:0.9em; font-weight: 600 !important; }
   .dropdown .dropbtn { padding: 3px 9.2px; font-size: 0.9em; font-weight: 600 !important; }
   .dropdown-content a { float: none; font-size: 0.9em; padding: 8px 0; width: 144px; }
-  #landing_nav-wrap a.landing_nav{ width:12.525%; }
+  #landing_nav-wrap a.landing_nav{ width:12.475%; }
   .dropdown-content { top:28px; }
 
   _:-ms-lang(x),   #landing_nav-wrap a.landing_nav{ width:12%; }
