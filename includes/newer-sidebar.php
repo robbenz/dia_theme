@@ -1,27 +1,6 @@
 <style>
-/*
-.panel-body table td a {font-family: 'ristretto_promedium', sans-serif;}
-.panel-body table tr td+td {padding: 4px 0 4px 24px;}
-.static-categories .panel-footer{border-top:0}
-.static-categories .panel-footer+.panel-collapse .panel-body{border-bottom:1px solid #ddd}
-.panel-group:after { content: ""; display: block; margin: 0 auto; width: 100%; border-bottom: 1px solid #00426a; }
-.static-categories .panel {margin-bottom:0; border-radius: 4px;}
-.static-categories .panel+.panel{margin-top:5px;}
-.static-categories .panel-heading{border-bottom:0;}
-.static-categories .panel-heading+.panel-collapse>.list-group,.static-categories .panel-heading+.panel-collapse>.panel-body{border-top:1px solid #ddd}
-.hospital .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #00426a;box-shadow: inset 0 0 0 0 #00426a;}
-.education .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(39, 116, 174);box-shadow: inset 0 0 0 0 rgb(39, 116, 174);}
-.sls .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 #ffad00;box-shadow: inset 0 0 0 0 #ffad00;}
-.long-term-care .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(114, 208, 244);box-shadow: inset 0 0 0 0 rgb(114, 208, 244);}
-.emsedu .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
-.emsfr .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(214, 0, 28);box-shadow: inset 0 0 0 0 rgb(214, 0, 28);}
-.physical-therapy .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(158, 113, 162);box-shadow: inset 0 0 0 0 rgb(158, 113, 162);}
-.veterinary .panel-default>.panel-heading {-webkit-box-shadow: inset 0 0 0 0 rgb(65, 132, 141);box-shadow: inset 0 0 0 0 rgb(65, 132, 141);}
-*/
-
 .panel-group, .panel, .panel-default, .panel-heading, .panel-title {border-radius: 0;}
 .panel-group { margin: 0; }
-/*h4.panel-title { border-top: 1.5px solid #00426a; }*/
 .panel-body { padding:0px; }
 .panel-body table tr td { padding: 2px 0 2px 15px;}
 .panel-body .table {margin-bottom: 0px;}
@@ -54,7 +33,7 @@ a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
 .table>tbody>tr>td {border: none;}
 .panel-default>.panel-heading+.panel-collapse>.panel-body {border: none;}
 .select-wrap { padding-bottom: 1.25em; border-bottom: 1.5px solid #00426a; margin-bottom:0.25em;}
-
+.panel-heading h4.panel-title a.arrow-toggle-medqpt {background-color:#00426a;border:0;color:#fff;padding: 13px 12px;text-transform:uppercase;font-size:14.5px;}
 </style>
 
 <?php
@@ -145,17 +124,15 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			  <div class="panel-heading">
 			    <h4 class="panel-title">
 			      <a class="arrow-toggle" data-toggle="collapse" data-parent=".sidebar-replace" href="#collapse<?php echo $_x; ?>"><?php echo $single_cat; ?>
-							<!-- <div class="fa fa-chevron-up rotate"></div> -->
 						</a>
 			    </h4>
 			  </div>
 				<div id="collapse<?php echo $_x; ?>" class="panel-collapse collapse<?php echo $_in; ?>">
-
 					<div class="panel-body">
 						<table class="table">
 							<tr>
 								<td>
-									<a style="font-weight:700; font-size: " href="<?php echo $parent_link; ?>">VIEW ALL</a>
+									<a style="font-weight:700; font-size: 13px;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
 								</td>
 							</tr>
 							<?php if (count($subcats) >= 1 ) : foreach ($subcats as $sc) : $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
@@ -182,10 +159,10 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 								</tr>
 							<?php endwhile; endif; ?>
 						</table>
-					</div>
-				</div>
-			</div>
-		</div>
+					</div> <!-- .panel-body -->
+				</div><!-- .panel-collapse .collapse -->
+			</div><!-- .panel .panel-default -->
+		</div><!-- #accordion$_x .sidebar-replace -->
 
 	<?php endforeach;
 } // sweet_dia_cats_menu();  ?>
@@ -195,12 +172,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 	<div class="panel panel-default">
 		<div style="padding: 0;" class="panel-heading">
 				<h4 class="panel-title">
-						<a
-						style="background-color:#00426a;border:0;color:#fff;padding: 13px 12px;text-transform:uppercase;font-size:14.5px;"
-						class="arrow-toggle-medqpt"
-						data-toggle="collapse"
-						href="#collapseStatic00">
-						Medical Equipment
+						<a class="arrow-toggle-medqpt" data-toggle="collapse" href="#collapseStatic00">Medical Equipment
 							<div class="fa fa-chevron-up rotate-medqpt"></div>
 						</a>
 
@@ -209,7 +181,6 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 
 		<div id="collapseStatic00" class="panel-collapse collapse in">
 			<div class="panel-body">
-
 				<div class="select-wrap">
 					<h5 style="font-family: 'Open Sans', sans-serif">Filter By Your Facility Type</h5>
 			    <select id="facility_select">
@@ -224,8 +195,8 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 						<option value="veterinary">Veterinary</option>
 			    </select>
 			  </div>
-				<?php
 
+				<?php
 				sweet_dia_cats_menu($dia_product_cats, "view-all", 800);
 				sweet_dia_cats_menu($hospital_product_cats, "hospital", 1 );
 				sweet_dia_cats_menu($nursing_product_cats, "education", 100 );
@@ -235,50 +206,14 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				sweet_dia_cats_menu($emsfr_product_cats, "emsfr", 500 );
 				sweet_dia_cats_menu($pt_product_cats, "physical-therapy", 600 );
 				sweet_dia_cats_menu($vet_product_cats, "veterinary", 700 );
+				?>
 
-				 ?>
-
-			</div>
-		</div>
-	</div>
-
+			</div><!-- .panel-body -->
+		</div><!-- #collapseStatic00 .panel-collapse .collapse .in -->
+	</div><!-- .panel .panel-default -->
 
 
-
-  <!-- <div class="select-wrap">
-		<h3 style="color:#00426a;font-family: 'ristretto_promedium', sans-serif;">Filter By Facility Type</h3>
-    <select id="facility_select">
-      <option value="view-all">VIEW ALL CATEGORIES</option>
-      <option value="hospital">Hospitals</option>
-			<option value="education">Nursing Schools</option>
-      <option value="sls">SimLabSolutions.com</option>
-      <option value="long-term-care">Long Term Care</option>
-      <option value="emsedu">EMS Education</option>
-      <option value="emsfr">EMS Field Ready</option>
-      <option value="physical-therapy">Physical Therapy</option>
-			<option value="veterinary">Veterinary</option>
-
-    </select>
-  </div> -->
-
-<?php
-
-// sweet_dia_cats_menu($dia_product_cats, "view-all", 800);
-// sweet_dia_cats_menu($hospital_product_cats, "hospital", 1 );
-// sweet_dia_cats_menu($nursing_product_cats, "education", 100 );
-// sweet_dia_cats_menu($sls_product_cats, "sls", 200 );
-// sweet_dia_cats_menu($ltc_product_cats, "long-term-care", 300 );
-// sweet_dia_cats_menu($emsedu_product_cats, "emsedu", 400 );
-// sweet_dia_cats_menu($emsfr_product_cats, "emsfr", 500 );
-// sweet_dia_cats_menu($pt_product_cats, "physical-therapy", 600 );
-// sweet_dia_cats_menu($vet_product_cats, "veterinary", 700 );
-
- ?>
-
-
-
-
-	<div class="static-categories" id="">
+	<div class="static-categories">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">
@@ -321,7 +256,6 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				</div>
 			</div>
 		</div>
-
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">
@@ -350,7 +284,6 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				</div>
 			</div>
 		</div>
-
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">
@@ -369,7 +302,6 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				</div>
 			</div>
 		</div>
-
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h4 class="panel-title">
@@ -388,6 +320,5 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				</div>
 			</div>
 		</div>
-
-	</div><!-- static-categories close -->
-</div><!-- col-sm-3 sidebar close -->
+	</div><!-- .static-categories -->
+</div><!-- .col-sm-3 -->
