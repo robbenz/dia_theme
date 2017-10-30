@@ -760,7 +760,7 @@ function benz_pm_img_placement(){
 }
 /* END */
 
-/** query the post and turn into usuable function */
+/** is_dia_parts_cat(); */
 add_action( 'after_theme_setup', 'is_dia_parts_cat' );
 function is_dia_parts_cat(){
   if ( !is_shop() ){
@@ -778,7 +778,7 @@ function is_dia_parts_cat(){
 }
 /* END */
 
-/** query the post and turn into usuable function */
+/** is_dia_repairs_cat(); */
 add_action( 'after_theme_setup', 'is_dia_repairs_cat' );
 function is_dia_repairs_cat(){
   if ( !is_shop() ){
@@ -903,29 +903,6 @@ function dia_last_css_enqueue_scripts() {
 }
 /* END */
 
-/* light box photo shit
-add_action( 'wp_enqueue_scripts', 'frontend_scripts_include_lightbox' );
-
-function frontend_scripts_include_lightbox() {
-  global $woocommerce;
-  $suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-  $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false;
-
-  if ( $lightbox_en ) {
-    wp_enqueue_script( 'prettyPhoto', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
-    wp_enqueue_script( 'prettyPhoto-init', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
-    wp_enqueue_style( 'woocommerce_prettyPhoto_css', $woocommerce->plugin_url() . '/assets/css/prettyPhoto.css' );
-  }
-}
-function autoadd_rel_prettyPhoto($content) {
- global $post;
- $pattern = "/(<a(?![^>]*?data-rel=['\"]prettyPhoto.*)[^>]*?href=['\"][^'\"]+?\.(?:bmp|gif|jpg|jpeg|png)['\"][^\>]*)>/i";
- $replacement = '$1 data-rel="prettyPhoto['.$post->ID.']">';
- $content = preg_replace($pattern, $replacement, $content);
- return $content;
-}
-add_filter("the_content","autoadd_rel_prettyPhoto");
-/* END */
 
 add_filter('woocommerce_registration_redirect', 'dia_wc_registration_redirect');
 function dia_wc_registration_redirect( $redirect_to ) {
@@ -1002,15 +979,13 @@ add_action("save_post", "save_dia_search_meta_box", 10, 3);
 /*** Re sort based on custom priority field ***/
 function SearchFilter($query) {
     if ($query->is_main_query() && $query->is_search()) {
-        $query->set('posts_per_page', '20');
+        $query->set('posts_per_page', '60');
         $query->set('post_type', 'product');
         $query->set('meta_key', 'dia_search_priority' );
         $query->set('orderby', 'meta_value_num' );
         $query->set('order', 'DESC' );
     }
-
     return $query;
-
 }
 add_filter('pre_get_posts','SearchFilter');
 /*** End new search funtion ***/
@@ -1195,7 +1170,6 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
 
 /*** END ***/
 
-
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 
 /*
@@ -1236,3 +1210,29 @@ foreach ($update_hrbedss as $bed69) {
   update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.png' );
 }
 */
+
+/*** light box photo shit ***/
+/*
+add_action( 'wp_enqueue_scripts', 'frontend_scripts_include_lightbox' );
+
+function frontend_scripts_include_lightbox() {
+  global $woocommerce;
+  $suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+  $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false;
+
+  if ( $lightbox_en ) {
+    wp_enqueue_script( 'prettyPhoto', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
+    wp_enqueue_script( 'prettyPhoto-init', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
+    wp_enqueue_style( 'woocommerce_prettyPhoto_css', $woocommerce->plugin_url() . '/assets/css/prettyPhoto.css' );
+  }
+}
+function autoadd_rel_prettyPhoto($content) {
+ global $post;
+ $pattern = "/(<a(?![^>]*?data-rel=['\"]prettyPhoto.*)[^>]*?href=['\"][^'\"]+?\.(?:bmp|gif|jpg|jpeg|png)['\"][^\>]*)>/i";
+ $replacement = '$1 data-rel="prettyPhoto['.$post->ID.']">';
+ $content = preg_replace($pattern, $replacement, $content);
+ return $content;
+}
+add_filter("the_content","autoadd_rel_prettyPhoto");
+*/
+/* END */
