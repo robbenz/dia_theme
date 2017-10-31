@@ -53,7 +53,9 @@
         <a href="<?php echo site_url(); ?>/medical-equipment/">Products</a><br />
         <a href="<?php echo site_url(); ?>/manufacturers/">Manufacturers</a><br />
         <a href="<?php echo site_url(); ?>/results/">Parts</a><br />
-        <a href="#" class="eModal-2">Contact</a><br />
+        <a href="<?php echo site_url(); ?>/terms-conditions/">Terms &amp; Conditions</a><br />
+        <a href="<?php echo site_url(); ?>/contact/">Contact</a><br />
+        <!-- <a href="#" class="eModal-2">Contact</a><br /> -->
         <a href="<?php echo site_url(); ?>/blog">Blog</a><br />
       </div><!--footerlinks1-->
 
