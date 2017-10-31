@@ -26,7 +26,7 @@ $ltcLinks = array(
     "slug" => "bariatric-care/" ),
   array(
     "name" => "Burke Bariatric Beds",
-    "img"  => "2015/07/Burke-Tri-Flex-II-Bariatric-Bed_400x400-258x275.png",
+    "img"  => "2015/07/Burke-Tri-Flex-II-Bariatric-Bed_400x400-258x275.jpg",
     "slug" => "hospital-beds/burke-bariatric-beds/" ),
   array(
     "name" => "Canes",
@@ -34,23 +34,23 @@ $ltcLinks = array(
     "slug" => "mobility/canes/" ),
   array(
     "name" => "Carts &amp; Storage",
-    "img"  => "2015/02/Waterloo-Pediatric-Medical-Cart_400x400-258x275.png",
+    "img"  => "2015/02/Waterloo-Pediatric-Medical-Cart_400x400-258x275.jpg",
     "slug" => "carts-storage/" ),
   array(
     "name" => "Cots &amp; Stretchers",
-    "img"  => "2015/06/Ferno-35-A-Mobile-Transporter-Series-291_400x400-258x275.png",
+    "img"  => "2015/06/Ferno-35-A-Mobile-Transporter-Series-291_400x400-258x275.jpg",
     "slug" => "ems-cots-and-stretchers/" ),
   array(
     "name" => "Crutches",
-    "img"  => "2015/03/Aluminum-Crutches-PC023230_400x400-258x275.png",
+    "img"  => "2015/03/Aluminum-Crutches-PC023230_400x400-258x275.jpg",
     "slug" => "mobility/crutches/" ),
   array(
     "name" => "Diagnostic Equipment",
-    "img"  => "2015/02/Nurse-Combo-DG090651_400x400-258x275.png",
+    "img"  => "2015/02/Nurse-Combo-DG090651_400x400-258x275.jpg",
     "slug" => "diagnostics/" ),
   array(
     "name" => "Furnishings",
-    "img"  => "2015/03/Classic-Bedside-Cabinet_400x400-258x275.png",
+    "img"  => "2015/03/Classic-Bedside-Cabinet_400x400-258x275.jpg",
     "slug" => "furniture/" ),
   array(
     "name" => "Hill-Rom Parts",
@@ -58,11 +58,11 @@ $ltcLinks = array(
     "slug" => "hill-rom-parts-online/" ),
   array(
     "name" => "Infection Control",
-    "img"  => "2015/02/Brewer-Step-On-Steel-Waste-Can-35269_400x400-258x275.png",
+    "img"  => "2015/02/Brewer-Step-On-Steel-Waste-Can-35269_400x400-258x275.jpg",
     "slug" => "infection-control/" ),
   array(
     "name" => "Infusion &amp; Dialysis",
-    "img"  => "2015/05/Alaris-Medley-infusion-pump-combo-IV010519_400x400-258x275.png",
+    "img"  => "2015/05/Alaris-Medley-infusion-pump-combo-IV010519_400x400-258x275.jpg",
     "slug" => "infusion-dialysis/" ),
   array(
     "name" => "Knee Walkers",
@@ -70,7 +70,7 @@ $ltcLinks = array(
     "slug" => "mobility/knee-walkers/" ),
   array(
     "name" => "Medical Supplies",
-    "img"  => "2015/06/3526-258x275.png",
+    "img"  => "2015/06/3526-258x275.jpg",
     "slug" => "supplies-2/" ),
   array(
     "name" => "Mobility",
@@ -78,7 +78,7 @@ $ltcLinks = array(
     "slug" => "mobility/" ),
   array(
     "name" => "Obstetrics &amp; Pediatrics",
-    "img"  => "2015/03/Novum-Medical-Standard-Infant-Crib-1980_400x400-258x275.png",
+    "img"  => "2015/03/Novum-Medical-Standard-Infant-Crib-1980_400x400-258x275.jpg",
     "slug" => "medical-pediatrics-obstetrics/" ),
   array(
     "name" => "Refrigerators &amp; Freezers",
@@ -86,7 +86,7 @@ $ltcLinks = array(
     "slug" => "refrigerators-freezers/" ),
   array(
     "name" => "Respiratory",
-    "img"  => "2015/03/Laerdal-Suction-Unit-RS014201_400x400-258x275.png",
+    "img"  => "2015/03/Laerdal-Suction-Unit-RS014201_400x400-258x275.jpg",
     "slug" => "respiratory/" ),
   array(
     "name" => "Rollators",
@@ -94,7 +94,7 @@ $ltcLinks = array(
     "slug" => "mobility/rollators/" ),
   array(
     "name" => "Surgical",
-    "img"  => "2015/03/Reconditioned-Amsco-3080-Surgical-Table_400x400-258x275.png",
+    "img"  => "2015/03/Reconditioned-Amsco-3080-Surgical-Table_400x400-258x275.jpg",
     "slug" => "surgical/" ),
   array(
     "name" => "Walkers",

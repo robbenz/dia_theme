@@ -1209,7 +1209,7 @@ $update_hrbedss = array (
 
 foreach ($update_hrbedss as $bed69) {
   //update_post_meta( $bed69, 'dia_whitespace_adj', 'yes' );
-  update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.png' );
+  update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
 }
 */
 
