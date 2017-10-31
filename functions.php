@@ -1236,3 +1236,4 @@ foreach ($update_hrbedss as $bed69) {
   update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.png' );
 }
 */
+?>
