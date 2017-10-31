@@ -1168,6 +1168,8 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
 
 }
 
+add_filter('jpeg_quality', function($arg){return 100;});
+
 /*** END ***/
 
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
