@@ -28,9 +28,9 @@ global $post, $woocommerce, $product; ?>
 	$vet_array_products = array ('73131', '73141', '78818', '78788', '78808', '78813', '78828', '78823', '78764', '78802', '78807', '78772', '73130', '78833', '78797', '78777', '78756', '78760', '78767', '78793' );
 	foreach ($vet_array_products as $vet) {
 		if ($post->ID == $vet) {
-			echo '<div style="margin-top: -1.5em; margin-bottom: -20px;"><img style="position:relative; z-index:999;" class="aligncenter size-full wp-image-83810" src="';
+			echo '<div style="margin-top: -1.5em; margin-bottom: -20px;"><img style="position:relative; z-index:89;" class="aligncenter size-full wp-image-83810" src="';
 			echo site_url();
-			echo '/wp-content/uploads/2017/08/leading-edge.png" alt="" width="392" height="80" /></div>';
+			echo '/wp-content/uploads/2017/08/leading-edge.jpg" alt="" width="392" height="80" /></div>';
 		}
 	}
 
