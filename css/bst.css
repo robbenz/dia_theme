@@ -258,11 +258,18 @@ td.quotes-actions a{margin:0 1em; }
 #rqa_message_row, #rqa_email_row {clear:both;}
 #rqa-message { max-width:100%; min-height:80px; min-width:100%;  }
 .yith-ywraq-add-to-quote { margin-bottom:0.8em; }
+
+
 .add-request-quote-button { background-color:#00426a !important;  }
 .add-request-quote-button:hover { background-color:#78be20 !important; border:none !important; }
 .yith_ywraq_add_item_browse_message { margin:1em 0; }
 .yith_ywraq_add_item_browse_message a { background-color:#00426a; color:#fff; border-radius:0.4em; padding: 10px 20px 12px;}
 .yith_ywraq_add_item_browse_message a:hover { background-color:#78be20; color:#fff;  text-decoration: none;}
+
+body.search-results .add-request-quote-button { background-color:#78be20 !important; border:2px solid #00426a !important;}
+body.search-results  .add-request-quote-button:hover { background-color:#00426a !important; border:2px solid #78be20 !important; }
+
+
 #rqa_address{clear:both; float:left; width:58%; margin-right:2%;}
 #rqa_city{float:left; width:28%; margin-right:2%;}
 #rqa_state{ float:left; width:10%;}

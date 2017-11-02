@@ -111,7 +111,6 @@ if (empty($part_price) ) {
 	}
 
 
-
 	if ( !is_shop() ) {
 		$katt = get_queried_object();
 		$kattID = $katt->term_id;
@@ -123,8 +122,6 @@ if ( have_posts() ) :
 	get_template_part('includes/sidebar');
 
 	do_action( 'woocommerce_before_shop_loop' );
-
-
 
 	if ( !is_shop() && dia_check_for_kids($kattID) == true ):
 
