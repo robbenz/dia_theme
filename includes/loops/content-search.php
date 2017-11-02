@@ -144,6 +144,8 @@ if(have_posts()): while(have_posts()): the_post();
                   <i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button>
               </form>
 
+
+
             <?php elseif( $product->is_type( 'variable' ) ) : ?>
               <br><a class="search-rs-read-more" href="<?php the_permalink(); ?>">View Options</a>
             <?php endif ; ?>
@@ -264,7 +266,17 @@ if(have_posts()): while(have_posts()): the_post();
             <?php endforeach; ?>
 
           <?php elseif( $product->is_type( 'simple' ) ): ?>
+            <?php
+            // if( current_user_can('shop_manager') || current_user_can('administrator') ) {
+            //   if ( !function_exists( 'YITH_YWRAQ_Frontend' ) ) {
+            //     require_once( YITH_YWRAQ_INC . 'class.yith-request-quote-frontend.php' );
+            //     YITH_YWRAQ_Frontend();
+            //   }
+            //
+            //   YITH_YWRAQ_Frontend()->print_button( $product );
+            // }
 
+            ?>
 
           <table class="dia_tg" id="imfuckingsweetatcoding">
 
@@ -313,9 +325,12 @@ if(have_posts()): while(have_posts()): the_post();
             }
             ?>
           </table>
-  <?php endif ; ?>
+
+        <?php endif ; ?>
 
           <?php echo do_shortcode('[RED_FLAG]'); ?>
+
+
         </div>
 
       <?php endif ; ?>
