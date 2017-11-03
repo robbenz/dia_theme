@@ -267,6 +267,10 @@ if(have_posts()): while(have_posts()): the_post();
 
           <?php elseif( $product->is_type( 'simple' ) ): ?>
             <?php
+
+
+
+            // 
             // if( current_user_can('shop_manager') || current_user_can('administrator') ) {
             //   if ( !function_exists( 'YITH_YWRAQ_Frontend' ) ) {
             //     require_once( YITH_YWRAQ_INC . 'class.yith-request-quote-frontend.php' );
@@ -275,6 +279,11 @@ if(have_posts()): while(have_posts()): the_post();
             //
             //   YITH_YWRAQ_Frontend()->print_button( $product );
             // }
+
+
+
+
+
 
             ?>
 
