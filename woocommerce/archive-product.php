@@ -71,9 +71,11 @@ elseif ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
 while ( have_posts() ) : the_post();
 global $product, $post;
 
-$part_price = $product->get_price_html();
+$part_price = $product->get_price();
 if (empty($part_price) ) {
 	$part_price = 'Reqeust A Quote';
+} else {
+	$part_price = $product->get_price_html();
 }
 
 ?>
@@ -109,7 +111,6 @@ if (empty($part_price) ) {
 			do_action( 'woocommerce_archive_description' );
 			echo '</div>';
 	}
-
 
 	if ( !is_shop() ) {
 		$katt = get_queried_object();

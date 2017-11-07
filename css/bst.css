@@ -910,6 +910,8 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #vfbp-form-7 .vfb-checkbox{margin-bottom:3px !important; margin-top: 0 !important;}
 #vfbp-form-7 .subscribe_lists { height: 26px; margin-left: -35px; width: 26px; }
 #vfbp-form-7 button.subscribe_btn{width:100%; background-color:#78be20;border:none; margin-top:10px; }
+
+.vfbp-form input, .vfbp-form * input {margin-bottom:10px !important; }
 /* END */
 
 /*Checkout*/

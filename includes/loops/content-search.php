@@ -28,6 +28,13 @@ if(have_posts()): while(have_posts()): the_post();
 
  ?>
 
+ <script type="text/javascript">
+ function jsAddPartNumber() {
+   jQuery('#vfb-field-293').val('<?php print_r( the_title() ) ; ?>').css('text-transform', 'capitalize');
+   jQuery('#vfb-field-294').val('<?php echo $product->get_sku(); ?>');
+ }
+</script>
+
     <article style="
     padding: 0.69em;
     color:#fff;
@@ -131,6 +138,8 @@ if(have_posts()): while(have_posts()): the_post();
 
           <?php if ( $product->is_purchasable() ) : ?>
 
+
+
             <?php if( $product->is_type( 'simple' ) ) : ?>
 
               <form class="cart" method="post" enctype="multipart/form-data">
@@ -151,7 +160,13 @@ if(have_posts()): while(have_posts()): the_post();
             <?php endif ; ?>
 
       <?php else : ?>
-        <a href="#" class="eModal-2 r-a-qbutton-price">Request Quote</a>
+
+
+        <a href="#" onclick="jsAddPartNumber();return false;" class="eModal-14 r-a-qbutton-price">Request Quote</a>
+
+
+
+
       <?php endif ; ?>
 
     <?php else : ?>
@@ -270,7 +285,7 @@ if(have_posts()): while(have_posts()): the_post();
 
 
 
-            // 
+            //
             // if( current_user_can('shop_manager') || current_user_can('administrator') ) {
             //   if ( !function_exists( 'YITH_YWRAQ_Frontend' ) ) {
             //     require_once( YITH_YWRAQ_INC . 'class.yith-request-quote-frontend.php' );
@@ -354,7 +369,7 @@ if(have_posts()): while(have_posts()): the_post();
     <br><br>
     <span>However, we may still carry this product</span>
   </p>
-  <p style="padding-left:2em;">Please <a href="#" class="eModal-2 click-here-parts-link" style="font-weight:bold">contact us</a>
+  <p style="padding-left:2em;">Please <a href="#" class="eModal-14 click-here-parts-link" style="font-weight:bold">contact us</a>
     and we will get back to you with an answer as soon as possible.</p>
     <p style="padding-left:2em;">Please include your facility name and address so we can email you an official quote.</p>
     <p style="padding-left:2em;">Thank you</p>
