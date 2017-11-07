@@ -245,6 +245,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 			<div id="collapseStatic2" class="panel-collapse collapse">
 				<div class="panel-body">
 					<table class="table">
+						<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">VIEW ALL</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">hospital bed service</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">infusion pump service</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/product-category/components-service-repairs/">component repair</a></td></tr>
@@ -310,7 +311,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				</a>
 				</h4>
 			</div>
-			<div id="collapseStatic5" class="panel-collapse collapse">
+			<div style="border-bottom: 1.5px solid #00426a;padding-bottom:8px; margin-bottom:8px;" id="collapseStatic5" class="panel-collapse collapse">
 				<div class="panel-body">
 					<table class="table">
 						<tr><td><a href="<?php echo site_url(); ?>/cart/">cart</a></td></tr>
