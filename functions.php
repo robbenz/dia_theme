@@ -1168,6 +1168,15 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
 
 }
 
+function add_image_insert_override($sizes){
+    unset( $sizes['thumbnail']);
+    unset( $sizes['medium']);
+    unset( $sizes['medium_large']);
+    unset( $sizes['large']);
+    return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'add_image_insert_override' );
+
 add_filter('jpeg_quality', function($arg){return 100;});
 
 /*** END ***/
