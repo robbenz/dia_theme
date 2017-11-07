@@ -71,9 +71,11 @@ elseif ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
 while ( have_posts() ) : the_post();
 global $product, $post;
 
-$part_price = $product->get_price_html();
+$part_price = $product->get_price();
 if (empty($part_price) ) {
 	$part_price = 'Reqeust A Quote';
+} else {
+	$part_price = $product->get_price_html();
 }
 
 ?>
@@ -110,8 +112,6 @@ if (empty($part_price) ) {
 			echo '</div>';
 	}
 
-
-
 	if ( !is_shop() ) {
 		$katt = get_queried_object();
 		$kattID = $katt->term_id;
@@ -123,8 +123,6 @@ if ( have_posts() ) :
 	get_template_part('includes/sidebar');
 
 	do_action( 'woocommerce_before_shop_loop' );
-
-
 
 	if ( !is_shop() && dia_check_for_kids($kattID) == true ):
 

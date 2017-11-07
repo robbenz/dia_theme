@@ -1167,6 +1167,7 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
   }
 
 }
+/*** END ***/
 
 function add_image_insert_override($sizes){
     unset( $sizes['thumbnail']);
@@ -1178,11 +1179,11 @@ function add_image_insert_override($sizes){
 add_filter('intermediate_image_sizes_advanced', 'add_image_insert_override' );
 
 add_filter('jpeg_quality', function($arg){return 100;});
-
 /*** END ***/
 
-/*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 
+
+/*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 /*
 add_action( 'my_scheduled_event', 'prefix_my_scheduled_event' );
 
