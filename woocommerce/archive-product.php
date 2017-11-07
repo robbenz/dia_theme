@@ -158,7 +158,7 @@ if ( have_posts() ) :
 		<li class="product type-product status-publish has-post-thumbnail">
 
 			<a href="<?php echo site_url(); ?>/product-category/manikins/airway-management/">
-				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/03/Nasco-Lifeform-Tracheostomy-Care-Simulator-LF01083U_400x400-258x275.jpg"
+				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/03/Nasco-Lifeform-Tracheostomy-Care-Simulator-LF01083U_400x400-250x275.jpg"
 						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
 						 alt="Airway Manikins"
 						 width="250" height="266">
@@ -169,7 +169,7 @@ if ( have_posts() ) :
 		<li class="last product type-product status-publish has-post-thumbnail">
 
 			<a href="<?php echo site_url(); ?>/product-category/respiratory/oxygen-supplies/">
-				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/5401-258x275.jpg"
+				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/5401-250x275.jpg"
 						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
 						 alt="Oxygen Supplies"
 						 width="250" height="266">
@@ -180,7 +180,7 @@ if ( have_posts() ) :
 		<li class="first product type-product status-publish has-post-thumbnail">
 
 			<a href="<?php echo site_url(); ?>/product-category/respiratory/suction-machines-supplies/">
-				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/03/Laerdal-Suction-Unit-RS014201_400x400-258x275.jpg"
+				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/03/Laerdal-Suction-Unit-RS014201_400x400-250x275.jpg"
 						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
 						 alt="Suction Machines &amp; Supplies"
 						 width="250" height="266">
@@ -201,7 +201,7 @@ if (is_product_category('6325')) {  ?>
 	<li class=" product type-product status-publish has-post-thumbnail">
 
 		<a href="<?php echo site_url(); ?>/product-category/supplies-2/wound-care-first-aid//">
-			<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3615-258x275.jpg"
+			<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3011-250x275.jpg"
 					 class="attachment-shop_catalog size-shop_catalog wp-post-image"
 					 alt="Wound Care &amp; First Aid"
 					 width="250" height="266">

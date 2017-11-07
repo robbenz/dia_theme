@@ -138,8 +138,6 @@ if(have_posts()): while(have_posts()): the_post();
 
           <?php if ( $product->is_purchasable() ) : ?>
 
-
-
             <?php if( $product->is_type( 'simple' ) ) : ?>
 
               <form class="cart" method="post" enctype="multipart/form-data">
@@ -153,21 +151,13 @@ if(have_posts()): while(have_posts()): the_post();
                   <i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button>
               </form>
 
-
-
             <?php elseif( $product->is_type( 'variable' ) ) : ?>
               <br><a class="search-rs-read-more" href="<?php the_permalink(); ?>">View Options</a>
             <?php endif ; ?>
 
-      <?php else : ?>
-
-
-        <a href="#" onclick="jsAddPartNumber();return false;" class="eModal-14 r-a-qbutton-price">Request Quote</a>
-
-
-
-
-      <?php endif ; ?>
+          <?php else : ?>
+            <a href="#" onclick="jsAddPartNumber();return false;" class="eModal-14 r-a-qbutton-price">Request Quote</a>
+          <?php endif ; ?>
 
     <?php else : ?>
       <button href="#" class="search-rs-read-more eModal-1" >View Price</button>
