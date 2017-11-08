@@ -848,6 +848,11 @@ ul.icons-medium li { margin:0 7.5%; }
 /* END */
 
 /* MISC */
+#columns_list { -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
+  -moz-columns: 100px 3; /* Firefox */
+  columns: 100px 3;
+ }
+ #columns_list li{ text-transform: capitalize; }
 .viewprice-detail{display:block;}
 .logged-in .viewprice-detail{display:none;}
 .woocommerce div.product div.images{margin-top:1em; }
