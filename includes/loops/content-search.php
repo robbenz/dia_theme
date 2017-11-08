@@ -93,6 +93,9 @@ if(have_posts()): while(have_posts()): the_post();
 
           <?php
           $condition = get_post_meta( get_the_ID(), 'benz_condition_select', true );
+          $cat_link = site_url();
+          $cat_link .= "\/product-category\/";
+          $cat_link .= $single_cat->slug;
 
           if (function_exists('is_dia_part')) {
           	if (is_dia_part() && strlen($condition) >= 3 ) {
@@ -100,7 +103,11 @@ if(have_posts()): while(have_posts()): the_post();
           	}
           } ?>
 
-          <h6><span style="color:#fbad17;">Category: </span><?php echo $single_cat->name; ?></h6>
+          <h6>
+            <span style="color:#fbad17;">Category: </span>
+            <a style="color:#fff;" href="<?php echo $cat_link; ?>"><?php echo $single_cat->name; ?></a>
+          </h6>
+
           <h6 class="search-results-description"><span style="color:#78be20;">Description: </span>
             <?php
             $content = get_the_content();
