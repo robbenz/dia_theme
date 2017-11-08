@@ -120,7 +120,7 @@ if (empty($part_price) ) {
 if ( have_posts() ) :
 
 	get_template_part('includes/newer-sidebar');
-	//get_template_part('includes/sidebar');
+	// get_template_part('includes/sidebar');
 
 	do_action( 'woocommerce_before_shop_loop' );
 
