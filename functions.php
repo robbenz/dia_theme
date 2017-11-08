@@ -1206,22 +1206,17 @@ if ( ! wp_next_scheduled( 'my_scheduled_event' ) ) {
 
 
 // update some shit
-/*
-$update_hrbedss = array (
-  '30712',
-  '30706',e
-  '30708',
-  '30714',
-  '30720',
-  '30722',
-  '30710'
-);
-
-foreach ($update_hrbedss as $bed69) {
-  //update_post_meta( $bed69, 'dia_whitespace_adj', 'yes' );
-  update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
-}
-*/
+//
+// $update_hrbedss = array (
+//   '67011',
+//   '67012'
+// );
+//
+// foreach ($update_hrbedss as $bed69) {
+//   //update_post_meta( $bed69, 'dia_whitespace_adj', 'yes' );
+//   //update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
+//   //update_post_meta( $bed69, '_thumbnail_id', '54289' );
+// }
 
 /*** light box photo shit ***/
 /*
