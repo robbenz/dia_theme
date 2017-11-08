@@ -157,12 +157,29 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <?php
-
+if(!WC()->cart->is_empty()) {
 	$product_id = 86004;
 	$product_cart_id = WC()->cart->generate_cart_id( $product_id );
 	$in_cart = WC()->cart->find_product_in_cart( $product_cart_id );
-	if ( $in_cart ) echo '<span style="color:#d6001c;font-size:1.25em;"><b>EHR TUTOR IS FOR PRE-SALE ONLY.</b> <br>Estimated Availability: January 1, 2018</span>';
+	if ( $in_cart ) : ?>
+	<span style="color:#d6001c;font-size:1.1em;">
+		<b>Loaded Medication Cart for EHR Tutor is for Pre-Sale Only.</b>
+		<br>Estimated Availability: January 1, 2018
+	</span>
+<?php endif;
+}
 
+
+// 	$items_id = array();
+// 	foreach(WC()->cart->get_cart() as $cart_item ) array_push($items_id, $cart_item['product_id']);
+// // foreach ($items_id as $itemm) {
+// // 	if ($itemm === 30654)echo 'hello';
+// // }
+// // 	// echo'<pre>';var_dump($items_id);echo'</pre>';
+// // 	//
+// var_dump($items_id);
+// 	 if ( in_array("int(30645)", $items_id, true ) ){ echo 'hello'; }
+// }
 ?>
 <div class="cart-collaterals">
 
