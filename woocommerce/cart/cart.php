@@ -168,18 +168,6 @@ if(!WC()->cart->is_empty()) {
 	</span>
 <?php endif;
 }
-
-
-// 	$items_id = array();
-// 	foreach(WC()->cart->get_cart() as $cart_item ) array_push($items_id, $cart_item['product_id']);
-// // foreach ($items_id as $itemm) {
-// // 	if ($itemm === 30654)echo 'hello';
-// // }
-// // 	// echo'<pre>';var_dump($items_id);echo'</pre>';
-// // 	//
-// var_dump($items_id);
-// 	 if ( in_array("int(30645)", $items_id, true ) ){ echo 'hello'; }
-// }
 ?>
 <div class="cart-collaterals">
 
