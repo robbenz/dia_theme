@@ -1185,15 +1185,21 @@ function add_image_insert_override($sizes){
 add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
 function change_attachement_image_attributes($attr, $attachment) {
 global $post;
-$product = wc_get_product( $post->ID );
-if ( $post->post_type == 'product' && function_exists('is_dia_part') && is_dia_part() ) {
-  $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-  $single_cat = array_shift( $product_cats );
+if ( $post->post_type == 'product' ) {
   $title = $post->post_title;
   $content = get_the_content();
-
+  $product = wc_get_product( $post->ID );
+  $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+  $single_cat = array_shift( $product_cats );
+  $parentcats = get_ancestors($single_cat->term_id, 'product_cat');
+  if ( function_exists('is_dia_part') && is_dia_part() ) {
     $attr['alt'] = $title .' | ' . $single_cat->name;
     $attr['title'] = $content ;
+  }
+  if ( in_array( 5310, $parentcats ) ) { // stretcher pads
+      $attr['alt'] = $title .' | ' . $single_cat->name;
+      $attr['title'] = $title .' | ' . $single_cat->name;
+    }
   }
   return $attr;
 }
