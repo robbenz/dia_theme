@@ -1183,6 +1183,25 @@ add_filter('jpeg_quality', function($arg){return 100;});
 
 
 
+// Change images alt and title tag
+add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
+function change_attachement_image_attributes($attr, $attachment) {
+global $post;
+$product = wc_get_product( $post->ID );
+if ( $post->post_type == 'product' && function_exists('is_dia_part') && is_dia_part() ) {
+  $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+  $single_cat = array_shift( $product_cats );
+  $title = $post->post_title;
+  $content = get_the_content();
+
+    $attr['alt'] = $title .' | ' . $single_cat->name;;
+    $attr['title'] = $content ;
+  }
+  return $attr;
+}
+
+
+
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 /*
 add_action( 'my_scheduled_event', 'prefix_my_scheduled_event' );

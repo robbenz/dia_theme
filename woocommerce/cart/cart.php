@@ -157,7 +157,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <?php
-if(!WC()->cart->is_empty()) {
+if(!WC()->cart->is_empty()) :
 	$product_id = 86004;
 	$product_cart_id = WC()->cart->generate_cart_id( $product_id );
 	$in_cart = WC()->cart->find_product_in_cart( $product_cart_id );
@@ -166,9 +166,7 @@ if(!WC()->cart->is_empty()) {
 		<b>Loaded Medication Cart for EHR Tutor is for Pre-Sale Only.</b>
 		<br>Estimated Availability: January 1, 2018
 	</span>
-<?php endif;
-}
-?>
+<?php endif; endif; ?>
 <div class="cart-collaterals">
 
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
