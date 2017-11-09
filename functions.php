@@ -1192,7 +1192,7 @@ if ( $post->post_type == 'product' && function_exists('is_dia_part') && is_dia_p
   $title = $post->post_title;
   $content = get_the_content();
 
-    $attr['alt'] = $title .' | ' . $single_cat->name;;
+    $attr['alt'] = $title .' | ' . $single_cat->name;
     $attr['title'] = $content ;
   }
   return $attr;
