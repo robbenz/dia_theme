@@ -1169,6 +1169,9 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
 }
 /*** END ***/
 
+/*** override jpg quality - no longer reduce 90% AND reduce number of thumbnails generated ***/
+add_filter('jpeg_quality', function($arg){return 100;});
+add_filter('intermediate_image_sizes_advanced', 'add_image_insert_override' );
 function add_image_insert_override($sizes){
     unset( $sizes['thumbnail']);
     unset( $sizes['medium']);
@@ -1176,14 +1179,9 @@ function add_image_insert_override($sizes){
     unset( $sizes['large']);
     return $sizes;
 }
-add_filter('intermediate_image_sizes_advanced', 'add_image_insert_override' );
-
-add_filter('jpeg_quality', function($arg){return 100;});
 /*** END ***/
 
-
-
-// Change images alt and title tag
+/*** Change images alt and title tag for dia_parts ***/
 add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
 function change_attachement_image_attributes($attr, $attachment) {
 global $post;
@@ -1199,6 +1197,7 @@ if ( $post->post_type == 'product' && function_exists('is_dia_part') && is_dia_p
   }
   return $attr;
 }
+/*** END ***/
 
 
 
