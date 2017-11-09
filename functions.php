@@ -1170,7 +1170,7 @@ if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
 /*** END ***/
 
 /*** override jpg quality - no longer reduce 90% AND reduce number of thumbnails generated ***/
-add_filter('jpeg_quality', function($arg){return 100;});
+//add_filter('jpeg_quality', function($arg){return 100;});
 add_filter('intermediate_image_sizes_advanced', 'add_image_insert_override' );
 function add_image_insert_override($sizes){
     unset( $sizes['thumbnail']);
