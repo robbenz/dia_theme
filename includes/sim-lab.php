@@ -17,7 +17,7 @@ get_template_part('includes/header');
 <!--.row -->
 </div>
 <!--.container -->
-<div style="width:100%; text-align:center; background-color:#d6001c; padding:4px 0; color:#fff; font-size: 17px; letter-spacing: 1px;">ALL SIMLABSOLUTIONS PRODUCTS ARE FOR INSTRUCTIONAL USE ONLY. NOT FOR HUMAN OR ANIMAL INJECTION OR INGESTION.</div>
+<div style="width:100%; text-align:center; background-color:#d6001c; margin-bottom:10px; padding:4px 0; color:#fff; font-size: 17px; letter-spacing: 1px;">ALL SIMLABSOLUTIONS PRODUCTS ARE FOR INSTRUCTIONAL USE ONLY. NOT FOR HUMAN OR ANIMAL INJECTION OR INGESTION.</div>
 <div class="container woocommerce">
   <div class="row">
 <?php get_template_part('includes/newer-sidebar'); ?>
