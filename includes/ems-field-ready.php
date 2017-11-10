@@ -10,9 +10,9 @@ get_template_part('includes/header');
 
       <img class="header-img" src="<?php echo site_url(); ?>/wp-content/imgs/includes/ems-field-ready.png" />
 
-      <div class="col-xs-6" id="sidebar" role="navigation">
-        <?php get_template_part('includes/sidebar'); ?>
-      </div>
+      <!-- <div class="col-xs-6" id="sidebar" role="navigation"> -->
+        <?php get_template_part('includes/newer-sidebar'); ?>
+      <!-- </div> -->
 
       <div class="col-xs-12 col-sm-8">
 

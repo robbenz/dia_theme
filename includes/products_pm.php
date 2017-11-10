@@ -9,9 +9,8 @@ get_template_part('includes/header');
 
       <?php woocommerce_breadcrumb(); ?>
 
-      <div class="col-xs-6" id="sidebar" role="navigation">
-        <?php get_template_part('includes/sidebar'); ?>
-      </div>
+  <?php get_template_part('includes/newer-sidebar'); ?>
+
 <div class="col-xs-12 col-sm-8">
       <div id="content" role="main">
 

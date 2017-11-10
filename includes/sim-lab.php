@@ -20,9 +20,7 @@ get_template_part('includes/header');
 <div style="width:100%; text-align:center; background-color:#d6001c; padding:4px 0; color:#fff; font-size: 17px; letter-spacing: 1px;">ALL SIMLABSOLUTIONS PRODUCTS ARE FOR INSTRUCTIONAL USE ONLY. NOT FOR HUMAN OR ANIMAL INJECTION OR INGESTION.</div>
 <div class="container woocommerce">
   <div class="row">
-    <div class="col-xs-6" id="sidebar" role="navigation">
-      <?php get_template_part('includes/sidebar'); ?>
-    </div>
+<?php get_template_part('includes/newer-sidebar'); ?>
     <div id="ns_rotate_wrap">
       <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71058' ); } ?>
       <div class="row" style="margin-top: 14px; margin-bottom:14px; ">

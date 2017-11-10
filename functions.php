@@ -1181,6 +1181,29 @@ function add_image_insert_override($sizes){
 }
 /*** END ***/
 
+/*** Create user account when new customer profile form submits ***/
+// add_action( 'vfbp_after_email', 'create_dia_profile_account', 10, 2 );
+//
+// function create_dia_profile_account( $entry_id, $form_id  ){
+//   if ($form_id == 9) {
+//
+//
+// // vfb-field-298
+//
+//
+//   $username = $_POST['vfb-field-233']['first'] . $_POST['vfb-field-233']['last'];
+//   $email = $_POST['vfb-field-236'];
+//
+//   $pass = $_POST['vfb-field-'];
+//
+//   $exists = email_exists( $email );
+//      if (! $exists ) {
+//        wp_create_user( $username, $pass, $email );
+//      }
+//    }
+// }
+/*** END ***/
+
 /*** Change images alt and title tag for dia_parts ***/
 add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
 function change_attachement_image_attributes($attr, $attachment) {
@@ -1198,12 +1221,17 @@ if ( $post->post_type == 'product' ) {
   }
   if ( in_array( 5310, $parentcats ) ) { // stretcher pads
       $attr['alt'] = $title .' | ' . $single_cat->name;
-      $attr['title'] = $title .' | ' . $single_cat->name;
+      $attr['title'] = $title;
     }
   }
   return $attr;
 }
 /*** END ***/
+
+/*** var_dump_ array/string all cute and pretty  ***/
+function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
+/*** END ***/
+
 
 
 

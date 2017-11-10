@@ -2,20 +2,12 @@
 
 <div class="container">
   <div class="row">
-
-    <div class="col-xs-6 col-sm-4" id="sidebar" role="navigation">
-      <?php get_template_part('includes/sidebar'); ?>
-    </div>
-
-
+    <?php get_template_part('includes/newer-sidebar'); ?>
     <div class="col-xs-12 col-sm-8">
       <div id="content" role="main">
         <?php get_template_part('includes/loops/content', 'page'); ?>
       </div><!-- /#content -->
     </div>
-
-
-
   </div><!-- /.row -->
 </div><!-- /.container -->
 
