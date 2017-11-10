@@ -11,13 +11,12 @@ get_template_part('includes/header');
 
       <img class="header-img" src="<?php echo site_url(); ?>/wp-content/imgs/includes/hospital.png" />
 
-<?php get_template_part('includes/newer-sidebar'); ?>
+      <?php get_template_part('includes/newer-sidebar'); ?>
 
       <div class="col-xs-12 col-sm-8">
         <div id="content" role="main">
 
-
-          <div id="hospital_content_wrap" style="float: right;  margin: 19px -26px 10px 0px; width: 850px;">
+          <div id="hospital_content_wrap" style="float: right;  margin: 0px -26px 10px 0px; width: 850px;">
 
             <div style="height:382px; position:relative; background-image: url(https://diamedicalusa.com/wp-content/imgs/hospital-home/Hospital-home-part-search.png); ">
 
@@ -28,10 +27,7 @@ get_template_part('includes/header');
                 <span style="font-size:38px;">&nbsp;&nbsp;FROM</span><br />
                 <span style="font-size:68px; ">ANY MANUFACTURER</span>
               </div>
-              <span style="color:#fff; position:absolute; bottom:56px; left:14px; font-family: 'ristretto_promedium', Arial, sans-serif; font-size:48px; line-height:43px;">
-SEARCH <br />
-BIOMEDICAL <br />
-PARTS</span>
+              <span style="color:#fff; position:absolute; bottom:56px; left:14px; font-family: 'ristretto_promedium', Arial, sans-serif; font-size:48px; line-height:43px;">SEARCH <br />BIOMEDICAL <br />PARTS</span>
 
               <?php get_template_part( 'includes/navbar-search' ); ?>
 
