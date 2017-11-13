@@ -1234,14 +1234,14 @@ function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 
 
 
-
-if(extension_loaded('imagick')) {
-    $imagick = new Imagick();
-    _pre($imagick->queryFormats());
-}
-else {
-    echo 'ImageMagick is not available.';
-}
+// 
+// if(extension_loaded('imagick')) {
+//     $imagick = new Imagick();
+//     _pre($imagick->queryFormats());
+// }
+// else {
+//     echo 'ImageMagick is not available.';
+// }
 
 
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
