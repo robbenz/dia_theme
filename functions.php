@@ -1208,6 +1208,7 @@ function add_image_insert_override($sizes){
 add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
 function change_attachement_image_attributes($attr, $attachment) {
 global $post;
+
 if ( $post->post_type == 'product' ) {
   $title = $post->post_title;
   $content = get_the_content();
@@ -1234,14 +1235,63 @@ function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 
 
 
-// 
-// if(extension_loaded('imagick')) {
-//     $imagick = new Imagick();
-//     _pre($imagick->queryFormats());
+
+//
+// try {
+//     $imagick = new Imagick($attachment->guid);
+//
+//     $width = $imagick->getimagegravity();
+//   //  $width = $imagick->getImageWidth();
+//     print "the image width is " . $width . " pixels";
 // }
-// else {
-//     echo 'ImageMagick is not available.';
+// catch(Exception $e) {
+//     die('Error when creating a thumbnail: ' . $e->getMessage());
 // }
+//
+//
+
+
+
+add_filter('wp_handle_upload_prefilter', 'dia_generate_image' );
+function dia_generate_image( $file ){
+  // $im = new Imagick($file->guid);
+  $im = new Imagick($file['URL']);
+
+# Check to see if the image is already a jpg
+if ($im->getFormat() !=  'jpg') {
+
+# Convert to JPG if the image is not a JPG
+    $im->setImageFormat( 'jpg'); //?
+}
+# Check to see if the image is greater than 800x800
+    $im->resizeImage ( 800, 800,  imagick::FILTER_LANCZOS, 1, TRUE);
+
+# extent
+    $im->setImageExtent ( 800 , 800 );
+
+# center gravity
+    $im->setImageGravity ( GRAVITY_CENTER );
+
+
+# strip metadata
+
+// quality
+
+
+    return $file;
+
+
+}
+
+
+// add_action( 'wp_footer', 'before_foot' );
+// function before_foot(){
+//   $imagick = get_class_methods (Imagick) ;
+//   _pre($imagick);
+// }
+
+
+
 
 
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
@@ -1278,29 +1328,3 @@ if ( ! wp_next_scheduled( 'my_scheduled_event' ) ) {
 //   //update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
 //   //update_post_meta( $bed69, '_thumbnail_id', '54289' );
 // }
-
-/*** light box photo shit ***/
-/*
-add_action( 'wp_enqueue_scripts', 'frontend_scripts_include_lightbox' );
-
-function frontend_scripts_include_lightbox() {
-  global $woocommerce;
-  $suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-  $lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false;
-
-  if ( $lightbox_en ) {
-    wp_enqueue_script( 'prettyPhoto', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
-    wp_enqueue_script( 'prettyPhoto-init', $woocommerce->plugin_url() . '/assets/js/prettyPhoto/jquery.prettyPhoto.init' . $suffix . '.js', array( 'jquery' ), $woocommerce->version, true );
-    wp_enqueue_style( 'woocommerce_prettyPhoto_css', $woocommerce->plugin_url() . '/assets/css/prettyPhoto.css' );
-  }
-}
-function autoadd_rel_prettyPhoto($content) {
- global $post;
- $pattern = "/(<a(?![^>]*?data-rel=['\"]prettyPhoto.*)[^>]*?href=['\"][^'\"]+?\.(?:bmp|gif|jpg|jpeg|png)['\"][^\>]*)>/i";
- $replacement = '$1 data-rel="prettyPhoto['.$post->ID.']">';
- $content = preg_replace($pattern, $replacement, $content);
- return $content;
-}
-add_filter("the_content","autoadd_rel_prettyPhoto");
-*/
-/* END */
