@@ -331,9 +331,8 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {background-color:#78be20; color:#fff;}
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {background-color:#00426a; color:#fff; border:1px solid #78be20;}
 .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {background-color:#00426a;}
-.wc-tabs h2{text-transform: uppercase; color:#ffad00; }
-.wc-tabs-wrapper{margin-bottom:1em; border-bottom: 5px solid #78be20; padding-bottom:20px;}
-.wc-tabs > div { }
+
+
 .panel { border: 0 !important; box-shadow: 0 !important; border: none !important; box-shadow: none !important; }
 .related h2, .upsells h2 { text-transform: uppercase; color:#78be20; font-size: 30px; font-weight:400;}
 .reset_variations{display:none !important;}
@@ -740,7 +739,10 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 /* END */
 
 /*TABS*/
-.wc-tabs-wrapper ul {padding-left:0px !important; margin-bottom:0px !important; }
+.woocommerce-tabs { margin-bottom:1em; border-bottom: 5px solid #78be20; padding-bottom:20px; }
+.woocommerce-tabs h2 { border-bottom:2px solid #00426a; width:100%; font-family: 'Lato',sans-serif; color:#00426a; }
+
+/*.wc-tabs-wrapper ul {padding-left:0px !important; margin-bottom:0px !important; }
 .wc-tabs-wrapper .active { background-color:#5d8dc3 !important; color:#fff !important; border-bottom: 0 !important;}
 .wc-tabs-wrapper .wc-tab {max-height:400px; height:400px; overflow:scroll;border-radius: 0 !important; border:4px solid #cccccc !important; padding: 0 2em !important; }
 .wc-tabs-wrapper #tab-description{ padding:0 2em !important; }
@@ -755,7 +757,7 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .accordion-title{ background-color: #ececec; border: 1px solid #464444; border-radius: 0.3em; font-size: 12px; padding: 0.4em; }
 .accordion-title:hover{cursor: pointer; background-color:#d7d7d7}
 .woocommerce-tabs ul ul { margin-left: 20px; padding-bottom: 6px; }
-.wc-tab li { margin-left: 1.8em; }
+.wc-tab li { margin-left: 1.8em; }*/
 /*END*/
 
 /*TABLE PARTS*/
@@ -803,7 +805,9 @@ ul.icons-medium li { margin:0 7.5%; }
 /* END */
 
 /* MISC */
-#columns_list { -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
+#columns_list, .columns_list{
+/*#columns_list, .woocommerce-tabs .wc-tab > ul {*/
+  -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
   -moz-columns: 100px 3; /* Firefox */
   columns: 100px 3;
  }

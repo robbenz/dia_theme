@@ -78,36 +78,18 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 
 <?php endif ;?>
 
-<?php $tabs = apply_filters( 'woocommerce_product_tabs', array() ); ?>
-
-	<div class="woocommerce-tabs wc-tabs-wrapper">
-		<ul class="tabs wc-tabs">
-			<?php foreach ( $tabs as $key => $tab ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>_tab">
-					<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-		<?php foreach ( $tabs as $key => $tab ) : ?>
-
-			<?php if( function_exists('is_dia_part') && is_dia_part() ): ?>
-
-			<div style="height:auto !important;padding-bottom:10px !important;" class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
-			<?php else : ?>
-				<div class="panel entry-content wc-tab %2" id="tab-<?php echo esc_attr( $key ); ?>">
-
-					<?php
-					/*  Need to delete a lot of html before this can work
-					if ( esc_attr( $key ) != "description"){
-						echo '<h2>' . apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ) . '</h2>';
-					}  */
-					?>
-
-				<?php endif ; ?>
-
-				<?php call_user_func( $tab['callback'], $key, $tab ); ?>
-
-			</div>
-		<?php endforeach; ?>
-
+<div class="woocommerce-tabs">
+	<?php $tabs = apply_filters( 'woocommerce_product_tabs', array() ); $_x=1;
+	foreach ( $tabs as $key => $tab ) : ?>
+	<div class="tab_content_<?php echo $_x ?>">
+		<?php call_user_func( $tab['callback'], $key, $tab ); ?>
 	</div>
+
+	<script type="text/javascript">
+	if ( jQuery('.tab_content_<?php echo $_x; ?> ul li').size() > 20 ) {
+		jQuery( '.tab_content_<?php echo $_x; ?> ul' ).addClass( 'columns_list' );
+	}
+	</script>
+
+	<?php $_x++; endforeach; ?>
+</div>
