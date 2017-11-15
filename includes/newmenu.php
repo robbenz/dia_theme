@@ -13,7 +13,7 @@
 <script type="text/javascript">
 (function($) {
   "use strict";
-
+// hey whats up 
   $(document).ready(function() {
     var timer = 0;
     $(".top-menu-main-a")
