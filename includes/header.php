@@ -113,53 +113,66 @@
 			</div>
 		</header> <!-- #masthead -->
 
-		<nav id="drop-menu" class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
 
 					<?php
-					$benzmenu  = 'benz-menu';
-					wp_nav_menu( array(
-						'theme_location' => 'home',
-						'items_wrap' => $benzitems,
-						'container_class' => $benzmenu
-					));
+					// if ( is_page( 'new-menu-testing-silly' ) ) {
+					// 	get_template_part('includes/newmenu');
+					// } else {
+						?>
 
-					wp_nav_menu( array(
-						'theme_location'  => 'medical-equipment',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-equipt',
-						'walker'          => new BENZ_Walker_Nav_Menu_EQP
-					));
+						<!-- <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
+							<div class="container">
+								<div class="navbar-header"> -->
 
-					wp_nav_menu( array(
-						'theme_location'  => 'parts-search',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
-						'walker'          => new BENZ_Walker_Nav_Menu_NEWSEARCH
-					));
+					<?php
 
-					wp_nav_menu( array(
-						'theme_location'  => 'repirstmp',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-repairs'
-  				  //  'walker'        => new BENZ_Walker_Nav_Menu_RP
-					));
+					get_template_part('includes/newmenu');
+				// 	$benzmenu  = 'benz-menu';
+				// 	wp_nav_menu( array(
+				// 		'theme_location' => 'home',
+				// 		'items_wrap' => $benzitems,
+				// 		'container_class' => $benzmenu
+				// 	));
+        //
+				// 	wp_nav_menu( array(
+				// 		'theme_location'  => 'medical-equipment',
+				// 		'items_wrap'      => $benzitems,
+				// 		'container_class' => $benzmenu . ' ' . $benzmenu . '-equipt',
+				// 		'walker'          => new BENZ_Walker_Nav_Menu_EQP
+				// 	));
+        //
+				// 	wp_nav_menu( array(
+				// 		'theme_location'  => 'parts-search',
+				// 		'items_wrap'      => $benzitems,
+				// 		'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
+				// 		'walker'          => new BENZ_Walker_Nav_Menu_NEWSEARCH
+				// 	));
+        //
+				// 	wp_nav_menu( array(
+				// 		'theme_location'  => 'repirstmp',
+				// 		'items_wrap'      => $benzitems,
+				// 		'container_class' => $benzmenu . ' ' . $benzmenu . '-repairs'
+  			// 	  //  'walker'        => new BENZ_Walker_Nav_Menu_RP
+				// 	));
+        //
+				// 	wp_nav_menu( array(
+				// 		'theme_location'  => 'manufacturers',
+				// 		'items_wrap'      => $benzitems,
+				// 		'container_class' => $benzmenu . ' ' . $benzmenu . '-manufacturers',
+				// 		'walker'          => new BENZ_Walker_Nav_Menu_MFT
+				// 	));
+        //
+				// 	wp_nav_menu( array(
+				// 		'theme_location'  => 'about-us',
+				// 		'items_wrap'      => $benzitems,
+				// 		'container_class' => $benzmenu . ' ' . $benzmenu . '-about'
+				// //		'walker'          => new BENZ_Walker_Nav_Menu_ABOUT
+				// 	));
+				// }
+				?>
 
-					wp_nav_menu( array(
-						'theme_location'  => 'manufacturers',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-manufacturers',
-						'walker'          => new BENZ_Walker_Nav_Menu_MFT
-					));
-
-					wp_nav_menu( array(
-						'theme_location'  => 'about-us',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-about'
-				//		'walker'          => new BENZ_Walker_Nav_Menu_ABOUT
-					));
-					?>
-				</div><!-- .navbar-header -->
-			</div> <!-- /.container -->
+				<!--
+				</div>
+			</div> 
 		</nav>
+		-->

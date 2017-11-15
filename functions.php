@@ -1252,36 +1252,37 @@ function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 
 
 
-add_filter('wp_handle_upload_prefilter', 'dia_generate_image' );
-function dia_generate_image( $file ){
-  // $im = new Imagick($file->guid);
-  $im = new Imagick($file['URL']);
-
-# Check to see if the image is already a jpg
-if ($im->getFormat() !=  'jpg') {
-
-# Convert to JPG if the image is not a JPG
-    $im->setImageFormat( 'jpg'); //?
-}
-# Check to see if the image is greater than 800x800
-    $im->resizeImage ( 800, 800,  imagick::FILTER_LANCZOS, 1, TRUE);
-
-# extent
-    $im->setImageExtent ( 800 , 800 );
-
-# center gravity
-    $im->setImageGravity ( GRAVITY_CENTER );
-
-
-# strip metadata
-
-// quality
-
-
-    return $file;
-
-
-}
+// add_filter('wp_handle_upload_prefilter', 'dia_generate_image' );
+// function dia_generate_image( $file ){
+//   // $im = new Imagick($file->guid);
+//   $im = new Imagick($file['URL']);
+//
+// # Check to see if the image is already a jpg
+// if ($im->getFormat() !=  'jpg') {
+//
+// # Convert to JPG if the image is not a JPG
+//     $im->setImageFormat( 'jpg'); //?
+// }
+// # Check to see if the image is greater than 800x800
+//     $im->resizeImage ( 800, 800,  imagick::FILTER_LANCZOS, 1, TRUE);
+//
+// # extent
+//     $im->setImageExtent ( 800 , 800 );
+//
+// # center gravity
+//     $im->setImageGravity ( GRAVITY_CENTER );
+//
+// # strip metadata
+//     $im->stripImage();
+//
+// // quality
+//     $im->setImageCompression( COMPRESSION_JPEG )
+//     $im->setImageCompressionQuality( 85 )
+//
+//     return $file;
+//
+//
+// }
 
 
 // add_action( 'wp_footer', 'before_foot' );
