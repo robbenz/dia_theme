@@ -10,12 +10,21 @@
   #mve_cols {columns: 80px 3;}
   a.top-menu-facility-filter li {margin: 10px auto;}
 </style>
+
+
+
+
+
 <script type="text/javascript">
+
 (function($) {
   "use strict";
-// hey whats up 
   $(document).ready(function() {
+
+
     var timer = 0;
+
+
     $(".top-menu-main-a")
       .mouseenter(function(){
         // clearTimeout(timer);
@@ -31,14 +40,30 @@
         console.log(timer);
       });
 
-    $("#masthead").mouseenter(function(){$('#med_equipment_drop').stop().fadeOut(200);});
 
-    $(".drop-menu-panel").mouseleave(function(){$('#med_equipment_drop').stop().fadeOut(200);});
+
+    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(200);});
+
+
+
+    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(200);});
+
+
 
   });
 }(jQuery));
 
+
+
 </script>
+
+
+
+
+
+
+
+
 <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header main-navbar-header">
@@ -131,3 +156,26 @@
 </nav>
 
 <!-- Parts Search Drop Menu-->
+<nav id="parts_drop" class="drop-menu-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4 class="panel-title">Filter By Your Facility Type</h4>
+        <ul>
+          <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
+        </ul>
+      </div>
+      <div class="col-sm-9" id="mve_cols">
+
+      </div>
+    </div>
+  </div>
+</nav>
