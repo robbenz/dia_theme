@@ -78,7 +78,7 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 
 <?php endif ;?>
 
-<div class="woocommerce-tabs">
+<div id="woocommerce_tabs" class="woocommerce-tabs">
 	<?php
 	$tabs = apply_filters( 'woocommerce_product_tabs', array() );
 	foreach ( $tabs as $key => $tab ) call_user_func( $tab['callback'], $key, $tab );
