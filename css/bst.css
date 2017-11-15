@@ -804,7 +804,6 @@ ul.icons-medium li { margin:0 7.5%; }
 
 /* MISC */
 #columns_list, .columns_list{
-/*#columns_list, .woocommerce-tabs .wc-tab > ul {*/
   -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
   -moz-columns: 100px 3; /* Firefox */
   columns: 100px 3;
