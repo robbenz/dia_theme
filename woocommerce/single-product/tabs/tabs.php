@@ -79,17 +79,8 @@ $pm_title = get_post_meta( $post->ID, 'benz_pm_text_field', true );
 <?php endif ;?>
 
 <div class="woocommerce-tabs">
-	<?php $tabs = apply_filters( 'woocommerce_product_tabs', array() ); $_x=1;
-	foreach ( $tabs as $key => $tab ) : ?>
-	<div class="tab_content_<?php echo $_x ?>">
-		<?php call_user_func( $tab['callback'], $key, $tab ); ?>
-	</div>
-
-	<script type="text/javascript">
-	if ( jQuery('.tab_content_<?php echo $_x; ?> ul li').size() > 20 ) {
-		jQuery( '.tab_content_<?php echo $_x; ?> ul' ).addClass( 'columns_list' );
-	}
-	</script>
-
-	<?php $_x++; endforeach; ?>
+	<?php
+	$tabs = apply_filters( 'woocommerce_product_tabs', array() );
+	foreach ( $tabs as $key => $tab ) call_user_func( $tab['callback'], $key, $tab );
+	?>
 </div>

@@ -109,6 +109,12 @@
       });
       /*** END ***/
 
+      /*** add columns class to long lists in product tabs  ***/
+      $(".woocommerce-tabs ul").filter(function () {
+        return $(this).find('li').length >= 17
+      }).addClass("columns_list");
+      /*** END ***/
+
       /*** left sidebar ***/
       $('.sidebar-replace').hide();
       $('.view-all').show();
