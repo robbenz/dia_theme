@@ -808,6 +808,7 @@ ul.icons-medium li { margin:0 7.5%; }
   -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
   -moz-columns: 100px 3; /* Firefox */
   columns: 100px 3;
+  list-style-position: inside;
  }
  #columns_list li{ text-transform: capitalize; }
 .viewprice-detail{display:block;}
