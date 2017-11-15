@@ -112,7 +112,8 @@
       /*** add columns class to long lists in product tabs  ***/
     //  $('.woocommerce-tabs ul').filter(function () {
       $('#woocommerce_tabs ul').filter(function () {
-        return $(this).find('li').length >= 17
+        //return $(this).find('li').length >= 17
+        return $(this).children().length >= 17
       }).addClass('columns_list');
       /*** END ***/
 
