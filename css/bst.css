@@ -318,7 +318,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce div.product { padding: 1em 2em !important; }
 .woocommerce-main-image{ max-width:400px; width:400px; }
 .woocommerce div.product div.images img {max-width:100%; width:80%;}
-.entry-summary .product_title { color:#00426a; text-transform: uppercase; font-weight:400;}
+.entry-summary .product_title { font-size:31px; color:#00426a; text-transform: uppercase; font-weight:400;}
 .pp_pic_holder .pp_description, .pp_pic_holder .ppt{display:none !important;}
 .woocommerce div.product form.cart .variations {width:90%; }
 .woocommerce div.product form.cart .variations select {margin-top:10px; }
@@ -334,7 +334,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 
 
 .panel { border: 0 !important; box-shadow: 0 !important; border: none !important; box-shadow: none !important; }
-.related h2, .upsells h2 { text-transform: uppercase; color:#78be20; font-size: 30px; font-weight:400;}
+.related h2, .upsells h2 {margin-top: 0px; text-transform: uppercase; color:#78be20; font-size: 20px; font-weight:400;}
 .reset_variations{display:none !important;}
 [id*="product-"] .onsale{display:none;}
 .woocommerce_widget_cart-5 h4 { background-color: #ffad00; border-radius: 0.2em; color: #00426a; font-size: 165%; padding: 0.2em; text-align: center; text-shadow: none; }
@@ -356,8 +356,6 @@ span.price del, span.price ins {display: block;}
 .product-addon, .product-addon-totals {display:none;}
 .logged-in .product-addon, .logged-in .product-addon-totals { display:block;}
 /* END */
-
-
 
 /* HOME PAGE */
 #homeorangewrap { width:100%; background: #ffd67f; margin-bottom: 2%; text-align:center; padding:1em; }
@@ -739,8 +737,8 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 /* END */
 
 /*TABS*/
-.woocommerce-tabs { margin-bottom:1em; border-bottom: 5px solid #78be20; padding-bottom:20px; }
-.woocommerce-tabs h2 { border-bottom:2px solid #00426a; width:100%; font-family: 'Lato',sans-serif; color:#00426a; }
+.woocommerce-tabs { margin-bottom:1em; border-bottom: 2px solid #78be20; padding-bottom:20px; }
+.woocommerce-tabs h2 { border-bottom:2px solid #00426a; font-size: 20px; width:100%; font-family: 'Lato',sans-serif; color:#00426a; }
 
 /*.wc-tabs-wrapper ul {padding-left:0px !important; margin-bottom:0px !important; }
 .wc-tabs-wrapper .active { background-color:#5d8dc3 !important; color:#fff !important; border-bottom: 0 !important;}
