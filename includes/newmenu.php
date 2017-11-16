@@ -12,123 +12,6 @@
 </style>
 
 
-
-
-
-<script type="text/javascript">
-
-(function($) {
-  "use strict";
-  $(document).ready(function() {
-
-
-    var timer = 0;
-
-    $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
-    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-
-
-    $("#main_home")
-      .mouseenter(function(){
-        $('.drop-menu-panel').stop().fadeOut(100);
-      });
-
-    $("#main_medical_equipment")
-      .mouseenter(function(){
-        $('.drop-menu-panel').stop().fadeOut(100);
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-          $('#med_equipment_drop').stop().fadeIn(100);
-        }, 200);
-        console.log(timer);
-      })
-      .mouseleave(function(){
-        clearTimeout(timer);
-        console.log(timer);
-      });
-
-    $("#main_part_search")
-      .mouseenter(function(){
-        $('.drop-menu-panel').stop().fadeOut(100);
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-          $('#parts_drop').stop().fadeIn(100);
-        }, 200);
-        console.log(timer);
-      })
-      .mouseleave(function(){
-        clearTimeout(timer);
-        console.log(timer);
-      });
-
-    $("#main_service")
-      .mouseenter(function(){
-        $('.drop-menu-panel').stop().fadeOut(100);
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-          $('#service_drop').stop().fadeIn(100);
-        }, 200);
-        console.log(timer);
-      })
-      .mouseleave(function(){
-        clearTimeout(timer);
-        console.log(timer);
-      });
-
-      $("#main_manufacturers")
-      .mouseenter(function(){
-        $('.drop-menu-panel').stop().fadeOut(100);
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-          $('#mfrs_drop').stop().fadeIn(100);
-        }, 200);
-        console.log(timer);
-      })
-      .mouseleave(function(){
-        clearTimeout(timer);
-        console.log(timer);
-      });
-
-      $("#main_contact_us")
-      .mouseenter(function(){
-        $('.drop-menu-panel').stop().fadeOut(100);
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-          $('#contact_drop').stop().fadeIn(100);
-        }, 200);
-        console.log(timer);
-      })
-      .mouseleave(function(){
-        clearTimeout(timer);
-        console.log(timer);
-      });
-
-      $("#main_my_account")
-      .mouseenter(function(){
-        $('.drop-menu-panel').stop().fadeOut(100);
-        clearTimeout(timer);
-        timer = setTimeout(function(){
-          $('#account_drop').stop().fadeIn(100);
-        }, 200);
-        console.log(timer);
-      })
-      .mouseleave(function(){
-        clearTimeout(timer);
-        console.log(timer);
-      });
-
-
-
-  });
-}(jQuery));
-
-
-
-</script>
-
-
-
 <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header main-navbar-header">
@@ -145,80 +28,7 @@
   </div>
 </nav>
 
-<!-- Medical Equipment Drop Menu-->
-<nav id="med_equipment_drop" class="drop-menu-panel">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <h4 class="panel-title">Filter By Your Facility Type</h4>
-        <ul>
-          <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
-        </ul>
-      </div>
-      <div class="col-sm-9" id="mve_cols">
-        <ul>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <a class="hospital-stuff"><li>Hospital stuff</li></a>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-          <li>Medication Dispensing</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
+
 
 <!-- Parts Search Drop Menu-->
 <nav id="parts_drop" class="drop-menu-panel">
@@ -271,30 +81,12 @@
   </div>
 </nav>
 
-<!-- Manufacturers Drop Menu-->
-<nav id="mfrs_drop" class="drop-menu-panel">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-3">
-        <h4 class="panel-title">Filter By Your Facility Type</h4>
-        <ul>
-          <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
-        </ul>
-      </div>
-      <div class="col-sm-9">
-        MANUFACTURERS MANUFACTURERS MANUFACTURERS
-      </div>
-    </div>
-  </div>
-</nav>
+
+<?php get_template_part('includes/menus/medical-equipment'); ?>
+
+<?php get_template_part('includes/menus/manufacturers'); ?>
+
+
 
 <!-- Contact Us Drop Menu-->
 <nav id="contact_drop" class="drop-menu-panel">
@@ -305,7 +97,7 @@
         <ul>
           <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools &amp; Simulation</li></a>
           <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
           <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
@@ -330,7 +122,7 @@
         <ul>
           <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools &amp; Simulation</li></a>
           <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
           <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
