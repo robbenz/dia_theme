@@ -509,11 +509,12 @@ body.page-template-nursing .wpb-wps-slider-item {padding: 0.75em 0.3em !importan
 .benz-menu{ float:left;}
 */
 .navbar-static-top{ background: #00426a; z-index: 99;}
+.sf-menu > .page_item_has_children > a:first-child { color: #fff; font-size: 19px; text-transform: uppercase; }
+
 /*.sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
 #menu-repirstmp li a,
 #menu-contact-us li a,
-.sf-menu > .page_item_has_children > a:first-child { color: #fff; font-size: 19px; text-transform: uppercase; }
 @media screen and (-moz-os-version:windows-win7) {
 .sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
@@ -601,6 +602,7 @@ _:-ms-lang(x), .sf-menu > .page_item_has_children > a:first-child { font-size: 1
 /* Part Search Menu */
 /*#menu-parts-search .benz-bottom-colors { top: 145px; }
 #menu-parts-search  .arrow-down { left: 40%;; top: -91px; }
+#menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
 #menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
 #menu-parts-search .ctr_search{ position: relative !important; top:-23px; }
 #menu-item-57558 { width:200px;}*/

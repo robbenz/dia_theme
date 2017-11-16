@@ -137,16 +137,9 @@ function my_register_sidebars() {
 function register_my_menus() {
   register_nav_menus(
     array(
-      'home'               => __( 'Home' ),
       'header-menu'        => __( 'Header Menu' ),
       'sign-in-menu'       => __( 'Sign In Menu' ),
-      'repirstmp'          => __( 'repirstmp' ),
-      'medical-equipment'  => __( 'Medical Equipment' ),
-      'parts-search'       => __( 'Parts Search' ),
-      'repairs'            => __( 'Service' ),
-      'manufacturers'      => __( 'Manufacturers' ),
-      'myaccount'          => __( 'My Account' ),
-      'about-us'           => __( 'About Us' )
+      'myaccount'          => __( 'My Account' )
     )
   );
 }

@@ -13,11 +13,11 @@
 
 
 <?php
-if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) {
-	include_once ($_SERVER['DOCUMENT_ROOT'] . '/parts_online/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-} else {
-	include_once ($_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-}
+// if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) {
+	include ($_SERVER['DOCUMENT_ROOT'] . '/parts_online/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
+// } else {
+// 	include ($_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
+// }
 ?>
 
 <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
