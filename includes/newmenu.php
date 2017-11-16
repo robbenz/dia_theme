@@ -9,8 +9,9 @@
   li {text-decoration: none;}
   #mve_cols {-webkit-columns: 80px 3;columns: 80px 3;}
   a.top-menu-facility-filter li {margin: 10px auto;}
-#drop-menu {margin-bottom: 0px !important;}
+  #drop-menu {margin-bottom: 0px !important;}
   #content {margin-top: 20px;}
+  .text-center p {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 15px; }
 </style>
 
 

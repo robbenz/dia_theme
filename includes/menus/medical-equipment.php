@@ -73,4 +73,7 @@
       </div>
     </div>
   </div>
+  <div class="text-center">
+    <p style="margin: 10px 0 0; background-color: #00426a; color:#fff; padding: 12px;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</p>
+  </div>
 </nav>

@@ -6,7 +6,7 @@
 #parts_drop #searchform input#s{ height:50px; width:1080px; font-size:16px;}
 #parts_drop #searchsubmit { height: 50px; width: 52px; }
 #parts_drop .col-sm-2 { line-height:100px; height:100px;}
-#parts_drop img{vertical-align: middle;  }
+#parts_drop img{vertical-align: middle;}
 </style>
 
 <nav id="parts_drop" class="drop-menu-panel">
@@ -43,7 +43,7 @@
       </div>
       <div class="col-sm-2">
         <a href="<?php echo site_url(); ?>/?s=zoll&amp;post_type=product">
-          <img src="<?php echo site_url(); ?>/wp-content/uploads/2017/10/ZOLL-Logo-1.jpg" />
+          <img style="width: 135px;" src="<?php echo site_url(); ?>/wp-content/uploads/2017/10/ZOLL-Logo-1.jpg" />
         </a>
       </div>
     </div>
