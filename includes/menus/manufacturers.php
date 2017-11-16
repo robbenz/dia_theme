@@ -6,10 +6,45 @@
 </style>
 
 <?php
-  $mfrs = array("ALARIS","BAXTER","HILL-ROM","INVACARE","HOSPIRA","MEDLINE","MIDMARK","SPAN AMERICA","SIMLABSOLUTIONS","STRYKER","ZOLL","DRIVE","HAUSTED","JOERNS","LUMEX","AIRPAL","GRAHAM-FIELD","AMICO","KCI","FERNO","TENTE","BURKE","3AM","FOLLETT","SUMMIT INDUSTRIES","MEDMIZER","GRAINGER","HARLOFF","HAUSMANN","WELCH ALLYN","STERIS");
+  $mfrs = array("ALARIS","BAXTER","HILL-ROM","INVACARE","HOSPIRA","MEDLINE","MIDMARK","SPAN AMERICA","SIMLABSOLUTIONS","STRYKER","ZOLL","DRIVE","HAUSTED","JOERNS","LUMEX","AIRPAL","GRAHAM-FIELD","AMICO","KCI","FERNO","TENTE","BURKE","3AM","FOLLETT","SUMMIT INDUSTRIES","MEDMIZER","GRAINGER","HARLOFF","HAUSMANN","WELCH ALLYN","STERIS","LAERDAL","LEADING EDGE","AVKIN");
   asort($mfrs);
 ?>
-<!-- Manufacturers Drop Menu-->
+
+<nav id="mfrs_drop" class="drop-menu-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <ul>
+          <?php foreach ($mfrs as $mfr) { ?>
+            <a href="<?php echo site_url(); ?>/?s='<?php $mfr ?>'&amp;post_type=product"><li class="top-menu-mfr"><strong><?php $mfr ?></strong></li></a>
+          <?php } ?>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-center">
+        <a href="<?php echo site_url(); ?>/simlabsolutions/"><img src="<?php echo site_url(); ?>/wp-content/imgs/includes/sim-lab.png" class="top-menu-mfr-img"/></a>
+        <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="<?php echo site_url(); ?>/wp-content/imgs/Hill-Rom-MFT.png" class="top-menu-mfr-img"/></a>
+        <a href="<?php echo site_url(); ?>/?s=HAUSTED&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/imgs/haustedlogo.png" class="top-menu-mfr-img"/></a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <p style="margin: 40px 0 0; background-color: #ffad00; padding: 12px;">Don't want to browse manufacturers? Try searching your manufacturer at the top of the page!</p>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
 <nav id="mfrs_drop" class="drop-menu-panel">
   <div class="container">
     <div class="row">
@@ -45,10 +80,10 @@
     </div>
   </div>
   <div class="text-center">
-    <p style="margin-top: 40px; background-color: #ffad00; padding: 12px;">Don't want to browse manufacturers? Try searching your manufacturer at the top of the page!</p>
+    <p style="margin: 40px 0 0; background-color: #ffad00; padding: 12px;">Don't want to browse manufacturers? Try searching your manufacturer at the top of the page!</p>
   </div>
 </nav>
-
+  -->
 <!--
 
 <ul class="sub-menu" style="

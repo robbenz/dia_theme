@@ -12,19 +12,11 @@
 </style>
 
 
-<?php
-if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) {
-	include_once ($_SERVER['DOCUMENT_ROOT'] . '/parts_online/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-} else {
-	include_once ($_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-}
-?>
-
 <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header main-navbar-header">
       <ul class="top-menu-ul">
-        <a class='top-menu-main-a' id='main_home' href='<?php echo site_url(); ?>'><li>HOME</li></a>
+        <a class='top-menu-main-a' id='main_home' href='#'><li>HOME</li></a>
         <a class='top-menu-main-a' id='main_medical_equipment' href='#'><li>MEDICAL EQUIPMENT</li></a>
         <a class='top-menu-main-a' id='main_part_search' href='#'><li>PART SEARCH</li></a>
         <a class='top-menu-main-a' id='main_service' href='#'><li>SERVICE</li></a>
