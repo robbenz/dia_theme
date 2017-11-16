@@ -24,29 +24,99 @@
 
     var timer = 0;
 
+    $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
+    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
 
-    $(".top-menu-main-a")
+
+    $("#main_home")
       .mouseenter(function(){
-        // clearTimeout(timer);
-        $(this).addClass('hoverline');
+        $('.drop-menu-panel').stop().fadeOut(100);
+      });
+
+    $("#main_medical_equipment")
+      .mouseenter(function(){
+        $('.drop-menu-panel').stop().fadeOut(100);
+        clearTimeout(timer);
         timer = setTimeout(function(){
-          $('#med_equipment_drop').stop().fadeIn(200);
+          $('#med_equipment_drop').stop().fadeIn(100);
         }, 200);
         console.log(timer);
       })
       .mouseleave(function(){
         clearTimeout(timer);
-        $(this).removeClass('hoverline');
         console.log(timer);
       });
 
+    $("#main_part_search")
+      .mouseenter(function(){
+        $('.drop-menu-panel').stop().fadeOut(100);
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          $('#parts_drop').stop().fadeIn(100);
+        }, 200);
+        console.log(timer);
+      })
+      .mouseleave(function(){
+        clearTimeout(timer);
+        console.log(timer);
+      });
 
+    $("#main_service")
+      .mouseenter(function(){
+        $('.drop-menu-panel').stop().fadeOut(100);
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          $('#service_drop').stop().fadeIn(100);
+        }, 200);
+        console.log(timer);
+      })
+      .mouseleave(function(){
+        clearTimeout(timer);
+        console.log(timer);
+      });
 
-    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(200);});
+      $("#main_manufacturers")
+      .mouseenter(function(){
+        $('.drop-menu-panel').stop().fadeOut(100);
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          $('#mfrs_drop').stop().fadeIn(100);
+        }, 200);
+        console.log(timer);
+      })
+      .mouseleave(function(){
+        clearTimeout(timer);
+        console.log(timer);
+      });
 
+      $("#main_contact_us")
+      .mouseenter(function(){
+        $('.drop-menu-panel').stop().fadeOut(100);
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          $('#contact_drop').stop().fadeIn(100);
+        }, 200);
+        console.log(timer);
+      })
+      .mouseleave(function(){
+        clearTimeout(timer);
+        console.log(timer);
+      });
 
-
-    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(200);});
+      $("#main_my_account")
+      .mouseenter(function(){
+        $('.drop-menu-panel').stop().fadeOut(100);
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          $('#account_drop').stop().fadeIn(100);
+        }, 200);
+        console.log(timer);
+      })
+      .mouseleave(function(){
+        clearTimeout(timer);
+        console.log(timer);
+      });
 
 
 
@@ -56,11 +126,6 @@
 
 
 </script>
-
-
-
-
-
 
 
 
@@ -173,8 +238,109 @@
           <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
         </ul>
       </div>
-      <div class="col-sm-9" id="mve_cols">
+      <div class="col-sm-9">
+        <h3>Enter a part number, name, or manufacturer</h3>
+        <?php get_template_part('includes/navbar-search'); ?>
+      </div>
+    </div>
+  </div>
+</nav>
 
+<!-- Service Drop Menu-->
+<nav id="service_drop" class="drop-menu-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4 class="panel-title">Filter By Your Facility Type</h4>
+        <ul>
+          <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        SERVICE SERVICE SERVICE
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Manufacturers Drop Menu-->
+<nav id="mfrs_drop" class="drop-menu-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4 class="panel-title">Filter By Your Facility Type</h4>
+        <ul>
+          <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        MANUFACTURERS MANUFACTURERS MANUFACTURERS
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Us Drop Menu-->
+<nav id="contact_drop" class="drop-menu-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4 class="panel-title">Filter By Your Facility Type</h4>
+        <ul>
+          <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        GET AT ME
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Account Drop Menu-->
+<nav id="account_drop" class="drop-menu-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h4 class="panel-title">Filter By Your Facility Type</h4>
+        <ul>
+          <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
+        </ul>
+      </div>
+      <div class="col-sm-9">
+        MY ACCOUNT
       </div>
     </div>
   </div>
