@@ -30,8 +30,8 @@
       });
     }
 
-  //  closeMenuz('#main_home');
-  //  showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
+    closeMenuz('#main_home');
+    showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
     showTopDropMenus('#main_part_search', '#parts_drop');
     showTopDropMenus('#main_service', '#service_drop');
     showTopDropMenus('#main_manufacturers', '#mfrs_drop');

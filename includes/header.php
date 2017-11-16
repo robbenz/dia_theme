@@ -4,18 +4,13 @@
 	<title><?php wp_title(''); ?></title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="../css/ristrettopro_regular_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-		<link rel="stylesheet" href="../css/ristrettopro_medium_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-		<link rel="stylesheet" href="../css/ristrettopro_light_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-		<link rel="stylesheet" href="../css/ristrettopro_bold_macroman/stylesheet.css" type="text/css" charset="utf-8" />
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/css/bst.css'); ?>" type="text/css" media="screen, projection" />
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/css/bst.css'); ?>" type="text/css" media="screen, projection" />
-    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
