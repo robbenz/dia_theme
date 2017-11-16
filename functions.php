@@ -1176,67 +1176,6 @@ function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
 
 
-
-
-//
-// try {
-//     $imagick = new Imagick($attachment->guid);
-//
-//     $width = $imagick->getimagegravity();
-//   //  $width = $imagick->getImageWidth();
-//     print "the image width is " . $width . " pixels";
-// }
-// catch(Exception $e) {
-//     die('Error when creating a thumbnail: ' . $e->getMessage());
-// }
-//
-//
-
-
-
-// add_filter('wp_handle_upload_prefilter', 'dia_generate_image' );
-// function dia_generate_image( $file ){
-//   // $im = new Imagick($file->guid);
-//   $im = new Imagick($file['URL']);
-//
-// # Check to see if the image is already a jpg
-// if ($im->getFormat() !=  'jpg') {
-//
-// # Convert to JPG if the image is not a JPG
-//     $im->setImageFormat( 'jpg'); //?
-// }
-// # Check to see if the image is greater than 800x800
-//     $im->resizeImage ( 800, 800,  imagick::FILTER_LANCZOS, 1, TRUE);
-//
-// # extent
-//     $im->setImageExtent ( 800 , 800 );
-//
-// # center gravity
-//     $im->setImageGravity ( GRAVITY_CENTER );
-//
-// # strip metadata
-//     $im->stripImage();
-//
-// // quality
-//     $im->setImageCompression( COMPRESSION_JPEG )
-//     $im->setImageCompressionQuality( 85 )
-//
-//     return $file;
-//
-//
-// }
-
-
-// add_action( 'wp_footer', 'before_foot' );
-// function before_foot(){
-//   $imagick = get_class_methods (Imagick) ;
-//   _pre($imagick);
-// }
-
-
-
-
-
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 /*
 add_action( 'my_scheduled_event', 'prefix_my_scheduled_event' );
