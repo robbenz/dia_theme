@@ -6,7 +6,7 @@
 </style>
 
 <?php
-  $mfrs = array("ALARIS","BAXTER","HILL-ROM","INVACARE","HOSPIRA","MEDLINE","MIDMARK","SPAN AMERICA","SIMLABSOLUTIONS","STRYKER","ZOLL","DRIVE","HAUSTED","JOERNS","LUMEX","AIRPAL","GRAHAM-FIELD","AMICO","KCI","FERNO","TENTE","BURKE","3AM","FOLLETT","SUMMIT INDUSTRIES","MEDMIZER","GRAINGER","HARLOFF","HAUSMANN","WELCH ALLYN","STERIS","LAERDAL","LEADING EDGE","AVKIN");
+  $mfrs = array( "BAXTER", "ALARIS","HILL-ROM", "INVACARE","HOSPIRA","MEDLINE","MIDMARK","SPAN AMERICA", "SIMLABSOLUTIONS","STRYKER","ZOLL","DRIVE","HAUSTED","JOERNS","LUMEX","AIRPAL","GRAHAM-FIELD", "AMICO","KCI","FERNO","TENTE","BURKE","3AM","FOLLETT", "SUMMIT INDUSTRIES","MEDMIZER","GRAINGER","HARLOFF","HAUSMANN","WELCH ALLYN","STERIS","LAERDAL","LEADING EDGE","AVKIN");
   asort($mfrs);
 ?>
 
@@ -15,9 +15,24 @@
     <div class="row">
       <div class="col-sm-3">
         <ul>
-          <?php foreach ($mfrs as $mfr) { ?>
-            <a href="<?php echo site_url(); ?>/?s='<?php $mfr ?>'&amp;post_type=product"><li class="top-menu-mfr"><strong><?php $mfr ?></strong></li></a>
-          <?php } ?>
+          <?php
+          foreach ($mfrs as $mfr) :
+              if ($mfr == "HILL-ROM" ) :?>
+
+            <a href="<?php echo site_url(); ?>/somethingt">
+              <li class="top-menu-mfr"><strong><?php echo $mfr ; ?></strong></li>
+            </a>
+
+            <?php else: ?>
+
+            <a href="<?php echo site_url(); ?>/?s=<?php echo $mfr ; ?>&amp;post_type=product">
+              <li class="top-menu-mfr"><strong><?php echo $mfr ; ?></strong></li>
+            </a>
+
+            <?php endif; ?>
+
+
+          <?php endforeach; ?>
         </ul>
       </div>
       <div class="col-sm-3 text-center">
@@ -33,7 +48,8 @@
 </nav>
 
 
-
+<!-- count()
+sizeof() -->
 
 
 
