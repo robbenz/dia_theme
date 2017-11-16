@@ -65,8 +65,7 @@
 			<div id="mm-right-contact">
 				<div style="width:100%; height:39px; text-align:right">
 					<a href="<?php echo site_url(); ?>/request-quote" class="qq_button">
-						<i class=" 	glyphicon glyphicon-envelope"></i>
-						&nbsp;Quick Quote
+						<i class="glyphicon glyphicon-envelope"></i>&nbsp;Quick Quote
 					</a>
 					<?php echo do_shortcode('[google-translator]'); ?>
 				</div>
