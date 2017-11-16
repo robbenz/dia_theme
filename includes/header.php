@@ -109,3 +109,4 @@
 		</header> <!-- #masthead -->
 
 		<?php get_template_part('includes/newmenu'); ?>
+		<div style="width:100%;clear:both;float:left;height:15px;">&nbsp;</div>
