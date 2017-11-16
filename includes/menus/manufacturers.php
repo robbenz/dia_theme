@@ -5,6 +5,10 @@
 
 </style>
 
+<?php
+  $mfrs = array("ALARIS","BAXTER","HILL-ROM","INVACARE","HOSPIRA","MEDLINE","MIDMARK","SPAN AMERICA","SIMLABSOLUTIONS","STRYKER","ZOLL","DRIVE","HAUSTED","JOERNS","LUMEX","AIRPAL","GRAHAM-FIELD","AMICO","KCI","FERNO","TENTE","BURKE","3AM","FOLLETT","SUMMIT INDUSTRIES","MEDMIZER","GRAINGER","HARLOFF","HAUSMANN","WELCH ALLYN","STERIS");
+  asort($mfrs);
+?>
 <!-- Manufacturers Drop Menu-->
 <nav id="mfrs_drop" class="drop-menu-panel">
   <div class="container">
