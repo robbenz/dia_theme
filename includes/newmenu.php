@@ -4,7 +4,7 @@
   .main-navbar-header {width: 100%;}
   .top-menu-main-a {padding: 12px 20px;}
   .hoverline {border-bottom: 2px solid white;}
-  .drop-menu-panel {display: none; width: 100%; padding: 10px 0 40px; background-color: rgba(255,255,255,0.92); border-bottom: 2px solid #ccc; position: absolute; z-index: 6666;}
+  .drop-menu-panel {display: none; width: 100%; padding: 10px 0 0; background-color: white; background-color: rgba(255,255,255,0.95); border-bottom: 2px solid #ccc; position: absolute; z-index: 6666;}
   ul {list-style: none;}
   li {text-decoration: none;}
   #mve_cols {-webkit-columns: 80px 3;columns: 80px 3;}
@@ -29,8 +29,8 @@
         <a class='top-menu-main-a' id='main_part_search' href='#'><li>PART SEARCH</li></a>
         <a class='top-menu-main-a' id='main_service' href='#'><li>SERVICE</li></a>
         <a class='top-menu-main-a' id='main_manufacturers' href='#'><li>MANUFACTURERS</li></a>
-        <a class='top-menu-main-a' id='main_contact_us' href='#'><li>CONTACT US</li></a>
-        <a class='top-menu-main-a' id='main_my_account' href='#'><li>MY ACCOUNT</li></a>
+        <a class='top-menu-main-a' id='main_contact_us' href='<?php echo site_url(); ?>'><li>CONTACT US</li></a>
+        <a class='top-menu-main-a' id='main_my_account' href='<?php echo site_url(); ?>'><li>MY ACCOUNT</li></a>
       </ul>
     </div>
   </div>

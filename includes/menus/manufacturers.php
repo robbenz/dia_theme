@@ -5,34 +5,19 @@
 
 </style>
 
+<?php
+  $mfrs = array("ALARIS","BAXTER","HILL-ROM","INVACARE","HOSPIRA","MEDLINE","MIDMARK","SPAN AMERICA","SIMLABSOLUTIONS","STRYKER","ZOLL","DRIVE","HAUSTED","JOERNS","LUMEX","AIRPAL","GRAHAM-FIELD","AMICO","KCI","FERNO","TENTE","BURKE","3AM","FOLLETT","SUMMIT INDUSTRIES","MEDMIZER","GRAINGER","HARLOFF","HAUSMANN","WELCH ALLYN","STERIS","LAERDAL","LEADING EDGE","AVKIN");
+  asort($mfrs);
+?>
 
-
-<!-- Manufacturers Drop Menu-->
 <nav id="mfrs_drop" class="drop-menu-panel">
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
         <ul>
-          <a href="<?php echo site_url(); ?>/?s=ALARIS&amp;post_type=product"><li class="top-menu-mfr">ALARIS</li></a>
-          <a href="<?php echo site_url(); ?>/?s=BAXTER&amp;post_type=product"><li class="top-menu-mfr">BAXTER</li></a>
-          <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><li class="top-menu-mfr">HILL-ROM</li></a>
-          <a href="<?php echo site_url(); ?>/?s=INVACARE&amp;post_type=product"><li class="top-menu-mfr">INVACARE</li></a>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <ul>
-          <a href="<?php echo site_url(); ?>/?s=HOSPIRA&amp;post_type=product"><li class="top-menu-mfr">HOSPIRA</li></a>
-          <a href="<?php echo site_url(); ?>/?s=MEDLINE&amp;post_type=product"><li class="top-menu-mfr">MEDLINE</li></a>
-          <a href="<?php echo site_url(); ?>/?s=MIDMARK&amp;post_type=product"><li class="top-menu-mfr">MIDMARK</li></a>
-          <a href="<?php echo site_url(); ?>/?s=SPAN+AMERICA&amp;post_type=product"><li class="top-menu-mfr">SPAN AMERICA</li></a>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <ul>
-          <a href="<?php echo site_url(); ?>/simlabsolutions"><li class="top-menu-mfr">SIMLABSOLUTIONS</li></a>
-          <a href="<?php echo site_url(); ?>/?s=STRYKER&amp;post_type=product"><li class="top-menu-mfr">STRYKER</li></a>
-          <a href="<?php echo site_url(); ?>/?s=zoll&amp;post_type=product"><li class="top-menu-mfr">ZOLL</li></a>
-          <a href="<?php echo site_url(); ?>/manufacturers/"><li class="top-menu-mfr">View All</li></a>
+          <?php foreach ($mfrs as $mfr) { ?>
+            <a href="<?php echo site_url(); ?>/?s='<?php $mfr ?>'&amp;post_type=product"><li class="top-menu-mfr"><strong><?php $mfr ?></strong></li></a>
+          <?php } ?>
         </ul>
       </div>
       <div class="col-sm-3 text-center">
@@ -41,11 +26,9 @@
         <a href="<?php echo site_url(); ?>/?s=HAUSTED&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/imgs/haustedlogo.png" class="top-menu-mfr-img"/></a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <p style="margin-top: 40px; background-color: #ffad00; padding: 12px;">Don't want to browse manufacturers? Try searching your manufacturer at the top of the page!</p>
-      </div>
-    </div>
+  </div>
+  <div class="text-center">
+    <p style="margin: 40px 0 0; background-color: #ffad00; padding: 12px;">Don't want to browse manufacturers? Try searching your manufacturer at the top of the page!</p>
   </div>
 </nav>
 
@@ -60,10 +43,47 @@
 
 
 
+<!--
 
-
-
-
+<nav id="mfrs_drop" class="drop-menu-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <ul>
+          <a href="<?php echo site_url(); ?>/?s=ALARIS&amp;post_type=product"><li class="top-menu-mfr"><strong>ALARIS</strong></li></a>
+          <a href="<?php echo site_url(); ?>/?s=BAXTER&amp;post_type=product"><li class="top-menu-mfr"><strong>BAXTER</strong></li></a>
+          <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><li class="top-menu-mfr"><strong>HILL-ROM</strong></li></a>
+          <a href="<?php echo site_url(); ?>/?s=INVACARE&amp;post_type=product"><li class="top-menu-mfr"><strong>INVACARE</strong></li></a>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <ul>
+          <a href="<?php echo site_url(); ?>/?s=HOSPIRA&amp;post_type=product"><li class="top-menu-mfr"><strong>HOSPIRA</strong></li></a>
+          <a href="<?php echo site_url(); ?>/?s=MEDLINE&amp;post_type=product"><li class="top-menu-mfr"><strong>MEDLINE</strong></li></a>
+          <a href="<?php echo site_url(); ?>/?s=MIDMARK&amp;post_type=product"><li class="top-menu-mfr"><strong>MIDMARK</strong></li></a>
+          <a href="<?php echo site_url(); ?>/?s=SPAN+AMERICA&amp;post_type=product"><li class="top-menu-mfr"><strong>SPAN AMERICA</strong></li></a>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <ul>
+          <a href="<?php echo site_url(); ?>/simlabsolutions"><li class="top-menu-mfr"><strong>SIMLABSOLUTIONS</strong></li></a>
+          <a href="<?php echo site_url(); ?>/?s=STRYKER&amp;post_type=product"><li class="top-menu-mfr"><strong>STRYKER</strong></li></a>
+          <a href="<?php echo site_url(); ?>/?s=zoll&amp;post_type=product"><li class="top-menu-mfr"><strong>ZOLL</strong></li></a>
+          <a href="<?php echo site_url(); ?>/manufacturers/"><li class="top-menu-mfr"><strong>View All</strong></li></a>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-center">
+        <a href="<?php echo site_url(); ?>/simlabsolutions/"><img src="<?php echo site_url(); ?>/wp-content/imgs/includes/sim-lab.png" class="top-menu-mfr-img"/></a>
+        <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="<?php echo site_url(); ?>/wp-content/imgs/Hill-Rom-MFT.png" class="top-menu-mfr-img"/></a>
+        <a href="<?php echo site_url(); ?>/?s=HAUSTED&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/imgs/haustedlogo.png" class="top-menu-mfr-img"/></a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <p style="margin: 40px 0 0; background-color: #ffad00; padding: 12px;">Don't want to browse manufacturers? Try searching your manufacturer at the top of the page!</p>
+  </div>
+</nav>
+  -->
 <!--
 
 <ul class="sub-menu" style="

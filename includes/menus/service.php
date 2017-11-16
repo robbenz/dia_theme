@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <h4 class="panel-title">Filter By Your Facility Type</h4>
+        <!-- <h4 class="panel-title">Filter By Your Facility Type</h4>
         <ul>
           <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
@@ -14,7 +14,7 @@
           <a href="#" class="top-menu-facility-filter"><li>EMS Field Ready</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Physical Therapy</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Veterinarian</li></a>
-        </ul>
+        </ul> -->
       </div>
       <div class="col-sm-9">
         SERVICE SERVICE SERVICE
