@@ -1,5 +1,5 @@
 <style>
-  .top-menu-ul {padding: 0; margin-bottom: 0; width: 100%; list-style: none; display: flex; justify-content: space-around;}
+  .top-menu-ul {padding: 0; margin-bottom: 0; width: 100%; list-style: none; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around;}
   a.top-menu-main-a li {text-decoration: none; color: white; display: inline-block;}
   .main-navbar-header {width: 100%;}
   .top-menu-main-a {padding: 12px 20px;}
@@ -7,7 +7,7 @@
   .drop-menu-panel {display: none; width: 100%; padding: 10px 0 40px; background-color: rgba(255,255,255,0.92); border-bottom: 2px solid #ccc; position: absolute; z-index: 6666;}
   ul {list-style: none;}
   li {text-decoration: none;}
-  #mve_cols {columns: 80px 3;}
+  #mve_cols {-webkit-columns: 80px 3;columns: 80px 3;}
   a.top-menu-facility-filter li {margin: 10px auto;}
 </style>
 
