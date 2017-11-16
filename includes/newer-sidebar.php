@@ -37,7 +37,11 @@ a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
 </style>
 
 <?php
-require_once get_template_directory_uri() . '/includes/menus/menu_arrays' ;
+if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) {
+	include_once ($_SERVER['DOCUMENT_ROOT'] . '/parts_online/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
+} else {
+	include_once ($_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
+}
 
 function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counter) {
 	$_x = $which_counter;
