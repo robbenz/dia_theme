@@ -30,10 +30,7 @@
       });
     }
 
-
     closeMenuz('#main_home');
-    closeMe
-    closeMe
     showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
     showTopDropMenus('#main_part_search', '#parts_drop');
     showTopDropMenus('#main_service', '#service_drop');
