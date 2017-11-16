@@ -27,8 +27,8 @@
     showTopDropMenus('#main_part_search', '#parts_drop');
     showTopDropMenus('#main_service', '#service_drop');
     showTopDropMenus('#main_manufacturers', '#mfrs_drop');
-    showTopDropMenus('#main_contact_us', '#contact_drop');
-    showTopDropMenus('#main_my_account', '#account_drop');
+  //  showTopDropMenus('#main_contact_us', '#contact_drop');
+  //  showTopDropMenus('#main_my_account', '#account_drop');
 
   });
 }(jQuery));
