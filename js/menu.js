@@ -12,7 +12,6 @@
 
     // keep the menu open only in appropriate mouse locations
     $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100); removeUnderline();});
-
     $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100); removeUnderline();});
 
     // remove the underline from hovered menu link
