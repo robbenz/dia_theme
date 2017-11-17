@@ -2,8 +2,8 @@
   .top-menu-ul {padding: 0; margin-bottom: 0; width: 100%; list-style: none; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around;}
   a.top-menu-main-a li {text-decoration: none; color: white; display: inline-block;}
   .main-navbar-header {width: 100%;}
-  .top-menu-main-a {padding: 12px 20px;}
-  .hoverline {border-bottom: 2px solid white;}
+  .top-menu-main-a {padding: 12px 20px; border-bottom: 0; -webkit-transition: all 0.2s; transition: all 0.2s;}
+  .hoverline {border-bottom: 2px solid white; -webkit-transition: all 0.2s; transition: all 0.2s;}
   .drop-menu-panel {display: none; width: 100%; padding: 10px 0 0; background-color: white; background-color: rgba(255,255,255,0.95); position: absolute; z-index: 6666;}
   ul {list-style: none;}
   li {text-decoration: none;}
@@ -17,13 +17,13 @@
   <div class="container">
     <div class="navbar-header main-navbar-header">
       <ul class="top-menu-ul">
-        <a class="top-menu-main-a" id="main_home" href="#"><li>HOME</li></a>
+        <a class="top-menu-main-a" id="main_home" href="<?php echo site_url(); ?>"><li>HOME</li></a>
         <a class="top-menu-main-a" id="main_medical_equipment" href="#"><li>MEDICAL EQUIPMENT</li></a>
         <a class="top-menu-main-a" id="main_part_search" href="#"><li>PART SEARCH</li></a>
         <a class="top-menu-main-a" id="main_service" href="#"><li>SERVICE</li></a>
         <a class="top-menu-main-a" id="main_manufacturers" href="#"><li>MANUFACTURERS</li></a>
-        <a class="top-menu-main-a" id="main_contact_us" href="<?php echo site_url(); ?>"><li>CONTACT US</li></a>
-        <a class="top-menu-main-a" id="main_my_account" href="<?php echo site_url(); ?>"><li>MY ACCOUNT</li></a>
+        <a class="top-menu-main-a" id="main_contact_us" href="<?php echo site_url(); ?>/contact-us/"><li>CONTACT US</li></a>
+        <a class="top-menu-main-a" id="main_my_account" href="<?php echo site_url(); ?>/my-account/"><li>MY ACCOUNT</li></a>
       </ul>
     </div>
   </div>
