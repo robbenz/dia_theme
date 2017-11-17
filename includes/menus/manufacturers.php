@@ -1,7 +1,7 @@
 <style>
 
 .top-menu-mfr {margin: 20px auto;}
-.top-menu-mfr-img {margin: 20px auto; height: 68px !important; width: 160px !important;}
+.top-menu-mfr-img {margin: 20px auto;}
 .top-menu-mfr-container {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;}
 
 </style>
@@ -50,11 +50,12 @@
         </ul>
       </div>
       <div class="col-sm-3 text-center top-menu-mfr-container">
-        <a href="<?php echo site_url(); ?>/simlabsolutions/"><img src="<?php echo site_url(); ?>/wp-content/imgs/includes/sim-lab.png" class="top-menu-mfr-img"/></a>
+        <!-- <a href="<?php echo site_url(); ?>/simlabsolutions/"><img src="<?php echo site_url(); ?>/wp-content/imgs/includes/sim-lab.png" class="top-menu-mfr-img"/></a>
         <a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="<?php echo site_url(); ?>/wp-content/imgs/Hill-Rom-MFT.png" class="top-menu-mfr-img"/></a>
         <a href="<?php echo site_url(); ?>/?s=AMICO&amp;post_type=product/"><img alt="Amico" src="<?php echo site_url(); ?>/wp-content/uploads/2017/07/Amico_Logo-1.jpeg" class="top-menu-mfr-img"/></a>
         <a href="<?php echo site_url(); ?>/?s=HAUSTED&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/imgs/haustedlogo.png" class="top-menu-mfr-img"/></a>
-        <a href="<?php echo site_url(); ?>/?s=FERNO&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2017/11/ferno.jpg" class="top-menu-mfr-img"/></a>
+        <a href="<?php echo site_url(); ?>/?s=FERNO&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2017/11/ferno.jpg" class="top-menu-mfr-img"/></a> -->
+        <a href="<?php echo site_url(); ?>/manufacturers/"><img src="<?php echo site_url(); ?>/wp-content/uploads/2017/11/product_logos.png" class="top-menu-mfr-img"/></a>
       </div>
     </div>
   </div>
