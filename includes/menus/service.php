@@ -3,7 +3,7 @@
 </style>
 
 <!-- Service Drop Menu-->
-<nav id="service_drop" style="display:block;" class="drop-menu-panel">
+<nav id="service_drop" class="drop-menu-panel">
   <div class="container">
     <div class="row">
       <div class="col-sm-3">

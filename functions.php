@@ -1168,18 +1168,6 @@ if ( $post->post_type == 'product' ) {
 function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
 
-/*** Include menu arrays ***/
-function include_menu_arrays() {
-  $serverspot = ($_SERVER['REQUEST_URI']);
-  $findme   = '/parts_online/';
-  $pos = strpos($serverspot, $findme);
-  if ( $pos === false ) {
-    include ($_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-  } else {
-    include ($_SERVER['DOCUMENT_ROOT'] . '/parts_online/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-  }
-}
-/*** END ***/
 
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 /*

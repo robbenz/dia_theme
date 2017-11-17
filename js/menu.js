@@ -5,19 +5,11 @@
     var timer = 0;
 
     // hover underline effect
-    $(".top-menu-main-a").mouseenter(function(){removeUnderline();$(this).addClass('hoverline');});
-    $('#main_home').mouseleave(function(){$(this).removeClass('hoverline');});
-    $('#main_my_account').mouseleave(function(){$(this).removeClass('hoverline');});
-    $('#main_contact_us').mouseleave(function(){$(this).removeClass('hoverline');});
+    $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
 
     // keep the menu open only in appropriate mouse locations
-    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100); removeUnderline();});
-    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100); removeUnderline();});
-
-    // remove the underline from hovered menu link
-    function removeUnderline() {
-      $('.top-menu-main-a').removeClass('hoverline');
-    }
+    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
 
     // close open menus on hover of other links that don't have drop menus associated
     function closeMenuz (hoveredLink) {

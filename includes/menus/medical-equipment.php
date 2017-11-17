@@ -1,5 +1,4 @@
 <!-- Medical Equipment Drop Menu-->
-<?php include_menu_arrays(); ?>
 
 <nav id="med_equipment_drop" class="drop-menu-panel">
   <div class="container">
@@ -9,7 +8,7 @@
         <ul>
           <a href="#" class="top-menu-facility-filter"><li>VIEW ALL CATEGORIES</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Hospitals</li></a>
-          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools & Simulation</li></a>
+          <a href="#" class="top-menu-facility-filter"><li>Nursing Schools &amp; Simulation</li></a>
           <a href="#" class="top-menu-facility-filter"><li>SimLabSolutions.com</li></a>
           <a href="#" class="top-menu-facility-filter"><li>Long Term Care</li></a>
           <a href="#" class="top-menu-facility-filter"><li>EMS Education</li></a>
