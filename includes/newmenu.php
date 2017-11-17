@@ -2,8 +2,8 @@
   .top-menu-ul {padding: 0; margin-bottom: 0; width: 100%; list-style: none; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around;}
   a.top-menu-main-a li {text-decoration: none; color: white; display: inline-block;}
   .main-navbar-header {width: 100%;}
-  .top-menu-main-a {padding: 12px 20px;}
-  .hoverline {border-bottom: 2px solid white;}
+  .top-menu-main-a {padding: 12px 20px; border-bottom: 0; -webkit-transition: all 0.2s; transition: all 0.2s;}
+  .hoverline {border-bottom: 2px solid white; -webkit-transition: all 0.2s; transition: all 0.2s;}
   .drop-menu-panel {display: none; width: 100%; padding: 10px 0 0; background-color: white; background-color: rgba(255,255,255,0.95); position: absolute; z-index: 6666;}
   ul {list-style: none;}
   li {text-decoration: none;}
