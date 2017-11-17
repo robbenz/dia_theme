@@ -1,3 +1,7 @@
+<style>
+#service_drop li { margin: 20px 0px; font-weight:700;}
+</style>
+
 <!-- Service Drop Menu-->
 <nav id="service_drop" style="display:block;" class="drop-menu-panel">
   <div class="container">

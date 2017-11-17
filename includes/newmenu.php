@@ -30,6 +30,8 @@
 </nav>
 
 <?php
+
+
 get_template_part('includes/menus/medical-equipment');
 get_template_part('includes/menus/parts-search');
 get_template_part('includes/menus/service');

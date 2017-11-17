@@ -36,12 +36,9 @@ a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
 .panel-heading h4.panel-title a.arrow-toggle-medqpt {background-color:#00426a;border:0;color:#fff;padding: 13px 12px;text-transform:uppercase;font-size:14.5px;}
 </style>
 
+<?php include_menu_arrays(); ?>
+
 <?php
-// if ( $_SERVER["SERVER_ADDR"] == '127.0.0.1' ) {
-	include ($_SERVER['DOCUMENT_ROOT'] . '/parts_online/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-// } else {
-// 	include ($_SERVER['DOCUMENT_ROOT'] . '/wp-content/themes/diamedical/includes/menus/menu_arrays.php');
-// }
 
 function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counter) {
 	$_x = $which_counter;
@@ -114,7 +111,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		</div><!-- #accordion$_x .sidebar-replace -->
 
 	<?php endforeach;
-} // sweet_dia_cats_menu();  ?>
+} // end sweet_dia_cats_menu();  ?>
 
 <div class="col-sm-3 col-md-3">
 
@@ -218,18 +215,18 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 				<div class="panel-body">
 					<table class="table">
 						<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/manufacturers/">VIEW ALL</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=alaris&post_type=product">alaris</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=baxter&post_type=product">baxter</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=hausted&post_type=product">hausted</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=alaris&amp;post_type=product">alaris</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=baxter&amp;post_type=product">baxter</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=hausted&amp;post_type=product">hausted</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">hill-rom</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=hospira&post_type=product">hospira</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=invacare&post_type=product">invacare</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=medline&post_type=product">medline</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=midmark&post_type=product">midmark</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=hospira&amp;post_type=product">hospira</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=invacare&amp;post_type=product">invacare</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=medline&amp;post_type=product">medline</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=midmark&amp;post_type=product">midmark</a></td></tr>
 						<tr><td><a href="<?php echo site_url(); ?>/simlabsolutions/">SimLabSolutions</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=span+america&post_type=product">span america</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=stryker&post_type=product">stryker</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=zoll&post_type=product">zoll</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=span+america&amp;post_type=product">span america</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=stryker&amp;post_type=product">stryker</a></td></tr>
+						<tr><td><a href="<?php echo site_url(); ?>/?s=zoll&amp;post_type=product">zoll</a></td></tr>
 					</table>
 				</div>
 			</div>

@@ -55,13 +55,17 @@ body {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-se
 #content section { margin-bottom: 20px }
 #content footer { padding-bottom: 20px }
 a { color: #00426a; }
-/* END */
+/*** END ***/
 
-/* Sidebar */.sidebar { margin-top: 20px; width:25%; float:left; }.sidebar section { margin-bottom: 40px }.sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }.sidebar li { margin: 10px 0 }/* END */
+/* Sidebar */
+.sidebar { margin-top: 20px; width:25%; float:left; }
+.sidebar section { margin-bottom: 40px }
+.sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }
+.sidebar li { margin: 10px 0 }
+/*** END ***/
 
 /* PDF logo */
 .pdf-img{padding-left: 7px;}
-
 /* END */
 
 /* PAGES */
@@ -83,7 +87,7 @@ td.quotes-actions a{margin:0 1em; }
 .obesity_table th { border:2.3px solid #C0C0C0; padding:6px; background:#F0F0F0; }
 .obesity_table td { border:2.3px solid #C0C0C0; padding:6px; }
 .obesity_table .obese-table-img { width:60%; max-width:60%; }
-/* END */
+/*** END ***/
 
 /* landing_nav */
 .landing_page ul.products li.product { margin: 0 2% !important;}
@@ -92,33 +96,23 @@ td.quotes-actions a{margin:0 1em; }
 #landing_nav-wrap{width:100%; background-color:#fff; }
 #landing_nav-wrap a.landing_nav{color:#464444; padding:0.25em 0; text-align:center; display:block; float:left; }
 #landing_nav-wrap a.landing_nav:hover{text-decoration:none; color:#fff;}
-
 .qq_button {margin-top:1px; background-color: #00426a; color:#fff !important;float: right; margin-left: 1em; border-radius: 0.25em; padding:5px 0.75em; }
 .qq_button:hover {text-decoration: none !important; background-color: #78be20 !important; }
 #google_language_translator .goog-te-gadget-simple { margin-top:1px; padding:5px 5px; background-color:#00426a;color:#fff; border: 0; border-radius: 0.25em; }
-#google_language_translator .goog-te-gadget-simple:hover {
-   background-color: #78be20;
- }
-#google_language_translator .goog-te-menu-value span {
-  color:#fff;
-}
-#google_language_translator .goog-te-gadget-simple a:hover {
-  text-decoration: none !important; }
-#google_language_translator .goog-te-gadget-icon {display:none;
-}
-
+#google_language_translator .goog-te-gadget-simple:hover { background-color: #78be20; }
+#google_language_translator .goog-te-menu-value span { color:#fff; }
+#google_language_translator .goog-te-gadget-simple a:hover { text-decoration: none !important; }
+#google_language_translator .goog-te-gadget-icon {display:none; }
 .goog-te-menu2 {box-shadow: none;}
-
 .landing_nav-hospital{border-bottom:5px solid #00426a;}
 .landing_nav-mattresses{border-bottom:5px solid #78be20;}
 .landing_nav-schools{border-bottom:5px solid #2774ae;}
 .landing_nav-simlab{border-bottom:5px solid #ffad00;}
-.landing_nav-ems{border-bottom:5px solid #d6001c;}
+.landing_nav-ems{border-bottom:5px solid #d6001c; border-radius: 0;}
 .landing_nav-ltc{border-bottom:5px solid #72d0f4;}
 .landing_nav-qq { border-bottom:5px solid #41848d;}
 .landing_nav-pt{ border-bottom:5px solid #9e71a2;}
 .ems-button-cursor {cursor: default;}
-
 .dropdown { float: left; position: relative; }
 .dropdown:hover {font-weight: 600 !important; }
 .dropdown .dropbtn { border-left:none; border-top:none; border-right:none; background-color: inherit; }
@@ -127,6 +121,7 @@ td.quotes-actions a{margin:0 1em; }
 .dropdown-content a { float: none; font-weight: 600 !important; color:white; background-color:#d6001c; text-decoration: none; display: block; text-align: center; }
 .dropdown-content a:hover { background-color:#fff; color:#d6001c; border: 2px solid #d6001c; }
 .dropdown:hover .dropdown-content { display: block; }
+/*** END ***/
 
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal { display: inline-block; vertical-align: middle; -webkit-transform: translateZ(0); transform: translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); -webkit-backface-visibility: hidden; backface-visibility: hidden; -moz-osx-font-smoothing: grayscale; position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
@@ -142,7 +137,8 @@ td.quotes-actions a{margin:0 1em; }
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active { color: white;  }
 .hvr-shutter-out-horizontal:hover:before { -webkit-transform: scaleX(1); transform: scaleX(1); text-transform:none; }
 .hvr-shutter-out-horizontal:active, .hvr-shutter-out-horizontal:visited, .hvr-shutter-out-horizontal:focus{ text-transform: none !important;}
-/*end*/
+/*** END ***/
+
 #top-flip-home{margin:15px 0px -20px 0px; width:1020px; height:392px;}
 .hospital-t-left{float:left; height:auto; width:50%;margin:2px 0px 10px 0px;box-sizing: border-box;}
 .hos-links-menu{padding:16px 20px 0px 20px;}
@@ -242,8 +238,9 @@ td.quotes-actions a{margin:0 1em; }
 .r-a-qbutton-price:hover { background-color: #fff; border:1px solid #78be20; text-decoration: none; }
 .search-results .r-a-qbutton-price { font-size: 13.75px; color:#fff;}
 .search-results .r-a-qbutton-price:hover { color:#00426a;}
-
 /* END */
+
+/*** RAQ Plugin stuff ***/
 #yith-ywraq-mail-form { width:100%;}
 #yith-ywraq-mail-form .form-row {clear:none;}
 #rqa_facility_row { width:45%; float:left; clear:both; }
@@ -258,19 +255,13 @@ td.quotes-actions a{margin:0 1em; }
 #rqa_message_row, #rqa_email_row {clear:both;}
 #rqa-message { max-width:100%; min-height:80px; min-width:100%;  }
 .yith-ywraq-add-to-quote { margin-bottom:0.8em; }
-
-
 .add-request-quote-button { background-color:#00426a !important;  }
 .add-request-quote-button:hover { background-color:#78be20 !important; border:none !important; }
 .yith_ywraq_add_item_browse_message { margin:1em 0; }
 .yith_ywraq_add_item_browse_message a { background-color:#00426a; color:#fff; border-radius:0.4em; padding: 10px 20px 12px;}
 .yith_ywraq_add_item_browse_message a:hover { background-color:#78be20; color:#fff;  text-decoration: none;}
-
 body.search-results .add-request-quote-button { background-color:#78be20 !important; border:2px solid #00426a !important;}
-body.search-results  .add-request-quote-button:hover { background-color:#00426a !important; border:2px solid #78be20 !important; }
-
-
-#rqa_address{clear:both; float:left; width:58%; margin-right:2%;}
+body.search-results  .add-request-quote-button:hover { background-color:#00426a !important; border:2px solid #78be20 !important; }#rqa_address{clear:both; float:left; width:58%; margin-right:2%;}
 #rqa_city{float:left; width:28%; margin-right:2%;}
 #rqa_state{ float:left; width:10%;}
 #rqa_name_row {float:left; width:49%; margin-right:2%; }
@@ -280,6 +271,7 @@ body.search-results  .add-request-quote-button:hover { background-color:#00426a 
 .dropdown-17 {clear:both; float:left; margin-right:1.6em;}
 #ccf_field_dropdown-17 { width: 200px;}
 #ccf_field_single-line-text-13, #ccf_field_single-line-text-15, #ccf_field_single-line-text-16 {margin-right:2%;}
+/* END */
 
 /* Hide form placeholders on focus */
 input:focus::-webkit-input-placeholder { color: transparent; }
@@ -291,9 +283,8 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 #responsive-menu {top: 25px !important; position:absolute !important;}
 #click-menu{ position:absolute !important; }
 #responsive-menu .appendLink {font-size:20px; width:26px; text-align:center; }
-/* END */
-
 .form-control {padding: 5px 12px;}
+/* END */
 
 /* WOOCOMMERCE SPECIFIC */
 .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering { float: left; margin-left:2.4em; }
@@ -357,8 +348,6 @@ span.price del, span.price ins {display: block;}
 .product-addon, .product-addon-totals {display:none;}
 .logged-in .product-addon, .logged-in .product-addon-totals { display:block;}
 /* END */
-
-
 
 /* HOME PAGE */
 #homeorangewrap { width:100%; background: #ffd67f; margin-bottom: 2%; text-align:center; padding:1em; }
@@ -707,7 +696,6 @@ tr.cart-discount td {text-align:right !important;}
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: none !important; border-radius: 0px !important; margin:0 !important; padding: 0px !important; text-align: left; }
 #left-col-first-name{clear:both;}
 .woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; }
-
 .related #customer_fav_img{display:none !important;}
 /* END */
 
@@ -846,7 +834,6 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #dat_order_rght p.lt_blue {color:#288dcc;margin-bottom:28px;}
 /* END */
 
-
 /* PM PAGE */
 #pm_blue_1 { padding-top:0.4em; height:50px; background-color:#00426a; width:100%; text-align:center;}
 #pm_blue_1 p{ color:#fff; font-family: 'Lato',sans-serif; font-weight:300; letter-spacing: 1.3px;}
@@ -873,7 +860,6 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #vfbp-form-7 .vfb-checkbox{margin-bottom:3px !important; margin-top: 0 !important;}
 #vfbp-form-7 .subscribe_lists { height: 26px; margin-left: -35px; width: 26px; }
 #vfbp-form-7 button.subscribe_btn{width:100%; background-color:#78be20;border:none; margin-top:10px; }
-
 .vfbp-form input, .vfbp-form * input {margin-bottom:10px !important; }
 /* END */
 
@@ -931,14 +917,11 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .search-results h6.search-results-description a:hover{color:#ffad00;}
 .search-results button.single_add_to_cart_button{border:1.5px solid #00426a;}
 .search-results button.single_add_to_cart_button:hover{border:1.5px solid #78be20;}
-
 .search-results button.search-rs-read-more, .search-results a.search-rs-read-more {font-weight: 700;margin-top:8px; border:1.5px solid #00426a; font-size: 100%; background-color:#78be20; color:#fff; border-radius:0.25em; padding:0.69em 1.19em;}
 .search-results button.search-rs-read-more:hover, .search-results a.search-rs-read-more:hover{border:1.5px solid #78be20;text-decoration:none; background-color:#00426a; }
-
 .search-results .quantity .plus { top: 8px; height:34%; }
 .search-results .quantity .minus { bottom:2px; height:34%; }
 .search-results .woocommerce-message {margin-bottom: 1px !important;}
-
 /* END */
 
 /* NEW CUSTOMER PROFILE page */
@@ -957,30 +940,22 @@ h3.pro_title {line-height: 1em;}
 h3.slider-headers{font-family: 'ristretto_promedium', Arial, sans-serif; color:#00426a; font-size:40px;}
 /* END */
 
+/*#menu-parts-search #searchform {margin-top:-21px; margin-bottom:26px; }
+#menu-parts-search #searchform #s {width:900px; height:50px; }
+#menu-parts-search #searchform #searchsubmit{ font-size: 18px; padding: 11px 16px; }*/
 
-
+/*** Special seach forms and search results ***/
 #hospital_content_wrap .pp_search_container {position:absolute !important; bottom:0px !important; left:6px !important; width:350px !important;}
 .lft-img-home .pp_search_container {position:absolute !important; bottom:0px !important; left:9px !important; width:80% !important;}
-
 button#searchsubmit.btn.btn-default {border: 1px solid rgb(204,204,204);}
-
 .lft-img-home #searchform{position:absolute; bottom: -2px; left: 16px; background-color: #ffad00; padding: 0.36em; width: 289px; border-radius: 0.3em; }
 .lft-img-home #searchform #s{width:230px; border-radius: 0; }
 .lft-img-home #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
-
 #hospital_content_wrap #searchform{position:absolute; bottom:0px; left:5.5px; background-color: #ffad00; padding: 0.36em; width: 360px; border-radius: 0.3em; }
 #hospital_content_wrap #searchform #s{width:300px; border-radius: 0; }
 #hospital_content_wrap #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
-
 #masthead #searchform #s{font-size: 1.1em; padding: 2px 9px; height: 42px; }
 #masthead #searchform #searchsubmit{font-size: 16px; padding: 8.5px 14px; }
-
-
-#menu-parts-search #searchform {margin-top:-21px; margin-bottom:26px; }
-#menu-parts-search #searchform #s {width:900px; height:50px; }
-#menu-parts-search #searchform #searchsubmit{ font-size: 18px; padding: 11px 16px; }
-
-
 .search-results #sidebar #searchform,
 .page-id-86 #sidebar #searchform,
 .search-no-results #sidebar #searchform { padding: 8px 0; }
@@ -991,7 +966,6 @@ button#searchsubmit.btn.btn-default {border: 1px solid rgb(204,204,204);}
 .page-id-86 #sidebar #searchsubmit,
 .search-no-results #sidebar #searchsubmit {font-size: 14px; padding: 11px 12px;  }
 .search-results .ems-approved-img {display:none;}
-
 #hospital_content_wrap #searchform .form-control::-webkit-input-placeholder,
 .lft-img-home #searchform .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #8bbee8 !important;
@@ -1014,6 +988,7 @@ button#searchsubmit.btn.btn-default {border: 1px solid rgb(204,204,204);}
    color:    #8bbee8 !important;
    font-weight: 600;
 }
+/*** END ***/
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;

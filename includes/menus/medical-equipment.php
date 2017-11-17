@@ -1,5 +1,5 @@
 <!-- Medical Equipment Drop Menu-->
-<?php	include ($_SERVER['DOCUMENT_ROOT'] . '/parts_online/wp-content/themes/diamedical/includes/menus/menu_arrays.php'); ?>
+<?php include_menu_arrays(); ?>
 
 <nav id="med_equipment_drop" class="drop-menu-panel">
   <div class="container">
