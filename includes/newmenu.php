@@ -13,7 +13,6 @@
   .text-center p {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 15px; }
 </style>
 
-
 <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header main-navbar-header">
@@ -29,7 +28,6 @@
     </div>
   </div>
 </nav>
-
 
 <?php
 get_template_part('includes/menus/medical-equipment');
