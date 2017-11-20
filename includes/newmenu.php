@@ -31,8 +31,7 @@
   #parts_drop .col-sm-2 {line-height:100px; height:100px;}
   #parts_drop img {vertical-align: middle;}
   .menu-view-all{font-size:0.92em; text-decoration: underline !important; margin-bottom:8px;}
-  a.menu-view-all:hover{font-weight:600;}
-
+  #med_equipment_drop .mve_cols li {color:#000;}
 
 </style>
 

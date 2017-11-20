@@ -51,7 +51,7 @@
 
       });
     });
-      /*** END ***/
+    /*** END ***/
 
     function closeMenuz (hoveredLink) {
       $(hoveredLink).mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
@@ -70,8 +70,7 @@
         clearTimeout(timer);
       });
     }
-
-
+    
     closeMenuz('#main_home');
     showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
     showTopDropMenus('#main_part_search', '#parts_drop');
