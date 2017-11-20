@@ -1,11 +1,3 @@
-<style>
-
-.top-menu-mfr {margin: 20px auto;}
-.top-menu-mfr-img {margin: 20px auto;}
-.top-menu-mfr-container {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;}
-
-</style>
-
 <?php
   $mfrs = array("BAXTER","ALARIS","HILL-ROM","INVACARE","HOSPIRA","MEDLINE","MIDMARK","SPAN AMERICA","SIMLABSOLUTIONS","STRYKER","ZOLL","DRIVE","HAUSTED","JOERNS","LUMEX","AIRPAL","GRAHAM-FIELD","AMICO","KCI","FERNO","TENTE","BURKE","3AM","FOLLETT","SUMMIT INDUSTRIES","MEDMIZER","GRAINGER","HARLOFF","HAUSMANN","WELCH ALLYN","STERIS","LAERDAL","LEADING EDGE","AVKIN");
   asort($mfrs);

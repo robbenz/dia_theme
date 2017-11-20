@@ -7,10 +7,28 @@
   .drop-menu-panel {display: none; width: 100%; padding: 10px 0 0; background-color: white; background-color: rgba(255,255,255,0.95); position: absolute; z-index: 6666;}
   ul {list-style: none;}
   li {text-decoration: none;}
-  #mve_cols {-webkit-columns: 80px 3;columns: 80px 3;}
-  a.top-menu-facility-filter li {margin: 10px auto;}
+  #hospital_main{}
+  .mve_cols h4{text-transform: uppercase;font-weight:600;margin-bottom:5px;margin-top:0px;}
+  .mve_cols {-webkit-columns: 4;columns: 4; padding-top:16px; padding-bottom:10px; height: 365px;}
+  .mve_cols li{margin-left:12px;}
+  .top-menu-mfr {margin: 20px auto;}
+  .top-menu-mfr-img {margin: 20px auto;}
+  a.top-menu-facility-filter {padding: 5px auto;}
+  .top-menu-mfr-container {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;}
+  a.top-menu-facility-filter li {margin: 7px auto;padding: 8px;color: #fff;font-weight: 600;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';}
   #drop-menu {margin-bottom: 0px !important;}
+  #med_equipment_drop ul {margin-bottom:0px;padding-left: 10px;}
+  #med_equipment_drop a:hover {cursor: pointer;}
+  #service_drop li { margin: 20px 0px; font-weight:700;}
   .text-center p {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 15px; }
+  #parts_drop #searchform {width:100%;}
+  #parts_drop #searchform input#s{height:50px;width:1080px;font-size:16px;}
+  #parts_drop #searchsubmit {height:50px;width: 52px;}
+  #parts_drop h3 {color:#00426a;font-size: 24px;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';}
+  #parts_drop .col-sm-2 {line-height:100px; height:100px;}
+  #parts_drop img {vertical-align: middle;}
+  .menu-view-all{font-size:0.92em; text-decoration: underline;margin-bottom:8px;}
+  a .menu-view-all:hover{font-weight:600;}
 </style>
 
 <nav id="drop-menu" class="navbar navbar-default navbar-static-top">
@@ -30,8 +48,6 @@
 </nav>
 
 <?php
-
-
 get_template_part('includes/menus/medical-equipment');
 get_template_part('includes/menus/parts-search');
 get_template_part('includes/menus/service');

@@ -1,13 +1,4 @@
 <!-- Parts Search Drop Menu-->
-<style>
-#parts_drop #searchform {width:100%;}
-#parts_drop #searchform input#s{height:50px;width:1080px;font-size:16px;}
-#parts_drop #searchsubmit {height:50px;width: 52px;}
-#parts_drop h3{color:#00426a;font-size: 24px;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';}
-#parts_drop .col-sm-2 {line-height:100px; height:100px;}
-#parts_drop img{vertical-align: middle;}
-</style>
-
 <nav id="parts_drop" class="drop-menu-panel">
   <div class="container">
     <div class="row">
