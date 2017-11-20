@@ -47,7 +47,7 @@
         <a href="<?php echo site_url(); ?>/?s=AMICO&amp;post_type=product/"><img alt="Amico" src="<?php echo site_url(); ?>/wp-content/uploads/2017/07/Amico_Logo-1.jpeg" class="top-menu-mfr-img"/></a>
         <a href="<?php echo site_url(); ?>/?s=HAUSTED&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/imgs/haustedlogo.png" class="top-menu-mfr-img"/></a>
         <a href="<?php echo site_url(); ?>/?s=FERNO&amp;post_type=product"><img src="<?php echo site_url(); ?>/wp-content/uploads/2017/11/ferno.jpg" class="top-menu-mfr-img"/></a> -->
-        <a href="<?php echo site_url(); ?>/manufacturers/"><img src="<?php echo site_url(); ?>/wp-content/uploads/2017/11/product_logos.png" class="top-menu-mfr-img"/></a>
+        <!-- <a href="<?php echo site_url(); ?>/manufacturers/"><img src="<?php echo site_url(); ?>/wp-content/uploads/2017/11/product_logos.png" class="top-menu-mfr-img"/></a> -->
       </div>
     </div>
   </div>
