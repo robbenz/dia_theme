@@ -987,7 +987,7 @@ a.top-menu-main-a li {text-decoration: none; color: white; display: inline-block
 #column4_menu_list{-webkit-columns: 100px 4;columns: 100px 4;}
 #menu_all_main h6{margin-top:0px; margin-bottom: 15px; font-weight: 600; font-size: 15px; }
 .mve_cols { padding-top:16px; padding-bottom:10px;}
-.mve_cols li{margin-left:6px;}
+.mve_cols li{margin: 2px 0 1px 6px;}
 .mve_cols h3 {text-align:center; color:#fff; margin-top:-20px; margin-bottom:20px;font-size:20px; padding:10px;}
 .mve_cols h4{font-size: 16px;text-transform: uppercase;font-weight:600;margin-bottom:5px;margin-top:0px;}
 .top-menu-mfr, .top-menu-mfr-img {margin: 20px auto;}
@@ -1006,8 +1006,9 @@ a.top-menu-facility-filter li {margin: 9px auto;padding: 8px; font-weight: 600;f
 #parts_drop h3 {color:#00426a;font-size: 24px;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';}
 #parts_drop .col-sm-2 {line-height:100px; height:100px;}
 #parts_drop img {vertical-align: middle;}
-.menu-view-all{font-size:0.92em; text-decoration: underline !important; margin-bottom:8px;}
+.menu-view-all{font-size:0.92em; text-decoration: underline !important; margin-bottom: 10px !important; }
 #med_equipment_drop .mve_cols li {color:#000;}
+#ems_main .col-md-6 h4{padding-bottom:2px;border-bottom:2px solid; margin-bottom:15px;}
 /*** END ***/
 
 /*

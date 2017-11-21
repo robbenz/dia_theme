@@ -13,7 +13,16 @@
 
 
     /*** Medical Equipment Facility toggle ***/
-    var main_cats = ["menu_all_main", "hospital_main","nursing_main","sls_main","ltc_main","ems_main","therapy_main","veterinary_main"];
+    var main_cats = [
+      "menu_all_main",
+      "hospital_main",
+      "nursing_main",
+      "sls_main",
+      "ltc_main",
+      "ems_main",
+      "therapy_main",
+      "veterinary_main"
+    ];
     $('.mve_cols').hide();
     $('#menu_all_main').show();
     $.each(main_cats, function( i, val ) {
@@ -27,26 +36,29 @@
 
         switch (val) {
           case 'hospital_main':
-            $('.hos-hover > li').css({'background-color' : '#00426a', 'color' : '#fff'});
+            $('#hospital_main_hover > li').css({'background-color' : '#00426a', 'color' : '#fff'});
             break;
           case 'nursing_main':
-            $('.ns-hover > li').css({'background-color' : '#2774ae', 'color' : '#fff'});
+            $('#nursing_main_hover > li').css({'background-color' : '#2774ae', 'color' : '#fff'});
             break;
           case 'sls_main':
-            $('.sls-hover > li').css({'background-color' : '#ffad00', 'color' : '#fff'});
+            $('#sls_main_hover > li').css({'background-color' : '#ffad00', 'color' : '#fff'});
             break;
           case 'ltc_main':
-            $('.ltc-hover > li').css({'background-color' : '#72d0f4', 'color' : '#fff'});
+            $('#ltc_main_hover > li').css({'background-color' : '#72d0f4', 'color' : '#fff'});
             break;
           case 'ems_main':
-            $('.ems-hover > li').css({'background-color' : '#d6001c', 'color' : '#fff'});
+            $('#ems_main_hover > li').css({'background-color' : '#d6001c', 'color' : '#fff'});
             break;
           case 'therapy_main':
-            $('.pt-hover > li').css({'background-color' : '#9e71a2', 'color' : '#fff'});
+            $('#therapy_main_hover > li').css({'background-color' : '#9e71a2', 'color' : '#fff'});
             break;
           case 'veterinary_main':
-            $('.vet-hover > li').css({'background-color' : '#41848d', 'color' : '#fff'});
+            $('#veterinary_main_hover > li').css({'background-color' : '#41848d', 'color' : '#fff'});
             break;
+          // case 'menu_all_main':
+          //   $('#menu_all_main_hover > li').css({'text-transform' : 'underline'});
+          //   break;
         }
 
       });
@@ -70,7 +82,7 @@
         clearTimeout(timer);
       });
     }
-    
+
     closeMenuz('#main_home');
     showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
     showTopDropMenus('#main_part_search', '#parts_drop');

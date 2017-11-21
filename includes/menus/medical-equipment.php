@@ -1,5 +1,5 @@
 <!-- Medical Equipment Drop Menu-->
-<nav id="med_equipment_drop" style="display:block" class="drop-menu-panel">
+<nav id="med_equipment_drop" class="drop-menu-panel">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
@@ -8,25 +8,25 @@
           <a id="menu_all_main_hover" href="#" class="top-menu-facility-filter">
             <li style="color:#00426a; font-weight:700;font-size:16px;">VIEW ALL CATEGORIES</li>
           </a>
-          <a id="hospital_main_hover" href="#" class="top-menu-facility-filter hos-hover">
+          <a id="hospital_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #00426a;">Hospitals</li>
           </a>
-          <a id="nursing_main_hover" href="#" class="top-menu-facility-filter ns-hover">
+          <a id="nursing_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #2774ae;">Nursing Schools &amp; Simulation</li>
           </a>
-          <a id="sls_main_hover" href="#" class="top-menu-facility-filter sls-hover">
+          <a id="sls_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #ffad00;">SimLabSolutions.com</li>
           </a>
-          <a id="ltc_main_hover" href="#" class="top-menu-facility-filter ltc-hover">
+          <a id="ltc_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #72d0f4;">Long Term Care</li>
           </a>
-          <a id="ems_main_hover" href="#" class="top-menu-facility-filter ems-hover">
+          <a id="ems_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #d6001c;">Emergency &amp; Rescue</li>
           </a>
-          <a id="therapy_main_hover" href="#" class="top-menu-facility-filter pt-hover">
+          <a id="therapy_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #9e71a2;">Physical Therapy</li>
           </a>
-          <a id="veterinary_main_hover" href="#" class="top-menu-facility-filter vet-hover">
+          <a id="veterinary_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #41848d;">Veterinary</li>
           </a>
         </ul>

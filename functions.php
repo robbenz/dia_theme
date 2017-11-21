@@ -1167,7 +1167,25 @@ if ( $post->post_type == 'product' ) {
 /*** var_dump_ array/string all cute and pretty  ***/
 function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
-
+/**
+ *
+ * @param Array $list
+ * @param int $p
+ * @return multitype:multitype:
+ */
+function partition(Array $list, $p) {
+    $listlen = count($list);
+    $partlen = floor($listlen / $p);
+    $partrem = $listlen % $p;
+    $partition = array();
+    $mark = 0;
+    for($px = 0; $px < $p; $px ++) {
+        $incr = ($px < $partrem) ? $partlen + 1 : $partlen;
+        $partition[$px] = array_slice($list, $mark, $incr);
+        $mark += $incr;
+    }
+    return $partition;
+}
 
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 /*
