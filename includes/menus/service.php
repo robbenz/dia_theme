@@ -35,3 +35,5 @@
     <p style="margin:40; background-color: #ffad00; padding: 12px;">Our on-site maintenance team provides your facility with 24-hour availability, access to discounted parts and expedited parts replacement.</p>
   </div>
 </nav>
+
+<!-- /wp-content/imgs/Service-Map.png -->

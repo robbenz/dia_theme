@@ -1,5 +1,5 @@
 <!-- Medical Equipment Drop Menu-->
-<nav id="med_equipment_drop" class="drop-menu-panel">
+<nav id="med_equipment_drop" style="display:block;" class="drop-menu-panel">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
@@ -27,7 +27,7 @@
             <li style="border-bottom: 2px solid #9e71a2;">Physical Therapy</li>
           </a>
           <a id="veterinary_main_hover" href="#" class="top-menu-facility-filter">
-            <li style="border-bottom: 2px solid #41848d;">Veterinary</li>
+            <li style="border-bottom: 2px solid #657f3f;">Veterinary</li>
           </a>
         </ul>
       </div>

@@ -4,13 +4,13 @@
 
     var timer = 0;
 
-    // hover underline effect
-    $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
-
-    // keep the menu open only in appropriate mouse locations
-    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-
+    // // hover underline effect
+    // $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
+    //
+    // // keep the menu open only in appropriate mouse locations
+    // $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+    // $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+    //
 
     /*** Medical Equipment Facility toggle ***/
     var main_cats = [
@@ -54,7 +54,7 @@
             $('#therapy_main_hover > li').css({'background-color' : '#9e71a2', 'color' : '#fff'});
             break;
           case 'veterinary_main':
-            $('#veterinary_main_hover > li').css({'background-color' : '#41848d', 'color' : '#fff'});
+            $('#veterinary_main_hover > li').css({'background-color' : '#657f3f', 'color' : '#fff'});
             break;
           // case 'menu_all_main':
           //   $('#menu_all_main_hover > li').css({'text-transform' : 'underline'});
@@ -83,13 +83,13 @@
       });
     }
 
-    closeMenuz('#main_home');
-    showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
-    showTopDropMenus('#main_part_search', '#parts_drop');
-    showTopDropMenus('#main_service', '#service_drop');
-    showTopDropMenus('#main_manufacturers', '#mfrs_drop');
-    closeMenuz('#main_contact_us');
-    closeMenuz('#main_my_account');
+    // closeMenuz('#main_home');
+    // showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
+    // showTopDropMenus('#main_part_search', '#parts_drop');
+    // showTopDropMenus('#main_service', '#service_drop');
+    // showTopDropMenus('#main_manufacturers', '#mfrs_drop');
+    // closeMenuz('#main_contact_us');
+    // closeMenuz('#main_my_account');
 
   });
 }(jQuery));
