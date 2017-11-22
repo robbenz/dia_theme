@@ -1,7 +1,9 @@
 <div class="col-md-9 mve_cols" id="sls_main">
   <div class="row">
     <div class="col-md-12">
-      <h3 style="background-color:#ffad00;">SimLabSolutions.com</h3>
+      <a href="<?php echo site_url(); ?>/simlabsolutions/">
+        <h3 style="background-color:#ffad00;">SimLabSolutions.com</h3>
+      </a>
     </div>
   </div>
   <div class="row">

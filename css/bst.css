@@ -998,7 +998,7 @@ a.top-menu-facility-filter li {margin: 9px auto;padding: 8px; font-weight: 600;f
 #drop-menu {margin-bottom: 0px !important;}
 #med_equipment_drop ul {margin-bottom:0px;padding-left: 10px;}
 #med_equipment_drop a:hover {cursor: pointer;}
-#service_drop li { margin: 20px 0px; font-weight:700;}
+#service_drop li { text-align:center; list-style:none; margin: 0px 0px 20px 0; font-weight:700;}
 .text-center p {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 15px; }
 #parts_drop #searchform {width:100%;}
 #parts_drop #searchform input#s{height:50px;width:1080px;font-size:16px;}
@@ -1009,6 +1009,8 @@ a.top-menu-facility-filter li {margin: 9px auto;padding: 8px; font-weight: 600;f
 .menu-view-all{font-size:0.92em; text-decoration: underline !important; margin-bottom: 10px !important; }
 #med_equipment_drop .mve_cols li {color:#000;}
 #ems_main .col-md-6 h4{padding-bottom:2px;border-bottom:2px solid; margin-bottom:15px;}
+#ems_main .col-md-6 a h4 {text-decoration: none;}
+#ems_main .col-md-6 a h4:hover {text-decoration: none; color:#000; border-bottom:2px solid #d6001c;}
 /*** END ***/
 
 /*
@@ -1363,6 +1365,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #wpp-buttons{display:none !important;}
   .woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
   p.diva{width: 95% !important; margin: 0 10px;}
+  #sidebar_wrap {display:none;}
 }
 
 @media (min-width: 992px) {

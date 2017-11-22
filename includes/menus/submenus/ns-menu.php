@@ -43,12 +43,21 @@
   </div>
   <div class="col-md-3">
     <ul>
-      <a><h4>lorem ipsum</h4></a>
-      <a><li>dolor sit amet</li></a>
-      <a><li>consectetur adipiscing</li></a>
-      <a><li>do eiusmod tempor</li></a>
-      <a><li>incididunt ut labore</li></a>
-      <a><li class="menu-view-all">View All</li></a>
+      <a href="<?php echo site_url(); ?>/product-category/moulage/">
+        <h4>Moulage</h4>
+      </a>
+      <a href="https://diamedicalusa.com/product-category/moulage/advanced-skills-trainers/">
+        <li>Advanced Skills Trainers</li>
+      </a>
+      <a href="https://diamedicalusa.com/product-category/moulage/moulage-kits/">
+        <li>Moulage Kits</li>
+      </a>
+      <a href="https://diamedicalusa.com/product-category/moulage/venous-arterial-wounds/">
+        <li>Venous &amp; Arterial Wounds</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/moulage/">
+        <li class="menu-view-all">View All</li>
+      </a>
       <a><h4>dolore magna</h4></a>
       <a><li>Ut enim ad</li></a>
       <a><li>minim veniam</li></a>

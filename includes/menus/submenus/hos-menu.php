@@ -1,7 +1,9 @@
 <div class="col-md-9 mve_cols" id="hospital_main">
   <div class="row">
     <div class="col-md-12">
-      <h3 style="background-color:#00426a;">Hospital Equipment</h3>
+      <a href="<?php echo site_url(); ?>/hospital-equipment/">
+        <h3 style="background-color:#00426a;">Hospital Equipment</h3>
+      </a>
     </div>
   </div>
  <div class="row">

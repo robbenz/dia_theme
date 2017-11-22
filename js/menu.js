@@ -2,16 +2,6 @@
   "use strict";
   $(document).ready(function() {
 
-    var timer = 0;
-
-    // hover underline effect
-    $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
-
-    // keep the menu open only in appropriate mouse locations
-    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-
-
     /*** Medical Equipment Facility toggle ***/
     var main_cats = [
       "menu_all_main",
@@ -65,11 +55,21 @@
     });
     /*** END ***/
 
+
+    // hover underline effect
+    $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
+
+    // keep the menu open only in appropriate mouse locations
+    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+
+
     function closeMenuz (hoveredLink) {
       $(hoveredLink).mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
     }
 
     // show drop menu based on hovered link
+    var timer = 0;
     function showTopDropMenus (hoveredLink, shownMenu) {
       $(hoveredLink).mouseenter(function(){
         $('.drop-menu-panel').stop().fadeOut(100);

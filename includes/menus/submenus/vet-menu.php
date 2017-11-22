@@ -1,7 +1,9 @@
 <div class="col-md-9 mve_cols" id="veterinary_main">
   <div class="row">
     <div class="col-md-12">
-      <h3 style="background-color:#657f3f;">Veterinary Equipment</h3>
+      <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/">
+        <h3 style="background-color:#657f3f;">Veterinary Equipment</h3>
+      </a>
     </div>
   </div>
   <div class="row">
@@ -93,7 +95,7 @@
           <li class="menu-view-all">View All</li>
         </a>
       </ul>
-      <img style="width: 420px;margin-top: 8px;margin-left: 34px;" src="https://diamedicalusa.com/wp-content/imgs/veterinary_email_banner.jpg" />
+      <img style="max-width: 420px !important;width: 420px;margin-top: 8px;margin-left: 34px;" src="https://diamedicalusa.com/wp-content/imgs/veterinary_email_banner.jpg" />
     </div>
     <div class="col-md-4">
       <ul>
