@@ -46,15 +46,10 @@
           case 'veterinary_main':
             $('#veterinary_main_hover > li').css({'background-color' : '#657f3f', 'color' : '#fff'});
             break;
-          // case 'menu_all_main':
-          //   $('#menu_all_main_hover > li').css({'text-transform' : 'underline'});
-          //   break;
         }
-
       });
     });
     /*** END ***/
-
 
     // hover underline effect
     $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
@@ -62,7 +57,6 @@
     // keep the menu open only in appropriate mouse locations
     $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
     $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-
 
     function closeMenuz (hoveredLink) {
       $(hoveredLink).mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
