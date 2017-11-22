@@ -35,10 +35,21 @@
       <a><li>Overbed Tables</li></a>
       <a><li>Phlebotomy Chairs</li></a>
       <a><li class="menu-view-all">View All</li></a>
-      <a><h4>Refrigerators &amp; Freezers	</h4></a>
-      <a><li>Counter Height Refrigerators</li></a>
-      <a><li>Vaccine Freezers</li></a>
-      <a><li class="menu-view-all">View All</li></a>
+      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/">
+        <h4>Infusion &amp; Dialysis</h4>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps/">
+        <li>Infusion Pumps</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/iv-poles/">
+        <li>IV Poles</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/iv-tubing/">
+        <li>IV Tubing</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/">
+        <li class="menu-view-all">View All</li>
+      </a>
     </ul>
   </div>
   <div class="col-md-3">
@@ -46,13 +57,13 @@
       <a href="<?php echo site_url(); ?>/product-category/moulage/">
         <h4>Moulage</h4>
       </a>
-      <a href="https://diamedicalusa.com/product-category/moulage/advanced-skills-trainers/">
+      <a href="<?php echo site_url(); ?>/product-category/moulage/advanced-skills-trainers/">
         <li>Advanced Skills Trainers</li>
       </a>
-      <a href="https://diamedicalusa.com/product-category/moulage/moulage-kits/">
+      <a href="<?php echo site_url(); ?>/product-category/moulage/moulage-kits/">
         <li>Moulage Kits</li>
       </a>
-      <a href="https://diamedicalusa.com/product-category/moulage/venous-arterial-wounds/">
+      <a href="<?php echo site_url(); ?>/product-category/moulage/venous-arterial-wounds/">
         <li>Venous &amp; Arterial Wounds</li>
       </a>
       <a href="<?php echo site_url(); ?>/product-category/moulage/">

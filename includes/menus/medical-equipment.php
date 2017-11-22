@@ -17,11 +17,11 @@
           <a id="sls_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #ffad00;">SimLabSolutions.com</li>
           </a>
-          <a id="ltc_main_hover" href="#" class="top-menu-facility-filter">
-            <li style="border-bottom: 2px solid #72d0f4;">Long Term Care</li>
-          </a>
           <a id="ems_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #d6001c;">Emergency &amp; Rescue</li>
+          </a>
+          <a id="ltc_main_hover" href="#" class="top-menu-facility-filter">
+            <li style="border-bottom: 2px solid #72d0f4;">Long Term Care</li>
           </a>
           <a id="therapy_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #9e71a2;">Physical Therapy</li>
@@ -37,8 +37,8 @@
      get_template_part('includes/menus/submenus/hos-menu');
      get_template_part('includes/menus/submenus/ns-menu');
      get_template_part('includes/menus/submenus/sls-menu');
-     get_template_part('includes/menus/submenus/ltc-menu');
      get_template_part('includes/menus/submenus/ems-menu');
+     get_template_part('includes/menus/submenus/ltc-menu');
      get_template_part('includes/menus/submenus/pt-menu');
      get_template_part('includes/menus/submenus/vet-menu');
      ?>

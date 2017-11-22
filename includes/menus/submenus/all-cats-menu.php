@@ -16,7 +16,9 @@ $dia_menu_product_cats = array_diff( $dia_menu_product_cats,[ "On-Site Repairs &
 <div class="col-md-9 mve_cols" id="menu_all_main">
   <div class="row">
     <div class="col-md-12">
-      <h3 style="background-color:#00426a;">Shop All Medical Equipment</h3>
+			<a href="<?php echo site_url(); ?>/medical-equipment/">
+				<h3 style="background-color:#00426a;">Shop All Medical Equipment</h3>
+			</a>
     </div>
   </div>
   <div class="row">

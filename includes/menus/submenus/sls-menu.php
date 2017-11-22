@@ -119,7 +119,7 @@
         <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
           <li class="menu-view-all">View All</li>
         </a>
-        <img style="margin-left: -67px;width: 335px;" src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/simulated-iv-fluids-menu.png" />
+        <img style="margin-left: -67px;width: 335px;max-width: 335px;" src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/simulated-iv-fluids-menu.png" />
       </ul>
     </div>
   </div>
