@@ -1167,12 +1167,8 @@ if ( $post->post_type == 'product' ) {
 /*** var_dump_ array/string all cute and pretty  ***/
 function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
-/**
- *
- * @param Array $list
- * @param int $p
- * @return multitype:multitype:
- */
+
+/*** Partition arrays into multiple arrays - second argument ***/
 function partition(Array $list, $p) {
     $listlen = count($list);
     $partlen = floor($listlen / $p);
@@ -1185,6 +1181,37 @@ function partition(Array $list, $p) {
         $mark += $incr;
     }
     return $partition;
+}
+/*** END ***/
+
+
+function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
+  if ( $cat == 'cat' ) {
+    $cat_slug = get_term_by('slug', $slug, 'product_cat', 'ARRAY_A');
+    $cat_slug_link = get_term_link($cat_slug['term_id'], 'product_cat');
+    $link = '<a href="';
+    $link .= esc_url( $cat_slug_link );
+    $link .= '" title="' . $cat_slug['name'] . '">';
+    $link .= '<' . $html;
+    if ($view == 'view-all' && $html == 'li') {
+      $link .=  ' class="menu-view-all">View All';
+    } else {
+      $link .= '>' . $cat_slug['name'];
+    }
+    $link .= '</' . $html . '>';
+    $link .= '</a>';
+    echo $link;
+  } elseif ( $cat == 'pro' ) {
+    $product_obj = get_page_by_path( $slug, OBJECT, 'product' );
+    $link = '<a href="';
+    $link .= esc_url($product_obj->guid);
+    $link .= '" title="' . $product_obj->post_title. '">';
+    $link .= '<' . $html . '>';
+    $link .= $product_obj->post_title;
+    $link .= '</' . $html . '>';
+    $link .= '</a>';
+    echo $link;
+  }
 }
 
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/

@@ -9,54 +9,27 @@
   <div class="row">
     <div class="col-md-4">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-anesthesia-equipment/">
-          <h4>Anesthesia</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-anesthesia-equipment/tec-3-iso-vaporizer/">
-          <li>Tec 3 Iso Vaporizer</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-anesthesia-equipment/tec-3-sevo-vaporizer/">
-          <li>Tec 3 Sevo Vaporizer</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-anesthesia-equipment/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-fluid-management/">
-          <h4>Fluid Management</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-fluid-management/conntrol-v-1035i-iv-pump/">
-          <li>Conntrol-V 1035i IV Pump</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-fluid-management/conntrol-v-iv-tubing-sets-iv-tubing/">
-          <li>Conntrol-V IV Tubing Sets IV Tubing</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-fluid-management/warm-iv-fluid-warmer/">
-          <li>I-Warm IV Fluid Warmer</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-fluid-management/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-imaging-equipment/">
-          <h4>Imaging</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-imaging-equipment/dus-60-vet-ultrasound/">
-          <li>DUS 60 VET Ultrasound</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-imaging-equipment/u50-vet-ultrasound/">
-          <li>U50 VET Ultrasound</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-imaging-equipment/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-laser-equipment/">
-          <h4>Laser</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-laser-equipment/solace-duo-laser-system/">
-          <li>Solace Duo Laser System</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-laser-equipment/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'veterinary-anesthesia-equipment');
+    diaLink('pro', 'li', 'tec-3-iso-vaporizer');
+    diaLink('pro', 'li', 'tec-3-sevo-vaporizer');
+    diaLink('cat', 'li', 'veterinary-anesthesia-equipment', 'view-all');
+
+    diaLink('cat', 'h4', 'veterinary-fluid-management');
+    diaLink('pro', 'li', 'conntrol-v-1035i-iv-pump');
+    diaLink('pro', 'li', 'conntrol-v-iv-tubing-sets-iv-tubing');
+    diaLink('pro', 'li', 'warm-iv-fluid-warmer');
+    diaLink('cat', 'li', 'veterinary-fluid-management', 'view-all');
+
+    diaLink('cat', 'h4', 'veterinary-imaging-equipment');
+    diaLink('pro', 'li', 'dus-60-vet-ultrasound');
+    diaLink('pro', 'li', 'u50-vet-ultrasound');
+    diaLink('cat', 'li', 'veterinary-imaging-equipment', 'view-all');
+
+    diaLink('cat', 'h4', 'veterinary-laser-equipment');
+    diaLink('pro', 'li', 'veterinary-laser-equipment/solace-duo-laser-system');
+    diaLink('cat', 'li', 'veterinary-laser-equipment', 'view-all');
+    ?>
       </ul>
     </div>
     <div class="col-md-4">

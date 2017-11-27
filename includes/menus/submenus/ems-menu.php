@@ -19,103 +19,61 @@
   <div class="row">
     <div class="col-md-3">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/simulation-bundles/">
-          <h4>EMS Simulation Bundles</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/simulation-bundles/als-simulation-bundle/">
-          <li>ALS Simulation Bundle</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/simulation-bundles/bls-simulation-bundle/">
-          <li>BLS Simulation Bundle</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/simulation-bundles/ems-sim-starter-bundle/">
-          <li>EMS Sim Starter Bundle</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/simulation-bundles/practi-narcotic-bundle/">
-          <li>Practi-Narcotic Bundle</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/simulation-bundles/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'simulation-bundles');
+    diaLink('pro', 'li', 'als-simulation-bundle');
+    diaLink('pro', 'li', 'bls-simulation-bundle');
+    diaLink('pro', 'li', 'ems-sim-starter-bundle');
+    diaLink('pro', 'li', 'practi-narcotic-bundle');
+    diaLink('cat', 'li', 'simulation-bundles', 'view-all');
+    ?>
       </ul>
     </div>
 
     <div class="col-md-3">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/manikins/">
-          <h4>Manikins &amp; Simulators</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/manikins/airway-management/">
-          <li>Airway Management</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/manikins/cpr/">
-          <li>CPR</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/manikins/injection/">
-          <li>Injection</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/manikins/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'manikins');
+    diaLink('cat', 'li', 'airway-management');
+    diaLink('cat', 'li', 'cpr');
+    diaLink('cat', 'li', 'injection');
+    diaLink('cat', 'li', 'manikins', 'view-all');
+    ?>
       </ul>
     </div>
     <div class="col-md-3">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/ems-field-ready-bundles/">
-          <h4>EMS Field Ready Bundles</h4>
-          </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/ems-field-ready-gear/ems-field-ready-bundles/ems-starter-bundle/">
-          <li>EMS Starter Bundle</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/ems-field-ready-gear/ems-field-ready-bundles/field-ready-als-bundle/">
-          <li>Field Ready ALS Bundle</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/ems-field-ready-gear/ems-field-ready-bundles/field-ready-bls-bundle/">
-          <li>Field Ready BLS Bundle</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/ems-field-ready-bundles/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'ems-field-ready-bundles');
+    diaLink('pro', 'li', 'ems-starter-bundle');
+    diaLink('pro', 'li', 'field-ready-als-bundle');
+    diaLink('pro', 'li', 'field-ready-bls-bundle');
+    diaLink('cat', 'li', 'ems-field-ready-bundles', 'view-all');
+    ?>
       </ul>
     </div>
     <div class="col-md-3">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/field-ready-loaded-packs/">
-          <h4>Field Ready Loaded Jump Packs</h4>
-          </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/ems-field-ready-gear/field-ready-loaded-packs/field-ready-ems-equipment/">
-          <li>Field Ready ALS Jump Pack</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/ems-field-ready-gear/field-ready-loaded-packs/field-ready-pediatric-jump-pack/">
-          <li>Field Ready Pediatric Jump Pack</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/ems-field-ready-gear/field-ready-loaded-packs/loaded-bls-jump-pack-copy/">
-          <li>Field Ready BLS Jump Bag</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/field-ready-loaded-packs/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'field-ready-loaded-packs');
+    diaLink('pro', 'li', 'field-ready-ems-equipment');
+    diaLink('pro', 'li', 'field-ready-pediatric-jump-pack');
+    diaLink('pro', 'li', 'loaded-bls-jump-pack-copy');
+    diaLink('cat', 'li', 'field-ready-loaded-packs', 'view-all');
+    ?>
       </ul>
     </div>
   </div>
   <div class="row">
     <div class="col-md-3">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
-          <h4>Simulated IV Fluids</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/?post_type=product&amp;p=31900">
-          <li>0.9% Sod Chlor-ide Simulated IV Bags</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/?product=5-dextrose-simulated-iv-bag">
-          <li>5% Dex-trose Simulated IV Bags</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/simulated-iv-bags/simulated-blood-bags-2/">
-          <li>Simulated Blood Bags</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+      diaLink('cat', 'h4', 'simulated-iv-bags');
+      diaLink('pro', 'li', '0-9-nacl-simulated-iv-bag');
+      diaLink('pro', 'li', '5-dextrose-simulated-iv-bag');
+      diaLink('pro', 'li', 'simulated-blood-bags-2');
+      diaLink('cat', 'li', 'simulated-iv-bags', 'view-all');
+    ?>
       </ul>
     </div>
     <div class="col-md-6">
@@ -123,24 +81,14 @@
     </div>
     <div class="col-md-3">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/">
-          <h4>Extrication Devices &amp; Patient Transfer</h4>
-          </a>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/ambulance-child-restraints/">
-          <li>Ambulance Child Restraint</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/basket-stretchers/">
-          <li>Basket Stretchers</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/cots-stretchers/">
-          <li>Cots &amp; Stretchers</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/patient-slings/">
-          <li>Patient Slings</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/emergency-transport-supplies/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'emergency-transport-supplies');
+    diaLink('cat', 'li', 'ambulance-child-restraints');
+    diaLink('cat', 'li', 'basket-stretchers');
+    diaLink('cat', 'li', 'cots-stretchers');
+    diaLink('cat', 'li', 'patient-slings');
+    diaLink('cat', 'li', 'emergency-transport-supplies', 'view-all');
+    ?>
       </ul>
     </div>
   </div>

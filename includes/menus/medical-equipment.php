@@ -1,5 +1,5 @@
 <!-- Medical Equipment Drop Menu-->
-<nav id="med_equipment_drop" class="drop-menu-panel">
+<nav id="med_equipment_drop" style="display:block;" class="drop-menu-panel">
   <div class="container">
     <div class="row">
       <div class="col-md-3">

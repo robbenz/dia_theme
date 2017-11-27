@@ -9,140 +9,67 @@
   <div class="row">
     <div class="col-md-4">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/cushions-and-positioners/">
-          <h4>Cushions and Positioners</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/8-x-24-round-bolster/">
-          <li>8″ x 24″ Round Bolster</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/large-pillow-cushion-2/">
-          <li>Large Pillow Cushion</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/smooth-foam-wedge-2/">
-          <li>Smooth Foam Wedge</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/cushions-and-positioners/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/daily-living-aids/">
-          <h4>Daily Living Aids</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/daily-living-aids/great-grips-weighted-utensils/">
-          <li>Great Grips Weighted Utensils</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/daily-living-aids/medline-reachers/">
-          <li>Medline Reachers</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/daily-living-aids/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-aids/">
-          <h4>Exercise Aids</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/exercise-aids/hand-therapy-putty/">
-          <li>Hand Therapy Putty</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/exercise-aids/ramp-and-curb-training-set/">
-          <li>Ramp and Curb Training Set</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-aids/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+        diaLink('cat', 'h4', 'cushions-and-positioners');
+        diaLink('pro', 'li', '8-x-24-round-bolster');
+        diaLink('pro', 'li', 'large-pillow-cushion-2');
+        diaLink('pro', 'li', 'smooth-foam-wedge-2');
+        diaLink('cat', 'li', 'cushions-and-positioners', 'view-all');
+
+        diaLink('cat', 'h4', 'daily-living-aids');
+        diaLink('pro', 'li', 'great-grips-weighted-utensils');
+        diaLink('pro', 'li', 'medline-reachers');
+        diaLink('cat', 'li', 'daily-living-aids', 'view-all');
+
+        diaLink('cat', 'h4', 'exercise-aids');
+        diaLink('pro', 'li', 'hand-therapy-putty');
+        diaLink('pro', 'li', 'ramp-and-curb-training-set');
+        diaLink('cat', 'li', 'exercise-aids', 'view-all');
+        ?>
       </ul>
     </div>
     <div class="col-md-4">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-equipment/">
-          <h4>Exercise &amp; Mobility</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/exercise-equipment/bosu-ball/">
-          <li>Bosu Ball</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/exercise-equipment/exercise-ball/">
-          <li>Exercise Ball</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/exercise-equipment/exercise-bands/">
-          <li>Exercise Bands</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-equipment/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-machines/">
-          <h4>Exercise Machines</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-machines/ellipticals/">
-          <li>Ellipticals</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-machines/exercise-bikes/">
-          <li>Exercise Bikes</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-machines/rowers/">
-          <li>Rowers</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-machines/treadmills/">
-          <li>Treadmills</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/exercise-machines/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/parallel-bars/">
-          <h4>Parallel Bars</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/parallel-bars/bariatric-parallel-bars/">
-          <li>Bariatric Parallel Bars</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/parallel-bars/platform-mounted-parallel-bars/">
-          <li>Platform Mounted Parallel Bars</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/parallel-bars/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+        diaLink('cat', 'h4', 'exercise-equipment');
+        diaLink('pro', 'li', 'bosu-ball');
+        diaLink('pro', 'li', 'exercise-ball');
+        diaLink('pro', 'li', 'exercise-bands');
+        diaLink('cat', 'li', 'exercise-equipment', 'view-all');
+
+        diaLink('cat', 'h4', 'exercise-machines');
+        diaLink('cat', 'li', 'ellipticals');
+        diaLink('cat', 'li', 'rowers');
+        diaLink('cat', 'li', 'treadmills');
+        diaLink('cat', 'li', 'exercise-machines', 'view-all');
+
+        diaLink('cat', 'h4', 'parallel-bars');
+        diaLink('pro', 'li', 'bariatric-parallel-bars');
+        diaLink('pro', 'li', 'platform-mounted-parallel-bars');
+        diaLink('cat', 'li', 'parallel-bars', 'view-all');
+        ?>
       </ul>
     </div>
     <div class="col-md-4">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/mat-platforms/">
-          <h4>Mat Platforms</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/mat-platforms/bariatric-mat-platform/">
-          <li>Bariatric Mat Platform</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/mat-platforms/econo-electric-hi-lo-mat-platforms/">
-          <li>Electric Hi-Lo Mat</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/mat-platforms/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/pain-relief-first-aid/">
-          <h4>Pain Relief &amp; First Aid</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/pain-relief-first-aid/biofreeze/">
-          <li>BioFreeze</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/physical-therapy/pain-relief-first-aid/coldspot/">
-          <li>ColdSpot</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/pain-relief-first-aid/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/recovery-aids/">
-          <h4>Recovery Aids</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/recovery-aids/immobilizers/">
-          <li>Immobilizers</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/recovery-aids/slings/">
-          <li>Slings</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/recovery-aids/splints/">
-          <li>Splints</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/recovery-aids/splints/">
-          <li>Walkers / Boots</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/physical-therapy/recovery-aids/walkersboots/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+        diaLink('cat', 'h4', 'mat-platforms');
+        diaLink('pro', 'li', 'bariatric-mat-platform');
+        diaLink('pro', 'li', 'econo-electric-hi-lo-mat-platforms');
+        diaLink('cat', 'li', 'mat-platforms', 'view-all');
+
+        diaLink('cat', 'h4', 'pain-relief-first-aid');
+        diaLink('pro', 'li', 'biofreeze');
+        diaLink('pro', 'li', 'coldspot');
+        diaLink('cat', 'li', 'pain-relief-first-aid', 'view-all');
+
+        diaLink('cat', 'h4', 'recovery-aids');
+        diaLink('cat', 'li', 'immobilizers');
+        diaLink('cat', 'li', 'slings');
+        diaLink('cat', 'li', 'splints');
+        diaLink('cat', 'li', 'walkersboots');
+        diaLink('cat', 'li', 'recovery-aids', 'view-all');
+        ?>
       </ul>
     </div>
   </div>
