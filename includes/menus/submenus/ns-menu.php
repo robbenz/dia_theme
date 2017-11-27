@@ -1,7 +1,9 @@
 <div class="col-md-9 mve_cols" id="nursing_main">
   <div class="row">
     <div class="col-md-12">
-      <h3 style="background-color:#2774ae;">Nursing School &amp; Simulation Equipment</h3>
+      <a href="<?php echo site_url(); ?>/healthcare-education/">
+        <h3 style="background-color:#2774ae;">Nursing School &amp; Simulation Equipment</h3>
+      </a>
     </div>
   </div>
  <div class="row">
