@@ -51,7 +51,7 @@
     });
     /*** END ***/
 
-    // hover underline effect
+    hover underline effect
     $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
 
     // keep the menu open only in appropriate mouse locations

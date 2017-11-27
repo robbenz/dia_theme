@@ -4,7 +4,7 @@
   $all_mfrs  = partition($all_mfrs, 4);
 ?>
 
-<nav id="mfrs_drop" style="display:block" class="drop-menu-panel">
+<nav id="mfrs_drop" class="drop-menu-panel">
   <div class="container">
     <div class="row">
       <?php foreach ( $all_mfrs as $mfr_list ) : ?>

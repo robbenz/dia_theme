@@ -985,7 +985,7 @@ a.top-menu-main-a li {text-decoration: none; color: white; display: inline-block
 #med_equipment_drop li {text-decoration: none;}
 #hospital_main{}
 #column4_menu_list{-webkit-columns: 100px 4;columns: 100px 4;}
-#menu_all_main h6{margin-top:0px; margin-bottom: 15px; font-weight: 600; font-size: 15px; }
+#menu_all_main h6{margin-top:0px; margin-bottom: 21px; font-weight: 600; font-size: 15px; }
 .mve_cols {min-height: 480px; padding-top:16px; padding-bottom:10px;}
 .mve_cols li{margin: 2px 0 1px 6px;}
 .mve_cols h3 {text-align:center; color:#fff; margin-top:-20px; margin-bottom:20px;font-size:20px; padding:10px;}

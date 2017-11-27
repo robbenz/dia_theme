@@ -5,6 +5,58 @@
     </div>
   </div>
  <div class="row">
+   <div class="col-md-3">
+     <ul>
+       <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
+         <h4>Loaded Crash Carts</h4>
+       </a>
+       <a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/refill-kits/">
+         <li>Crash Cart Refill Kits</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
+         <li>Loaded Emergency Crash Cart</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/pediatric-crash-cart/">
+         <li>Loaded Pediatric Cart Kit</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
+         <li class="menu-view-all">View All</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/furniture/">
+         <h4>Furnishings</h4>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/furniture/bedside-cabinets/">
+         <li>Bedside Cabinets</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/furniture/exam-tables/">
+         <li>Exam Tables</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/furniture/overbed-tables/">
+         <li>Overbed Tables</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/furniture/phlebotomy-chairs/">
+         <li>Phlebotomy Chairs</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/furniture/">
+         <li class="menu-view-all">View All</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/">
+         <h4>Infusion &amp; Dialysis</h4>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps/">
+         <li>Infusion Pumps</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/iv-poles/">
+         <li>IV Poles</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/iv-tubing/">
+         <li>IV Tubing</li>
+       </a>
+       <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/">
+         <li class="menu-view-all">View All</li>
+       </a>
+     </ul>
+   </div>
   <div class="col-md-3">
     <ul>
       <a href="<?php echo site_url(); ?>/product-category/hospital-beds/">
@@ -54,58 +106,7 @@
       </a>
     </ul>
   </div>
-  <div class="col-md-3">
-    <ul>
-      <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
-        <h4>Loaded Crash Carts</h4>
-      </a>
-      <a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/refill-kits/">
-        <li>Crash Cart Refill Kits</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
-        <li>Loaded Emergency Crash Cart</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/medical-equipment/carts-storage/loaded-crash-carts/pediatric-crash-cart/">
-        <li>Loaded Pediatric Cart Kit</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">
-        <li class="menu-view-all">View All</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/furniture/">
-        <h4>Furnishings</h4>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/furniture/bedside-cabinets/">
-        <li>Bedside Cabinets</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/furniture/exam-tables/">
-        <li>Exam Tables</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/furniture/overbed-tables/">
-        <li>Overbed Tables</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/furniture/phlebotomy-chairs/">
-        <li>Phlebotomy Chairs</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/furniture/">
-        <li class="menu-view-all">View All</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/">
-        <h4>Infusion &amp; Dialysis</h4>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/infusion-pumps/">
-        <li>Infusion Pumps</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/iv-poles/">
-        <li>IV Poles</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/iv-tubing/">
-        <li>IV Tubing</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/infusion-dialysis/">
-        <li class="menu-view-all">View All</li>
-      </a>
-    </ul>
-  </div>
+
   <div class="col-md-3">
     <ul>
       <a href="<?php echo site_url(); ?>/product-category/moulage/">
