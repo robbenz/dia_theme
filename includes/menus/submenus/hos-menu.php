@@ -42,7 +42,9 @@
       <a href="<?php echo site_url(); ?>/product-category/ems-cots-and-stretchers/stryker-stretchers/">
         <li>Stryker Cots</li>
       </a>
-      <a><li class="menu-view-all">View All</li></a>
+      <a href="<?php echo site_url(); ?>/product-category/ems-cots-and-stretchers/">
+        <li class="menu-view-all">View All</li>
+      </a>
       <a href="<?php echo site_url(); ?>/product-category/diagnostics/">
         <h4>Diagnostic Equipment</h4>
       </a>
@@ -51,9 +53,6 @@
       </a>
       <a href="<?php echo site_url(); ?>/product-category/diagnostics/diagnostic-stations/">
         <li>Diagnostic Stations</li>
-      </a>
-      <a href="<?php echo site_url(); ?>/product-category/diagnostics/microscopes/">
-        <li>Microscopes</li>
       </a>
       <a href="<?php echo site_url(); ?>/product-category/diagnostics/vital-signs-monitors/">
         <li>Vital Signs Monitors</li>
@@ -117,6 +116,58 @@
   </div>
   <div class="col-md-3">
     <ul>
+      <a href="<?php echo site_url(); ?>/product-category/medical-pediatrics-obstetrics/">
+        <h4>Obstetrics &amp; Pediatrics</h4>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/medical-pediatrics-obstetrics/bassinets/">
+        <li>Bassinets</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/medical-pediatrics-obstetrics/bassinets/">
+        <li>Bassinets</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/medical-pediatrics-obstetrics/cribs/">
+        <li>Cribs</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/medical-pediatrics-obstetrics/fetal-monitors/">
+        <li>Fetal Monitors</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/medical-pediatrics-obstetrics/infant-warmers/">
+        <li>Infant Warmers</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/medical-pediatrics-obstetrics/">
+        <li class="menu-view-all">View All</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/respiratory/">
+        <h4>Respiratory</h4>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/respiratory/airways/">
+        <li>Airways</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/respiratory/tracheostomy-supplies//">
+        <li>Tracheostomy Supplies</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/respiratory/pulse-oximeters/">
+        <li>Pulse Oximeters</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/respiratory/">
+        <li class="menu-view-all">View All</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/surgical/">
+        <h4>Instrument Tables</h4>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/surgical/lighting/">
+        <li>Surgical Lighting</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/surgical/surgical-tables/">
+        <li>Surgical Tables</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/surgical/surgical-tools/">
+        <li>Surgical Tools &amp; Supplies</li>
+      </a>
+      <a href="<?php echo site_url(); ?>/product-category/surgical/">
+        <li class="menu-view-all">View All</li>
+      </a>
+
     </ul>
   </div>
   <div class="col-md-3">
