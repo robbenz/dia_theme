@@ -995,7 +995,7 @@ a.top-menu-main-a li {text-decoration: none; color: white; display: inline-block
 #med_equipment_drop li {text-decoration: none;}
 #hospital_main{}
 #column4_menu_list{-webkit-columns: 100px 4;columns: 100px 4;}
-#menu_all_main h6{margin-top:0px; margin-bottom: 21px; font-weight: 600; font-size: 15px; }
+#menu_all_main h6, #mfrs_drop li{list-style:none;margin-top:0px; margin-bottom: 21px; font-weight: 600; font-size: 15px; }
 .mve_cols {/*min-height: 480px;*/ padding-top:16px; padding-bottom:10px;}
 .mve_cols li{margin: 2px 0 1px 6px;}
 .mve_cols h3 {text-align:center; color:#fff; margin-top:-20px; margin-bottom:20px;font-size:20px; padding:10px;}
@@ -1010,7 +1010,7 @@ a.top-menu-facility-filter li {margin: 9px auto;padding: 8px; font-weight: 600;f
 #drop-menu {margin-bottom: 0px !important;}
 #med_equipment_drop ul {margin-bottom:0px;padding-left: 10px;}
 #med_equipment_drop a:hover {cursor: pointer;}
-#service_drop li, #mfrs_drop li { text-align:center; list-style:none; margin: 0px 0px 20px 0; font-weight:700;}
+#service_drop li { text-align:center; list-style:none; margin: 0px 0px 20px 0; font-weight:700;}
 .text-center p {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 15px; }
 #parts_drop #searchform {width:100%;}
 #parts_drop #searchform input#s{height:50px;width:1080px;font-size:16px;}
@@ -1023,6 +1023,7 @@ a.top-menu-facility-filter li {margin: 9px auto;padding: 8px; font-weight: 600;f
 #ems_main .col-md-6 h4{padding-bottom:2px;border-bottom:2px solid; margin-bottom:15px;}
 #ems_main .col-md-6 a h4 {text-decoration: none;}
 #ems_main .col-md-6 a h4:hover {text-decoration: none; color:#000; border-bottom:2px solid #d6001c;}
+#mfrs_drop .row ul {padding-left:0px; }
 /*** END ***/
 
 /*
