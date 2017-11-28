@@ -2,8 +2,16 @@
 <nav id="service_drop" class="drop-menu-panel">
   <div class="container">
     <div class="row">
-      <div style="text-align:center;" class="col-md-12">
-        <img style="width: 50%; margin-bottom: 15px;" src="<?php echo site_url(); ?>/wp-content/imgs/National-Service-network-menu.png">
+      <div class="col-md-1">
+        <p>&nbsp;</p>
+      </div>
+      <div style="margin-bottom:15px; text-align:center;" class="col-md-10">
+        <div style="background-color:#ffad00;" >
+        <img style="width: 50%;" src="<?php echo site_url(); ?>/wp-content/imgs/National-Service-network-menu.png">
+      </div>
+      </div>
+      <div class="col-md-1">
+        <p>&nbsp;</p>
       </div>
     </div>
 
@@ -12,7 +20,7 @@
         <p>&nbsp;</p>
       </div>
       <div class="col-md-3">
-        <ul>
+        <ul style="padding-left:0;">
           <a href="<?php echo site_url(); ?>/product-category/aeds-defibrillators-service-repairs/">
             <li>AED &amp; DEFIBRILLATOR SERVICE</li>
           </a>
