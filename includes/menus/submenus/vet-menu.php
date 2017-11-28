@@ -27,84 +27,46 @@
     diaLink('cat', 'li', 'veterinary-imaging-equipment', 'view-all');
 
     diaLink('cat', 'h4', 'veterinary-laser-equipment');
-    diaLink('pro', 'li', 'veterinary-laser-equipment/solace-duo-laser-system');
+    diaLink('pro', 'li', 'solace-duo-laser-system');
     diaLink('cat', 'li', 'veterinary-laser-equipment', 'view-all');
     ?>
       </ul>
     </div>
     <div class="col-md-4">
       <ul>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-microscopy-equipment/">
-          <h4>Microscopy</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-microscopy-equipment/focus-v-1375-microscope/">
-          <li>Focus-V 1375 Microscope</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-microscopy-equipment/focus-v-1475-microscope-copy/">
-          <li>Focus-V 1475 Microscope</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-microscopy-equipment/microscope-cleaning-kit/">
-          <li>Microscope Cleaning Kit</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-microscopy-equipment/revolution-iii-microscope/">
-          <li>Revolution III Microscope</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-microscopy-equipment/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-patient-management/">
-          <h4>Patient Management</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-patient-management/axxiom-2000-livestock-scale/">
-          <li>Axxiom 2000 Livestock Scale</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-patient-management/axxiom-2000-livestock-scale-copy/">
-          <li>Axxiom 500 Digital Walk-On Scale</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/medical-equipment/veterinary-equipment/veterinary-patient-management/axxiom-500-exam-table-scale/">
-          <li>Axxiom 500 Exam Table and Scale</li>
-        </a>
-        <a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/veterinary-patient-management/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'veterinary-microscopy-equipment');
+    diaLink('pro', 'li', 'focus-v-1375-microscope');
+    diaLink('pro', 'li', 'focus-v-1475-microscope-copy');
+    diaLink('pro', 'li', 'microscope-cleaning-kit');
+    diaLink('pro', 'li', 'revolution-iii-microscope');
+    diaLink('cat', 'li', 'veterinary-microscopy-equipment', 'view-all');
+
+    diaLink('cat', 'h4', 'veterinary-patient-management');
+    diaLink('pro', 'li', 'axxiom-2000-livestock-scale');
+    diaLink('pro', 'li', 'axxiom-2000-livestock-scale-copy');
+    diaLink('pro', 'li', 'axxiom-500-exam-table-scale');
+    diaLink('cat', 'li', 'veterinary-patient-management', 'view-all');
+    ?>
       </ul>
       <img style="max-width: 420px !important;width: 420px;margin-top: 8px;margin-left: 34px;" src="https://diamedicalusa.com/wp-content/imgs/veterinary_email_banner.jpg" />
     </div>
     <div class="col-md-4">
       <ul>
-        <a href="<?php echo site_url(); ?>product-category/veterinary-equipment/veterinary-sterilization/">
-          <h4>Sterilization</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>medical-equipment/veterinary-equipment/veterinary-sterilization/1018m-hd-sterilizer/">
-          <li>1018M HD Sterilizer</li>
-        </a>
-        <a href="<?php echo site_url(); ?>product-category/veterinary-equipment/veterinary-sterilization/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>product-category/veterinary-equipment/veterinary-sample-processing/">
-          <h4>Sample Processing</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>medical-equipment/veterinary-equipment/veterinary-sample-processing/rhino-microhematocrit-centrifuge/">
-          <li>RHINO Microhematocrit Centrifuge</li>
-        </a>
-        <a href="<?php echo site_url(); ?>product-category/veterinary-equipment/veterinary-sample-processing/">
-          <li class="menu-view-all">View All</li>
-        </a>
-        <a href="<?php echo site_url(); ?>product-category/veterinary-equipment/veterinary-patient-monitoring/">
-          <h4>Patient Monitoring</h4>
-        </a>
-        <a href="<?php echo site_url(); ?>medical-equipment/veterinary-equipment/veterinary-patient-monitoring/leading-edge-ve-h100b-pulse-oximeter/">
-          <li>VE-H100B Pulse Oximeter</li>
-        </a>
-        <a href="<?php echo site_url(); ?>medical-equipment/veterinary-equipment/veterinary-patient-monitoring/sentinel-v-3025i-vital-signs-monitor/">
-          <li>3025i Vital Signs Monitor</li>
-        </a>
-        <a href="<?php echo site_url(); ?>medical-equipment/veterinary-equipment/veterinary-patient-monitoring/sentinel-v-titalgard-pulse-ox-capno/">
-          <li>TitalGard Pulse Ox / Capno</li>
-        </a>
-        <a href="<?php echo site_url(); ?>product-category/veterinary-equipment/veterinary-patient-monitoring/">
-          <li class="menu-view-all">View All</li>
-        </a>
+        <?php
+    diaLink('cat', 'h4', 'veterinary-sterilization');
+    diaLink('pro', 'li', '1018m-hd-sterilizer');
+    diaLink('cat', 'li', 'veterinary-sterilization', 'view-all');
+
+    diaLink('cat', 'h4', 'veterinary-sample-processing');
+    diaLink('pro', 'li', 'rhino-microhematocrit-centrifuge');
+    diaLink('cat', 'li', 'veterinary-sample-processing', 'view-all');
+
+    diaLink('cat', 'h4', 'veterinary-patient-monitoring');
+    diaLink('pro', 'li', 'sentinel-v-3025i-vital-signs-monitor');
+    diaLink('pro', 'li', 'sentinel-v-titalgard-pulse-ox-capno');
+    diaLink('cat', 'li', 'veterinary-patient-monitoring', 'view-all');
+    ?>
       </ul>
     </div>
   </div>

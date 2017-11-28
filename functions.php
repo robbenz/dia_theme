@@ -1200,7 +1200,9 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
     }
     $link .= '</' . $html . '>';
     $link .= '</a>';
-    echo $link;
+    if ( !is_wp_error($link) ) {
+      echo $link;
+    }
   } elseif ( $cat == 'pro' ) {
     $product_obj = get_page_by_path( $slug, OBJECT, 'product' );
     $link = '<a href="';
@@ -1210,7 +1212,9 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
     $link .= $product_obj->post_title;
     $link .= '</' . $html . '>';
     $link .= '</a>';
-    echo $link;
+    if ( !is_wp_error($link) ) {
+      echo $link;
+    }
   }
 }
 

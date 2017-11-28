@@ -33,7 +33,7 @@
         </div>
       <?php endforeach; ?>
     </div>
-    <div style="margin-top:8px;text-align:center;" class="row">
+    <!-- <div style="margin-top:8px;text-align:center;" class="row">
       <div class="col-sm-2">
         <a href="<?php echo site_url(); ?>/?s=amico&amp;post_type=product">
           <img style="width: 120px; margin-top: -21px;"src="<?php echo site_url(); ?>/wp-content/imgs/amico_logo.png" />
@@ -64,7 +64,7 @@
           <img style="width: 135px;" src="<?php echo site_url(); ?>/wp-content/uploads/2017/10/ZOLL-Logo-1.jpg" />
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="text-center">
     <p style="margin: 20px 0 0; background-color: #ffad00; padding: 12px;">Don't want to browse manufacturers? Try searching your manufacturer at the top of the page!</p>
