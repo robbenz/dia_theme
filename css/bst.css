@@ -55,13 +55,17 @@ body {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-se
 #content section { margin-bottom: 20px }
 #content footer { padding-bottom: 20px }
 a { color: #00426a; }
-/* END */
+/*** END ***/
 
-/* Sidebar */.sidebar { margin-top: 20px; width:25%; float:left; }.sidebar section { margin-bottom: 40px }.sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }.sidebar li { margin: 10px 0 }/* END */
+/* Sidebar */
+.sidebar { margin-top: 20px; width:25%; float:left; }
+.sidebar section { margin-bottom: 40px }
+.sidebar ul, .sidebar ol { list-style-type: none; padding: 0 }
+.sidebar li { margin: 10px 0 }
+/*** END ***/
 
 /* PDF logo */
 .pdf-img{padding-left: 7px;}
-
 /* END */
 
 /* PAGES */
@@ -83,7 +87,7 @@ td.quotes-actions a{margin:0 1em; }
 .obesity_table th { border:2.3px solid #C0C0C0; padding:6px; background:#F0F0F0; }
 .obesity_table td { border:2.3px solid #C0C0C0; padding:6px; }
 .obesity_table .obese-table-img { width:60%; max-width:60%; }
-/* END */
+/*** END ***/
 
 /* landing_nav */
 .landing_page ul.products li.product { margin: 0 2% !important;}
@@ -92,33 +96,23 @@ td.quotes-actions a{margin:0 1em; }
 #landing_nav-wrap{width:100%; background-color:#fff; }
 #landing_nav-wrap a.landing_nav{color:#464444; padding:0.25em 0; text-align:center; display:block; float:left; }
 #landing_nav-wrap a.landing_nav:hover{text-decoration:none; color:#fff;}
-
 .qq_button {margin-top:1px; background-color: #00426a; color:#fff !important;float: right; margin-left: 1em; border-radius: 0.25em; padding:5px 0.75em; }
 .qq_button:hover {text-decoration: none !important; background-color: #78be20 !important; }
 #google_language_translator .goog-te-gadget-simple { margin-top:1px; padding:5px 5px; background-color:#00426a;color:#fff; border: 0; border-radius: 0.25em; }
-#google_language_translator .goog-te-gadget-simple:hover {
-   background-color: #78be20;
- }
-#google_language_translator .goog-te-menu-value span {
-  color:#fff;
-}
-#google_language_translator .goog-te-gadget-simple a:hover {
-  text-decoration: none !important; }
-#google_language_translator .goog-te-gadget-icon {display:none;
-}
-
+#google_language_translator .goog-te-gadget-simple:hover { background-color: #78be20; }
+#google_language_translator .goog-te-menu-value span { color:#fff; }
+#google_language_translator .goog-te-gadget-simple a:hover { text-decoration: none !important; }
+#google_language_translator .goog-te-gadget-icon {display:none; }
 .goog-te-menu2 {box-shadow: none;}
-
 .landing_nav-hospital{border-bottom:5px solid #00426a;}
 .landing_nav-mattresses{border-bottom:5px solid #78be20;}
 .landing_nav-schools{border-bottom:5px solid #2774ae;}
 .landing_nav-simlab{border-bottom:5px solid #ffad00;}
-.landing_nav-ems{border-bottom:5px solid #d6001c;border-radius: 0;}
+.landing_nav-ems{border-bottom:5px solid #d6001c; border-radius: 0;}
 .landing_nav-ltc{border-bottom:5px solid #72d0f4;}
-.landing_nav-qq { border-bottom:5px solid #41848d;}
+.landing_nav-qq { border-bottom:5px solid #657f3f;}
 .landing_nav-pt{ border-bottom:5px solid #9e71a2;}
 .ems-button-cursor {cursor: default;}
-
 .dropdown { float: left; position: relative; }
 .dropdown:hover {font-weight: 600 !important; }
 .dropdown .dropbtn { border-left:none; border-top:none; border-right:none; background-color: inherit; }
@@ -127,6 +121,7 @@ td.quotes-actions a{margin:0 1em; }
 .dropdown-content a { float: none; font-weight: 600 !important; color:white; background-color:#d6001c; text-decoration: none; display: block; text-align: center; }
 .dropdown-content a:hover { background-color:#fff; color:#d6001c; border: 2px solid #d6001c; }
 .dropdown:hover .dropdown-content { display: block; }
+/*** END ***/
 
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal { display: inline-block; vertical-align: middle; -webkit-transform: translateZ(0); transform: translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); -webkit-backface-visibility: hidden; backface-visibility: hidden; -moz-osx-font-smoothing: grayscale; position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
@@ -137,12 +132,13 @@ td.quotes-actions a{margin:0 1em; }
 .landing_nav-simlab:before { background:#ffad00; }
 .landing_nav-ems:before { background:#d6001c;  }
 .landing_nav-ltc:before { background:#72d0f4; }
-.landing_nav-qq:before { background:#41848d; }
+.landing_nav-qq:before { background:#657f3f; }
 .landing_nav-pt:before { background:#9e71a2; }
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active { color: white;  }
 .hvr-shutter-out-horizontal:hover:before { -webkit-transform: scaleX(1); transform: scaleX(1); text-transform:none; }
 .hvr-shutter-out-horizontal:active, .hvr-shutter-out-horizontal:visited, .hvr-shutter-out-horizontal:focus{ text-transform: none !important;}
-/*end*/
+/*** END ***/
+
 #top-flip-home{margin:15px 0px -20px 0px; width:1020px; height:392px;}
 .hospital-t-left{float:left; height:auto; width:50%;margin:2px 0px 10px 0px;box-sizing: border-box;}
 .hos-links-menu{padding:16px 20px 0px 20px;}
@@ -173,27 +169,11 @@ td.quotes-actions a{margin:0 1em; }
 #soliloquy-container-58433{ margin-bottom: 1em; }
 #ns_rotate_wrap{  float: right; margin:0px 18px 10px 0px; width: 850px; }
 .ns_home_flt-lft { float:left; }
-
-/*  cool image over trick
-.ems_home_flt-lft:after {
-    content:'\A';
-    position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
-    background:rgba(0,0,0,0.3);
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-.ems_home_flt-lft:hover:after {
-    opacity:1;
-} */
-
-
 #infusionbuttonhome, #practibuttonhome { margin:0 14px; }
 #practibuttonhome { margin-top:-82px; margin-bottom:1em; }
 #medmatbuttonhome { margin-top:-57px; }
 #headwallbuttonhome{ clear:both; margin-top:-8px; }
+
 /*ems home page */
 #emsmanikinsbuttonhome  { clear:both; margin-top:-36px; }
 #ambulancebuttonhome { margin: -124px 14px 1em 14px; }
@@ -242,8 +222,9 @@ td.quotes-actions a{margin:0 1em; }
 .r-a-qbutton-price:hover { background-color: #fff; border:1px solid #78be20; text-decoration: none; }
 .search-results .r-a-qbutton-price { font-size: 13.75px; color:#fff;}
 .search-results .r-a-qbutton-price:hover { color:#00426a;}
-
 /* END */
+
+/*** RAQ Plugin stuff ***/
 #yith-ywraq-mail-form { width:100%;}
 #yith-ywraq-mail-form .form-row {clear:none;}
 #rqa_facility_row { width:45%; float:left; clear:both; }
@@ -258,19 +239,13 @@ td.quotes-actions a{margin:0 1em; }
 #rqa_message_row, #rqa_email_row {clear:both;}
 #rqa-message { max-width:100%; min-height:80px; min-width:100%;  }
 .yith-ywraq-add-to-quote { margin-bottom:0.8em; }
-
-
 .add-request-quote-button { background-color:#00426a !important;  }
 .add-request-quote-button:hover { background-color:#78be20 !important; border:none !important; }
 .yith_ywraq_add_item_browse_message { margin:1em 0; }
 .yith_ywraq_add_item_browse_message a { background-color:#00426a; color:#fff; border-radius:0.4em; padding: 10px 20px 12px;}
 .yith_ywraq_add_item_browse_message a:hover { background-color:#78be20; color:#fff;  text-decoration: none;}
-
 body.search-results .add-request-quote-button { background-color:#78be20 !important; border:2px solid #00426a !important;}
-body.search-results  .add-request-quote-button:hover { background-color:#00426a !important; border:2px solid #78be20 !important; }
-
-
-#rqa_address{clear:both; float:left; width:58%; margin-right:2%;}
+body.search-results  .add-request-quote-button:hover { background-color:#00426a !important; border:2px solid #78be20 !important; }#rqa_address{clear:both; float:left; width:58%; margin-right:2%;}
 #rqa_city{float:left; width:28%; margin-right:2%;}
 #rqa_state{ float:left; width:10%;}
 #rqa_name_row {float:left; width:49%; margin-right:2%; }
@@ -280,6 +255,7 @@ body.search-results  .add-request-quote-button:hover { background-color:#00426a 
 .dropdown-17 {clear:both; float:left; margin-right:1.6em;}
 #ccf_field_dropdown-17 { width: 200px;}
 #ccf_field_single-line-text-13, #ccf_field_single-line-text-15, #ccf_field_single-line-text-16 {margin-right:2%;}
+/* END */
 
 /* Hide form placeholders on focus */
 input:focus::-webkit-input-placeholder { color: transparent; }
@@ -291,9 +267,8 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 #responsive-menu {top: 25px !important; position:absolute !important;}
 #click-menu{ position:absolute !important; }
 #responsive-menu .appendLink {font-size:20px; width:26px; text-align:center; }
-/* END */
-
 .form-control {padding: 5px 12px;}
+/* END */
 
 /* WOOCOMMERCE SPECIFIC */
 .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering { float: left; margin-left:2.4em; }
@@ -502,22 +477,24 @@ body.page-template-nursing .wpb-wps-slider-item {padding: 0.75em 0.3em !importan
 
 /* Generic Drop Menus Stuff */
 .sf-menu .menu-item-has-children > a:first-child::after, .sf-menu .page_item_has_children > a:first-child::after { border: none !important; }
-.navbar-header{ padding:0;}
+/*.navbar-header{ padding:0;}
 .benz-menu{ float:left;}
+*/
 .navbar-static-top{ background: #00426a; z-index: 99;}
-.sf-menu .menu-item-has-children > a:first-child,
+.sf-menu > .page_item_has_children > a:first-child { color: #fff; font-size: 19px; text-transform: uppercase; }
+
+/*.sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
 #menu-repirstmp li a,
 #menu-contact-us li a,
-.sf-menu > .page_item_has_children > a:first-child { color: #fff; font-size: 19px; text-transform: uppercase; }
 @media screen and (-moz-os-version:windows-win7) {
 .sf-menu .menu-item-has-children > a:first-child,
 #menu-home li a,
 #menu-repirstmp li a,
 #menu-contact-us li a,
 .sf-menu > .page_item_has_children > a:first-child {font-size: 18.9px;}
-}
-
+}*/
+/*
 _:-ms-lang(x), .sf-menu .menu-item-has-children > a:first-child { font-size: 18px;}
 _:-ms-lang(x), #menu-home li a { font-size: 18px;}
 _:-ms-lang(x), #menu-repirstmp li a { font-size: 18px;}
@@ -528,9 +505,9 @@ _:-ms-lang(x), .sf-menu > .page_item_has_children > a:first-child { font-size: 1
 #menu-home li a { font-size: 18px;}
 #menu-repirstmp li a { font-size: 18px;}
 .sf-menu > .page_item_has_children > a:first-child { font-size: 18px;}
-}
+}*/
 
-
+/*
 .benz-menu > ul > li > a:active{ background-color: #2774ae }
 .benz-menu > ul > li > a:hover {background-color: #2774ae }
 .arrow-down { z-index: 999; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 20px solid #2774ae; position:relative; }
@@ -544,8 +521,8 @@ _:-ms-lang(x), .sf-menu > .page_item_has_children > a:first-child { font-size: 1
 #menu-item-57637 .sub-menu,
 #menu-item-57609 .sub-menu{ left:0px; border: none !important; box-shadow: none !important; top: 23px; font-size:13px; display: block; height: auto; width:300px; padding: 0 !important;}
 .benz-menu > ul > li .sub-menu  li.menu-item-has-children{width:30%;; color:#000;float:left; }
-.benz-menu > ul > li .sub-menu  li.menu-item-has-children a{color:#00426a;}
-.benz-bottom-colors { clear: both; color: #000; left: -25px; padding:5px 0 5px 24px; position: relative; text-align: left; width: 1171px; z-index: 999; }
+.benz-menu > ul > li .sub-menu  li.menu-item-has-children a{color:#00426a;}*/
+/*.benz-bottom-colors { clear: both; color: #000; left: -25px; padding:5px 0 5px 24px; position: relative; text-align: left; width: 1171px; z-index: 999; }*/
 /* END */
 
 /* Sign in & Need help menus */
@@ -573,37 +550,38 @@ _:-ms-lang(x), .sf-menu > .page_item_has_children > a:first-child { font-size: 1
 /* END */
 
 /* Menu Sub Menu items styles li */
-.benz-blueheader a{color:#2774ae !important; padding:0; font-weight:600; font-size: 15px; margin-bottom: 0px;}
+/*.benz-blueheader a{color:#2774ae !important; padding:0; font-weight:600; font-size: 15px; margin-bottom: 0px;}
 .benz-blueheader a:hover{ font-weight:700; background-color:#fff !important; color:#004ea8;}
 .benz-viewall a{ text-decoration: underline; color:#000 !important; text-transform: capitalize; font-weight: 500; margin-bottom:8px;}
 .benz-viewall a:hover{font-weight:700; font-weight: 600; color:#000;}
 .mmregular-item a{margin-bottom:0; font-size:14px;color:#000 !important; text-transform: capitalize;font-weight: 500;}
-.mmregular-item a:hover{font-weight:700; font-weight: 600; color:#000;}
-.benz-menu .sub-menu {background-color: #ffffff; border-right: 1px solid #636363; border-bottom: 1px solid #636363; border-left: 1px solid #636363; padding: 25px;  }
-li.main-header-link:hover {background-color:#2774ae; }
-.benz-menu > ul li > .sub-menu {overflow: hidden; }
+.mmregular-item a:hover{font-weight:700; font-weight: 600; color:#000;}*/
+/*.benz-menu .sub-menu {background-color: #ffffff; border-right: 1px solid #636363; border-bottom: 1px solid #636363; border-left: 1px solid #636363; padding: 25px;  }*/
+/*li.main-header-link:hover {background-color:#2774ae; }*/
+/*.benz-menu > ul li > .sub-menu {overflow: hidden; }*/
 /* END */
 
 /* Medical Equipment Menu */
-#menu-medical-equipment .benz-bottom-colors{top:375px;}
+/*#menu-medical-equipment .benz-bottom-colors{top:375px;}
 #menu-medical-equipment #mmlogomenu{ position: relative; top: 84px; width: 210px; z-index: 99; }
 #menu-medical-equipment #fluidslogomenu{ left: 54.7%; position: relative; top: 12px;width: 383px; z-index: 99; }
 #menu-medical-equipment #mmlogomenu:before{ content:"from: "; z-index: 999;}
 #menu-item-57578 { margin-top:39px;}
 #menu-medical-equipment .arrow-down { top: -119px; left:18.45%; }
-#menu-item-32373 > .sub-menu { height:460px; left:-140px;  }
+#menu-item-32373 > .sub-menu { height:460px; left:-140px;  }*/
 /* END */
 
 /* Part Search Menu */
-#menu-parts-search .benz-bottom-colors { top: 145px; }
+/*#menu-parts-search .benz-bottom-colors { top: 145px; }
 #menu-parts-search  .arrow-down { left: 40%;; top: -91px; }
 #menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
+#menu-parts-search .sub-menu > li > a{ text-transform: uppercase; font-size:24px; }
 #menu-parts-search .ctr_search{ position: relative !important; top:-23px; }
-#menu-item-57558 { width:200px;}
+#menu-item-57558 { width:200px;}*/
 /* END */
 
 /* Manufacturers Menu */
-#menu-manufacturers > li > .sub-menu { height: 185px;  }
+/*#menu-manufacturers > li > .sub-menu { height: 185px;  }
 #menu-manufacturers > li .sub-menu li.menu-item-has-children  { width:23%; }
 #menu-item-57556 > ul li, #menu-item-57620 > ul li, #menu-item-57624 > ul li, #menu-item-57627 > ul li, #menu-item-57630 > ul li, #menu-item-57637 > ul li { margin-top:6px; }
 #menu-manufacturers .benz-bottom-colors { top: 110px;}
@@ -611,13 +589,13 @@ li.main-header-link:hover {background-color:#2774ae; }
 #benz-menu-img-mft2 {  position: relative; top: -64px; }
 #benz-menu-img-mft3 { position: relative; }
 #benz-menu-img-mft4 { position: relative; top: -79px; width: 269px; left: 70px; }
-#menu-manufacturers .benz-menu-img{z-index: 100; float:right;}
+#menu-manufacturers .benz-menu-img{z-index: 100; float:right;}*/
 /* END */
 
 /* TOP ROW HEADERS */
-#menu-item-57575 .sub-menu { margin-top:10px;}
+/*#menu-item-57575 .sub-menu { margin-top:10px;}
 #menu-item-57575 > a {font-size: 15px; color:#00426a !important; margin-bottom:8px; }
-#menu-item-57591 > a, #menu-item-57609 > a, #menu-item-57556 > a, #menu-item-57620 > a, #menu-item-57624 > a, #menu-item-57627 > a, #menu-item-57630 > a, #menu-item-57637 > a {font-size: 15px; }
+#menu-item-57591 > a, #menu-item-57609 > a, #menu-item-57556 > a, #menu-item-57620 > a, #menu-item-57624 > a, #menu-item-57627 > a, #menu-item-57630 > a, #menu-item-57637 > a {font-size: 15px; }*/
 /* END */
 
 /* IV BAG WAIVER */ /* AND Privacy form */
@@ -701,7 +679,6 @@ tr.cart-discount td {text-align:right !important;}
 .woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: none !important; border-radius: 0px !important; margin:0 !important; padding: 0px !important; text-align: left; }
 #left-col-first-name{clear:both;}
 .woocommerce .related  ul.products li.product,  .woocommerce-page .related ul.products li.product { float: left; margin: 0 3.8% 2.992em 0 !important; padding: 0 !important; position: relative; }
-
 .related #customer_fav_img{display:none !important;}
 /* END */
 
@@ -851,7 +828,6 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #dat_order_rght p.lt_blue {color:#288dcc;margin-bottom:28px;}
 /* END */
 
-
 /* PM PAGE */
 #pm_blue_1 { padding-top:0.4em; height:50px; background-color:#00426a; width:100%; text-align:center;}
 #pm_blue_1 p{ color:#fff; font-family: 'Lato',sans-serif; font-weight:300; letter-spacing: 1.3px;}
@@ -878,7 +854,6 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #vfbp-form-7 .vfb-checkbox{margin-bottom:3px !important; margin-top: 0 !important;}
 #vfbp-form-7 .subscribe_lists { height: 26px; margin-left: -35px; width: 26px; }
 #vfbp-form-7 button.subscribe_btn{width:100%; background-color:#78be20;border:none; margin-top:10px; }
-
 .vfbp-form input, .vfbp-form * input {margin-bottom:10px !important; }
 /* END */
 
@@ -936,14 +911,11 @@ body.woocommerce-checkout .steps { margin-bottom:15px !important; }
 .search-results h6.search-results-description a:hover{color:#ffad00;}
 .search-results button.single_add_to_cart_button{border:1.5px solid #00426a;}
 .search-results button.single_add_to_cart_button:hover{border:1.5px solid #78be20;}
-
 .search-results button.search-rs-read-more, .search-results a.search-rs-read-more {font-weight: 700;margin-top:8px; border:1.5px solid #00426a; font-size: 100%; background-color:#78be20; color:#fff; border-radius:0.25em; padding:0.69em 1.19em;}
 .search-results button.search-rs-read-more:hover, .search-results a.search-rs-read-more:hover{border:1.5px solid #78be20;text-decoration:none; background-color:#00426a; }
-
 .search-results .quantity .plus { top: 8px; height:34%; }
 .search-results .quantity .minus { bottom:2px; height:34%; }
 .search-results .woocommerce-message {margin-bottom: 1px !important;}
-
 /* END */
 
 /* NEW CUSTOMER PROFILE page */
@@ -962,30 +934,22 @@ h3.pro_title {line-height: 1em;}
 h3.slider-headers{font-family: 'ristretto_promedium', Arial, sans-serif; color:#00426a; font-size:40px;}
 /* END */
 
+/*#menu-parts-search #searchform {margin-top:-21px; margin-bottom:26px; }
+#menu-parts-search #searchform #s {width:900px; height:50px; }
+#menu-parts-search #searchform #searchsubmit{ font-size: 18px; padding: 11px 16px; }*/
 
-
+/*** Special seach forms and search results ***/
 #hospital_content_wrap .pp_search_container {position:absolute !important; bottom:0px !important; left:6px !important; width:350px !important;}
 .lft-img-home .pp_search_container {position:absolute !important; bottom:0px !important; left:9px !important; width:80% !important;}
-
 button#searchsubmit.btn.btn-default {border: 1px solid rgb(204,204,204);}
-
 .lft-img-home #searchform{position:absolute; bottom: -2px; left: 16px; background-color: #ffad00; padding: 0.36em; width: 289px; border-radius: 0.3em; }
 .lft-img-home #searchform #s{width:230px; border-radius: 0; }
 .lft-img-home #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
-
 #hospital_content_wrap #searchform{position:absolute; bottom:0px; left:5.5px; background-color: #ffad00; padding: 0.36em; width: 360px; border-radius: 0.3em; }
 #hospital_content_wrap #searchform #s{width:300px; border-radius: 0; }
 #hospital_content_wrap #searchform #searchsubmit{background-color:#ffad00; color:#fff; border:none; font-size: 24px; padding:0 0 0 6px; }
-
 #masthead #searchform #s{font-size: 1.1em; padding: 2px 9px; height: 42px; }
 #masthead #searchform #searchsubmit{font-size: 16px; padding: 8.5px 14px; }
-
-
-#menu-parts-search #searchform {margin-top:-21px; margin-bottom:26px; }
-#menu-parts-search #searchform #s {width:900px; height:50px; }
-#menu-parts-search #searchform #searchsubmit{ font-size: 18px; padding: 11px 16px; }
-
-
 .search-results #sidebar #searchform,
 .page-id-86 #sidebar #searchform,
 .search-no-results #sidebar #searchform { padding: 8px 0; }
@@ -996,7 +960,6 @@ button#searchsubmit.btn.btn-default {border: 1px solid rgb(204,204,204);}
 .page-id-86 #sidebar #searchsubmit,
 .search-no-results #sidebar #searchsubmit {font-size: 14px; padding: 11px 12px;  }
 .search-results .ems-approved-img {display:none;}
-
 #hospital_content_wrap #searchform .form-control::-webkit-input-placeholder,
 .lft-img-home #searchform .form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #8bbee8 !important;
@@ -1019,6 +982,48 @@ button#searchsubmit.btn.btn-default {border: 1px solid rgb(204,204,204);}
    color:    #8bbee8 !important;
    font-weight: 600;
 }
+/*** END ***/
+
+/*** New top menus ***/
+.top-menu-ul {padding: 0; margin-bottom: 0; width: 100%; list-style: none; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around;}
+a.top-menu-main-a li {text-decoration: none; color: white; display: inline-block;}
+.main-navbar-header {width: 100%;}
+.top-menu-main-a {padding: 12px 20px; border-bottom: 0; -webkit-transition: all 0.2s; transition: all 0.2s;}
+.hoverline {border-bottom: 2px solid white; -webkit-transition: all 0.2s; transition: all 0.2s;}
+.drop-menu-panel {display: none; width: 100%; padding: 10px 0 0; background-color: white; background-color: rgba(255,255,255,0.95); position: absolute; z-index: 6666;}
+#med_equipment_drop ul {list-style: none;}
+#med_equipment_drop li {text-decoration: none;}
+#hospital_main{}
+#column4_menu_list{-webkit-columns: 100px 4;columns: 100px 4;}
+#menu_all_main h6{margin-top:0px; margin-bottom: 21px; font-weight: 600; font-size: 15px; }
+.mve_cols {min-height: 480px; padding-top:16px; padding-bottom:10px;}
+.mve_cols li{margin: 2px 0 1px 6px;}
+.mve_cols h3 {text-align:center; color:#fff; margin-top:-20px; margin-bottom:20px;font-size:20px; padding:10px;}
+.mve_cols .col-md-12 a:hover h3 { text-decoration:none; text-transform:uppercase; }
+.mve_cols .col-md-12 a:hover  { text-decoration:none; text-transform:uppercase; }
+.mve_cols h4{font-size: 16px;text-transform: uppercase;font-weight:600;margin-bottom:5px;margin-top:0px;}
+.top-menu-mfr, .top-menu-mfr-img {margin: 20px auto;}
+a.top-menu-facility-filter {padding: 5px auto;}
+a.top-menu-facility-filter:hover {text-decoration:none;}
+.top-menu-mfr-container {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-around;}
+a.top-menu-facility-filter li {margin: 9px auto;padding: 8px; font-weight: 600;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; color:#000;}
+#drop-menu {margin-bottom: 0px !important;}
+#med_equipment_drop ul {margin-bottom:0px;padding-left: 10px;}
+#med_equipment_drop a:hover {cursor: pointer;}
+#service_drop li, #mfrs_drop li { text-align:center; list-style:none; margin: 0px 0px 20px 0; font-weight:700;}
+.text-center p {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 15px; }
+#parts_drop #searchform {width:100%;}
+#parts_drop #searchform input#s{height:50px;width:1080px;font-size:16px;}
+#parts_drop #searchsubmit {height:50px;width: 52px;}
+#parts_drop h3 {color:#00426a;font-size: 24px;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';}
+#parts_drop .col-sm-2 {line-height:100px; height:100px;}
+#parts_drop img {vertical-align: middle;}
+.menu-view-all{font-size:0.92em; text-decoration: underline !important; margin-bottom: 10px !important; }
+#med_equipment_drop .mve_cols li {color:#000;}
+#ems_main .col-md-6 h4{padding-bottom:2px;border-bottom:2px solid; margin-bottom:15px;}
+#ems_main .col-md-6 a h4 {text-decoration: none;}
+#ems_main .col-md-6 a h4:hover {text-decoration: none; color:#000; border-bottom:2px solid #d6001c;}
+/*** END ***/
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
@@ -1372,19 +1377,20 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #wpp-buttons{display:none !important;}
   .woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
   p.diva{width: 95% !important; margin: 0 10px;}
+  #sidebar_wrap {display:none;}
 }
 
 @media (min-width: 992px) {
   #mm-right-contact{ display:none; margin-top: -40px;}
   .benz-menu > ul > li > a{ padding: 11px 0.961em; }
-  .benz-menu .sub-menu{ width: 971px; }
+  /*.benz-menu .sub-menu{ width: 971px; }*/
   #menu-item-32373 > .sub-menu { left: -108px; letter-spacing: 0.8px;}
-  #menu-parts-search .sub-menu { left: -339px; }
-  #menu-repairs > li > .sub-menu { left: -496px; }
-  #menu-manufacturers > li > .sub-menu { left: -606px; }
-  #benz-menu-img-mft3 { left: 20%; }
+  /*#menu-parts-search .sub-menu { left: -339px; }*/
+  /*#menu-repairs > li > .sub-menu { left: -496px; }*/
+  /*#menu-manufacturers > li > .sub-menu { left: -606px; }*/
+  /*#benz-menu-img-mft3 { left: 20%; }*/
   #homeorangewrap img{ display:inline;}
-  #menu-contact-us > li > .sub-menu { left: -802px; }
+  /*#menu-contact-us > li > .sub-menu { left: -802px; }*/
   .sidebar{display:block;}
   .archive #content .products {float:right; width:70%; clear:none;}
   .header-wrap-text-medical-equipment { width: 684px; }
@@ -1404,20 +1410,16 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   @supports (-ms-ime-align:auto) {
     #landing_nav-wrap a.landing_nav{ width:111.85%; }
   }
-
-
-
   .dropdown-content { top:25px; }
-
   #responsive-menu-button { margin-top: -45px !important;}
   #fixed-row{height:50px;}
   #form-row{background: #fff !important;}
   .ctr_search {margin-top: -45px;}
-  #menu-parts-search .ctr_search, .landing_page .ctr_search{margin-top:0px;}
+  /*#menu-parts-search .ctr_search, .landing_page .ctr_search{margin-top:0px;}*/
   #dia-main-logo-left img { width: 100%;margin:0px auto;}
   .woocommerce .woocommerce-breadcrumb {font-size:18px;padding:0;}
   .landing_page .col-sm-8 {width:72.5% !important; }
-  #dmcssmenu4 { width:199px; font-size: 14px; }
+  /*#dmcssmenu4 { width:199px; font-size: 14px; }*/
   #footerlinks1{margin: 0 0 0 24px;}
   img.img_plc_pm_wrench {   top: 152px; }
   #pm_blue_1 p {font-size: 20px; }
@@ -1453,14 +1455,14 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 
 @media (min-width: 1200px) {
   #mm-right-contact{display:block; margin-top: -53px;}
-  .benz-menu > ul > li > a{ padding: 11px 1.8198em; }
-  .benz-menu .sub-menu{width: 1171px;}
+  /*.benz-menu > ul > li > a{ padding: 11px 1.8198em; }*/
+  /*.benz-menu .sub-menu{width: 1171px;}*/
   #menu-item-32373 > .sub-menu { left:-140px; letter-spacing: 0.9px; }
-  #menu-parts-search .sub-menu { left: -406px;}
-  #menu-repairs > li > .sub-menu { left: -597px; }
-  #menu-manufacturers > li > .sub-menu { left: -740px; }
-  #benz-menu-img-mft3 { left: 12%; }
-  #menu-contact-us > li > .sub-menu { left: -802px; left: -969px; }
+  /*#menu-parts-search .sub-menu { left: -406px;}*/
+  /*#menu-repairs > li > .sub-menu { left: -597px; }*/
+  /*#menu-manufacturers > li > .sub-menu { left: -740px; }*/
+  /*#benz-menu-img-mft3 { left: 12%; }*/
+  /*#menu-contact-us > li > .sub-menu { left: -802px; left: -969px; }*/
   .sidebar{display:block;}
   .archive #content .products {float:right; width:70%;}
   .header-wrap-text-medical-equipment {  width: 844px; }
@@ -1484,7 +1486,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 
   #landing_nav-wrap .container { padding:0;}
   .form-row-child{width:300px; float:left; margin-left: 43px;}
-  #dmcssmenu4 { width:250px; font-size: 16px; }
+  /*#dmcssmenu4 { width:250px; font-size: 16px; }*/
   .ctr_search{margin:-44px 0 0 0;}
   img.img_plc_pm_wrench {   top: 192px; }
   #pm_blue_1 p {font-size: 24px; }

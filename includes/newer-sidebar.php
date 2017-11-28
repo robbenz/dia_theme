@@ -94,6 +94,7 @@ $emsfr_product_cats 		= array_diff( $emsfr_product_cats, 		["Parts", "On-Site Re
 $pt_product_cats 				= array_diff( $pt_product_cats, 			["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($pt_product_cats);
 $vet_product_cats 			= array_diff( $vet_product_cats, 			["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($vet_product_cats);
 
+
 function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counter) {
 	$_x = $which_counter;
 	foreach ($which_array as $single_cat) :
@@ -165,161 +166,162 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		</div><!-- #accordion$_x .sidebar-replace -->
 
 	<?php endforeach;
-} // sweet_dia_cats_menu();  ?>
+} // end sweet_dia_cats_menu();  ?>
 
-<div class="col-sm-3 col-md-3">
-
-	<div class="panel panel-default">
-		<div style="padding: 0;" class="panel-heading">
-				<h4 class="panel-title">
-						<a class="arrow-toggle-medqpt" data-toggle="collapse" href="#collapseStatic00">Medical Equipment
-							<div class="fa fa-chevron-up rotate-medqpt"></div>
-						</a>
-
-				</h4>
-		</div>
-
-		<div id="collapseStatic00" class="panel-collapse collapse in">
-			<div class="panel-body">
-				<div class="select-wrap">
-					<h5 style="font-family: 'Open Sans', sans-serif">Filter By Your Facility Type</h5>
-			    <select id="facility_select">
-			      <option value="view-all">VIEW ALL CATEGORIES</option>
-			      <option value="hospital">Hospitals</option>
-						<option value="education">Nursing Schools &amp; Simulation</option>
-			      <option value="sls">SimLabSolutions.com</option>
-			      <option value="long-term-care">Long Term Care</option>
-			      <option value="emsedu">EMS Education</option>
-			      <option value="emsfr">EMS Field Ready</option>
-			      <option value="physical-therapy">Physical Therapy</option>
-						<option value="veterinary">Veterinary</option>
-			    </select>
-			  </div>
-
-				<?php
-				sweet_dia_cats_menu($dia_product_cats, "view-all", 800);
-				sweet_dia_cats_menu($hospital_product_cats, "hospital", 1 );
-				sweet_dia_cats_menu($nursing_product_cats, "education", 100 );
-				sweet_dia_cats_menu($sls_product_cats, "sls", 200 );
-				sweet_dia_cats_menu($ltc_product_cats, "long-term-care", 300 );
-				sweet_dia_cats_menu($emsedu_product_cats, "emsedu", 400 );
-				sweet_dia_cats_menu($emsfr_product_cats, "emsfr", 500 );
-				sweet_dia_cats_menu($pt_product_cats, "physical-therapy", 600 );
-				sweet_dia_cats_menu($vet_product_cats, "veterinary", 700 );
-				?>
-
-			</div><!-- .panel-body -->
-		</div><!-- #collapseStatic00 .panel-collapse .collapse .in -->
-	</div><!-- .panel .panel-default -->
-
-
-	<div class="static-categories">
+<div id="sidebar_wrap">
+	<div class="col-sm-3 col-md-3">
 		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic1">parts search
-						<div class="fa fa-chevron-up rotate"></div>
-					</a>
-				</h4>
-			</div>
-			<div id="collapseStatic1" class="panel-collapse collapse">
-				<div class="panel-body part-search-panel">
-					<table class="table">
-						<tr>
-							<td>
-								<?php get_template_part('includes/navbar-search'); ?>
-							</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
+			<div style="padding: 0;" class="panel-heading">
 					<h4 class="panel-title">
-							<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic2">service &amp; repairs
-								<div class="fa fa-chevron-up rotate"></div>
+							<a class="arrow-toggle-medqpt" data-toggle="collapse" href="#collapseStatic00">Medical Equipment
+								<div class="fa fa-chevron-up rotate-medqpt"></div>
 							</a>
+
 					</h4>
 			</div>
-			<div id="collapseStatic2" class="panel-collapse collapse">
+
+			<div id="collapseStatic00" class="panel-collapse collapse in">
 				<div class="panel-body">
-					<table class="table">
-						<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">VIEW ALL</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">hospital bed service</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">infusion pump service</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/product-category/components-service-repairs/">component repair</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/">exam table service</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/">headwall installation</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs/">patient monitor repair</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/">stretcher repair</a></td></tr>
-					</table>
+					<div class="select-wrap">
+						<h5 style="font-family: 'Open Sans', sans-serif">Filter By Your Facility Type</h5>
+				    <select id="facility_select">
+				      <option value="view-all">VIEW ALL CATEGORIES</option>
+				      <option value="hospital">Hospitals</option>
+							<option value="education">Nursing Schools &amp; Simulation</option>
+				      <option value="sls">SimLabSolutions.com</option>
+				      <option value="long-term-care">Long Term Care</option>
+				      <option value="emsedu">EMS Education</option>
+				      <option value="emsfr">EMS Field Ready</option>
+				      <option value="physical-therapy">Physical Therapy</option>
+							<option value="veterinary">Veterinary</option>
+				    </select>
+				  </div>
+
+					<?php
+					sweet_dia_cats_menu($dia_product_cats, "view-all", 800);
+					sweet_dia_cats_menu($hospital_product_cats, "hospital", 1 );
+					sweet_dia_cats_menu($nursing_product_cats, "education", 100 );
+					sweet_dia_cats_menu($sls_product_cats, "sls", 200 );
+					sweet_dia_cats_menu($ltc_product_cats, "long-term-care", 300 );
+					sweet_dia_cats_menu($emsedu_product_cats, "emsedu", 400 );
+					sweet_dia_cats_menu($emsfr_product_cats, "emsfr", 500 );
+					sweet_dia_cats_menu($pt_product_cats, "physical-therapy", 600 );
+					sweet_dia_cats_menu($vet_product_cats, "veterinary", 700 );
+					?>
+
+				</div><!-- .panel-body -->
+			</div><!-- #collapseStatic00 .panel-collapse .collapse .in -->
+		</div><!-- .panel .panel-default -->
+
+
+		<div class="static-categories">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic1">parts search
+							<div class="fa fa-chevron-up rotate"></div>
+						</a>
+					</h4>
+				</div>
+				<div id="collapseStatic1" class="panel-collapse collapse">
+					<div class="panel-body part-search-panel">
+						<table class="table">
+							<tr>
+								<td>
+									<?php get_template_part('includes/navbar-search'); ?>
+								</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic3">manufacturers
-					<div class="fa fa-chevron-up rotate"></div>
-				</a>
-				</h4>
-			</div>
-			<div id="collapseStatic3" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/manufacturers/">VIEW ALL</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=alaris&post_type=product">alaris</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=baxter&post_type=product">baxter</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=hausted&post_type=product">hausted</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">hill-rom</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=hospira&post_type=product">hospira</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=invacare&post_type=product">invacare</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=medline&post_type=product">medline</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=midmark&post_type=product">midmark</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/simlabsolutions/">SimLabSolutions</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=span+america&post_type=product">span america</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=stryker&post_type=product">stryker</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/?s=zoll&post_type=product">zoll</a></td></tr>
-					</table>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+						<h4 class="panel-title">
+								<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic2">service &amp; repairs
+									<div class="fa fa-chevron-up rotate"></div>
+								</a>
+						</h4>
+				</div>
+				<div id="collapseStatic2" class="panel-collapse collapse">
+					<div class="panel-body">
+						<table class="table">
+							<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">VIEW ALL</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">hospital bed service</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">infusion pump service</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/product-category/components-service-repairs/">component repair</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/">exam table service</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/">headwall installation</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/vital-signs-monitors-repairs/">patient monitor repair</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/cots-stretchers/">stretcher repair</a></td></tr>
+						</table>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic4">contact us
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic3">manufacturers
 						<div class="fa fa-chevron-up rotate"></div>
 					</a>
-				</h4>
-			</div>
-			<div id="collapseStatic4" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr><td><a href="<?php echo site_url(); ?>/contact-us/">contact</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/terms-conditions">terms and conditions</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/shipping-returns">shipping and returns</a></td></tr>
-					</table>
+					</h4>
+				</div>
+				<div id="collapseStatic3" class="panel-collapse collapse">
+					<div class="panel-body">
+						<table class="table">
+							<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/manufacturers/">VIEW ALL</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=alaris&amp;post_type=product">alaris</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=baxter&amp;post_type=product">baxter</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=hausted&amp;post_type=product">hausted</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/product-category/hill-rom-parts-online/">hill-rom</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=hospira&amp;post_type=product">hospira</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=invacare&amp;post_type=product">invacare</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=medline&amp;post_type=product">medline</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=midmark&amp;post_type=product">midmark</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/simlabsolutions/">SimLabSolutions</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=span+america&amp;post_type=product">span america</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=stryker&amp;post_type=product">stryker</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/?s=zoll&amp;post_type=product">zoll</a></td></tr>
+						</table>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic5">my account
-					<div class="fa fa-chevron-up rotate"></div>
-				</a>
-				</h4>
-			</div>
-			<div style="border-bottom: 1.5px solid #00426a;padding-bottom:8px; margin-bottom:8px;" id="collapseStatic5" class="panel-collapse collapse">
-				<div class="panel-body">
-					<table class="table">
-						<tr><td><a href="<?php echo site_url(); ?>/cart/">cart</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/my-account/">account settings</a></td></tr>
-						<tr><td><a href="<?php echo site_url(); ?>/wp-login.php?action=logout">logout</a></td></tr>
-					</table>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic4">contact us
+							<div class="fa fa-chevron-up rotate"></div>
+						</a>
+					</h4>
+				</div>
+				<div id="collapseStatic4" class="panel-collapse collapse">
+					<div class="panel-body">
+						<table class="table">
+							<tr><td><a href="<?php echo site_url(); ?>/contact-us/">contact</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/terms-conditions">terms and conditions</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/shipping-returns">shipping and returns</a></td></tr>
+						</table>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div><!-- .static-categories -->
-</div><!-- .col-sm-3 -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="arrow-toggle" data-toggle="collapse" data-parent=".static-categories" href="#collapseStatic5">my account
+						<div class="fa fa-chevron-up rotate"></div>
+					</a>
+					</h4>
+				</div>
+				<div style="border-bottom: 1.5px solid #00426a;padding-bottom:8px; margin-bottom:8px;" id="collapseStatic5" class="panel-collapse collapse">
+					<div class="panel-body">
+						<table class="table">
+							<tr><td><a href="<?php echo site_url(); ?>/cart/">cart</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/my-account/">account settings</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/wp-login.php?action=logout">logout</a></td></tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!-- .static-categories -->
+	</div><!-- .col-sm-3 -->
+</div><!-- #sidebar_wrap -->

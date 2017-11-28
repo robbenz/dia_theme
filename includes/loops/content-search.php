@@ -279,9 +279,6 @@ if(have_posts()): while(have_posts()): the_post();
 
           <?php elseif( $product->is_type( 'simple' ) ): ?>
             <?php
-
-
-
             //
             // if( current_user_can('shop_manager') || current_user_can('administrator') ) {
             //   if ( !function_exists( 'YITH_YWRAQ_Frontend' ) ) {
@@ -291,12 +288,6 @@ if(have_posts()): while(have_posts()): the_post();
             //
             //   YITH_YWRAQ_Frontend()->print_button( $product );
             // }
-
-
-
-
-
-
             ?>
 
           <table class="dia_tg" id="imfuckingsweetatcoding">
@@ -350,7 +341,6 @@ if(have_posts()): while(have_posts()): the_post();
         <?php endif ; ?>
 
           <?php echo do_shortcode('[RED_FLAG]'); ?>
-
 
         </div>
 

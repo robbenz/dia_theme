@@ -9,7 +9,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -65,8 +64,7 @@
 			<div id="mm-right-contact">
 				<div style="width:100%; height:39px; text-align:right">
 					<a href="<?php echo site_url(); ?>/request-quote" class="qq_button">
-						<i class=" 	glyphicon glyphicon-envelope"></i>
-						&nbsp;Quick Quote
+						<i class="glyphicon glyphicon-envelope"></i>&nbsp;Quick Quote
 					</a>
 					<?php echo do_shortcode('[google-translator]'); ?>
 				</div>
@@ -108,53 +106,6 @@
 			</div>
 		</header> <!-- #masthead -->
 
-		<nav id="drop-menu" class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
+		<?php get_template_part('includes/newmenu'); ?>
 
-					<?php
-					$benzmenu  = 'benz-menu';
-					wp_nav_menu( array(
-						'theme_location' => 'home',
-						'items_wrap' => $benzitems,
-						'container_class' => $benzmenu
-					));
-
-					wp_nav_menu( array(
-						'theme_location'  => 'medical-equipment',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-equipt',
-						'walker'          => new BENZ_Walker_Nav_Menu_EQP
-					));
-
-					wp_nav_menu( array(
-						'theme_location'  => 'parts-search',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-parts',
-						'walker'          => new BENZ_Walker_Nav_Menu_NEWSEARCH
-					));
-
-					wp_nav_menu( array(
-						'theme_location'  => 'repirstmp',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-repairs'
-  				  //  'walker'        => new BENZ_Walker_Nav_Menu_RP
-					));
-
-					wp_nav_menu( array(
-						'theme_location'  => 'manufacturers',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-manufacturers',
-						'walker'          => new BENZ_Walker_Nav_Menu_MFT
-					));
-
-					wp_nav_menu( array(
-						'theme_location'  => 'about-us',
-						'items_wrap'      => $benzitems,
-						'container_class' => $benzmenu . ' ' . $benzmenu . '-about'
-				//		'walker'          => new BENZ_Walker_Nav_Menu_ABOUT
-					));
-					?>
-				</div><!-- .navbar-header -->
-			</div> <!-- /.container -->
-		</nav>
+		<div style="width:100%;clear:both;float:left;height:15px;">&nbsp;</div>

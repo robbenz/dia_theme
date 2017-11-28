@@ -59,6 +59,9 @@ function benz_add_jss() {
   }
   wp_register_script('typedJS', get_template_directory_uri() . '/js/typed.js', array('jquery'),false, true);
   wp_enqueue_script('typedJS');
+
+  wp_register_script('menuJS', get_template_directory_uri() . '/js/menu.js', array('jquery'),false, true);
+  wp_enqueue_script('menuJS');
 }
 add_action( 'wp_enqueue_scripts', 'benz_add_jss' );
 
@@ -134,16 +137,9 @@ function my_register_sidebars() {
 function register_my_menus() {
   register_nav_menus(
     array(
-      'home'               => __( 'Home' ),
       'header-menu'        => __( 'Header Menu' ),
       'sign-in-menu'       => __( 'Sign In Menu' ),
-      'repirstmp'          => __( 'repirstmp' ),
-      'medical-equipment'  => __( 'Medical Equipment' ),
-      'parts-search'       => __( 'Parts Search' ),
-      'repairs'            => __( 'Service' ),
-      'manufacturers'      => __( 'Manufacturers' ),
-      'myaccount'          => __( 'My Account' ),
-      'about-us'           => __( 'About Us' )
+      'myaccount'          => __( 'My Account' )
     )
   );
 }
@@ -165,7 +161,6 @@ class BENZ_Walker_Nav_Menu extends Walker_Nav_Menu {
     $output .= '</ul>';
   }
 }
-
 
 // -- My Account
 class BENZ_Walker_Nav_Menu_MYACCOUNT extends Walker_Nav_Menu {
@@ -192,68 +187,7 @@ class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
     }
 
 }
-
-// -- NEW SEARCH  PART SEARCH
-class BENZ_Walker_Nav_Menu_NEWSEARCH extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu">';
-
-    }
-
-function end_lvl(&$output, $depth = 0, $args = Array()) {
-    if( 0 == $depth ) {
-      $searchBarNeeds = file_get_contents("wp-content/themes/diamedical/includes/navbar-search.php");
-
-      $output .= '<div class="benz-bottom-colors" style="background-color:#78be20">Can’t find the part you’re looking for? Submit a request and we’ll email you a quote!</div>';
-        $output .=  $searchBarNeeds;
-        $output .= '<div id="mattresshomeimgwrap"><a style="float:left; width:18.5%;"" href="https://diamedicalusa.com/product-category/hill-rom-parts-online/"><img style="margin:0 0.8em;" src="https://diamedicalusa.com//wp-content/imgs/hill-rom-logo.png" alt="New &amp; Reconditioned Hill-Rom Parts" /></a>';
-        $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=STRYKER&amp;post_type=product"><img style="margin:7px 0.8em 0;" src="https://diamedicalusa.com//wp-content/imgs/strykerlogo.png" alt=" " /></a>';
-        $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=amico&amp;post_type=product"><img style="margin: -6px 0.8em 0.6em; max-height: 50px; height:50px;" src="https://diamedicalusa.com//wp-content/imgs/amico_logo.png" alt=" " /></a>';
-        $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=hausted&amp;post_type=product"><img style="margin:1.0em 0.8em 0 -17px;" src="https://diamedicalusa.com//wp-content/imgs/haustedlogo.png" alt=" " /></a>';
-        $output .= '<a style="float:left; width:18.5%;" href="https://diamedicalusa.com/?s=midmark&amp;post_type=product"><img style="margin:7px 0.8em 0 -10px;" src="https://diamedicalusa.com//wp-content/imgs/midmarklogo.png" alt=" " /></a></div><div class="arrow-down"></div>';
-    }
-    $indent = str_repeat( "\t", $depth );
-    $output .= "{$indent}</ul>\n";
-
-  }
-}
-
-// -- Manufacturers
-    class BENZ_Walker_Nav_Menu_MFT extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu">';
-    }
-
-function end_lvl(&$output, $depth = 0, $args = Array()) {
-    if( 0 == $depth ) {
-        $output .= '<div class="benz-bottom-colors" style="background-color:#f1c400;">Don’t want to browse manufacturers? Try searching your manufacturer at the top of the page!</div>';
-        $output .= '<div class="arrow-down"></div>';
-        $output .= '<a href="http://diamedicalusa.com/product-category/hill-rom-parts-online/"><img alt="Reconditioned Hill Rom Parts" src="https://diamedicalusa.com/wp-content/imgs/Hill-Rom-MFT.png" id="benz-menu-img-mft1" class="benz-menu-img" /></a>';
-        $output .= '<a href="http://www.diamedicalusa.com/simlabsolutions/"><img src="https://diamedicalusa.com/wp-content/imgs/includes/sim-lab.png" id="benz-menu-img-mft4" style="position: relative; top: -79px; width: 269px; left: 70px;" class="benz-menu-img"/></a>';
-        $output .= '<a href="http://www.diamedicalusa.com/?s=hausted&amp;post_type=product"><img src="https://diamedicalusa.com/wp-content/imgs/haustedlogo.png" id="benz-menu-img-mft3" class="benz-menu-img" /></a>';
-    }
-    $indent = str_repeat( "\t", $depth );
-    $output .= "{$indent}</ul>\n";
-  }
-}
-
-// -- MEDICAL EQUIPMENT
-class BENZ_Walker_Nav_Menu_EQP extends Walker_Nav_Menu {
-    function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu">';
-    }
-
-function end_lvl(&$output, $depth = 0, $args = Array()) {
-    if( 0 == $depth ) {
-        $output .= '<div class="benz-bottom-colors" style="background-color:#ffad00;">Browse our wide selection of medical and instructional products or browse by manufacturer or part number.</div>';
-        $output .= '<a id="mmlogomenu" href="http://www.medmattress.com"><img src="https://diamedicalusa.com/wp-content/imgs/homepage/medmattress-logomenu.png" /></a>';
-        $output .= '<div class="arrow-down"></div>';
-        $output .= '<a id="fluidslogomenu" href="http://www.diamedicalusa.com/simlabsolutions/"><img src="https://diamedicalusa.com/wp-content/imgs/ns-home-imgs/simulated-iv-fluids-menu.png" /></a>';
-    }
-    $indent = str_repeat( "\t", $depth );
-    $output .= "{$indent}</ul>\n";
-}
-}
+/*** END ***/
 
 
 /****** WOOCOMMERCE GALLERY PAGE STUFF ******/
@@ -1233,6 +1167,55 @@ if ( $post->post_type == 'product' ) {
 function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
 
+/*** Partition arrays into multiple arrays - second argument ***/
+function partition(Array $list, $p) {
+    $listlen = count($list);
+    $partlen = floor($listlen / $p);
+    $partrem = $listlen % $p;
+    $partition = array();
+    $mark = 0;
+    for($px = 0; $px < $p; $px ++) {
+        $incr = ($px < $partrem) ? $partlen + 1 : $partlen;
+        $partition[$px] = array_slice($list, $mark, $incr);
+        $mark += $incr;
+    }
+    return $partition;
+}
+/*** END ***/
+
+
+function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
+  if ( $cat == 'cat' ) {
+    $cat_slug = get_term_by('slug', $slug, 'product_cat', 'ARRAY_A');
+    $cat_slug_link = get_term_link($cat_slug['term_id'], 'product_cat');
+    $link = '<a href="';
+    $link .= esc_url( $cat_slug_link );
+    $link .= '" title="' . $cat_slug['name'] . '">';
+    $link .= '<' . $html;
+    if ($view == 'view-all' && $html == 'li') {
+      $link .=  ' class="menu-view-all">View All';
+    } else {
+      $link .= '>' . $cat_slug['name'];
+    }
+    $link .= '</' . $html . '>';
+    $link .= '</a>';
+    if ( !is_wp_error($link) ) {
+      echo $link;
+    }
+  } elseif ( $cat == 'pro' ) {
+    $product_obj = get_page_by_path( $slug, OBJECT, 'product' );
+    $link = '<a href="';
+    $link .= esc_url($product_obj->guid);
+    $link .= '" title="' . $product_obj->post_title. '">';
+    $link .= '<' . $html . '>';
+    $link .= $product_obj->post_title;
+    $link .= '</' . $html . '>';
+    $link .= '</a>';
+    if ( !is_wp_error($link) ) {
+      echo $link;
+    }
+  }
+}
 
 /*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
 /*
