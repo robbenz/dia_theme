@@ -51,39 +51,39 @@
     });
     /*** END ***/
 
-    // // hover underline effect
-    // $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
-    //
-    // // keep the menu open only in appropriate mouse locations
-    // $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-    // $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-    //
-    // function closeMenuz (hoveredLink) {
-    //   $(hoveredLink).mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
-    // }
-    //
-    // // show drop menu based on hovered link
-    // var timer = 0;
-    // function showTopDropMenus (hoveredLink, shownMenu) {
-    //   $(hoveredLink).mouseenter(function(){
-    //     $('.drop-menu-panel').stop().fadeOut(100);
-    //     clearTimeout(timer);
-    //     timer = setTimeout(function(){
-    //       $(shownMenu).stop().fadeIn(100);
-    //     }, 200);
-    //   })
-    //   .mouseleave(function(){
-    //     clearTimeout(timer);
-    //   });
-    // }
-    //
-    // closeMenuz('#main_home');
-    // showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
-    // showTopDropMenus('#main_part_search', '#parts_drop');
-    // showTopDropMenus('#main_service', '#service_drop');
-    // showTopDropMenus('#main_manufacturers', '#mfrs_drop');
-    // closeMenuz('#main_contact_us');
-    // closeMenuz('#main_my_account');
+    // hover underline effect
+    $(".top-menu-main-a").mouseenter(function(){$(this).addClass('hoverline');}).mouseleave(function(){$(this).removeClass('hoverline');});
+
+    // keep the menu open only in appropriate mouse locations
+    $("#masthead").mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+    $(".drop-menu-panel").mouseleave(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+
+    function closeMenuz (hoveredLink) {
+      $(hoveredLink).mouseenter(function(){$('.drop-menu-panel').stop().fadeOut(100);});
+    }
+
+    // show drop menu based on hovered link
+    var timer = 0;
+    function showTopDropMenus (hoveredLink, shownMenu) {
+      $(hoveredLink).mouseenter(function(){
+        $('.drop-menu-panel').stop().fadeOut(100);
+        clearTimeout(timer);
+        timer = setTimeout(function(){
+          $(shownMenu).stop().fadeIn(100);
+        }, 200);
+      })
+      .mouseleave(function(){
+        clearTimeout(timer);
+      });
+    }
+
+    closeMenuz('#main_home');
+    showTopDropMenus('#main_medical_equipment', '#med_equipment_drop');
+    showTopDropMenus('#main_part_search', '#parts_drop');
+    showTopDropMenus('#main_service', '#service_drop');
+    showTopDropMenus('#main_manufacturers', '#mfrs_drop');
+    closeMenuz('#main_contact_us');
+    closeMenuz('#main_my_account');
 
   });
 }(jQuery));
