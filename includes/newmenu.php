@@ -18,7 +18,7 @@
 get_template_part('includes/menus/medical-equipment');
 get_template_part('includes/menus/parts-search');
 get_template_part('includes/menus/service');
-get_template_part('includes/menus/manufacturers');
+//get_template_part('includes/menus/manufacturers');
 // get_template_part('includes/menus/contact-us');
 // get_template_part('includes/menus/my-account');
 ?>

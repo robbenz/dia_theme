@@ -11,6 +11,9 @@
           <a id="hospital_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #00426a;">Hospitals</li>
           </a>
+          <a id="mattress_main_hover" href="#" class="top-menu-facility-filter">
+            <li style="border-bottom: 2px solid #78be20;">Mattresses</li>
+          </a>
           <a id="nursing_main_hover" href="#" class="top-menu-facility-filter">
             <li style="border-bottom: 2px solid #2774ae;">Nursing Schools &amp; Simulation</li>
           </a>
@@ -35,6 +38,7 @@
      <?php
      get_template_part('includes/menus/submenus/all-cats-menu');
      get_template_part('includes/menus/submenus/hos-menu');
+     get_template_part('includes/menus/submenus/mat-menu');
      get_template_part('includes/menus/submenus/ns-menu');
      get_template_part('includes/menus/submenus/sls-menu');
      get_template_part('includes/menus/submenus/ems-menu');

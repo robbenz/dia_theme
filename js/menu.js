@@ -6,6 +6,7 @@
     var main_cats = [
       "menu_all_main",
       "hospital_main",
+      "mattress_main",
       "nursing_main",
       "sls_main",
       "ltc_main",
@@ -30,6 +31,9 @@
             break;
           case 'nursing_main':
             $('#nursing_main_hover > li').css({'background-color' : '#2774ae', 'color' : '#fff'});
+            break;
+          case 'mattress_main':
+            $('#mattress_main_hover > li').css({'background-color' : '#78be20', 'color' : '#fff'});
             break;
           case 'sls_main':
             $('#sls_main_hover > li').css({'background-color' : '#ffad00', 'color' : '#fff'});

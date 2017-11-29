@@ -14,6 +14,7 @@
     diaLink('cat', 'li', 'amico-beds');
     diaLink('cat', 'li', 'hill-rom-beds');
     diaLink('cat', 'li', 'burke-bariatric-beds');
+    diaLink('cat', 'li', 'med-mizer-hospital-beds');
     diaLink('cat', 'li', 'span-america-beds');
     diaLink('cat', 'li', 'stryker-beds');
     diaLink('cat', 'li', 'hospital-beds', 'view-all');
