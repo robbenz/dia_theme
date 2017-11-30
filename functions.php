@@ -137,8 +137,8 @@ function my_register_sidebars() {
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu'        => __( 'Header Menu' ),
-      'sign-in-menu'       => __( 'Sign In Menu' ),
+      // 'header-menu'        => __( 'Header Menu' ),
+      // 'sign-in-menu'       => __( 'Sign In Menu' ),
       'myaccount'          => __( 'My Account' )
     )
   );
@@ -150,17 +150,17 @@ add_action( 'init', 'register_my_menus' );
 /***** MENU STUFF *****/
 /**********************/
 
-// -- NEED HELP?
-class BENZ_Walker_Nav_Menu extends Walker_Nav_Menu {
-  function start_lvl(&$output, $depth = 0, $args = Array()) {
-    $output .= '<ul class="sub-menu" style="color:#004ea8; font-weight:700;">';
-    $output .= '<div class="arrow-up-mm"></div><div class="insert-img-here">NEED SOME ASSISTANCE?<br>';
-    $output .= '<span style="color:#000; font-weight:normal;"><em>Browse these pages to read<br>our policies or to drop us a line!</em></span></div>';
-  }
-  function end_lvl(&$output, $depth = 0, $args = Array()) {
-    $output .= '</ul>';
-  }
-}
+// // -- NEED HELP?
+// class BENZ_Walker_Nav_Menu extends Walker_Nav_Menu {
+//   function start_lvl(&$output, $depth = 0, $args = Array()) {
+//     $output .= '<ul class="sub-menu" style="color:#004ea8; font-weight:700;">';
+//     $output .= '<div class="arrow-up-mm"></div><div class="insert-img-here">NEED SOME ASSISTANCE?<br>';
+//     $output .= '<span style="color:#000; font-weight:normal;"><em>Browse these pages to read<br>our policies or to drop us a line!</em></span></div>';
+//   }
+//   function end_lvl(&$output, $depth = 0, $args = Array()) {
+//     $output .= '</ul>';
+//   }
+// }
 
 // -- My Account
 class BENZ_Walker_Nav_Menu_MYACCOUNT extends Walker_Nav_Menu {
@@ -175,18 +175,18 @@ class BENZ_Walker_Nav_Menu_MYACCOUNT extends Walker_Nav_Menu {
 }
 
 // -- Sign In
-class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
-
-   function start_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<ul class="sub-menu"><div class="arrow-up-mm"></div><div class="insert-img-here"><strong>SIGN IN</strong>' . do_shortcode('[wppb-login]') . '</div>';
-    }
-        function end_lvl(&$output, $depth = 0, $args = Array()) {
-        $output .= '<div class="insert-img-here" style="line-height: 22px; width:auto; color:#004ea8; font-weight:700; text-align:center; border-top: 1px solid #cccccc; ">';
-        $output .= 'NEW CUSTOMER? <br><span style="color:#000; font-weight:normal;"><em>Registration is easy and<br>only takes a few seconds!</em></span>';
-        $output .= '<a href="https://diamedicalusa.com/my-account" id="benz-register-link">REGISTER</a></div></ul>';
-    }
-
-}
+// class BENZ_Walker_Nav_Menu_SIGNIN extends BENZ_Walker_Nav_Menu {
+//
+//    function start_lvl(&$output, $depth = 0, $args = Array()) {
+//         $output .= '<ul class="sub-menu"><div class="arrow-up-mm"></div><div class="insert-img-here"><strong>SIGN IN</strong>' . do_shortcode('[wppb-login]') . '</div>';
+//     }
+//         function end_lvl(&$output, $depth = 0, $args = Array()) {
+//         $output .= '<div class="insert-img-here" style="line-height: 22px; width:auto; color:#004ea8; font-weight:700; text-align:center; border-top: 1px solid #cccccc; ">';
+//         $output .= 'NEW CUSTOMER? <br><span style="color:#000; font-weight:normal;"><em>Registration is easy and<br>only takes a few seconds!</em></span>';
+//         $output .= '<a href="https://diamedicalusa.com/my-account" id="benz-register-link">REGISTER</a></div></ul>';
+//     }
+//
+// }
 /*** END ***/
 
 

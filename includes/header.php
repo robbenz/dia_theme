@@ -15,13 +15,11 @@
 <body <?php body_class(); ?>>
 
 <div id="landing_nav-wrap">
-
 	<div class="container">
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-hospital" href="<?php echo site_url(); ?>/hospital-equipment">Hospitals</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-mattresses" target="_blank" href="http://www.medmattress.com">Mattresses</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
-
 		<div class="dropdown">
 			<button class="dropbtn hvr-shutter-out-horizontal landing_nav-ems landing_nav ems-button-cursor">Emergency &amp; Rescue</button>
 			<div class="dropdown-content">
@@ -29,12 +27,10 @@
       	<a href="<?php echo site_url(); ?>/field-ready-ems-equipment/">Field Ready Gear</a>
     	</div>
 		</div>
-
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-pt" href="<?php echo site_url(); ?>/product-category/physical-therapy/">Physical Therapy</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>//product-category/veterinary-equipment/">Veterinary</a>
 	</div>
-
 </div>
 
 <?php
@@ -47,65 +43,71 @@
 
 <header id="masthead" role="banner">
 	<div class="container">
-	<nav id="mobile-navbar" class="">
-	<div id="fixed-row" class="row">
-		<div id="dia-main-logo-left">
-			<a href="<?php echo site_url(); ?>">
-				<img src="<?php echo site_url(); ?>/wp-content/imgs/logo/DiaMedical_USA_Logo.png" />
-			</a>
-		</div>
-	</div>
-
-		<div id="form-row"class="row">
-			<div>
-				<?php get_template_part('includes/navbar-search'); ?>
+		<nav id="mobile-navbar" class="">
+			<div id="fixed-row" class="row">
+				<div id="dia-main-logo-left">
+					<a href="<?php echo site_url(); ?>">
+						<img src="<?php echo site_url(); ?>/wp-content/imgs/logo/DiaMedical_USA_Logo.png" />
+					</a>
+				</div>
 			</div>
+			<div id="form-row" class="row">
+				<?php get_template_part('includes/navbar-search'); ?>
 
-			<div id="mm-right-contact">
-				<div style="width:100%; height:39px; text-align:right">
-					<a href="<?php echo site_url(); ?>/request-quote" class="qq_button">
+				<div id="mm-right-contact">
+					<div style="width:100%; height:39px; text-align:right">
+						<a href="<?php echo site_url(); ?>/request-quote" class="qq_button">
 						<i class="glyphicon glyphicon-envelope"></i>&nbsp;Quick Quote
 					</a>
-					<?php echo do_shortcode('[google-translator]'); ?>
+						<?php echo do_shortcode('[google-translator]'); ?>
+					</div>
+					<div id="right_contact_top">
+						<span class="mm-right-contact-1">CONTACT US: (877) 593-6011</span>
+						<span class="mm-right-contact-2">(M-F: 7-6 EST)</span>
+					</div>
+					<?php if (! is_user_logged_in() ) : ?>
+					<a href="#" class="eModal-1">SIGN IN TO VIEW PRICING</a>
+					<?php endif; ?>
 				</div>
-				<?php
-
-				$benzitems = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
-				echo '<span class="mm-right-contact-1">' . 'CONTACT US: (877) 593-6011' . '</span>';
-				echo '<span class="mm-right-contact-2">' . '   (M-F: 7-6 EST)' . '</span>' . '<br />';
-
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'header-menu',
-						'items_wrap'      => $benzitems,
-						'walker'          => new BENZ_Walker_Nav_Menu
-					) );
-
-					if ( is_user_logged_in() ) {
-						wp_nav_menu(
-							array(
-								'theme_location'  => 'myaccount',
-								'items_wrap'      => $benzitems,
-								'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
-							) );
-						} else {
-							wp_nav_menu(
-								array(
-									'theme_location'  => 'sign-in-menu',
-									'items_wrap'      => $benzitems,
-									'walker'          => new BENZ_Walker_Nav_Menu_SIGNIN
-								) );
-							};
-
-							echo do_shortcode('[WooCommerceWooCartPro]');
-
-							?>
-						</div> <!-- #mm-right-contact -->
-					</div> <!-- .container -->
-				</nav>
+				<!-- #mm-right-contact -->
 			</div>
-		</header> <!-- #masthead -->
+			<!-- #form-row -->
+		</nav>
+	</div>
 
-		<?php get_template_part('includes/newmenu'); ?>
+<?php if ( is_user_logged_in() ) :  $current_user = wp_get_current_user(); ?>
+<div style="margin-top:-40px;" class="container">
+	<div class="row">
+		<div class="col-md-12" id="right_contact_bottom">
+			<?php
+			echo do_shortcode('[WooCommerceWooCartPro]');
+			$dia_items = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'myaccount',
+					'items_wrap'      => $dia_items,
+					'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
+				)
+			);
+			?>
+			<span class="welcome-user"> Welcome,
+				<?php
+				if (strlen($current_user->user_firstname) >= 2 ) {
+					echo $current_user->user_firstname . '&nbsp;|&nbsp;';
+				} else {
+					echo $current_user->user_login . '&nbsp;|&nbsp;';
+				}
+				?>
+			</span>
+		</div>
+	</div>
+</div>
+<?php endif; ?>
 
-		<div style="width:100%;clear:both;float:left;height:15px;">&nbsp;</div>
+
+</header>
+<!-- #masthead -->
+
+<?php get_template_part('includes/newmenu'); ?>
+
+<div style="width:100%;clear:both;float:left;height:15px;">&nbsp;</div>

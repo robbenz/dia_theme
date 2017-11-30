@@ -386,7 +386,7 @@ span.festi-cart-product-count { margin-left:80%; text-align:right;}
 header h2{display:none;}
 div.festi-cart-content { color: #636363 !important; font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important; font-size: 15px !important; font-weight: 600 !important; }
 body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
-#mm-right-contact .sub-menu { background-color: #ffffff; border: 1px solid #d7d7d7; left: -71px; padding: 5px; width: 300px; top:40px; z-index:9999;}
+#right_contact_bottom .sub-menu, #mm-right-contact .sub-menu { background-color: #ffffff; border: 1px solid #d7d7d7; left: -71px; padding: 5px; width: 300px; top:40px; z-index:9999;}
 .sf-menu li a:hover{text-decoration: none !important;}
 .after-menu-links{color:#78be20;font-size: 17px; }
 /*END*/
@@ -526,17 +526,24 @@ _:-ms-lang(x), .sf-menu > .page_item_has_children > a:first-child { font-size: 1
 /* END */
 
 /* Sign in & Need help menus */
-#mm-right-contact .sub-menu li{list-style:disc; text-align:left; line-height:24px; margin-left:19px; }
-#mm-right-contact .sub-menu li a:hover{ background-color: #fff; color: #2774ae }
-#mm-right-contact .sub-menu li a{color:#00426a;}
-#menu-item-57565 .sub-menu #wppb-submit, .lft-img-home #wppb-submit{  background-color: #78be20; border: medium none; border-radius: 0;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 21px; margin-top: 3px; padding: 7px 109px !important; text-transform: uppercase; }
-#menu-item-57565 .sub-menu #benz-register-link { color:#fff; text-transform:uppercase; font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; padding: 12px 0px; background-color:#004ea8; margin-top:5px;margin-bottom:5px; font-size:19px; font-weight:500;}
+.welcome-user, #menu-item-57570 > a{ color: #000; line-height: 20px !important; float:right;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important; font-size:15px; }
+
+#right_contact_bottom .sub-menu li, #mm-right-contact .sub-menu li{list-style:disc; text-align:left; line-height:24px; margin-left:19px; }
+#right_contact_bottom .sub-menu li a:hover, #mm-right-contact .sub-menu li a:hover{ background-color: #fff; color: #2774ae }
+#right_contact_bottom .sub-menu li a, #mm-right-contact .sub-menu li a{color:#00426a;}
+
+#eModal-1{font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important; background-color:#fff !important; border-radius: 0 !important; box-shadow: none !important;}
+#eModal-1 #wppb-submit { font-weight: 500; background-color: #78be20; border: medium none; border-radius: 0;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 21px; margin-top: 3px; padding: 15px 117px !important; text-transform: uppercase; }
+.lft-img-home #wppb-submit{  background-color: #78be20; border: medium none; border-radius: 0;font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; font-size: 21px; margin-top: 3px; padding: 7px 109px !important; text-transform: uppercase; }
+#eModal-1 #benz-register-link { color:#fff; text-transform:uppercase; font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'; padding: 12px 103px; background-color:#004ea8; margin-top:5px;margin-bottom:5px; font-size:22px; font-weight:500;}
 .menu-sign_in-container input[type="text"], .menu-sign_in-container input[type="email"], .menu-sign_in-container input[type="url"], .menu-sign_in-container input[type="password"], .menu-sign_in-container input[type="search"], .menu-sign_in-container textarea { width: 100%; border-radius: none;  }
 .wppb-form-field label, #wppb-login-wrap .login-username label, #wppb-login-wrap .login-password label { float: left !important; font-size: 14px !important; font-weight: 400 !important; min-height: 1px !important; text-align: left !important; width: 100%!important;  }
-#menu-sign-in .sub-menu .insert-img-here {text-align: left; }
 .wppb-form-field input, .wppb-form-field input[type="text"], .wppb-form-field input[type="email"], .wppb-form-field input[type="url"], .wppb-form-field input[type="password"], .wppb-form-field input[type="search"], .wppb-form-field select, .wppb-form-field textarea, .wppb-checkboxes, .wppb-radios, #wppb-login-wrap .login-username input, #wppb-login-wrap .login-password input { width: 100% !important; }
 #mm-right-contact .sub-menu > .insert-img-here{padding-top:30px; margin-top:-28px;}
+#eModal-1 .insert-img-here { line-height: 22px; width: auto; color: #004ea8; font-weight: bold; text-align: center; border-top: 1px solid #cccccc;font-size: 15px; }
 #benz-main-menu-box .sub-menu { overflow: hidden;}
+.menu-my-account-container, #festi-cart{float:right;}
+#right_contact_bottom{height:20px;margin-bottom:10px;}
 /* END */
 
 /* Sign in dia homepage */
