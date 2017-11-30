@@ -211,12 +211,12 @@ if (!function_exists('loop_columns')) {
 // -- number of products per page
 add_filter( 'loop_shop_per_page', 'products_per_page_category', 20 );
 function products_per_page_category( $count ) {
-  if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() || is_search() ) :
+  if ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
     return 2700;
   elseif (isset($_GET['view']) && $_GET['view'] === 'all') :  // View all page
     return 9999;
   else :
-   return 12;
+   return 100;
   endif;
 }
 /* END */
