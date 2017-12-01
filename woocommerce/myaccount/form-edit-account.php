@@ -24,7 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <form class="edit-account" action="" method="post">
 
-	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
+	<?php do_action( 'woocommerce_edit_account_form_start' );
+	$user = wp_get_current_user();?>
 
 	<p class="form-row form-row-first">
 		<label for="account_first_name"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>

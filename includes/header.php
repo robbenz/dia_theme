@@ -108,6 +108,6 @@
 </header>
 <!-- #masthead -->
 
-<?php get_template_part('includes/newmenu'); ?>
+<?php get_template_part('includes/top_drop_menu'); ?>
 
 <div style="width:100%;clear:both;float:left;height:15px;">&nbsp;</div>

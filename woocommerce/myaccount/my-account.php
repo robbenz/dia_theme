@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices(); ?>
 
 <p class="myaccount_user">
-	<?php _e('<h2 class="wooheader-green">Account Information</h2>', 'woocommerce' );?>
+	<?php _e('<h2 style="margin-top:-10px;text-align: center; background-color: #78be20; padding: 0.25em; color: #fff;" class="wooheader-green">My Account</h2>', 'woocommerce' );?>
 </p>
 
 <?php do_action( 'woocommerce_before_my_account' ); ?>
@@ -30,6 +30,8 @@ wc_print_notices(); ?>
 <?php wc_get_template( 'myaccount/my-downloads.php' ); ?>
 
 <?php wc_get_template( 'myaccount/my-orders.php', array( 'order_count' => $order_count ) ); ?>
+
+<?php _e('<h2 class="wooheader-green">Account Information</h2>', 'woocommerce' );?>
 
 <?php wc_get_template( 'myaccount/form-edit-account.php' ); ?>
 

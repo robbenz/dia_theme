@@ -383,6 +383,7 @@ span.festi-cart-product-count { margin-left:80%; text-align:right;}
 @-moz-document url-prefix() { #mm-right-contact{ width:434px } }
 .logged-in #mm-right-contact{ width: 351px;}
 .insert-img-here {text-align:center; padding-top:6px; padding-left:0;}
+#right_contact_bottom .insert-img-here { padding-top: 47px; margin-top: -39px;}
 header h2{display:none;}
 div.festi-cart-content { color: #636363 !important; font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif' !important; font-size: 15px !important; font-weight: 600 !important; }
 body a#festi-cart.festi-cart.festi-cart-customize {padding: 0!important; }
@@ -845,9 +846,9 @@ p.diva {font-size:13px; float: right; text-align: center; width: 75%; }
 #pm_ltgreen_2 p { font-size:42px; font-family: 'ristretto_promedium', Arial, sans-serif; position:relative; top:10px;}
 #pm_ltgreen_2 { float:left; background-color:#b7dd79; width:10%; height:0px; border-bottom: 90px solid #e4f2cc; border-left: 50px solid transparent; }
 #pm_ltgreen_3 { background-color:#e4f2cc; width:45%; height:0px; border-bottom: 90px solid #b7dd79; border-left: 50px solid transparent; }
-.pm_square {background-color:#00426a; color:#ffad00; text-align:center; font-family: 'ristretto_proregular', Arial, sans-serif;  }
-.new_pm_row {margin-top:20px;}
-.pm_white{color:#fff !important;}
+.pm_square { background-color:#00426a; color:#ffad00; text-align:center; font-family: 'ristretto_proregular', Arial, sans-serif;  }
+.new_pm_row { margin-top:20px; }
+.pm_white{color:#fff !important; }
 .new_pm_row .col-sm-4 .pm_square{font-size:35px;}
 .new_pm_row .col-sm-3 .pm_square{font-size:24px;}
 /* END */
