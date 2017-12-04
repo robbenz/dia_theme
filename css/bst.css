@@ -844,7 +844,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #homeorangewrap img{ display:none;}
   .sidebar{display:none;}
   .archive #content .products { float: none; width: 100%; }
-  #mm-right-contact, #landing_nav-wrap{display:none;}
+  #mm-right-contact, #landing_nav-wrap, #right_contact_bottom_wrap{display:none;}
   .header-wrap-text-medical-equipment { width:100%; }
   .woocommerce ul.products li.product, .woocommerce-page ul.products li.product { /*margin: 0 3%; width: 80%; */}
   .rgt-img-home{padding:0;margin-bottom: 4%;}
@@ -877,9 +877,6 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   div.thumbnails img{width:90px !important; max-width:90px !important; }
 }
 
-@media (min-width: 320px) and (max-width: 344px){
-  .wc-tabs{font-size:12.7px;}
-}
 
 @media (min-width:320px) and (max-width: 366px){
   .maint-text{font-size:.54em;}
@@ -979,9 +976,6 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 @media (min-width:320px) and (max-width:991px){
   #p_maint-productpage{width:100%; padding:0;}
   #free_ship-productpage{width:100%;}
-  .wc-tabs li:first-child {border-top-left-radius: 18px !important; -moz-border-radius-topleft: 18px !important; border-top-right-radius: 18px !important; -moz-border-radius-topright: 18px !important; width: 100%; text-align: center}
-  .wc-tabs li:not(:first-child):not(:last-child) {width: 101%; text-align: center}
-  .wc-tabs-wrapper li:last-child {border-top-right-radius: 0px !important; width: 101%; text-align: center}
   .woocommerce div.product .woocommerce-tabs ul.tabs li {margin:-3px -1px}
   .woocommerce div.product div.images img {width:100% !important;}
   #post_12{padding:10px;}
@@ -1240,6 +1234,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 
 @media (min-width: 1200px) {
   #mm-right-contact{display:block; margin-top: -53px;}
+  #right_contact_bottom_wrap{display:block;}
   .sidebar{display:block;}
   .archive #content .products {float:right; width:70%;}
   .header-wrap-text-medical-equipment {  width: 844px; }
@@ -1253,7 +1248,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   .dropdown-content a { float: none; font-size: 0.9em; padding: 8px 0; width: 144px; }
   #landing_nav-wrap a.landing_nav{ width:12.475%; }
   .dropdown-content { top:28px; }
-  _:-ms-lang(x),   #landing_nav-wrap a.landing_nav{ width:12%; }
+  _:-ms-lang(x), #landing_nav-wrap a.landing_nav{ width:12%; }
   @supports (-ms-ime-align:auto) {
     #landing_nav-wrap a.landing_nav{ width:12%; }
   }

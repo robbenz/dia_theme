@@ -76,7 +76,7 @@
 	</div>
 
 <?php if ( is_user_logged_in() ) :  $current_user = wp_get_current_user(); ?>
-<div style="margin-top:-40px;" class="container">
+<div id="right_contact_bottom_wrap" style="margin-top:-40px;" class="container">
 	<div class="row">
 		<div class="col-md-12" id="right_contact_bottom">
 			<?php
