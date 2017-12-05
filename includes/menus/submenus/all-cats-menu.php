@@ -27,13 +27,12 @@ $dia_menu_product_cats = array_diff( $dia_menu_product_cats,[ "On-Site Repairs &
     foreach ($dia_4menu_product_cats as $category_list) : ?>
     <div class="col-md-3">
       <ul>
-        <?php
-        foreach ($category_list as $category_name) :
-          $grabcat = get_term_by('name', $category_name, 'product_cat');
-					if ($category_name == "Casters") : ?>
-          <a href="<?php echo site_url();?>/?s=casters&amp;post_type=product&amp;product_cat=casters">
-            <h6>Casters</h6>
-          </a>
+        <?php foreach ($category_list as $category_name) :
+							$grabcat = get_term_by('name', $category_name, 'product_cat');
+							if ($category_name == "Casters") : ?>
+			          <a href="<?php echo site_url();?>/?s=casters&amp;post_type=product&amp;product_cat=casters">
+			            <h6>Casters</h6>
+			          </a>
 				<?php elseif ($category_name == "AEDs, Defibrillators &amp; CPR Management"): ?>
           <a href="<?php echo site_url() . '/product-category/' . $grabcat->slug; ?>">
             <h6>AEDs &amp; Defibrillators</h6>
