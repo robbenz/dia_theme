@@ -53,60 +53,53 @@
 			</div>
 			<div id="form-row" class="row">
 				<?php get_template_part('includes/navbar-search'); ?>
-
-				<div id="mm-right-contact">
-					<div style="width:100%; height:39px; text-align:right">
-						<a href="<?php echo site_url(); ?>/request-quote" class="qq_button">
-						<i class="glyphicon glyphicon-envelope"></i>&nbsp;Quick Quote
-					</a>
-						<?php echo do_shortcode('[google-translator]'); ?>
-					</div>
-					<div id="right_contact_top">
-						<span class="mm-right-contact-1">CONTACT US: (877) 593-6011</span>
-						<span class="mm-right-contact-2">(M-F: 7-6 EST)</span>
-					</div>
-					<?php if (! is_user_logged_in() ) : ?>
-					<a href="#" class="eModal-1">SIGN IN TO VIEW PRICING</a>
-					<?php endif; ?>
-				</div>
-				<!-- #mm-right-contact -->
-			</div>
-			<!-- #form-row -->
+					<div id="mm-right-contact">
+						<div style="width:100%; height:39px; text-align:right">
+							<a href="<?php echo site_url(); ?>/request-quote" class="qq_button">
+								<i class="glyphicon glyphicon-envelope"></i>&nbsp;Quick Quote
+							</a>
+							<?php echo do_shortcode('[google-translator]'); ?>
+						</div>
+						<div id="right_contact_top">
+							<span class="mm-right-contact-1">CONTACT US: (877) 593-6011</span>
+							<span class="mm-right-contact-2">(M-F: 7-6 EST)</span>
+						</div>
+						<?php if (! is_user_logged_in() ) : ?>
+						<a href="#" class="eModal-1">SIGN IN TO VIEW PRICING</a>
+						<?php endif; ?>
+					</div><!-- #mm-right-contact -->
+			</div><!-- #form-row -->
 		</nav>
 	</div>
-
-<?php if ( is_user_logged_in() ) :  $current_user = wp_get_current_user(); ?>
-<div id="right_contact_bottom_wrap" style="margin-top:-40px;" class="container">
-	<div class="row">
-		<div class="col-md-12" id="right_contact_bottom">
-			<?php
-			echo do_shortcode('[WooCommerceWooCartPro]');
-			$dia_items = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'myaccount',
-					'items_wrap'      => $dia_items,
-					'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
-				)
-			);
-			?>
-			<span class="welcome-user"> Welcome,
-				<?php
-				if (strlen($current_user->user_firstname) >= 2 ) {
-					echo $current_user->user_firstname . '&nbsp;|&nbsp;';
-				} else {
-					echo $current_user->user_login . '&nbsp;|&nbsp;';
-				}
-				?>
-			</span>
-		</div>
-	</div>
-</div>
-<?php endif; ?>
-
-
-</header>
-<!-- #masthead -->
+	<?php if ( is_user_logged_in() ) :  $current_user = wp_get_current_user(); ?>
+		<div id="right_contact_bottom_wrap" style="margin-top:-40px;" class="container">
+			<div class="row">
+				<div class="col-md-12" id="right_contact_bottom">
+					<?php
+					echo do_shortcode('[WooCommerceWooCartPro]');
+					$dia_items = '<ul id="%1$s" class="%2$s sf-menu sf-js-enabled">%3$s</ul>';
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'myaccount',
+							'items_wrap'      => $dia_items,
+							'walker'          => new BENZ_Walker_Nav_Menu_MYACCOUNT
+						)
+					);
+					?>
+					<span class="welcome-user">Welcome,
+						<?php
+						if (strlen($current_user->user_firstname) >= 2 ) {
+							echo $current_user->user_firstname . '&nbsp;|&nbsp;';
+						} else {
+							echo $current_user->user_login . '&nbsp;|&nbsp;';
+						}
+						?>
+					</span><!-- .welcome-user -->
+				</div><!-- #right_contact_bottom -->
+			</div><!-- row -->
+		</div><!-- #right_contact_bottom_wrap -->
+	<?php endif; ?>
+</header><!-- #masthead -->
 
 <?php get_template_part('includes/top_drop_menu'); ?>
 
