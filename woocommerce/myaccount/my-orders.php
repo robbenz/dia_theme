@@ -55,6 +55,7 @@ if ( $customer_orders ) : ?>
 			<?php foreach ( $customer_orders as $customer_order ) :
 				$order      = wc_get_order( $customer_order );
 				$item_count = $order->get_item_count();
+				
 				?>
 				<tr class="order">
 					<?php foreach ( $my_orders_columns as $column_id => $column_name ) : ?>

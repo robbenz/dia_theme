@@ -81,6 +81,8 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#dia-cust-fav-role-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-tab-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-search-pri-meta-box h2 {background-color: #00426a; color:#fff;}' );
+  wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_number{display:none;}' );
+  wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_freight_provider{display:none;}' );
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 
@@ -976,6 +978,7 @@ function red_flag_shortcode() {
 
 add_shortcode( 'RED_FLAG', 'red_flag_shortcode' );
 /*** END ***/
+
 
 /*** Display Product Title at link in email ***/
 add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
