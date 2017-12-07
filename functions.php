@@ -83,6 +83,9 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#dia-search-pri-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_number{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_freight_provider{display:none;}' );
+  wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_shipped{display:none;}' );
+  wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_qty{display:none;}' );
+  wp_add_inline_style( 'wp-admin', '#order_line_items .display_meta{display:none;}' );
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 
@@ -366,6 +369,24 @@ new RRHE();
 /*** Ship to a different address closed by default ***/
 add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
 
+/**
+ * Add order again button in my orders actions.
+ *
+ * @param  array $actions
+ * @param  WC_Order $order
+ * @return array
+ */
+function dia_add_order_again_to_my_orders_actions( $actions, $order ) {
+	if ( $order->has_status( 'completed' ) ) {
+		$actions['order-again'] = array(
+			'url'  => wp_nonce_url( add_query_arg( 'order_again', $order->id ) , 'woocommerce-order_again' ),
+			'name' => __( 'Order Again', 'woocommerce' )
+		);
+	}
+	return $actions;
+}
+add_filter( 'woocommerce_my_account_my_orders_actions', 'dia_add_order_again_to_my_orders_actions', 50, 2 );
+/*** END ***/
 
 // Edit order items table template defaults  -- Show Sku on emails
 function BENZ_wc_order_email_skus( $table, $order ) {

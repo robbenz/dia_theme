@@ -55,7 +55,7 @@ if ( $customer_orders ) : ?>
 			<?php foreach ( $customer_orders as $customer_order ) :
 				$order      = wc_get_order( $customer_order );
 				$item_count = $order->get_item_count();
-				
+
 				?>
 				<tr class="order">
 					<?php foreach ( $my_orders_columns as $column_id => $column_name ) : ?>
@@ -104,7 +104,8 @@ if ( $customer_orders ) : ?>
 
 									if ( $actions = apply_filters( 'woocommerce_my_account_my_orders_actions', $actions, $order ) ) {
 										foreach ( $actions as $key => $action ) {
-											echo '<a href="' . esc_url( $action['url'] ) . '" class="button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+											// echo '<a href="' . esc_url( $action['url'] ) . '" class="button ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
+											echo '<a href="' . esc_url( $action['url'] ) . '" class="button button-' . $order->get_order_number() . ' ' . sanitize_html_class( $key ) . '">' . esc_html( $action['name'] ) . '</a>';
 										}
 									}
 								?>
@@ -112,6 +113,40 @@ if ( $customer_orders ) : ?>
 						</td>
 					<?php endforeach; ?>
 				</tr>
+				<!-- tracking button -->
+				<script type="text/javascript">
+        jQuery(document).ready(function() {
+          jQuery(".order-trackem").hide();
+          jQuery(".button-<?php echo $order->get_order_number(); ?>").click(function() {
+						jQuery(".trackem-<?php echo $order->get_order_number(); ?>").toggle(400);
+						jQuery(".trackem-content-<?php echo $order->get_order_number(); ?>").toggle(400);
+          });
+        });
+        </script>
+
+				<?php if ( $order->has_status( 'shipped' ) ) : ?>
+
+					<tr class="order order-trackem trackem-<?php echo $order->get_order_number(); ?>">
+						<td colspan="1"><strong>Product</strong></td>
+						<td colspan="1"><strong>Freight Provider</strong></td>
+						<td colspan="3"><strong>Tracking Number</strong></td>
+					</tr>
+
+					<?php
+					$items = $order->get_items();
+					foreach ($items as $item_id => $item_data) {
+						if (strlen($item_data['tracking_item_number']) > 0 && strlen($item_data['tracking_item_freight_provider']) > 0) {
+							echo '<tr style="border:0;" class="order order-trackem trackem-content-'.$order->get_order_number().'">';
+							echo '<td style="border:0;" colspan="1">'.$item_data['name'].'</td>';
+							echo '<td style="border:0;" colspan="1">'.$item_data['tracking_item_freight_provider'].'</td>';
+							echo '<td style="border:0;" colspan="2">'.$item_data['tracking_item_number'].'</td>';
+							echo '</tr>';
+						}
+
+					}
+					?>
+				<?php endif; ?><!-- END  tracking button stuff  -->
+
 			<?php endforeach; ?>
 		</tbody>
 	</table>

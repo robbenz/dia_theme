@@ -146,6 +146,16 @@
       }
       /*** END ***/
 
+      /*** Tracking stuff on my account page - string replace ***/
+      $('.variation-tracking_item_number').html(function(index, text) {
+        return text.replace(/\_/g, ' ');
+      });
+      $('.variation-tracking_item_freight_provider').html(function(index, text) {
+        return text.replace(/\_/g, ' ');
+      });
+      $('.variation-tracking_item_number').css('text-transform', 'capitalize');
+      $('.variation-tracking_item_freight_provider').css('text-transform', 'capitalize');
+      /*** END ***/
 
 
     });

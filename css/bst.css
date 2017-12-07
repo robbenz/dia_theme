@@ -233,7 +233,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {background-color:#78be20;}
 .button{background-color:#78be20;}
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {background-color:#78be20; color:#fff;}
-.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {background-color:#00426a; color:#fff; border:1px solid #78be20;}
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {background-color:#00426a; color:#fff; }
 .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {background-color:#00426a;}
 .panel { border: 0 !important; box-shadow: 0 !important; border: none !important; box-shadow: none !important; }
 .related h2, .upsells h2 {margin-top: 0px; text-transform: uppercase; color:#78be20; font-size: 20px; font-weight:400;}
@@ -416,6 +416,7 @@ body.page-template-nursing .wpb-wps-slider-item {padding: 0.75em 0.3em !importan
 #benz-main-menu-box .sub-menu { overflow: hidden;}
 .menu-my-account-container, #festi-cart{float:right;}
 #right_contact_bottom{height:20px;margin-bottom:10px;}
+.woocommerce td.product-name dl.variation {margin-top:1em;}
 /* END */
 
 /* Sign in dia homepage */
