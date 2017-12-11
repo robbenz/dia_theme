@@ -85,6 +85,7 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_freight_provider{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_shipped{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_qty{display:none;}' );
+  wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.number_of_shipments{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_line_items .display_meta{display:none;}' );
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');

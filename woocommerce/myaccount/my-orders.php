@@ -48,6 +48,13 @@ if ( $customer_orders ) : ?>
 				<?php foreach ( $my_orders_columns as $column_id => $column_name ) : ?>
 					<th class="<?php echo esc_attr( $column_id ); ?>"><span class="nobr"><?php echo esc_html( $column_name ); ?></span></th>
 				<?php endforeach; ?>
+
+
+
+					<!-- <th style="border:0;" colspan="1">&nbsp;</th> -->
+
+
+
 			</tr>
 		</thead>
 
@@ -111,6 +118,12 @@ if ( $customer_orders ) : ?>
 								?>
 							<?php endif; ?>
 						</td>
+
+
+						<!-- <td style="border:0;" colspan="1">&nbsp;</td> -->
+
+
+
 					<?php endforeach; ?>
 				</tr>
 				<!-- tracking button -->
@@ -128,21 +141,34 @@ if ( $customer_orders ) : ?>
 
 					<tr class="order order-trackem trackem-<?php echo $order->get_order_number(); ?>">
 						<td colspan="1"><strong>Product</strong></td>
+						<td colspan="1"><strong>Item Shipped</strong></td>
+						<td colspan="1"><strong>Quantity Shipped</strong></td>
 						<td colspan="1"><strong>Freight Provider</strong></td>
-						<td colspan="3"><strong>Tracking Number</strong></td>
+						<td colspan="1"><strong>Tracking Number</strong></td>
 					</tr>
 
 					<?php
 					$items = $order->get_items();
 					foreach ($items as $item_id => $item_data) {
-						if (strlen($item_data['tracking_item_number']) > 0 && strlen($item_data['tracking_item_freight_provider']) > 0) {
+
+						  $shippcount = wc_get_order_item_meta( $item_id, "number_of_shipments_$item_id", true );
+							$_z = intval($shippcount) + 1;
+
+							for ($x=1 ; $x < $_z; $x++) {
+
 							echo '<tr style="border:0;" class="order order-trackem trackem-content-'.$order->get_order_number().'">';
-							echo '<td style="border:0;" colspan="1">'.$item_data['name'].'</td>';
-							echo '<td style="border:0;" colspan="1">'.$item_data['tracking_item_freight_provider'].'</td>';
-							echo '<td style="border:0;" colspan="2">'.$item_data['tracking_item_number'].'</td>';
+
+							if ($x == 1) {
+								echo '<td style="border:0;" colspan="1">'.$item_data["name"].'</td>';
+							} else {
+								echo '<td style="border:0;" colspan="1">&nbsp;</td>';
+							}
+							echo '<td style="border:0;" colspan="1">'.$item_data["tracking_item_shipped$x"].'</td>';
+							echo '<td style="border:0;" colspan="1">'.$item_data["tracking_item_qty$x"].'</td>';
+							echo '<td style="border:0;" colspan="1">'.$item_data["tracking_item_freight_provider$x"].'</td>';
+							echo '<td style="border:0;" colspan="1">'.$item_data["tracking_item_number$x"].'</td>';
 							echo '</tr>';
 						}
-
 					}
 					?>
 				<?php endif; ?><!-- END  tracking button stuff  -->
