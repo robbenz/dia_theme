@@ -48,13 +48,6 @@ if ( $customer_orders ) : ?>
 				<?php foreach ( $my_orders_columns as $column_id => $column_name ) : ?>
 					<th class="<?php echo esc_attr( $column_id ); ?>"><span class="nobr"><?php echo esc_html( $column_name ); ?></span></th>
 				<?php endforeach; ?>
-
-
-
-					<!-- <th style="border:0;" colspan="1">&nbsp;</th> -->
-
-
-
 			</tr>
 		</thead>
 
@@ -118,12 +111,6 @@ if ( $customer_orders ) : ?>
 								?>
 							<?php endif; ?>
 						</td>
-
-
-						<!-- <td style="border:0;" colspan="1">&nbsp;</td> -->
-
-
-
 					<?php endforeach; ?>
 				</tr>
 				<!-- tracking button -->
