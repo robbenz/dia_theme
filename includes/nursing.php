@@ -85,8 +85,14 @@ if ($sale_count >= 5 ) {
 }
 
 ?>
-          <a style="margin-top:1em;" href="#" class="eModal-2">
-<img src="<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png" alt="Instructional Medical Equipment" onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education-hv.png';" onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/catalog-requst-healthcare-education.png';"/></a>
+<a style="margin-top:1em;" href="#" class="eModal-2">
+  <img
+  src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school.png"
+  alt="Instructional Medical Equipment"
+  onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school-hv.png';" 
+  onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school.png';"
+  />
+</a>
 
 
 
