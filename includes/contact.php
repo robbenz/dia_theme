@@ -43,6 +43,10 @@ get_template_part('includes/header');
             <p>Phone: (877) 593-6011 ext: 116
               <br> E-mail:
               <a href="mailto:CustomerService@diamedicalusa.com">CustomerService@DiaMedicalUSA.com</a>
+              <br>
+              Online Form:&nbsp;
+              <a href="<?php echo site_url(); ?>/customer-service-request-form/">Customer Service Web Form</a>
+
             </p>
 
             <h3>Accounting Department</h3>
