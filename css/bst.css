@@ -828,6 +828,9 @@ a.top-menu-facility-filter li {margin: 9px auto;padding: 8px; font-weight: 600;f
 #menu_all_main .col-md-3{padding-right:1px;}
 /*** END ***/
 
+ul#no_col_layout {columns: 1000px 1;}
+#product-88554 #accordion-1 ul {columns: 1000px 1;}
+
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
 font-family: 'ristretto_promedium', Arial, sans-serif;

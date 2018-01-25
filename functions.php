@@ -1220,6 +1220,18 @@ function dia_order_quote_header_drop() {
       'description' => __( 'Do you want the SLS logo or the MedMattress.com logo on your quote PDF?' )
     )
   );
+    woocommerce_wp_select(
+      array(
+        'id'          => 'dia_order_quote_subject_line',
+        'label'       => __( 'Subject Line<br />', 'woocommerce' ),
+        'options'     => array(
+          'subject1'  => __( 'Shipping Calculated - Order Quote #EC-{quote_number} Now', 'woocommerce' ),
+          'subject2'     => __( 'sup dawg - Order Quote #EC-{quote_number}', 'woocommerce' )
+        ),
+        'desc_tip'    => 'true',
+        'description' => __( 'are you gay or something?' )
+      )
+    );
 }
 
 // save it
@@ -1233,6 +1245,13 @@ function dia_quote_image_pdf() {
     }
     else {
       update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
+    }
+    $dia_order_quote_subject_line = $_POST['dia_order_quote_subject_line'];
+    if( !empty( $dia_order_quote_subject_line ) ) {
+      update_post_meta( $post->ID, 'dia_order_quote_subject_line', esc_attr( $dia_order_quote_subject_line ) );
+    }
+    else {
+      update_post_meta( $post->ID, 'dia_order_quote_subject_line', esc_attr( $dia_order_quote_subject_line ) );
     }
   }
 }
