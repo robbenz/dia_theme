@@ -81,6 +81,8 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#dia-cust-fav-role-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-tab-meta-box h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#dia-search-pri-meta-box h2 {background-color: #00426a; color:#fff;}' );
+  wp_add_inline_style( 'wp-admin', '#dia_order_quote_header_drop h2 {background-color: #00426a; color:#fff;}' );
+  wp_add_inline_style( 'wp-admin', '#yith-ywraq-metabox-order h2 {background-color: #00426a; color:#fff;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_number{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_freight_provider{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_shipped{display:none;}' );
@@ -1132,21 +1134,22 @@ function add_image_insert_override($sizes){
 add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
 function change_attachement_image_attributes($attr, $attachment) {
 global $post;
-
-if ( $post->post_type == 'product' ) {
-  $title = $post->post_title;
-  $content = get_the_content();
-  $product = wc_get_product( $post->ID );
-  $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-  $single_cat = array_shift( $product_cats );
-  $parentcats = get_ancestors($single_cat->term_id, 'product_cat');
-  if ( function_exists('is_dia_part') && is_dia_part() ) {
-    $attr['alt'] = $title .' | ' . $single_cat->name;
-    $attr['title'] = $content ;
-  }
-  if ( in_array( 5310, $parentcats ) ) { // stretcher pads
+if(!is_admin()){
+  if ( $post->post_type == 'product' ) {
+    $title = $post->post_title;
+    $content = get_the_content();
+    $product = wc_get_product( $post->ID );
+    $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+    $single_cat = array_shift( $product_cats );
+    $parentcats = get_ancestors($single_cat->term_id, 'product_cat');
+    if ( function_exists('is_dia_part') && is_dia_part() ) {
       $attr['alt'] = $title .' | ' . $single_cat->name;
-      $attr['title'] = $title;
+      $attr['title'] = $content ;
+    }
+    if ( in_array( 5310, $parentcats ) ) { // stretcher pads
+        $attr['alt'] = $title .' | ' . $single_cat->name;
+        $attr['title'] = $title;
+      }
     }
   }
   return $attr;
@@ -1156,6 +1159,86 @@ if ( $post->post_type == 'product' ) {
 /*** var_dump_ array/string all cute and pretty  ***/
 function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
+
+
+
+/*** SOME QUOTING STUFF ***/
+
+/*** Add a custom action to order actions select box on edit order page ***/
+add_action( 'woocommerce_order_actions', 'dia_update_customer_info_quoting' );
+function dia_update_customer_info_quoting( $actions ) {
+	global $theorder;
+  if ( $theorder->post_status == 'wc-ywraq-new' ) {
+    	$actions['wc_update_customer_order_action'] = __( 'Update Customer Info For Quote', 'woocommerce' );
+	}
+	return $actions;
+}
+/*** END ***/
+add_action( 'woocommerce_order_action_wc_update_customer_order_action', 'dia_process_update_customer_info_quoting' );
+function dia_process_update_customer_info_quoting( $order ) {
+
+  $ywraw_email_check = get_post_meta($order->id, '_billing_email', true);
+  $ywraw_name_check  = get_post_meta($order->id, '_billing_first_name', true);
+  $ywraw_name_check .= ' ';
+  $ywraw_name_check .= get_post_meta($order->id, '_billing_last_name', true);
+
+  update_post_meta ($order->id, 'ywraq_customer_email', $ywraw_email_check );
+  update_post_meta ($order->id, 'ywraq_customer_name', $ywraw_name_check );
+  update_post_meta ($order->id, '_ywraq_safe_submit_field', 'send_quote' );
+  update_post_meta ($order->id, 'ywraq_raq', 'yes' );
+
+}
+
+// Adding Meta container
+// add_action( 'add_meta_boxes', 'dia_shipping_admin_add_meta_boxes' );
+// function dia_shipping_admin_add_meta_boxes() {
+//   add_meta_box( 'send_some_tracking_info', __('specs_dump','woocommerce'), 'dia_specs_dump', 'shop_order', 'normal', 'high', NULL );
+// }
+// function dia_specs_dump() {
+//   global $post;
+//   $post = get_post( $post );
+//   _pre($post);
+// }
+/*** END ***/
+
+// Adding Meta container
+add_action( 'add_meta_boxes', 'dia_order_quote_header' );
+function dia_order_quote_header() {
+  add_meta_box( 'dia_order_quote_header_drop', __('Header Logo &amp; probably some other stuff later','woocommerce'), 'dia_order_quote_header_drop', 'shop_order', 'normal', 'high', NULL );
+}
+function dia_order_quote_header_drop() {
+  woocommerce_wp_select(
+    array(
+      'id'          => 'dia_order_quote_header_drop_option',
+      'label'       => __( 'Header Logo For Quote<br />', 'woocommerce' ),
+      'options'     => array(
+        'not_appl'        => __( 'N/A', 'woocommerce' ),
+        'nursing_school'  => __( 'Nursing School SLS', 'woocommerce' ),
+        'hospital_mm'     => __( 'Hospital MedMattress', 'woocommerce' )
+      ),
+      'desc_tip'    => 'true',
+      'description' => __( 'Do you want the SLS logo or the MedMattress.com logo on your quote PDF?' )
+    )
+  );
+}
+
+// save it
+add_action('save_post', 'dia_quote_image_pdf', 10, 3);
+function dia_quote_image_pdf() {
+  global $post;
+  if ($post->post_type == 'shop_order') {
+    $dia_order_quote_header_drop_option = $_POST['dia_order_quote_header_drop_option'];
+    if( !empty( $dia_order_quote_header_drop_option ) ) {
+      update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
+    }
+    else {
+      update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
+    }
+  }
+}
+/*** END ***/
+
+
 
 /*** Partition arrays into multiple arrays - second argument ***/
 function partition(Array $list, $p) {
@@ -1173,7 +1256,7 @@ function partition(Array $list, $p) {
 }
 /*** END ***/
 
-
+/*** diaLink() ***/
 function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
   if ( $cat == 'cat' ) {
     $cat_slug = get_term_by('slug', $slug, 'product_cat', 'ARRAY_A');
@@ -1206,27 +1289,7 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
     }
   }
 }
-
-/*** Schedule Clean up the for db options that RAQ plugin makes every day ***/
-/*
-add_action( 'my_scheduled_event', 'prefix_my_scheduled_event' );
-
-function prefix_my_scheduled_event() {
-  global $wpdb;
-  $wpdb->query(
-    'DELETE FROM `wp_options` WHERE `option_name` LIKE "_yith_ywraq_session_%"'
-  );
- }
-
-$timestamp   = strtotime( '2017-09-21 4:20:00' ); // 4:20 is as good a time as any.
-$recurrence  = 'daily';
-$hook        = 'my_scheduled_event';
-
-if ( ! wp_next_scheduled( 'my_scheduled_event' ) ) {
-  wp_schedule_event( $timestamp, $recurrence, $hook);
-}
-*/
-/*** END Schedule ***/
+/*** END ***/
 
 
 // update some shit

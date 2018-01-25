@@ -80,7 +80,7 @@ $sale_count = count($sale_result);
 if ($sale_count >= 5 ) {
   $clean_ns_sale =  implode (",", $sale_result);
   echo '<div style="clear:both;"></div>';
-  echo '<h3 class="slider-headers">On Sale This Month!</h3>';
+  echo '<h3 class="slider-headers">Free Shipping On These Products!</h3>';
   echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$clean_ns_sale.'"]' );
 }
 
@@ -89,7 +89,7 @@ if ($sale_count >= 5 ) {
   <img
   src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school.png"
   alt="Instructional Medical Equipment"
-  onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school-hv.png';" 
+  onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school-hv.png';"
   onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school.png';"
   />
 </a>

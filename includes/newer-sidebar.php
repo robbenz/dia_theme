@@ -145,6 +145,9 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 	            <?php
 						endforeach;
 					else:
+
+						if ( get_post_type( get_the_ID() ) == 'product' ) :
+
 						$find_products = array(
 							'post_type' 	=> 'product',
 							'product_cat' => $grabID->slug,
@@ -158,7 +161,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 										<a href="<?php echo $loop->post->guid; ?>"><?php echo $loop->post->post_title ; ?></a>
 									</td>
 								</tr>
-							<?php endwhile; endif; ?>
+							<?php endwhile; endif; endif;?>
 						</table>
 					</div> <!-- .panel-body -->
 				</div><!-- .panel-collapse .collapse -->
