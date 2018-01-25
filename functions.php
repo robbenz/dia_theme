@@ -1226,10 +1226,10 @@ function dia_order_quote_header_drop() {
         'label'       => __( 'Subject Line<br />', 'woocommerce' ),
         'options'     => array(
           'subject1'  => __( 'Shipping Calculated - Order Quote #EC-{quote_number} Now', 'woocommerce' ),
-          'subject2'     => __( 'sup dawg - Order Quote #EC-{quote_number}', 'woocommerce' )
+          'subject2'  => __( 'Your DiaMedicalUSA.com Quote #EC-{quote_number} Is Attached', 'woocommerce' )
         ),
         'desc_tip'    => 'true',
-        'description' => __( 'are you gay or something?' )
+        'description' => __( 'What subject line do you want?' )
       )
     );
 }
