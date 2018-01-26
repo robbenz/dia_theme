@@ -102,7 +102,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th><?php _e( 'Total (Before Shipping Cost)', 'woocommerce' ); ?></th>
+
+			<?php if( WC()->cart->get_cart_subtotal() < WC()->cart->get_total() ): ?>
+				<th><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<?php else : ?>
+				<th><?php _e( 'Total (Before Shipping Cost)', 'woocommerce' ); ?></th>
+			<?php endif ; ?>
+
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 

@@ -1032,6 +1032,7 @@ function t_brady_cart_page_button() {
   $cat_check = false;
 
   foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+
       $product = $cart_item['data'];
       foreach ($cat_array as $cats) {
         if ( has_term( $cats, 'product_cat', $product->id ) ) {
@@ -1041,13 +1042,16 @@ function t_brady_cart_page_button() {
         }
     }
   }
-
+  $first = true;
   if ( $cat_check ) {
-      echo '<a style="font-size:1.169em;" target="_blank" href="https://diamedicalusa.com/iv-bag-waiver/">';
-      echo '**Some of the items in your cart require this waiver before they will ship';
-      echo '</a>';
+    echo '<a style="font-size:1.169em;" target="_blank" href="https://diamedicalusa.com/iv-bag-waiver/">';
+    echo '**Some of the items in your cart require this waiver before they will ship';
+    echo '</a>';
+    $first = false;
   }
-
+  foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+    if(!$first) break;
+  }
 }
 /*** END ***/
 
