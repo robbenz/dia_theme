@@ -1311,15 +1311,16 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 // }
 /*** END ***/
 
+
+
 // update some shit
 //
-// $update_hrbedss = array (
-//   '67011',
-//   '67012'
+// $update_stuff = array (
+//
 // );
 //
-// foreach ($update_hrbedss as $bed69) {
-//   //update_post_meta( $bed69, 'dia_whitespace_adj', 'yes' );
-//   //update_post_meta( $bed69, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
-//   //update_post_meta( $bed69, '_thumbnail_id', '54289' );
+// foreach ($update_stuff as $thing) {
+//   //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
+//   //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
+//   update_post_meta( $thing, '_thumbnail_id', '61496' );
 // }
