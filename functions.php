@@ -828,7 +828,6 @@ function dia_last_css_enqueue_scripts() {
 }
 /* END */
 
-
 add_filter('woocommerce_registration_redirect', 'dia_wc_registration_redirect');
 function dia_wc_registration_redirect( $redirect_to ) {
      $redirect_to = '/medical-equipment';
@@ -1273,7 +1272,6 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 }
 /*** END ***/
 
-
 /*** Create user account when new customer profile form submits ***/
 // add_action( 'vfbp_after_email', 'create_dia_profile_account', 10, 2 );
 //
@@ -1297,8 +1295,6 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 // }
 /*** END ***/
 
-
-
 // Adding Meta container
 // add_action( 'add_meta_boxes', 'dia_shipping_admin_add_meta_boxes' );
 // function dia_shipping_admin_add_meta_boxes() {
@@ -1310,7 +1306,6 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 //   _pre($post);
 // }
 /*** END ***/
-
 
 
 // update some shit
