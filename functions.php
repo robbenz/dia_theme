@@ -1003,7 +1003,6 @@ function red_flag_shortcode() {
 add_shortcode( 'RED_FLAG', 'red_flag_shortcode' );
 /*** END ***/
 
-
 /*** Display Product Title at link in email ***/
 add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
 function display_product_title_as_link( $item_name, $item ) {
@@ -1070,7 +1069,6 @@ function product_thumbnail_wrapper() {
 }
 add_action( 'woocommerce_before_shop_loop', 'product_thumbnail_wrapper' );
 
-
 if ( ! function_exists( 'woocommerce_subcategory_thumbnail' ) ) {
   function woocommerce_subcategory_thumbnail( $category ) {
     $small_thumbnail_size   = apply_filters( 'single_product_small_thumbnail_size', 'shop_catalog' );
@@ -1111,29 +1109,6 @@ function add_image_insert_override($sizes){
 }
 /*** END ***/
 
-/*** Create user account when new customer profile form submits ***/
-// add_action( 'vfbp_after_email', 'create_dia_profile_account', 10, 2 );
-//
-// function create_dia_profile_account( $entry_id, $form_id  ){
-//   if ($form_id == 9) {
-//
-//
-// // vfb-field-298
-//
-//
-//   $username = $_POST['vfb-field-233']['first'] . $_POST['vfb-field-233']['last'];
-//   $email = $_POST['vfb-field-236'];
-//
-//   $pass = $_POST['vfb-field-'];
-//
-//   $exists = email_exists( $email );
-//      if (! $exists ) {
-//        wp_create_user( $username, $pass, $email );
-//      }
-//    }
-// }
-/*** END ***/
-
 /*** Change images alt and title tag for dia_parts ***/
 add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
 function change_attachement_image_attributes($attr, $attachment) {
@@ -1164,10 +1139,7 @@ if(!is_admin()){
 function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
 
-
-
 /*** SOME QUOTING STUFF ***/
-
 /*** Add a custom action to order actions select box on edit order page ***/
 add_action( 'woocommerce_order_actions', 'dia_update_customer_info_quoting' );
 function dia_update_customer_info_quoting( $actions ) {
@@ -1178,9 +1150,9 @@ function dia_update_customer_info_quoting( $actions ) {
 	return $actions;
 }
 /*** END ***/
+
 add_action( 'woocommerce_order_action_wc_update_customer_order_action', 'dia_process_update_customer_info_quoting' );
 function dia_process_update_customer_info_quoting( $order ) {
-
   $ywraw_email_check = get_post_meta($order->id, '_billing_email', true);
   $ywraw_name_check  = get_post_meta($order->id, '_billing_first_name', true);
   $ywraw_name_check .= ' ';
@@ -1192,18 +1164,6 @@ function dia_process_update_customer_info_quoting( $order ) {
   update_post_meta ($order->id, 'ywraq_raq', 'yes' );
 
 }
-
-// Adding Meta container
-// add_action( 'add_meta_boxes', 'dia_shipping_admin_add_meta_boxes' );
-// function dia_shipping_admin_add_meta_boxes() {
-//   add_meta_box( 'send_some_tracking_info', __('specs_dump','woocommerce'), 'dia_specs_dump', 'shop_order', 'normal', 'high', NULL );
-// }
-// function dia_specs_dump() {
-//   global $post;
-//   $post = get_post( $post );
-//   _pre($post);
-// }
-/*** END ***/
 
 // Adding Meta container
 add_action( 'add_meta_boxes', 'dia_order_quote_header' );
@@ -1237,7 +1197,6 @@ function dia_order_quote_header_drop() {
       )
     );
 }
-
 // save it
 add_action('save_post', 'dia_quote_image_pdf', 10, 3);
 function dia_quote_image_pdf() {
@@ -1262,8 +1221,6 @@ function dia_quote_image_pdf() {
   }
 }
 /*** END ***/
-
-
 
 /*** Partition arrays into multiple arrays - second argument ***/
 function partition(Array $list, $p) {
@@ -1316,6 +1273,43 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 }
 /*** END ***/
 
+
+/*** Create user account when new customer profile form submits ***/
+// add_action( 'vfbp_after_email', 'create_dia_profile_account', 10, 2 );
+//
+// function create_dia_profile_account( $entry_id, $form_id  ){
+//   if ($form_id == 9) {
+//
+//
+// // vfb-field-298
+//
+//
+//   $username = $_POST['vfb-field-233']['first'] . $_POST['vfb-field-233']['last'];
+//   $email = $_POST['vfb-field-236'];
+//
+//   $pass = $_POST['vfb-field-'];
+//
+//   $exists = email_exists( $email );
+//      if (! $exists ) {
+//        wp_create_user( $username, $pass, $email );
+//      }
+//    }
+// }
+/*** END ***/
+
+
+
+// Adding Meta container
+// add_action( 'add_meta_boxes', 'dia_shipping_admin_add_meta_boxes' );
+// function dia_shipping_admin_add_meta_boxes() {
+//   add_meta_box( 'send_some_tracking_info', __('specs_dump','woocommerce'), 'dia_specs_dump', 'shop_order', 'normal', 'high', NULL );
+// }
+// function dia_specs_dump() {
+//   global $post;
+//   $post = get_post( $post );
+//   _pre($post);
+// }
+/*** END ***/
 
 // update some shit
 //
