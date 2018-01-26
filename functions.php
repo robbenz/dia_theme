@@ -1238,20 +1238,22 @@ function dia_order_quote_header_drop() {
 add_action('save_post', 'dia_quote_image_pdf', 10, 3);
 function dia_quote_image_pdf() {
   global $post;
-  if ($post->post_type == 'shop_order') {
-    $dia_order_quote_header_drop_option = $_POST['dia_order_quote_header_drop_option'];
-    if( !empty( $dia_order_quote_header_drop_option ) ) {
-      update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
-    }
-    else {
-      update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
-    }
-    $dia_order_quote_subject_line = $_POST['dia_order_quote_subject_line'];
-    if( !empty( $dia_order_quote_subject_line ) ) {
-      update_post_meta( $post->ID, 'dia_order_quote_subject_line', esc_attr( $dia_order_quote_subject_line ) );
-    }
-    else {
-      update_post_meta( $post->ID, 'dia_order_quote_subject_line', esc_attr( $dia_order_quote_subject_line ) );
+  if (is_admin()){
+    if ($post->post_type == 'shop_order') {
+      $dia_order_quote_header_drop_option = $_POST['dia_order_quote_header_drop_option'];
+      if( !empty( $dia_order_quote_header_drop_option ) ) {
+        update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
+      }
+      else {
+        update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
+      }
+      $dia_order_quote_subject_line = $_POST['dia_order_quote_subject_line'];
+      if( !empty( $dia_order_quote_subject_line ) ) {
+        update_post_meta( $post->ID, 'dia_order_quote_subject_line', esc_attr( $dia_order_quote_subject_line ) );
+      }
+      else {
+        update_post_meta( $post->ID, 'dia_order_quote_subject_line', esc_attr( $dia_order_quote_subject_line ) );
+      }
     }
   }
 }
