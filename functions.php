@@ -812,6 +812,20 @@ add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
 }
 /* END */
 
+/**
+ *Reduce the strength requirement on the woocommerce password.
+ *
+ * Strength Settings
+ * 3 = Strong (default)
+ * 2 = Medium
+ * 1 = Weak
+ * 0 = Very Weak / Anything
+ */
+function reduce_woocommerce_min_strength_requirement( $strength ) {
+    return 1;
+}
+add_filter( 'woocommerce_min_password_strength', 'reduce_woocommerce_min_strength_requirement' );
+
 /* bst.css Load Last Version */
 add_action( 'wp_enqueue_scripts', 'dia_last_css_enqueue_scripts', 999 );
 function dia_last_css_enqueue_scripts() {
