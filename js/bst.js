@@ -159,7 +159,7 @@
 
 
 
-      findit = $(location).attr('search').replace('?', '');
+      var findit = $(location).attr('search').replace('?', '');
       $('#vfb-field-315').val(findit);
 
 
