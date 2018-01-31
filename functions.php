@@ -1246,7 +1246,7 @@ function my_quotes_stuff_button($wp_admin_bar) {
         $args = array(
           'id'    => 'my_quotes_button_admin',
           'title' => 'My Quotes',
-          'href'  => $URL.'/wp-admin/edit.php?&post_type=shop_order&_current_user='.$dia_user_id,
+          'href'  => $URL.'/wp-admin/edit.php?&post_type=shop_order&_customer_user='.$dia_user_id,
           'meta'  => array(
             'class' => 'my_quotes_button_admin',
             'title' => 'View Quotes That I Created'
