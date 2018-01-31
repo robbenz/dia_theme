@@ -203,7 +203,7 @@ if(have_posts()): while(have_posts()): the_post();
             $available_variations = $product->get_available_variations();
             ?>
 
-              <select id="var_pro_drop_<?php echo $id; ?>" >
+              <select style="width:65%;float:left;" id="var_pro_drop_<?php echo $id; ?>" >
                 <option class="nothing" value="select-option">Select Option</option>
 
                 <?php foreach ( $available_variations as $attribute_name => $options ) :
