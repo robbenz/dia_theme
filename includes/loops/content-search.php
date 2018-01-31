@@ -225,7 +225,7 @@ if(have_posts()): while(have_posts()): the_post();
                $dia_var_cost         = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost', true );
                $dia_var_cost_fi      = floatval($dia_var_cost);
                $var_vend2cost        = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost2', true );
-               // $wpnonce              = wp_create_nonce( 'add-request-quote-' . $_AV[ 'variation_id' ]);
+               $wpnonce              = wp_create_nonce( 'add-request-quote-' . $_AV[ 'variation_id' ]);
                ?>
 
                <div style="color:#fff;padding:0.05em;" class="var_specs_wrap" id="var_specs_wrap_<?php echo $_AV[ 'variation_id' ]; ?>">
