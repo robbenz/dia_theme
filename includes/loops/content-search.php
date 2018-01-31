@@ -225,11 +225,11 @@ if(have_posts()): while(have_posts()): the_post();
                $dia_var_cost         = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost', true );
                $dia_var_cost_fi      = floatval($dia_var_cost);
                $var_vend2cost        = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost2', true );
-               $wpnonce              = wp_create_nonce( 'add-request-quote-' . $_AV[ 'variation_id' ]);
+               // $wpnonce              = wp_create_nonce( 'add-request-quote-' . $_AV[ 'variation_id' ]);
                ?>
 
                <div style="color:#fff;padding:0.05em;" class="var_specs_wrap" id="var_specs_wrap_<?php echo $_AV[ 'variation_id' ]; ?>">
-                 <div class="yith-ywraq-add-to-quote add-to-quote-<?php echo $_AV[ 'variation_id' ]; ?>">
+                 <div style="float: right; margin-top: -10px; margin-bottom: 6px;" class="yith-ywraq-add-to-quote add-to-quote-<?php echo $_AV[ 'variation_id' ]; ?>">
                    <div class="yith-ywraq-add-button show" style="display: block;">
                      <a href="#" class="add-request-quote-button button" data-product_id="<?php echo $_AV[ 'variation_id' ]; ?>" data-wp_nonce="<?php echo $wpnonce ?>">Add to Quote</a>
                    </div>

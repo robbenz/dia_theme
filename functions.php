@@ -956,7 +956,7 @@ add_action('admin_bar_menu', 'back_search_toolbar_link', 999);
 // HTML for Jeff Red flag protocol
 function html_red_flag_code() {
   global $product;
-	echo '<form id="red_flag_protocol" action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
+	echo '<form style="clear:both;" id="red_flag_protocol" action="' . esc_url( $_SERVER['REQUEST_URI'] ) . '" method="post">';
 	echo '<p><input id="red_flag_protocol_submitted" type="submit" name="red-flag-protocol-submitted';
   echo $product->id;
   echo '" value="Alert Jeff" style="background-color: #d6001c;border: none;font-weight: 600;margin-top:5px;"></p>';
@@ -1233,6 +1233,35 @@ function dia_quote_image_pdf() {
     }
   }
 }
+
+
+
+// Add Custom BACK TO SEARCH link to admin bar
+function my_quotes_stuff_button($wp_admin_bar) {
+
+    if( current_user_can('shop_manager') || current_user_can('administrator') ) {
+      $dia_user = wp_get_current_user();
+      $dia_user_id = esc_html( $dia_user->ID );
+      $URL = site_url();
+        $args = array(
+          'id'    => 'my_quotes_button_admin',
+          'title' => 'My Quotes',
+          'href'  => $URL.'/wp-admin/edit.php?&post_type=shop_order&_customer_user='.$dia_user_id,
+          'meta'  => array(
+            'class' => 'my_quotes_button_admin',
+            'title' => 'View Quotes That I Created'
+          )
+        );
+        $wp_admin_bar -> add_node($args);
+      }
+    }
+
+
+add_action('admin_bar_menu', 'my_quotes_stuff_button', 999);
+/* END */
+
+
+
 /*** END ***/
 
 /*** Partition arrays into multiple arrays - second argument ***/
