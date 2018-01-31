@@ -158,15 +158,10 @@
       /*** END ***/
 
 
-        $(window).load(function() {
-            $findit = jQuery(location).attr('search');
-            $finditSlug = $findit.replace('?', '');
 
-            $(function() {
-                $('#vfb-field-315').val($finditSlug);
-            });
+      findit = $(location).attr('search').replace('?', '');
+      $('#vfb-field-315').val(findit);
 
-        });
 
 
 
