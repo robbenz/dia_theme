@@ -160,10 +160,10 @@
 
         $(window).load(function() {
             $findit = jQuery(location).attr('search');
-            $finditSlug = $mySpot.replace('?', '');
+            $finditSlug = $findit.replace('?', '');
 
             $(function() {
-                $('#vfb-field-315').val($finditSlug).css('text-transform', 'capitalize');
+                $('#vfb-field-315').val($finditSlug);
             });
 
         });
