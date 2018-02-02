@@ -158,11 +158,11 @@
       /*** END ***/
 
 
-
-      var findit = $(location).attr('search').replace('?', '');
-      $('#vfb-field-315').val(findit);
-
-
+      // 
+      // var findit = $(location).attr('search').replace('?', '');
+      // $('#vfb-field-315').val(findit);
+      //
+      //
 
 
 
