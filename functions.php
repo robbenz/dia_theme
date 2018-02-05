@@ -1236,7 +1236,7 @@ function dia_quote_image_pdf() {
 
 
 
-// try this -- didnt work 
+// try this -- didnt work
 // add_filter( 'woocommerce_payment_complete_order_status', 'dia_purchase_order_make_processing', 10, 2 );
 //
 // function dia_purchase_order_make_processing( $order_status, $order_id ) {
@@ -1271,7 +1271,6 @@ function my_quotes_stuff_button($wp_admin_bar) {
 
 add_action('admin_bar_menu', 'my_quotes_stuff_button', 999);
 /* END */
-
 
 
 /*** END ***/

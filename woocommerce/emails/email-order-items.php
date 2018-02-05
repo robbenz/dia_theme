@@ -42,6 +42,7 @@ foreach ( $items as $item_id => $item ) :
 					echo ' (#' . $_product->get_sku() . ')';
 				}
 
+
 				// allow other plugins to add additional product information here
 				do_action( 'woocommerce_order_item_meta_start', $item_id, $item, $order );
 

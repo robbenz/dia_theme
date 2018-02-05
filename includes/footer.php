@@ -91,7 +91,7 @@
 
 <?php wp_footer(); ?>
 <!-- begin olark code -->
-<script type="text/javascript" async>
+<!-- <script type="text/javascript" async>
 ;(function(o,l,a,r,k,y){if(o.olark)return;
 r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0];
 y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r);
@@ -102,7 +102,21 @@ y.configure=function(i,j){y("configure",i,j);k.c[i]=j};
 k=y._={s:[],t:[+new Date],c:{},l:a};
 })(window,document,"static.olark.com/jsclient/loader.js");
 /* Add configuration calls below this comment */
-olark.identify('7424-266-10-3934');</script>
+olark.identify('7424-266-10-3934');</script> -->
 <!-- end olark code -->
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a787cd04b401e45400cafba/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
