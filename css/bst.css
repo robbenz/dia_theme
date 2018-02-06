@@ -57,13 +57,8 @@ body {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-se
 a { color: #00426a; }
 /*** END ***/
 
-
-
-  #post_88646 h3, #post_61651 h3 {font-family: 'ristretto_promedium', Arial, sans-serif; color: #00426a; letter-spacing: 1.1px; font-size: 41px; text-transform: uppercase;}
-  #post_88646 p.vfb-help-block  {color:#000; font-size:13px; }
-
-img#bubble-image {display:none !important}
-
+#post_88646 h3, #post_61651 h3 {font-family: 'ristretto_promedium', Arial, sans-serif; color: #00426a; letter-spacing: 1.1px; font-size: 41px; text-transform: uppercase;}
+#post_88646 p.vfb-help-block  {color:#000; font-size:13px; }
 
 /* Sidebar */
 .sidebar { margin-top: 20px; width:25%; float:left; }
