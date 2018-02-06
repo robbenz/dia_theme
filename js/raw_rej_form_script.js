@@ -1,12 +1,12 @@
 jQuery(window).load(function() {
-  alert("hello world");
+  // alert("hello world");
 
-    // $mySpot = jQuery(location).attr('search');
-    // $mySlug = $mySpot.replace('?', '');
-    // $myCleanSlug = $mySlug.replace(/\-/g, ' ');
-    //
-    // jQuery(function() {
-    //     jQuery('#vfb-field-315').val($myCleanSlug).css('text-transform', 'capitalize');
-    // });
+    findMe = jQuery(location).attr('search');
+    changeMe = findMe.replace('?', '');
+    cleanMe = changeMe.replace(/\-/g, ' ');
+
+    jQuery(function() {
+        jQuery('#vfb-field-315').val(cleanMe).css('text-transform', 'capitalize');
+    });
 
 });
