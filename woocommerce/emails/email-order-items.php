@@ -60,10 +60,37 @@ foreach ( $items as $item_id => $item ) :
 				do_action( 'woocommerce_order_item_meta_end', $item_id, $item, $order );
 
 			?></td>
+
+
 			<td class="td" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"><?php echo apply_filters( 'woocommerce_email_order_item_quantity', $item['qty'], $item ); ?></td>
-            <td style="text-align:left; vertical-align:middle; border: 1px solid #eee;"><?php echo $_product->get_price_html(); ?></td>
-            <td class="td" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"><?php echo $order->get_formatted_line_subtotal( $item ); ?></td>
-		</tr>
+
+
+
+					<td scope="col" style="text-align:center;border: 1px solid #eee;"><?php
+
+				// echo $_product->get_price_html();
+
+				if ( isset( $item['line_total'] ) ) {
+					if ( isset( $item['line_subtotal'] ) && $item['line_subtotal'] != $item['line_total'] ) {
+						echo '<del>' . wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_order_currency() ) ) . '</del> ';
+					}
+					echo wc_price( $order->get_item_total( $item, false, true ), array( 'currency' => $order->get_order_currency() ) );
+				}
+
+					?>
+				</td>
+
+					<td scope="col" style="text-align:right;border: 1px solid #eee;"><?php
+					// echo apply_filters('ywraq_quote_subtotal_item', $order->get_formatted_line_subtotal( $item ), $item['line_total'], $_product);
+					//	 echo esc_attr( isset( $item['line_total'] ) ? $item['line_total'] : '' );
+					if ( isset( $item['line_total'] ) ) {
+						if ( isset( $item['line_subtotal'] ) && $item['line_subtotal'] != $item['line_total'] ) {
+							echo '<del>' . wc_price( $item['line_subtotal'], array( 'currency' => $order->get_order_currency() ) ) . '</del> ';
+						}
+						echo wc_price( $item['line_total'], array( 'currency' => $order->get_order_currency() ) );
+					}
+					?></td>
+
 		<?php
 	}
 

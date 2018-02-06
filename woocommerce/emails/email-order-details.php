@@ -39,6 +39,7 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 		</tr>
 	</thead>
 	<tbody>
+
 		<?php echo $order->email_order_items_table( array(
 			'show_sku'      => true,
 			'show_image'    => false,
@@ -46,6 +47,7 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 			'plain_text'    => $plain_text,
 			'sent_to_admin' => $sent_to_admin
 		) ); ?>
+
 	</tbody>
 	<tfoot>
 		<?php
@@ -62,6 +64,12 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 		?>
 	</tfoot>
 </table>
-<p class="email-ps"><strong>Please Note: Shipping Costs are still being calculated, and will be added to your total.</strong></p>
 
-<?php do_action( 'woocommerce_email_after_order_table', $order, $sent_to_admin, $plain_text, $email ); ?>
+<?php
+$is_ship_calc = get_post_meta($order->id, '_order_shipping', true);
+if (! intval($is_ship_calc) > 0 ){
+	echo '<p class="email-ps"><strong>Please Note: Shipping Costs are still being calculated, and will be added to your total.</strong></p>';
+}
+
+
+ do_action( 'woocommerce_email_after_order_table', $order, $sent_to_admin, $plain_text, $email ); ?>
