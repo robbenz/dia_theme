@@ -61,6 +61,7 @@ foreach ( $items as $item_id => $item ) :
 
 			?></td>
 
+
 			<td class="td" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;">
 				<?php echo apply_filters( 'woocommerce_email_order_item_quantity', $item['qty'], $item ); ?>
 			</td>
