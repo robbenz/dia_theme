@@ -1030,45 +1030,49 @@ function display_product_title_as_link( $item_name, $item ) {
 /*** END ***/
 
 /*** Display IV Bag Waiver when products are in your cart & checkout  ***/
-add_action( 'woocommerce_before_cart_totals', 't_brady_cart_page_button' );
-add_action( 'woocommerce_review_order_after_order_total', 't_brady_cart_page_button' );
-
-function t_brady_cart_page_button() {
-  $cat_array = array (
-    'iv-therapy',
-    'simulated-iv-bags',
-    'loaded-emergency-packs',
-    'loaded-crash-carts',
-    'refill-kits',
-    'practi-meds',
-    'supply-kits',
-    'simulation-bundles'
-  );
-  // Set False - then prove TRUE
-  $cat_check = false;
-
-  foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-
-      $product = $cart_item['data'];
-      foreach ($cat_array as $cats) {
-        if ( has_term( $cats, 'product_cat', $product->id ) ) {
-            $cat_check = true;
-            // break because we only need one "true" to matter here
-            break;
-        }
-    }
-  }
-  $first = true;
-  if ( $cat_check ) {
-    echo '<a style="font-size:1.169em;" target="_blank" href="https://diamedicalusa.com/iv-bag-waiver/">';
-    echo '**Some of the items in your cart require this waiver before they will ship';
-    echo '</a>';
-    $first = false;
-  }
-  foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-    if(!$first) break;
-  }
-}
+// add_action( 'woocommerce_before_cart_totals', 't_brady_cart_page_button' );
+// add_action( 'woocommerce_review_order_after_order_total', 't_brady_cart_page_button' );
+//
+// function t_brady_cart_page_button() {
+//   if ( is_user_logged_in() ) {
+//     if (!wp_doing_ajax()){
+//       $cat_array = array (
+//         'iv-therapy',
+//         'simulated-iv-bags',
+//         'loaded-emergency-packs',
+//         'loaded-crash-carts',
+//         'refill-kits',
+//         'practi-meds',
+//         'supply-kits',
+//         'simulation-bundles'
+//       );
+//       // Set False - then prove TRUE
+//       $cat_check = false;
+//
+//       foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+//
+//           $product = $cart_item['data'];
+//           foreach ($cat_array as $cats) {
+//             if ( has_term( $cats, 'product_cat', $product->id ) ) {
+//                 $cat_check = true;
+//                 // break because we only need one "true" to matter here
+//                 break;
+//             }
+//         }
+//       }
+//       $first = true;
+//       if ( $cat_check ) {
+//         echo '<a style="font-size:1.169em;" target="_blank" href="https://diamedicalusa.com/iv-bag-waiver/">';
+//         echo '**Some of the items in your cart require this waiver before they will ship';
+//         echo '</a>';
+//         $first = false;
+//       }
+//       foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+//         if(!$first) break;
+//       }
+//     }
+//   }
+// }
 /*** END ***/
 
 /*** Repairs Special Image ***/
@@ -1179,7 +1183,7 @@ function dia_process_update_customer_info_quoting( $order ) {
   update_post_meta ($order->id, 'ywraq_customer_name', $ywraw_name_check );
   update_post_meta ($order->id, '_ywraq_safe_submit_field', 'send_quote' );
   update_post_meta ($order->id, 'ywraq_raq', 'yes' );
-  update_post_meta ($order->id, '_dia_admin_quote', 'dia_admin_created' );
+//  update_post_meta ($order->id, '_dia_admin_quote', 'dia_admin_created' );
 
 }
 

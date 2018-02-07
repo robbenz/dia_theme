@@ -24,7 +24,7 @@ foreach ( $items as $item_id => $item ) :
 	$_product     = apply_filters( 'woocommerce_order_item_product', $order->get_product_from_item( $item ), $item );
 	$item_meta    = new WC_Order_Item_Meta( $item, $_product );
 
-	if ( apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
+	if ( apply_filters( 'woocommerce_order_item_visible', true, $item ) ) :
 		?>
 		<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_order_item_class', 'order_item', $item, $order ) ); ?>">
 			<td class="td" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; word-wrap:break-word;"><?php
@@ -61,43 +61,39 @@ foreach ( $items as $item_id => $item ) :
 
 			?></td>
 
+			<td class="td" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;">
+				<?php echo apply_filters( 'woocommerce_email_order_item_quantity', $item['qty'], $item ); ?>
+			</td>
 
-			<td class="td" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"><?php echo apply_filters( 'woocommerce_email_order_item_quantity', $item['qty'], $item ); ?></td>
-
-
-
-					<td scope="col" style="text-align:center;border: 1px solid #eee;"><?php
-
-				// echo $_product->get_price_html();
-
+			<td scope="col" style="text-align:center;border: 1px solid #eee;">
+				<?php
 				if ( isset( $item['line_total'] ) ) {
 					if ( isset( $item['line_subtotal'] ) && $item['line_subtotal'] != $item['line_total'] ) {
 						echo '<del>' . wc_price( $order->get_item_subtotal( $item, false, true ), array( 'currency' => $order->get_order_currency() ) ) . '</del> ';
 					}
 					echo wc_price( $order->get_item_total( $item, false, true ), array( 'currency' => $order->get_order_currency() ) );
 				}
+				?>
+			</td>
 
-					?>
-				</td>
-
-					<td scope="col" style="text-align:right;border: 1px solid #eee;"><?php
-					// echo apply_filters('ywraq_quote_subtotal_item', $order->get_formatted_line_subtotal( $item ), $item['line_total'], $_product);
-					//	 echo esc_attr( isset( $item['line_total'] ) ? $item['line_total'] : '' );
-					if ( isset( $item['line_total'] ) ) {
-						if ( isset( $item['line_subtotal'] ) && $item['line_subtotal'] != $item['line_total'] ) {
-							echo '<del>' . wc_price( $item['line_subtotal'], array( 'currency' => $order->get_order_currency() ) ) . '</del> ';
-						}
-						echo wc_price( $item['line_total'], array( 'currency' => $order->get_order_currency() ) );
+			<td scope="col" style="text-align:right;border: 1px solid #eee;">
+				<?php
+				if ( isset( $item['line_total'] ) ) {
+					if ( isset( $item['line_subtotal'] ) && $item['line_subtotal'] != $item['line_total'] ) {
+						echo '<del>' . wc_price( $item['line_subtotal'], array( 'currency' => $order->get_order_currency() ) ) . '</del> ';
 					}
-					?></td>
+					echo wc_price( $item['line_total'], array( 'currency' => $order->get_order_currency() ) );
+				}
+				?>
+			</td>
 
-		<?php
-	}
+<?php
+	endif ; // if woocommerce_order_item_visible line 27
 
 	if ( $show_purchase_note && is_object( $_product ) && ( $purchase_note = get_post_meta( $_product->id, '_purchase_note', true ) ) ) : ?>
-		<tr>
-			<td colspan="3" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"><?php echo wpautop( do_shortcode( wp_kses_post( $purchase_note ) ) ); ?></td>
-		</tr>
-	<?php endif; ?>
+	<tr>
+		<td colspan="3" style="text-align:left; vertical-align:middle; border: 1px solid #eee; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;"><?php echo wpautop( do_shortcode( wp_kses_post( $purchase_note ) ) ); ?></td>
+	</tr>
+<?php endif; ?>
 
 <?php endforeach; ?>
