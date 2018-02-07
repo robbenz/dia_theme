@@ -1179,6 +1179,7 @@ function dia_process_update_customer_info_quoting( $order ) {
   update_post_meta ($order->id, 'ywraq_customer_name', $ywraw_name_check );
   update_post_meta ($order->id, '_ywraq_safe_submit_field', 'send_quote' );
   update_post_meta ($order->id, 'ywraq_raq', 'yes' );
+  update_post_meta ($order->id, '_dia_admin_quote', 'dia_admin_created' );
 
 }
 
@@ -1238,28 +1239,6 @@ function dia_quote_image_pdf() {
   }
 }
 
-
-//
-// add_filter( 'woocommerce_payment_complete_order_status', 'dia_purchase_order_make_processing', 10, 2 );
-//
-// function dia_purchase_order_make_processing( $order_status, $order_id ) {
-//   $order = new WC_Order( $order_id );
-//   if ('on-hold' == $order->status) {
-//     return 'processing';
-//   }
-//   return $order_status;
-// }
-
-add_action( 'woocommerce_thankyou', 'dia_purchase_order_make_processing' );
-function dia_purchase_order_make_processing( $order_id ) {
-  $order = new WC_Order( $order_id );
-  if ('on-hold' == $order->status) {
-    $order->update_status( 'processing' );
-  }
-}
-
-
-
 // Add Custom BACK TO SEARCH link to admin bar
 function my_quotes_stuff_button($wp_admin_bar) {
 
@@ -1300,6 +1279,16 @@ function partition(Array $list, $p) {
         $mark += $incr;
     }
     return $partition;
+}
+/*** END ***/
+
+/*** change order status to processing after a purchase order payment, or whatver ***/
+add_action( 'woocommerce_thankyou', 'dia_purchase_order_make_processing' );
+function dia_purchase_order_make_processing( $order_id ) {
+  $order = new WC_Order( $order_id );
+  if ('on-hold' == $order->status) {
+    $order->update_status( 'processing' );
+  }
 }
 /*** END ***/
 
@@ -1379,9 +1368,9 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 // $update_stuff = array (
 //
 // );
-//
+
 // foreach ($update_stuff as $thing) {
 //   //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
 //   //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
-//   update_post_meta( $thing, '_thumbnail_id', '61496' );
+//   update_post_meta( $thing, 'dia_admin_quote', 'no' );
 // }
