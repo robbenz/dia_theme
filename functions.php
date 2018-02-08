@@ -248,15 +248,6 @@ function wc_register_form_password_repeat() {
 }
 /* END */
 
-//  --  remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0
-function benz_custom_shipping_free_label( $label ) {
-    $label =  str_replace( "(Free)", " ", $label );
-    $label =  str_replace( "(FREE!)", " ", $label );
-    return $label;
-}
-add_filter( 'woocommerce_cart_shipping_method_full_label' , 'benz_custom_shipping_free_label' );
-/* END */
-
 //  --   get rid of users "POSTS" cloumn, -- never use it
 add_action('manage_users_columns','remove_user_posts_column');
 function remove_user_posts_column($column_headers) {
@@ -412,6 +403,11 @@ function BENZ_wc_order_email_skus( $table, $order ) {
 add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
 /* END */
 
+
+
+
+/***** ALL SHIPPING STUFF TO FOLLOW *******/
+
 /**
  * Plugin Name: WooCommerce Enable Free Shipping on a Per Product Basis
  * Plugin URI: https://gist.github.com/BFTrick/d4a21524a8f7b25ec296
@@ -474,8 +470,6 @@ endif;
  * woocommerce_package_rates is a 2.1+ hook
  */
 add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available', 10, 2 );
-
-
 /**
  * Hide shipping rates when free shipping is available
  *
@@ -500,8 +494,115 @@ function hide_shipping_when_free_is_available( $rates, $package ) {
 	return $rates;
 }
 
-//  --  Add custom produt meta for parts condition
+//  --  remove '(Free)' or '(FREE!)' label text on cart page for Shipping and Handling if cost equal to $0
+function benz_custom_shipping_free_label( $label ) {
+    $label =  str_replace( "(Free)", " ", $label );
+    $label =  str_replace( "(FREE!)", " ", $label );
+    return $label;
+}
+add_filter( 'woocommerce_cart_shipping_method_full_label' , 'benz_custom_shipping_free_label' );
 
+// add custom shipping method to replace woocommerce jetpack
+add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
+function add_another_custom_flat_rate( $method, $rate ) {
+	$new_rate          = $rate;
+	$new_rate['id']    .= ':' . 'second_day_rate_name';
+	$new_rate['label'] = 'Next Day';
+	$new_rate['cost']  += 0;
+	// Add it to WC
+	$method->add_rate( $new_rate );
+
+}
+
+
+/*
+  Plugin Name: WooCommerce Your Shipping Method
+  Description: Test shipping method
+  Version: 1.0
+ */
+
+// function dia_quote_shipping_method_init() {
+//     if ( ! class_exists( 'WC_Your_Shipping_Method' ) ) {
+//
+//         class WC_Your_Shipping_Method extends WC_Shipping_Method {
+//             /**
+//                  * Constructor for your shipping class
+//                  *
+//                  * @access public
+//                  * @return void
+//                  */
+//                 public function __construct() {
+//                   global $post, $woocommerce, $post_id;
+//
+//                     $this->shipping_quote_cost = get_post_meta($post_id, '_order_shipping', true);
+//
+//                     $this->id                 = 'your_shipping_method'; // Id for your shipping method. Should be uunique.
+//                     $this->method_title       = __( 'Your Shipping Method' );  // Title shown in admin
+//                     $this->method_description = __( 'Description of your shipping method' ); // Description shown in admin
+//
+//                     $this->enabled            = "yes"; // This can be added as an setting but for this example its forced enabled
+//                     $this->title              = "My Shipping Method"; // This can be added as an setting but for this example its forced.
+//
+//                     $this->init();
+//                 }
+//
+//                 function init() {
+//                     // Load the settings API
+//                     $this->init_form_fields(); // This is part of the settings API. Override the method to add your own settings
+//                     $this->init_settings(); // This is part of the settings API. Loads settings you previously init.
+//
+//                     // Save settings in admin if you have any defined
+//                     add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
+//                 }
+//
+//                 /**
+//                  * calculate_shipping function.
+//                  *
+//                  * @access public
+//                  * @param mixed $package
+//                  * @return void
+//                  */
+//                 public function calculate_shipping( $package ) {
+//                     $rate = array(
+//                         'id' => $this->id,
+//                         'label' => $this->title,
+//                         'cost' => $this->shipping_quote_cost
+//                       //  'calc_tax' => 'per_item'
+//                     );
+//
+//                     // Register the rate
+//                     $this->add_rate( $rate );
+//                 }
+//             }
+//     }
+// }  // <-- note that the function is closed before the add_action('woocommerce_shipping_init')
+
+//
+// add_action( 'woocommerce_shipping_init', 'dia_quote_shipping_method_init' );
+//
+// function add_dia_quote_shipping_method( $methods ) {
+//     $methods[] = 'WC_Your_Shipping_Method';
+//     return $methods;
+// }
+//
+// add_filter( 'woocommerce_shipping_methods', 'add_dia_quote_shipping_method' );
+//
+
+
+
+
+
+// reset choesen shipping method so it appears properly from cart page to checkout page
+add_filter('woocommerce_shipping_chosen_method', 'dia_reset_default_shipping_method', 10, 2);
+function dia_reset_default_shipping_method( $method, $available_methods ) {
+	// get the id of the first method in the list
+	$method = key($available_methods);
+	return $method;
+}
+/*******  END SHIPING STUFF  *******/
+
+
+//  --  Add custom produt meta for parts condition
 // Display Fields
 add_action( 'woocommerce_product_options_general_product_data', 'woo_add_custom_general_fields' );
 // Save Fields
@@ -776,27 +877,6 @@ function dia_check_for_kids($parent_cat_ID) {
   if ( count($subcats) == 0 ) {
     return true;
   }
-}
-/* END */
-
-// add custom shipping method to replace woocommerce jetpack
-add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
-function add_another_custom_flat_rate( $method, $rate ) {
-	$new_rate          = $rate;
-	$new_rate['id']    .= ':' . 'second_day_rate_name';
-	$new_rate['label'] = 'Next Day';
-	$new_rate['cost']  += 0;
-	// Add it to WC
-	$method->add_rate( $new_rate );
-}
-/* END */
-
-// reset default shipping method
-add_filter('woocommerce_shipping_chosen_method', 'dia_reset_default_shipping_method', 10, 2);
-function dia_reset_default_shipping_method( $method, $available_methods ) {
-	// get the id of the first method in the list
-	$method = key($available_methods);
-	return $method;
 }
 /* END */
 
@@ -1287,13 +1367,13 @@ function partition(Array $list, $p) {
 /*** END ***/
 
 /*** change order status to processing after a purchase order payment, or whatver ***/
-add_action( 'woocommerce_thankyou', 'dia_purchase_order_make_processing' );
-function dia_purchase_order_make_processing( $order_id ) {
-  $order = new WC_Order( $order_id );
-  if ('on-hold' == $order->status) {
-    $order->update_status( 'processing' );
-  }
-}
+// add_action( 'woocommerce_thankyou', 'dia_purchase_order_make_processing' );
+// function dia_purchase_order_make_processing( $order_id ) {
+//   $order = new WC_Order( $order_id );
+//   if ('on-hold' == $order->status) {
+//     $order->update_status( 'processing' );
+//   }
+// }
 /*** END ***/
 
 /*** diaLink() ***/

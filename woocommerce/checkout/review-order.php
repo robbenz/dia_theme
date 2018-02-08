@@ -103,7 +103,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<tr class="order-total">
 
-			<?php if( WC()->cart->get_cart_subtotal() < WC()->cart->get_total() ): ?>
+			<?php
+			// this is not a good enough IF
+			if( WC()->cart->get_cart_subtotal() < WC()->cart->get_total() ): ?>
 				<th><?php _e( 'Total', 'woocommerce' ); ?></th>
 			<?php else : ?>
 				<th><?php _e( 'Total (Before Shipping Cost)', 'woocommerce' ); ?></th>
