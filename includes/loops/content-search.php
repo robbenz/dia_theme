@@ -228,7 +228,6 @@ if(have_posts()): while(have_posts()): the_post();
                $wpnonce              = wp_create_nonce( 'add-request-quote-' . $_AV[ 'variation_id' ]);
                ?>
                
-
                <div style="color:#fff;padding:0.05em;" class="var_specs_wrap" id="var_specs_wrap_<?php echo $_AV[ 'variation_id' ]; ?>">
                  <div style="float: right; margin-top: -10px; margin-bottom: 6px;" class="yith-ywraq-add-to-quote add-to-quote-<?php echo $_AV[ 'variation_id' ]; ?>">
                    <div class="yith-ywraq-add-button show" style="display: block;">

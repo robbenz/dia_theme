@@ -374,33 +374,37 @@ add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
  * @param  WC_Order $order
  * @return array
  */
-function dia_add_order_again_to_my_orders_actions( $actions, $order ) {
-	if ( $order->has_status( 'completed' ) ) {
-		$actions['order-again'] = array(
-			'url'  => wp_nonce_url( add_query_arg( 'order_again', $order->id ) , 'woocommerce-order_again' ),
-			'name' => __( 'Order Again', 'woocommerce' )
-		);
-	}
-	return $actions;
-}
-add_filter( 'woocommerce_my_account_my_orders_actions', 'dia_add_order_again_to_my_orders_actions', 50, 2 );
+ // test comment
+
+// function dia_add_order_again_to_my_orders_actions( $actions, $order ) {
+// 	if ( $order->has_status( 'completed' ) ) {
+// 		$actions['order-again'] = array(
+// 			'url'  => wp_nonce_url( add_query_arg( 'order_again', $order->id ) , 'woocommerce-order_again' ),
+// 			'name' => __( 'Order Again', 'woocommerce' )
+// 		);
+// 	}
+// 	return $actions;
+// }
+// add_filter( 'woocommerce_my_account_my_orders_actions', 'dia_add_order_again_to_my_orders_actions', 50, 2 );
 /*** END ***/
 
 // Edit order items table template defaults  -- Show Sku on emails
-function BENZ_wc_order_email_skus( $table, $order ) {
+// test comment
 
-	ob_start();
-
-	$template = $plain_text ? 'emails/plain/email-order-items.php' : 'emails/email-order-items.php';
-	wc_get_template( $template, array(
-		'order'                 => $order,
-		'items'                 => $order->get_items(),
-		'show_sku'              => true
-	) );
-
-	return ob_get_clean();
-}
-add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
+// function BENZ_wc_order_email_skus( $table, $order ) {
+//
+// 	ob_start();
+//
+// 	$template = $plain_text ? 'emails/plain/email-order-items.php' : 'emails/email-order-items.php';
+// 	wc_get_template( $template, array(
+// 		'order'                 => $order,
+// 		'items'                 => $order->get_items(),
+// 		'show_sku'              => true
+// 	) );
+//
+// 	return ob_get_clean();
+// }
+// add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
 /* END */
 
 
@@ -503,93 +507,67 @@ function benz_custom_shipping_free_label( $label ) {
 add_filter( 'woocommerce_cart_shipping_method_full_label' , 'benz_custom_shipping_free_label' );
 
 // add custom shipping method to replace woocommerce jetpack
-add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
-function add_another_custom_flat_rate( $method, $rate ) {
-	$new_rate          = $rate;
-	$new_rate['id']    .= ':' . 'second_day_rate_name';
-	$new_rate['label'] = 'Next Day';
-	$new_rate['cost']  += 0;
-	// Add it to WC
-	$method->add_rate( $new_rate );
 
-}
+// replace with commented out code below
 
 
-/*
-  Plugin Name: WooCommerce Your Shipping Method
-  Description: Test shipping method
-  Version: 1.0
- */
-
-// function dia_quote_shipping_method_init() {
-//     if ( ! class_exists( 'WC_Your_Shipping_Method' ) ) {
+// add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
+// function add_another_custom_flat_rate( $method, $rate ) {
+// 	$new_rate          = $rate;
+// 	$new_rate['id']    .= ':' . 'second_day_rate_name';
+// 	$new_rate['label'] = 'Next Day';
+// 	$new_rate['cost']  += 0;
+// 	// Add it to WC
+// 	$method->add_rate( $new_rate );
 //
-//         class WC_Your_Shipping_Method extends WC_Shipping_Method {
-//             /**
-//                  * Constructor for your shipping class
-//                  *
-//                  * @access public
-//                  * @return void
-//                  */
-//                 public function __construct() {
-//                   global $post, $woocommerce, $post_id;
-//
-//                     $this->shipping_quote_cost = get_post_meta($post_id, '_order_shipping', true);
-//
-//                     $this->id                 = 'your_shipping_method'; // Id for your shipping method. Should be uunique.
-//                     $this->method_title       = __( 'Your Shipping Method' );  // Title shown in admin
-//                     $this->method_description = __( 'Description of your shipping method' ); // Description shown in admin
-//
-//                     $this->enabled            = "yes"; // This can be added as an setting but for this example its forced enabled
-//                     $this->title              = "My Shipping Method"; // This can be added as an setting but for this example its forced.
-//
-//                     $this->init();
-//                 }
-//
-//                 function init() {
-//                     // Load the settings API
-//                     $this->init_form_fields(); // This is part of the settings API. Override the method to add your own settings
-//                     $this->init_settings(); // This is part of the settings API. Loads settings you previously init.
-//
-//                     // Save settings in admin if you have any defined
-//                     add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
-//                 }
-//
-//                 /**
-//                  * calculate_shipping function.
-//                  *
-//                  * @access public
-//                  * @param mixed $package
-//                  * @return void
-//                  */
-//                 public function calculate_shipping( $package ) {
-//                     $rate = array(
-//                         'id' => $this->id,
-//                         'label' => $this->title,
-//                         'cost' => $this->shipping_quote_cost
-//                       //  'calc_tax' => 'per_item'
-//                     );
-//
-//                     // Register the rate
-//                     $this->add_rate( $rate );
-//                 }
-//             }
-//     }
-// }  // <-- note that the function is closed before the add_action('woocommerce_shipping_init')
-
-//
-// add_action( 'woocommerce_shipping_init', 'dia_quote_shipping_method_init' );
-//
-// function add_dia_quote_shipping_method( $methods ) {
-//     $methods[] = 'WC_Your_Shipping_Method';
-//     return $methods;
 // }
-//
-// add_filter( 'woocommerce_shipping_methods', 'add_dia_quote_shipping_method' );
-//
 
 
+/***  add custom shipping method for Next Day Shipping  ***/
 
+function dia_nextday_shipping_method_init() {
+  if ( ! class_exists( 'WC_DiaNextDay_Shipping_Method' ) ) {
+
+    class WC_DiaNextDay_Shipping_Method extends WC_Shipping_Method {
+
+      public function __construct() {
+        $this->id                 = 'dia_nxtdy_shipping_method';
+        $this->method_title       = __( 'Next Day' );
+        $this->method_description = __( 'Description of your shipping method' );
+        $this->enabled            = "yes";
+        $this->title              = "Next Day";
+        $this->init();
+      }
+
+      function init() {
+        $this->init_form_fields(); // This is part of the settings API. Override the method to add your own settings
+        $this->init_settings(); // This is part of the settings API. Loads settings you previously init.
+
+        // Save settings in admin if you have any defined
+        add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
+      }
+
+      public function calculate_shipping( $package ) {
+        $rate = array(
+          'id' => $this->id,
+          'label' => $this->title,
+          'cost' => ''
+        );
+        $this->add_rate( $rate );
+      }
+
+    }
+  }
+}
+add_action( 'woocommerce_shipping_init', 'dia_nextday_shipping_method_init' );
+
+function add_dia_nextday_shipping_method( $methods ) {
+  $methods[] = 'WC_DiaNextDay_Shipping_Method';
+  return $methods;
+}
+add_filter( 'woocommerce_shipping_methods', 'add_dia_nextday_shipping_method' );
+
+/*** END ***/
 
 
 // reset choesen shipping method so it appears properly from cart page to checkout page
@@ -1101,12 +1079,13 @@ add_shortcode( 'RED_FLAG', 'red_flag_shortcode' );
 /*** END ***/
 
 /*** Display Product Title at link in email ***/
-add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
-function display_product_title_as_link( $item_name, $item ) {
-  $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
-  $link = get_permalink( $_product->id );
-  return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
-}
+// test comment
+// add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
+// function display_product_title_as_link( $item_name, $item ) {
+//   $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
+//   $link = get_permalink( $_product->id );
+//   return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
+// }
 /*** END ***/
 
 /*** Display IV Bag Waiver when products are in your cart & checkout  ***/
@@ -1367,13 +1346,13 @@ function partition(Array $list, $p) {
 /*** END ***/
 
 /*** change order status to processing after a purchase order payment, or whatver ***/
-// add_action( 'woocommerce_thankyou', 'dia_purchase_order_make_processing' );
-// function dia_purchase_order_make_processing( $order_id ) {
-//   $order = new WC_Order( $order_id );
-//   if ('on-hold' == $order->status) {
-//     $order->update_status( 'processing' );
-//   }
-// }
+add_action( 'woocommerce_thankyou', 'dia_purchase_order_make_processing' );
+function dia_purchase_order_make_processing( $order_id ) {
+  $order = new WC_Order( $order_id );
+  if ('on-hold' == $order->status) {
+    $order->update_status( 'processing' );
+  }
+}
 /*** END ***/
 
 /*** diaLink() ***/

@@ -57,7 +57,7 @@ body {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-se
 a { color: #00426a; }
 /*** END ***/
 
-#post_88646 h3, #post_61651 h3, #post_58680 h3 {font-family: 'ristretto_promedium', Arial, sans-serif; color: #00426a; letter-spacing: 1.1px; font-size: 41px; text-transform: uppercase;}
+#post_88646 h3, #post_61651 h3, #post_58680 h3, #post_12 h3 {font-family: 'ristretto_promedium', Arial, sans-serif; color: #00426a; letter-spacing: 1.1px; font-size: 41px; text-transform: uppercase;}
 #post_88646 p.vfb-help-block  {color:#000; font-size:13px; }
 
 /* Sidebar */
@@ -487,7 +487,8 @@ body.page-template-nursing .wpb-wps-slider-item {padding: 0.75em 0.3em !importan
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {padding:1em !important;}
 .woocommerce a.button { margin: 0 0.5em 0 0; }
 .woocommerce-remove-coupon{font-size:0.8em !important;}
-tr.cart-discount td {text-align:right !important;}
+/* tr.cart-discount td {text-align:right !important;} */
+/* #order_comments {height:300px; width:400px; min-height: 20px;max-height:30px;max-width:200px;min-width: 100px;} */
 /* END */
 
 /* MY ACCOUNT REGISTER PAGE */
@@ -835,6 +836,9 @@ ul#no_col_layout {columns: 1000px 1;}
 #product-88554 #accordion-1 ul {columns: 1000px 1;}
 
 .yith_ywraq_add_item_browse_message > a {border:1px solid #78be20;}
+
+.show_spec_div_wrap .yith_ywraq_add_item_product_message {font-size:12px}
+.yith-ywraq-add-button > a {border:1px solid #78be20;}
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;

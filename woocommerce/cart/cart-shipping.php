@@ -19,9 +19,24 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+$packages = WC()->shipping->get_packages();
+$shipcharge = false;
+foreach ( $packages as $i => $package ) {
+	$chosen_method = isset( WC()->session->chosen_shipping_methods[ $i ] ) ? WC()->session->chosen_shipping_methods[ $i ] : '';
+	foreach ($package['rates'] as $pkg => $value) {
+		if (intval($value->cost) > 0) $shipcharge = true; break;  // find out if there is any pre calculated shipping charge
+	}
+}
 ?>
 <tr class="shipping" id="shipping">
+
+<?php if( key($available_methods ) == 'free_shipping' || $shipcharge ) :  ?>
+	<th>Shipping Method:</th>
+<?php else : ?>
 	<th>Shipping Charges will be calculated, and then added to your total</th>
+<?php endif ; ?>
+
 	<td data-title="<?php echo esc_attr( $package_name ); ?>">
 		<?php if ( 1 < count( $available_methods ) ) : ?>
 			<ul id="shipping_method">

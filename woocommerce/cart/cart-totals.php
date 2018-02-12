@@ -18,7 +18,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 ?>
 <div class="cart_totals <?php if ( WC()->customer->has_calculated_shipping() ) echo 'calculated_shipping'; ?>">
 
@@ -88,9 +87,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
 		<tr class="order-total" id="order-total">
+
+			<?php
+			$packages = WC()->shipping->get_packages();
+			foreach ( $packages as $i => $package ) $chosen_method = isset( WC()->session->chosen_shipping_methods[ $i ] ) ? WC()->session->chosen_shipping_methods[ $i ] : '';
+			if ( $chosen_method == 'free_shipping' ) :
+			?>
+
+			<th><?php _e( 'Order Total', 'woocommerce' ); ?></th>
+
+			<?php else : ?>
+
 			<th><?php _e( 'Total Before Shipping Costs', 'woocommerce' ); ?></th>
+
+			<?php endif ; ?>
+
 			<td data-title="<?php _e( 'Total Before Shipping', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></td>
-		</tr>
+
+		</tr> <!-- #order-total -->
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 

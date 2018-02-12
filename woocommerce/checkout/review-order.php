@@ -18,6 +18,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+
 ?>
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
@@ -104,9 +106,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<tr class="order-total">
 
 			<?php
-			// this is not a good enough IF
-			if( WC()->cart->get_cart_subtotal() < WC()->cart->get_total() ): ?>
+			$packages = WC()->shipping->get_packages();
+			$shipcharge = false;
+			foreach ( $packages as $i => $package ) {
+
+				$chosen_method = isset( WC()->session->chosen_shipping_methods[ $i ] ) ? WC()->session->chosen_shipping_methods[ $i ] : '';
+
+				foreach ($package['rates'] as $pkg => $value) {
+					if (intval($value->cost) > 0) $shipcharge = true; break;  // find out if there is any pre calculated shipping charge
+				}
+
+			}
+
+			if ( $chosen_method == 'free_shipping' || $shipcharge ) :
+
+				?>
+
 				<th><?php _e( 'Total', 'woocommerce' ); ?></th>
+
 			<?php else : ?>
 				<th><?php _e( 'Total (Before Shipping Cost)', 'woocommerce' ); ?></th>
 			<?php endif ; ?>
