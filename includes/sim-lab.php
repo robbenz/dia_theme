@@ -62,9 +62,20 @@ get_template_part('includes/header');
         	</a>
         </div>
       </div>
-      <a style="margin-top:1em;" href="#" class="eModal-2">
-      <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/SLS_Home_catalog.gif" alt="Emergency &amp; Rescue Training" /></a>
+      <div class="row" style="margin-top: 14px;">
+        <div class="col-md-6">
+          <a style="margin-top:1em;" href="#" class="eModal-2">
+            <img src="<?php echo site_url(); ?>/wp-content/imgs/sls/NursingSchool_CatalogRequestButton.png" alt="Emergency &amp; Rescue Training" />
+        </a>
+      </div>
+      <div class="col-md-6">
+        <a style="margin-top:1em;" href="<?php echo site_url(); ?>/catalog-request-form/">
+          <img src="<?php echo site_url(); ?>/wp-content/imgs/sls/EMS_CatalogRequestButton.png" alt="Emergency &amp; Rescue Training" />
+        </a>
+      </div>
     </div>
+
+  </div>
 
 
   </div>

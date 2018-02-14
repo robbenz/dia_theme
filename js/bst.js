@@ -158,11 +158,9 @@
       /*** END ***/
 
 
-      // 
-      // var findit = $(location).attr('search').replace('?', '');
-      // $('#vfb-field-315').val(findit);
-      //
-      //
+      // $(".product-addon label").text(function(index, text) {
+      //     return text.replace("\(\)", "");
+      // });
 
 
 

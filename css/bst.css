@@ -267,8 +267,8 @@ span.price del, span.price ins {display: block;}
 .product-addon p{ padding: 0 !important; margin:0 !important;}
 .product-addon label { margin-bottom: 0;  }
 .logged-in #product-41480 .product_meta, .logged-in #product-73130 .product_meta{ margin-bottom:1px; }
-.product-addon, .product-addon-totals {display:none;}
-.logged-in .product-addon, .logged-in .product-addon-totals { display:block;}
+.product-addon-totals {display:none;}
+.logged-in .product-addon-totals { display:block; }
 /* END */
 
 /* HOME PAGE */
@@ -607,8 +607,9 @@ ul.icons-medium li { margin:0 7.5%; }
   -moz-columns: 100px 3; /* Firefox */
   columns: 100px 3;
   list-style-position: inside;
+  font-size:0.95em;
  }
- #columns_list li{ text-transform: capitalize; }
+ #columns_list li{ text-transform: capitalize; font-size:0.95em;}
 .viewprice-detail{display:block;}
 .logged-in .viewprice-detail{display:none;}
 .woocommerce div.product div.images{margin-top:1em; }

@@ -101,6 +101,9 @@
 	<?php endif; ?>
 </header><!-- #masthead -->
 
-<?php get_template_part('includes/top_drop_menu'); ?>
+<?php get_template_part('includes/top_drop_menu');
+global $woocommerce;
+//_pre($woocommerce->cart);
+?>
 
 <div style="width:100%;clear:both;float:left;height:15px;">&nbsp;</div>

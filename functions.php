@@ -365,7 +365,7 @@ new RRHE();
 
 
 /*** Ship to a different address closed by default ***/
-add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
+// add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false', 999 );
 
 /**
  * Add order again button in my orders actions.
