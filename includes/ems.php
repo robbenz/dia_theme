@@ -67,8 +67,8 @@ get_template_part('includes/header');
   <img style="margin-bottom:1em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/loaded_ems_packs_banner.png" />
 </a>
 
-            <a style="margin-top:1em;" href="#" class="eModal-2">
- <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems-catalog-button.png" alt="Emergency &amp; Rescue Training" /></a>
+            <a style="margin-top:1em;" href="<?php echo site_url(); ?>/catalog-request-form/">
+ <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/EMSEducation.jpg" alt="Emergency &amp; Rescue Training" /></a>
 
             <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
               <br /> At DiaMedical USA we value our first responders. We want to make sure EMT and paramedic instructors have tools they need to provide quality emergency medical instruction and simulation from basic first responder classes to advanced

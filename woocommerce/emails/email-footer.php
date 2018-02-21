@@ -39,15 +39,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         	<td valign="top">
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
 																									<tr>
-																                    <td class="content-block">
+																                    <td>
 																                      <a href="https://medmattress.com">
-																                        <img style="float:left;width:240px;" src="https://diamedicalusa.com//wp-content/imgs/emails/medmattresslogo.png" />
+																                        <img src="https://diamedicalusa.com//wp-content/imgs/emails/MedMattressEmail.jpg" />
 																                      </a>
+																										</td>
+																										<td>
 																                      <a href="https://diamedicalusa.com/simlabsolutions">
-																                        <img style="float:right;width:235px;" src="https://diamedicalusa.com/wp-content/imgs/includes/sim-lab.png" />
+																                        <img src="https://diamedicalusa.com/wp-content/imgs/emails/SimLabSolutionsEmail.jpg" />
 																                      </a>
 																                    </td>
 																                  </tr>
+																								</table>
+
+																								<table border="0" cellpadding="10" cellspacing="0" width="100%">
 																                  <tr>
 																                    <td style="text-align:center;line-height:28px;" class="content-block">7013 Orchard Lake Rd, Suite #110, West Bloomfield, MI 48322</td>
 																                    <!-- .content-block -->

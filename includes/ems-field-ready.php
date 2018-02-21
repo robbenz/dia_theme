@@ -70,8 +70,8 @@ get_template_part('includes/header');
   <img style="margin-bottom:1em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/FIELD-READY-BUNDLE.png" />
 </a>
 
-            <a style="margin-top:1em;" href="#" class="eModal-2">
- <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/ems-catalog-button.png" alt="Emergency &amp; Rescue Training" /></a>
+            <a style="margin-top:1em;" href="<?php echo site_url(); ?>/catalog-request-form/">
+ <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/EMSFieldGear.jpg" alt="Emergency &amp; Rescue Training" /></a>
 
             <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
               <br />

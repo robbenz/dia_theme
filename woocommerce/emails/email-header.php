@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 	<td align="center" valign="top">
 						<div id="template_header_image">
 	                		<p style="margin-top:0;">
-												<img style=" max-width:600px; width:600px;"src="https://diamedicalusa.com/wp-content/uploads/2018/02/diamedical_email_header.png"/>
+												<img style=" max-width:600px; width:600px;"src="https://diamedicalusa.com/wp-content/imgs/emails/diamedical_header.png"/>
 											</p>
 
 

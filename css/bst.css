@@ -226,6 +226,7 @@ li.product-category h3 { text-align:center; color:#f7a900; text-align:center; te
 .woocommerce-main-image{ max-width:400px; width:400px; }
 .woocommerce div.product div.images img {max-width:100%; width:80%;}
 .entry-summary .product_title { font-size:31px; color:#00426a; text-transform: uppercase; font-weight:400;}
+#product-90858 .entry-summary .product_title { text-transform: none; }
 .pp_pic_holder .pp_description, .pp_pic_holder .ppt{display:none !important;}
 .woocommerce div.product form.cart .variations {width:90%; }
 .woocommerce div.product form.cart .variations select {margin-top:10px; }
