@@ -226,6 +226,8 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 						</a>
 					</h4>
 				</div>
+
+
 				<div id="collapseStatic1" class="panel-collapse collapse">
 					<div class="panel-body part-search-panel">
 						<table class="table">
@@ -238,6 +240,8 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 					</div>
 				</div>
 			</div>
+
+
 			<div class="panel panel-default">
 				<div class="panel-heading">
 						<h4 class="panel-title">

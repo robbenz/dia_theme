@@ -41,12 +41,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 																									<tr>
 																                    <td>
 																                      <a href="https://medmattress.com">
-																                        <img src="https://diamedicalusa.com//wp-content/imgs/emails/MedMattressEmail.jpg" />
+																                        <img src="https://diamedicalusa.com//wp-content/imgs/emails/Medmattressemail1.png" />
 																                      </a>
 																										</td>
 																										<td>
 																                      <a href="https://diamedicalusa.com/simlabsolutions">
-																                        <img src="https://diamedicalusa.com/wp-content/imgs/emails/SimLabSolutionsEmail.jpg" />
+																                        <img src="https://diamedicalusa.com/wp-content/imgs/emails/SimLabSolutionsEmail1.png" />
 																                      </a>
 																                    </td>
 																                  </tr>

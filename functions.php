@@ -93,17 +93,15 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.tracking_item_qty{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.number_of_shipments{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_line_items .display_meta{display:none;}' );
+  wp_add_inline_style( 'wp-admin', 'div.notice{display:none;}' );
 }
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 
-
 function ds_enqueue_jquery_in_footer( &$scripts ) {
-
 	if ( ! is_admin() )
 		$scripts->add_data( 'jquery', 'group', 1 );
 }
 add_action( 'wp_default_scripts', 'ds_enqueue_jquery_in_footer' );
-
 /* END Scripts / Styles */
 
 
@@ -754,7 +752,11 @@ function benz_add_category_headers() {
   the_title();
   echo '</h2>';
 //  the_content();
+if ( is_page(68956) || is_page(68967) ) {
+  echo $content;
+} else {
   echo mb_strimwidth($content, 0, 507, '');
+}
   echo '</div></div>';
 }
 /* END */
