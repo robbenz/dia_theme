@@ -85,14 +85,18 @@ if ($sale_count >= 5 ) {
 }
 
 ?>
-<a style="margin-top:1em;" href="#" class="eModal-2">
-  <img
-  src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school.png"
-  alt="Instructional Medical Equipment"
-  onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school-hv.png';"
-  onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/catalog-request-nursing-school.png';"
-  />
-</a>
+<div class="row">
+  <div class="col-md-6">
+    <a href="#" class="eModal-2">
+      <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/2018-nursing-school-request.png" alt="Emergency &amp; Rescue Training" />
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a href="<?php echo site_url(); ?>/Catalog.pdf">
+      <img src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/2018-nursing-school-download.png" alt="Emergency &amp; Rescue Training" />
+    </a>
+  </div>
+</div>
 
 
 

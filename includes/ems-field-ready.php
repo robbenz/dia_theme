@@ -67,11 +67,21 @@ get_template_part('includes/header');
             </div>
 
             <a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/ems-field-ready-bundles/">
-  <img style="margin-bottom:1em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/FIELD-READY-BUNDLE.png" />
+  <img style="margin-bottom:0.35em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/FIELD-READY-BUNDLE.png" />
 </a>
 
-            <a style="margin-top:1em;" href="<?php echo site_url(); ?>/catalog-request-form/">
- <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/EMSFieldGear.jpg" alt="Emergency &amp; Rescue Training" /></a>
+<div class="row">
+  <div class="col-md-6">
+    <a href="<?php echo site_url(); ?>/catalog-request-form/">
+      <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_RequestCatalogEMS.jpg" alt="Emergency &amp; Rescue Training" />
+    </a>
+  </div>
+  <div class="col-md-6">
+    <a href="<?php echo site_url(); ?>/wp-content/pdf/EMSCatalog_Final.pdf">
+      <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_InteractiveEMSCatalog.jpg" alt="Emergency &amp; Rescue Training" />
+    </a>
+  </div>
+</div>
 
             <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
               <br />

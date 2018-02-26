@@ -61,26 +61,40 @@ get_template_part('includes/header');
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_cots_stretchers_hover.png';"
     onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/ems_cots_stretchers.png';"/>
   </a>
-            </div>
 
-            <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/simulation-bundles/">
-  <img style="margin-bottom:1em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/loaded_ems_packs_banner.png" />
+</div>
+
+<a href="<?php echo site_url(); ?>/product-category/emergency-rescue/simulation-bundles/">
+  <img style="margin-bottom:0.35em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/loaded_ems_packs_banner.png" />
 </a>
 
-            <a style="margin-top:1em;" href="<?php echo site_url(); ?>/catalog-request-form/">
- <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/EMSEducation.jpg" alt="Emergency &amp; Rescue Training" /></a>
 
-            <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
-              <br /> At DiaMedical USA we value our first responders. We want to make sure EMT and paramedic instructors have tools they need to provide quality emergency medical instruction and simulation from basic first responder classes to advanced
-              paramedic training. Our EMS medical equipment and simulated intravenous medications will help EMS schools, academies, and training facilities meet National Registry Paramedic Psychomotor Competency Portfolio standards. We have everything
-              you need run out-of-hospital scenarios, practical EMS continuing education, and in-service training. Give your students hands-on practical experience with one of our ambulance simulators. We have the lowest prices on Ferno and Stryker stretchers
-              and stair chairs.
-              <br /> Choose from our simulated IV bags, simulated normal saline, simulated lactated ringers, and simulated blood bags. Our simulated IV bags come in a variety of sizes and are available for purchase pre-filled, empty, in bulk or individually.
-              DiaMedical USA and SimLabSolutions are the exclusive provider of Loaded Emergency Packs for EMS education and training. These packs have been designed for emergency medical technicians, paramedics, fire fighters, law enforcement and specialized
-              rescue teams by EMS professionals and simulation specialists to provide a new level of realism and precision to EMS education. Loaded Emergency Packs are filled with all of the supplies and practi-meds needed for pre-service and in-service
-              training. Each Loaded Emergency Pack is pre-stocked and available in several forms including Loaded Simulated Medication Box, Loaded Pediatric Pack, Loaded ALS Pack, BLS Pack and refill kits.
+  <div class="row">
+    <div class="col-md-6">
+      <a href="<?php echo site_url(); ?>/catalog-request-form/">
+        <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_RequestCatalogEMS.jpg" alt="Emergency &amp; Rescue Training" />
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="<?php echo site_url(); ?>/wp-content/pdf/EMSCatalog_Final.pdf">
+        <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_InteractiveEMSCatalog.jpg" alt="Emergency &amp; Rescue Training" />
+      </a>
+    </div>
+  </div>
 
-              <br />
+
+
+  <p class="diva" style=" float: right; font-size: 12.45px; text-align: center; width: 98%;">
+    <br /> At DiaMedical USA we value our first responders. We want to make sure EMT and paramedic instructors have tools they need to provide quality emergency medical instruction and simulation from basic first responder classes to advanced
+    paramedic training. Our EMS medical equipment and simulated intravenous medications will help EMS schools, academies, and training facilities meet National Registry Paramedic Psychomotor Competency Portfolio standards. We have everything
+    you need run out-of-hospital scenarios, practical EMS continuing education, and in-service training. Give your students hands-on practical experience with one of our ambulance simulators. We have the lowest prices on Ferno and Stryker stretchers
+    and stair chairs.
+    <br /> Choose from our simulated IV bags, simulated normal saline, simulated lactated ringers, and simulated blood bags. Our simulated IV bags come in a variety of sizes and are available for purchase pre-filled, empty, in bulk or individually.
+    DiaMedical USA and SimLabSolutions are the exclusive provider of Loaded Emergency Packs for EMS education and training. These packs have been designed for emergency medical technicians, paramedics, fire fighters, law enforcement and specialized
+    rescue teams by EMS professionals and simulation specialists to provide a new level of realism and precision to EMS education. Loaded Emergency Packs are filled with all of the supplies and practi-meds needed for pre-service and in-service
+    training. Each Loaded Emergency Pack is pre-stocked and available in several forms including Loaded Simulated Medication Box, Loaded Pediatric Pack, Loaded ALS Pack, BLS Pack and refill kits.
+
+    <br />
               <!--
 Increase student readiness with our various practice medications. Choose from our crash code practice medications, practice medication CD modules, simulated injection simulators, simulated IV therapy, DiaMedical USA’s exclusive Loaded Crash Cart kits, needle free practice medication products, simulated oral medications, various peel and stick labels, practice ampules, simulated transdermal patches and simulated vials.
 Fully stock your Medical Schools, Nursing Schools, Technical Schools, or Simulation Centers at the lowest price with DiaMedical USA!

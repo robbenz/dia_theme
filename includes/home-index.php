@@ -67,13 +67,16 @@ get_template_part('includes/header');
 <div class="container" style="margin-bottom:2%;">
 <div class="row">
   <div id="content" role="main">
-    <div class="col-md-4" style="">
+    <div class="col-md-3" style="">
       <a href="<?php echo site_url(); ?>/product-category/simulated-iv-bags/"><img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/simlab/IV-fluids.png" /></a>
     </div>
-    <div class="col-md-4" style="">
-      <a href="http://www.diamedicalusa.com/Catalog.pdf" target="_blank"><img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/DiaMedical_Catalog_2018.png" /></a>
+    <div class="col-md-3" style="">
+      <a href="http://www.diamedicalusa.com/Catalog.pdf" target="_blank"><img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/2018_nursing_catalog_homepage.png" /></a>
     </div>
-    <div class="col-md-4" style="">
+    <div class="col-md-3" style="">
+      <a href="http://www.diamedicalusa.com/wp-content/pdf/EMSCatalog_Final.pdf" target="_blank"><img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/2018_ems_catalog_homepage.png" /></a>
+    </div>
+    <div class="col-md-3" style="">
       <a href="<?php echo site_url(); ?>/product-category/carts-storage/loaded-crash-carts/">  <img class="home-img-thirds" src="<?php echo site_url(); ?>/wp-content/imgs/homepage/simlab/loaded-carts.png" /></a>
     </div>
   </div>

@@ -62,18 +62,32 @@ get_template_part('includes/header');
         	</a>
         </div>
       </div>
-      <div class="row" style="margin-top: 14px;">
+
+      <div style="margin-bottom:14px;" class="row">
         <div class="col-md-6">
-          <a style="margin-top:1em;" href="#" class="eModal-2">
+          <a href="#" class="eModal-2">
             <img src="<?php echo site_url(); ?>/wp-content/imgs/sls/NursingSchool_CatalogRequestButton.png" alt="Emergency &amp; Rescue Training" />
-        </a>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="<?php echo site_url(); ?>/Catalog.pdf">
+            <img src="<?php echo site_url(); ?>/wp-content/imgs/sls/CatalogButtons_SLSLanding_Interactive_NS.jpg" alt="Emergency &amp; Rescue Training" />
+          </a>
+        </div>
       </div>
-      <div class="col-md-6">
-        <a style="margin-top:1em;" href="<?php echo site_url(); ?>/catalog-request-form/">
-          <img src="<?php echo site_url(); ?>/wp-content/imgs/sls/EMS_CatalogRequestButton.png" alt="Emergency &amp; Rescue Training" />
-        </a>
+      <div class="row">
+        <div class="col-md-6">
+          <a href="<?php echo site_url(); ?>/catalog-request-form/">
+            <img src="<?php echo site_url(); ?>/wp-content/imgs/sls/EMS_CatalogRequestButton.png" alt="Emergency &amp; Rescue Training" />
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="<?php echo site_url(); ?>/wp-content/pdf/EMSCatalog_Final.pdf">
+            <img src="<?php echo site_url(); ?>/wp-content/imgs/sls/CatalogButtons_SLSLanding_Interactive.jpg" alt="Emergency &amp; Rescue Training" />
+          </a>
+        </div>
       </div>
-    </div>
+
 
   </div>
 
