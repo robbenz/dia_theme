@@ -1037,6 +1037,9 @@ function deliver_red_flag_mail() {
 
 		$to = 'jambrose@diamedicalusa.com';
 
+
+
+
 		$headers[] = "From: $_name <orders@diamedicalusa.com>" . "\r\n";
     $headers[] = "Bcc: Rob Benz <rbenz@diamedicalusa.com>" . "\r\n";
     $headers[] = "Bcc: Travis Morris <tmorris@diamedicalusa.com>"."\r\n";
