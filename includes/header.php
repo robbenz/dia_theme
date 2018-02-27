@@ -21,7 +21,7 @@
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-schools" href="<?php echo site_url(); ?>/healthcare-education">Healthcare Education</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-simlab" href="<?php echo site_url(); ?>/simlabsolutions">SimLabSolutions</a>
 		<div class="dropdown">
-			<button class="dropbtn hvr-shutter-out-horizontal landing_nav-ems landing_nav ems-button-cursor">Emergency &amp; Rescue</button>
+			<button class="dropbtn dropems hvr-shutter-out-horizontal landing_nav-ems landing_nav ems-button-cursor">Emergency &amp; Rescue</button>
 			<div class="dropdown-content">
 				<a href="<?php echo site_url(); ?>/emergency-rescue/">EMS Education</a>
       	<a href="<?php echo site_url(); ?>/field-ready-ems-equipment/">Field Ready Gear</a>
@@ -29,12 +29,16 @@
 		</div>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-ltc" href="<?php echo site_url(); ?>/long-term-care">Long Term Care</a>
 		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-pt" href="<?php echo site_url(); ?>/product-category/physical-therapy/">Physical Therapy</a>
-		<a class="landing_nav hvr-shutter-out-horizontal landing_nav-qq" href="<?php echo site_url(); ?>//product-category/veterinary-equipment/">Veterinary</a>
+		<div class="dropdown">
+			<button class="dropbtn dropvet hvr-shutter-out-horizontal landing_nav landing_nav-qq ems-button-cursor">Veterinary</button>
+			<div class="dropdown-content newvet">
+				<a href="<?php echo site_url(); ?>/product-category/veterinary-simulation-training-equipment/">Veterinary Simulation</a>
+      	<a href="<?php echo site_url(); ?>/product-category/veterinary-equipment/">Veterinary Equipment</a>
+    	</div>
+		</div>
+
 	</div>
 </div>
-
-
-
 
 
 <?php

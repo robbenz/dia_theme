@@ -112,10 +112,18 @@ td.quotes-actions a{margin:0 1em; }
 .dropdown { float: left; position: relative; }
 .dropdown:hover {font-weight: 600 !important; }
 .dropdown .dropbtn { border-left:none; border-top:none; border-right:none; background-color: inherit; }
-.dropdown:hover .dropbtn { background-color:#d6001c; color:#fff; font-weight:600 !important;  }
+.dropdown:hover .dropbtn { color:#fff; font-weight:600 !important;}
+
+.dropdown:hover .dropems { background-color:#d6001c; }
+.dropdown:hover .dropvet { background-color:#657f3f; }
+
 .dropdown-content { display: none; position: absolute; z-index: 9999; }
 .dropdown-content a { float: none; font-weight: 600 !important; color:white; background-color:#d6001c; text-decoration: none; display: block; text-align: center; }
 .dropdown-content a:hover { background-color:#fff; color:#d6001c; border: 2px solid #d6001c; }
+
+.newvet a { background-color:#657f3f; }
+.newvet a:hover { color:#657f3f; border: 2px solid #657f3f; }
+
 .dropdown:hover .dropdown-content { display: block; }
 /*** END ***/
 
@@ -1200,7 +1208,9 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #sidebar { float: left; max-width: 300px; min-height: 400px; width:27%;}
   #landing_nav-wrap a.landing_nav{font-size: 0.8em;}
   #landing_nav-wrap{display:block }
-  .dropdown .dropbtn { padding: 3px 7px; font-size: 0.8em; }
+  .dropdown .dropbtn { font-size: 0.8em; }
+  .dropdown .dropems { padding: 3px 7px; }
+  .dropdown .dropvet { padding: 3px 34.5px; }
   .dropdown-content a { float: none; font-size: 0.8em; padding: 7px 0; width: 126px;}
   #landing_nav-wrap a.landing_nav{ width:12.218%; }
   _:-ms-lang(x),   #landing_nav-wrap a.landing_nav{ width:11.85%; }
@@ -1260,7 +1270,9 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   .home-img-thirds{width:100%;}
   #dat_order_left{padding:0 25px; }
   #landing_nav-wrap a.landing_nav{ font-size:0.9em; font-weight: 600 !important; }
-  .dropdown .dropbtn { padding: 3px 9.2px; font-size: 0.9em; font-weight: 600 !important; }
+  .dropdown .dropbtn {  font-size: 0.9em; font-weight: 600 !important; }
+  .dropdown .dropems { padding: 3px 9px; }
+  .dropdown .dropvet { padding: 3px 40px; }
   .dropdown-content a { float: none; font-size: 0.9em; padding: 8px 0; width: 144px; }
   #landing_nav-wrap a.landing_nav{ width:12.475%; }
   .dropdown-content { top:28px; }
