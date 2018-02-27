@@ -1039,6 +1039,7 @@ function deliver_red_flag_mail() {
 
 		$headers[] = "From: $_name <orders@diamedicalusa.com>" . "\r\n";
     $headers[] = "Bcc: Rob Benz <rbenz@diamedicalusa.com>" . "\r\n";
+    $headers[] = "Bcc: Travis Morris <tmorris@diamedicalusa.com>"."\r\n";
 
 		// If everything worked -- display a success message
 		if ( wp_mail( $to, $subject, $message, $headers ) ) {
