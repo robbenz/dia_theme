@@ -504,25 +504,8 @@ function benz_custom_shipping_free_label( $label ) {
 }
 add_filter( 'woocommerce_cart_shipping_method_full_label' , 'benz_custom_shipping_free_label' );
 
-// add custom shipping method to replace woocommerce jetpack
-
-// replace with commented out code below
-
-
-// add_action( 'woocommerce_flat_rate_shipping_add_rate', 'add_another_custom_flat_rate', 10, 2 );
-// function add_another_custom_flat_rate( $method, $rate ) {
-// 	$new_rate          = $rate;
-// 	$new_rate['id']    .= ':' . 'second_day_rate_name';
-// 	$new_rate['label'] = 'Next Day';
-// 	$new_rate['cost']  += 0;
-// 	// Add it to WC
-// 	$method->add_rate( $new_rate );
-//
-// }
-
 
 /***  add custom shipping method for Next Day Shipping  ***/
-
 function dia_nextday_shipping_method_init() {
   if ( ! class_exists( 'WC_DiaNextDay_Shipping_Method' ) ) {
 
