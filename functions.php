@@ -374,37 +374,36 @@ new RRHE();
  */
  // test comment
 
-// function dia_add_order_again_to_my_orders_actions( $actions, $order ) {
-// 	if ( $order->has_status( 'completed' ) ) {
-// 		$actions['order-again'] = array(
-// 			'url'  => wp_nonce_url( add_query_arg( 'order_again', $order->id ) , 'woocommerce-order_again' ),
-// 			'name' => __( 'Order Again', 'woocommerce' )
-// 		);
-// 	}
-// 	return $actions;
-// }
-// add_filter( 'woocommerce_my_account_my_orders_actions', 'dia_add_order_again_to_my_orders_actions', 50, 2 );
+function dia_add_order_again_to_my_orders_actions( $actions, $order ) {
+	if ( $order->has_status( 'completed' ) ) {
+		$actions['order-again'] = array(
+			'url'  => wp_nonce_url( add_query_arg( 'order_again', $order->id ) , 'woocommerce-order_again' ),
+			'name' => __( 'Order Again', 'woocommerce' )
+		);
+	}
+	return $actions;
+}
+add_filter( 'woocommerce_my_account_my_orders_actions', 'dia_add_order_again_to_my_orders_actions', 50, 2 );
 /*** END ***/
 
 // Edit order items table template defaults  -- Show Sku on emails
 // test comment
 
-// function BENZ_wc_order_email_skus( $table, $order ) {
-//
-// 	ob_start();
-//
-// 	$template = $plain_text ? 'emails/plain/email-order-items.php' : 'emails/email-order-items.php';
-// 	wc_get_template( $template, array(
-// 		'order'                 => $order,
-// 		'items'                 => $order->get_items(),
-// 		'show_sku'              => true
-// 	) );
-//
-// 	return ob_get_clean();
-// }
-// add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
-/* END */
+function BENZ_wc_order_email_skus( $table, $order ) {
 
+	ob_start();
+
+	$template = $plain_text ? 'emails/plain/email-order-items.php' : 'emails/email-order-items.php';
+	wc_get_template( $template, array(
+		'order'                 => $order,
+		'items'                 => $order->get_items(),
+		'show_sku'              => true
+	) );
+
+	return ob_get_clean();
+}
+add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
+/* END */
 
 
 
@@ -1037,9 +1036,6 @@ function deliver_red_flag_mail() {
 
 		$to = 'jambrose@diamedicalusa.com';
 
-
-
-
 		$headers[] = "From: $_name <orders@diamedicalusa.com>" . "\r\n";
     $headers[] = "Bcc: Rob Benz <rbenz@diamedicalusa.com>" . "\r\n";
     $headers[] = "Bcc: Travis Morris <tmorris@diamedicalusa.com>"."\r\n";
@@ -1119,13 +1115,12 @@ return $urls;
 
 
 /*** Display Product Title at link in email ***/
-// test comment
-// add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
-// function display_product_title_as_link( $item_name, $item ) {
-//   $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
-//   $link = get_permalink( $_product->id );
-//   return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
-// }
+add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
+function display_product_title_as_link( $item_name, $item ) {
+  $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
+  $link = get_permalink( $_product->id );
+  return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
+}
 /*** END ***/
 
 /*** Display IV Bag Waiver when products are in your cart & checkout  ***/
