@@ -1413,12 +1413,12 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 
 // update some shit
 //
-// $update_stuff = array (
-//
-// );
+$update_stuff = array (
 
-// foreach ($update_stuff as $thing) {
-//   //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
-//   //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
-//   update_post_meta( $thing, 'dia_admin_quote', 'no' );
-// }
+);
+
+foreach ($update_stuff as $thing) {
+  //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
+  //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
+  update_post_meta( $thing, 'dia_admin_quote', 'no' );
+}
