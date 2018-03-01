@@ -33,10 +33,6 @@
 	</div>
 </div>
 
-
-
-
-
 <?php
 		if(isset($_GET['login']) && $_GET['login']=='failed') {
 			echo '<p style="margin-top:0.8em;" class="woo-ma-login-failed woo-ma-error error-home-class-red">';

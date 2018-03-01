@@ -30,11 +30,43 @@ if ( ! defined( 'ABSPATH' ) ) {
  $shipping_class = $product->get_shipping_class();
  ?>
 
+<?php //if ($product->id == 30176) : ?>
+
+	<!-- <script type="text/javascript">
+	jQuery(document).ready(function() {
+		// jQuery("#ship-repair-container").hide();
+
+		jQuery('#quantity').change(function(){
+        if(jQuery('#quantity').val() == 'Each') {
+            jQuery('#ship-repair-container').hide();
+        } else {
+            jQuery('#ship-repair-container').show();
+        }
+    });
+
+
+	});
+	</script> -->
+<!--
+	<div id="ship-repair-container" class="">
+   <div id="ship-row" class="">
+  	 	<div id="free_ship-productpage" class="">
+	 	 	<img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" class="shipping-img" />
+ 	  		<div style="padding-top:10px;">
+ 		 	<span class="red_free">FREE SHIPPING</span><br>When You Order Online
+ 	  	</div>
+ 	 	</div>
+  	</div>
+  </div> -->
+
+
+<?php // endif; ?>
+
+
  <?php if ( $shipping_class == 'free-shipping' ) : ?>
 
  <div id="ship-repair-container" class="">
   <div id="ship-row" class="">
-
  	 <div id="free_ship-productpage" class="">
 	 <img width="110" alt="Free Shipping Mattresses" src="https://www.medmattress.com/wp-content/imgs/Free_shipping.png" class="shipping-img" />
 	  <div style="padding-top:10px;">
