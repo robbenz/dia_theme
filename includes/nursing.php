@@ -97,7 +97,13 @@ if ($sale_count >= 5 ) {
     </a>
   </div>
 </div>
-
+<div class="row">
+  <div style="padding: 0 26px; margin-top:10px;" class="col-md-12">
+    <a href="<?php echo site_url(); ?>/catalog-request-form">
+      <img style="border-radius:0.5em;" src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/EMSFieldGear.jpg" alt="Emergency &amp; Rescue Training" />
+    </a>
+  </div>
+</div>
 
 
 
