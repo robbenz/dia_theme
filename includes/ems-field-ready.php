@@ -87,7 +87,7 @@ get_template_part('includes/header');
   <div class="row">
     <div style="padding: 0 22px; margin-top:5px;" class="col-md-12">
       <a href="#" class="eModal-2">
-        <img style="border-radius:1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/CatalogRequestButtons_NursingSchool.jpg" alt="Emergency &amp; Rescue Training" />
+        <img style="border-radius:1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/CatalogRequest_NursingSchool.jpg" alt="Emergency &amp; Rescue Training" />
       </a>
     </div>
   </div>
