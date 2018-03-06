@@ -55,7 +55,6 @@ get_template_part('includes/header');
   </div>
 </div>
 
-
 <div class="container" style="margin-bottom:2%;">
   <div class="row">
     <div class="wpb_slider_area">

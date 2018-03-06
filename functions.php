@@ -104,14 +104,12 @@ function ds_enqueue_jquery_in_footer( &$scripts ) {
 add_action( 'wp_default_scripts', 'ds_enqueue_jquery_in_footer' );
 /* END Scripts / Styles */
 
-
 //  --  LOGIN | LOGOUT STUFF
 add_filter('woocommerce_login_redirect', 'login_redirect');
 function login_redirect($redirect_to) {
     wp_redirect( home_url() );
     exit();
 }
-
 add_action('wp_logout','logout_redirect');
 function logout_redirect(){
     wp_redirect( home_url() );
@@ -1062,8 +1060,6 @@ function red_flag_shortcode() {
 
 add_shortcode( 'RED_FLAG', 'red_flag_shortcode' );
 /*** END ***/
-
-
 
 /**
  * Disable the emoji's
