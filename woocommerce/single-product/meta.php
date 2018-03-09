@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $post, $product;
 
 $cat_count = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-$tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
+//$tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
 
 ?>
 <div class="product_meta">

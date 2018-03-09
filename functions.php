@@ -275,10 +275,16 @@ add_filter( 'woocommerce_show_variation_price', function() { return true; } );
 // only 3 related products instead of 4
 add_filter( 'woocommerce_output_related_products_args', 'benz_related_products_args' );
   function benz_related_products_args( $args ) {
-	$args['posts_per_page'] = 4;
-	$args['columns'] = 4;
+    global $product;
+    if ( function_exists('is_dia_part') && is_dia_part() ){
+      $args['posts_per_page'] = 8;
+    } else {
+      $args['posts_per_page'] = 4;
+      $args['columns'] = 4;
+    }
 	return $args;
 }
+
 
 //  --  woocommerce side bar
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
@@ -358,6 +364,9 @@ class RRHE {
 }
 new RRHE();
 /* END */
+
+
+
 
 
 /*** Ship to a different address closed by default ***/
