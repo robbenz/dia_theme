@@ -1232,22 +1232,28 @@ function add_image_insert_override($sizes){
 /*** Change images alt and title tag for dia_parts ***/
 add_filter('wp_get_attachment_image_attributes', 'change_attachement_image_attributes', 20, 2);
 function change_attachement_image_attributes($attr, $attachment) {
-global $post;
-if(!is_admin()){
-  if ( $post->post_type == 'product' ) {
-    $title = $post->post_title;
-    $content = get_the_content();
-    $product = wc_get_product( $post->ID );
-    $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-    $single_cat = array_shift( $product_cats );
-    $parentcats = get_ancestors($single_cat->term_id, 'product_cat');
-    if ( function_exists('is_dia_part') && is_dia_part() ) {
-      $attr['alt'] = $title .' | ' . $single_cat->name;
-      $attr['title'] = $content ;
-    }
-    if ( in_array( 5310, $parentcats ) ) { // stretcher pads
+  global $post;
+  if(!is_admin()) {
+    if ( $post->post_type == 'product' ) {
+      $title = $post->post_title;
+      $content = get_the_content();
+      $product = wc_get_product( $post->ID );
+      $seo_title = get_post_meta( $post->ID, '_yoast_wpseo_focuskw', true );
+      $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+      $single_cat = array_shift( $product_cats );
+      $parentcats = get_ancestors($single_cat->term_id, 'product_cat');
+      if ( function_exists('is_dia_part') && is_dia_part() ) {
         $attr['alt'] = $title .' | ' . $single_cat->name;
-        $attr['title'] = $title;
+        $attr['title'] = $content ;
+      }
+      if ( in_array( 5310, $parentcats ) ) { // stretcher pads
+        if ( strlen($seo_title) > 0 ) {
+          $attr['alt'] = $seo_title .' | ' . $single_cat->name;
+          $attr['title'] = $seo_title;
+        } else {
+          $attr['alt'] = $title .' | ' . $single_cat->name;
+          $attr['title'] = $title;
+        }
       }
     }
   }
