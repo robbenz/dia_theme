@@ -31,7 +31,7 @@ if ( empty( $product ) || ! $product->exists() ) {
 $related = $product->get_related( $posts_per_page );
 
 if ( sizeof( $related ) === 0 ) {
-	echo'<h2 style="margin-top: 0px;text-transform: uppercase;color: #78be20;font-size: 20px;font-weight: 400;">No Related Products Found. Browse Most Popular Products Below.</h2>';
+	echo'<h2 style="margin-top: 0px;text-transform: uppercase;color: #78be20;font-size: 20px;font-weight: 400;">No Related Products Found. Browse Our Most Popular Products Below.</h2>';
 	echo do_shortcode('[wpb-product-slider product_type="featured"]');
 	return;
 }
