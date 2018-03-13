@@ -30,34 +30,39 @@ get_template_part('includes/header');
               $ems_fr_feat_id = $row->post_id;
               array_push($result_emsfr, $ems_fr_feat_id);
             }
-
             $ems_fr_count = count($result_emsfr);
-
             if ($ems_fr_count >= 5 ) {
               $clean_ems_fr_ft =  implode (",", $result_emsfr);
               echo '<h3 class="slider-headers">Featured Products</h3>';
               echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$clean_ems_fr_ft.'"]' );
             }
-
             ?>
 
             <br>
 
             <div class="ns_home_flt-lft" id="hospitalbuttonhome">
               <a href="<?php echo site_url(); ?>/product-category/field-ready-loaded-packs/">
-    <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/LOAD-JUMP-BAGS.png" alt="Loaded Jump Bags"
-    onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/LOAD-JUMP-BAGS-SELECTED.png';"
-    onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/LOAD-JUMP-BAGS.png';"/>
-  </a>
+                <img
+                  src="<?php echo site_url(); ?>/wp-content/imgs/ems/LOAD-JUMP-BAGS.png"
+                  alt="Loaded Jump Bags"
+                  onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/LOAD-JUMP-BAGS-SELECTED.png';"
+                  onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/LOAD-JUMP-BAGS.png';"
+                />
+              </a>
             </div>
+
             <div class="ns_home_flt-lft" id="infusionbuttonhome" style="margin: 0 13px !important">
               <a href="<?php echo site_url(); ?>/medical-equipment/emergency-rescue/emergency-transport-supplies/ambulance-child-restraints/ambulance-child-restraint/">
-    <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/SPECIALIZED-EQUIPMENT-SELECTED.png" alt="Specialized Emergency Equipment"
-    onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/SPECIALIZED-EQUIPMENT-SELECTED.png';"
-    onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/SPECIALIZED-EQUIPMENT.png';"/>
-  </a>
-            </div>
-            <div class="ns_home_flt-lft" id="simlabbuttonhome">
+                <img
+                  src="<?php echo site_url(); ?>/wp-content/imgs/ems/SPECIALIZED-EQUIPMENT-SELECTED.png"
+                  alt="Specialized Emergency Equipment"
+                  onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/SPECIALIZED-EQUIPMENT-SELECTED.png';"
+                  onMouseOut="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/SPECIALIZED-EQUIPMENT.png';"
+                  />
+                </a>
+              </div>
+
+              <div class="ns_home_flt-lft" id="simlabbuttonhome">
               <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/immobilization/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/TRAUMA-EQUIPMENT.png" alt="Emergency Trauma Equipment"
     onMouseOver="this.src='<?php echo site_url(); ?>/wp-content/imgs/ems/TRAUMA-EQUIPMENT-SELECTED.png';"
