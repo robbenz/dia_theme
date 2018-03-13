@@ -20,6 +20,24 @@ get_template_part('includes/header');
 
             <?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '71778' ); } ?>
             <br />
+            <?php
+            global $wpdb;
+            $result_emsedu = array();
+            foreach( $wpdb->get_results('SELECT post_id FROM wp_postmeta WHERE meta_key = "ems_edu_ft_slider" AND meta_value = "yes" ') as $key => $row) {
+              $ems_feat_id = $row->post_id;
+              array_push($result_emsedu, $ems_feat_id);
+            }
+
+            $ems_count = count($result_emsedu);
+
+            if ($ems_count >= 5 ) {
+              $clean_ems_ft =  implode (",", $result_emsedu);
+              echo '<h3 class="slider-headers">Featured Products</h3>';
+              echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$clean_ems_ft.'"]' );
+            }
+
+            ?>
+          </br>
             <div class="ns_home_flt-lft" id="hospitalbuttonhome">
               <a href="<?php echo site_url(); ?>/product-category/emergency-rescue/loaded-emergency-packs/">
     <img src="<?php echo site_url(); ?>/wp-content/imgs/ems/Emergency_Packs.png" alt="Loaded Emergency Packs"
