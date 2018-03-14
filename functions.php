@@ -57,6 +57,10 @@ function benz_add_jss() {
     wp_register_script('raw_rej_form', get_template_directory_uri() . '/js/raw_rej_form_script.js', array('jquery'),false, true);
     wp_enqueue_script('raw_rej_form');
   }
+  if (is_page('95032') ) {
+    wp_register_script('demo_sim_form', get_template_directory_uri() . '/js/demo_sim_form_script.js', array('jquery'),false, true);
+    wp_enqueue_script('demo_sim_form');
+  }
   if (is_page('58440') ) {
     wp_register_script('curtain_form', get_template_directory_uri() . '/js/curtain_form_script.js', array('jquery'),false, true);
     wp_enqueue_script('curtain_form');
