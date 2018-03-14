@@ -92,41 +92,41 @@ get_template_part('includes/header');
             </a>
 
 
-              <div class="row">
-                <div class="col-md-6">
-                  <a href="<?php echo site_url(); ?>/catalog-request-form/">
-                    <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_RequestCatalogEMS.jpg" alt="Emergency &amp; Rescue Training" />
-                  </a>
-                </div>
-                <div class="col-md-6">
-                  <a href="<?php echo site_url(); ?>/wp-content/pdf/EMSCatalog_Final.pdf">
-                    <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_InteractiveEMSCatalog.jpg" alt="Emergency &amp; Rescue Training" />
-                  </a>
-                </div>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="<?php echo site_url(); ?>/catalog-request-form/">
+                  <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_RequestCatalogEMS.jpg" alt="Emergency &amp; Rescue Training" />
+                </a>
               </div>
-
-              <div class="row">
-                <div style="padding: 0 22px; margin-top:5px;" class="col-md-12">
-                  <a href="#" class="eModal-2">
-                    <img style="border-radius:1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/CatalogRequest_NursingSchool.jpg" alt="Emergency &amp; Rescue Training" />
-                  </a>
-                </div>
+              <div class="col-md-6">
+                <a href="<?php echo site_url(); ?>/wp-content/pdf/EMSCatalog_Final.pdf">
+                  <img src="<?php echo site_url(); ?>/wp-content/imgs/emails/EMSCatalogButton_2018_InteractiveEMSCatalog.jpg" alt="Emergency &amp; Rescue Training" />
+                </a>
               </div>
+            </div>
 
-              <p class="diva" style="float: right; font-size: 12.45px; text-align: center; width: 98%;">
-                <br />
-                At DiaMedical USA we value our first responders. We want to make sure EMT and paramedic instructors have tools they need to provide quality emergency medical instruction and simulation from basic first responder classes to advanced
-                paramedic training. Our EMS medical equipment and simulated intravenous medications will help EMS schools, academies, and training facilities meet National Registry Paramedic Psychomotor Competency Portfolio standards. We have everything
-                you need run out-of-hospital scenarios, practical EMS continuing education, and in-service training. Give your students hands-on practical experience with one of our ambulance simulators. We have the lowest prices on Ferno and Stryker stretchers
-                and stair chairs.
-                <br /> Choose from our simulated IV bags, simulated normal saline, simulated lactated ringers, and simulated blood bags. Our simulated IV bags come in a variety of sizes and are available for purchase pre-filled, empty, in bulk or individually.
-                DiaMedical USA and SimLabSolutions are the exclusive provider of Loaded Emergency Packs for EMS education and training. These packs have been designed for emergency medical technicians, paramedics, fire fighters, law enforcement and specialized
-                rescue teams by EMS professionals and simulation specialists to provide a new level of realism and precision to EMS education. Loaded Emergency Packs are filled with all of the supplies and practi-meds needed for pre-service and in-service
-                training. Each Loaded Emergency Pack is pre-stocked and available in several forms including Loaded Simulated Medication Box, Loaded Pediatric Pack, Loaded ALS Pack, BLS Pack and refill kits.
-                <br />
-              </p>
+            <div class="row">
+              <div style="padding: 0 22px; margin-top:5px;" class="col-md-12">
+                <a href="#" class="eModal-2">
+                  <img style="border-radius:1em;" src="<?php echo site_url(); ?>/wp-content/imgs/ns-home-imgs/CatalogRequest_NursingSchool.jpg" alt="Emergency &amp; Rescue Training" />
+                </a>
+              </div>
+            </div>
 
-          </div>
+            <p class="diva" style="float: right; font-size: 12.45px; text-align: center; width: 98%;">
+              <br />
+              At DiaMedical USA we value our first responders. We want to make sure EMT and paramedic instructors have tools they need to provide quality emergency medical instruction and simulation from basic first responder classes to advanced
+              paramedic training. Our EMS medical equipment and simulated intravenous medications will help EMS schools, academies, and training facilities meet National Registry Paramedic Psychomotor Competency Portfolio standards. We have everything
+              you need run out-of-hospital scenarios, practical EMS continuing education, and in-service training. Give your students hands-on practical experience with one of our ambulance simulators. We have the lowest prices on Ferno and Stryker stretchers
+              and stair chairs.
+              <br /> Choose from our simulated IV bags, simulated normal saline, simulated lactated ringers, and simulated blood bags. Our simulated IV bags come in a variety of sizes and are available for purchase pre-filled, empty, in bulk or individually.
+              DiaMedical USA and SimLabSolutions are the exclusive provider of Loaded Emergency Packs for EMS education and training. These packs have been designed for emergency medical technicians, paramedics, fire fighters, law enforcement and specialized
+              rescue teams by EMS professionals and simulation specialists to provide a new level of realism and precision to EMS education. Loaded Emergency Packs are filled with all of the supplies and practi-meds needed for pre-service and in-service
+              training. Each Loaded Emergency Pack is pre-stocked and available in several forms including Loaded Simulated Medication Box, Loaded Pediatric Pack, Loaded ALS Pack, BLS Pack and refill kits.
+              <br />
+            </p>
+
+        </div>
 
       </div><!-- #content -->
     </div><!-- .col-xs-12 col-sm-8 -->
