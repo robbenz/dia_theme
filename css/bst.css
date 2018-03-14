@@ -849,7 +849,7 @@ ul#no_col_layout {columns: 1000px 1;}
 .yith-ywraq-add-button > a {border:1px solid #78be20;}
 
 /** photo close button **/
-div.pp_woocommerce .pp_close {z-index:9999 !important; top: 0px !important;right: 0px !important; border-radius: 0 !important; width: 53px!important; height: 37px !important;}
+div.pp_woocommerce .pp_close {z-index:9999 !important; top: 0px !important;right: 0px !important; border-radius: 0 !important; width: 53px!important; height: 28px !important;}
 div.pp_woocommerce .pp_close:before {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'sans-serif' !important; content: "X" !important;}
 /** END **/
 
