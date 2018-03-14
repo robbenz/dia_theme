@@ -1436,6 +1436,27 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 }
 /*** END ***/
 
+/*** dia_Create_Product_Slider() -- needs customer favorite plugin too ***/
+function dia_custom_slider($whichProducts, $whichInput) {
+  if ( shortcode_exists('wpb-product-slider') ) {
+    global $wpdb;
+    $result = array();
+    foreach( $wpdb->get_results(" SELECT post_id FROM wp_postmeta WHERE meta_key = \"$whichInput\" AND meta_value = 'yes' ") as $key => $row) {
+      $feat_id = $row->post_id;
+      array_push($result, $feat_id);
+    }
+
+    if (count($result) >= 5 ) {
+      $clean_ft =  implode (",", $result);
+      echo '<br><div style="clear:both"><h3 class="slider-headers">'.$whichProducts.'</h3>';
+      echo do_shortcode( '[wpb-product-slider product_type="id" id="'.$clean_ft.'"]' );
+      echo '</div><br>';
+    }
+  }
+}
+/*** END ***/
+
+
 /*** Create user account when new customer profile form submits ***/
 // add_action( 'vfbp_after_email', 'create_dia_profile_account', 10, 2 );
 //
