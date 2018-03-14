@@ -1436,7 +1436,7 @@ function diaLink($cat, $html, $slug, $view = 'menu-view-all'){
 }
 /*** END ***/
 
-/*** dia_Create_Product_Slider() -- needs customer favorite plugin too ***/
+/*** dia_custom_slider() -- needs customer favorite plugin too ***/
 function dia_custom_slider($whichProducts, $whichInput) {
   if ( shortcode_exists('wpb-product-slider') ) {
     global $wpdb;
