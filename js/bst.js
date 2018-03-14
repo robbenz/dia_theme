@@ -157,17 +157,6 @@
       $('.variation-tracking_item_freight_provider').css('text-transform', 'capitalize');
       /*** END ***/
 
-
-      function jsOnlineDemo() {
-        $('#vfb-field-182').val('SimServeRX Online Demo');
-      }
-
-      // $(".product-addon label").text(function(index, text) {
-      //     return text.replace("\(\)", "");
-      // });
-
-
-
     });
   }(jQuery));
 
