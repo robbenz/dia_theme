@@ -158,6 +158,10 @@
       /*** END ***/
 
 
+      function jsOnlineDemo() {
+        $('#vfb-field-182').val('SimServeRX Online Demo');
+      }
+
       // $(".product-addon label").text(function(index, text) {
       //     return text.replace("\(\)", "");
       // });
