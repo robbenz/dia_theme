@@ -95,7 +95,7 @@ if ( ! comments_open() ) {
 						</select></p>';
 					}
 
-					$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment_title">' . __( 'Your Review Title', 'woocommerce' ) . '</label><br /><input id="comment_title" name="comment_title"  aria-required="true"></input></p>';
+					$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment_title">' . __( 'Your Review Title', 'woocommerce' ) . '</label><br /><input id="comment_title" name="comment_title" aria-required="true"></input></p>';
 
 					$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . __( 'Your Review', 'woocommerce' ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
 

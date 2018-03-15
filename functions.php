@@ -861,14 +861,7 @@ function dia_custom_woocommerce_placeholder( $image_url ) {
 }
 /* END */
 
-// Remove reviews tab
-// add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
-//     function wcs_woo_remove_reviews_tab($tabs) {
-//     set($tabs['reviews']);
-//     return $tabs;
-// }
-/* END */
-
+/*** Reviews Stuff ***/
 add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
 function woo_reorder_tabs( $tabs ) {
     if(get_comments_number() > 0){
@@ -876,20 +869,16 @@ function woo_reorder_tabs( $tabs ) {
     }
     return $tabs;
 }
-
 add_filter( 'woocommerce_product_review_list_args', 'newest_reviews_first' );
 function newest_reviews_first($args) {
     $args['reverse_top_level'] = true;
     return $args;
 }
-
 add_action( 'comment_post', 'add_custom_comment_field' );
 function add_custom_comment_field( $comment_id ) {
    add_comment_meta( $comment_id, 'comment_title', $_POST['comment_title'] );
 }
-
-
-
+/* END */
 
 /**
  *Reduce the strength requirement on the woocommerce password.
