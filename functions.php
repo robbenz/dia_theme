@@ -862,12 +862,65 @@ function dia_custom_woocommerce_placeholder( $image_url ) {
 /* END */
 
 // Remove reviews tab
-add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
-    function wcs_woo_remove_reviews_tab($tabs) {
-    unset($tabs['reviews']);
+// add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
+//     function wcs_woo_remove_reviews_tab($tabs) {
+//     set($tabs['reviews']);
+//     return $tabs;
+// }
+/* END */
+
+add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
+function woo_reorder_tabs( $tabs ) {
+    if(get_comments_number() > 0){
+        $tabs['reviews']['priority'] = 60;           // Reviews first
+    }
     return $tabs;
 }
-/* END */
+
+add_filter( 'woocommerce_product_review_list_args', 'newest_reviews_first' );
+function newest_reviews_first($args) {
+    $args['reverse_top_level'] = true;
+    return $args;
+}
+
+
+// Add custom meta (ratings) fields to the default comment form
+// Default comment form includes name, email address and website URL
+// Default comment form elements are hidden when user is logged in
+
+// add_filter('woocommerce_product_review_comment_form_args', 'custom_fields');
+// // add_filter('comment_form_default_fields', 'custom_fields');
+// function custom_fields($fields) {
+//
+//     $commenter = wp_get_current_commenter();
+//     $req = get_option( 'require_name_email' );
+//     $aria_req = ( $req ? " aria-required='true'" : '' );
+//
+//     $fields[ 'author' ] = '<p class="comment-form-author">'.
+//       '<label for="author">' . __( 'Name' ) . '</label>'.
+//       ( $req ? '<span class="required">*</span>' : '' ).
+//       '<input id="author" name="author" type="text" value="'. esc_attr( $commenter['comment_author'] ) .
+//       '" size="30" tabindex="1"' . $aria_req . ' /></p>';
+//
+//     $fields[ 'email' ] = '<p class="comment-form-email">'.
+//       '<label for="email">' . __( 'Email' ) . '</label>'.
+//       ( $req ? '<span class="required">*</span>' : '' ).
+//       '<input id="email" name="email" type="text" value="'. esc_attr( $commenter['comment_author_email'] ) .
+//       '" size="30"  tabindex="2"' . $aria_req . ' /></p>';
+//
+//     $fields[ 'url' ] = '<p class="comment-form-url">'.
+//       '<label for="url">' . __( 'Website' ) . '</label>'.
+//       '<input id="url" name="url" type="text" value="'. esc_attr( $commenter['comment_author_url'] ) .
+//       '" size="30"  tabindex="3" /></p>';
+//
+//     $fields[ 'phone' ] = '<p class="comment-form-phone">'.
+//       '<label for="phone">' . __( 'Phone' ) . '</label>'.
+//       '<input id="phone" name="phone" type="text" size="30"  tabindex="4" /></p>';
+//
+//   return $fields;
+// }
+
+
 
 /**
  *Reduce the strength requirement on the woocommerce password.
@@ -1248,7 +1301,7 @@ function change_attachement_image_attributes($attr, $attachment) {
       $parentcats = get_ancestors($single_cat->term_id, 'product_cat');
       if ( function_exists('is_dia_part') && is_dia_part() ) {
         $attr['alt'] = $title .' | ' . $single_cat->name;
-        $attr['title'] = $content ;
+        $attr['title'] = strip_tags($content) ;
       }
       if ( in_array( 5310, $parentcats ) ) { // stretcher pads
         if ( strlen($seo_title) > 0 ) {

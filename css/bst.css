@@ -555,11 +555,17 @@ ol.commentlist li ol, ol.commentlist li ul { list-style-type: none; margin: 0 }
 .commentlist li { padding: 20px }
 .commentlist ul li { margin-top: 20px; margin-bottom: 0 }
 .reply p { margin: 0 }
+
+.woocommerce-page div.product #reviews .comment::before {display:none !important;}
+p.comment-form-comment label {margin-top:10px;}
+.woocommerce #reviews h3 {text-transform: capitalize;}
+.woocommerce #reviews #comments ol.commentlist li .comment-text {margin: 0 50px; border-radius: 0; border: 0; border-bottom: 1.5px solid #464444;}
+.woocommerce ul.products li.product .star-rating { display:none; }
 /* END */
 
 /*TABS*/
 .woocommerce-tabs { margin-bottom:1em; border-bottom: 2px solid #78be20; padding-bottom:20px; }
-.woocommerce-tabs h2 { border-bottom:2px solid #00426a; font-size: 20px; width:100%; font-family: 'Lato',sans-serif; color:#00426a; }
+.woocommerce-tabs h2, .woocommerce #reviews h3  { border-bottom:2px solid #00426a; font-size: 20px; width:100%; font-family: 'Lato',sans-serif; color:#00426a; }
 .accordion-title{ background-color: white; border-bottom: 1px solid #00426a; margin: 0; font-size: 14px; padding: 0.4em; }
 .accordion-title:after{ content: '\f078'; font-family: FontAwesome; font-weight: normal; font-style: normal; text-decoration:none; color: #00426a; float: right; font-size: 12px; }
 .accordion-title:hover{ cursor: pointer; background-color: #ececec; }
