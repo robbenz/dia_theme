@@ -561,6 +561,8 @@ p.comment-form-comment label {margin-top:10px;}
 .woocommerce #reviews h3 {text-transform: capitalize;}
 .woocommerce #reviews #comments ol.commentlist li .comment-text {margin: 0 50px; border-radius: 0; border: 0; border-bottom: 1.5px solid #464444;}
 .woocommerce ul.products li.product .star-rating { display:none; }
+#review_form input#comment_title {width:400px;}
+#review_form p.comment-form-rating label{margin-top:12px;}
 /* END */
 
 /*TABS*/

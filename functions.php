@@ -883,42 +883,11 @@ function newest_reviews_first($args) {
     return $args;
 }
 
+add_action( 'comment_post', 'add_custom_comment_field' );
+function add_custom_comment_field( $comment_id ) {
+   add_comment_meta( $comment_id, 'comment_title', $_POST['comment_title'] );
+}
 
-// Add custom meta (ratings) fields to the default comment form
-// Default comment form includes name, email address and website URL
-// Default comment form elements are hidden when user is logged in
-
-// add_filter('woocommerce_product_review_comment_form_args', 'custom_fields');
-// // add_filter('comment_form_default_fields', 'custom_fields');
-// function custom_fields($fields) {
-//
-//     $commenter = wp_get_current_commenter();
-//     $req = get_option( 'require_name_email' );
-//     $aria_req = ( $req ? " aria-required='true'" : '' );
-//
-//     $fields[ 'author' ] = '<p class="comment-form-author">'.
-//       '<label for="author">' . __( 'Name' ) . '</label>'.
-//       ( $req ? '<span class="required">*</span>' : '' ).
-//       '<input id="author" name="author" type="text" value="'. esc_attr( $commenter['comment_author'] ) .
-//       '" size="30" tabindex="1"' . $aria_req . ' /></p>';
-//
-//     $fields[ 'email' ] = '<p class="comment-form-email">'.
-//       '<label for="email">' . __( 'Email' ) . '</label>'.
-//       ( $req ? '<span class="required">*</span>' : '' ).
-//       '<input id="email" name="email" type="text" value="'. esc_attr( $commenter['comment_author_email'] ) .
-//       '" size="30"  tabindex="2"' . $aria_req . ' /></p>';
-//
-//     $fields[ 'url' ] = '<p class="comment-form-url">'.
-//       '<label for="url">' . __( 'Website' ) . '</label>'.
-//       '<input id="url" name="url" type="text" value="'. esc_attr( $commenter['comment_author_url'] ) .
-//       '" size="30"  tabindex="3" /></p>';
-//
-//     $fields[ 'phone' ] = '<p class="comment-form-phone">'.
-//       '<label for="phone">' . __( 'Phone' ) . '</label>'.
-//       '<input id="phone" name="phone" type="text" size="30"  tabindex="4" /></p>';
-//
-//   return $fields;
-// }
 
 
 
