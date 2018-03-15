@@ -86,7 +86,7 @@ get_template_part('includes/header');
             </a>
           </div>
 
-          <?php if ( function_exists('dia_custom_slider') ) dia_custom_slider('Featured Products', 'ems_fr_ft_slider'); ?>
+          <?php if ( function_exists('dia_custom_slider') ) dia_custom_slider('Products On Sale Now!', 'ems_fr_sale_slider'); ?>
 
           <a href="<?php echo site_url(); ?>/product-category/ems-field-ready-gear/ems-field-ready-bundles/">
             <img style="margin-bottom:0.35em;"src="<?php echo site_url(); ?>/wp-content/imgs/ems/FIELD-READY-BUNDLE.png" />
