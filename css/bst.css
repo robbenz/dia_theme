@@ -563,7 +563,7 @@ p.comment-form-comment label {margin-top:10px;}
 .woocommerce ul.products li.product .star-rating { display:none; }
 #review_form input#comment_title {width:400px;}
 #review_form p.comment-form-rating label{margin-top:12px;}
-
+.summary .woocommerce-product-rating {display: none;}
 /* END */
 
 /*TABS*/

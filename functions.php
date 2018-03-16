@@ -878,6 +878,30 @@ add_action( 'comment_post', 'add_custom_comment_field' );
 function add_custom_comment_field( $comment_id ) {
    add_comment_meta( $comment_id, 'comment_title', $_POST['comment_title'] );
 }
+
+add_action( 'wp_insert_comment','force_dia_approval', 99, 2 );
+function force_dia_approval($comment_id, $comment_object) {
+		if ( get_post_type($comment_object->comment_post_ID) == 'product' ) {
+			wp_set_comment_status($comment_object->comment_ID, 'hold');
+
+      $_user = wp_get_current_user();
+      $_name = esc_html( $_user->user_firstname );
+      $_email = esc_html( $_user->user_email );
+
+      $to = 'rbenz@diamedicalusa.com';
+      $subject = "New Product Review - Needs Approval";
+
+      $message = 'Soneone posted a new product review check it out ';
+      $message .= '<a href="https://diamedicalusa.com/wp-admin/post.php?post=';
+      $message .= $comment_object->comment_post_ID;
+      $message .= '&action=edit">here</a>';
+
+      $headers[] = "From: $_name <$_email>" . "\r\n";
+      $headers[] = "Bcc: Travis Morris <tmorris@diamedicalusa.com>" . "\r\n";
+
+      wp_mail( $to, $subject, $message, $headers );
+		}
+	}
 /* END */
 
 /**

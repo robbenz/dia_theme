@@ -156,6 +156,10 @@
       $('.variation-tracking_item_number').css('text-transform', 'capitalize');
       $('.variation-tracking_item_freight_provider').css('text-transform', 'capitalize');
       /*** END ***/
+      // 
+      // $('#review_form #submit').click(function() {
+      //   alert('Your submission is being processed and should be live shortly');
+      // });
 
     });
   }(jQuery));
