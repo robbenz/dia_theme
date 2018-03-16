@@ -51,7 +51,7 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 
-				<p class="meta"><em><?php _e( 'Your comment is awaiting approval', 'woocommerce' ); ?></em></p>
+				<p class="meta"><em><?php _e( 'Your review is awaiting verification', 'woocommerce' ); ?></em></p>
 
 				<?php else : ?>
 				<div style="float:right; width:20%;">
