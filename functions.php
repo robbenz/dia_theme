@@ -898,6 +898,7 @@ function force_dia_approval($comment_id, $comment_object) {
 
       $headers[] = "From: $_name <$_email>" . "\r\n";
       $headers[] = "Bcc: Travis Morris <tmorris@diamedicalusa.com>" . "\r\n";
+      $headers[] = "Bcc: Jeff Ambrose <jambrose@diamedicalusa.com>" . "\r\n";
 
       wp_mail( $to, $subject, $message, $headers );
 		}
