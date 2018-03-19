@@ -864,8 +864,8 @@ function dia_custom_woocommerce_placeholder( $image_url ) {
 /*** Reviews Stuff ***/
 add_filter( 'woocommerce_product_tabs', 'woo_reorder_tabs', 98 );
 function woo_reorder_tabs( $tabs ) {
-    if(get_comments_number() > 0){
-        $tabs['reviews']['priority'] = 70;
+    if(get_comments_number() >= 0){
+      $tabs['reviews']['priority'] = 70;
     }
     return $tabs;
 }
