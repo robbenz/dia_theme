@@ -576,13 +576,38 @@ p.comment-form-comment label {margin-top:10px;}
 /*END*/
 
 /*TABLE PARTS*/
-#parts-table {border-collapse: collapse; table-layout: fixed; width:580px;}
-#parts-table td {width:200px;}
+#parts-table {border-collapse: collapse; table-layout: fixed;}
 #parts-table tr:nth-child(even) {background: #BACFD7 }
 #parts-table tr:nth-child(even) a:hover {color:#fff }
 #parts-table tr:nth-child(odd) {background: #FFF }
 #parts-table tr:nth-child(odd) a:hover {color:#bacfd7 }
 #parts-table a {color:#000; font-family:sans-serif; }
+
+#table-wrapper { position:relative; margin-top: 40px; width: 65%;}
+#table-scroll {
+  height:300px;
+  overflow:auto;
+  margin-top:20px;
+}
+#table-wrapper table {
+  width: 100%;
+}
+#table-wrapper table * {
+  color:black;
+}
+#table-wrapper table thead th .text {
+  position:absolute;
+  top:-20px;
+  z-index:2;
+  height:20px;
+  border-bottom: 1px solid #00426A;
+}
+#table-wrapper table thead th .number, #table-wrapper table thead th .description{
+  width: 50%;
+  text-align: left;
+  font-weight: 400;
+}
+
 /*END*/
 
 /* HILL-ROM PARTS TABLE */
