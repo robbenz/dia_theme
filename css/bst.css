@@ -584,6 +584,7 @@ p.comment-form-comment label {margin-top:10px;}
 #parts-table a {color:#000; font-family:sans-serif; }
 
 #table-wrapper { position:relative; margin-top: 40px; width: 65%;}
+.emodal-content #table-wrapper { width: 100%;}
 #table-scroll {
   height:300px;
   overflow:auto;
