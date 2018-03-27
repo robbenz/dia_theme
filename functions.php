@@ -1536,13 +1536,103 @@ function dia_custom_slider($whichProducts, $whichInput) {
 
 // // update some shit
 //
-// $update_stuff = array (
-//   54, 100, 200
-//
-// );
-//
-// foreach ($update_stuff as $thing) {
-//   //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
-//   //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
-//   update_post_meta( $thing, 'dia_admin_quote', 'no' );
-// }
+$update_stuff = array (
+  '95691',
+  '95667',
+  '95670',
+  '95663',
+  '95652',
+  '95651',
+  '95653',
+  '95654',
+  '95645',
+  '95646',
+  '95644',
+  '95643',
+  '95642',
+  '95641',
+  '95637',
+  '95632',
+  '95627',
+  '95626',
+  '95621',
+  '95610',
+  '95609',
+  '95605',
+  '95606',
+  '95607',
+  '95608',
+  '95597',
+  '95601',
+  '95591',
+  '95590',
+  '95594',
+  '95585',
+  '95584',
+  '95588',
+  '95589',
+  '95583',
+  '95580',
+  '95582',
+  '95579',
+  '95581',
+  '95578',
+  '95564',
+  '95563',
+  '95567',
+  '95565',
+  '95566',
+  '95560',
+  '95561',
+  '95557',
+  '95562',
+  '95556',
+  '95555',
+  '95552',
+  '95547',
+  '95546',
+  '95549',
+  '95545',
+  '95548',
+  '95541',
+  '95543',
+  '95542',
+  '95540',
+  '95544',
+  '95539',
+  '95535',
+  '95538',
+  '95534',
+  '95533',
+  '95529',
+  '95528',
+  '95530',
+  '95523',
+  '95527',
+  '95524',
+  '95520',
+  '95514',
+  '95517',
+  '95510',
+  '95511',
+  '95513',
+  '95509',
+  '95512',
+  '95507',
+  '95505',
+  '95508',
+  '95506',
+  '95501',
+  '95500',
+  '95497',
+  '95488',
+  '95494',
+  '95491',
+  '95400'
+);
+
+foreach ($update_stuff as $thing) {
+  //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
+  //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
+  update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/3B-logo.jpg' );
+}

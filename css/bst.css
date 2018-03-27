@@ -164,6 +164,7 @@ td.quotes-actions a{margin:0 1em; }
 .r-a-qbutton-price:hover { background-color: #fff; border:1px solid #78be20; text-decoration: none; }
 .search-results .r-a-qbutton-price { font-size: 13.75px; color:#fff;}
 .search-results .r-a-qbutton-price:hover { color:#00426a;}
+article.searchwrap {padding: 0.69em;color:#fff;margin-bottom:20px;background-color: #00426a;border: 3px solid #fff;outline: 5px solid #00426a;height:auto;min-height:225px;border-radius: 8px;padding-bottom:10px;}
 /* END */
 
 /*** RAQ Plugin stuff ***/

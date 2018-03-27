@@ -28,25 +28,14 @@ if(have_posts()): while(have_posts()): the_post();
 
  ?>
 
- <script type="text/javascript">
+<script type="text/javascript">
  function jsAddPartNumber() {
    jQuery('#vfb-field-293').val('<?php print_r( the_title() ) ; ?>').css('text-transform', 'capitalize');
    jQuery('#vfb-field-294').val('<?php echo $product->get_sku(); ?>');
  }
 </script>
 
-    <article style="
-    padding: 0.69em;
-    color:#fff;
-    margin-bottom:20px;
-    background-color: #00426a;
-    border: 3px solid #fff;
-    outline: 5px solid #00426a;
-    height:auto;
-    min-height:225px;
-    border-radius: 8px;
-    padding-bottom:10px;"
-    role="article" id="post_<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article class="searchwrap" role="article" id="post_<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <header>
           <h4><a href="<?php the_permalink(); ?>"><span style="color:#78be20;">
@@ -89,7 +78,7 @@ if(have_posts()): while(have_posts()): the_post();
            ?>
         </div>
 
-        <div style="float:left; width:57.5%;margin-right:3.5%; ">
+        <div style="float:left; width:57.5%;margin-right:3.5%;">
           <h6>Part Number: <?php echo $product->get_sku(); ?></h6>
 
           <?php
@@ -227,7 +216,7 @@ if(have_posts()): while(have_posts()): the_post();
                $var_vend2cost        = get_post_meta( $_AV[ 'variation_id' ], 'dia_var_cost2', true );
                $wpnonce              = wp_create_nonce( 'add-request-quote-' . $_AV[ 'variation_id' ]);
                ?>
-               
+
                <div style="color:#fff;padding:0.05em;" class="var_specs_wrap" id="var_specs_wrap_<?php echo $_AV[ 'variation_id' ]; ?>">
                  <div style="float: right; margin-top: -10px; margin-bottom: 6px;" class="yith-ywraq-add-to-quote add-to-quote-<?php echo $_AV[ 'variation_id' ]; ?>">
                    <div class="yith-ywraq-add-button show" style="display: block;">
