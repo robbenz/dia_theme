@@ -20,9 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_breadcrumb - 20  5999
 		 */
 		do_action( 'woocommerce_before_main_content' );
-?>
-<?php
 
+		$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+		$single_cat = array_shift( $product_cats );
 
 if ( is_search() ):  ?>
 	<div class="container">
@@ -46,8 +46,7 @@ if ( is_search() ):  ?>
 <?php
 
 elseif ( function_exists('is_dia_parts_cat') && is_dia_parts_cat() ) :
-	$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-	$single_cat = array_shift( $product_cats );
+
 ?>
 
 <div style="float:none !important; margin-left:auto;" class="container header-wrap-text-medical-equipment">
@@ -195,7 +194,7 @@ if ( have_posts() ) :
 endwhile;
 
 // Trauma Supplies
-if (is_product_category('6325')) {  ?>
+if (is_product_category('6325')) : ?>
 
 	<li class=" product type-product status-publish has-post-thumbnail">
 
@@ -207,9 +206,7 @@ if (is_product_category('6325')) {  ?>
 					 <h3>Wound Care &amp; First Aid</h3>
 				 </a>
 	</li>
-	<?php }
-
-	elseif (is_product_category('10957')) {  ?>
+<?php elseif (is_product_category('10957')) :  ?>
 
 		<li class=" product type-product status-publish has-post-thumbnail">
 
@@ -222,20 +219,33 @@ if (is_product_category('6325')) {  ?>
 						 <h3>Custom Size Privacy Curtains</h3>
 					 </a>
 		</li>
-		<?php }
+	<?php endif; ?>
 
+	<script type="text/javascript">
+	function addQuoteCategory() {
+		jQuery('#vfb-field-293').val('<?php echo $single_cat->name; ?>').css('text-transform', 'capitalize');
+	}
+	</script>
+	<a href="#" class="eModal-14">
+		<img style="margin-bottom:10px;" onclick="addQuoteCategory();return false;" src="http://diamedicalusa.com/wp-content/uploads/2018/04/Request_A_Quote.jpg" />
+	</a>
+
+<?php
 
 woocommerce_product_loop_end();
 
 do_action( 'woocommerce_after_shop_loop' );
 
-if ( !is_shop() ) {
-	$t_id = get_queried_object()->term_id;
+if ( !is_shop() ) : ?>
+
+
+
+<?php	$t_id = get_queried_object()->term_id;
 	$term_meta = get_option( "taxonomy_$t_id" );
 	if 	(isset($term_meta['custom_term_meta'])) {
-		echo '<p style=" float: right; font-size: 13px; text-align: center; width: 75%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
+		echo '<p style=" float: right; font-size: 13px; text-align: center; width: 69%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
 	}
-}
+endif;
 	?>
 <?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 	<?php wc_get_template( 'loop/no-products-found.php' ); ?>
