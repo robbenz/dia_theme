@@ -227,7 +227,7 @@ if (is_product_category('6325')) : ?>
 	}
 	</script>
 	<a href="#" class="eModal-14">
-		<img style="margin-bottom:10px;" onclick="addQuoteCategory();return false;" src="http://diamedicalusa.com/wp-content/uploads/2018/04/Request_A_Quote.jpg" />
+		<img style="margin:20px 0 10px 0px;" onclick="addQuoteCategory();return false;" src="http://diamedicalusa.com/wp-content/uploads/2018/04/Request_A_Quote.jpg" />
 	</a>
 
 <?php
