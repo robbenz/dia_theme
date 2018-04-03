@@ -557,8 +557,93 @@ function add_dia_nextday_shipping_method( $methods ) {
   return $methods;
 }
 add_filter( 'woocommerce_shipping_methods', 'add_dia_nextday_shipping_method' );
-
 /*** END ***/
+
+
+
+
+
+//
+//
+//
+// ///***** hospital bed shipping stuff *****///
+// function dia_hospital_bed_shipping_method_init() {
+//   if ( ! class_exists( 'WC_Dia_hospital_bed_Shipping_Method' ) ) {
+//
+//     class WC_Dia_hospital_bed_Shipping_Method extends WC_Shipping_Method {
+//
+//       public function __construct() {
+//         $this->id                 = 'dia_hosbed_shipping_method';
+//         $this->method_title       = __( 'Hospital Bed Delivery' );
+//         $this->method_description = __( 'Description of your shipping method' );
+//         $this->enabled            = "yes";
+//         $this->title              = "Hospital Bed Delivery";
+//         $this->init();
+//       }
+//
+//       function init() {
+//         $this->init_form_fields(); // This is part of the settings API. Override the method to add your own settings
+//         $this->init_settings(); // This is part of the settings API. Loads settings you previously init.
+//
+//         // Save settings in admin if you have any defined
+//         add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
+//       }
+//
+//
+//
+//
+//
+//       public function calculate_shipping( $package ) {
+//
+//
+//
+//         //$__qty = WC()->cart->get_cart_contents_count();
+//         $__qty = cat_cart_count (6401);
+//         $first = intval($__qty);
+//         $second = 500;
+//         $operation = "*";
+//
+//         $answer = eval('return '.$first.$operation.$second.';');
+//
+//         $rate = array(
+//           'id' => $this->id,
+//           'label' => $this->title,
+//           'cost' => $answer
+//         );
+//         $this->add_rate( $rate );
+//       }
+//
+//     }
+//   }
+// }
+// add_action( 'woocommerce_shipping_init', 'dia_hospital_bed_shipping_method_init' );
+//
+// function add_dia_hospital_bed_shipping_method( $methods ) {
+//   $methods[] = 'WC_Dia_hospital_bed_Shipping_Method';
+//   return $methods;
+// }
+// add_filter( 'woocommerce_shipping_methods', 'add_dia_hospital_bed_shipping_method' );
+//
+//
+//
+//
+//
+//
+//
+// add_action( 'woocommerce_shipping_init', 'cat_cart_count' );
+//
+// function cat_cart_count( $cat_name ) {
+//   $cat_count = 0;
+//   foreach(WC()->cart->get_cart() as $cart_item)
+//   if( has_term( $cat_name, 'product_cat', $cart_item['product_id']))
+//   $cat_count += $cart_item['quantity'];
+//   return $cat_count;
+// }
+//
+
+
+
+
 
 
 // reset choesen shipping method so it appears properly from cart page to checkout page
@@ -1495,6 +1580,30 @@ function dia_custom_slider($whichProducts, $whichInput) {
     }
   }
 }
+/*** END ***/
+
+/*** Adds custom fields catalog sorting options using postmeta **/
+function diamedical_add_postmeta_ordering_args( $sort_args ) {
+  $orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
+
+  switch( $orderby_value ) {
+    case 'diamedical_search_priority':
+    $sort_args['orderby'] = 'meta_value_num';
+    $sort_args['order'] = 'desc';
+    $sort_args['meta_key'] = 'dia_search_priority';
+    break;
+  }
+  return $sort_args;
+}
+add_filter( 'woocommerce_get_catalog_ordering_args', 'diamedical_add_postmeta_ordering_args' );
+
+// Add these new sorting arguments to the sortby options on the frontend
+function diamedical_add_new_postmeta_orderby( $sortby ) {
+	$sortby['diamedical_search_priority'] = __( 'Sort by Frequently Purchased', 'woocommerce' );
+	return $sortby;
+}
+add_filter( 'woocommerce_default_catalog_orderby_options', 'diamedical_add_new_postmeta_orderby' );
+add_filter( 'woocommerce_catalog_orderby', 'diamedical_add_new_postmeta_orderby' );
 /*** END ***/
 
 

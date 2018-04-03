@@ -10,6 +10,28 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<?php wp_head(); ?>
+
+	<!-- Global site tag (gtag.js) - Google AdWords: 1012604170 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1012604170"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'AW-1012604170');
+	</script>
+	<!-- end site tag -->
+
+	<?php// if ( is_wc_endpoint_url( 'order-received' ) ) : ?>
+		<!-- Event snippet for Order Received conversion page -->
+	<!-- <script>
+		gtag('event', 'conversion', {
+				'send_to': 'AW-1012604170/$__SOMEHASH',
+				'transaction_id': ''
+		});
+	</script> -->
+	<?php// endif; ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
