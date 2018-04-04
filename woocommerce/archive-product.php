@@ -236,17 +236,12 @@ woocommerce_product_loop_end();
 
 do_action( 'woocommerce_after_shop_loop' );
 
-if ( !is_shop() ) : ?>
-
-
-
-<?php	$t_id = get_queried_object()->term_id;
+if ( !is_shop() ) :
+	$t_id = get_queried_object()->term_id;
 	$term_meta = get_option( "taxonomy_$t_id" );
-	if 	(isset($term_meta['custom_term_meta'])) {
-		echo '<p style=" float: right; font-size: 13px; text-align: center; width: 69%;" class="diva">' . $term_meta['custom_term_meta']; '</p>';
-	}
-endif;
-	?>
+	if 	(isset($term_meta['custom_term_meta'])) echo '<p class="diva">' . $term_meta['custom_term_meta']; '</p>';
+endif; ?>
+
 <?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 	<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 <?php endif; ?>

@@ -21,15 +21,15 @@
 	</script>
 	<!-- end site tag -->
 
-	<?php// if ( is_wc_endpoint_url( 'order-received' ) ) : ?>
+	<?php if ( is_wc_endpoint_url( 'order-received' ) ) : ?>
 		<!-- Event snippet for Order Received conversion page -->
-	<!-- <script>
+	<script>
 		gtag('event', 'conversion', {
-				'send_to': 'AW-1012604170/$__SOMEHASH',
+				'send_to': 'AW-1012604170/gYulCJPfg4ABEIq67OID',
 				'transaction_id': ''
 		});
-	</script> -->
-	<?php// endif; ?>
+	</script>
+	<?php endif; ?>
 
 
 </head>
