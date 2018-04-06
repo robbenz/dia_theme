@@ -255,7 +255,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 						<table class="table">
 							<tr><td><a style="font-weight: 700;" href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">VIEW ALL</a></td></tr>
 							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">hospital bed service</a></td></tr>
-							<tr><td><a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">infusion pump service</a></td></tr>
+							<tr><td><a href="<?php echo site_url(); ?>/product-category/infusion-pump-repair-service/">infusion pump service</a></td></tr>
 							<tr><td><a href="<?php echo site_url(); ?>/product-category/components-service-repairs/">component repair</a></td></tr>
 							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/exam-tables-repairs/">exam table service</a></td></tr>
 							<tr><td><a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/headwalls-repairs/">headwall installation</a></td></tr>

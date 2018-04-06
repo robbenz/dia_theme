@@ -27,7 +27,7 @@
           <a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/hospital-bed-repair/">
             <li>HOSPITAL BED SERVICE</li>
           </a>
-          <a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">
+          <a href="<?php echo site_url(); ?>/product-category/infusion-pump-repair-service/">
             <li>INFUSION PUMP SERVICE</li>
           </a>
           <a href="<?php echo site_url(); ?>/product-category/components-service-repairs">

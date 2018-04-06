@@ -49,7 +49,7 @@ get_template_part('includes/header');
             </div>
 
             <div class="col-sm-3 col-xs-3">
-              <a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">
+              <a href="<?php echo site_url(); ?>/product-category/infusion-pump-repair-service/">
                 <img class="mobile-img" src="<?php echo site_url(); ?>/wp-content/imgs/preventative-maintenance/infusion-pump-service1.png" />
                 <div class="pm_square">INFUSION PUMP <span class="pm_white">SERVICE</span></div>
               </a>

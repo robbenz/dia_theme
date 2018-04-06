@@ -64,7 +64,7 @@ if ( ! empty( $breadcrumb ) ) {
 		<nav class="woocommerce-breadcrumb">
 			<a href="<?php echo site_url(); ?>">Home</a> /
 			<a href="<?php echo site_url(); ?>/site-repairs-preventive-maintenance/">On-Site Repairs &amp; Preventive Maintenance</a> /
-			<a href="<?php echo site_url(); ?>/product-category/infusion-pump-service-repairs/">Infusion Pump - Service &amp; Repairs</a> /
+			<a href="<?php echo site_url(); ?>/product-category/infusion-pump-repair-service/">Infusion Pump - Service &amp; Repairs</a> /
 			<?php echo $value; ?>
 		</nav>
 	<?php
