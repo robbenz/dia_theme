@@ -721,6 +721,12 @@ p.diva { float: right; font-size: 13px; text-align: center; width: 69%; }
 .vfbp-form input, .vfbp-form * input {margin-bottom:10px !important; }
 /* END */
 
+.woocommerce ul.products li.product .add-request-quote-button{margin-bottom:4px; border:1px solid #78be20}
+.woocommerce ul.products li.product .add-request-quote-button:hover{border:1px solid #78be20 !important;}
+
+
+.upsells #customer_fav_img{display:none !important;}
+
 /* Checkout */
 .wizard.wizard > .steps a{padding: 10px 10px 10px 16px; width:84.4%;}
 .wizard.wizard > .steps a::before {content: none; }
