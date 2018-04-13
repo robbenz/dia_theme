@@ -1392,6 +1392,34 @@ function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
 
 /*** SOME QUOTING STUFF ***/
+
+
+/*** This makes dia_order_quote_header_drop_option usable in the ap-admin query string ***/
+add_action( 'pre_get_posts', 'dia_quote_sort' );
+function dia_quote_sort( $query ) {
+  if ( $query->is_admin && isset( $_GET['dia_order_quote_header_drop_option'] ) ) {
+		$meta_key_query = array(
+			array(
+				'key' => 'dia_order_quote_header_drop_option',
+				'value' => $_GET['dia_order_quote_header_drop_option'],
+			)
+		);
+		$query->set( 'meta_query', $meta_key_query );
+	}
+  if ( $query->is_admin && isset( $_GET['_current_user'] ) ) {
+    $meta_key_query = array(
+      array(
+        'key' => '_current_user',
+        'value' => $_GET['_current_user'],
+      )
+    );
+    $query->set( 'meta_query', $meta_key_query );
+  }
+	return $query;
+}
+/*** END ***/
+
+
 /*** Add a custom action to order actions select box on edit order page ***/
 add_action( 'woocommerce_order_actions', 'dia_update_customer_info_quoting' );
 function dia_update_customer_info_quoting( $actions ) {
@@ -1476,25 +1504,38 @@ function dia_quote_image_pdf() {
 
 // Add Custom BACK TO SEARCH link to admin bar
 function my_quotes_stuff_button($wp_admin_bar) {
+  if( current_user_can('shop_manager') || current_user_can('administrator') ) {
+    $dia_user = wp_get_current_user();
+    $dia_user_id = esc_html( $dia_user->ID );
+    $URL = site_url();
+    $args = array(
+      'title' => 'My Quotes',
+      'href'  => $URL.'/wp-admin/edit.php?&post_type=shop_order&_current_user='.$dia_user_id,
+      'meta'  => array(
+        'title' => 'View Quotes That I Created'
+      )
+    );
+    $wp_admin_bar -> add_node($args);
 
-    if( current_user_can('shop_manager') || current_user_can('administrator') ) {
-      $dia_user = wp_get_current_user();
-      $dia_user_id = esc_html( $dia_user->ID );
-      $URL = site_url();
-        $args = array(
-          'id'    => 'my_quotes_button_admin',
-          'title' => 'My Quotes',
-          'href'  => $URL.'/wp-admin/edit.php?&post_type=shop_order&_customer_user='.$dia_user_id,
-          'meta'  => array(
-            'class' => 'my_quotes_button_admin',
-            'title' => 'View Quotes That I Created'
-          )
-        );
-        $wp_admin_bar -> add_node($args);
-      }
-    }
+    $other_args = array(
+      'title' => 'Nursing School Quotes',
+      'href'  => $URL.'/wp-admin/edit.php?post_type=shop_order&dia_order_quote_header_drop_option=nursing_school',
+      'meta'  => array(
+        'title' => 'Hey Jon, How\'s your roomate(s)'
+      )
+    );
+    $wp_admin_bar -> add_node($other_args);
 
-
+    $ot_args = array(
+      'title' => 'Hospital Team Quotes',
+      'href'  => $URL.'/wp-admin/edit.php?post_type=shop_order&dia_order_quote_header_drop_option=hospital_mm',
+      'meta'  => array(
+        'title' => 'Justin is not funny. At all.'
+      )
+    );
+    $wp_admin_bar -> add_node($ot_args);
+  }
+}
 add_action('admin_bar_menu', 'my_quotes_stuff_button', 999);
 /* END */
 

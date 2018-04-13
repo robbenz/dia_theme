@@ -17,12 +17,8 @@ jQuery(document).ready(function() {
             jQuery("#pm_fields").hide(200);
         }
     });
-});
+    
+    // change cost -> price on order table chart
+    jQuery( "div.woocommerce_order_items_wrapper th.item_cost" ).replaceWith( '<th class="item_cost sortable" data-sort="float">Price</th>');
 
-
-
-jQuery(document).ready(function () {
-    // jQuery( "<p>Test</p>" ).insertBefore( ".media-toolbar" );
-  // jQuery( ".media-toolbar-secondary" ).append( '<div class="nonsense">hey whats up </div>' );
-        jQuery(".media-toolbar-secondary").after('Hello World');
 });
