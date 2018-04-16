@@ -1452,6 +1452,9 @@ function dia_order_quote_header() {
   add_meta_box( 'dia_order_quote_header_drop', __('Header Logo &amp; probably some other stuff later','woocommerce'), 'dia_order_quote_header_drop', 'shop_order', 'normal', 'high', NULL );
 }
 function dia_order_quote_header_drop() {
+  global $post;
+  $meta = get_post_meta( $post->ID, 'dia_secret', true );
+
   woocommerce_wp_select(
     array(
       'id'          => 'dia_order_quote_header_drop_option',
@@ -1477,13 +1480,47 @@ function dia_order_quote_header_drop() {
         'description' => __( 'What subject line do you want?' )
       )
     );
+
+?>
+
+<input type="hidden" name="dia_secret_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
+<label for="dia_secret[textarea]">Top Secret Notes -- Dia Only</label><br>
+<textarea name="dia_secret[textarea]" id="dia_secret[textarea]" rows="5" cols="30" style="width:500px;"><?php  if (is_array($meta) && isset($meta['textarea'])){ echo $meta['textarea']; } ?></textarea>
+
+<?php
+
 }
+
+
 // save it
 add_action('save_post', 'dia_quote_image_pdf', 10, 3);
 function dia_quote_image_pdf() {
-  global $post;
+  global $post, $post_id;
   if (is_admin()){
     if ($post->post_type == 'shop_order') {
+
+
+      // verify nonce
+    	if ( !wp_verify_nonce( $_POST['dia_secret_nonce'], basename(__FILE__) ) ) {
+    		return $post_id;
+    	}
+    	// check autosave
+    	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+    		return $post_id;
+    	}
+
+      $old = get_post_meta( $post_id, 'dia_secret', true );
+	     $new = $_POST['dia_secret'];
+
+
+      	if ( $new && $new !== $old ) {
+      		update_post_meta( $post_id, 'dia_secret', $new );
+      	} elseif ( '' === $new && $old ) {
+      		delete_post_meta( $post_id, 'dia_secret', $old );
+      	}
+
+
+
       $dia_order_quote_header_drop_option = $_POST['dia_order_quote_header_drop_option'];
       if( !empty( $dia_order_quote_header_drop_option ) ) {
         update_post_meta( $post->ID, 'dia_order_quote_header_drop_option', esc_attr( $dia_order_quote_header_drop_option ) );
@@ -1509,6 +1546,7 @@ function my_quotes_stuff_button($wp_admin_bar) {
     $dia_user_id = esc_html( $dia_user->ID );
     $URL = site_url();
     $args = array(
+      'id'    => 'my_quotes_button',
       'title' => 'My Quotes',
       'href'  => $URL.'/wp-admin/edit.php?&post_type=shop_order&_current_user='.$dia_user_id,
       'meta'  => array(
@@ -1518,6 +1556,7 @@ function my_quotes_stuff_button($wp_admin_bar) {
     $wp_admin_bar -> add_node($args);
 
     $other_args = array(
+      'id'    => 'ns_quotes_button',
       'title' => 'Nursing School Quotes',
       'href'  => $URL.'/wp-admin/edit.php?post_type=shop_order&dia_order_quote_header_drop_option=nursing_school',
       'meta'  => array(
@@ -1527,6 +1566,7 @@ function my_quotes_stuff_button($wp_admin_bar) {
     $wp_admin_bar -> add_node($other_args);
 
     $ot_args = array(
+      'id'    => 'hos_quotes_button',
       'title' => 'Hospital Team Quotes',
       'href'  => $URL.'/wp-admin/edit.php?post_type=shop_order&dia_order_quote_header_drop_option=hospital_mm',
       'meta'  => array(
