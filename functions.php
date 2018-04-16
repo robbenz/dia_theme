@@ -98,7 +98,11 @@ function benz_chromefix_inline_css() {
   wp_add_inline_style( 'wp-admin', '#order_shipping_line_items .shipping input.number_of_shipments{display:none;}' );
   wp_add_inline_style( 'wp-admin', '#order_line_items .display_meta{display:none;}' );
   wp_add_inline_style( 'wp-admin', 'div.notice{display:none;}' );
+  wp_add_inline_style( 'wp-admin', '.preview_quote_button, .preview_quote_button:visited, .preview_quote_button:active {padding: 1em; background-color: #00426a; color: #fff; text-decoration: none;font-size:1.2em;}' );
+  wp_add_inline_style( 'wp-admin', '.preview_quote_button:hover {background-color: #78be20;color: #fff;}' );
 }
+
+
 add_action('admin_enqueue_scripts', 'benz_chromefix_inline_css');
 
 function ds_enqueue_jquery_in_footer( &$scripts ) {
@@ -1492,8 +1496,9 @@ function dia_order_quote_header_drop() {
 <textarea name="dia_secret[textarea]" id="dia_secret[textarea]" rows="5" cols="30" style="width:500px;"><?php  if (is_array($meta) && isset($meta['textarea'])){ echo $meta['textarea']; } ?></textarea>
 <br />
 <br />
-<a target="_blank" href="<?php echo site_url(); ?>/my-account/print-order/<?php echo $post->ID; ?>">PREVIEW QUOTE</a>
-
+<a class="preview_quote_button" target="_blank" href="<?php echo site_url(); ?>/my-account/print-order/<?php echo $post->ID; ?>">PREVIEW QUOTE</a>
+<br />
+<br />
 <?php
 
 }

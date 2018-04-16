@@ -724,6 +724,9 @@ p.diva { float: right; font-size: 13px; text-align: center; width: 69%; }
 .woocommerce ul.products li.product .add-request-quote-button{margin-bottom:4px; border:1px solid #78be20}
 .woocommerce ul.products li.product .add-request-quote-button:hover{border:1px solid #78be20 !important;}
 
+.preview_quote_button {padding: 1em; background-color: #00426a; color: #fff; text-decoration: none;font-size:1.2em;}
+.preview_quote_button:hover {background-color: #78be20; }
+
 
 .upsells #customer_fav_img{display:none !important;}
 
