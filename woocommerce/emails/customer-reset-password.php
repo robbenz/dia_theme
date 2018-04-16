@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
+
+
 <?php do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
 <p><?php _e( 'Someone requested that the password be reset for the following DiaMedical USA account:', 'woocommerce' ); ?></p>
