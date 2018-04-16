@@ -1455,6 +1455,10 @@ function dia_order_quote_header_drop() {
   global $post;
   $meta = get_post_meta( $post->ID, 'dia_secret', true );
 
+  // Return date/time info of a timestamp; then format the output
+  $mydate=getdate(date("U"));
+
+
   woocommerce_wp_select(
     array(
       'id'          => 'dia_order_quote_header_drop_option',
@@ -1486,6 +1490,9 @@ function dia_order_quote_header_drop() {
 <input type="hidden" name="dia_secret_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 <label for="dia_secret[textarea]">Top Secret Notes -- Dia Only</label><br>
 <textarea name="dia_secret[textarea]" id="dia_secret[textarea]" rows="5" cols="30" style="width:500px;"><?php  if (is_array($meta) && isset($meta['textarea'])){ echo $meta['textarea']; } ?></textarea>
+<br />
+<br />
+<a target="_blank" href="<?php echo site_url(); ?>/my-account/print-order/<?php echo $post->ID; ?>">PREVIEW QUOTE</a>
 
 <?php
 
