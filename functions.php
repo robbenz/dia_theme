@@ -1398,6 +1398,25 @@ function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** SOME QUOTING STUFF ***/
 
 
+add_action('admin_init', 'stringreplace_order_quote');
+function stringreplace_order_quote() {
+
+    $post_id = $_GET['post'];
+    $post = get_post($post_id);
+
+    if ( is_admin() && ($post->post_type == 'shop_order') ) {
+      if ( $post->post_status == 'wc-ywraq-new' || $post->post_status == 'wc-ywraq-pending') {
+
+        add_action( 'admin_enqueue_scripts', 'benz_admin_quote_script' );
+        function benz_admin_quote_script() {
+            wp_enqueue_script('custom_quote_js_script', get_bloginfo('template_url').'/js/admin_quote_script.js', array('jquery'));
+        }
+      }
+    }
+
+}
+
+
 /*** This makes dia_order_quote_header_drop_option usable in the ap-admin query string ***/
 add_action( 'pre_get_posts', 'dia_quote_sort' );
 function dia_quote_sort( $query ) {
