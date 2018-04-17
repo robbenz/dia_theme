@@ -1465,7 +1465,6 @@ function dia_process_update_customer_info_quoting( $order ) {
   update_post_meta ($order->id, 'ywraq_customer_name', $ywraw_name_check );
   update_post_meta ($order->id, '_ywraq_safe_submit_field', 'send_quote' );
   update_post_meta ($order->id, 'ywraq_raq', 'yes' );
-//  update_post_meta ($order->id, '_dia_admin_quote', 'dia_admin_created' );
 
 }
 
@@ -1477,10 +1476,6 @@ function dia_order_quote_header() {
 function dia_order_quote_header_drop() {
   global $post;
   $meta = get_post_meta( $post->ID, 'dia_secret', true );
-
-  // Return date/time info of a timestamp; then format the output
-  $mydate=getdate(date("U"));
-
 
   woocommerce_wp_select(
     array(
