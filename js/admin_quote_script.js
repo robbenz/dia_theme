@@ -17,5 +17,6 @@ jQuery(document).ready(function() {
   jQuery( "#order_data h2" ).replaceWith( '<h2>Quote #EC-'+orderID+'details</h2>' );
   jQuery( ".order_data_column > p.form-field-wide:first > label" ).replaceWith( '<label for="order_status">Quote Date: </label>');
   jQuery( "p.wc-order-status > label" ).replaceWith( '<label for="order_status">Quote Status: </label>');
+  jQuery( "div.woocommerce_order_items_wrapper th.item_cost" ).replaceWith( '<th class="item_cost sortable" data-sort="float">Price</th>');
 
 });

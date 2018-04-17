@@ -20,8 +20,6 @@ jQuery(document).ready(function() {
 
     // change cost -> price on order table chart
     jQuery( "div.woocommerce_order_items_wrapper th.item_cost" ).replaceWith( '<th class="item_cost sortable" data-sort="float">Price</th>');
-    // jQuery( "#wpbody-content h1.wp-heading-inline" ).replaceWith( 'Edit Quote');
-    // jQuery( "div.order_data_column_container label" ).string.replace("Order", "Quote");
 
 
 });
