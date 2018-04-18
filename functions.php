@@ -197,7 +197,7 @@ function products_per_page_category( $count ) {
   elseif (isset($_GET['view']) && $_GET['view'] === 'all') :  // View all page
     return 9999;
   else :
-   return 100;
+   return 99;
   endif;
 }
 /* END */
@@ -1259,49 +1259,39 @@ function display_product_title_as_link( $item_name, $item ) {
 /*** END ***/
 
 /*** Display IV Bag Waiver when products are in your cart & checkout  ***/
-// add_action( 'woocommerce_before_cart_totals', 't_brady_cart_page_button' );
-// add_action( 'woocommerce_review_order_after_order_total', 't_brady_cart_page_button' );
-//
-// function t_brady_cart_page_button() {
-//   if ( is_user_logged_in() ) {
-//     if (!wp_doing_ajax()){
-//       $cat_array = array (
-//         'iv-therapy',
-//         'simulated-iv-bags',
-//         'loaded-emergency-packs',
-//         'loaded-crash-carts',
-//         'refill-kits',
-//         'practi-meds',
-//         'supply-kits',
-//         'simulation-bundles'
-//       );
-//       // Set False - then prove TRUE
-//       $cat_check = false;
-//
-//       foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-//
-//           $product = $cart_item['data'];
-//           foreach ($cat_array as $cats) {
-//             if ( has_term( $cats, 'product_cat', $product->id ) ) {
-//                 $cat_check = true;
-//                 // break because we only need one "true" to matter here
-//                 break;
-//             }
-//         }
-//       }
-//       $first = true;
-//       if ( $cat_check ) {
-//         echo '<a style="font-size:1.169em;" target="_blank" href="https://diamedicalusa.com/iv-bag-waiver/">';
-//         echo '**Some of the items in your cart require this waiver before they will ship';
-//         echo '</a>';
-//         $first = false;
-//       }
-//       foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
-//         if(!$first) break;
-//       }
-//     }
-//   }
-// }
+add_action( 'woocommerce_before_cart', 't_brady_cart_page_button' ,999 );
+//add_action( 'woocommerce_review_order_after_order_total', 't_brady_cart_page_button' );
+
+function t_brady_cart_page_button() {
+  $cat_array = array (
+    'iv-therapy',
+    'simulated-iv-bags',
+    'loaded-emergency-packs',
+    'loaded-crash-carts',
+    'refill-kits',
+    'practi-meds',
+    'supply-kits',
+    'simulation-bundles'
+  );
+  // Set False - then prove TRUE
+  $cat_check = false;
+
+  foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+    $product = $cart_item['data'];
+    foreach ($cat_array as $cats) {
+      if ( has_term( $cats, 'product_cat', $product->id ) ) {
+        $cat_check = true;
+        // break because we only need one "true" to matter here
+        break;
+      }
+    }
+  }
+  if ( $cat_check ) {
+    echo '<a style="font-size:1.3em;" target="_blank" href="https://diamedicalusa.com/iv-bag-waiver/">';
+    echo '**Some of the items in your cart require this waiver before they will ship';
+    echo '</a>';
+  }
+}
 /*** END ***/
 
 /*** Repairs Special Image ***/
@@ -1396,6 +1386,15 @@ function _pre($array) { echo '<pre>'; print_r ($array); echo '</pre>'; }
 /*** END ***/
 
 /*** SOME QUOTING STUFF ***/
+// add_action('admin_init', 'add_admin_shippings');
+// function add_admin_shippings() {
+//   add_filter( 'woocommerce_shipping_methods', 'dia_kill_weird_shipping_methods' );
+//   function dia_kill_weird_shipping_methods( $methods ) {
+//     unset ($methods['international_delivery']);
+//     unset ($methods['local_pickup']);
+//     return $methods;
+//   }
+// }
 
 
 add_action('admin_init', 'stringreplace_order_quote');
@@ -1743,10 +1742,24 @@ add_filter( 'woocommerce_catalog_orderby', 'diamedical_add_new_postmeta_orderby'
 //   add_meta_box( 'send_some_tracking_info', __('specs_dump','woocommerce'), 'dia_specs_dump', 'shop_order', 'normal', 'high', NULL );
 // }
 // function dia_specs_dump() {
-//   global $post;
-//   $post = get_post( $post );
-//   _pre($post);
+//    global $theorder;
+//   // // $items = $theorder->get_items();
+//   // $shipping_items = $theorder->get_items( 'shipping' );
+//   // // _pre($shipping_items);
+//   // // _pre($shipping_items);
+//   // // _pre() $shipping_items[1]['method_id'];
+//   //
+//   // foreach ( $shipping_items as $shipping_item ) {
+//   //   echo $shipping_item['method_id'];
+//   // }
+//
+//   $adminuser = get_user_by( 'id', get_post_meta($theorder->id , '_current_user', true) );
+//
+// _pre($adminuser);
 // }
+
+
+
 /*** END ***/
 
 
