@@ -1232,7 +1232,7 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   #simlablogo{margin: 30px 0 0 10px; width:30%;}
   #footerlinks2, #footerlinks3{display:none;}
   #form-row{margin-top:20px}
-  #masthead { height:170px; }
+  #masthead { height:135px; }
   .header-toggle{top:-170px; transition-timing-function: ease-in-out;}
   #wpp-buttons{display:none !important;}
   .woocommerce .woocommerce-breadcrumb {margin: 0px 1em 1em !important;}
