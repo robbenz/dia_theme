@@ -19,6 +19,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
 		 * @hooked woocommerce_breadcrumb - 20  5999
 		 */
+
+
+
+		//  $_cat = get_term_by('id', 5320, 'product_cat');
+		// _pre($_cat);
+//
+// 		$cp = new WP_Query(
+//       array (
+//         'product_ecat' => $_cat,
+//         'fields' => 'ids',
+//         'ignore_sticky_posts' => true
+//       )
+//     );
+// echo 'working';
+// 		if ($cp->have_posts()) {
+//       $attach = new WP_Query(
+//         array (
+//           'post_parent__in' => $cp->posts,
+//           'post_type' => 'attachment',
+//           'post_status' => 'inherit',
+//           'ignore_sticky_posts' => true,
+//           'posts_per_page' => 1
+//         )
+//       );
+//       if ($attach->have_posts()) {
+//         $_cat->image = wp_get_attachment_image($attach->posts[0]->ID);
+//       } else {
+//         $_cat->image = 'some other image';
+//       }
+//     }
+// 		// _pre( $_cat->image );
+// 		_pre( $attach );
+
+
+
+
 		do_action( 'woocommerce_before_main_content' );
 
 		$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
@@ -208,17 +244,20 @@ if (is_product_category('6325')) : ?>
 	</li>
 <?php elseif (is_product_category('10957')) :  ?>
 
-		<li class=" product type-product status-publish has-post-thumbnail">
+	<li class=" product type-product status-publish has-post-thumbnail">
 
-			<a href="<?php echo site_url(); ?>/privacy-curtain-sizing-form/">
+		<a href="<?php echo site_url(); ?>/product-category/supplies-2/wound-care-first-aid//">
+			<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3011-250x275.jpg"
+					 class="attachment-shop_catalog size-shop_catalog wp-post-image"
+					 alt="Wound Care &amp; First Aid"
+					 width="250" height="266">
+					 <h3>Wound Care &amp; First Aid</h3>
+				 </a>
+	</li>
 
-				<img src="<?php echo site_url(); ?>/wp-content/uploads/2017/09/custom-size-privacy-curtains.jpg"
-						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
-						 alt="Custom Privacy Curtains"
-						 width="250" height="266">
-						 <h3>Custom Size Privacy Curtains</h3>
-					 </a>
-		</li>
+<?php elseif (is_product_category('1955')) : dia_hacker_link(5320); // add sim iv fluids to infusion & dialysis ?>
+
+
 	<?php endif; ?>
 
 	<script type="text/javascript">
@@ -248,4 +287,5 @@ endif; ?>
 
 <?php do_action( 'woocommerce_after_main_content' ); ?>
 
-<?php endif; ?>
+<?php endif;
+?>
