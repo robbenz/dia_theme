@@ -828,11 +828,11 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
 
 /*** DIA hacker link - becuase categories cant have two parents ***/
 add_action( 'after_theme_setup', 'dia_hacker_link' );
-function dia_hacker_link($termID){  // add last / first fix
+function dia_hacker_link($termID, $f_or_l){
   $_cat = get_term_by('id', $termID, 'product_cat');
   $_catLink = get_term_link( $termID, 'product_cat' );
   ?>
-  <li class="product type-product status-publish has-post-thumbnail">
+  <li class="product type-product status-publish has-post-thumbnail <?php echo $f_or_l; ?>">
     <a href="<?php echo $_catLink; ?>">
       <?php woocommerce_subcategory_thumbnail( $_cat ); ?>
       <h3><?php echo $_cat->name; ?></h3>

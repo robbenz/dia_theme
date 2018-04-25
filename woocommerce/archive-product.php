@@ -187,41 +187,13 @@ if ( have_posts() ) :
 
 	woocommerce_product_subcategories();
 
-	if (is_product_category('10946')) { ?>
+	if (is_product_category('10946')) {     // add to EMS Field Ready Gear -> Airway & Respiratory
+		dia_hacker_link(5326, "Last");        // Suction Machines & Supplies
+		dia_hacker_link(10840, "First");      // Airway Manikins
+		
+		dia_hacker_link(9412, "");            // Oxygen Supplies
 
-		<li class="product type-product status-publish has-post-thumbnail">
-
-			<a href="<?php echo site_url(); ?>/product-category/manikins/airway-management/">
-				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/03/Nasco-Lifeform-Tracheostomy-Care-Simulator-LF01083U_400x400-250x275.jpg"
-						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
-						 alt="Airway Manikins"
-						 width="250" height="266">
-						 <h3>Airway Manikins</h3>
-					 </a>
-		</li>
-
-		<li class="last product type-product status-publish has-post-thumbnail">
-
-			<a href="<?php echo site_url(); ?>/product-category/respiratory/oxygen-supplies/">
-				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/5401-250x275.jpg"
-						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
-						 alt="Oxygen Supplies"
-						 width="250" height="266">
-						 <h3>Oxygen Supplies</h3>
-					 </a>
-		</li>
-
-		<li class="first product type-product status-publish has-post-thumbnail">
-
-			<a href="<?php echo site_url(); ?>/product-category/respiratory/suction-machines-supplies/">
-				<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/03/Laerdal-Suction-Unit-RS014201_400x400-250x275.jpg"
-						 class="attachment-shop_catalog size-shop_catalog wp-post-image"
-						 alt="Suction Machines &amp; Supplies"
-						 width="250" height="266">
-						 <h3>Suction Machines &amp; Supplies</h3>
-					 </a>
-		</li>
-	<?php }
+	}
 
 	while ( have_posts() ) : the_post();
 
@@ -229,36 +201,21 @@ if ( have_posts() ) :
 
 endwhile;
 
-// Trauma Supplies
-if (is_product_category('6325')) : ?>
 
-	<li class=" product type-product status-publish has-post-thumbnail">
+if (is_product_category('6325')) dia_hacker_link(6274, "last");  // add wound & first aid to Trauma Supplies
 
-		<a href="<?php echo site_url(); ?>/product-category/supplies-2/wound-care-first-aid//">
-			<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3011-250x275.jpg"
+if (is_product_category('1955')) dia_hacker_link(5320, "last");  // add sim iv fluids to infusion & dialysis
+
+if (is_product_category('10957')) :  ?>
+	<li class="product type-product status-publish has-post-thumbnail">
+		<a href="<?php echo site_url(); ?>/privacy-curtain-sizing-form/">
+			<img src="<?php echo site_url(); ?>/wp-content/uploads/2017/09/custom-size-privacy-curtains.jpg"
 					 class="attachment-shop_catalog size-shop_catalog wp-post-image"
-					 alt="Wound Care &amp; First Aid"
+					 alt="Custom Privacy Curtains"
 					 width="250" height="266">
-					 <h3>Wound Care &amp; First Aid</h3>
+					 <h3>Custom Size Privacy Curtains</h3>
 				 </a>
 	</li>
-
-<?php elseif (is_product_category('10957')) :  ?>
-
-	<li class=" product type-product status-publish has-post-thumbnail">
-
-		<a href="<?php echo site_url(); ?>/product-category/supplies-2/wound-care-first-aid//">
-			<img src="<?php echo site_url(); ?>/wp-content/uploads/2015/06/3011-250x275.jpg"
-					 class="attachment-shop_catalog size-shop_catalog wp-post-image"
-					 alt="Wound Care &amp; First Aid"
-					 width="250" height="266">
-					 <h3>Wound Care &amp; First Aid</h3>
-				 </a>
-	</li>
-
-<?php elseif (is_product_category('1955')) : dia_hacker_link(5320); // add sim iv fluids to infusion & dialysis ?>
-
-
 	<?php endif; ?>
 
 	<script type="text/javascript">
