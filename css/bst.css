@@ -273,8 +273,10 @@ span.price del, span.price ins {display: block;}
 /* END */
 
 /* Product Add Ons */
-.product-addon h3 {font-size:18.5px; margin-bottom:2px !important; margin-top:0px !important; }
-.product-addon p{ padding: 0 !important; margin:0 !important;}
+.product-addon h3 {font-size:18.5px; margin-bottom:2px !important; margin-top:10px !important; }
+.product-addon p{ padding: 0 !important; margin:-3px 0 0 20px !important;}
+.product-addon p label{font-weight: 500 !important;}
+.product-addon p:last-child{margin-bottom: 10px;}
 .product-addon label { margin-bottom: 0;  }
 .logged-in #product-41480 .product_meta, .logged-in #product-73130 .product_meta{ margin-bottom:1px; }
 .product-addon-totals {display:none;}
@@ -895,6 +897,22 @@ ul#no_col_layout {columns: 1000px 1;}
 div.pp_woocommerce .pp_close {z-index:9999 !important; top: 0px !important;right: 0px !important; border-radius: 0 !important; width: 53px!important; height: 28px !important;}
 div.pp_woocommerce .pp_close:before {font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'sans-serif' !important; content: "X" !important;}
 /** END **/
+
+.quantity{margin-top:20px !important;}
+.single_add_to_cart_button{margin-top:20px !important;}
+
+/*Added border and background for Med-MizerTEST*/
+/*.entry-summary{background-color:#f7f7f7; padding:15px; border: solid 1px #8080804a;}*/
+
+/*** Add ons required Asterix  stuff ***/
+.required-product-addon abbr{color: #e20303;}
+.required-product-addon abbr[title]{border: none; cursor: default;}
+.required-product-addon abbr[title]::after{content:"";}
+
+.product-addon-totals dt{font-size: 1.2em; margin: 4px 0 2px 0;}
+.product-addon-totals dd{font-size: 1.2em; color: #78BE20; margin: 0 0 0 20px;}
+/** END **/
+
 
 /*
 font-family: 'ristretto_proregular', Arial, sans-serif;
