@@ -187,34 +187,29 @@ if ( have_posts() ) :
 
 	woocommerce_product_subcategories();
 
-	if (is_product_category('10946')) {     // add to EMS Field Ready Gear -> Airway & Respiratory
+	// special links before
+	if (is_product_category('10946')) {     // add to EMS Field Ready Gear -> Airway & Respiratory\
+		dia_hacker_link(9412, "");            // Oxygen Supplies
 		dia_hacker_link(5326, "Last");        // Suction Machines & Supplies
 		dia_hacker_link(10840, "First");      // Airway Manikins
-		
-		dia_hacker_link(9412, "");            // Oxygen Supplies
-
 	}
 
-	while ( have_posts() ) : the_post();
+	// normal loop
+	while ( have_posts() ) : the_post(); wc_get_template_part( 'content', 'product' ); endwhile;
 
-	wc_get_template_part( 'content', 'product' );
+	// special links before
+	if (is_product_category('6325')) dia_hacker_link(6274, "last");  // add wound & first aid to Trauma Supplies
+	if (is_product_category('1955')) dia_hacker_link(5320, "last");  // add sim iv fluids to infusion & dialysis
 
-endwhile;
+	if (is_product_category('10957')) :  //Custom Size Privacy Curtain ?>
 
-
-if (is_product_category('6325')) dia_hacker_link(6274, "last");  // add wound & first aid to Trauma Supplies
-
-if (is_product_category('1955')) dia_hacker_link(5320, "last");  // add sim iv fluids to infusion & dialysis
-
-if (is_product_category('10957')) :  ?>
 	<li class="product type-product status-publish has-post-thumbnail">
 		<a href="<?php echo site_url(); ?>/privacy-curtain-sizing-form/">
 			<img src="<?php echo site_url(); ?>/wp-content/uploads/2017/09/custom-size-privacy-curtains.jpg"
 					 class="attachment-shop_catalog size-shop_catalog wp-post-image"
-					 alt="Custom Privacy Curtains"
-					 width="250" height="266">
-					 <h3>Custom Size Privacy Curtains</h3>
-				 </a>
+					 alt="Custom Privacy Curtains" width="250" height="266">
+				 <h3>Custom Size Privacy Curtains</h3>
+		 </a>
 	</li>
 	<?php endif; ?>
 
@@ -245,5 +240,4 @@ endif; ?>
 
 <?php do_action( 'woocommerce_after_main_content' ); ?>
 
-<?php endif;
-?>
+<?php endif; ?>
