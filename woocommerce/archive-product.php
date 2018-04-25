@@ -219,7 +219,7 @@ if ( have_posts() ) :
 	}
 	</script>
 	<a href="#" class="eModal-14">
-		<img style="margin:20px 0 10px 0px;" onclick="addQuoteCategory();return false;" src="http://diamedicalusa.com/wp-content/uploads/2018/04/Request_A_Quote.jpg" />
+		<img style="margin:20px 0 10px 0px;" onclick="addQuoteCategory();return false;" src="https://diamedicalusa.com/wp-content/uploads/2018/04/Request_A_Quote.jpg" />
 	</a>
 
 <?php
