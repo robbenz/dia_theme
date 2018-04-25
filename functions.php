@@ -828,7 +828,7 @@ function woocommerce_subcats_from_parentcat_by_NAME($parent_cat_NAME) {
 
 /*** DIA hacker link - becuase categories cant have two parents ***/
 add_action( 'after_theme_setup', 'dia_hacker_link' );
-function dia_hacker_link($termID){
+function dia_hacker_link($termID){  // add last / first fix
   $_cat = get_term_by('id', $termID, 'product_cat');
   $_catLink = get_term_link( $termID, 'product_cat' );
   ?>

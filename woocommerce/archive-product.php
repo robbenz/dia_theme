@@ -242,6 +242,7 @@ if (is_product_category('6325')) : ?>
 					 <h3>Wound Care &amp; First Aid</h3>
 				 </a>
 	</li>
+
 <?php elseif (is_product_category('10957')) :  ?>
 
 	<li class=" product type-product status-publish has-post-thumbnail">
