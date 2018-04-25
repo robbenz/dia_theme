@@ -37,7 +37,7 @@ a[data-toggle=collapse] {width: 100%; height: 100%; display: block;}
 </style>
 
 <?php
-
+// make up some stuff
 $dia_product_cats 			= array();
 $hospital_product_cats 	= array();
 $nursing_product_cats 	= array();
@@ -56,12 +56,15 @@ $args = array(
 	'hierarchical' => 1,   // 1 for yes, 0 for no
 	'hide_empty'   => 0
 );
+
+// get every level one category into an array
 $all_categories = get_categories( $args );
 
 foreach ($all_categories as $cat) :
 
 	$myID = $cat->cat_ID;
 
+	// check to see which categories have which checkbox checked
 	$_hospital_cbx 	= get_option("newside_hospital_cbx_$myID");
 	$_nursing_cbx  	= get_option("newside_nursing_cbx_$myID");
 	$_sls_cbx      	= get_option("newside_sls_cbx_$myID");
@@ -71,8 +74,10 @@ foreach ($all_categories as $cat) :
 	$_pt_cbx       	= get_option("newside_pt_cbx_$myID");
 	$_vet_cbx      	= get_option("newside_vet_cbx_$myID");
 
+	// array for Show all
 	if ( $cat->category_parent == 0 ) array_push($dia_product_cats, $cat->name );
 
+	// speacial arrays for facility type ( must be level 1 cat )
 	if ( $_hospital_cbx 	== 'yes' && $cat->category_parent == 0 ) array_push($hospital_product_cats, $cat->name );
 	if ( $_nursing_cbx 		== 'yes' && $cat->category_parent == 0 ) array_push($nursing_product_cats, $cat->name );
 	if ( $_sls_cbx 				== 'yes' && $cat->category_parent == 0 ) array_push($sls_product_cats, $cat->name );
@@ -84,6 +89,7 @@ foreach ($all_categories as $cat) :
 
 endforeach;
 
+// rip out Parts & repairs -- they have their own spot at the bottom -- then sort
 $dia_product_cats 			= array_diff( $dia_product_cats, 			["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($dia_product_cats);
 $hospital_product_cats 	= array_diff( $hospital_product_cats, ["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($hospital_product_cats);
 $nursing_product_cats 	= array_diff( $nursing_product_cats, 	["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($nursing_product_cats);
@@ -95,6 +101,7 @@ $pt_product_cats 				= array_diff( $pt_product_cats, 			["Parts", "On-Site Repai
 $vet_product_cats 			= array_diff( $vet_product_cats, 			["Parts", "On-Site Repairs &amp; Preventive Maintenance" ]); asort($vet_product_cats);
 
 
+// function that will construct each menu item -- we will run this agaisnt all the arrays further down
 function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counter) {
 	$_x = $which_counter;
 	foreach ($which_array as $single_cat) :
@@ -112,6 +119,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		);
 		$subcats = get_categories($args);
 
+		// creates active look for "if user is on current selected category"
 		$_in = '';
 		if ( is_product_category($grabID->slug) ) $_in = ' in';
 		foreach ($subcats as $maybecat) {
@@ -136,7 +144,10 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 									<a style="font-weight:700; font-size: 13px;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
 								</td>
 							</tr>
-							<?php if (count($subcats) >= 1 ) : foreach ($subcats as $sc) : $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
+							<?php
+							if (count($subcats) >= 1 ) :
+								foreach ($subcats as $sc) :
+									$link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
 	                <tr>
 										<td style="padding-left: 20px;" >
 	                    <a style="<?php if (is_product_category($sc->slug) ) echo 'font-weight:700'; ?>" href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
@@ -144,7 +155,8 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 	                </tr>
 	            <?php
 						endforeach;
-					else:
+
+					else: // if category has products ( not subcategories )
 
 						if ( get_post_type( get_the_ID() ) == 'product' ) :
 
@@ -161,7 +173,8 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 										<a href="<?php echo $loop->post->guid; ?>"><?php echo $loop->post->post_title ; ?></a>
 									</td>
 								</tr>
-							<?php endwhile; endif; endif;?>
+							<?php endwhile;endif;endif;?>
+							<?php if ($single_cat === "Infusion &amp; Dialysis") echo '<tr><td style="padding-left: 20px;"><a href="https://diamedicalusa.com/product-category/simulated-iv-bags/">Simulated IV Fluids</a></td></tr>'; ?>
 						</table>
 					</div> <!-- .panel-body -->
 				</div><!-- .panel-collapse .collapse -->
