@@ -912,6 +912,7 @@ div.pp_woocommerce .pp_close:before {font-family: 'Open Sans', 'Helvetica Neue',
 .product-addon-totals dt{font-size: 1.2em; margin: 4px 0 2px 0;}
 .product-addon-totals dd{font-size: 1.2em; color: #78BE20; margin: 0 0 0 20px;}
 /** END **/
+img.img_plc_pm_wrench {   width:60px;max-width:60px;height:60px;max-height:60px;}
 
 
 /*

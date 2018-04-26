@@ -29,6 +29,8 @@ get_template_part('includes/header');
               'stryker-beds' => '68962',
               'span-america-beds' => '68963',
               'transfer-master-beds' => '68964',
+              'home-care-hospital-beds' => '96864',
+              'med-mizer-hospital-beds' => '96863',
               'amico-stretchers' => '68968',
               'ferno-cots-stretchers-ems' => '68969',
               'hausted-stretchers' => '68970',
