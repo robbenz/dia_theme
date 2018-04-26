@@ -429,10 +429,11 @@ function display_product_title_as_link( $item_name, $item ) {
 }
 /*** END ***/
 
-
-add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
-
-
+// add_filter( 'woocommerce_order_items_meta_display', function ($output, $obj) {
+// if($obj->product->parent->product_type == 'variable') {
+//     $output = ltrim(explode(':', $output)[1]);
+// }
+// return $output; },10,2);
 
 /***** ALL SHIPPING STUFF TO FOLLOW *******/
 

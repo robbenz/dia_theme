@@ -45,10 +45,11 @@ foreach ( $items as $item_id => $item ) :
 				// allow other plugins to add additional product information here
 				do_action( 'woocommerce_order_item_meta_start', $item_id, $item, $order );
 
-				// Variation
-				if ( ! empty( $item_meta->meta ) ) {
-					echo '<br/><small>' . nl2br( $item_meta->display( true, true, '_', "\n" ) ) . '</small>';
-				}
+				//Variation
+				// if ( ! empty( $item_meta->meta ) ) {
+				// 	// echo '<br/><small>' . $item_meta->meta . '</small>';
+				// 	echo '<br/><small>' . nl2br( $item_meta->display( true, false, '_', "\n" ) ) . '</small>';
+				// }
 
 				// File URLs
 				if ( $show_download_links ) {
