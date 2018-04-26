@@ -420,6 +420,18 @@ function BENZ_wc_order_email_skus( $table, $order ) {
 add_filter( 'woocommerce_email_order_items_table', 'BENZ_wc_order_email_skus', 10, 2 );
 /* END */
 
+/*** Display Product Title at link in email ***/
+add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
+function display_product_title_as_link( $item_name, $item ) {
+  $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
+  $link = get_permalink( $_product->id );
+  return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
+}
+/*** END ***/
+
+
+add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
+
 
 
 /***** ALL SHIPPING STUFF TO FOLLOW *******/
@@ -1265,14 +1277,7 @@ return $urls;
 }
 
 
-/*** Display Product Title at link in email ***/
-add_filter( 'woocommerce_order_item_name', 'display_product_title_as_link', 10, 2 );
-function display_product_title_as_link( $item_name, $item ) {
-  $_product = get_product( $item['variation_id'] ? $item['variation_id'] : $item['product_id'] );
-  $link = get_permalink( $_product->id );
-  return '<a href="'. $link .'"  rel="nofollow">'. $item_name .'</a>';
-}
-/*** END ***/
+
 
 /*** Display IV Bag Waiver when products are in your cart & checkout  ***/
 add_action( 'woocommerce_before_cart', 't_brady_cart_page_button' ,999 );
