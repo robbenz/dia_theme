@@ -110,6 +110,7 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 		$product_cat_ID 	= $grabID->term_id;
 		$parent_link			= get_term_link( $product_cat_ID, 'product_cat' );
 
+		// locate all the respective sub cats for each cat in each array
 		$args = array(
 			'hierarchical'		 	=> 1,
 			'show_option_none' 	=> '',
@@ -144,19 +145,15 @@ function sweet_dia_cats_menu($which_array = array(), $which_class, $which_counte
 									<a style="font-weight:700; font-size: 13px;" href="<?php echo $parent_link; ?>">VIEW ALL</a>
 								</td>
 							</tr>
-							<?php
-							if (count($subcats) >= 1 ) :
-								foreach ($subcats as $sc) :
-									$link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
-	                <tr>
-										<td style="padding-left: 20px;" >
-	                    <a style="<?php if (is_product_category($sc->slug) ) echo 'font-weight:700'; ?>" href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
-	                	</td>
-	                </tr>
-	            <?php
-						endforeach;
+							<?php if (count($subcats) >= 1 ) : foreach ($subcats as $sc) : $link = get_term_link( $sc->slug, $sc->taxonomy ); ?>
+								<tr>
+									<td style="padding-left: 20px;" >
+                    <a style="<?php if (is_product_category($sc->slug) ) echo 'font-weight:700'; ?>" href="<?php echo $link; ?>"><?php echo $sc->name; ?></a>
+                	</td>
+                </tr>
+							<?php endforeach;
 
-					else: // if category has products ( not subcategories )
+						else: // if category has products ( not subcategories )
 
 						if ( get_post_type( get_the_ID() ) == 'product' ) :
 
