@@ -1735,6 +1735,44 @@ add_filter( 'woocommerce_catalog_orderby', 'diamedical_add_new_postmeta_orderby'
 /*** END ***/
 
 
+
+
+/* ADDING NEW COLUMNS TO EDIT ORDERS ***/
+add_filter( 'manage_edit-shop_order_columns', 'custom_shop_order_column', 20 );
+function custom_shop_order_column($columns) {
+  $reordered_columns = array();
+
+  // Inserting columns to a specific location
+  foreach( $columns as $key => $column){
+    $reordered_columns[$key] = $column;
+    if( $key ==  'order_title' ){
+      // Inserting after "Status" column
+      $reordered_columns['dia_custom_col'] = __( 'Quote Created By:', 'diamedical');
+    }
+  }
+  return $reordered_columns;
+}
+
+
+// Adding custom fields meta data for each new column (example)
+add_action( 'manage_shop_order_posts_custom_column' , 'custom_orders_list_column_content', 20, 2 );
+function custom_orders_list_column_content( $column, $post_id ) {
+  switch ( $column ) {
+    case 'dia_custom_col' :
+    $admin_id = get_post_meta($post_id , '_current_user', true);
+    $adminuser = get_user_by( 'id', $admin_id );
+    echo '<a href="'.site_url().'/wp-admin/edit.php?&post_type=shop_order&_current_user='.$admin_id.'">'.$adminuser->user_email.'</a>';
+    break;
+  }
+}
+/*** END ***/
+
+
+
+
+
+
+
 /*** Create user account when new customer profile form submits ***/
 // add_action( 'vfbp_after_email', 'create_dia_profile_account', 10, 2 );
 //
