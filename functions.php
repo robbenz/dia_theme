@@ -1755,7 +1755,7 @@ function dia_add_quote_created_sorting( $column, $post_id ) {
     case 'dia_custom_col' :
       $admin_id = get_post_meta($post_id , '_current_user', true);
       $adminuser = get_user_by( 'id', $admin_id );
-      echo '<a href="'.site_url().'/wp-admin/edit.php?&post_type=shop_order&_current_user='.$admin_id.'">'.$adminuser->user_email.'</a>';
+      echo '<a href="'.site_url().'/wp-admin/edit.php?&post_type=shop_order&_current_user='.$admin_id.'">'.$adminuser->first_name.' '.$adminuser->last_name.'</a>';
     break;
   }
 }
