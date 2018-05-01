@@ -1762,6 +1762,50 @@ function dia_add_quote_created_sorting( $column, $post_id ) {
 /*** END ***/
 
 
+// Remove some checkout billing fields
+
+
+// add_filter( 'woocommerce_checkout_fields', 'dia_filter_billing_fields' );
+// function dia_filter_billing_fields($fields){
+//     unset( $fields["billing_country"] );
+//     unset( $fields["billing_company"] );
+//     unset( $fields["billing_first_name"] );
+//     unset( $fields["billing_last_name"] );
+//     unset( $fields["billing_address_1"] );
+//     unset( $fields["billing_address_2"] );
+//     unset( $fields["billing_city"] );
+//     unset( $fields["billing_state"] );
+//     unset( $fields["billing_postcode"] );
+//     unset( $fields["billing_phone"] );
+//     unset( $fields["billing_email"] );
+//
+//     $order = array(
+//       "billing_company",
+//       "billing_first_name",
+//       "billing_last_name",
+//       "billing_address_1",
+//       "billing_address_2",
+//       "billing_city",
+//       "billing_state",
+//       "billing_postcode",
+//       // "billing_country",
+//       "billing_email",
+//       "billing_phone"
+//     );
+//
+//     foreach($order as $field) {
+//         $ordered_fields[$field] = $fields["billing"][$field];
+//       }
+//
+//       $fields["billing"] = $ordered_fields;
+//
+//     return $fields;
+// }
+
+
+
+
+
 
 /*** Create user account when new customer profile form submits ***/
 // add_action( 'vfbp_after_email', 'create_dia_profile_account', 10, 2 );
