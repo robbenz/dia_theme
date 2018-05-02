@@ -226,6 +226,7 @@ textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
 .woocommerce-result-count, mark.count { display:none;}
 .emodal a.emodal-close{color:#fff !important;}
 #viewprice-detail{position:relative; top: 30px; left:0px;margin-bottom: 36px; }
+.product-type-variable #viewprice-detail{ top: 10px; }
 #viewprice-detail a {background-color: #78be20; border-radius: 0.4em; color: #ffffff; font-size: 14.5px; font-weight: 700; padding: 10px 23px 12px; }
 #viewprice-detail a:hover {background-color: #00426a; color: #ffffff; text-decoration:none;}
 li.product-category h3 { text-align:center; color:#f7a900; text-align:center; text-transform: uppercase; font-size:20px !important;}
