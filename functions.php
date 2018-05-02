@@ -429,10 +429,11 @@ function display_product_title_as_link( $item_name, $item ) {
 }
 /*** END ***/
 
-
-add_filter( 'woocommerce_product_variation_title_include_attributes', '__return_false' );
-
-
+// add_filter( 'woocommerce_order_items_meta_display', function ($output, $obj) {
+// if($obj->product->parent->product_type == 'variable') {
+//     $output = ltrim(explode(':', $output)[1]);
+// }
+// return $output; },10,2);
 
 /***** ALL SHIPPING STUFF TO FOLLOW *******/
 
@@ -1732,6 +1733,78 @@ function diamedical_add_new_postmeta_orderby( $sortby ) {
 add_filter( 'woocommerce_default_catalog_orderby_options', 'diamedical_add_new_postmeta_orderby' );
 add_filter( 'woocommerce_catalog_orderby', 'diamedical_add_new_postmeta_orderby' );
 /*** END ***/
+
+
+/*** ADDING NEW COLUMNS TO EDIT ORDERS ***/
+add_filter( 'manage_edit-shop_order_columns', 'custom_shop_order_column', 20 );
+function custom_shop_order_column($columns) {
+  $reordered_columns = array();
+  // Inserting after "order_title" column
+  foreach( $columns as $key => $column) {
+    $reordered_columns[$key] = $column;
+    if( $key ==  'order_title' ) {
+      $reordered_columns['dia_custom_col'] = __( 'Quote Created By:', 'diamedical');
+    }
+  }
+  return $reordered_columns;
+}
+
+add_action( 'manage_shop_order_posts_custom_column' , 'dia_add_quote_created_sorting', 20, 2 );
+function dia_add_quote_created_sorting( $column, $post_id ) {
+  switch ( $column ) {
+    case 'dia_custom_col' :
+      $admin_id = get_post_meta($post_id , '_current_user', true);
+      $adminuser = get_user_by( 'id', $admin_id );
+      echo '<a href="'.site_url().'/wp-admin/edit.php?&post_type=shop_order&_current_user='.$admin_id.'">'.$adminuser->first_name.' '.$adminuser->last_name.'</a>';
+    break;
+  }
+}
+/*** END ***/
+
+
+// Remove some checkout billing fields
+
+
+// add_filter( 'woocommerce_checkout_fields', 'dia_filter_billing_fields' );
+// function dia_filter_billing_fields($fields){
+//     unset( $fields["billing_country"] );
+//     unset( $fields["billing_company"] );
+//     unset( $fields["billing_first_name"] );
+//     unset( $fields["billing_last_name"] );
+//     unset( $fields["billing_address_1"] );
+//     unset( $fields["billing_address_2"] );
+//     unset( $fields["billing_city"] );
+//     unset( $fields["billing_state"] );
+//     unset( $fields["billing_postcode"] );
+//     unset( $fields["billing_phone"] );
+//     unset( $fields["billing_email"] );
+//
+//     $order = array(
+//       "billing_company",
+//       "billing_first_name",
+//       "billing_last_name",
+//       "billing_address_1",
+//       "billing_address_2",
+//       "billing_city",
+//       "billing_state",
+//       "billing_postcode",
+//       // "billing_country",
+//       "billing_email",
+//       "billing_phone"
+//     );
+//
+//     foreach($order as $field) {
+//         $ordered_fields[$field] = $fields["billing"][$field];
+//       }
+//
+//       $fields["billing"] = $ordered_fields;
+//
+//     return $fields;
+// }
+
+
+
+
 
 
 /*** Create user account when new customer profile form submits ***/
