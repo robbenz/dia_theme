@@ -156,10 +156,6 @@
       $('.variation-tracking_item_number').css('text-transform', 'capitalize');
       $('.variation-tracking_item_freight_provider').css('text-transform', 'capitalize');
       /*** END ***/
-      //
-      // $('#review_form #submit').click(function() {
-      //   alert('Your submission is being processed and should be live shortly');
-      // });
 
       /*** makes images update radio button on custom sizing form ***/
       $('[id^="vfb-field-"]').click(function() {    // any element can update any radio as long as their id's match
@@ -169,11 +165,11 @@
       /*** END ***/
 
       /*** disallows all right-clicking site-wide ***/
-      $(function() {
+      // $(function() {
         $(this).bind("contextmenu", function(e) {
             e.preventDefault();
         });
-      });
+      // });
       /*** end ***/
 
     });
