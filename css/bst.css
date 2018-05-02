@@ -1445,8 +1445,8 @@ font-family: 'ristretto_probold', Arial, sans-serif;
 .simulated-nurse-image {max-height: 150px;}
 
 #vfbField353 {margin-bottom: 20px;} /*365*/
-#vfb-field-353 .vfb-inline-group {margin-left: 19%;}
-#vfb-field-353 .vfb-radio {width: 40%; text-align: center;}
+#vfbField353 {margin: 0 10% 20px 19%; text-align: center;} /*350*/
+#vfbField353 .vfb-radio {width: 40%; margin: 0 auto; float: left;} /*350*/
 
 
 /*headwall accessories*/
