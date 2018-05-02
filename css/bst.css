@@ -685,7 +685,7 @@ p.diva { float: right; font-size: 13px; text-align: center; width: 69%; }
 #dat_wrap h4,
 .page-id-83308 .main-contact-wrap h3,
 .page-id-83650 .main-contact-wrap h3,
-.page-id-86133 h3, {font-family: 'ristretto_prolight', Arial, sans-serif; color: #288dcc; font-size:35px;}
+.page-id-86133 h3 {font-family: 'ristretto_prolight', Arial, sans-serif; color: #288dcc; font-size:35px;}
 .page-id-85138 h2, .page-id-86139 h2 {margin-bottom: 20px;}
 #dat_order_left{float:left; }
 #dat_order_left img{max-width:34px;padding: 0px 0px 38px 0px;}
@@ -1372,3 +1372,84 @@ font-family: 'ristretto_probold', Arial, sans-serif;
   div.thumbnails img{width:100px !important; max-width:100px !important; }
 
 }
+
+/*custom headwall form styles*/
+#vfbp-form-14 > .vfb-form-group {margin-bottom: 5px;}
+.headwall-heading {font-family: 'Lato',sans-serif; font-size: 20px; font-weight: 500; margin-top: 20px; color: #00436A; border-bottom: solid 2px #00426A;}
+.headwall-heading2 {margin-top: 30px; border-bottom: solid 1px #00426A;}
+#parsley-id-multiple-vfb-field-325 {margin-bottom: 0;}
+.vfb-required-asterisk {display: none;}
+.headwall-form-image {float: left; width: 33%; max-height: 350px;}
+.headwall-form-image {float: left; width: 33%;}
+#vfbField335 {margin: 0 10% 20px 10%; text-align: center;} /*350*/
+#vfbField335 .vfb-radio {width: 40%; margin: 0 auto; float: left;} /*350*/
+
+
+#vfbField325 {margin: 0;}
+#vfbField325 .vfb-help-block {margin: 0;}
+#vfbField325 .vfb-inline-group .vfb-radio{width: 33%; text-align: center; margin-right: 0;}
+#vfbField327 .vfb-inline-group .vfb-radio{width: 33%; text-align: center; margin-right: 0;}
+
+#vfbField332 {margin-top: 5px;}
+
+/*air oulets*/
+#headwall-form-select-air-outlets{margin: 0; padding: 3%; float: left;}
+
+/*air outlet quantities*/
+#headwall-form-select-air-outlets span{width: 50%; float: left;}
+#headwall-form-select-air-outlets img{width: 100%; margin: 0 auto;}
+.air-select-image {height: 100%;}
+#vfbField336 {text-align: center;} /*356*/
+#vfb-field-336 {min-width: 30%; max-width: 30%;} /*356*/
+#vfbField336 .vfb-help-block{float: left; width: 50%;} /*356*/
+#vfb-field-336 {float: left; margin-top: 20%;} /*356*/
+#vfbField337 {text-align: center;} /*357*/
+#vfb-field-337 {min-width: 30%; max-width: 30%;} /*357*/
+#vfbField337 .vfb-help-block{float: left; width: 50%;} /*357*/
+#vfb-field-337 {float: left; margin-top: 20%;} /*357*/
+#vfbField338 {text-align: center;} /*358*/
+#vfb-field-338 {min-width: 30%; max-width: 30%;} /*358*/
+#vfbField338 .vfb-help-block{float: left; width: 50%;} /*358*/
+#vfb-field-338 {float: left; margin-top: 20%;} /*358*/
+
+/*end*/
+
+#vfbField340 .vfb-form-group label{font-weight: 500;} /*339*/
+#vfbField342 .vfb-form-group label{font-weight: 500;} /*352*/
+#vfbField347 .vfb-form-group label{font-weight: 500;} /*354*/
+#vfbField349 .vfb-form-group label{font-weight: 500;} /*363*/
+
+/*electrical outlet quantities*/
+#headwall-form-select-electrical-outlets span{width: 50%; float: left;}
+#headwall-form-select-electrical-outlets img{width: 100%; margin: 0 auto;}
+.electrical-select-image {height: 100%;}
+#vfbField344 {text-align: center;} /*359*/
+#vfb-field-344 {min-width: 30%; max-width: 30%; float: left; margin-top: 20%;} /*359*/
+#vfbField344 .vfb-help-block{float: left; width: 50%; max-height: 200px; margin: 0 10px 10px 10px;} /*359*/
+#vfbField345 {text-align: center;} /*360*/
+#vfbField345 .vfb-help-block{float: left; width: 50%; max-height: 200px; margin: 0 10px 10px 10px;} /*360*/
+#vfb-field-345 {min-width: 30%; max-width: 30%; float: left; margin-top: 20%;} /*360*/
+#vfbField346 {text-align: center;} /*361*/
+#vfb-field-346 {min-width: 30%; max-width: 30%; float: left; margin-top: 20%;} /*361*/
+#vfbField346 .vfb-help-block{float: left; width: 50%; max-height: 200px; margin: 0 10px 10px 10px;} /*361*/
+#vfbField348 .vfb-inline-group .vfb-radio{width: 33%; text-align: center; margin-right: 0;} /*361*/
+/*end*/
+
+/*laminate color radios*/
+#vfbField351 .vfb-inline-group .vfb-radio{width: 33%; text-align: center; margin-right: 0;} /*347*/
+#headwall-form-select-laminate img {width: 100%;}
+/*end*/
+
+.headwall-nurse-call{width: 50%;}
+.simulated-nurse-image {max-height: 150px;}
+
+#vfbField353 {margin-bottom: 20px;} /*365*/
+
+/*headwall accessories*/
+#vfbField366 {margin-top: -25px;} /*368*/
+.headwall-accessories-image {max-height: 200px; max-width: 100%;} /*368*/
+#vfbField366 .vfb-help-block {width: 50%; float: left; margin: 0;} /*368*/
+#vfb-field-366 {margin-top: 27px;} /*368*/
+/*end*/
+
+#vfbField333 {margin-top: 20px;}
