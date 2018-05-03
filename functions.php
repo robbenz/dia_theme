@@ -1857,20 +1857,26 @@ function dia_add_quote_created_sorting( $column, $post_id ) {
 /*** END ***/
 
 
-// // update some shit
-// //
-// $update_stuff = array (
-//   '95691',
-//   '95667',
-//   '95670',
-//   '95663',
-//   '95652',
-//   '95651',
-//   '95653'
-// );
+// update some shit
 //
-// foreach ($update_stuff as $thing) {
-//   //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
-//   //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
-//   update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/3B-logo.jpg' );
-// }
+$update_stuff = array (
+  '42667',
+  '42669',
+  '42673',
+  '42675',
+  '42677',
+  '42644',
+  '42679',
+  '42646',
+  '42681',
+  '42648',
+  '42650',
+  '42652',
+  '42662'
+);
+
+foreach ($update_stuff as $thing) {
+  //update_post_meta( $thing, 'dia_whitespace_adj', 'yes' );
+  //update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2017/09/simusuit-logo.jpg' );
+  update_post_meta( $thing, 'mft_image', 'http://diamedicalusa.com/wp-content/uploads/2018/05/Medline.jpg' );
+}
